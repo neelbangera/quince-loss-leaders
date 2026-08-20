@@ -10,6 +10,7 @@ requires-python = ">=3.10"
 
 [project.scripts]
 quince-loss-leaders = "quince_loss_leaders.cli:main"
+quince-crawl = "quince_loss_leaders.crawler_cli:main"
 
 [tool.setuptools]
 packages = ["quince_loss_leaders"]

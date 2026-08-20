@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quince-loss-leaders"
+version = "0.1.0"
+description = "Parse authorized Quince product-page snapshots and rank reported loss-making products."
+requires-python = ">=3.10"
+
+[project.scripts]
+quince-loss-leaders = "quince_loss_leaders.cli:main"
+
+[tool.setuptools]
+packages = ["quince_loss_leaders"]

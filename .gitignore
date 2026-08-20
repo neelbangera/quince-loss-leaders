@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Local input pages, database files, and exports may contain copied site content.
+data/pages/
+data/*.sqlite3
+data/*.db
+data/exports/

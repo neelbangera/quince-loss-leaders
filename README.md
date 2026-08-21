@@ -52,6 +52,23 @@ python3 -m quince_loss_leaders --input-dir data/pages --format csv > losses.csv
 `--include-partial` is available for parser debugging, but should not be used
 for a public ranking until the warnings have been reviewed.
 
+## Read stored crawl results
+
+Use `--database-only` to report from an existing crawl database without
+re-parsing snapshots:
+
+```bash
+python3 -m quince_loss_leaders \
+  --database-only \
+  --database data/quince-us.sqlite3 \
+  --view losses \
+  --limit 25
+```
+
+The other views are `--view profit` for positive disclosed spreads and
+`--view all` for the complete ranking. Use `--format json` or `--format csv`
+for data destined for a UI; use `--limit 0` to export every row.
+
 ## Authorized crawler
 
 The crawler is a separate acquisition layer. It requires an explicit
@@ -84,6 +101,47 @@ The installed console command is also available after packaging:
 ```bash
 quince-crawl --help
 ```
+
+## Dashboard (Vue + Nuxt)
+
+The first website UI lives in `web/`. It reads the stored rankings through a
+small read-only Python API, so the crawler and the browser remain separate
+processes.
+
+Start the API from the repository root in one terminal:
+
+```bash
+python3 -m quince_loss_leaders.api \
+  --database data/quince-us.sqlite3 \
+  --host 127.0.0.1 \
+  --port 8877
+```
+
+Then start Nuxt in a second terminal:
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. The dashboard supports loss leaders, positive
+spread drivers, the full ranking, search, inferred department/category
+filters, and sorting. Set `NUXT_PUBLIC_API_BASE` if the API is running at a
+different address.
+
+The current Nuxt release recommends Node 22.19 or newer. The app builds on the
+local Node 22.16 installation with an engine warning, but upgrading Node is
+recommended before deploying it.
+
+The API endpoints currently include:
+
+- `GET /api/health`
+- `GET /api/rankings?view=losses|profit|all`
+- `GET /api/facets`
+
+Ranking filters are query parameters so they can later be shared in URLs or
+connected to saved searches without changing the storage model.
 
 ## Storage design
 

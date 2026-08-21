@@ -7,13 +7,15 @@ import json
 import re
 from decimal import Decimal, InvalidOperation
 from typing import Any, Iterable
+from urllib.parse import parse_qs, urlsplit
 
 from .models import CostLine, ProductObservation
 
 
 MONEY_RE = re.compile(
     r"(?<![A-Za-z0-9])(?:USD\s*)?\$\s*"
-    r"([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)"
+    r"((?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?)"
+    r"(?![0-9,])"
 )
 
 
@@ -94,12 +96,14 @@ class _HTMLCollector(HTMLParser):
         self.headings: list[str] = []
         self.text_parts: list[str] = []
         self.jsonld_parts: list[str] = []
+        self.application_json_parts: list[str] = []
         self.price_attribute_values: list[str] = []
 
         self._row: list[str] | None = None
         self._cell: list[str] | None = None
         self._heading: list[str] | None = None
         self._script_parts: list[str] | None = None
+        self._script_kind: str | None = None
         self._skip_depth = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -127,8 +131,13 @@ class _HTMLCollector(HTMLParser):
             script_type = attributes.get("type", "").lower()
             if script_type == "application/ld+json":
                 self._script_parts = []
+                self._script_kind = "jsonld"
+            elif script_type == "application/json" or attributes.get("id") == "__NEXT_DATA__":
+                self._script_parts = []
+                self._script_kind = "application_json"
             else:
                 self._script_parts = None
+                self._script_kind = None
 
         if tag in {"script", "style", "noscript"}:
             self._skip_depth += 1
@@ -163,8 +172,13 @@ class _HTMLCollector(HTMLParser):
             self._heading = None
 
         if tag == "script" and self._script_parts is not None:
-            self.jsonld_parts.append("".join(self._script_parts))
+            script_text = "".join(self._script_parts)
+            if self._script_kind == "jsonld":
+                self.jsonld_parts.append(script_text)
+            elif self._script_kind == "application_json":
+                self.application_json_parts.append(script_text)
             self._script_parts = None
+            self._script_kind = None
 
         if tag in {"script", "style", "noscript"} and self._skip_depth:
             self._skip_depth -= 1
@@ -195,6 +209,157 @@ def _walk_json(value: Any) -> Iterable[dict[str, Any]]:
     elif isinstance(value, list):
         for nested in value:
             yield from _walk_json(nested)
+
+
+def _embedded_money(value: Any) -> Decimal | None:
+    if value is None:
+        return None
+    return parse_money(str(value))
+
+
+EMBEDDED_COST_COMPONENTS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
+    ("Materials", "materials", ("materials", "hardware")),
+    ("Crafting Cost", "crafting_cost", ("crafting",)),
+    ("Packaging", "packaging", ("packaging",)),
+    ("Freight & Handling", "freight_handling", ("shippingHandling",)),
+    ("Credit Card Fees", "credit_card_fees", ("creditCardFees",)),
+    ("Duties, Taxes, And Fees", "duties_taxes_fees", ("dutyFee",)),
+)
+
+
+def _embedded_cost_lines(variant: dict[str, Any]) -> list[CostLine]:
+    lines: list[CostLine] = []
+    for label, normalized_type, fields in EMBEDDED_COST_COMPONENTS:
+        values: list[tuple[str, Decimal]] = []
+        for field in fields:
+            amount = _embedded_money(variant.get(field))
+            if amount is not None:
+                values.append((field, amount))
+        if not values:
+            continue
+
+        amount = sum((value for _field, value in values), Decimal("0.00")).quantize(
+            Decimal("0.01")
+        )
+        source_text = "transparentPricingData: " + ", ".join(
+            f"{field}={variant[field]}" for field, _value in values
+        )
+        lines.append(
+            CostLine(
+                label=label,
+                normalized_type=normalized_type,
+                amount=amount,
+                source_text=source_text,
+            )
+        )
+
+    # This field is not present in the current visible breakdown, but keeping
+    # a non-zero value makes the extractor forward-compatible if Quince adds
+    # it as a separate charge.
+    brand_finders_fee = _embedded_money(variant.get("lastBrandFindersFee"))
+    if brand_finders_fee is not None and brand_finders_fee != 0:
+        lines.append(
+            CostLine(
+                label="Brand Finders Fee",
+                normalized_type="brand_finders_fee",
+                amount=brand_finders_fee,
+                source_text=(
+                    "transparentPricingData: "
+                    f"lastBrandFindersFee={variant['lastBrandFindersFee']}"
+                ),
+            )
+        )
+    return lines
+
+
+def _variant_score(variant: dict[str, Any], query: dict[str, list[str]]) -> int:
+    name = normalize_label(str(variant.get("name") or ""))
+    score = 0
+    for key in ("color", "size", "option"):
+        for value in query.get(key, []):
+            normalized_value = normalize_label(value)
+            if normalized_value and normalized_value in name:
+                score += 1
+
+    requested_ids = {
+        value
+        for key in ("variant", "variantid", "svid", "id")
+        for value in query.get(key, [])
+    }
+    variant_ids = {
+        str(variant.get(key))
+        for key in ("variantId", "svid")
+        if variant.get(key) is not None
+    }
+    if requested_ids.intersection(variant_ids):
+        score += 10
+    return score
+
+
+def _extract_embedded_pricing(
+    collector: _HTMLCollector,
+    variant_url: str,
+) -> dict[str, Any] | None:
+    query = {
+        key.lower(): values
+        for key, values in parse_qs(urlsplit(variant_url).query).items()
+    }
+    best: tuple[int, int, str, dict[str, Any], list[CostLine]] | None = None
+
+    for part in collector.application_json_parts:
+        try:
+            value = json.loads(part)
+        except json.JSONDecodeError:
+            continue
+
+        for candidate in _walk_json(value):
+            pricing = candidate.get("transparentPricingData")
+            if not isinstance(pricing, dict):
+                continue
+            products = pricing.get("products")
+            if not isinstance(products, dict):
+                continue
+
+            for product_id, product in products.items():
+                if not isinstance(product, dict) or not isinstance(product.get("variants"), list):
+                    continue
+                for index, variant in enumerate(product["variants"]):
+                    if not isinstance(variant, dict):
+                        continue
+                    lines = _embedded_cost_lines(variant)
+                    if not lines and not any(
+                        _embedded_money(variant.get(key)) is not None
+                        for key in ("totalCost", "total_cost", "reportedTotalCost")
+                    ):
+                        continue
+                    score = _variant_score(variant, query)
+                    candidate_key = (score, -index, str(product_id), variant, lines)
+                    if best is None or candidate_key[:3] > best[:3]:
+                        best = candidate_key
+
+    if best is None:
+        return None
+
+    _score, _negative_index, product_id, variant, lines = best
+    total_cost: Decimal | None = None
+    total_source = "embedded_inferred"
+    for key in ("totalCost", "total_cost", "reportedTotalCost"):
+        total_cost = _embedded_money(variant.get(key))
+        if total_cost is not None:
+            total_source = "embedded_reported"
+            break
+    if total_cost is None and lines:
+        total_cost = sum((line.amount for line in lines), Decimal("0.00")).quantize(
+            Decimal("0.01")
+        )
+
+    return {
+        "product_id": product_id,
+        "variant": dict(variant),
+        "lines": lines,
+        "total_cost": total_cost,
+        "total_source": total_source,
+    }
 
 
 def _jsonld_products(parts: Iterable[str]) -> list[dict[str, Any]]:
@@ -380,12 +545,42 @@ def parse_html(
         str((_jsonld_offer(product) or {}).get("priceCurrency") or "USD").upper()
     )
     selling_price = _extract_price(collector, products)
+    embedded_pricing = _extract_embedded_pricing(collector, canonical or source_ref)
+    if selling_price is None and embedded_pricing:
+        selling_price = _embedded_money(embedded_pricing["variant"].get("totalPrice"))
+
     cost_lines, total_cost, total_source = _extract_costs(collector)
+    if embedded_pricing:
+        embedded_lines = embedded_pricing["lines"]
+        if embedded_lines and (
+            not cost_lines or len(embedded_lines) > len(cost_lines) or total_cost is None
+        ):
+            cost_lines = embedded_lines
+            total_cost = embedded_pricing["total_cost"]
+            total_source = embedded_pricing["total_source"]
+
+    embedded_variant = embedded_pricing["variant"] if embedded_pricing else {}
+    variant_key = str(
+        embedded_variant.get("variantId")
+        or embedded_variant.get("svid")
+        or embedded_variant.get("name")
+        or ""
+    )
+    metadata: dict[str, Any] = {
+        "headings": collector.headings,
+        "jsonld_product_count": len(products),
+    }
+    if embedded_pricing:
+        metadata["embedded_pricing"] = {
+            "product_id": embedded_pricing["product_id"],
+            "variant": embedded_variant,
+        }
 
     observation = ProductObservation(
         source_ref=source_ref,
         captured_at=captured_at or datetime.now().astimezone(),
         canonical_url=canonical,
+        variant_key=variant_key,
         sku=sku,
         product_name=name,
         brand=brand,
@@ -397,10 +592,7 @@ def parse_html(
         total_cost_source=total_source,
         cost_lines=cost_lines,
         raw_sha256=hashlib.sha256(html.encode("utf-8")).hexdigest(),
-        metadata={
-            "headings": collector.headings,
-            "jsonld_product_count": len(products),
-        },
+        metadata=metadata,
     )
     observation.finalize_identity()
 

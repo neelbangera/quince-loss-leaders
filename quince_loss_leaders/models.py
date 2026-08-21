@@ -8,7 +8,7 @@ from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 
-PARSER_VERSION = "0.1.0"
+PARSER_VERSION = "0.2.0"
 CALCULATION_VERSION = "0.1.0"
 
 
@@ -231,4 +231,3 @@ class ProductObservation:
             "parser_version": self.parser_version,
             "calculation_version": self.calculation_version,
         }
-

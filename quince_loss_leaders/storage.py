@@ -94,6 +94,7 @@ class RankingRow:
     canonical_url: str | None
     brand: str | None
     brand_type: str
+    category: str | None
     captured_at: str
     currency: str
     selling_price_cents: int | None
@@ -257,7 +258,7 @@ class Repository:
             )
             SELECT
                 r.product_key, r.variant_key, p.name, p.canonical_url, p.brand,
-                p.brand_type, r.captured_at, r.currency, r.selling_price_cents,
+                p.brand_type, p.category, r.captured_at, r.currency, r.selling_price_cents,
                 r.reported_total_cost_cents, r.unit_spread_cents, r.margin_pct,
                 r.parse_status, r.confidence
             FROM ranked r
@@ -267,12 +268,19 @@ class Repository:
         """
         return list(self.connection.execute(query, statuses).fetchall())
 
-    def loss_leaders(self, *, include_partial: bool = False) -> list[RankingRow]:
+    def rankings(
+        self,
+        *,
+        include_partial: bool = False,
+        descending: bool = False,
+    ) -> list[RankingRow]:
+        """Return the latest rankable observation for every product/variant."""
+
         rows = self.latest_observations(include_partial=include_partial)
         result: list[RankingRow] = []
         for row in rows:
             spread = row["unit_spread_cents"]
-            if spread is None or spread >= 0:
+            if spread is None:
                 continue
             result.append(
                 RankingRow(
@@ -282,6 +290,7 @@ class Repository:
                     canonical_url=row["canonical_url"],
                     brand=row["brand"],
                     brand_type=row["brand_type"],
+                    category=row["category"],
                     captured_at=row["captured_at"],
                     currency=row["currency"],
                     selling_price_cents=row["selling_price_cents"],
@@ -292,5 +301,21 @@ class Repository:
                     confidence=row["confidence"],
                 )
             )
+        result.sort(key=lambda item: item.unit_spread_cents, reverse=descending)
         return result
 
+    def loss_leaders(self, *, include_partial: bool = False) -> list[RankingRow]:
+        return [
+            row
+            for row in self.rankings(include_partial=include_partial)
+            if row.unit_spread_cents < 0
+        ]
+
+    def profit_drivers(self, *, include_partial: bool = False) -> list[RankingRow]:
+        """Return positive disclosed spreads from largest to smallest."""
+
+        return [
+            row
+            for row in self.rankings(include_partial=include_partial, descending=True)
+            if row.unit_spread_cents > 0
+        ]

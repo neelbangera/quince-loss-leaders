@@ -35,3 +35,35 @@ class StorageTests(unittest.TestCase):
                 rows = repository.loss_leaders()
 
             self.assertEqual(rows, [])
+
+    def test_rankings_and_profit_drivers_use_latest_complete_rows(self) -> None:
+        loss_html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
+        positive_html = (FIXTURES / "positive-example.html").read_text(encoding="utf-8")
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "observations.sqlite3"
+            with Repository(database) as repository:
+                repository.save_observation(
+                    parse_html(
+                        loss_html,
+                        "fixtures/loss-example.html",
+                        captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+                    )
+                )
+                repository.save_observation(
+                    parse_html(
+                        positive_html,
+                        "fixtures/positive-example.html",
+                        captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+                    )
+                )
+
+                rankings = repository.rankings()
+                profit_drivers = repository.profit_drivers()
+
+            self.assertEqual([row.name for row in rankings], [
+                "Example Recycled Tote",
+                "Example Carry-All Tote",
+            ])
+            self.assertEqual([row.name for row in profit_drivers], [
+                "Example Carry-All Tote",
+            ])

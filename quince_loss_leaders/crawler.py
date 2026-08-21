@@ -12,7 +12,7 @@ from pathlib import Path
 import time
 from typing import Iterable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urldefrag, urlsplit, urlunsplit
+from urllib.parse import quote, urljoin, urldefrag, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 import urllib.robotparser
 import xml.etree.ElementTree as ET
@@ -105,7 +105,21 @@ def normalize_crawl_url(value: str, base_url: str | None = None) -> str | None:
     parsed = urlsplit(absolute)
     if parsed.scheme.lower() not in {"http", "https"} or not parsed.hostname:
         return None
-    normalized = canonicalize_url(absolute)
+    # Some public sitemaps contain literal spaces in paths. Quote path/query
+    # characters before handing the URL to urllib so one malformed location
+    # cannot terminate an otherwise long crawl.
+    safe_path = "/%:@!$&'()*+,;=-._~"
+    safe_query = "=&/%?+,:;@!$'()*-._~"
+    encoded = urlunsplit(
+        (
+            parsed.scheme,
+            parsed.netloc,
+            quote(parsed.path, safe=safe_path),
+            quote(parsed.query, safe=safe_query),
+            "",
+        )
+    )
+    normalized = canonicalize_url(encoded)
     if not normalized:
         return None
     return normalized

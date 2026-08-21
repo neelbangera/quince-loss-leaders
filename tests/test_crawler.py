@@ -11,6 +11,7 @@ from quince_loss_leaders.crawler import (
     CrawlConfig,
     FetchResult,
     RobotsPolicy,
+    normalize_crawl_url,
 )
 from quince_loss_leaders.storage import Repository
 
@@ -146,3 +147,8 @@ class CrawlerTests(unittest.TestCase):
                 snapshot_dir=Path("/tmp/pages"),
             )
 
+    def test_normalizes_spaces_in_sitemap_paths(self) -> None:
+        self.assertEqual(
+            normalize_crawl_url("https://example.test/girl sleep"),
+            "https://example.test/girl%20sleep",
+        )

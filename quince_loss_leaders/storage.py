@@ -2,12 +2,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime
+from decimal import Decimal
 import json
 import sqlite3
 from pathlib import Path
 from typing import Any, Iterable
 
-from .models import ProductObservation, as_utc_iso, money_to_cents
+from .models import CostLine, ParseIssue, ProductObservation, as_utc_iso, cents_to_money, money_to_cents
 
 
 SCHEMA = """
@@ -79,6 +80,8 @@ CREATE TABLE IF NOT EXISTS parse_issues (
 
 CREATE INDEX IF NOT EXISTS idx_observations_product_variant_time
     ON observations(product_key, variant_key, captured_at DESC);
+CREATE INDEX IF NOT EXISTS idx_observations_captured_at
+    ON observations(captured_at ASC, observation_id ASC);
 CREATE INDEX IF NOT EXISTS idx_observations_spread
     ON observations(unit_spread_cents);
 CREATE INDEX IF NOT EXISTS idx_observations_status
@@ -267,6 +270,146 @@ class Repository:
             ORDER BY r.unit_spread_cents ASC
         """
         return list(self.connection.execute(query, statuses).fetchall())
+
+    def historical_observations(
+        self,
+        *,
+        product_key: str | None = None,
+        variant_key: str | None = None,
+        include_partial: bool = False,
+    ) -> list[ProductObservation]:
+        """Return every retained observation in chronological order.
+
+        ``rankings()`` intentionally collapses history to the latest complete
+        observation. This method is the lossless access path for future trend
+        charts, date comparisons, and historical exports.
+        """
+
+        statuses = ("complete", "partial") if include_partial else ("complete",)
+        status_placeholders = ",".join("?" for _ in statuses)
+        filters = [f"o.parse_status IN ({status_placeholders})"]
+        parameters: list[object] = list(statuses)
+        if product_key is not None:
+            filters.append("o.product_key = ?")
+            parameters.append(product_key)
+        if variant_key is not None:
+            filters.append("o.variant_key = ?")
+            parameters.append(variant_key)
+
+        query = f"""
+            SELECT
+                o.*, p.name, p.canonical_url, p.brand, p.brand_type, p.category,
+                ss.source_ref, ss.source_kind
+            FROM observations o
+            JOIN products p ON p.product_key = o.product_key
+            LEFT JOIN source_snapshots ss ON ss.snapshot_id = o.snapshot_id
+            WHERE {' AND '.join(filters)}
+            ORDER BY o.captured_at ASC, o.observation_id ASC
+        """
+        rows = list(self.connection.execute(query, parameters).fetchall())
+        if not rows:
+            return []
+
+        observation_ids = [int(row["observation_id"]) for row in rows]
+        id_placeholders = ",".join("?" for _ in observation_ids)
+        cost_lines_by_id: dict[int, list[CostLine]] = {
+            observation_id: [] for observation_id in observation_ids
+        }
+        for row in self.connection.execute(
+            f"""
+            SELECT observation_id, label, normalized_type, amount_cents, source_text
+            FROM cost_lines
+            WHERE observation_id IN ({id_placeholders})
+            ORDER BY observation_id ASC, cost_line_id ASC
+            """,
+            observation_ids,
+        ).fetchall():
+            amount = cents_to_money(row["amount_cents"])
+            if amount is None:
+                continue
+            cost_lines_by_id[int(row["observation_id"])].append(
+                CostLine(
+                    label=row["label"],
+                    normalized_type=row["normalized_type"],
+                    amount=amount,
+                    source_text=row["source_text"],
+                )
+            )
+
+        issues_by_id: dict[int, list[ParseIssue]] = {
+            observation_id: [] for observation_id in observation_ids
+        }
+        for row in self.connection.execute(
+            f"""
+            SELECT observation_id, code, severity, message
+            FROM parse_issues
+            WHERE observation_id IN ({id_placeholders})
+            ORDER BY observation_id ASC, issue_id ASC
+            """,
+            observation_ids,
+        ).fetchall():
+            issues_by_id[int(row["observation_id"])].append(
+                ParseIssue(
+                    code=row["code"],
+                    severity=row["severity"],
+                    message=row["message"],
+                )
+            )
+
+        result: list[ProductObservation] = []
+        for row in rows:
+            metadata = json.loads(row["metadata_json"] or "{}")
+            if not isinstance(metadata, dict):
+                metadata = {}
+            if row["source_kind"]:
+                metadata = {**metadata, "source_kind": row["source_kind"]}
+
+            def decimal_from_cents(value: int | None) -> Decimal | None:
+                return cents_to_money(value)
+
+            observation = ProductObservation(
+                source_ref=row["source_ref"] or "",
+                captured_at=datetime.fromisoformat(row["captured_at"]),
+                canonical_url=row["canonical_url"],
+                product_key=row["product_key"],
+                variant_key=row["variant_key"],
+                product_name=row["name"],
+                brand=row["brand"],
+                brand_type=row["brand_type"],
+                category=row["category"],
+                region=row["region"],
+                currency=row["currency"],
+                selling_price=decimal_from_cents(row["selling_price_cents"]),
+                regular_price=decimal_from_cents(row["regular_price_cents"]),
+                store_credit=decimal_from_cents(row["store_credit_cents"]),
+                traditional_retail_price=decimal_from_cents(
+                    row["traditional_retail_price_cents"]
+                ),
+                reported_total_cost=decimal_from_cents(row["reported_total_cost_cents"]),
+                total_cost_source=row["total_cost_source"],
+                cost_lines=cost_lines_by_id[int(row["observation_id"])],
+                availability=row["availability"],
+                parse_status=row["parse_status"],
+                issues=issues_by_id[int(row["observation_id"])],
+                raw_sha256=row["raw_sha256"],
+                metadata=metadata,
+                parser_version=row["parser_version"],
+                calculation_version=row["calculation_version"],
+                unit_spread=decimal_from_cents(row["unit_spread_cents"]),
+                margin_pct=(
+                    Decimal(str(row["margin_pct"]))
+                    if row["margin_pct"] is not None
+                    else None
+                ),
+                markup_pct=(
+                    Decimal(str(row["markup_pct"]))
+                    if row["markup_pct"] is not None
+                    else None
+                ),
+            )
+            result.append(observation)
+
+        return result
 
     def rankings(
         self,

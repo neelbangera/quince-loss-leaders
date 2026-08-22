@@ -67,3 +67,39 @@ class StorageTests(unittest.TestCase):
             self.assertEqual([row.name for row in profit_drivers], [
                 "Example Carry-All Tote",
             ])
+
+    def test_historical_observations_retain_each_capture_and_cost_lines(self) -> None:
+        html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "observations.sqlite3"
+            with Repository(database) as repository:
+                old = parse_html(
+                    html,
+                    "fixtures/loss-example.html",
+                    captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+                )
+                newer = parse_html(
+                    html,
+                    "fixtures/loss-example.html",
+                    captured_at=datetime(2026, 1, 2, tzinfo=timezone.utc),
+                )
+                newer.selling_price = newer.selling_price + Decimal("10.00")
+                newer.calculate_metrics()
+
+                repository.save_observation(old)
+                repository.save_observation(newer)
+                history = repository.historical_observations(
+                    product_key=old.product_key,
+                )
+
+            self.assertEqual(len(history), 2)
+            self.assertEqual(
+                [observation.captured_at for observation in history],
+                [
+                    datetime(2026, 1, 1, tzinfo=timezone.utc),
+                    datetime(2026, 1, 2, tzinfo=timezone.utc),
+                ],
+            )
+            self.assertEqual(history[0].unit_spread, Decimal("-2.01"))
+            self.assertEqual(history[1].unit_spread, Decimal("7.99"))
+            self.assertEqual(len(history[0].cost_lines), 6)

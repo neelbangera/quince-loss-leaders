@@ -157,3 +157,9 @@ SQLite keeps the MVP simple, but the schema already separates:
 That makes later additions such as ratings, availability, benchmark prices,
 returns, demand signals, historical charts, and category-level aggregation
 additive rather than a rewrite of the core model.
+
+Every accepted crawl is appended to `observations` with its capture time;
+existing observations are not overwritten. `Repository.rankings()` intentionally
+returns only the latest complete row for the current ranking screens, while
+`Repository.historical_observations()` returns the retained observations in
+chronological order for future comparison logic.

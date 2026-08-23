@@ -1,5 +1,7 @@
 <script setup lang="ts">
 type View = "losses" | "profit" | "all";
+type SortField = "name" | "department" | "price" | "cost" | "spread" | "margin";
+type Sort = `${SortField}_asc` | `${SortField}_desc`;
 
 interface Facet {
   value: string;
@@ -24,6 +26,7 @@ interface ProductResult {
   marginPct: number | null;
   classification: "loss" | "profit" | "break_even";
   capturedAt: string;
+  hasExorbitantFees: boolean;
 }
 
 interface Summary {
@@ -75,7 +78,7 @@ const view = ref<View>("losses");
 const search = ref("");
 const department = ref("");
 const category = ref("");
-const sort = ref("spread_asc");
+const sort = ref<Sort>("spread_asc");
 const hydrated = ref(false);
 
 onMounted(() => {
@@ -85,7 +88,6 @@ onMounted(() => {
 const requestQuery = computed(() => {
   const query: Record<string, string> = {
     view: view.value,
-    sort: sort.value,
     limit: "5000",
   };
   if (search.value.trim()) query.search = search.value.trim();
@@ -105,7 +107,7 @@ const { data, pending, error, refresh } = await useAsyncData<RankingResponse>(
 );
 
 const response = computed(() => data.value || emptyResponse());
-const results = computed(() => response.value.results);
+const results = computed(() => sortResults(response.value.results));
 const summary = computed(() => response.value.summary);
 const departments = computed(() => response.value.facets.departments);
 const categories = computed(() => response.value.facets.categories);
@@ -161,6 +163,62 @@ function formatDate(value: string) {
   }).format(parsed);
 }
 
+function numericValue(value: string | number | null) {
+  if (value === null) return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function compareNumbers(left: number | null, right: number | null, direction: number) {
+  if (left === null && right === null) return 0;
+  if (left === null) return 1;
+  if (right === null) return -1;
+  return (left - right) * direction;
+}
+
+function sortResults(items: ProductResult[]) {
+  const field = sort.value.slice(0, -4) as SortField;
+  const direction = sort.value.endsWith("_desc") ? -1 : 1;
+
+  return [...items].sort((left, right) => {
+    if (field === "name" || field === "department") {
+      const leftText = field === "name" ? left.name : left.departmentLabel;
+      const rightText = field === "name" ? right.name : right.departmentLabel;
+      return leftText.localeCompare(rightText, undefined, { sensitivity: "base" }) * direction;
+    }
+
+    const values = {
+      price: [numericValue(left.sellingPrice), numericValue(right.sellingPrice)],
+      cost: [numericValue(left.reportedTotalCost), numericValue(right.reportedTotalCost)],
+      spread: [numericValue(left.unitSpread), numericValue(right.unitSpread)],
+      margin: [numericValue(left.marginPct), numericValue(right.marginPct)],
+    }[field];
+
+    return compareNumbers(values[0] ?? null, values[1] ?? null, direction);
+  });
+}
+
+function sortDirection(field: SortField): "asc" | "desc" | null {
+  if (sort.value === `${field}_asc`) return "asc";
+  if (sort.value === `${field}_desc`) return "desc";
+  return null;
+}
+
+function sortIndicator(field: SortField) {
+  const direction = sortDirection(field);
+  return direction === "asc" ? "↑" : direction === "desc" ? "↓" : "↕";
+}
+
+function ariaSort(field: SortField) {
+  const direction = sortDirection(field);
+  return direction === "asc" ? "ascending" : direction === "desc" ? "descending" : "none";
+}
+
+function toggleSort(field: SortField) {
+  const direction = sortDirection(field);
+  sort.value = `${field}_${direction === "asc" ? "desc" : "asc"}` as Sort;
+}
+
 function setView(nextView: View) {
   view.value = nextView;
   sort.value = nextView === "profit" ? "spread_desc" : "spread_asc";
@@ -171,6 +229,13 @@ function resetFilters() {
   department.value = "";
   category.value = "";
   sort.value = view.value === "profit" ? "spread_desc" : "spread_asc";
+}
+
+function marginClass(value: number | null) {
+  if (value === null) return "";
+  if (value < 0) return "margin-negative";
+  if (value > 0) return "margin-positive";
+  return "margin-zero";
 }
 
 function retry() {
@@ -304,7 +369,11 @@ function retry() {
               <option value="spread_desc">Highest spread</option>
               <option value="price_desc">Highest price</option>
               <option value="price_asc">Lowest price</option>
-              <option value="name">Product name</option>
+              <option value="cost_desc">Highest reported cost</option>
+              <option value="cost_asc">Lowest reported cost</option>
+              <option value="margin_desc">Highest margin</option>
+              <option value="margin_asc">Lowest margin</option>
+              <option value="name_asc">Product name</option>
             </select>
           </div>
         </div>
@@ -335,12 +404,36 @@ function retry() {
             <table>
               <thead>
                 <tr>
-                  <th scope="col">Product</th>
-                  <th scope="col">Department</th>
-                  <th scope="col" class="numeric">Price</th>
-                  <th scope="col" class="numeric">Reported cost</th>
-                  <th scope="col" class="numeric">Spread</th>
-                  <th scope="col" class="numeric">Margin</th>
+                  <th scope="col" :aria-sort="ariaSort('name')">
+                    <button class="column-sort" type="button" @click="toggleSort('name')">
+                      <span>Product</span><span class="sort-indicator">{{ sortIndicator("name") }}</span>
+                    </button>
+                  </th>
+                  <th scope="col" :aria-sort="ariaSort('department')">
+                    <button class="column-sort" type="button" @click="toggleSort('department')">
+                      <span>Department</span><span class="sort-indicator">{{ sortIndicator("department") }}</span>
+                    </button>
+                  </th>
+                  <th scope="col" class="numeric" :aria-sort="ariaSort('price')">
+                    <button class="column-sort" type="button" @click="toggleSort('price')">
+                      <span>Price</span><span class="sort-indicator">{{ sortIndicator("price") }}</span>
+                    </button>
+                  </th>
+                  <th scope="col" class="numeric" :aria-sort="ariaSort('cost')">
+                    <button class="column-sort" type="button" @click="toggleSort('cost')">
+                      <span>Reported cost</span><span class="sort-indicator">{{ sortIndicator("cost") }}</span>
+                    </button>
+                  </th>
+                  <th scope="col" class="numeric" :aria-sort="ariaSort('spread')">
+                    <button class="column-sort" type="button" @click="toggleSort('spread')">
+                      <span>Spread</span><span class="sort-indicator">{{ sortIndicator("spread") }}</span>
+                    </button>
+                  </th>
+                  <th scope="col" class="numeric" :aria-sort="ariaSort('margin')">
+                    <button class="column-sort" type="button" @click="toggleSort('margin')">
+                      <span>Margin</span><span class="sort-indicator">{{ sortIndicator("margin") }}</span>
+                    </button>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -348,9 +441,22 @@ function retry() {
                   <td>
                     <div class="product-cell">
                       <a v-if="product.url" :href="product.url" target="_blank" rel="noreferrer">
-                        {{ product.name }} <span aria-hidden="true">↗</span>
+                        {{ product.name }}<span
+                          v-if="product.hasExorbitantFees"
+                          class="fee-asterisk"
+                          title="A reported freight, card, or duties fee is at least as large as the listed price."
+                          aria-label="Flagged for an exorbitant reported fee"
+                        >*</span>
+                        <span aria-hidden="true">↗</span>
                       </a>
-                      <strong v-else>{{ product.name }}</strong>
+                      <strong v-else>
+                        {{ product.name }}<span
+                          v-if="product.hasExorbitantFees"
+                          class="fee-asterisk"
+                          title="A reported freight, card, or duties fee is at least as large as the listed price."
+                          aria-label="Flagged for an exorbitant reported fee"
+                        >*</span>
+                      </strong>
                       <span>{{ product.categoryLabel }}<template v-if="product.brand"> · {{ product.brand }}</template></span>
                     </div>
                   </td>
@@ -360,7 +466,9 @@ function retry() {
                   <td class="numeric" :class="`spread-${product.classification}`">
                     {{ formatSpread(product) }}
                   </td>
-                  <td class="numeric">{{ formatMargin(product.marginPct) }}</td>
+                  <td class="numeric" :class="marginClass(product.marginPct)">
+                    {{ formatMargin(product.marginPct) }}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -369,6 +477,7 @@ function retry() {
 
         <footer class="results-footer">
           <span>Source: Quince-reported cost breakdowns</span>
+          <span><span class="fee-asterisk" aria-hidden="true">*</span> A reported fee is at least as large as the listed price.</span>
           <span>These figures are disclosed spread, not verified net profit.</span>
         </footer>
       </section>

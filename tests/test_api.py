@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 from quince_loss_leaders.api import RankingService
 from quince_loss_leaders.parser import parse_html
@@ -80,6 +81,43 @@ class ApiTests(unittest.TestCase):
 
         self.assertEqual(result["results"][0]["name"], "Example Chair in Performance Velvet")
         self.assertTrue(result["results"][0]["hasExorbitantFees"])
+
+    def test_rankings_cache_reuses_data_and_invalidates_after_write(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "rankings.sqlite3"
+            with Repository(database) as repository:
+                repository.save_observation(
+                    parse_html(
+                        (FIXTURES / "loss-example.html").read_text(encoding="utf-8"),
+                        "loss-example.html",
+                        canonical_url="https://www.quince.com/men/loss-example",
+                        captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+                    )
+                )
+
+            service = RankingService(database)
+            with patch("quince_loss_leaders.api.Repository", wraps=Repository) as repository_class:
+                first = service.get_rankings({"view": ["all"]})
+                second = service.get_rankings({"view": ["all"]})
+
+            self.assertEqual(repository_class.call_count, 1)
+            self.assertEqual(first["results"], second["results"])
+
+            with Repository(database) as repository:
+                repository.save_observation(
+                    parse_html(
+                        (FIXTURES / "positive-example.html").read_text(encoding="utf-8"),
+                        "positive-example.html",
+                        canonical_url="https://www.quince.com/women/positive-example",
+                        captured_at=datetime(2026, 1, 2, tzinfo=timezone.utc),
+                    )
+                )
+
+            with patch("quince_loss_leaders.api.Repository", wraps=Repository) as repository_class:
+                refreshed = service.get_rankings({"view": ["all"]})
+
+            self.assertEqual(repository_class.call_count, 1)
+            self.assertEqual(refreshed["total"], 2)
 
 
 if __name__ == "__main__":

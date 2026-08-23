@@ -9,13 +9,16 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from copy import deepcopy
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import re
-from typing import Mapping
+from threading import RLock
+from typing import Iterable, Mapping
 from urllib.parse import parse_qs, urlsplit
 
 from .models import cents_to_money
@@ -44,6 +47,17 @@ VALID_SORTS = {
     "margin_desc",
 }
 COLOR_SUFFIX_RE = re.compile(r"^(?P<title>.+)\s+in\s+(?P<color>[^,]+)$", re.IGNORECASE)
+RowKey = tuple[str, str]
+DatabaseSignature = tuple[tuple[int, int, int], ...]
+QueryKey = tuple[tuple[str, tuple[str, ...]], ...]
+
+
+@dataclass(frozen=True)
+class _CatalogCache:
+    signature: DatabaseSignature
+    rows: tuple[RankingRow, ...]
+    taxonomies: Mapping[RowKey, Taxonomy]
+    department_facets: tuple[dict[str, object], ...]
 
 
 def _first(params: Mapping[str, list[str]], key: str, default: str = "") -> str:
@@ -70,6 +84,32 @@ def _dollars_to_cents(value: str) -> int | None:
     return int(amount * 100)
 
 
+def _database_signature(database_path: Path) -> DatabaseSignature:
+    """Track the database and SQLite journal files for cache invalidation."""
+
+    signature: list[tuple[int, int, int]] = []
+    for candidate in (
+        database_path,
+        Path(f"{database_path}-wal"),
+        Path(f"{database_path}-shm"),
+    ):
+        try:
+            stat = candidate.stat()
+        except FileNotFoundError:
+            signature.append((0, 0, 0))
+        else:
+            signature.append((stat.st_mtime_ns, stat.st_size, stat.st_ctime_ns))
+    return tuple(signature)
+
+
+def _row_key(row: RankingRow) -> RowKey:
+    return row.product_key, row.variant_key
+
+
+def _query_cache_key(query: Mapping[str, list[str]]) -> QueryKey:
+    return tuple(sorted((key, tuple(values)) for key, values in query.items()))
+
+
 def _row_taxonomy(row: RankingRow) -> Taxonomy:
     return infer_taxonomy(row.canonical_url, row.name, row.category)
 
@@ -89,8 +129,8 @@ def _classification(row: RankingRow) -> str:
     return "break_even"
 
 
-def _row_dict(row: RankingRow) -> dict[str, object]:
-    taxonomy = _row_taxonomy(row)
+def _row_dict(row: RankingRow, taxonomy: Taxonomy | None = None) -> dict[str, object]:
+    taxonomy = taxonomy or _row_taxonomy(row)
     return {
         "productKey": row.product_key,
         "variantKey": row.variant_key,
@@ -116,10 +156,14 @@ def _row_dict(row: RankingRow) -> dict[str, object]:
     }
 
 
-def _facet_values(rows: list[RankingRow], attribute: str) -> list[dict[str, object]]:
+def _facet_values(
+    rows: Iterable[RankingRow],
+    attribute: str,
+    taxonomies: Mapping[RowKey, Taxonomy],
+) -> list[dict[str, object]]:
     values: Counter[tuple[str, str]] = Counter()
     for row in rows:
-        taxonomy = _row_taxonomy(row)
+        taxonomy = taxonomies[_row_key(row)]
         key = getattr(taxonomy, attribute)
         label = getattr(taxonomy, f"{attribute}_label")
         values[(key, label)] += 1
@@ -134,10 +178,35 @@ class RankingService:
 
     def __init__(self, database_path: str | Path) -> None:
         self.database_path = Path(database_path)
+        self._cache_lock = RLock()
+        self._catalog_cache: dict[bool, _CatalogCache] = {}
+        self._response_cache: dict[tuple[DatabaseSignature, QueryKey], dict[str, object]] = {}
 
-    def _rows(self, include_partial: bool = False) -> list[RankingRow]:
-        with Repository(self.database_path) as repository:
-            return repository.rankings(include_partial=include_partial)
+    def _catalog(self, include_partial: bool = False) -> _CatalogCache:
+        signature = _database_signature(self.database_path)
+        with self._cache_lock:
+            cached = self._catalog_cache.get(include_partial)
+            if cached is not None and cached.signature == signature:
+                return cached
+
+            database_changed = bool(self._catalog_cache) and any(
+                item.signature != signature for item in self._catalog_cache.values()
+            )
+            if database_changed:
+                self._catalog_cache.clear()
+                self._response_cache.clear()
+
+            with Repository(self.database_path) as repository:
+                rows = tuple(repository.rankings(include_partial=include_partial))
+            taxonomies = {_row_key(row): _row_taxonomy(row) for row in rows}
+            catalog = _CatalogCache(
+                signature=_database_signature(self.database_path),
+                rows=rows,
+                taxonomies=taxonomies,
+                department_facets=tuple(_facet_values(rows, "department", taxonomies)),
+            )
+            self._catalog_cache[include_partial] = catalog
+            return catalog
 
     def get_rankings(self, params: Mapping[str, list[str]] | None = None) -> dict[str, object]:
         query = params or {}
@@ -154,7 +223,15 @@ class RankingService:
             )
 
         include_partial = _bool_param(query, "include_partial")
-        all_rows = self._rows(include_partial=include_partial)
+        catalog = self._catalog(include_partial=include_partial)
+        cache_key = (catalog.signature, _query_cache_key(query))
+        with self._cache_lock:
+            cached_response = self._response_cache.get(cache_key)
+        if cached_response is not None:
+            return deepcopy(cached_response)
+
+        all_rows = catalog.rows
+        taxonomies = catalog.taxonomies
         if view == "losses":
             rows = [row for row in all_rows if row.unit_spread_cents < 0]
         elif view == "profit":
@@ -172,7 +249,7 @@ class RankingService:
         max_price = _dollars_to_cents(_first(query, "max_price"))
 
         def matches(row: RankingRow) -> bool:
-            taxonomy = _row_taxonomy(row)
+            taxonomy = taxonomies[_row_key(row)]
             if department and taxonomy.department != department:
                 return False
             if category and taxonomy.category != category:
@@ -227,13 +304,13 @@ class RankingService:
         elif sort == "margin_asc":
             rows.sort(key=lambda row: row.margin_pct if row.margin_pct is not None else float("inf"))
         elif sort == "department_desc":
-            rows.sort(key=lambda row: _row_taxonomy(row).department_label.lower(), reverse=True)
+            rows.sort(key=lambda row: taxonomies[_row_key(row)].department_label.lower(), reverse=True)
         elif sort == "name_desc":
             rows.sort(key=lambda row: _display_name(row.name or row.product_key).lower(), reverse=True)
         else:
             # Includes name_asc and department_asc.
             key = (
-                (lambda row: _row_taxonomy(row).department_label.lower())
+                (lambda row: taxonomies[_row_key(row)].department_label.lower())
                 if sort == "department_asc"
                 else lambda row: _display_name(row.name or row.product_key).lower()
             )
@@ -264,8 +341,11 @@ class RankingService:
             "filtered": filtered_summary,
         }
 
-        facet_rows = [row for row in all_rows if not department or _row_taxonomy(row).department == department]
-        return {
+        facet_rows = [
+            row for row in all_rows
+            if not department or taxonomies[_row_key(row)].department == department
+        ]
+        response = {
             "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "view": view,
             "offset": offset,
@@ -274,11 +354,16 @@ class RankingService:
             "hasMore": offset + len(page) < len(filtered_rows),
             "summary": summary,
             "facets": {
-                "departments": _facet_values(all_rows, "department"),
-                "categories": _facet_values(facet_rows, "category"),
+                "departments": list(catalog.department_facets),
+                "categories": _facet_values(facet_rows, "category", taxonomies),
             },
-            "results": [_row_dict(row) for row in page],
+            "results": [_row_dict(row, taxonomies[_row_key(row)]) for row in page],
         }
+        with self._cache_lock:
+            self._response_cache[cache_key] = response
+            if len(self._response_cache) > 16:
+                self._response_cache.pop(next(iter(self._response_cache)))
+        return deepcopy(response)
 
 
 class ApiHandler(BaseHTTPRequestHandler):

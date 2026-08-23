@@ -177,8 +177,11 @@ function compareNumbers(left: number | null, right: number | null, direction: nu
 }
 
 function sortResults(items: ProductResult[]) {
-  const field = sort.value.slice(0, -4) as SortField;
-  const direction = sort.value.endsWith("_desc") ? -1 : 1;
+  const rawSort = sort.value as string;
+  const normalizedSort = rawSort === "name" ? "name_asc" : rawSort;
+  const hasDirection = normalizedSort.endsWith("_asc") || normalizedSort.endsWith("_desc");
+  const field = (hasDirection ? normalizedSort.slice(0, -4) : "spread") as SortField;
+  const direction = normalizedSort.endsWith("_desc") ? -1 : 1;
 
   return [...items].sort((left, right) => {
     if (field === "name" || field === "department") {
@@ -187,14 +190,20 @@ function sortResults(items: ProductResult[]) {
       return leftText.localeCompare(rightText, undefined, { sensitivity: "base" }) * direction;
     }
 
-    const values = {
-      price: [numericValue(left.sellingPrice), numericValue(right.sellingPrice)],
-      cost: [numericValue(left.reportedTotalCost), numericValue(right.reportedTotalCost)],
-      spread: [numericValue(left.unitSpread), numericValue(right.unitSpread)],
-      margin: [numericValue(left.marginPct), numericValue(right.marginPct)],
-    }[field];
+    if (field === "price") {
+      return compareNumbers(numericValue(left.sellingPrice), numericValue(right.sellingPrice), direction);
+    }
+    if (field === "cost") {
+      return compareNumbers(numericValue(left.reportedTotalCost), numericValue(right.reportedTotalCost), direction);
+    }
+    if (field === "margin") {
+      return compareNumbers(numericValue(left.marginPct), numericValue(right.marginPct), direction);
+    }
+    if (field === "spread") {
+      return compareNumbers(numericValue(left.unitSpread), numericValue(right.unitSpread), direction);
+    }
 
-    return compareNumbers(values[0] ?? null, values[1] ?? null, direction);
+    return 0;
   });
 }
 

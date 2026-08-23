@@ -14,6 +14,7 @@ from decimal import Decimal, InvalidOperation
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+import re
 from typing import Mapping
 from urllib.parse import parse_qs, urlsplit
 
@@ -27,7 +28,22 @@ DEFAULT_CORS_ORIGINS = (
     "http://127.0.0.1:3000",
 )
 VALID_VIEWS = {"losses", "profit", "all"}
-VALID_SORTS = {"spread_asc", "spread_desc", "price_asc", "price_desc", "name"}
+VALID_SORTS = {
+    "name",
+    "name_asc",
+    "name_desc",
+    "department_asc",
+    "department_desc",
+    "price_asc",
+    "price_desc",
+    "cost_asc",
+    "cost_desc",
+    "spread_asc",
+    "spread_desc",
+    "margin_asc",
+    "margin_desc",
+}
+COLOR_SUFFIX_RE = re.compile(r"^(?P<title>.+)\s+in\s+(?P<color>[^,]+)$", re.IGNORECASE)
 
 
 def _first(params: Mapping[str, list[str]], key: str, default: str = "") -> str:
@@ -58,6 +74,13 @@ def _row_taxonomy(row: RankingRow) -> Taxonomy:
     return infer_taxonomy(row.canonical_url, row.name, row.category)
 
 
+def _display_name(value: str) -> str:
+    """Remove Quince's trailing color/finish from the table title."""
+
+    match = COLOR_SUFFIX_RE.match(value.strip())
+    return match.group("title").strip() if match else value
+
+
 def _classification(row: RankingRow) -> str:
     if row.unit_spread_cents < 0:
         return "loss"
@@ -71,7 +94,7 @@ def _row_dict(row: RankingRow) -> dict[str, object]:
     return {
         "productKey": row.product_key,
         "variantKey": row.variant_key,
-        "name": row.name or row.product_key,
+        "name": _display_name(row.name or row.product_key),
         "url": row.canonical_url,
         "brand": row.brand,
         "brandType": row.brand_type,
@@ -89,6 +112,7 @@ def _row_dict(row: RankingRow) -> dict[str, object]:
         "classification": _classification(row),
         "parseStatus": row.parse_status,
         "confidence": row.confidence,
+        "hasExorbitantFees": row.has_exorbitant_fees,
     }
 
 
@@ -123,7 +147,11 @@ class RankingService:
 
         sort = _first(query, "sort", "").lower()
         if sort and sort not in VALID_SORTS:
-            raise ValueError("sort must be one of: spread_asc, spread_desc, price_asc, price_desc, name")
+            raise ValueError(
+                "sort must be one of: name_asc, name_desc, department_asc, "
+                "department_desc, price_asc, price_desc, cost_asc, cost_desc, "
+                "spread_asc, spread_desc, margin_asc, margin_desc"
+            )
 
         include_partial = _bool_param(query, "include_partial")
         all_rows = self._rows(include_partial=include_partial)
@@ -179,6 +207,9 @@ class RankingService:
         rows = [row for row in rows if matches(row)]
         if not sort:
             sort = "spread_desc" if view == "profit" else "spread_asc"
+        if sort == "name":
+            sort = "name_asc"
+
         if sort == "spread_desc":
             rows.sort(key=lambda row: row.unit_spread_cents, reverse=True)
         elif sort == "spread_asc":
@@ -187,8 +218,26 @@ class RankingService:
             rows.sort(key=lambda row: row.selling_price_cents or 0, reverse=True)
         elif sort == "price_asc":
             rows.sort(key=lambda row: row.selling_price_cents or 0)
+        elif sort == "cost_desc":
+            rows.sort(key=lambda row: row.reported_total_cost_cents or 0, reverse=True)
+        elif sort == "cost_asc":
+            rows.sort(key=lambda row: row.reported_total_cost_cents or 0)
+        elif sort == "margin_desc":
+            rows.sort(key=lambda row: row.margin_pct if row.margin_pct is not None else float("-inf"), reverse=True)
+        elif sort == "margin_asc":
+            rows.sort(key=lambda row: row.margin_pct if row.margin_pct is not None else float("inf"))
+        elif sort == "department_desc":
+            rows.sort(key=lambda row: _row_taxonomy(row).department_label.lower(), reverse=True)
+        elif sort == "name_desc":
+            rows.sort(key=lambda row: _display_name(row.name or row.product_key).lower(), reverse=True)
         else:
-            rows.sort(key=lambda row: (row.name or row.product_key).lower())
+            # Includes name_asc and department_asc.
+            key = (
+                (lambda row: _row_taxonomy(row).department_label.lower())
+                if sort == "department_asc"
+                else lambda row: _display_name(row.name or row.product_key).lower()
+            )
+            rows.sort(key=key)
 
         try:
             offset = max(0, int(_first(query, "offset", "0")))

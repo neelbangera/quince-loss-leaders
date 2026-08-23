@@ -106,6 +106,7 @@ class RankingRow:
     margin_pct: float | None
     parse_status: str
     confidence: float
+    has_exorbitant_fees: bool = False
 
 
 class Repository:
@@ -263,7 +264,17 @@ class Repository:
                 r.product_key, r.variant_key, p.name, p.canonical_url, p.brand,
                 p.brand_type, p.category, r.captured_at, r.currency, r.selling_price_cents,
                 r.reported_total_cost_cents, r.unit_spread_cents, r.margin_pct,
-                r.parse_status, r.confidence
+                r.parse_status, r.confidence,
+                EXISTS (
+                    SELECT 1
+                    FROM cost_lines cl
+                    WHERE cl.observation_id = r.observation_id
+                      AND cl.normalized_type IN (
+                          'freight_handling', 'credit_card_fees', 'duties_taxes_fees'
+                      )
+                      AND r.selling_price_cents IS NOT NULL
+                      AND cl.amount_cents >= r.selling_price_cents
+                ) AS has_exorbitant_fees
             FROM ranked r
             JOIN products p ON p.product_key = r.product_key
             WHERE r.row_number = 1
@@ -442,6 +453,7 @@ class Repository:
                     margin_pct=row["margin_pct"],
                     parse_status=row["parse_status"],
                     confidence=row["confidence"],
+                    has_exorbitant_fees=bool(row["has_exorbitant_fees"]),
                 )
             )
         result.sort(key=lambda item: item.unit_spread_cents, reverse=descending)

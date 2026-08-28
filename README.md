@@ -131,6 +131,11 @@ filters, sorting, and product-level price/cost history charts. Click a product
 name or row to open its history. Set `NUXT_PUBLIC_API_BASE` if the API is
 running at a different address.
 
+To run the same dashboard from static JSON instead of the Python API, export
+the data into `web/public/data`, then start Nuxt with
+`NUXT_PUBLIC_STATIC_DATA_BASE=./data`. In that mode the full ranking is loaded
+once and filtering, sorting, and history-file requests stay in the browser.
+
 The current Nuxt release recommends Node 22.19 or newer. The app builds on the
 local Node 22.16 installation with an engine warning, but upgrading Node is
 recommended before deploying it.
@@ -148,9 +153,9 @@ connected to saved searches without changing the storage model.
 ## Export historical data for a static site
 
 The dashboard can also consume an export generated from the retained SQLite
-observations. The exporter writes a small manifest and one history file per
-product/variant, so a static UI can load only the history for the product a
-user opens:
+observations. The exporter writes `rankings.json`, a small history manifest,
+and one history file per product/variant, so a static UI can load only the
+history for the product a user opens:
 
 ```bash
 python3 -m quince_loss_leaders.history \
@@ -166,6 +171,14 @@ complete database. The installed console command is also available:
 ```bash
 quince-history --help
 ```
+
+`quince-static-data` is an alias for the same exporter.
+
+The scheduled GitHub Actions workflow in `.github/workflows/update-site.yml`
+crawls the authorized sitemap, merges the new observations into these JSON
+files, commits changed data, and deploys the generated Nuxt site to GitHub
+Pages. Enable GitHub Pages with **GitHub Actions** as its source once in the
+repository settings.
 
 ## Storage design
 

@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from quince_loss_leaders.history import export_history, history_file_path
+from quince_loss_leaders.history import export_history, export_static_data, history_file_path
 from quince_loss_leaders.parser import parse_html
 from quince_loss_leaders.storage import Repository
 
@@ -36,19 +36,23 @@ class HistoryExportTests(unittest.TestCase):
                 repository.save_observation(first)
                 repository.save_observation(second)
 
-            summary = export_history(database, output)
+            summary = export_static_data(database, output)
             manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
             entry = manifest["products"][0]
             detail = json.loads((output / entry["historyPath"]).read_text(encoding="utf-8"))
+            rankings = json.loads((output / "rankings.json").read_text(encoding="utf-8"))
 
             self.assertEqual(summary.product_count, 1)
             self.assertEqual(summary.observation_count, 2)
+            self.assertEqual(summary.ranking_count, 1)
             self.assertEqual(entry["name"], "Example Recycled Tote")
             self.assertEqual(entry["observationCount"], 2)
             self.assertEqual(detail["history"][0]["sellingPrice"], "29.99")
             self.assertEqual(detail["history"][1]["sellingPrice"], "39.99")
             self.assertEqual(detail["history"][0]["unitSpread"], "-2.01")
             self.assertEqual(detail["current"]["sellingPrice"], "39.99")
+            self.assertEqual(rankings["schemaVersion"], 1)
+            self.assertEqual(rankings["results"][0]["historyPath"], entry["historyPath"])
 
     def test_export_merge_keeps_existing_history_and_deduplicates_reruns(self) -> None:
         html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")

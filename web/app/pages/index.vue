@@ -27,6 +27,7 @@ interface ProductResult {
   classification: "loss" | "profit" | "break_even";
   capturedAt: string;
   hasExorbitantFees: boolean;
+  historyPath?: string;
 }
 
 interface ProductHistoryPoint {
@@ -119,6 +120,8 @@ const emptyResponse = (): RankingResponse => ({
 
 const config = useRuntimeConfig();
 const apiBase = String(config.public.apiBase || "http://127.0.0.1:8877").replace(/\/$/, "");
+const staticDataBase = String(config.public.staticDataBase || "").replace(/\/$/, "");
+const staticMode = Boolean(staticDataBase);
 
 const view = ref<View>("losses");
 const search = ref("");
@@ -148,15 +151,82 @@ const requestQuery = computed(() => {
 
 const { data, pending, error, refresh } = await useAsyncData<RankingResponse>(
   "rankings",
-  () => $fetch<RankingResponse>(`${apiBase}/api/rankings`, { query: requestQuery.value }),
+  () => staticMode
+    ? $fetch<RankingResponse>(`${staticDataBase}/rankings.json`)
+    : $fetch<RankingResponse>(`${apiBase}/api/rankings`, { query: requestQuery.value }),
   {
     server: false,
     default: emptyResponse,
-    watch: [requestQuery],
+    watch: staticMode ? [] : [requestQuery],
   },
 );
 
-const response = computed(() => data.value || emptyResponse());
+const sourceResponse = computed(() => data.value || emptyResponse());
+
+function staticFacetValues(items: ProductResult[], field: "department" | "category"): Facet[] {
+  const counts = new Map<string, Facet>();
+  for (const item of items) {
+    const value = field === "department" ? item.department : item.category;
+    const label = field === "department" ? item.departmentLabel : item.categoryLabel;
+    const current = counts.get(value);
+    if (current) {
+      current.count += 1;
+    } else {
+      counts.set(value, { value, label, count: 1 });
+    }
+  }
+  return [...counts.values()].sort((left, right) =>
+    right.count - left.count || left.label.localeCompare(right.label),
+  );
+}
+
+function staticResponse(source: RankingResponse): RankingResponse {
+  const facetRows = department.value
+    ? source.results.filter((item) => item.department === department.value)
+    : source.results;
+  let rows = source.results;
+
+  if (view.value === "losses") {
+    rows = rows.filter((item) => numericValue(item.unitSpread) !== null && numericValue(item.unitSpread)! < 0);
+  } else if (view.value === "profit") {
+    rows = rows.filter((item) => numericValue(item.unitSpread) !== null && numericValue(item.unitSpread)! > 0);
+  }
+
+  if (department.value) rows = rows.filter((item) => item.department === department.value);
+  if (category.value) rows = rows.filter((item) => item.category === category.value);
+  const searchTerm = search.value.trim().toLowerCase();
+  if (searchTerm) {
+    rows = rows.filter((item) =>
+      [item.name, item.brand || "", item.departmentLabel, item.categoryLabel]
+        .join(" ")
+        .toLowerCase()
+        .includes(searchTerm),
+    );
+  }
+
+  const filtered = {
+    total: rows.length,
+    losses: rows.filter((item) => numericValue(item.unitSpread) !== null && numericValue(item.unitSpread)! < 0).length,
+    profitDrivers: rows.filter((item) => numericValue(item.unitSpread) !== null && numericValue(item.unitSpread)! > 0).length,
+    breakEven: rows.filter((item) => numericValue(item.unitSpread) === 0).length,
+  };
+  return {
+    ...source,
+    view: view.value,
+    total: rows.length,
+    hasMore: false,
+    summary: { ...source.summary, filtered },
+    facets: {
+      departments: source.facets.departments.length
+        ? source.facets.departments
+        : staticFacetValues(source.results, "department"),
+      categories: staticFacetValues(facetRows, "category"),
+    },
+    results: rows,
+  };
+}
+
+const response = computed(() => staticMode ? staticResponse(sourceResponse.value) : sourceResponse.value);
 const results = computed(() => sortResults(response.value.results));
 const summary = computed(() => response.value.summary);
 const departments = computed(() => response.value.facets.departments);
@@ -307,9 +377,14 @@ async function openProduct(product: ProductResult) {
   detailError.value = "";
   detailPending.value = true;
   try {
-    detail.value = await $fetch<ProductDetail>(`${apiBase}/api/product`, {
-      query: { product_key: product.productKey, variant_key: product.variantKey },
-    });
+    if (staticMode) {
+      if (!product.historyPath) throw new Error("History file is not available.");
+      detail.value = await $fetch<ProductDetail>(`${staticDataBase}/${product.historyPath}`);
+    } else {
+      detail.value = await $fetch<ProductDetail>(`${apiBase}/api/product`, {
+        query: { product_key: product.productKey, variant_key: product.variantKey },
+      });
+    }
   } catch {
     detailError.value = "Could not load product history.";
   } finally {
@@ -431,7 +506,7 @@ const historyChart = computed<HistoryChart>(() => {
       </NuxtLink>
       <div class="connection-status" :class="{ loading: pending }">
         <span class="status-dot" />
-        {{ hydrated && pending ? "Updating" : "Local snapshot" }}
+        {{ hydrated && pending ? "Updating" : staticMode ? "Published snapshot" : "Local snapshot" }}
       </div>
     </header>
 
@@ -555,8 +630,8 @@ const historyChart = computed<HistoryChart>(() => {
         </div>
 
         <div v-if="error" class="state-card error-state">
-          <strong>Could not reach the rankings API.</strong>
-          <p>Start the Python API on port 8877, then try again.</p>
+          <strong>{{ staticMode ? "Could not load the published snapshot." : "Could not reach the rankings API." }}</strong>
+          <p>{{ staticMode ? "The static data files are missing or unavailable." : "Start the Python API on port 8877, then try again." }}</p>
           <button class="action-button" type="button" @click="retry">Retry</button>
         </div>
 

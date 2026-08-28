@@ -13,6 +13,7 @@ quince-loss-leaders = "quince_loss_leaders.cli:main"
 quince-crawl = "quince_loss_leaders.crawler_cli:main"
 quince-api = "quince_loss_leaders.api:main"
 quince-history = "quince_loss_leaders.history:main"
+quince-static-data = "quince_loss_leaders.history:main"
 
 [tool.setuptools]
 packages = ["quince_loss_leaders"]

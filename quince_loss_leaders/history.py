@@ -215,6 +215,7 @@ class ExportSummary:
     product_count: int
     observation_count: int
     output_dir: Path
+    ranking_count: int = 0
 
 
 def _load_json(path: Path) -> dict[str, object] | None:
@@ -347,9 +348,49 @@ def export_history(
     )
 
 
+def export_static_data(
+    database_path: str | Path,
+    output_dir: str | Path,
+    *,
+    include_partial: bool = False,
+    merge: bool = True,
+) -> ExportSummary:
+    """Export rankings and product histories for a static dashboard build."""
+
+    summary = export_history(
+        database_path,
+        output_dir,
+        include_partial=include_partial,
+        merge=merge,
+    )
+
+    # Keep the API import local: the API reuses the history serializer above,
+    # while this function is also the entry point for the standalone exporter.
+    from .api import RankingService
+
+    query = {
+        "view": ["all"],
+        "limit": ["5000"],
+    }
+    if include_partial:
+        query["include_partial"] = ["true"]
+    rankings = RankingService(database_path).get_rankings(query)
+    rankings_payload = {
+        "schemaVersion": HISTORY_SCHEMA_VERSION,
+        **rankings,
+    }
+    _write_json_if_changed(Path(output_dir) / "rankings.json", rankings_payload)
+    return ExportSummary(
+        product_count=summary.product_count,
+        observation_count=summary.observation_count,
+        output_dir=summary.output_dir,
+        ranking_count=len(rankings.get("results", [])),
+    )
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Export retained Quince price/cost history as static JSON."
+        description="Export Quince rankings and retained price/cost history as static JSON."
     )
     parser.add_argument(
         "--database",
@@ -381,7 +422,7 @@ def main(argv: list[str] | None = None) -> int:
     if not args.database.exists():
         print(f"Database does not exist: {args.database}", file=sys.stderr)
         return 2
-    summary = export_history(
+    summary = export_static_data(
         args.database,
         args.output_dir,
         include_partial=args.include_partial,
@@ -393,6 +434,7 @@ def main(argv: list[str] | None = None) -> int:
                 "outputDir": str(summary.output_dir),
                 "products": summary.product_count,
                 "observations": summary.observation_count,
+                "rankings": summary.ranking_count,
             },
             indent=2,
         )

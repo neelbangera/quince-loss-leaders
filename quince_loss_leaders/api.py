@@ -21,7 +21,7 @@ from threading import RLock
 from typing import Iterable, Mapping
 from urllib.parse import parse_qs, urlsplit
 
-from .history import product_detail
+from .history import history_file_path, product_detail
 from .models import cents_to_money
 from .storage import RankingRow, Repository
 from .taxonomy import Taxonomy, infer_taxonomy
@@ -155,6 +155,7 @@ def _row_dict(row: RankingRow, taxonomy: Taxonomy | None = None) -> dict[str, ob
         "parseStatus": row.parse_status,
         "confidence": row.confidence,
         "hasExorbitantFees": row.has_exorbitant_fees,
+        "historyPath": history_file_path(row.product_key, row.variant_key),
     }
 
 

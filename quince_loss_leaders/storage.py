@@ -110,13 +110,36 @@ class RankingRow:
 
 
 class Repository:
-    def __init__(self, database_path: str | Path) -> None:
+    def __init__(
+        self,
+        database_path: str | Path,
+        *,
+        read_only: bool = False,
+        timeout_seconds: float = 10.0,
+    ) -> None:
         self.database_path = Path(database_path)
-        self.database_path.parent.mkdir(parents=True, exist_ok=True)
-        self.connection = sqlite3.connect(self.database_path)
+        self.read_only = read_only
+        if read_only:
+            if not self.database_path.is_file():
+                raise FileNotFoundError(f"Database does not exist: {self.database_path}")
+            database_uri = f"{self.database_path.resolve().as_uri()}?mode=ro"
+            self.connection = sqlite3.connect(
+                database_uri,
+                uri=True,
+                timeout=timeout_seconds,
+            )
+        else:
+            self.database_path.parent.mkdir(parents=True, exist_ok=True)
+            self.connection = sqlite3.connect(
+                self.database_path,
+                timeout=timeout_seconds,
+            )
         self.connection.row_factory = sqlite3.Row
-        self.connection.executescript(SCHEMA)
-        self.connection.commit()
+        busy_timeout_ms = max(0, int(timeout_seconds * 1000))
+        self.connection.execute(f"PRAGMA busy_timeout = {busy_timeout_ms}")
+        if not read_only:
+            self.connection.executescript(SCHEMA)
+            self.connection.commit()
 
     def close(self) -> None:
         self.connection.close()

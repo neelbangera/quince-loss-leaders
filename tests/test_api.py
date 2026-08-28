@@ -1,10 +1,11 @@
 from datetime import datetime, timezone
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
-from quince_loss_leaders.api import RankingService
+from quince_loss_leaders.api import RankingService, build_parser
 from quince_loss_leaders.parser import parse_html
 from quince_loss_leaders.storage import Repository
 
@@ -82,6 +83,48 @@ class ApiTests(unittest.TestCase):
             service = RankingService(Path(temporary_directory) / "rankings.sqlite3")
             with self.assertRaises(ValueError):
                 service.get_rankings({"view": ["unknown"]})
+
+    def test_health_reports_catalog_state(self) -> None:
+        html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "rankings.sqlite3"
+            with Repository(database) as repository:
+                repository.save_observation(
+                    parse_html(
+                        html,
+                        "loss-example.html",
+                        captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+                    )
+                )
+
+            health = RankingService(database).health()
+
+        self.assertTrue(health["ok"])
+        self.assertEqual(health["observations"], 1)
+        self.assertEqual(health["completeObservations"], 1)
+        self.assertEqual(health["rankableVariants"], 1)
+        self.assertEqual(health["latestCapturedAt"], "2026-01-01T00:00:00+00:00")
+
+    def test_health_does_not_create_missing_database(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "missing.sqlite3"
+            health = RankingService(database).health()
+
+            self.assertFalse(health["ok"])
+            self.assertIn("does not exist", health["error"])
+            self.assertFalse(database.exists())
+
+    def test_api_database_can_be_configured_by_environment(self) -> None:
+        with patch.dict(os.environ, {"QUINCE_DATABASE": "data/custom.sqlite3"}):
+            args = build_parser().parse_args([])
+
+        self.assertEqual(args.database, Path("data/custom.sqlite3"))
+
+    def test_api_defaults_to_us_catalog(self) -> None:
+        with patch.dict(os.environ, {}, clear=True):
+            args = build_parser().parse_args([])
+
+        self.assertEqual(args.database, Path("data/quince-us.sqlite3"))
 
     def test_display_name_removes_color_and_flags_large_fee(self) -> None:
         html = """

@@ -12,6 +12,15 @@ FIXTURES = Path(__file__).parents[1] / "fixtures"
 
 
 class StorageTests(unittest.TestCase):
+    def test_read_only_repository_requires_existing_database(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "missing.sqlite3"
+
+            with self.assertRaises(FileNotFoundError):
+                Repository(database, read_only=True)
+
+            self.assertFalse(database.exists())
+
     def test_latest_observation_is_used_for_loss_ranking(self) -> None:
         html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
         with TemporaryDirectory() as temporary_directory:

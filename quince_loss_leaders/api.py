@@ -15,7 +15,10 @@ from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import os
 from pathlib import Path
+import sqlite3
+import sys
 from threading import RLock
 from typing import Iterable, Mapping
 from urllib.parse import parse_qs, urlsplit
@@ -30,6 +33,7 @@ DEFAULT_CORS_ORIGINS = (
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 )
+DEFAULT_DATABASE_PATH = Path("data/quince-us.sqlite3")
 VALID_VIEWS = {"losses", "profit", "all"}
 VALID_SORTS = {
     "name",
@@ -177,6 +181,67 @@ class RankingService:
         self._response_cache: dict[tuple[DatabaseSignature, QueryKey], dict[str, object]] = {}
         self._product_cache: dict[ProductCacheKey, dict[str, object]] = {}
 
+    def health(self) -> dict[str, object]:
+        """Return whether the configured database contains usable rankings."""
+
+        status: dict[str, object] = {
+            "ok": False,
+            "database": str(self.database_path),
+        }
+        if not self.database_path.is_file():
+            status["error"] = f"Database does not exist: {self.database_path}"
+            return status
+
+        try:
+            with Repository(self.database_path, read_only=True) as repository:
+                counts = {
+                    row["parse_status"]: int(row["count"])
+                    for row in repository.connection.execute(
+                        "SELECT parse_status, COUNT(*) AS count FROM observations GROUP BY parse_status"
+                    ).fetchall()
+                }
+                total = sum(counts.values())
+                latest = repository.connection.execute(
+                    "SELECT MAX(captured_at) FROM observations"
+                ).fetchone()[0]
+                rankable = len(repository.rankings())
+        except (OSError, sqlite3.Error) as error:
+            status["error"] = str(error)
+            return status
+
+        status.update(
+            {
+                "ok": rankable > 0,
+                "observations": total,
+                "completeObservations": counts.get("complete", 0),
+                "partialObservations": counts.get("partial", 0),
+                "invalidObservations": counts.get("invalid", 0),
+                "rankableVariants": rankable,
+                "latestCapturedAt": latest,
+            }
+        )
+        if rankable == 0:
+            status["error"] = "Database contains no rankable complete observations"
+        return status
+
+    def _load_catalog(self, include_partial: bool) -> _CatalogCache:
+        """Read a stable catalog snapshot, retrying if a crawl commits mid-read."""
+
+        for _attempt in range(3):
+            before = _database_signature(self.database_path)
+            with Repository(self.database_path, read_only=True) as repository:
+                rows = tuple(repository.rankings(include_partial=include_partial))
+            after = _database_signature(self.database_path)
+            if before == after:
+                taxonomies = {_row_key(row): _row_taxonomy(row) for row in rows}
+                return _CatalogCache(
+                    signature=after,
+                    rows=rows,
+                    taxonomies=taxonomies,
+                    department_facets=tuple(_facet_values(rows, "department", taxonomies)),
+                )
+        raise RuntimeError("Database changed while loading; retry the request")
+
     def _catalog(self, include_partial: bool = False) -> _CatalogCache:
         signature = _database_signature(self.database_path)
         with self._cache_lock:
@@ -192,15 +257,7 @@ class RankingService:
                 self._response_cache.clear()
                 self._product_cache.clear()
 
-            with Repository(self.database_path) as repository:
-                rows = tuple(repository.rankings(include_partial=include_partial))
-            taxonomies = {_row_key(row): _row_taxonomy(row) for row in rows}
-            catalog = _CatalogCache(
-                signature=_database_signature(self.database_path),
-                rows=rows,
-                taxonomies=taxonomies,
-                department_facets=tuple(_facet_values(rows, "department", taxonomies)),
-            )
+            catalog = self._load_catalog(include_partial)
             self._catalog_cache[include_partial] = catalog
             return catalog
 
@@ -375,12 +432,20 @@ class RankingService:
         if cached is not None:
             return deepcopy(cached)
 
-        with Repository(self.database_path) as repository:
-            observations = repository.historical_observations(
-                product_key=product_key,
-                variant_key=variant_key or None,
-                include_partial=include_partial,
-            )
+        for _attempt in range(3):
+            before = _database_signature(self.database_path)
+            with Repository(self.database_path, read_only=True) as repository:
+                observations = repository.historical_observations(
+                    product_key=product_key,
+                    variant_key=variant_key or None,
+                    include_partial=include_partial,
+                )
+            after = _database_signature(self.database_path)
+            if before == after:
+                signature = after
+                break
+        else:
+            raise RuntimeError("Database changed while loading; retry the request")
         if not observations:
             raise ValueError("Product history not found")
 
@@ -428,7 +493,8 @@ class ApiHandler(BaseHTTPRequestHandler):
         parsed = urlsplit(self.path)
         try:
             if parsed.path == "/api/health":
-                self._send_json({"ok": True})
+                health = self.service.health()
+                self._send_json(health, status=200 if health["ok"] else 503)
                 return
             if parsed.path == "/api/product":
                 self._send_json(self.service.get_product(parse_qs(parsed.query)))
@@ -442,7 +508,9 @@ class ApiHandler(BaseHTTPRequestHandler):
             self._send_json({"error": "Not found"}, status=404)
         except ValueError as error:
             self._send_json({"error": str(error)}, status=400)
-        except (OSError, RuntimeError) as error:
+        except (OSError, sqlite3.Error) as error:
+            self._send_json({"error": str(error)}, status=503)
+        except RuntimeError as error:
             self._send_json({"error": str(error)}, status=500)
 
     def log_message(self, format: str, *args: object) -> None:
@@ -452,7 +520,12 @@ class ApiHandler(BaseHTTPRequestHandler):
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Serve stored Quince rankings as read-only JSON.")
-    parser.add_argument("--database", type=Path, default=Path("data/quince.sqlite3"))
+    parser.add_argument(
+        "--database",
+        type=Path,
+        default=Path(os.environ.get("QUINCE_DATABASE", str(DEFAULT_DATABASE_PATH))),
+        help="SQLite database path (default: QUINCE_DATABASE or data/quince-us.sqlite3).",
+    )
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8877)
     parser.add_argument(
@@ -468,6 +541,11 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     service = RankingService(args.database)
     origins = tuple(args.cors_origin) if args.cors_origin is not None else DEFAULT_CORS_ORIGINS
+
+    health = service.health()
+    if not health["ok"]:
+        print(f"Cannot serve rankings: {health.get('error', 'database is not ready')}", file=sys.stderr)
+        return 2
 
     handler = type(
         "ConfiguredApiHandler",

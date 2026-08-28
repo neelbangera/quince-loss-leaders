@@ -117,6 +117,12 @@ python3 -m quince_loss_leaders.api \
   --port 8877
 ```
 
+The API defaults to `data/quince-us.sqlite3`; set `QUINCE_DATABASE` to use a
+different catalog. It opens the database read-only, waits briefly through
+SQLite writer locks, and refuses to start when the database is missing or has
+no rankable observations. `/api/health` reports the database path, observation
+counts, latest capture time, and rankable variant count.
+
 Then start Nuxt in a second terminal:
 
 ```bash

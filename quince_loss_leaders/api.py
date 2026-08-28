@@ -16,12 +16,11 @@ from decimal import Decimal, InvalidOperation
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-import re
 from threading import RLock
 from typing import Iterable, Mapping
 from urllib.parse import parse_qs, urlsplit
 
-from .history import history_file_path, product_detail
+from .history import display_name, history_file_path, product_detail
 from .models import cents_to_money
 from .storage import RankingRow, Repository
 from .taxonomy import Taxonomy, infer_taxonomy
@@ -47,7 +46,6 @@ VALID_SORTS = {
     "margin_asc",
     "margin_desc",
 }
-COLOR_SUFFIX_RE = re.compile(r"^(?P<title>.+)\s+in\s+(?P<color>[^,]+)$", re.IGNORECASE)
 RowKey = tuple[str, str]
 DatabaseSignature = tuple[tuple[int, int, int], ...]
 QueryKey = tuple[tuple[str, tuple[str, ...]], ...]
@@ -116,13 +114,6 @@ def _row_taxonomy(row: RankingRow) -> Taxonomy:
     return infer_taxonomy(row.canonical_url, row.name, row.category)
 
 
-def _display_name(value: str) -> str:
-    """Remove Quince's trailing color/finish from the table title."""
-
-    match = COLOR_SUFFIX_RE.match(value.strip())
-    return match.group("title").strip() if match else value
-
-
 def _classification(row: RankingRow) -> str:
     if row.unit_spread_cents < 0:
         return "loss"
@@ -136,7 +127,7 @@ def _row_dict(row: RankingRow, taxonomy: Taxonomy | None = None) -> dict[str, ob
     return {
         "productKey": row.product_key,
         "variantKey": row.variant_key,
-        "name": _display_name(row.name or row.product_key),
+        "name": display_name(row.name or row.product_key),
         "url": row.canonical_url,
         "brand": row.brand,
         "brandType": row.brand_type,
@@ -311,13 +302,13 @@ class RankingService:
         elif sort == "department_desc":
             rows.sort(key=lambda row: taxonomies[_row_key(row)].department_label.lower(), reverse=True)
         elif sort == "name_desc":
-            rows.sort(key=lambda row: _display_name(row.name or row.product_key).lower(), reverse=True)
+            rows.sort(key=lambda row: display_name(row.name or row.product_key).lower(), reverse=True)
         else:
             # Includes name_asc and department_asc.
             key = (
                 (lambda row: taxonomies[_row_key(row)].department_label.lower())
                 if sort == "department_asc"
-                else lambda row: _display_name(row.name or row.product_key).lower()
+                else lambda row: display_name(row.name or row.product_key).lower()
             )
             rows.sort(key=key)
 

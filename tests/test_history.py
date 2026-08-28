@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from quince_loss_leaders.history import export_history, export_static_data, history_file_path
+from quince_loss_leaders.history import display_name, export_history, export_static_data, history_file_path
 from quince_loss_leaders.parser import parse_html
 from quince_loss_leaders.storage import Repository
 
@@ -14,6 +14,16 @@ FIXTURES = Path(__file__).parents[1] / "fixtures"
 
 
 class HistoryExportTests(unittest.TestCase):
+    def test_display_name_removes_color_and_audience_suffix(self) -> None:
+        self.assertEqual(
+            display_name("Organic Cotton Dress - Kid Girl in Peach Floral"),
+            "Organic Cotton Dress",
+        )
+        self.assertEqual(
+            display_name("Organic Cotton Leggings - Baby Girl's in Lilac"),
+            "Organic Cotton Leggings",
+        )
+
     def test_export_writes_product_manifest_and_history(self) -> None:
         html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
         with TemporaryDirectory() as temporary_directory:

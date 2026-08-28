@@ -19,14 +19,23 @@ from .taxonomy import infer_taxonomy
 
 
 COLOR_SUFFIX_RE = re.compile(r"^(?P<title>.+)\s+in\s+(?P<color>[^,]+)$", re.IGNORECASE)
+AUDIENCE_SUFFIX_RE = re.compile(
+    r"\s*[-–—]\s*(?:(?:baby|toddler|kid|kids)(?:['’]?s)?"
+    r"(?:\s+(?:girl|girls|boy|boys)(?:['’]?s)?)?"
+    r"|(?:girl|girls|boy|boys)(?:['’]?s)?)\s*$",
+    re.IGNORECASE,
+)
 HISTORY_SCHEMA_VERSION = 1
 
 
 def display_name(value: str) -> str:
-    """Remove Quince's trailing color/finish from a product title."""
+    """Remove color and redundant age/audience suffixes from a title."""
 
-    match = COLOR_SUFFIX_RE.match(value.strip())
-    return match.group("title").strip() if match else value
+    cleaned = value.strip()
+    match = COLOR_SUFFIX_RE.match(cleaned)
+    if match:
+        cleaned = match.group("title").strip()
+    return AUDIENCE_SUFFIX_RE.sub("", cleaned).strip() or value.strip()
 
 
 def history_file_path(product_key: str, variant_key: str) -> str:

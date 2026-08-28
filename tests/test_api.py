@@ -89,7 +89,7 @@ class ApiTests(unittest.TestCase):
           <link rel="canonical" href="https://example.test/men/example-chair">
           <meta property="product:price:amount" content="20.00">
           <script type="application/ld+json">
-            {"@type":"Product","name":"Example Chair in Performance Velvet in Charcoal","sku":"EX-FEE-001"}
+            {"@type":"Product","name":"Example Chair in Performance Velvet - Kid Girl in Charcoal","sku":"EX-FEE-001"}
           </script>
         </head><body><table>
           <tr><td>Materials</td><td>$1.00</td></tr>

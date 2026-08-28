@@ -46,7 +46,8 @@ jobs:
             --database "$RUNNER_TEMP/quince.sqlite3" \
             --max-pages 10000 \
             --max-depth 0 \
-            --delay-seconds 1 \
+            --concurrency 4 \
+            --delay-seconds 0.25 \
             --min-rankable-observations 100 \
             --min-rankable-ratio 0.50 \
             --fail-on-truncation

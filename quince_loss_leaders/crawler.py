@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import deque
+from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from email.message import Message
@@ -9,6 +10,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from threading import Lock
 import time
 from typing import Iterable
 from urllib.error import HTTPError, URLError
@@ -59,6 +61,7 @@ class CrawlConfig:
     user_agent: str = "QuinceLossLeaderResearch/0.1 (+authorized crawler)"
     respect_robots: bool = True
     url_pattern: str | None = None
+    concurrency: int = 4
 
     def __post_init__(self) -> None:
         if not self.authorized:
@@ -73,6 +76,8 @@ class CrawlConfig:
             raise ValueError("max_pages must be positive.")
         if self.max_depth < 0:
             raise ValueError("max_depth cannot be negative.")
+        if self.concurrency < 1:
+            raise ValueError("concurrency must be positive.")
         if self.delay_seconds < 0:
             raise ValueError("delay_seconds cannot be negative.")
         if self.timeout_seconds <= 0:
@@ -187,6 +192,7 @@ class RobotsPolicy:
         self.user_agent = user_agent
         self.timeout_seconds = timeout_seconds
         self._parsers: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._lock = Lock()
 
     def _origin(self, url: str) -> str:
         parsed = urlsplit(url)
@@ -194,35 +200,36 @@ class RobotsPolicy:
 
     def _load(self, url: str) -> urllib.robotparser.RobotFileParser | None:
         origin = self._origin(url)
-        if origin in self._parsers:
-            return self._parsers[origin]
+        with self._lock:
+            if origin in self._parsers:
+                return self._parsers[origin]
 
-        robots_url = f"{origin}/robots.txt"
-        request = Request(robots_url, headers={"User-Agent": self.user_agent})
-        parser = urllib.robotparser.RobotFileParser(robots_url)
-        try:
-            with urlopen(request, timeout=self.timeout_seconds) as response:
-                status = getattr(response, "status", 200)
-                body = response.read(512_000)
-            if status == 404:
-                parser.parse(["User-agent: *", "Allow: /"])
-            elif status < 200 or status >= 300:
+            robots_url = f"{origin}/robots.txt"
+            request = Request(robots_url, headers={"User-Agent": self.user_agent})
+            parser = urllib.robotparser.RobotFileParser(robots_url)
+            try:
+                with urlopen(request, timeout=self.timeout_seconds) as response:
+                    status = getattr(response, "status", 200)
+                    body = response.read(512_000)
+                if status == 404:
+                    parser.parse(["User-agent: *", "Allow: /"])
+                elif status < 200 or status >= 300:
+                    self._parsers[origin] = None
+                    return None
+                else:
+                    parser.parse(body.decode("utf-8", errors="replace").splitlines())
+            except HTTPError as error:
+                if error.code == 404:
+                    parser.parse(["User-agent: *", "Allow: /"])
+                else:
+                    self._parsers[origin] = None
+                    return None
+            except (OSError, URLError):
                 self._parsers[origin] = None
                 return None
-            else:
-                parser.parse(body.decode("utf-8", errors="replace").splitlines())
-        except HTTPError as error:
-            if error.code == 404:
-                parser.parse(["User-agent: *", "Allow: /"])
-            else:
-                self._parsers[origin] = None
-                return None
-        except (OSError, URLError):
-            self._parsers[origin] = None
-            return None
 
-        self._parsers[origin] = parser
-        return parser
+            self._parsers[origin] = parser
+            return parser
 
     def can_fetch(self, url: str) -> bool:
         parser = self._load(url)
@@ -235,6 +242,7 @@ class PoliteFetcher:
         self.allowed_hosts = {host.lower() for host in config.allowed_hosts}
         self.robots = RobotsPolicy(config.user_agent, config.timeout_seconds)
         self._last_request_at: float | None = None
+        self._request_lock = Lock()
 
     def _validate_url(self, url: str) -> None:
         if host_for_url(url) not in self.allowed_hosts:
@@ -243,11 +251,14 @@ class PoliteFetcher:
             raise CrawlBlocked(url, "robots.txt disallows the request or could not be read")
 
     def _wait(self) -> None:
-        if self._last_request_at is None:
-            return
-        remaining = self.config.delay_seconds - (time.monotonic() - self._last_request_at)
-        if remaining > 0:
-            time.sleep(remaining)
+        with self._request_lock:
+            if self._last_request_at is not None:
+                remaining = self.config.delay_seconds - (
+                    time.monotonic() - self._last_request_at
+                )
+                if remaining > 0:
+                    time.sleep(remaining)
+            self._last_request_at = time.monotonic()
 
     def fetch(self, url: str) -> FetchResult:
         self._validate_url(url)
@@ -259,7 +270,6 @@ class PoliteFetcher:
                 "User-Agent": self.config.user_agent,
             },
         )
-        self._last_request_at = time.monotonic()
         try:
             with urlopen(request, timeout=self.config.timeout_seconds) as response:
                 status = int(getattr(response, "status", 200))
@@ -408,71 +418,95 @@ class AuthorizedCrawler:
         for sitemap in self.config.sitemap_urls:
             enqueue(sitemap, 0, True)
 
-        while queue and result.attempted < self.config.max_pages:
-            url, depth, is_sitemap = queue.popleft()
-            result.attempted += 1
-            try:
-                fetched = self.fetcher.fetch(url)
-            except CrawlBlocked as error:
-                result.blocked.append({"url": error.url, "reason": error.reason})
-                continue
-            except CrawlFailed as error:
-                result.errors.append({"url": error.url, "reason": error.reason})
-                continue
+        futures: dict[Future[FetchResult], tuple[str, int, bool]] = {}
+        with ThreadPoolExecutor(max_workers=self.config.concurrency) as executor:
+            while queue or futures:
+                while (
+                    queue
+                    and len(futures) < self.config.concurrency
+                    and result.attempted < self.config.max_pages
+                ):
+                    item = queue.popleft()
+                    url, _depth, _is_sitemap = item
+                    result.attempted += 1
+                    futures[executor.submit(self.fetcher.fetch, url)] = item
 
-            result.fetched += 1
-            captured_at = datetime.now(timezone.utc)
+                if not futures:
+                    break
 
-            if is_sitemap or fetched.content_type in {"application/xml", "text/xml"}:
-                result.sitemaps_fetched += 1
-                sitemap = _sitemap_locations(fetched.body)
-                if sitemap is None:
-                    result.errors.append({"url": url, "reason": "invalid sitemap XML"})
-                    continue
-                is_index, locations = sitemap
-                for location in locations:
-                    discovered = enqueue(location, depth + 1, is_index)
-                    if discovered and not is_index:
-                        result.product_urls_discovered += 1
-                continue
+                completed, _pending = wait(futures, return_when=FIRST_COMPLETED)
+                for future in completed:
+                    url, depth, is_sitemap = futures.pop(future)
+                    try:
+                        fetched = future.result()
+                    except CrawlBlocked as error:
+                        result.blocked.append({"url": error.url, "reason": error.reason})
+                        continue
+                    except CrawlFailed as error:
+                        result.errors.append({"url": error.url, "reason": error.reason})
+                        continue
 
-            result.html_pages_fetched += 1
-            html = _decode_body(fetched)
-            try:
-                snapshot_path = self.snapshots.save(fetched.final_url, fetched.body, captured_at)
-            except OSError as error:
-                result.errors.append({"url": url, "reason": f"could not save snapshot: {error}"})
-                continue
-            result.snapshots_saved += 1
-            try:
-                observation = parse_html(
-                    html,
-                    source_ref=str(snapshot_path.resolve()),
-                    captured_at=captured_at,
-                    canonical_url=fetched.final_url,
-                )
-            except Exception as error:  # Keep one malformed page from ending the crawl.
-                result.errors.append({"url": url, "reason": f"parse failed: {error}"})
-                continue
-            observation.raw_sha256 = hashlib.sha256(fetched.body).hexdigest()
-            observation.metadata.update({"crawl_depth": depth, "http_status": fetched.status})
-            result.parse_status_counts[observation.parse_status] = (
-                result.parse_status_counts.get(observation.parse_status, 0) + 1
-            )
+                    result.fetched += 1
+                    captured_at = datetime.now(timezone.utc)
 
-            if _looks_like_product(observation):
-                self.repository.save_observation(observation)
-                result.product_pages_saved += 1
-                result.observations_saved += 1
-                if observation.parse_status == "complete":
-                    result.rankable_observations += int(observation.is_rankable)
-            else:
-                result.non_product_pages += 1
+                    if is_sitemap or fetched.content_type in {"application/xml", "text/xml"}:
+                        result.sitemaps_fetched += 1
+                        sitemap = _sitemap_locations(fetched.body)
+                        if sitemap is None:
+                            result.errors.append(
+                                {"url": url, "reason": "invalid sitemap XML"}
+                            )
+                            continue
+                        is_index, locations = sitemap
+                        for location in locations:
+                            discovered = enqueue(location, depth + 1, is_index)
+                            if discovered and not is_index:
+                                result.product_urls_discovered += 1
+                        continue
 
-            if depth >= self.config.max_depth:
-                continue
-            for link in extract_links(html, fetched.final_url, self.config.allowed_hosts):
-                enqueue(link, depth + 1)
+                    result.html_pages_fetched += 1
+                    html = _decode_body(fetched)
+                    try:
+                        snapshot_path = self.snapshots.save(
+                            fetched.final_url, fetched.body, captured_at
+                        )
+                    except OSError as error:
+                        result.errors.append(
+                            {"url": url, "reason": f"could not save snapshot: {error}"}
+                        )
+                        continue
+                    result.snapshots_saved += 1
+                    try:
+                        observation = parse_html(
+                            html,
+                            source_ref=str(snapshot_path.resolve()),
+                            captured_at=captured_at,
+                            canonical_url=fetched.final_url,
+                        )
+                    except Exception as error:  # Keep one malformed page from ending the crawl.
+                        result.errors.append({"url": url, "reason": f"parse failed: {error}"})
+                        continue
+                    observation.raw_sha256 = hashlib.sha256(fetched.body).hexdigest()
+                    observation.metadata.update(
+                        {"crawl_depth": depth, "http_status": fetched.status}
+                    )
+                    result.parse_status_counts[observation.parse_status] = (
+                        result.parse_status_counts.get(observation.parse_status, 0) + 1
+                    )
+
+                    if _looks_like_product(observation):
+                        self.repository.save_observation(observation)
+                        result.product_pages_saved += 1
+                        result.observations_saved += 1
+                        if observation.parse_status == "complete":
+                            result.rankable_observations += int(observation.is_rankable)
+                    else:
+                        result.non_product_pages += 1
+
+                    if depth >= self.config.max_depth:
+                        continue
+                    for link in extract_links(html, fetched.final_url, self.config.allowed_hosts):
+                        enqueue(link, depth + 1)
 
         result.skipped = len(queue)
         result.truncated = bool(queue)

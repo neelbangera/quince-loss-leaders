@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 from email.message import Message
 import os
 from pathlib import Path
+from threading import Event, Lock
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
@@ -189,6 +190,62 @@ class CrawlerTests(unittest.TestCase):
             self.assertEqual(result.skipped, 1)
             self.assertEqual(result.html_pages_fetched, 1)
             self.assertEqual(result.parse_status_counts, {"partial": 1})
+
+    def test_crawl_fetches_product_pages_in_parallel(self) -> None:
+        class ParallelFetcher:
+            def __init__(self) -> None:
+                self.active = 0
+                self.max_active = 0
+                self.lock = Lock()
+                self.all_started = Event()
+                self.product_html = (FIXTURES / "loss-example.html").read_bytes()
+
+            def fetch(self, url: str) -> FetchResult:
+                if url.endswith("/sitemap.xml"):
+                    body = (
+                        b"<?xml version='1.0'?><urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>"
+                        b"<url><loc>https://example.test/product-1.html</loc></url>"
+                        b"<url><loc>https://example.test/product-2.html</loc></url>"
+                        b"<url><loc>https://example.test/product-3.html</loc></url>"
+                        b"</urlset>"
+                    )
+                    return FetchResult(
+                        url, url, 200, "application/xml", body, headers("application/xml")
+                    )
+
+                with self.lock:
+                    self.active += 1
+                    self.max_active = max(self.max_active, self.active)
+                    if self.active == 3:
+                        self.all_started.set()
+                self.all_started.wait(timeout=1)
+                try:
+                    return FetchResult(
+                        url, url, 200, "text/html", self.product_html, headers("text/html")
+                    )
+                finally:
+                    with self.lock:
+                        self.active -= 1
+
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            fetcher = ParallelFetcher()
+            config = CrawlConfig(
+                seed_urls=(),
+                sitemap_urls=("https://example.test/sitemap.xml",),
+                allowed_hosts=("example.test",),
+                snapshot_dir=root / "pages",
+                authorized=True,
+                max_pages=4,
+                max_depth=0,
+                concurrency=3,
+                delay_seconds=0,
+            )
+            with Repository(root / "observations.sqlite3") as repository:
+                result = AuthorizedCrawler(config, repository, fetcher=fetcher).run()
+
+            self.assertEqual(result.product_pages_saved, 3)
+            self.assertEqual(fetcher.max_active, 3)
 
     def test_invalid_sitemap_is_reported(self) -> None:
         class InvalidSitemapFetcher:

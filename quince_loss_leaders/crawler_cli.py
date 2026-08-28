@@ -59,6 +59,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--max-pages", type=int, default=100)
     parser.add_argument("--max-depth", type=int, default=2)
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=4,
+        help="Maximum number of overlapping page fetches (default: 4).",
+    )
     parser.add_argument("--delay-seconds", type=float, default=1.0)
     parser.add_argument("--timeout-seconds", type=float, default=20.0)
     parser.add_argument("--max-response-bytes", type=int, default=8_000_000)
@@ -116,6 +122,7 @@ def main(argv: list[str] | None = None) -> int:
             authorized=args.authorized,
             max_pages=args.max_pages,
             max_depth=args.max_depth,
+            concurrency=args.concurrency,
             delay_seconds=args.delay_seconds,
             timeout_seconds=args.timeout_seconds,
             max_response_bytes=args.max_response_bytes,

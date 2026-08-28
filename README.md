@@ -104,7 +104,10 @@ counts, blocked/error URLs, and whether `--max-pages` truncated the queue.
 Use `--fail-on-truncation`, `--min-rankable-observations`, and
 `--min-rankable-ratio` for automated runs. The crawler defaults to the API's
 `QUINCE_DATABASE` value or `data/quince-us.sqlite3`; the scheduled workflow
-uses a temporary database and enables all three checks.
+uses a temporary database and enables all three checks. `--concurrency` allows
+slow responses to overlap, while `--delay-seconds` remains a shared minimum
+interval between request starts; the scheduled run uses four workers and a
+0.25-second interval.
 
 The installed console command is also available after packaging:
 

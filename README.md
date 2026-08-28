@@ -127,8 +127,9 @@ npm run dev
 
 Open `http://localhost:3000`. The dashboard supports loss leaders, positive
 spread drivers, the full ranking, search, inferred department/category
-filters, and sorting. Set `NUXT_PUBLIC_API_BASE` if the API is running at a
-different address.
+filters, sorting, and product-level price/cost history charts. Click a product
+name or row to open its history. Set `NUXT_PUBLIC_API_BASE` if the API is
+running at a different address.
 
 The current Nuxt release recommends Node 22.19 or newer. The app builds on the
 local Node 22.16 installation with an engine warning, but upgrading Node is
@@ -139,9 +140,32 @@ The API endpoints currently include:
 - `GET /api/health`
 - `GET /api/rankings?view=losses|profit|all`
 - `GET /api/facets`
+- `GET /api/product?product_key=...&variant_key=...` for chronological observations and summary analytics
 
 Ranking filters are query parameters so they can later be shared in URLs or
 connected to saved searches without changing the storage model.
+
+## Export historical data for a static site
+
+The dashboard can also consume an export generated from the retained SQLite
+observations. The exporter writes a small manifest and one history file per
+product/variant, so a static UI can load only the history for the product a
+user opens:
+
+```bash
+python3 -m quince_loss_leaders.history \
+  --database data/quince-us.sqlite3 \
+  --output-dir web/public/data
+```
+
+Run it with the default merge behavior after each crawl. A new temporary crawl
+database can be merged into an existing export; products not present in that
+run remain in the manifest. Use `--replace` when rebuilding the export from a
+complete database. The installed console command is also available:
+
+```bash
+quince-history --help
+```
 
 ## Storage design
 
@@ -162,4 +186,6 @@ Every accepted crawl is appended to `observations` with its capture time;
 existing observations are not overwritten. `Repository.rankings()` intentionally
 returns only the latest complete row for the current ranking screens, while
 `Repository.historical_observations()` returns the retained observations in
-chronological order for future comparison logic.
+chronological order. `quince-history` turns that time series into mergeable
+static JSON, allowing GitHub Pages to serve history without a production
+database.

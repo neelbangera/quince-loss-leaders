@@ -29,6 +29,52 @@ interface ProductResult {
   hasExorbitantFees: boolean;
 }
 
+interface ProductHistoryPoint {
+  capturedAt: string;
+  sellingPrice: string | null;
+  reportedTotalCost: string | null;
+  unitSpread: string | null;
+  marginPct: number | null;
+  parseStatus: string;
+  totalCostSource: string;
+  costLines: { label: string; type: string; amount: string | null }[];
+}
+
+interface ProductDetail {
+  product: ProductResult;
+  current: ProductHistoryPoint;
+  analytics: {
+    observationCount: number;
+    lossObservations: number;
+    profitObservations: number;
+    lowestPrice: string | null;
+    highestPrice: string | null;
+    lowestCost: string | null;
+    highestCost: string | null;
+    averageSpread: string | null;
+    firstObservedAt: string;
+    lastObservedAt: string;
+  };
+  history: ProductHistoryPoint[];
+}
+
+interface HistoryChartPoint {
+  capturedAt: string;
+  x: number;
+  price: number | null;
+  cost: number | null;
+  priceY: number | null;
+  costY: number | null;
+  label: string;
+}
+
+interface HistoryChart {
+  points: HistoryChartPoint[];
+  pricePath: string;
+  costPath: string;
+  gridLines: { y: number; label: string }[];
+}
+
 interface Summary {
   total: number;
   losses: number;
@@ -80,6 +126,10 @@ const department = ref("");
 const category = ref("");
 const sort = ref<Sort>("spread_asc");
 const hydrated = ref(false);
+const selectedProduct = ref<ProductResult | null>(null);
+const detail = ref<ProductDetail | null>(null);
+const detailPending = ref(false);
+const detailError = ref("");
 
 onMounted(() => {
   hydrated.value = true;
@@ -250,6 +300,123 @@ function marginClass(value: number | null) {
 function retry() {
   void refresh();
 }
+
+async function openProduct(product: ProductResult) {
+  selectedProduct.value = product;
+  detail.value = null;
+  detailError.value = "";
+  detailPending.value = true;
+  try {
+    detail.value = await $fetch<ProductDetail>(`${apiBase}/api/product`, {
+      query: { product_key: product.productKey, variant_key: product.variantKey },
+    });
+  } catch {
+    detailError.value = "Could not load product history.";
+  } finally {
+    detailPending.value = false;
+  }
+}
+
+function handleProductClick(event: MouseEvent, product: ProductResult) {
+  if ((event.ctrlKey || event.metaKey) && product.url) {
+    window.open(product.url, "_blank", "noopener,noreferrer");
+    return;
+  }
+  void openProduct(product);
+}
+
+function closeProduct() {
+  selectedProduct.value = null;
+  detail.value = null;
+}
+
+function detailSpread(point: ProductHistoryPoint) {
+  const value = formatMoney(point.unitSpread, detail.value?.product.currency || "USD");
+  if (value === "—") return value;
+  return Number(point.unitSpread) > 0 ? `+${value}` : value;
+}
+
+function spreadClass(value: string | null) {
+  const numeric = numericValue(value);
+  if (numeric === null || numeric === 0) return "spread-zero";
+  return numeric < 0 ? "spread-loss" : "spread-profit";
+}
+
+function shortDate(value: string) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return "Unknown";
+  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(parsed);
+}
+
+function linePath(points: HistoryChartPoint[], field: "priceY" | "costY") {
+  let path = "";
+  let connected = false;
+  for (const point of points) {
+    const y = point[field];
+    if (y === null) {
+      connected = false;
+      continue;
+    }
+    path += `${connected ? "L" : "M"} ${point.x.toFixed(2)} ${y.toFixed(2)} `;
+    connected = true;
+  }
+  return path.trim();
+}
+
+const historyChart = computed<HistoryChart>(() => {
+  const history = detail.value?.history || [];
+  const values = history.flatMap((point) =>
+    [numericValue(point.sellingPrice), numericValue(point.reportedTotalCost)].filter(
+      (value): value is number => value !== null,
+    ),
+  );
+  if (!history.length || !values.length) {
+    return { points: [], pricePath: "", costPath: "", gridLines: [] };
+  }
+
+  let minimum = Math.min(...values);
+  let maximum = Math.max(...values);
+  const padding = minimum === maximum
+    ? Math.max(Math.abs(minimum) * 0.08, 1)
+    : (maximum - minimum) * 0.12;
+  minimum -= padding;
+  maximum += padding;
+
+  const width = 640;
+  const height = 230;
+  const left = 58;
+  const right = 16;
+  const top = 18;
+  const bottom = 30;
+  const plotWidth = width - left - right;
+  const plotHeight = height - top - bottom;
+  const yFor = (value: number) => top + ((maximum - value) / (maximum - minimum)) * plotHeight;
+  const points = history.map((point, index) => {
+    const price = numericValue(point.sellingPrice);
+    const cost = numericValue(point.reportedTotalCost);
+    return {
+      capturedAt: point.capturedAt,
+      x: history.length === 1 ? left + plotWidth / 2 : left + (index / (history.length - 1)) * plotWidth,
+      price,
+      cost,
+      priceY: price === null ? null : yFor(price),
+      costY: cost === null ? null : yFor(cost),
+      label: shortDate(point.capturedAt),
+    };
+  });
+  const currency = detail.value?.product.currency || "USD";
+  const gridLines = [0, 1, 2, 3, 4].map((index) => {
+    const value = maximum - ((maximum - minimum) * index) / 4;
+    return { y: yFor(value), label: formatMoney(value.toFixed(2), currency) };
+  });
+
+  return {
+    points,
+    pricePath: linePath(points, "priceY"),
+    costPath: linePath(points, "costY"),
+    gridLines,
+  };
+});
 </script>
 
 <template>
@@ -446,26 +613,17 @@ function retry() {
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="product in results" :key="`${product.productKey}-${product.variantKey}`">
+                <tr v-for="product in results" :key="`${product.productKey}-${product.variantKey}`" class="result-row" @click="handleProductClick($event, product)">
                   <td>
                     <div class="product-cell">
-                      <a v-if="product.url" :href="product.url" target="_blank" rel="noreferrer">
+                      <button class="product-detail-button" type="button" @click.stop="handleProductClick($event, product)">
                         {{ product.name }}<span
                           v-if="product.hasExorbitantFees"
                           class="fee-asterisk"
                           title="A reported freight, card, or duties fee is at least as large as the listed price."
                           aria-label="Flagged for an exorbitant reported fee"
                         >*</span>
-                        <span aria-hidden="true">↗</span>
-                      </a>
-                      <strong v-else>
-                        {{ product.name }}<span
-                          v-if="product.hasExorbitantFees"
-                          class="fee-asterisk"
-                          title="A reported freight, card, or duties fee is at least as large as the listed price."
-                          aria-label="Flagged for an exorbitant reported fee"
-                        >*</span>
-                      </strong>
+                      </button>
                       <span>{{ product.categoryLabel }}<template v-if="product.brand"> · {{ product.brand }}</template></span>
                     </div>
                   </td>
@@ -491,5 +649,96 @@ function retry() {
         </footer>
       </section>
     </section>
+
+    <div v-if="selectedProduct" class="detail-backdrop" @click.self="closeProduct">
+      <aside class="detail-drawer" aria-label="Product analytics">
+        <button class="drawer-close" type="button" aria-label="Close product details" @click="closeProduct">×</button>
+        <template v-if="detailPending">
+          <p class="eyebrow">PRODUCT ANALYTICS</p>
+          <h2>
+            <a v-if="selectedProduct.url" class="drawer-product-link" :href="selectedProduct.url" target="_blank" rel="noreferrer" @click.stop>
+              {{ selectedProduct.name }} ↗
+            </a>
+            <template v-else>{{ selectedProduct.name }}</template>
+          </h2>
+          <div class="state-card loading-state"><span class="loading-bar" /><span class="loading-bar short" /><p>Loading history…</p></div>
+        </template>
+        <template v-else-if="detailError">
+          <p class="eyebrow">PRODUCT ANALYTICS</p>
+          <h2>
+            <a v-if="selectedProduct.url" class="drawer-product-link" :href="selectedProduct.url" target="_blank" rel="noreferrer" @click.stop>
+              {{ selectedProduct.name }} ↗
+            </a>
+            <template v-else>{{ selectedProduct.name }}</template>
+          </h2>
+          <div class="state-card error-state"><strong>{{ detailError }}</strong></div>
+        </template>
+        <template v-else-if="detail">
+          <p class="eyebrow">{{ detail.product.departmentLabel }} / {{ detail.product.categoryLabel }}</p>
+          <h2>
+            <a v-if="detail.product.url" class="drawer-product-link" :href="detail.product.url" target="_blank" rel="noreferrer" @click.stop>
+              {{ detail.product.name }} ↗
+            </a>
+            <template v-else>{{ detail.product.name }}</template>
+          </h2>
+          <p class="drawer-subtitle">{{ detail.product.brand || "Quince catalog" }} · {{ detail.analytics.observationCount }} observations</p>
+
+          <div class="detail-current-grid">
+            <div><span>Current price</span><strong>{{ formatMoney(detail.current.sellingPrice, detail.product.currency) }}</strong></div>
+            <div><span>Reported cost</span><strong>{{ formatMoney(detail.current.reportedTotalCost, detail.product.currency) }}</strong></div>
+            <div><span>Current spread</span><strong :class="spreadClass(detail.current.unitSpread)">{{ detailSpread(detail.current) }}</strong></div>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-heading"><div><p class="eyebrow">HISTORY</p><h3>Price and cost timeline</h3></div><span>{{ formatDate(detail.analytics.firstObservedAt) }} — {{ formatDate(detail.analytics.lastObservedAt) }}</span></div>
+            <div v-if="historyChart.points.length" class="history-chart-card">
+              <div class="history-legend" aria-hidden="true">
+                <span><i class="legend-swatch price" />Price</span>
+                <span><i class="legend-swatch cost" />Reported cost</span>
+              </div>
+              <svg
+                class="history-chart"
+                viewBox="0 0 640 230"
+                role="img"
+                :aria-label="`Price and reported cost history for ${detail.product.name}`"
+              >
+                <g v-for="line in historyChart.gridLines" :key="line.y">
+                  <line class="chart-gridline" x1="58" :y1="line.y" x2="624" :y2="line.y" />
+                  <text class="chart-label" x="0" :y="line.y + 4">{{ line.label }}</text>
+                </g>
+                <path v-if="historyChart.pricePath" class="chart-line price" :d="historyChart.pricePath" />
+                <path v-if="historyChart.costPath" class="chart-line cost" :d="historyChart.costPath" />
+                <template v-for="(point, index) in historyChart.points" :key="`${point.capturedAt}-${index}`">
+                  <circle v-if="point.priceY !== null" class="chart-point price" :cx="point.x" :cy="point.priceY" r="4" />
+                  <circle v-if="point.costY !== null" class="chart-point cost" :cx="point.x" :cy="point.costY" r="4" />
+                </template>
+              </svg>
+              <div class="history-axis" aria-hidden="true">
+                <span v-for="(point, index) in historyChart.points" :key="`${point.capturedAt}-label-${index}`">{{ point.label }}</span>
+              </div>
+            </div>
+            <div v-else class="history-empty">No numeric price or cost observations are available for this product.</div>
+            <div class="history-bars">
+              <div v-for="(point, index) in detail.history" :key="`${point.capturedAt}-${index}`" class="history-row">
+                <time>{{ formatDate(point.capturedAt) }}</time>
+                <div class="history-values"><span>Price <strong>{{ formatMoney(point.sellingPrice, detail.product.currency) }}</strong></span><span>Cost <strong>{{ formatMoney(point.reportedTotalCost, detail.product.currency) }}</strong></span><span :class="spreadClass(point.unitSpread)">Spread <strong>{{ detailSpread(point) }}</strong></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-heading"><div><p class="eyebrow">ANALYTICS</p><h3>Observed range</h3></div></div>
+            <div class="analytics-grid">
+              <div><span>Lowest price</span><strong>{{ formatMoney(detail.analytics.lowestPrice, detail.product.currency) }}</strong></div>
+              <div><span>Highest price</span><strong>{{ formatMoney(detail.analytics.highestPrice, detail.product.currency) }}</strong></div>
+              <div><span>Average spread</span><strong>{{ formatMoney(detail.analytics.averageSpread, detail.product.currency) }}</strong></div>
+              <div><span>Loss observations</span><strong>{{ detail.analytics.lossObservations }}</strong></div>
+              <div><span>Profit observations</span><strong>{{ detail.analytics.profitObservations }}</strong></div>
+              <div><span>Highest reported cost</span><strong>{{ formatMoney(detail.analytics.highestCost, detail.product.currency) }}</strong></div>
+            </div>
+          </div>
+        </template>
+      </aside>
+    </div>
   </main>
 </template>

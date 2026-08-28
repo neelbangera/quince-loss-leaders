@@ -13,6 +13,37 @@ FIXTURES = Path(__file__).parents[1] / "fixtures"
 
 
 class ApiTests(unittest.TestCase):
+    def test_product_history_returns_observations_and_analytics(self) -> None:
+        html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
+        with TemporaryDirectory() as temporary_directory:
+            database = Path(temporary_directory) / "rankings.sqlite3"
+            with Repository(database) as repository:
+                first = parse_html(html, "loss.html", captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc))
+                second = parse_html(html, "loss.html", captured_at=datetime(2026, 1, 2, tzinfo=timezone.utc))
+                second.selling_price = second.selling_price + 10
+                second.calculate_metrics()
+                repository.save_observation(first)
+                repository.save_observation(second)
+
+            service = RankingService(database)
+            with patch("quince_loss_leaders.api.Repository", wraps=Repository) as repository_class:
+                result = service.get_product({
+                    "product_key": [first.product_key or ""],
+                    "variant_key": [first.variant_key],
+                })
+                cached = service.get_product({
+                    "product_key": [first.product_key or ""],
+                    "variant_key": [first.variant_key],
+                })
+
+        self.assertEqual(repository_class.call_count, 1)
+        self.assertEqual(result, cached)
+        self.assertEqual(result["schemaVersion"], 1)
+        self.assertEqual(len(result["history"]), 2)
+        self.assertEqual(result["analytics"]["observationCount"], 2)
+        self.assertEqual(result["analytics"]["lossObservations"], 1)
+        self.assertEqual(result["current"]["sellingPrice"], "39.99")
+
     def test_rankings_support_view_and_taxonomy_filters(self) -> None:
         with TemporaryDirectory() as temporary_directory:
             database = Path(temporary_directory) / "rankings.sqlite3"

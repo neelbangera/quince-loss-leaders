@@ -21,6 +21,7 @@ from threading import RLock
 from typing import Iterable, Mapping
 from urllib.parse import parse_qs, urlsplit
 
+from .history import product_detail
 from .models import cents_to_money
 from .storage import RankingRow, Repository
 from .taxonomy import Taxonomy, infer_taxonomy
@@ -50,6 +51,7 @@ COLOR_SUFFIX_RE = re.compile(r"^(?P<title>.+)\s+in\s+(?P<color>[^,]+)$", re.IGNO
 RowKey = tuple[str, str]
 DatabaseSignature = tuple[tuple[int, int, int], ...]
 QueryKey = tuple[tuple[str, tuple[str, ...]], ...]
+ProductCacheKey = tuple[DatabaseSignature, str, str, bool]
 
 
 @dataclass(frozen=True)
@@ -181,6 +183,7 @@ class RankingService:
         self._cache_lock = RLock()
         self._catalog_cache: dict[bool, _CatalogCache] = {}
         self._response_cache: dict[tuple[DatabaseSignature, QueryKey], dict[str, object]] = {}
+        self._product_cache: dict[ProductCacheKey, dict[str, object]] = {}
 
     def _catalog(self, include_partial: bool = False) -> _CatalogCache:
         signature = _database_signature(self.database_path)
@@ -195,6 +198,7 @@ class RankingService:
             if database_changed:
                 self._catalog_cache.clear()
                 self._response_cache.clear()
+                self._product_cache.clear()
 
             with Repository(self.database_path) as repository:
                 rows = tuple(repository.rankings(include_partial=include_partial))
@@ -365,6 +369,36 @@ class RankingService:
                 self._response_cache.pop(next(iter(self._response_cache)))
         return deepcopy(response)
 
+    def get_product(self, params: Mapping[str, list[str]]) -> dict[str, object]:
+        product_key = _first(params, "product_key")
+        if not product_key:
+            raise ValueError("product_key is required")
+        variant_key = _first(params, "variant_key")
+        include_partial = _bool_param(params, "include_partial")
+
+        signature = _database_signature(self.database_path)
+        cache_key = (signature, product_key, variant_key, include_partial)
+        with self._cache_lock:
+            cached = self._product_cache.get(cache_key)
+        if cached is not None:
+            return deepcopy(cached)
+
+        with Repository(self.database_path) as repository:
+            observations = repository.historical_observations(
+                product_key=product_key,
+                variant_key=variant_key or None,
+                include_partial=include_partial,
+            )
+        if not observations:
+            raise ValueError("Product history not found")
+
+        response = product_detail(observations)
+        with self._cache_lock:
+            self._product_cache[cache_key] = response
+            if len(self._product_cache) > 32:
+                self._product_cache.pop(next(iter(self._product_cache)))
+        return deepcopy(response)
+
 
 class ApiHandler(BaseHTTPRequestHandler):
     service: RankingService
@@ -403,6 +437,9 @@ class ApiHandler(BaseHTTPRequestHandler):
         try:
             if parsed.path == "/api/health":
                 self._send_json({"ok": True})
+                return
+            if parsed.path == "/api/product":
+                self._send_json(self.service.get_product(parse_qs(parsed.query)))
                 return
             if parsed.path in {"/api/rankings", "/api/facets"}:
                 payload = self.service.get_rankings(parse_qs(parsed.query))

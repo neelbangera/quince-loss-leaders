@@ -122,6 +122,20 @@ const config = useRuntimeConfig();
 const apiBase = String(config.public.apiBase || "http://127.0.0.1:8877").replace(/\/$/, "");
 const staticDataBase = String(config.public.staticDataBase || "").replace(/\/$/, "");
 const staticMode = Boolean(staticDataBase);
+const REQUEST_TIMEOUT_MS = 10_000;
+
+async function fetchJson<T>(url: string, query?: Record<string, string>): Promise<T> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    if (query) {
+      return await $fetch<T>(url, { query, signal: controller.signal });
+    }
+    return await $fetch<T>(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
 const view = ref<View>("losses");
 const search = ref("");
@@ -152,8 +166,8 @@ const requestQuery = computed(() => {
 const { data, pending, error, refresh } = await useAsyncData<RankingResponse>(
   "rankings",
   () => staticMode
-    ? $fetch<RankingResponse>(`${staticDataBase}/rankings.json`)
-    : $fetch<RankingResponse>(`${apiBase}/api/rankings`, { query: requestQuery.value }),
+    ? fetchJson<RankingResponse>(`${staticDataBase}/rankings.json`)
+    : fetchJson<RankingResponse>(`${apiBase}/api/rankings`, requestQuery.value),
   {
     server: false,
     default: emptyResponse,
@@ -379,10 +393,11 @@ async function openProduct(product: ProductResult) {
   try {
     if (staticMode) {
       if (!product.historyPath) throw new Error("History file is not available.");
-      detail.value = await $fetch<ProductDetail>(`${staticDataBase}/${product.historyPath}`);
+      detail.value = await fetchJson<ProductDetail>(`${staticDataBase}/${product.historyPath}`);
     } else {
-      detail.value = await $fetch<ProductDetail>(`${apiBase}/api/product`, {
-        query: { product_key: product.productKey, variant_key: product.variantKey },
+      detail.value = await fetchJson<ProductDetail>(`${apiBase}/api/product`, {
+        product_key: product.productKey,
+        variant_key: product.variantKey,
       });
     }
   } catch {

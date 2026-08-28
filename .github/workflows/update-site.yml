@@ -1,0 +1,102 @@
+name: Update catalog data
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  crawl-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python package
+        run: python -m pip install .
+
+      - name: Crawl authorized product pages
+        run: |
+          python -m quince_loss_leaders.crawler_cli \
+            --authorized \
+            --allowed-host www.quince.com \
+            --allowed-host quince.com \
+            --sitemap https://www.quince.com/sitemap_pdps.xml \
+            --url-pattern 'https://www\.quince\.com/(?!shop/)' \
+            --snapshot-dir "$RUNNER_TEMP/quince-pages" \
+            --database "$RUNNER_TEMP/quince.sqlite3" \
+            --max-pages 5000 \
+            --max-depth 0 \
+            --delay-seconds 1
+
+      - name: Confirm crawl produced observations
+        run: |
+          python -c 'import sqlite3, sys; connection = sqlite3.connect(sys.argv[1]); count = connection.execute("SELECT COUNT(*) FROM observations").fetchone()[0]; print(f"observations: {count}"); sys.exit(1 if count == 0 else 0)' "$RUNNER_TEMP/quince.sqlite3"
+
+      - name: Export rankings and price history
+        run: |
+          python -m quince_loss_leaders.history \
+            --database "$RUNNER_TEMP/quince.sqlite3" \
+            --output-dir web/public/data
+
+      - name: Commit catalog data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/public/data
+          if git diff --cached --quiet; then
+            echo "No catalog changes to commit"
+          else
+            git commit -m "update catalog data"
+            git push
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install web dependencies
+        run: npm ci
+        working-directory: web
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Generate static site
+        run: npm run generate
+        working-directory: web
+        env:
+          NUXT_APP_BASE_URL: ${{ steps.pages.outputs.base_path }}
+          NUXT_PUBLIC_STATIC_DATA_BASE: "./data"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/.output/public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

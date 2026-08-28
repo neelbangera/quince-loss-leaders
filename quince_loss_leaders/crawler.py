@@ -75,6 +75,15 @@ class CrawlConfig:
             raise ValueError("max_depth cannot be negative.")
         if self.delay_seconds < 0:
             raise ValueError("delay_seconds cannot be negative.")
+        if self.timeout_seconds <= 0:
+            raise ValueError("timeout_seconds must be positive.")
+        if self.max_response_bytes < 1:
+            raise ValueError("max_response_bytes must be positive.")
+        if self.url_pattern:
+            try:
+                re.compile(self.url_pattern)
+            except re.error as error:
+                raise ValueError(f"url_pattern is not a valid regex: {error}") from None
 
 
 @dataclass(frozen=True)
@@ -91,10 +100,18 @@ class FetchResult:
 class CrawlResult:
     attempted: int = 0
     fetched: int = 0
+    sitemaps_fetched: int = 0
+    html_pages_fetched: int = 0
+    urls_discovered: int = 0
+    product_urls_discovered: int = 0
     snapshots_saved: int = 0
     product_pages_saved: int = 0
     observations_saved: int = 0
+    rankable_observations: int = 0
+    parse_status_counts: dict[str, int] = field(default_factory=dict)
+    non_product_pages: int = 0
     skipped: int = 0
+    truncated: bool = False
     blocked: list[dict[str, str]] = field(default_factory=list)
     errors: list[dict[str, str]] = field(default_factory=list)
 
@@ -315,11 +332,11 @@ def _decode_body(result: FetchResult) -> str:
     return result.body.decode(charset, errors="replace")
 
 
-def _sitemap_locations(xml_body: bytes) -> tuple[bool, list[str]]:
+def _sitemap_locations(xml_body: bytes) -> tuple[bool, list[str]] | None:
     try:
         root = ET.fromstring(xml_body)
     except ET.ParseError:
-        return False, []
+        return None
     is_index = root.tag.lower().endswith("sitemapindex")
     locations = [
         element.text.strip()
@@ -329,17 +346,21 @@ def _sitemap_locations(xml_body: bytes) -> tuple[bool, list[str]]:
     return is_index, locations
 
 
-def _looks_like_product(observation: ProductObservation, *, allow_url_match: bool = False) -> bool:
-    if not observation.product_name or observation.selling_price is None:
+def _looks_like_product(observation: ProductObservation) -> bool:
+    """Accept only pages with structured product identity.
+
+    Price and cost fields are intentionally not part of this test. Saving a
+    structured product page with a partial parse lets the crawl report expose
+    parser regressions instead of treating those pages as if they were never
+    found. Rankings still exclude non-complete observations.
+    """
+
+    if not observation.product_name:
         return False
-    if not observation.cost_lines and observation.reported_total_cost is None:
-        return False
-    # Product JSON-LD/SKU is preferred. This keeps pages such as About Us,
-    # which may contain an illustrative cost block, out of product rankings.
     has_structured_identity = bool(
         observation.sku or observation.metadata.get("jsonld_product_count", 0) > 0
     )
-    return has_structured_identity or allow_url_match
+    return has_structured_identity
 
 
 class AuthorizedCrawler:
@@ -371,14 +392,16 @@ class AuthorizedCrawler:
             depth: int,
             is_sitemap: bool = False,
             force: bool = False,
-        ) -> None:
+        ) -> bool:
             normalized = normalize_crawl_url(url)
             if not normalized or normalized in seen:
-                return
+                return False
             if not is_sitemap and not force and not self._allowed_and_matching(normalized):
-                return
+                return False
             seen.add(normalized)
             queue.append((normalized, depth, is_sitemap))
+            result.urls_discovered += 1
+            return True
 
         for seed in self.config.seed_urls:
             enqueue(seed, 0, force=True)
@@ -401,27 +424,50 @@ class AuthorizedCrawler:
             captured_at = datetime.now(timezone.utc)
 
             if is_sitemap or fetched.content_type in {"application/xml", "text/xml"}:
-                is_index, locations = _sitemap_locations(fetched.body)
+                result.sitemaps_fetched += 1
+                sitemap = _sitemap_locations(fetched.body)
+                if sitemap is None:
+                    result.errors.append({"url": url, "reason": "invalid sitemap XML"})
+                    continue
+                is_index, locations = sitemap
                 for location in locations:
-                    enqueue(location, depth + 1, is_index)
+                    discovered = enqueue(location, depth + 1, is_index)
+                    if discovered and not is_index:
+                        result.product_urls_discovered += 1
                 continue
 
+            result.html_pages_fetched += 1
             html = _decode_body(fetched)
-            snapshot_path = self.snapshots.save(fetched.final_url, fetched.body, captured_at)
+            try:
+                snapshot_path = self.snapshots.save(fetched.final_url, fetched.body, captured_at)
+            except OSError as error:
+                result.errors.append({"url": url, "reason": f"could not save snapshot: {error}"})
+                continue
             result.snapshots_saved += 1
-            observation = parse_html(
-                html,
-                source_ref=str(snapshot_path.resolve()),
-                captured_at=captured_at,
-                canonical_url=fetched.final_url,
-            )
+            try:
+                observation = parse_html(
+                    html,
+                    source_ref=str(snapshot_path.resolve()),
+                    captured_at=captured_at,
+                    canonical_url=fetched.final_url,
+                )
+            except Exception as error:  # Keep one malformed page from ending the crawl.
+                result.errors.append({"url": url, "reason": f"parse failed: {error}"})
+                continue
             observation.raw_sha256 = hashlib.sha256(fetched.body).hexdigest()
             observation.metadata.update({"crawl_depth": depth, "http_status": fetched.status})
+            result.parse_status_counts[observation.parse_status] = (
+                result.parse_status_counts.get(observation.parse_status, 0) + 1
+            )
 
-            if _looks_like_product(observation, allow_url_match=self.url_regex is not None):
+            if _looks_like_product(observation):
                 self.repository.save_observation(observation)
                 result.product_pages_saved += 1
                 result.observations_saved += 1
+                if observation.parse_status == "complete":
+                    result.rankable_observations += int(observation.is_rankable)
+            else:
+                result.non_product_pages += 1
 
             if depth >= self.config.max_depth:
                 continue
@@ -429,4 +475,5 @@ class AuthorizedCrawler:
                 enqueue(link, depth + 1)
 
         result.skipped = len(queue)
+        result.truncated = bool(queue)
         return result

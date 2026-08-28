@@ -96,6 +96,16 @@ response size and page count, and records 401/403/429/503 responses as blocked.
 It stops when a challenge/CAPTCHA page is detected. It intentionally has no
 proxy rotation, stealth behavior, CAPTCHA bypass, or access-control evasion.
 
+Only pages with structured product identity (a product JSON-LD record or SKU)
+are saved as observations. Pages with a recognized product but incomplete
+pricing are retained for diagnostics and reported separately from rankable
+observations. The crawl report includes sitemap/page counts, parse-status
+counts, blocked/error URLs, and whether `--max-pages` truncated the queue.
+Use `--fail-on-truncation`, `--min-rankable-observations`, and
+`--min-rankable-ratio` for automated runs. The crawler defaults to the API's
+`QUINCE_DATABASE` value or `data/quince-us.sqlite3`; the scheduled workflow
+uses a temporary database and enables all three checks.
+
 The installed console command is also available after packaging:
 
 ```bash

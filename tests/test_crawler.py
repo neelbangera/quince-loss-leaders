@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from email.message import Message
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
@@ -13,6 +14,7 @@ from quince_loss_leaders.crawler import (
     RobotsPolicy,
     normalize_crawl_url,
 )
+from quince_loss_leaders.crawler_cli import build_parser, main
 from quince_loss_leaders.storage import Repository
 
 
@@ -119,6 +121,109 @@ class CrawlerTests(unittest.TestCase):
             self.assertEqual(result.product_pages_saved, 1)
             self.assertEqual(fetcher.requests, [f"{base_url}/sitemap.xml", f"{base_url}/product.html"])
 
+    def test_url_pattern_cannot_promote_a_non_product_page(self) -> None:
+        non_product_html = b"""
+        <html><head><meta property="product:price:amount" content="20.00"></head>
+        <body><h1>About our pricing</h1>
+        <table><tr><td>Materials</td><td>$10.00</td></tr>
+        <tr><td>TOTAL COST</td><td>$10.00</td></tr></table></body></html>
+        """
+
+        class NonProductFetcher:
+            def fetch(self, url: str) -> FetchResult:
+                return FetchResult(
+                    url,
+                    url,
+                    200,
+                    "text/html",
+                    non_product_html,
+                    headers("text/html"),
+                )
+
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            config = CrawlConfig(
+                seed_urls=("https://example.test/about",),
+                allowed_hosts=("example.test",),
+                snapshot_dir=root / "pages",
+                authorized=True,
+                max_pages=2,
+                max_depth=0,
+                delay_seconds=0,
+                url_pattern=r"https://example\.test/.*",
+            )
+            with Repository(root / "observations.sqlite3") as repository:
+                result = AuthorizedCrawler(
+                    config,
+                    repository,
+                    fetcher=NonProductFetcher(),
+                ).run()
+                rankings = repository.rankings()
+
+            self.assertEqual(result.observations_saved, 0)
+            self.assertEqual(result.non_product_pages, 1)
+            self.assertEqual(rankings, [])
+
+    def test_crawl_reports_parse_status_and_truncation(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            base_url = "https://example.test"
+            config = CrawlConfig(
+                seed_urls=(f"{base_url}/",),
+                allowed_hosts=("example.test",),
+                snapshot_dir=root / "pages",
+                authorized=True,
+                max_pages=1,
+                max_depth=1,
+                delay_seconds=0,
+            )
+            with Repository(root / "observations.sqlite3") as repository:
+                result = AuthorizedCrawler(
+                    config,
+                    repository,
+                    fetcher=FakeFetcher(base_url),
+                ).run()
+
+            self.assertEqual(result.attempted, 1)
+            self.assertTrue(result.truncated)
+            self.assertEqual(result.skipped, 1)
+            self.assertEqual(result.html_pages_fetched, 1)
+            self.assertEqual(result.parse_status_counts, {"partial": 1})
+
+    def test_invalid_sitemap_is_reported(self) -> None:
+        class InvalidSitemapFetcher:
+            def fetch(self, url: str) -> FetchResult:
+                return FetchResult(
+                    url,
+                    url,
+                    200,
+                    "application/xml",
+                    b"<not-valid-sitemap",
+                    headers("application/xml"),
+                )
+
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            config = CrawlConfig(
+                seed_urls=(),
+                sitemap_urls=("https://example.test/sitemap.xml",),
+                allowed_hosts=("example.test",),
+                snapshot_dir=root / "pages",
+                authorized=True,
+                max_pages=2,
+                delay_seconds=0,
+            )
+            with Repository(root / "observations.sqlite3") as repository:
+                result = AuthorizedCrawler(
+                    config,
+                    repository,
+                    fetcher=InvalidSitemapFetcher(),
+                ).run()
+
+            self.assertEqual(result.sitemaps_fetched, 1)
+            self.assertEqual(result.errors[0]["reason"], "invalid sitemap XML")
+            self.assertFalse(result.truncated)
+
     def test_robots_disallow_is_recorded_without_bypass(self) -> None:
         with TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
@@ -146,6 +251,41 @@ class CrawlerTests(unittest.TestCase):
                 allowed_hosts=("example.test",),
                 snapshot_dir=Path("/tmp/pages"),
             )
+
+    def test_invalid_url_pattern_is_rejected(self) -> None:
+        with self.assertRaises(ValueError):
+            CrawlConfig(
+                seed_urls=("https://example.test/",),
+                allowed_hosts=("example.test",),
+                snapshot_dir=Path("/tmp/pages"),
+                authorized=True,
+                url_pattern="[",
+            )
+
+    def test_crawler_cli_uses_api_database_environment_by_default(self) -> None:
+        with patch.dict(os.environ, {"QUINCE_DATABASE": "data/custom.sqlite3"}):
+            args = build_parser().parse_args(
+                ["--authorized", "--allowed-host", "example.test", "--seed", "https://example.test/"]
+            )
+
+        self.assertEqual(args.database, Path("data/custom.sqlite3"))
+
+    def test_crawler_cli_rejects_invalid_rankable_ratio(self) -> None:
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("sys.stderr"):
+                result = main(
+                    [
+                        "--authorized",
+                        "--allowed-host",
+                        "example.test",
+                        "--seed",
+                        "https://example.test/",
+                        "--min-rankable-ratio",
+                        "1.1",
+                    ]
+                )
+
+        self.assertEqual(result, 2)
 
     def test_normalizes_spaces_in_sitemap_paths(self) -> None:
         self.assertEqual(

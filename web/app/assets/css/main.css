@@ -463,6 +463,40 @@ h2 {
   overflow-x: auto;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 0 2px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pagination-button {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--forest);
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.pagination-button:hover:not(:disabled),
+.pagination-button:focus-visible:not(:disabled) {
+  border-color: var(--forest);
+  background: var(--soft);
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

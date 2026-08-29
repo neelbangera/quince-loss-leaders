@@ -241,10 +241,24 @@ function staticResponse(source: RankingResponse): RankingResponse {
 }
 
 const response = computed(() => staticMode ? staticResponse(sourceResponse.value) : sourceResponse.value);
+const PAGE_SIZE = 100;
+const currentPage = ref(1);
 const results = computed(() => sortResults(response.value.results));
+const pageCount = computed(() => Math.max(1, Math.ceil(results.value.length / PAGE_SIZE)));
+const pageStartIndex = computed(() => (currentPage.value - 1) * PAGE_SIZE);
+const pageEndIndex = computed(() => Math.min(pageStartIndex.value + PAGE_SIZE, results.value.length));
+const visibleResults = computed(() => results.value.slice(pageStartIndex.value, pageEndIndex.value));
 const summary = computed(() => response.value.summary);
 const departments = computed(() => response.value.facets.departments);
 const categories = computed(() => response.value.facets.categories);
+
+watch([view, search, department, category, sort], () => {
+  currentPage.value = 1;
+});
+
+watch(pageCount, (count) => {
+  if (currentPage.value > count) currentPage.value = count;
+});
 
 const activeViewLabel = computed(() => {
   if (view.value === "profit") return "Positive spread drivers";
@@ -372,6 +386,14 @@ function resetFilters() {
   department.value = "";
   category.value = "";
   sort.value = view.value === "profit" ? "spread_desc" : "spread_asc";
+}
+
+function previousPage() {
+  currentPage.value = Math.max(1, currentPage.value - 1);
+}
+
+function nextPage() {
+  currentPage.value = Math.min(pageCount.value, currentPage.value + 1);
 }
 
 function marginClass(value: number | null) {
@@ -663,7 +685,7 @@ const historyChart = computed<HistoryChart>(() => {
 
         <template v-else>
           <div class="result-meta">
-            <span>Showing {{ formatNumber(results.length) }} of {{ formatNumber(response.total) }} matches</span>
+            <span>Showing {{ formatNumber(pageStartIndex + 1) }}–{{ formatNumber(pageEndIndex) }} of {{ formatNumber(response.total) }} matches</span>
             <span>Updated {{ formatDate(response.generatedAt) }}</span>
           </div>
           <div class="table-wrap">
@@ -703,7 +725,7 @@ const historyChart = computed<HistoryChart>(() => {
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="product in results" :key="`${product.productKey}-${product.variantKey}`" class="result-row" @click="handleProductClick($event, product)">
+                <tr v-for="product in visibleResults" :key="`${product.productKey}-${product.variantKey}`" class="result-row" @click="handleProductClick($event, product)">
                   <td>
                     <div class="product-cell">
                       <button class="product-detail-button" type="button" @click.stop="handleProductClick($event, product)">
@@ -729,6 +751,11 @@ const historyChart = computed<HistoryChart>(() => {
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div v-if="pageCount > 1" class="pagination" aria-label="Ranking pages">
+            <button class="pagination-button" type="button" :disabled="currentPage === 1" @click="previousPage">Previous</button>
+            <span>Page {{ formatNumber(currentPage) }} of {{ formatNumber(pageCount) }}</span>
+            <button class="pagination-button" type="button" :disabled="currentPage === pageCount" @click="nextPage">Next</button>
           </div>
         </template>
 

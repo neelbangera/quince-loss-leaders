@@ -441,6 +441,13 @@ h2 {
   min-width: 160px;
 }
 
+.table-controls {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .compact-select {
   min-width: 160px;
 }
@@ -821,8 +828,15 @@ tr:last-child td {
   }
 
   .sort-control,
-  .compact-select {
+  .compact-select,
+  .table-controls {
     width: 100%;
+  }
+
+  .table-controls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .result-meta,

@@ -241,18 +241,22 @@ function staticResponse(source: RankingResponse): RankingResponse {
 }
 
 const response = computed(() => staticMode ? staticResponse(sourceResponse.value) : sourceResponse.value);
-const PAGE_SIZE = 100;
+type PageSize = "10" | "100" | "all";
+const pageSize = ref<PageSize>("100");
 const currentPage = ref(1);
 const results = computed(() => sortResults(response.value.results));
-const pageCount = computed(() => Math.max(1, Math.ceil(results.value.length / PAGE_SIZE)));
-const pageStartIndex = computed(() => (currentPage.value - 1) * PAGE_SIZE);
-const pageEndIndex = computed(() => Math.min(pageStartIndex.value + PAGE_SIZE, results.value.length));
+const pageSizeValue = computed(() =>
+  pageSize.value === "all" ? Math.max(1, results.value.length) : Number(pageSize.value),
+);
+const pageCount = computed(() => Math.max(1, Math.ceil(results.value.length / pageSizeValue.value)));
+const pageStartIndex = computed(() => (currentPage.value - 1) * pageSizeValue.value);
+const pageEndIndex = computed(() => Math.min(pageStartIndex.value + pageSizeValue.value, results.value.length));
 const visibleResults = computed(() => results.value.slice(pageStartIndex.value, pageEndIndex.value));
 const summary = computed(() => response.value.summary);
 const departments = computed(() => response.value.facets.departments);
 const categories = computed(() => response.value.facets.categories);
 
-watch([view, search, department, category, sort], () => {
+watch([view, search, department, category, sort, pageSize], () => {
   currentPage.value = 1;
 });
 
@@ -652,19 +656,29 @@ const historyChart = computed<HistoryChart>(() => {
             <h2>{{ activeViewLabel }}</h2>
             <p class="results-description">{{ viewDescription }}</p>
           </div>
-          <div class="sort-control">
-            <label for="sort">Sort by</label>
-            <select id="sort" v-model="sort" class="select-field compact-select">
-              <option value="spread_asc">Lowest spread</option>
-              <option value="spread_desc">Highest spread</option>
-              <option value="price_desc">Highest price</option>
-              <option value="price_asc">Lowest price</option>
-              <option value="cost_desc">Highest reported cost</option>
-              <option value="cost_asc">Lowest reported cost</option>
-              <option value="margin_desc">Highest margin</option>
-              <option value="margin_asc">Lowest margin</option>
-              <option value="name_asc">Product name</option>
-            </select>
+          <div class="table-controls">
+            <div class="sort-control">
+              <label for="sort">Sort by</label>
+              <select id="sort" v-model="sort" class="select-field compact-select">
+                <option value="spread_asc">Lowest spread</option>
+                <option value="spread_desc">Highest spread</option>
+                <option value="price_desc">Highest price</option>
+                <option value="price_asc">Lowest price</option>
+                <option value="cost_desc">Highest reported cost</option>
+                <option value="cost_asc">Lowest reported cost</option>
+                <option value="margin_desc">Highest margin</option>
+                <option value="margin_asc">Lowest margin</option>
+                <option value="name_asc">Product name</option>
+              </select>
+            </div>
+            <div class="sort-control">
+              <label for="page-size">Rows</label>
+              <select id="page-size" v-model="pageSize" class="select-field compact-select">
+                <option value="10">10</option>
+                <option value="100">100</option>
+                <option value="all">All</option>
+              </select>
+            </div>
           </div>
         </div>
 

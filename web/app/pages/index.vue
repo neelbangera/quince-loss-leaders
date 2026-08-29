@@ -327,9 +327,11 @@ function compareNumbers(left: number | null, right: number | null, direction: nu
 function sortResults(items: ProductResult[]) {
   const rawSort = sort.value as string;
   const normalizedSort = rawSort === "name" ? "name_asc" : rawSort;
-  const hasDirection = normalizedSort.endsWith("_asc") || normalizedSort.endsWith("_desc");
-  const field = (hasDirection ? normalizedSort.slice(0, -4) : "spread") as SortField;
-  const direction = normalizedSort.endsWith("_desc") ? -1 : 1;
+  const directionSuffix = normalizedSort.endsWith("_desc") ? "_desc" : "_asc";
+  const field = normalizedSort.endsWith(directionSuffix)
+    ? normalizedSort.slice(0, -directionSuffix.length)
+    : "spread";
+  const direction = directionSuffix === "_desc" ? -1 : 1;
 
   return [...items].sort((left, right) => {
     if (field === "name" || field === "department") {

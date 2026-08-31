@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-08-30T13:55:12+00:00",
+    "capturedAt": "2026-08-31T16:16:57+00:00",
     "sellingPrice": "900.00",
     "reportedTotalCost": "654.00",
     "unitSpread": "246.00",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "900.00",
     "highestPrice": "900.00",
     "lowestCost": "654.00",
     "highestCost": "654.00",
     "averageSpread": "246.00",
     "firstObservedAt": "2026-08-29T21:08:08+00:00",
-    "lastObservedAt": "2026-08-30T13:55:12+00:00"
+    "lastObservedAt": "2026-08-31T16:16:57+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-08-30T13:55:12+00:00",
+      "sellingPrice": "900.00",
+      "reportedTotalCost": "654.00",
+      "unitSpread": "246.00",
+      "marginPct": 27.33,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "144.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "86.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "57.70"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "263.50"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "30.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "72.10"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-08-31T16:16:57+00:00",
       "sellingPrice": "900.00",
       "reportedTotalCost": "654.00",
       "unitSpread": "246.00",

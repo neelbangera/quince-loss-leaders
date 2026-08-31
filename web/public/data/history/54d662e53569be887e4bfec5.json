@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-08-30T14:01:00+00:00",
+    "capturedAt": "2026-08-31T16:22:44+00:00",
     "sellingPrice": "2100.00",
     "reportedTotalCost": "935.19",
     "unitSpread": "1164.81",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "2100.00",
     "highestPrice": "2100.00",
     "lowestCost": "935.19",
     "highestCost": "935.19",
     "averageSpread": "1164.81",
     "firstObservedAt": "2026-08-29T21:07:50+00:00",
-    "lastObservedAt": "2026-08-30T14:01:00+00:00"
+    "lastObservedAt": "2026-08-31T16:22:44+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-08-30T14:01:00+00:00",
+      "sellingPrice": "2100.00",
+      "reportedTotalCost": "935.19",
+      "unitSpread": "1164.81",
+      "marginPct": 55.47,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "714.06"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "25.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "56.42"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "122.32"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-08-31T16:22:44+00:00",
       "sellingPrice": "2100.00",
       "reportedTotalCost": "935.19",
       "unitSpread": "1164.81",

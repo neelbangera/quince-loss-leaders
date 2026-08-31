@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-08-30T13:53:56+00:00",
+    "capturedAt": "2026-08-31T16:15:41+00:00",
     "sellingPrice": "1200.00",
     "reportedTotalCost": "734.79",
     "unitSpread": "465.21",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "1200.00",
     "highestPrice": "1200.00",
     "lowestCost": "734.79",
     "highestCost": "734.79",
     "averageSpread": "465.21",
     "firstObservedAt": "2026-08-29T21:07:32+00:00",
-    "lastObservedAt": "2026-08-30T13:53:56+00:00"
+    "lastObservedAt": "2026-08-31T16:15:41+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-08-30T13:53:56+00:00",
+      "sellingPrice": "1200.00",
+      "reportedTotalCost": "734.79",
+      "unitSpread": "465.21",
+      "marginPct": 38.77,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "565.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "27.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "30.70"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "92.13"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-08-31T16:15:41+00:00",
       "sellingPrice": "1200.00",
       "reportedTotalCost": "734.79",
       "unitSpread": "465.21",

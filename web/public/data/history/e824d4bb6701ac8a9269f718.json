@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-01T13:37:49+00:00",
+    "capturedAt": "2026-09-02T13:04:59+00:00",
     "sellingPrice": "1800.00",
     "reportedTotalCost": "831.55",
     "unitSpread": "968.45",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "1800.00",
     "highestPrice": "1800.00",
     "lowestCost": "831.55",
     "highestCost": "831.55",
     "averageSpread": "968.45",
     "firstObservedAt": "2026-08-29T21:19:13+00:00",
-    "lastObservedAt": "2026-09-01T13:37:49+00:00"
+    "lastObservedAt": "2026-09-02T13:04:59+00:00"
   },
   "history": [
     {
@@ -192,6 +192,47 @@
     },
     {
       "capturedAt": "2026-09-01T13:37:49+00:00",
+      "sellingPrice": "1800.00",
+      "reportedTotalCost": "831.55",
+      "unitSpread": "968.45",
+      "marginPct": 53.8,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "734.07"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "33.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "46.04"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-02T13:04:59+00:00",
       "sellingPrice": "1800.00",
       "reportedTotalCost": "831.55",
       "unitSpread": "968.45",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T12:51:13+00:00",
+    "capturedAt": "2026-09-04T12:45:07+00:00",
     "sellingPrice": "2900.00",
     "reportedTotalCost": "1424.81",
     "unitSpread": "1475.19",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "2900.00",
     "highestPrice": "2900.00",
     "lowestCost": "1424.81",
     "highestCost": "1424.81",
     "averageSpread": "1475.19",
     "firstObservedAt": "2026-08-29T21:09:05+00:00",
-    "lastObservedAt": "2026-09-03T12:51:13+00:00"
+    "lastObservedAt": "2026-09-04T12:45:07+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-03T12:51:13+00:00",
+      "sellingPrice": "2900.00",
+      "reportedTotalCost": "1424.81",
+      "unitSpread": "1475.19",
+      "marginPct": 50.87,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1297.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "30.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "79.62"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T12:45:07+00:00",
       "sellingPrice": "2900.00",
       "reportedTotalCost": "1424.81",
       "unitSpread": "1475.19",

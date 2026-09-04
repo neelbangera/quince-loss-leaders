@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T13:04:09+00:00",
+    "capturedAt": "2026-09-04T12:58:03+00:00",
     "sellingPrice": "1200.00",
     "reportedTotalCost": "697.29",
     "unitSpread": "502.71",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "1200.00",
     "highestPrice": "1200.00",
     "lowestCost": "697.29",
     "highestCost": "704.77",
-    "averageSpread": "497.72",
+    "averageSpread": "498.44",
     "firstObservedAt": "2026-08-29T21:21:52+00:00",
-    "lastObservedAt": "2026-09-03T13:04:09+00:00"
+    "lastObservedAt": "2026-09-04T12:58:03+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-03T13:04:09+00:00",
+      "sellingPrice": "1200.00",
+      "reportedTotalCost": "697.29",
+      "unitSpread": "502.71",
+      "marginPct": 41.89,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "509.35"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "52.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "28.69"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "87.37"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T12:58:03+00:00",
       "sellingPrice": "1200.00",
       "reportedTotalCost": "697.29",
       "unitSpread": "502.71",

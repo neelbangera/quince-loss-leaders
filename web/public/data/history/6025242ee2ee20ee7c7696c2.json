@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T13:02:32+00:00",
+    "capturedAt": "2026-09-04T12:56:26+00:00",
     "sellingPrice": "600.00",
     "reportedTotalCost": "382.01",
     "unitSpread": "217.99",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "600.00",
     "highestPrice": "600.00",
     "lowestCost": "382.01",
     "highestCost": "382.01",
     "averageSpread": "217.99",
     "firstObservedAt": "2026-08-29T21:20:16+00:00",
-    "lastObservedAt": "2026-09-03T13:02:32+00:00"
+    "lastObservedAt": "2026-09-04T12:56:26+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-03T13:02:32+00:00",
+      "sellingPrice": "600.00",
+      "reportedTotalCost": "382.01",
+      "unitSpread": "217.99",
+      "marginPct": 36.33,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "293.01"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "29.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "19.96"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "30.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T12:56:26+00:00",
       "sellingPrice": "600.00",
       "reportedTotalCost": "382.01",
       "unitSpread": "217.99",

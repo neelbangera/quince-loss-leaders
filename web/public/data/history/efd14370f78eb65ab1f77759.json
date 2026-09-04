@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T12:51:12+00:00",
+    "capturedAt": "2026-09-04T12:45:06+00:00",
     "sellingPrice": "1600.00",
     "reportedTotalCost": "749.76",
     "unitSpread": "850.24",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "1600.00",
     "highestPrice": "1600.00",
     "lowestCost": "749.76",
     "highestCost": "749.76",
     "averageSpread": "850.24",
     "firstObservedAt": "2026-08-29T21:09:04+00:00",
-    "lastObservedAt": "2026-09-03T12:51:12+00:00"
+    "lastObservedAt": "2026-09-04T12:45:06+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-03T12:51:12+00:00",
+      "sellingPrice": "1600.00",
+      "reportedTotalCost": "749.76",
+      "unitSpread": "850.24",
+      "marginPct": 53.14,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "658.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "33.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "40.84"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T12:45:06+00:00",
       "sellingPrice": "1600.00",
       "reportedTotalCost": "749.76",
       "unitSpread": "850.24",

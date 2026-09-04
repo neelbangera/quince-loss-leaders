@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T12:49:59+00:00",
-    "sellingPrice": "130.00",
+    "capturedAt": "2026-09-04T12:43:53+00:00",
+    "sellingPrice": "134.00",
     "reportedTotalCost": "67.30",
-    "unitSpread": "62.70",
-    "marginPct": 48.23,
+    "unitSpread": "66.70",
+    "marginPct": 49.78,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "130.00",
-    "highestPrice": "130.00",
+    "highestPrice": "134.00",
     "lowestCost": "67.30",
     "highestCost": "67.30",
-    "averageSpread": "62.70",
+    "averageSpread": "63.27",
     "firstObservedAt": "2026-08-29T21:07:53+00:00",
-    "lastObservedAt": "2026-09-03T12:49:59+00:00"
+    "lastObservedAt": "2026-09-04T12:43:53+00:00"
   },
   "history": [
     {
@@ -278,6 +278,47 @@
       "reportedTotalCost": "67.30",
       "unitSpread": "62.70",
       "marginPct": 48.23,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.95"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "19.87"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "20.09"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T12:43:53+00:00",
+      "sellingPrice": "134.00",
+      "reportedTotalCost": "67.30",
+      "unitSpread": "66.70",
+      "marginPct": 49.78,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

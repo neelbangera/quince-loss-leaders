@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-03T13:08:38+00:00",
+    "capturedAt": "2026-09-04T13:02:31+00:00",
     "sellingPrice": "1100.00",
     "reportedTotalCost": "746.81",
     "unitSpread": "353.19",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "1100.00",
     "highestPrice": "1100.00",
     "lowestCost": "746.81",
     "highestCost": "746.81",
     "averageSpread": "353.19",
     "firstObservedAt": "2026-08-29T21:26:17+00:00",
-    "lastObservedAt": "2026-09-03T13:08:38+00:00"
+    "lastObservedAt": "2026-09-04T13:02:31+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-03T13:08:38+00:00",
+      "sellingPrice": "1100.00",
+      "reportedTotalCost": "746.81",
+      "unitSpread": "353.19",
+      "marginPct": 32.11,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "174.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "104.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "69.60"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "327.90"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "36.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "34.81"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-04T13:02:31+00:00",
       "sellingPrice": "1100.00",
       "reportedTotalCost": "746.81",
       "unitSpread": "353.19",

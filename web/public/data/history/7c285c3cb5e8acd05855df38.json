@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-04T12:44:28+00:00",
+    "capturedAt": "2026-09-05T11:50:36+00:00",
     "sellingPrice": "1850.00",
     "reportedTotalCost": "1405.15",
     "unitSpread": "444.85",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "1850.00",
     "highestPrice": "1850.00",
     "lowestCost": "1405.15",
     "highestCost": "1405.15",
     "averageSpread": "444.85",
     "firstObservedAt": "2026-08-31T16:10:20+00:00",
-    "lastObservedAt": "2026-09-04T12:44:28+00:00"
+    "lastObservedAt": "2026-09-05T11:50:36+00:00"
   },
   "history": [
     {
@@ -233,6 +233,47 @@
     },
     {
       "capturedAt": "2026-09-04T12:44:28+00:00",
+      "sellingPrice": "1850.00",
+      "reportedTotalCost": "1405.15",
+      "unitSpread": "444.85",
+      "marginPct": 24.05,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "474.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "527.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "52.75"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "350.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-05T11:50:36+00:00",
       "sellingPrice": "1850.00",
       "reportedTotalCost": "1405.15",
       "unitSpread": "444.85",

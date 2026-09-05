@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-04T13:02:38+00:00",
+    "capturedAt": "2026-09-05T12:09:20+00:00",
     "sellingPrice": "1850.00",
     "reportedTotalCost": "1385.95",
     "unitSpread": "464.05",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "1850.00",
     "highestPrice": "1850.00",
     "lowestCost": "1385.95",
     "highestCost": "1385.95",
     "averageSpread": "464.05",
     "firstObservedAt": "2026-09-03T13:08:44+00:00",
-    "lastObservedAt": "2026-09-04T13:02:38+00:00"
+    "lastObservedAt": "2026-09-05T12:09:20+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-09-04T13:02:38+00:00",
+      "sellingPrice": "1850.00",
+      "reportedTotalCost": "1385.95",
+      "unitSpread": "464.05",
+      "marginPct": 25.08,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "519.35"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "199.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "79.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "326.20"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "61.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "199.75"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-05T12:09:20+00:00",
       "sellingPrice": "1850.00",
       "reportedTotalCost": "1385.95",
       "unitSpread": "464.05",

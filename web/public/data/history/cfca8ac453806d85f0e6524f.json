@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-05T12:04:53+00:00",
+    "capturedAt": "2026-09-06T12:24:02+00:00",
     "sellingPrice": "48.00",
     "reportedTotalCost": "18.83",
     "unitSpread": "29.17",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "48.00",
     "highestPrice": "48.00",
     "lowestCost": "18.83",
     "highestCost": "19.24",
-    "averageSpread": "28.91",
+    "averageSpread": "28.94",
     "firstObservedAt": "2026-08-29T21:25:59+00:00",
-    "lastObservedAt": "2026-09-05T12:04:53+00:00"
+    "lastObservedAt": "2026-09-06T12:24:02+00:00"
   },
   "history": [
     {
@@ -356,6 +356,47 @@
     },
     {
       "capturedAt": "2026-09-05T12:04:53+00:00",
+      "sellingPrice": "48.00",
+      "reportedTotalCost": "18.83",
+      "unitSpread": "29.17",
+      "marginPct": 60.77,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.73"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.02"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.67"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.43"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.25"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.73"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-06T12:24:02+00:00",
       "sellingPrice": "48.00",
       "reportedTotalCost": "18.83",
       "unitSpread": "29.17",

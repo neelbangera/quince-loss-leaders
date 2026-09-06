@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-05T12:04:59+00:00",
+    "capturedAt": "2026-09-06T12:24:08+00:00",
     "sellingPrice": "51.90",
     "reportedTotalCost": "37.59",
     "unitSpread": "14.31",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "49.90",
     "highestPrice": "51.90",
     "lowestCost": "37.59",
     "highestCost": "37.59",
-    "averageSpread": "12.98",
+    "averageSpread": "13.31",
     "firstObservedAt": "2026-09-01T13:43:45+00:00",
-    "lastObservedAt": "2026-09-05T12:04:59+00:00"
+    "lastObservedAt": "2026-09-06T12:24:08+00:00"
   },
   "history": [
     {
@@ -151,6 +151,47 @@
     },
     {
       "capturedAt": "2026-09-05T12:04:59+00:00",
+      "sellingPrice": "51.90",
+      "reportedTotalCost": "37.59",
+      "unitSpread": "14.31",
+      "marginPct": 27.57,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "20.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.85"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.78"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.41"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.40"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-06T12:24:08+00:00",
       "sellingPrice": "51.90",
       "reportedTotalCost": "37.59",
       "unitSpread": "14.31",

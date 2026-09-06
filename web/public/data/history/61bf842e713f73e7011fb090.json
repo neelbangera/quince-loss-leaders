@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-08-30T13:48:36+00:00",
+    "capturedAt": "2026-09-06T12:09:38+00:00",
     "sellingPrice": "1250.00",
     "reportedTotalCost": "1125.00",
     "unitSpread": "125.00",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "1250.00",
     "highestPrice": "1250.00",
     "lowestCost": "1125.00",
     "highestCost": "1125.00",
     "averageSpread": "125.00",
     "firstObservedAt": "2026-08-29T21:23:55+00:00",
-    "lastObservedAt": "2026-08-30T13:48:36+00:00"
+    "lastObservedAt": "2026-09-06T12:09:38+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-08-30T13:48:36+00:00",
+      "sellingPrice": "1250.00",
+      "reportedTotalCost": "1125.00",
+      "unitSpread": "125.00",
+      "marginPct": 10.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "400.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "396.73"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "44.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "255.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "28.27"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-06T12:09:38+00:00",
       "sellingPrice": "1250.00",
       "reportedTotalCost": "1125.00",
       "unitSpread": "125.00",

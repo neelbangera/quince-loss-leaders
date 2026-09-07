@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:28:20+00:00",
+    "capturedAt": "2026-09-07T14:35:03+00:00",
     "sellingPrice": "1600.00",
     "reportedTotalCost": "555.04",
     "unitSpread": "1044.96",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "1600.00",
     "highestPrice": "1600.00",
     "lowestCost": "555.04",
     "highestCost": "555.04",
     "averageSpread": "1044.96",
     "firstObservedAt": "2026-09-05T12:09:09+00:00",
-    "lastObservedAt": "2026-09-06T12:28:20+00:00"
+    "lastObservedAt": "2026-09-07T14:35:03+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:28:20+00:00",
+      "sellingPrice": "1600.00",
+      "reportedTotalCost": "555.04",
+      "unitSpread": "1044.96",
+      "marginPct": 65.31,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "226.23"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "135.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "90.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "46.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "56.56"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:35:03+00:00",
       "sellingPrice": "1600.00",
       "reportedTotalCost": "555.04",
       "unitSpread": "1044.96",

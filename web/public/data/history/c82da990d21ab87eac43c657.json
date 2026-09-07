@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:13:05+00:00",
+    "capturedAt": "2026-09-07T14:28:52+00:00",
     "sellingPrice": "1600.00",
     "reportedTotalCost": "1299.65",
     "unitSpread": "300.35",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "1600.00",
     "highestPrice": "1600.00",
     "lowestCost": "1299.65",
     "highestCost": "1299.65",
     "averageSpread": "300.35",
     "firstObservedAt": "2026-09-01T13:43:53+00:00",
-    "lastObservedAt": "2026-09-06T12:13:05+00:00"
+    "lastObservedAt": "2026-09-07T14:28:52+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:13:05+00:00",
+      "sellingPrice": "1600.00",
+      "reportedTotalCost": "1299.65",
+      "unitSpread": "300.35",
+      "marginPct": 18.77,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "427.28"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "474.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "47.47"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "350.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:28:52+00:00",
       "sellingPrice": "1600.00",
       "reportedTotalCost": "1299.65",
       "unitSpread": "300.35",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:20:30+00:00",
+    "capturedAt": "2026-09-07T14:33:01+00:00",
     "sellingPrice": "725.00",
     "reportedTotalCost": "500.40",
     "unitSpread": "224.60",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "725.00",
     "highestPrice": "725.00",
     "lowestCost": "500.40",
     "highestCost": "500.40",
     "averageSpread": "224.60",
     "firstObservedAt": "2026-08-29T21:26:21+00:00",
-    "lastObservedAt": "2026-09-06T12:20:30+00:00"
+    "lastObservedAt": "2026-09-07T14:33:01+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:20:30+00:00",
+      "sellingPrice": "725.00",
+      "reportedTotalCost": "500.40",
+      "unitSpread": "224.60",
+      "marginPct": 30.98,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "92.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "55.68"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "37.12"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "267.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "24.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "23.20"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:33:01+00:00",
       "sellingPrice": "725.00",
       "reportedTotalCost": "500.40",
       "unitSpread": "224.60",

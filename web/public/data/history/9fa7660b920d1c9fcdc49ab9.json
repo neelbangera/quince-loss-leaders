@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:10:05+00:00",
+    "capturedAt": "2026-09-07T14:30:03+00:00",
     "sellingPrice": "2998.00",
     "reportedTotalCost": "2162.91",
     "unitSpread": "835.09",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "2998.00",
     "highestPrice": "2998.00",
     "lowestCost": "2162.91",
     "highestCost": "2162.91",
     "averageSpread": "835.09",
     "firstObservedAt": "2026-09-05T11:51:05+00:00",
-    "lastObservedAt": "2026-09-06T12:10:05+00:00"
+    "lastObservedAt": "2026-09-07T14:30:03+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:10:05+00:00",
+      "sellingPrice": "2998.00",
+      "reportedTotalCost": "2162.91",
+      "unitSpread": "835.09",
+      "marginPct": 27.85,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1858.23"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "105.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "192.06"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:30:03+00:00",
       "sellingPrice": "2998.00",
       "reportedTotalCost": "2162.91",
       "unitSpread": "835.09",

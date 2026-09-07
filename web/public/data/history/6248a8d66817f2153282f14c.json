@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:10:39+00:00",
+    "capturedAt": "2026-09-07T14:27:48+00:00",
     "sellingPrice": "648.00",
     "reportedTotalCost": "414.03",
     "unitSpread": "233.97",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "648.00",
     "highestPrice": "648.00",
     "lowestCost": "414.03",
     "highestCost": "414.03",
     "averageSpread": "233.97",
     "firstObservedAt": "2026-08-29T21:12:01+00:00",
-    "lastObservedAt": "2026-09-06T12:10:39+00:00"
+    "lastObservedAt": "2026-09-07T14:27:48+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:10:39+00:00",
+      "sellingPrice": "648.00",
+      "reportedTotalCost": "414.03",
+      "unitSpread": "233.97",
+      "marginPct": 36.11,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "319.66"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "44.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "11.03"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "21.45"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:27:48+00:00",
       "sellingPrice": "648.00",
       "reportedTotalCost": "414.03",
       "unitSpread": "233.97",

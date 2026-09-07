@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-06T12:29:36+00:00",
+    "capturedAt": "2026-09-07T14:28:33+00:00",
     "sellingPrice": "48.00",
     "reportedTotalCost": "9.99",
     "unitSpread": "38.01",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "48.00",
     "highestPrice": "48.00",
     "lowestCost": "9.99",
     "highestCost": "15.17",
-    "averageSpread": "35.13",
+    "averageSpread": "35.42",
     "firstObservedAt": "2026-08-29T21:22:41+00:00",
-    "lastObservedAt": "2026-09-06T12:29:36+00:00"
+    "lastObservedAt": "2026-09-07T14:28:33+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-09-06T12:29:36+00:00",
+      "sellingPrice": "48.00",
+      "reportedTotalCost": "9.99",
+      "unitSpread": "38.01",
+      "marginPct": 79.19,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.63"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.71"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.49"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-07T14:28:33+00:00",
       "sellingPrice": "48.00",
       "reportedTotalCost": "9.99",
       "unitSpread": "38.01",

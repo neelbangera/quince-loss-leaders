@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:24:12+00:00",
+    "capturedAt": "2026-09-08T13:01:39+00:00",
     "sellingPrice": "25.00",
     "reportedTotalCost": "17.36",
     "unitSpread": "7.64",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "24.90",
     "highestPrice": "25.00",
     "lowestCost": "17.36",
     "highestCost": "17.36",
-    "averageSpread": "7.58",
+    "averageSpread": "7.59",
     "firstObservedAt": "2026-08-29T21:18:36+00:00",
-    "lastObservedAt": "2026-09-07T14:24:12+00:00"
+    "lastObservedAt": "2026-09-08T13:01:39+00:00"
   },
   "history": [
     {
@@ -438,6 +438,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:24:12+00:00",
+      "sellingPrice": "25.00",
+      "reportedTotalCost": "17.36",
+      "unitSpread": "7.64",
+      "marginPct": 30.56,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.18"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.78"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.17"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.79"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.95"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.49"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T13:01:39+00:00",
       "sellingPrice": "25.00",
       "reportedTotalCost": "17.36",
       "unitSpread": "7.64",

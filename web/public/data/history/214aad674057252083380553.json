@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:23:43+00:00",
+    "capturedAt": "2026-09-08T13:01:10+00:00",
     "sellingPrice": "498.00",
     "reportedTotalCost": "302.79",
     "unitSpread": "195.21",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "498.00",
     "highestPrice": "498.00",
     "lowestCost": "302.79",
     "highestCost": "302.79",
     "averageSpread": "195.21",
     "firstObservedAt": "2026-08-29T21:10:40+00:00",
-    "lastObservedAt": "2026-09-07T14:23:43+00:00"
+    "lastObservedAt": "2026-09-08T13:01:10+00:00"
   },
   "history": [
     {
@@ -438,6 +438,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:23:43+00:00",
+      "sellingPrice": "498.00",
+      "reportedTotalCost": "302.79",
+      "unitSpread": "195.21",
+      "marginPct": 39.2,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "239.95"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "18.15"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "11.86"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "15.44"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T13:01:10+00:00",
       "sellingPrice": "498.00",
       "reportedTotalCost": "302.79",
       "unitSpread": "195.21",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:21:18+00:00",
+    "capturedAt": "2026-09-08T12:58:44+00:00",
     "sellingPrice": "1100.00",
     "reportedTotalCost": "432.53",
     "unitSpread": "667.47",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "1100.00",
     "highestPrice": "1100.00",
     "lowestCost": "432.53",
     "highestCost": "432.53",
     "averageSpread": "667.47",
     "firstObservedAt": "2026-09-02T12:58:48+00:00",
-    "lastObservedAt": "2026-09-07T14:21:18+00:00"
+    "lastObservedAt": "2026-09-08T12:58:44+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:21:18+00:00",
+      "sellingPrice": "1100.00",
+      "reportedTotalCost": "432.53",
+      "unitSpread": "667.47",
+      "marginPct": 60.68,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "367.21"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "31.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "25.90"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T12:58:44+00:00",
       "sellingPrice": "1100.00",
       "reportedTotalCost": "432.53",
       "unitSpread": "667.47",

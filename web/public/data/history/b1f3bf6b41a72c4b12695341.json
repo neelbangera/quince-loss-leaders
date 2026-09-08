@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:16:26+00:00",
+    "capturedAt": "2026-09-08T12:53:51+00:00",
     "sellingPrice": "51.90",
     "reportedTotalCost": "38.87",
     "unitSpread": "13.03",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "49.90",
     "highestPrice": "51.90",
     "lowestCost": "38.87",
     "highestCost": "41.65",
-    "averageSpread": "9.61",
+    "averageSpread": "9.92",
     "firstObservedAt": "2026-08-29T21:08:37+00:00",
-    "lastObservedAt": "2026-09-07T14:16:26+00:00"
+    "lastObservedAt": "2026-09-08T12:53:51+00:00"
   },
   "history": [
     {
@@ -438,6 +438,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:16:26+00:00",
+      "sellingPrice": "51.90",
+      "reportedTotalCost": "38.87",
+      "unitSpread": "13.03",
+      "marginPct": 25.11,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "20.59"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.60"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.59"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.34"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.60"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T12:53:51+00:00",
       "sellingPrice": "51.90",
       "reportedTotalCost": "38.87",
       "unitSpread": "13.03",

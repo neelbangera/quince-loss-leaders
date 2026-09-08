@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:33:38+00:00",
+    "capturedAt": "2026-09-08T13:11:06+00:00",
     "sellingPrice": "25.00",
     "reportedTotalCost": "17.35",
     "unitSpread": "7.65",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "24.90",
     "highestPrice": "25.00",
     "lowestCost": "17.35",
     "highestCost": "17.35",
-    "averageSpread": "7.59",
+    "averageSpread": "7.60",
     "firstObservedAt": "2026-08-29T21:08:15+00:00",
-    "lastObservedAt": "2026-09-07T14:33:38+00:00"
+    "lastObservedAt": "2026-09-08T13:11:06+00:00"
   },
   "history": [
     {
@@ -438,6 +438,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:33:38+00:00",
+      "sellingPrice": "25.00",
+      "reportedTotalCost": "17.35",
+      "unitSpread": "7.65",
+      "marginPct": 30.6,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.02"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.10"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.02"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.39"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T13:11:06+00:00",
       "sellingPrice": "25.00",
       "reportedTotalCost": "17.35",
       "unitSpread": "7.65",

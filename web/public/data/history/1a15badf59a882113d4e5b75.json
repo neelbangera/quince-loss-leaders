@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-07T14:32:59+00:00",
+    "capturedAt": "2026-09-08T13:10:26+00:00",
     "sellingPrice": "56.90",
     "reportedTotalCost": "37.66",
     "unitSpread": "19.24",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "54.90",
     "highestPrice": "56.90",
     "lowestCost": "37.66",
     "highestCost": "37.66",
-    "averageSpread": "18.84",
+    "averageSpread": "18.91",
     "firstObservedAt": "2026-09-03T13:05:18+00:00",
-    "lastObservedAt": "2026-09-07T14:32:59+00:00"
+    "lastObservedAt": "2026-09-08T13:10:26+00:00"
   },
   "history": [
     {
@@ -233,6 +233,47 @@
     },
     {
       "capturedAt": "2026-09-07T14:32:59+00:00",
+      "sellingPrice": "56.90",
+      "reportedTotalCost": "37.66",
+      "unitSpread": "19.24",
+      "marginPct": 33.81,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "28.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.40"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.48"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.28"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-08T13:10:26+00:00",
       "sellingPrice": "56.90",
       "reportedTotalCost": "37.66",
       "unitSpread": "19.24",

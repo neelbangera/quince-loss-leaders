@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-08T12:54:50+00:00",
+    "capturedAt": "2026-09-09T13:11:26+00:00",
     "sellingPrice": "51.90",
     "reportedTotalCost": "50.88",
     "unitSpread": "1.02",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 6,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "49.90",
     "highestPrice": "51.90",
     "lowestCost": "50.88",
     "highestCost": "50.88",
-    "averageSpread": "-0.07",
+    "averageSpread": "0.02",
     "firstObservedAt": "2026-08-29T21:20:24+00:00",
-    "lastObservedAt": "2026-09-08T12:54:50+00:00"
+    "lastObservedAt": "2026-09-09T13:11:26+00:00"
   },
   "history": [
     {
@@ -479,6 +479,47 @@
     },
     {
       "capturedAt": "2026-09-08T12:54:50+00:00",
+      "sellingPrice": "51.90",
+      "reportedTotalCost": "50.88",
+      "unitSpread": "1.02",
+      "marginPct": 1.97,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "39.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "2.73"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.54"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.11"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-09T13:11:26+00:00",
       "sellingPrice": "51.90",
       "reportedTotalCost": "50.88",
       "unitSpread": "1.02",

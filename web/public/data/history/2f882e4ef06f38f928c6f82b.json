@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-08T13:05:20+00:00",
+    "capturedAt": "2026-09-09T13:05:34+00:00",
     "sellingPrice": "96.00",
-    "reportedTotalCost": "12.65",
-    "unitSpread": "83.35",
-    "marginPct": 86.82,
+    "reportedTotalCost": "17.65",
+    "unitSpread": "78.35",
+    "marginPct": 81.61,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.34"
+        "amount": "8.34"
       },
       {
         "label": "Credit Card Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "89.70",
     "highestPrice": "96.00",
     "lowestCost": "12.65",
-    "highestCost": "12.65",
-    "averageSpread": "79.91",
+    "highestCost": "17.65",
+    "averageSpread": "79.78",
     "firstObservedAt": "2026-08-29T21:14:38+00:00",
-    "lastObservedAt": "2026-09-08T13:05:20+00:00"
+    "lastObservedAt": "2026-09-09T13:05:34+00:00"
   },
   "history": [
     {
@@ -505,6 +505,47 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "3.34"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.94"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.92"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-09T13:05:34+00:00",
+      "sellingPrice": "96.00",
+      "reportedTotalCost": "17.65",
+      "unitSpread": "78.35",
+      "marginPct": 81.61,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.03"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.02"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.34"
         },
         {
           "label": "Credit Card Fees",

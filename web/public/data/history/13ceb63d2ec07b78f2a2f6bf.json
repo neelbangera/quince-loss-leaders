@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-08T12:54:44+00:00",
+    "capturedAt": "2026-09-09T13:07:14+00:00",
     "sellingPrice": "1400.00",
     "reportedTotalCost": "1164.75",
     "unitSpread": "235.25",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "1400.00",
     "highestPrice": "1400.00",
     "lowestCost": "1164.75",
     "highestCost": "1164.75",
     "averageSpread": "235.25",
     "firstObservedAt": "2026-08-29T21:16:17+00:00",
-    "lastObservedAt": "2026-09-08T12:54:44+00:00"
+    "lastObservedAt": "2026-09-09T13:07:14+00:00"
   },
   "history": [
     {
@@ -479,6 +479,47 @@
     },
     {
       "capturedAt": "2026-09-08T12:54:44+00:00",
+      "sellingPrice": "1400.00",
+      "reportedTotalCost": "1164.75",
+      "unitSpread": "235.25",
+      "marginPct": 16.8,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "323.55"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "359.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "35.95"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "415.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "30.75"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-09T13:07:14+00:00",
       "sellingPrice": "1400.00",
       "reportedTotalCost": "1164.75",
       "unitSpread": "235.25",

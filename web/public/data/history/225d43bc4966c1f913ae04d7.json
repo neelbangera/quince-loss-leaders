@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-09T13:09:34+00:00",
+    "capturedAt": "2026-09-10T13:15:38+00:00",
     "sellingPrice": "1700.00",
     "reportedTotalCost": "830.35",
     "unitSpread": "869.65",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 12,
+    "observationCount": 13,
     "lossObservations": 0,
-    "profitObservations": 12,
+    "profitObservations": 13,
     "lowestPrice": "1700.00",
     "highestPrice": "1700.00",
     "lowestCost": "830.35",
     "highestCost": "830.35",
     "averageSpread": "869.65",
     "firstObservedAt": "2026-08-29T21:18:35+00:00",
-    "lastObservedAt": "2026-09-09T13:09:34+00:00"
+    "lastObservedAt": "2026-09-10T13:15:38+00:00"
   },
   "history": [
     {
@@ -520,6 +520,47 @@
     },
     {
       "capturedAt": "2026-09-09T13:09:34+00:00",
+      "sellingPrice": "1700.00",
+      "reportedTotalCost": "830.35",
+      "unitSpread": "869.65",
+      "marginPct": 51.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "610.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "23.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "45.70"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "133.56"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:15:38+00:00",
       "sellingPrice": "1700.00",
       "reportedTotalCost": "830.35",
       "unitSpread": "869.65",

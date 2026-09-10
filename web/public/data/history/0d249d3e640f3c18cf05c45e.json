@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-09T13:11:44+00:00",
+    "capturedAt": "2026-09-10T13:00:31+00:00",
     "sellingPrice": "778.00",
     "reportedTotalCost": "507.71",
     "unitSpread": "270.29",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 12,
+    "observationCount": 13,
     "lossObservations": 0,
-    "profitObservations": 12,
+    "profitObservations": 13,
     "lowestPrice": "778.00",
     "highestPrice": "778.00",
     "lowestCost": "507.71",
     "highestCost": "507.71",
     "averageSpread": "270.29",
     "firstObservedAt": "2026-08-29T21:20:43+00:00",
-    "lastObservedAt": "2026-09-09T13:11:44+00:00"
+    "lastObservedAt": "2026-09-10T13:00:31+00:00"
   },
   "history": [
     {
@@ -520,6 +520,47 @@
     },
     {
       "capturedAt": "2026-09-09T13:11:44+00:00",
+      "sellingPrice": "778.00",
+      "reportedTotalCost": "507.71",
+      "unitSpread": "270.29",
+      "marginPct": 34.74,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "405.48"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "38.55"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.19"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "12.14"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "39.05"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:00:31+00:00",
       "sellingPrice": "778.00",
       "reportedTotalCost": "507.71",
       "unitSpread": "270.29",

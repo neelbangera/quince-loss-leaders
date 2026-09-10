@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-09T13:10:19+00:00",
+    "capturedAt": "2026-09-10T13:08:50+00:00",
     "sellingPrice": "4600.00",
     "reportedTotalCost": "1307.39",
     "unitSpread": "3292.61",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "4600.00",
     "highestPrice": "4600.00",
     "lowestCost": "1307.39",
     "highestCost": "1307.39",
     "averageSpread": "3292.61",
     "firstObservedAt": "2026-09-02T12:57:59+00:00",
-    "lastObservedAt": "2026-09-09T13:10:19+00:00"
+    "lastObservedAt": "2026-09-10T13:08:50+00:00"
   },
   "history": [
     {
@@ -356,6 +356,47 @@
     },
     {
       "capturedAt": "2026-09-09T13:10:19+00:00",
+      "sellingPrice": "4600.00",
+      "reportedTotalCost": "1307.39",
+      "unitSpread": "3292.61",
+      "marginPct": 71.58,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1142.88"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "74.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "72.97"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:08:50+00:00",
       "sellingPrice": "4600.00",
       "reportedTotalCost": "1307.39",
       "unitSpread": "3292.61",

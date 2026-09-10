@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-08T13:04:16+00:00",
+    "capturedAt": "2026-09-10T13:10:53+00:00",
     "sellingPrice": "600.00",
     "reportedTotalCost": "397.85",
     "unitSpread": "202.15",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "600.00",
     "highestPrice": "600.00",
     "lowestCost": "397.85",
     "highestCost": "397.85",
     "averageSpread": "202.15",
     "firstObservedAt": "2026-08-29T21:08:37+00:00",
-    "lastObservedAt": "2026-09-08T13:04:16+00:00"
+    "lastObservedAt": "2026-09-10T13:10:53+00:00"
   },
   "history": [
     {
@@ -479,6 +479,47 @@
     },
     {
       "capturedAt": "2026-09-08T13:04:16+00:00",
+      "sellingPrice": "600.00",
+      "reportedTotalCost": "397.85",
+      "unitSpread": "202.15",
+      "marginPct": 33.69,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "89.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "27.24"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "19.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "251.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:10:53+00:00",
       "sellingPrice": "600.00",
       "reportedTotalCost": "397.85",
       "unitSpread": "202.15",

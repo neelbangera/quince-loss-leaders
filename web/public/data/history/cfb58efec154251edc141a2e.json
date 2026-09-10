@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-01T13:45:51+00:00",
+    "capturedAt": "2026-09-10T13:15:35+00:00",
     "sellingPrice": "1500.00",
     "reportedTotalCost": "570.36",
     "unitSpread": "929.64",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "1500.00",
     "highestPrice": "1500.00",
     "lowestCost": "570.36",
     "highestCost": "570.36",
     "averageSpread": "929.64",
     "firstObservedAt": "2026-08-29T21:10:13+00:00",
-    "lastObservedAt": "2026-09-01T13:45:51+00:00"
+    "lastObservedAt": "2026-09-10T13:15:35+00:00"
   },
   "history": [
     {
@@ -192,6 +192,47 @@
     },
     {
       "capturedAt": "2026-09-01T13:45:51+00:00",
+      "sellingPrice": "1500.00",
+      "reportedTotalCost": "570.36",
+      "unitSpread": "929.64",
+      "marginPct": 61.98,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "492.18"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "36.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "34.14"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:15:35+00:00",
       "sellingPrice": "1500.00",
       "reportedTotalCost": "570.36",
       "unitSpread": "929.64",

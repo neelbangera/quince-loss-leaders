@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-08T12:57:01+00:00",
+    "capturedAt": "2026-09-10T13:05:39+00:00",
     "sellingPrice": "70.00",
     "reportedTotalCost": "31.36",
     "unitSpread": "38.64",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "70.00",
     "highestPrice": "70.00",
     "lowestCost": "31.36",
     "highestCost": "31.36",
     "averageSpread": "38.64",
     "firstObservedAt": "2026-08-31T16:11:31+00:00",
-    "lastObservedAt": "2026-09-08T12:57:01+00:00"
+    "lastObservedAt": "2026-09-10T13:05:39+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-09-08T12:57:01+00:00",
+      "sellingPrice": "70.00",
+      "reportedTotalCost": "31.36",
+      "unitSpread": "38.64",
+      "marginPct": 55.2,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.98"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "7.53"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.96"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.91"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-10T13:05:39+00:00",
       "sellingPrice": "70.00",
       "reportedTotalCost": "31.36",
       "unitSpread": "38.64",

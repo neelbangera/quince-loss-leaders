@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-10T12:59:40+00:00",
+    "capturedAt": "2026-09-11T13:07:36+00:00",
     "sellingPrice": "900.00",
     "reportedTotalCost": "642.40",
     "unitSpread": "257.60",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 13,
+    "observationCount": 14,
     "lossObservations": 0,
-    "profitObservations": 13,
+    "profitObservations": 14,
     "lowestPrice": "900.00",
     "highestPrice": "900.00",
     "lowestCost": "642.40",
     "highestCost": "642.40",
     "averageSpread": "257.60",
     "firstObservedAt": "2026-08-29T21:24:06+00:00",
-    "lastObservedAt": "2026-09-10T12:59:40+00:00"
+    "lastObservedAt": "2026-09-11T13:07:36+00:00"
   },
   "history": [
     {
@@ -561,6 +561,47 @@
     },
     {
       "capturedAt": "2026-09-10T12:59:40+00:00",
+      "sellingPrice": "900.00",
+      "reportedTotalCost": "642.40",
+      "unitSpread": "257.60",
+      "marginPct": 28.62,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "189.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "113.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "75.68"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "234.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "30.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-11T13:07:36+00:00",
       "sellingPrice": "900.00",
       "reportedTotalCost": "642.40",
       "unitSpread": "257.60",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-11T13:06:23+00:00",
+    "capturedAt": "2026-09-12T12:27:04+00:00",
     "sellingPrice": "68.00",
     "reportedTotalCost": "42.64",
     "unitSpread": "25.36",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 14,
+    "observationCount": 15,
     "lossObservations": 0,
-    "profitObservations": 14,
+    "profitObservations": 15,
     "lowestPrice": "68.00",
     "highestPrice": "68.00",
     "lowestCost": "34.35",
     "highestCost": "43.15",
-    "averageSpread": "32.43",
+    "averageSpread": "31.96",
     "firstObservedAt": "2026-08-29T21:14:20+00:00",
-    "lastObservedAt": "2026-09-11T13:06:23+00:00"
+    "lastObservedAt": "2026-09-12T12:27:04+00:00"
   },
   "history": [
     {
@@ -602,6 +602,47 @@
     },
     {
       "capturedAt": "2026-09-11T13:06:23+00:00",
+      "sellingPrice": "68.00",
+      "reportedTotalCost": "42.64",
+      "unitSpread": "25.36",
+      "marginPct": 37.29,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "28.89"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.38"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.16"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.44"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.67"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-12T12:27:04+00:00",
       "sellingPrice": "68.00",
       "reportedTotalCost": "42.64",
       "unitSpread": "25.36",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-11T13:03:49+00:00",
+    "capturedAt": "2026-09-12T12:24:32+00:00",
     "sellingPrice": "1700.00",
     "reportedTotalCost": "672.83",
     "unitSpread": "1027.17",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "1700.00",
     "highestPrice": "1700.00",
     "lowestCost": "672.83",
     "highestCost": "672.83",
     "averageSpread": "1027.17",
     "firstObservedAt": "2026-09-04T12:57:08+00:00",
-    "lastObservedAt": "2026-09-11T13:03:49+00:00"
+    "lastObservedAt": "2026-09-12T12:24:32+00:00"
   },
   "history": [
     {
@@ -356,6 +356,47 @@
     },
     {
       "capturedAt": "2026-09-11T13:03:49+00:00",
+      "sellingPrice": "1700.00",
+      "reportedTotalCost": "672.83",
+      "unitSpread": "1027.17",
+      "marginPct": 60.42,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "275.48"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "165.29"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "110.19"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "53.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "68.87"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-12T12:24:32+00:00",
       "sellingPrice": "1700.00",
       "reportedTotalCost": "672.83",
       "unitSpread": "1027.17",

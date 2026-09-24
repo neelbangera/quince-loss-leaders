@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-23T13:42:07+00:00",
+    "capturedAt": "2026-09-24T13:39:48+00:00",
     "sellingPrice": "3700.00",
     "reportedTotalCost": "853.90",
     "unitSpread": "2846.10",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "3700.00",
     "highestPrice": "3700.00",
     "lowestCost": "853.90",
     "highestCost": "853.90",
     "averageSpread": "2846.10",
     "firstObservedAt": "2026-09-19T12:36:32+00:00",
-    "lastObservedAt": "2026-09-23T13:42:07+00:00"
+    "lastObservedAt": "2026-09-24T13:39:48+00:00"
   },
   "history": [
     {
@@ -233,6 +233,47 @@
     },
     {
       "capturedAt": "2026-09-23T13:42:07+00:00",
+      "sellingPrice": "3700.00",
+      "reportedTotalCost": "853.90",
+      "unitSpread": "2846.10",
+      "marginPct": 76.92,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "758.56"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "30.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "47.30"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-24T13:39:48+00:00",
       "sellingPrice": "3700.00",
       "reportedTotalCost": "853.90",
       "unitSpread": "2846.10",

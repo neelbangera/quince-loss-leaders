@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-24T13:43:58+00:00",
+    "capturedAt": "2026-09-25T13:57:48+00:00",
     "sellingPrice": "17.90",
     "reportedTotalCost": "10.74",
     "unitSpread": "7.16",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "10.74",
     "highestCost": "12.96",
-    "averageSpread": "6.90",
+    "averageSpread": "6.92",
     "firstObservedAt": "2026-09-12T12:12:42+00:00",
-    "lastObservedAt": "2026-09-24T13:43:58+00:00"
+    "lastObservedAt": "2026-09-25T13:57:48+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-09-24T13:43:58+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "10.74",
+      "unitSpread": "7.16",
+      "marginPct": 40.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.55"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.44"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.22"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.28"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.10"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-25T13:57:48+00:00",
       "sellingPrice": "17.90",
       "reportedTotalCost": "10.74",
       "unitSpread": "7.16",

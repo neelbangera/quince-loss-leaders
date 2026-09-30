@@ -3,7 +3,7 @@
   "product": {
     "productKey": "sku:42006804529322",
     "variantKey": "10586",
-    "name": "Platinum Classic Band",
+    "name": "Platinum Classic Band in Platinum, Size 4",
     "url": "https://www.quince.com/women/platinum-classic-band",
     "brand": null,
     "department": "women",
@@ -14,18 +14,18 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-29T15:00:37+00:00",
+    "capturedAt": "2026-09-30T15:15:51+00:00",
     "sellingPrice": "348.00",
-    "reportedTotalCost": "226.61",
-    "unitSpread": "121.39",
-    "marginPct": 34.88,
+    "reportedTotalCost": "216.65",
+    "unitSpread": "131.35",
+    "marginPct": 37.74,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "178.38"
+        "amount": "169.32"
       },
       {
         "label": "Crafting Cost",
@@ -50,21 +50,21 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "18.96"
+        "amount": "18.06"
       }
     ]
   },
   "analytics": {
-    "observationCount": 19,
+    "observationCount": 20,
     "lossObservations": 0,
-    "profitObservations": 19,
+    "profitObservations": 20,
     "lowestPrice": "348.00",
     "highestPrice": "348.00",
     "lowestCost": "192.42",
     "highestCost": "226.61",
-    "averageSpread": "125.82",
+    "averageSpread": "126.10",
     "firstObservedAt": "2026-09-11T13:10:30+00:00",
-    "lastObservedAt": "2026-09-29T15:00:37+00:00"
+    "lastObservedAt": "2026-09-30T15:15:51+00:00"
   },
   "history": [
     {
@@ -843,6 +843,47 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "18.96"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-09-30T15:15:51+00:00",
+      "sellingPrice": "348.00",
+      "reportedTotalCost": "216.65",
+      "unitSpread": "131.35",
+      "marginPct": 37.74,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "169.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.29"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "18.06"
         }
       ]
     }

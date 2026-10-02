@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-01T16:00:24+00:00",
+    "capturedAt": "2026-10-02T14:56:41+00:00",
     "sellingPrice": "698.00",
     "reportedTotalCost": "350.43",
     "unitSpread": "347.57",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 21,
+    "observationCount": 22,
     "lossObservations": 0,
-    "profitObservations": 21,
+    "profitObservations": 22,
     "lowestPrice": "698.00",
     "highestPrice": "698.00",
     "lowestCost": "350.43",
     "highestCost": "363.50",
-    "averageSpread": "339.48",
+    "averageSpread": "339.85",
     "firstObservedAt": "2026-09-11T13:09:49+00:00",
-    "lastObservedAt": "2026-10-01T16:00:24+00:00"
+    "lastObservedAt": "2026-10-02T14:56:41+00:00"
   },
   "history": [
     {
@@ -889,6 +889,47 @@
     },
     {
       "capturedAt": "2026-10-01T16:00:24+00:00",
+      "sellingPrice": "698.00",
+      "reportedTotalCost": "350.43",
+      "unitSpread": "347.57",
+      "marginPct": 49.8,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "279.87"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "24.42"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "17.09"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "16.75"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-02T14:56:41+00:00",
       "sellingPrice": "698.00",
       "reportedTotalCost": "350.43",
       "unitSpread": "347.57",

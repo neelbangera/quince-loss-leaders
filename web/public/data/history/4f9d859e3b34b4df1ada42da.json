@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-01T16:08:01+00:00",
+    "capturedAt": "2026-10-02T15:03:29+00:00",
     "sellingPrice": "4800.00",
     "reportedTotalCost": "2303.18",
     "unitSpread": "2496.82",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 34,
+    "observationCount": 35,
     "lossObservations": 0,
-    "profitObservations": 34,
+    "profitObservations": 35,
     "lowestPrice": "4800.00",
     "highestPrice": "4800.00",
     "lowestCost": "2163.02",
     "highestCost": "2490.47",
-    "averageSpread": "2409.06",
+    "averageSpread": "2411.57",
     "firstObservedAt": "2026-08-29T21:13:27+00:00",
-    "lastObservedAt": "2026-10-01T16:08:01+00:00"
+    "lastObservedAt": "2026-10-02T15:03:29+00:00"
   },
   "history": [
     {
@@ -1422,6 +1422,47 @@
     },
     {
       "capturedAt": "2026-10-01T16:08:01+00:00",
+      "sellingPrice": "4800.00",
+      "reportedTotalCost": "2303.18",
+      "unitSpread": "2496.82",
+      "marginPct": 52.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2001.81"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "118.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "165.83"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-02T15:03:29+00:00",
       "sellingPrice": "4800.00",
       "reportedTotalCost": "2303.18",
       "unitSpread": "2496.82",

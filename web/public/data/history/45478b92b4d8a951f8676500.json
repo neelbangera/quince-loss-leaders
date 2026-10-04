@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-03T13:30:00+00:00",
+    "capturedAt": "2026-10-04T14:24:02+00:00",
     "sellingPrice": "287.90",
-    "reportedTotalCost": "60.79",
-    "unitSpread": "227.11",
-    "marginPct": 78.89,
+    "reportedTotalCost": "57.99",
+    "unitSpread": "229.91",
+    "marginPct": 79.86,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,21 +50,21 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "14.80"
+        "amount": "12.00"
       }
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "287.90",
     "highestPrice": "287.90",
-    "lowestCost": "60.79",
+    "lowestCost": "57.99",
     "highestCost": "60.79",
-    "averageSpread": "227.11",
+    "averageSpread": "228.04",
     "firstObservedAt": "2026-10-02T15:02:03+00:00",
-    "lastObservedAt": "2026-10-03T13:30:00+00:00"
+    "lastObservedAt": "2026-10-04T14:24:02+00:00"
   },
   "history": [
     {
@@ -146,6 +146,47 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "14.80"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-04T14:24:02+00:00",
+      "sellingPrice": "287.90",
+      "reportedTotalCost": "57.99",
+      "unitSpread": "229.91",
+      "marginPct": 79.86,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.67"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.43"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "13.47"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "12.00"
         }
       ]
     }

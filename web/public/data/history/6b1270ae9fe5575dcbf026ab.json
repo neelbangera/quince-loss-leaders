@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-03T13:30:03+00:00",
+    "capturedAt": "2026-10-04T14:16:16+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "27.39",
     "unitSpread": "12.51",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 22,
+    "observationCount": 23,
     "lossObservations": 0,
-    "profitObservations": 22,
+    "profitObservations": 23,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "19.77",
     "highestCost": "29.51",
-    "averageSpread": "10.93",
+    "averageSpread": "11.00",
     "firstObservedAt": "2026-09-11T12:53:08+00:00",
-    "lastObservedAt": "2026-10-03T13:30:03+00:00"
+    "lastObservedAt": "2026-10-04T14:16:16+00:00"
   },
   "history": [
     {
@@ -930,6 +930,47 @@
     },
     {
       "capturedAt": "2026-10-03T13:30:03+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "27.39",
+      "unitSpread": "12.51",
+      "marginPct": 31.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.38"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.48"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.37"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.62"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.16"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.38"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-04T14:16:16+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "27.39",
       "unitSpread": "12.51",

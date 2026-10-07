@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-06T15:22:52+00:00",
+    "capturedAt": "2026-10-07T15:35:56+00:00",
     "sellingPrice": "99.90",
     "reportedTotalCost": "49.20",
     "unitSpread": "50.70",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "99.90",
     "highestPrice": "99.90",
     "lowestCost": "49.20",
     "highestCost": "50.27",
-    "averageSpread": "49.84",
+    "averageSpread": "49.99",
     "firstObservedAt": "2026-10-02T14:59:38+00:00",
-    "lastObservedAt": "2026-10-06T15:22:52+00:00"
+    "lastObservedAt": "2026-10-07T15:35:56+00:00"
   },
   "history": [
     {
@@ -233,6 +233,47 @@
     },
     {
       "capturedAt": "2026-10-06T15:22:52+00:00",
+      "sellingPrice": "99.90",
+      "reportedTotalCost": "49.20",
+      "unitSpread": "50.70",
+      "marginPct": 50.75,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "27.23"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.74"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.31"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.60"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.82"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-07T15:35:56+00:00",
       "sellingPrice": "99.90",
       "reportedTotalCost": "49.20",
       "unitSpread": "50.70",

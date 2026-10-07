@@ -11,26 +11,26 @@
     "category": "furniture",
     "categoryLabel": "Furniture",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": true
   },
   "current": {
-    "capturedAt": "2026-10-06T15:19:13+00:00",
+    "capturedAt": "2026-10-07T15:50:58+00:00",
     "sellingPrice": "250.00",
-    "reportedTotalCost": "187.24",
-    "unitSpread": "62.76",
-    "marginPct": 25.1,
+    "reportedTotalCost": "367.91",
+    "unitSpread": "-117.91",
+    "marginPct": -47.16,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "31.35"
+        "amount": "25.08"
       },
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "18.81"
+        "amount": "12.54"
       },
       {
         "label": "Packaging",
@@ -40,12 +40,12 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "108.70"
+        "amount": "304.15"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "8.00"
+        "amount": "5.76"
       },
       {
         "label": "Duties, Taxes, And Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 39,
-    "lossObservations": 0,
+    "observationCount": 40,
+    "lossObservations": 1,
     "profitObservations": 39,
     "lowestPrice": "250.00",
     "highestPrice": "250.00",
     "lowestCost": "187.24",
-    "highestCost": "187.24",
-    "averageSpread": "62.76",
+    "highestCost": "367.91",
+    "averageSpread": "58.24",
     "firstObservedAt": "2026-08-29T21:15:17+00:00",
-    "lastObservedAt": "2026-10-06T15:19:13+00:00"
+    "lastObservedAt": "2026-10-07T15:50:58+00:00"
   },
   "history": [
     {
@@ -1658,6 +1658,47 @@
           "label": "Credit Card Fees",
           "type": "credit_card_fees",
           "amount": "8.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.84"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-07T15:50:58+00:00",
+      "sellingPrice": "250.00",
+      "reportedTotalCost": "367.91",
+      "unitSpread": "-117.91",
+      "marginPct": -47.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "25.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.54"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "12.54"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "304.15"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.76"
         },
         {
           "label": "Duties, Taxes, And Fees",

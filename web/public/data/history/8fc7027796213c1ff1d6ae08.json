@@ -3,7 +3,7 @@
   "product": {
     "productKey": "sku:46142261854378",
     "variantKey": "70594",
-    "name": "Meet Me by the Fire by Kristi McDonald",
+    "name": "Meet Me by the Fire by Kristi McDonald in White, Size 21.25\"x21.25\"",
     "url": "https://www.quince.com/home/meet-me-by-the-fire-by-kristi-mcdonald",
     "brand": null,
     "department": "home",
@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-27T14:08:22+00:00",
+    "capturedAt": "2026-10-07T15:33:43+00:00",
     "sellingPrice": "309.90",
-    "reportedTotalCost": "170.91",
-    "unitSpread": "138.99",
-    "marginPct": 44.85,
+    "reportedTotalCost": "172.79",
+    "unitSpread": "137.11",
+    "marginPct": 44.24,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "18.15"
+        "amount": "20.03"
       },
       {
         "label": "Credit Card Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "309.90",
     "highestPrice": "309.90",
     "lowestCost": "170.91",
-    "highestCost": "170.91",
-    "averageSpread": "138.99",
+    "highestCost": "172.79",
+    "averageSpread": "138.61",
     "firstObservedAt": "2026-09-22T13:34:49+00:00",
-    "lastObservedAt": "2026-09-27T14:08:22+00:00"
+    "lastObservedAt": "2026-10-07T15:33:43+00:00"
   },
   "history": [
     {
@@ -218,6 +218,47 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "18.15"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "6.92"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-07T15:33:43+00:00",
+      "sellingPrice": "309.90",
+      "reportedTotalCost": "172.79",
+      "unitSpread": "137.11",
+      "marginPct": 44.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "121.54"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "12.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "20.03"
         },
         {
           "label": "Credit Card Fees",

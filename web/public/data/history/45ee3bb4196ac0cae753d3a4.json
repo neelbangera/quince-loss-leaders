@@ -14,18 +14,18 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-06T15:28:12+00:00",
+    "capturedAt": "2026-10-07T15:35:40+00:00",
     "sellingPrice": "4900.00",
-    "reportedTotalCost": "2537.14",
-    "unitSpread": "2362.86",
-    "marginPct": 48.22,
+    "reportedTotalCost": "2483.20",
+    "unitSpread": "2416.80",
+    "marginPct": 49.32,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "2113.44"
+        "amount": "2112.46"
       },
       {
         "label": "Crafting Cost",
@@ -40,31 +40,31 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.07"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "0.15"
+        "amount": "177.44"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "225.18"
+        "amount": "0.00"
       }
     ]
   },
   "analytics": {
-    "observationCount": 26,
+    "observationCount": 27,
     "lossObservations": 0,
-    "profitObservations": 26,
+    "profitObservations": 27,
     "lowestPrice": "4900.00",
     "highestPrice": "4900.00",
     "lowestCost": "2346.82",
     "highestCost": "2630.00",
-    "averageSpread": "2326.73",
+    "averageSpread": "2330.06",
     "firstObservedAt": "2026-09-11T13:06:16+00:00",
-    "lastObservedAt": "2026-10-06T15:28:12+00:00"
+    "lastObservedAt": "2026-10-07T15:35:40+00:00"
   },
   "history": [
     {
@@ -1130,6 +1130,47 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "225.18"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-07T15:35:40+00:00",
+      "sellingPrice": "4900.00",
+      "reportedTotalCost": "2483.20",
+      "unitSpread": "2416.80",
+      "marginPct": 49.32,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2112.46"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "191.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "177.44"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
         }
       ]
     }

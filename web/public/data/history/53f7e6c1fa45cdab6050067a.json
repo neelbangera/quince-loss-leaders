@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-06T15:30:08+00:00",
+    "capturedAt": "2026-10-07T15:47:58+00:00",
     "sellingPrice": "88.00",
-    "reportedTotalCost": "45.87",
-    "unitSpread": "42.13",
-    "marginPct": 47.88,
+    "reportedTotalCost": "45.19",
+    "unitSpread": "42.81",
+    "marginPct": 48.65,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,12 +40,12 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "4.77"
+        "amount": "3.63"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.83"
+        "amount": "2.29"
       },
       {
         "label": "Duties, Taxes, And Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 38,
+    "observationCount": 39,
     "lossObservations": 0,
-    "profitObservations": 38,
+    "profitObservations": 39,
     "lowestPrice": "88.00",
     "highestPrice": "88.00",
-    "lowestCost": "45.87",
+    "lowestCost": "45.19",
     "highestCost": "45.87",
-    "averageSpread": "42.13",
+    "averageSpread": "42.15",
     "firstObservedAt": "2026-08-29T21:07:46+00:00",
-    "lastObservedAt": "2026-10-06T15:30:08+00:00"
+    "lastObservedAt": "2026-10-07T15:47:58+00:00"
   },
   "history": [
     {
@@ -1617,6 +1617,47 @@
           "label": "Credit Card Fees",
           "type": "credit_card_fees",
           "amount": "1.83"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.91"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-07T15:47:58+00:00",
+      "sellingPrice": "88.00",
+      "reportedTotalCost": "45.19",
+      "unitSpread": "42.81",
+      "marginPct": 48.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "17.99"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "16.07"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.29"
         },
         {
           "label": "Duties, Taxes, And Fees",

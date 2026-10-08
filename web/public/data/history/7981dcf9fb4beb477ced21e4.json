@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:54:23+00:00",
+    "capturedAt": "2026-10-08T15:43:37+00:00",
     "sellingPrice": "368.00",
     "reportedTotalCost": "237.70",
     "unitSpread": "130.30",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 27,
+    "observationCount": 28,
     "lossObservations": 0,
-    "profitObservations": 27,
+    "profitObservations": 28,
     "lowestPrice": "368.00",
     "highestPrice": "368.00",
     "lowestCost": "236.28",
     "highestCost": "247.23",
     "averageSpread": "130.51",
     "firstObservedAt": "2026-09-11T12:56:50+00:00",
-    "lastObservedAt": "2026-10-07T15:54:23+00:00"
+    "lastObservedAt": "2026-10-08T15:43:37+00:00"
   },
   "history": [
     {
@@ -1135,6 +1135,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:54:23+00:00",
+      "sellingPrice": "368.00",
+      "reportedTotalCost": "237.70",
+      "unitSpread": "130.30",
+      "marginPct": 35.41,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "183.95"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.88"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.11"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "10.37"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "16.09"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:43:37+00:00",
       "sellingPrice": "368.00",
       "reportedTotalCost": "237.70",
       "unitSpread": "130.30",

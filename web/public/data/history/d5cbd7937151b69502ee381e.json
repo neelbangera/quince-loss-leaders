@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:46:57+00:00",
+    "capturedAt": "2026-10-08T15:53:52+00:00",
     "sellingPrice": "7.50",
     "reportedTotalCost": "5.40",
     "unitSpread": "2.10",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 27,
+    "observationCount": 28,
     "lossObservations": 0,
-    "profitObservations": 27,
+    "profitObservations": 28,
     "lowestPrice": "7.50",
     "highestPrice": "7.50",
     "lowestCost": "5.40",
     "highestCost": "6.09",
-    "averageSpread": "1.44",
+    "averageSpread": "1.46",
     "firstObservedAt": "2026-09-11T13:06:40+00:00",
-    "lastObservedAt": "2026-10-07T15:46:57+00:00"
+    "lastObservedAt": "2026-10-08T15:53:52+00:00"
   },
   "history": [
     {
@@ -1135,6 +1135,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:46:57+00:00",
+      "sellingPrice": "7.50",
+      "reportedTotalCost": "5.40",
+      "unitSpread": "2.10",
+      "marginPct": 28.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "0.78"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.06"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.03"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.31"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.70"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:53:52+00:00",
       "sellingPrice": "7.50",
       "reportedTotalCost": "5.40",
       "unitSpread": "2.10",

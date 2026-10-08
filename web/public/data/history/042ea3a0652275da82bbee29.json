@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:54:23+00:00",
+    "capturedAt": "2026-10-08T15:38:21+00:00",
     "sellingPrice": "1200.00",
     "reportedTotalCost": "897.01",
     "unitSpread": "302.99",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 23,
+    "observationCount": 24,
     "lossObservations": 0,
-    "profitObservations": 23,
+    "profitObservations": 24,
     "lowestPrice": "1200.00",
     "highestPrice": "1200.00",
     "lowestCost": "897.01",
     "highestCost": "930.00",
-    "averageSpread": "271.43",
+    "averageSpread": "272.75",
     "firstObservedAt": "2026-09-14T15:01:27+00:00",
-    "lastObservedAt": "2026-10-07T15:54:23+00:00"
+    "lastObservedAt": "2026-10-08T15:38:21+00:00"
   },
   "history": [
     {
@@ -971,6 +971,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:54:23+00:00",
+      "sellingPrice": "1200.00",
+      "reportedTotalCost": "897.01",
+      "unitSpread": "302.99",
+      "marginPct": 25.25,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "227.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "136.20"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "90.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "255.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "27.01"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "161.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:38:21+00:00",
       "sellingPrice": "1200.00",
       "reportedTotalCost": "897.01",
       "unitSpread": "302.99",

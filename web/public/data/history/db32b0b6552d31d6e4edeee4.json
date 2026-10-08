@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:35:19+00:00",
+    "capturedAt": "2026-10-08T15:44:33+00:00",
     "sellingPrice": "30.00",
     "reportedTotalCost": "18.86",
     "unitSpread": "11.14",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 39,
+    "observationCount": 40,
     "lossObservations": 0,
-    "profitObservations": 39,
+    "profitObservations": 40,
     "lowestPrice": "30.00",
     "highestPrice": "30.00",
     "lowestCost": "18.86",
     "highestCost": "20.22",
-    "averageSpread": "9.81",
+    "averageSpread": "9.85",
     "firstObservedAt": "2026-08-29T21:10:39+00:00",
-    "lastObservedAt": "2026-10-07T15:35:19+00:00"
+    "lastObservedAt": "2026-10-08T15:44:33+00:00"
   },
   "history": [
     {
@@ -1627,6 +1627,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:35:19+00:00",
+      "sellingPrice": "30.00",
+      "reportedTotalCost": "18.86",
+      "unitSpread": "11.14",
+      "marginPct": 37.13,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.13"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.68"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.22"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.83"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:44:33+00:00",
       "sellingPrice": "30.00",
       "reportedTotalCost": "18.86",
       "unitSpread": "11.14",

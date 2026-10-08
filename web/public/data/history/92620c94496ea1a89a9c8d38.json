@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:41:21+00:00",
+    "capturedAt": "2026-10-08T15:54:39+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "18.64",
     "unitSpread": "11.26",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 1,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "18.64",
     "highestCost": "30.50",
-    "averageSpread": "5.33",
+    "averageSpread": "7.31",
     "firstObservedAt": "2026-10-06T15:29:57+00:00",
-    "lastObservedAt": "2026-10-07T15:41:21+00:00"
+    "lastObservedAt": "2026-10-08T15:54:39+00:00"
   },
   "history": [
     {
@@ -110,6 +110,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:41:21+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "18.64",
+      "unitSpread": "11.26",
+      "marginPct": 37.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.89"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.12"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.45"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.34"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.88"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.96"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:54:39+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "18.64",
       "unitSpread": "11.26",

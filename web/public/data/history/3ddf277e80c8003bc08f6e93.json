@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-07T15:38:01+00:00",
+    "capturedAt": "2026-10-08T15:51:22+00:00",
     "sellingPrice": "94.00",
     "reportedTotalCost": "37.36",
     "unitSpread": "56.64",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "94.00",
     "highestPrice": "94.00",
     "lowestCost": "37.36",
     "highestCost": "74.58",
-    "averageSpread": "25.62",
+    "averageSpread": "30.05",
     "firstObservedAt": "2026-09-25T13:59:24+00:00",
-    "lastObservedAt": "2026-10-07T15:38:01+00:00"
+    "lastObservedAt": "2026-10-08T15:51:22+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-10-07T15:38:01+00:00",
+      "sellingPrice": "94.00",
+      "reportedTotalCost": "37.36",
+      "unitSpread": "56.64",
+      "marginPct": 60.26,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "24.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.08"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.38"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-08T15:51:22+00:00",
       "sellingPrice": "94.00",
       "reportedTotalCost": "37.36",
       "unitSpread": "56.64",

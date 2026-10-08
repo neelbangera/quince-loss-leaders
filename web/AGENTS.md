@@ -22,6 +22,66 @@ reinterpreting the description. Where an instruction file under `web/` and
 under "Open decisions" in `DESIGN.md` without asking; do not build from the
 archived systems in `.impeccable/archive/`.
 
+## UI rebuild: current state
+
+As of October 8, 2026:
+
+- The design is approved as a mockup and written up in `DESIGN.md`. The app
+  code has not been rebuilt: `app/pages/index.vue` and `app/assets/css/main.css`
+  still implement the earlier "forest ledger" look (green-tinted paper,
+  monospace figures, rounded panels, a filter rail).
+- Baseline before the rebuild: `python3 -m unittest discover -s tests` passes
+  (52 tests) and `npm run typecheck` passes.
+- The mockup is static HTML with a data snapshot. Its tabs, category links,
+  department links and sort are drawn but inert; search, the Photos/List
+  switch, the theme switch and the product sheet work.
+
+### Clean up before changing the look
+
+Do this as a behaviour-preserving refactor first, verified with typecheck and
+build, so the visual rebuild is a change of templates and styles only.
+
+1. **Move pure logic out of `index.vue`** (about 1,100 lines of script) into
+   typed modules that can be tested without a browser:
+   - payload interfaces (`ProductResult`, `ProductDetail`, `RankingResponse`…) to `app/types/`;
+   - money, margin, date and range formatters to `app/utils/`;
+   - sorting and metric-bound helpers to `app/utils/`;
+   - the static-mode filter, facet and summary logic to a composable, since it must stay identical to the API's semantics;
+   - product-detail loading with its stale-response guard to a composable;
+   - the change-ledger computation and the history-chart geometry to `app/utils/`;
+   - the dialog focus trap and focus restore to a composable.
+2. **Extract repeated markup into components:** the masthead (copied into
+   `index.vue` and `method.vue`), pagination (twice), the fee flag (twice),
+   and the drawer header (three times across loading, error and loaded).
+   Then split the page into a catalog item, the list table and the product
+   sheet, matching the component names in `DESIGN.md`.
+3. **Remove small leftovers:** the unused `classification` parameter of
+   `formatSpreadValue`, the four one-line `formatProduct*` wrappers, and the
+   legacy bare `"name"` sort branch in `sortResults`.
+4. **Do not tidy `main.css`.** The rebuild replaces it. When rewriting, declare
+   the night-theme tokens once; today they are duplicated under
+   `[data-theme="dark"]` and the system media query, and the 560px media block
+   appears twice.
+
+### Gaps the rebuild must close
+
+- **Search scope.** The design has one search box with a Below cost / Whole
+  catalog switch. In API mode the page refetches on every keystroke with no
+  debounce and only for the current view; whole-catalog search needs a second
+  query or the full snapshot. Static mode already holds every style.
+- **Mixed styles in the Below cost view.** The `losses` view filters variants
+  before grouping, so a style whose options disagree reads as uniformly below
+  cost there and as "varies" in `all`. This is an open decision in `DESIGN.md`.
+- **No URL state.** View, filters, search, sort and view mode are lost on
+  refresh.
+- **First-paint hydration mismatch.** The server renders the empty state and
+  the client hydrates the loading state.
+- **Sheet content not yet designed:** the variant picker, change ledger and
+  timeline exist in the app and are not drawn in the mockup. Keep their
+  behaviour; ask before inventing their look.
+- **Wording.** The mockup's vocabulary ("below cost", "styles", "costs
+  Quince") is not yet approved for the app, Method page or README.
+
 ## Runtime modes
 
 - API mode is the default for local development. `NUXT_PUBLIC_API_BASE`

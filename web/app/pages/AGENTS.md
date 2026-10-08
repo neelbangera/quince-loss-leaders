@@ -11,8 +11,8 @@ backend owns.
 - `view` selects `losses`, `profit` (shown as `Drivers`), or `all`.
 - `search`, `department`, and `category` define filters; `sort`, `pageSize`,
   and `currentPage` control local presentation.
-- `displayMode` switches table/image cards and `theme` controls the visual
-  profile.
+- `displayMode` switches table/image cards. The theme lives in
+  `components/ThemeSelect.vue`, not in the page.
 - `useAsyncData` loads rankings from the API in API mode or `rankings.json` in
   static mode. Static mode applies its equivalent filtering/facet logic in the
   browser.

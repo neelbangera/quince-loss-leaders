@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Ledger — mockup A (Shirting)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --ink: #1b1b19;
+  --soft: #6b6b66;
+  --rule: #d9d9d3;
+  --rule-soft: #ecece7;
+  --well: #eef1f5;
+  --hover: #f6f6f2;
+  --claret: #7d1d2f;
+  --stripe: #9db4d3;
+  --sheet-shadow: -24px 0 60px rgba(20, 20, 18, 0.18);
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  --paper: #131412;
+  --ink: #efebe2;
+  --soft: #a5a49c;
+  --rule: #3a3b35;
+  --rule-soft: #262722;
+  --well: #e9ecf0;
+  --hover: #1c1d1a;
+  --claret: #eba0aa;
+  --stripe: #5d77a0;
+  --sheet-shadow: -24px 0 60px rgba(0, 0, 0, 0.5);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.fig { font-variant-numeric: tabular-nums; font-weight: 500; }
+.below { color: var(--claret); }
+.page { width: min(1360px, 100% - 64px); margin: 0 auto; }
+
+/* Provenance bar: the retail announcement strip, carrying the source instead of a promotion */
+.notice {
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 9px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--soft);
+}
+.notice a { text-underline-offset: 3px; }
+
+/* Masthead */
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0 20px;
+}
+.masthead nav { display: flex; gap: 26px; flex-wrap: wrap; }
+.masthead nav a, .masthead .utility a, .masthead .utility button { text-decoration: none; }
+.masthead nav a:hover, .utility a:hover, .utility button:hover { text-decoration: underline; text-underline-offset: 5px; }
+.wordmark {
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.utility { display: flex; gap: 26px; justify-content: flex-end; }
+/* Shirting band: a fine oxford-cloth stripe, the only ornament */
+.shirting {
+  height: 10px;
+  background: repeating-linear-gradient(90deg, var(--stripe) 0 1px, transparent 1px 5px);
+}
+
+/* Headline */
+.opening { padding: 56px 0 36px; text-align: center; }
+.opening h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.opening p {
+  margin: 18px auto 0;
+  max-width: 56ch;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--soft);
+}
+.opening p strong { color: var(--ink); font-weight: 500; }
+.tabs { display: flex; justify-content: center; gap: 36px; margin-top: 32px; }
+.tabs button { padding-bottom: 8px; border-bottom: 2px solid transparent; }
+.tabs button[aria-pressed="true"] { border-bottom-color: var(--ink); }
+.tabs .count { color: var(--soft); font-weight: 500; margin-left: 6px; }
+
+/* Toolbar: one ruled line, no side rail */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.cats { display: flex; gap: 22px; flex-wrap: wrap; }
+.cats a { text-decoration: none; color: var(--soft); }
+.cats a[aria-current="true"] { color: var(--ink); }
+.cats a:hover { color: var(--ink); }
+.cats .count { font-weight: 500; margin-left: 4px; }
+.tools { display: flex; gap: 28px; align-items: center; }
+.tools .muted { color: var(--soft); }
+.viewswitch { display: flex; gap: 16px; }
+.viewswitch button { color: var(--soft); }
+.viewswitch button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+
+/* Catalog grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 56px 28px;
+  padding: 36px 0 72px;
+  margin: 0;
+  list-style: none;
+}
+.item { display: flex; flex-direction: column; }
+.item .photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--well);
+  overflow: hidden;
+}
+.item .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.item .rank { margin-top: 14px; color: var(--soft); }
+.item .name {
+  display: block;
+  margin-top: 4px;
+  text-align: left;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.2;
+}
+.item .name:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.item .variant {
+  margin: 4px 0 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--soft);
+}
+/* Price block: price in ink, Quince's cost in grey beside it, and the difference on its own line as the figure that matters */
+.pricing { margin: auto 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.pricing .paid { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.pricing .paid strong { font-size: 17px; font-weight: 600; }
+.pricing .paid span { font-size: 14px; color: var(--soft); font-weight: 400; }
+.pricing .diff { margin: 3px 0 0; font-size: 16px; }
+.quiet { color: var(--soft); }
+
+/* Search box */
+.search { position: relative; display: block; }
+.search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--soft); pointer-events: none; }
+.search input {
+  width: 220px; height: 40px; padding: 0 12px 0 34px;
+  border: 1px solid var(--rule); border-radius: 0; background: var(--paper); color: var(--ink);
+  font: 400 15px var(--sans); letter-spacing: 0; text-transform: none;
+}
+.search input::placeholder { color: var(--soft); }
+.search input:focus { border-color: var(--ink); outline: none; }
+.search input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.scope { margin: 0; padding: 16px 0 0; color: var(--soft); display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; }
+.scopeswitch { display: flex; gap: 20px; }
+.scopeswitch button { color: var(--soft); padding-bottom: 4px; border-bottom: 2px solid transparent; }
+.scopeswitch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.scopeswitch .count { margin-left: 6px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.item span.photo { cursor: default; }
+.item span.name:hover, .list span.name:hover { text-decoration: none; }
+.nomatch { padding: 56px 0 96px; text-align: center; font-family: var(--serif); font-size: 24px; }
+
+/* List view */
+.list { width: 100%; border-collapse: collapse; margin: 20px 0 72px; }
+.listwrap { overflow-x: auto; }
+.list th { padding: 12px 12px 10px; text-align: left; color: var(--soft); border-bottom: 1px solid var(--ink); white-space: nowrap; }
+.list td { padding: 12px; border-bottom: 1px solid var(--rule-soft); vertical-align: middle; }
+.list th.num, .list td.num { text-align: right; }
+.list td.num { font-size: 15px; white-space: nowrap; }
+.list tbody tr:hover { background: var(--hover); }
+.list .thumb { width: 44px; height: 55px; object-fit: cover; background: var(--well); display: block; }
+.list .name { font-family: var(--serif); font-size: 19px; line-height: 1.2; text-align: left; }
+.list .name:hover { text-decoration: underline; text-underline-offset: 4px; }
+.list .variant { font-family: var(--serif); font-style: italic; color: var(--soft); }
+.list td.rankcell { color: var(--soft); width: 1%; }
+.list td.thumbcell { width: 1%; padding-right: 4px; }
+
+/* Footer */
+.colophon {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  color: var(--soft);
+  font-size: 14px;
+}
+.colophon h2 { margin: 0 0 6px; color: var(--ink); }
+.colophon p { margin: 0; max-width: 40ch; }
+
+/* Product sheet */
+.backdrop { position: fixed; inset: 0; background: rgba(20, 20, 18, 0.32); display: none; z-index: 10; }
+.backdrop.open { display: block; }
+.sheet {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: min(700px, 100%);
+  background: var(--paper);
+  box-shadow: var(--sheet-shadow);
+  overflow-y: auto;
+  padding: 28px 44px 64px;
+}
+.sheet .close { float: right; }
+.sheet .photos { clear: both; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 44px; }
+.sheet .photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--well); display: block; }
+.sheet .where { margin-top: 28px; color: var(--soft); }
+.sheet h2 { margin: 6px 0 0; font-family: var(--serif); font-weight: 400; font-size: 38px; line-height: 1.08; }
+.sheet .variant { margin: 8px 0 0; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--soft); }
+.sheet h3 { margin: 44px 0 0; font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.2; }
+.sheet .lede { margin: 6px 0 0; color: var(--soft); max-width: 58ch; }
+/* Cost bar: full width is the reported cost; the strip beneath shows how far the price reaches */
+.costbar { position: relative; display: flex; height: 26px; margin-top: 22px; }
+.costbar span { min-width: 0; }
+.reach { display: flex; height: 8px; margin-top: 4px; }
+.reach .paid { background: var(--ink); }
+.reach .short { flex: 1; background: repeating-linear-gradient(135deg, var(--claret) 0 2px, transparent 2px 6px); }
+.barkey { display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px; color: var(--soft); }
+.receipt { margin: 20px 0 0; padding: 0; list-style: none; }
+.receipt li { display: flex; align-items: baseline; gap: 10px; padding: 7px 0; }
+.receipt .swatch { width: 10px; height: 10px; flex: none; align-self: center; }
+.receipt .leader { flex: 1; border-bottom: 1px dotted var(--rule); transform: translateY(-4px); }
+.receipt .total { border-top: 1px solid var(--ink); margin-top: 6px; padding-top: 12px; }
+.receipt .sum { font-family: var(--serif); font-size: 21px; }
+.receipt .sum .fig { font-family: var(--sans); font-size: 18px; }
+.captures { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.captures th { text-align: left; color: var(--soft); padding: 8px 0; border-bottom: 1px solid var(--ink); }
+.captures td { padding: 9px 0; border-bottom: 1px solid var(--rule-soft); }
+.captures .num { text-align: right; }
+.sheet .out { display: inline-block; margin-top: 40px; padding: 14px 26px; border: 1px solid var(--ink); text-decoration: none; }
+.sheet .out:hover { background: var(--ink); color: var(--paper); }
+.sheet .caveat { margin-top: 20px; font-size: 13px; color: var(--soft); max-width: 60ch; }
+
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .masthead { grid-template-columns: 1fr; justify-items: center; gap: 14px; }
+  .masthead nav, .utility { justify-content: center; }
+  .wordmark { order: -1; }
+  .colophon { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 640px) {
+  .page { width: calc(100% - 32px); }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px; }
+  .masthead nav { gap: 18px; flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
+  .opening { padding: 36px 0 28px; }
+  .opening p { font-size: 18px; }
+  .tabs { gap: 20px; }
+  .item .name { font-size: 18px; }
+  .search, .search input { width: 100%; }
+  .tools > .search { flex: 1 0 100%; }
+  .sheet { padding: 20px 20px 48px; }
+  .sheet h2 { font-size: 30px; }
+  .tools { gap: 18px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .item .photo img { transition: opacity 0.2s; }
+  .item .photo:hover img { opacity: 0.92; }
+}
+</style>
+</head>
+<body>
+
+<p class="notice">Every figure is Quince&rsquo;s own reported cost, read from its product pages. Last checked <span id="captured"></span>. <a href="#">How this works</a></p>
+
+<div class="page">
+  <header class="masthead">
+    <nav class="label" aria-label="Departments">
+      <a href="#">Women</a><a href="#">Men</a><a href="#">Home</a><a href="#">Baby &amp; Kids</a>
+    </nav>
+    <a class="wordmark" href="#">Quince Ledger</a>
+    <div class="utility label">
+      <a href="#">Method</a>
+      <button type="button" id="theme">Dark</button>
+    </div>
+  </header>
+</div>
+<div class="shirting" aria-hidden="true"></div>
+
+<main class="page">
+  <section class="opening">
+    <h1>Priced below cost</h1>
+    <p><strong id="belowcount"></strong> of <span id="totalcount"></span> styles have a colour or size listed for less than Quince says it costs to make.</p>
+    <div class="tabs label" role="group" aria-label="Which styles to show">
+      <button type="button" aria-pressed="true">Below cost<span class="count" id="tab-below"></span></button>
+      <button type="button" aria-pressed="false">Above cost<span class="count" id="tab-above"></span></button>
+      <button type="button" aria-pressed="false">Everything<span class="count" id="tab-all"></span></button>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <nav class="cats label" id="cats" aria-label="Categories"></nav>
+    <div class="tools label">
+      <label class="search">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+        <input id="q" type="search" placeholder="Search below cost" aria-label="Search below-cost styles">
+      </label>
+      <span><span class="muted">Sort</span>&nbsp; Furthest below cost</span>
+      <div class="viewswitch" role="group" aria-label="View">
+        <button type="button" id="v-photos" aria-pressed="true">Photos</button>
+        <button type="button" id="v-list" aria-pressed="false">List</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="scope" id="scope" role="status" hidden></p>
+
+  <ol class="grid" id="grid"></ol>
+  <p class="nomatch" id="nomatch" hidden>Nothing matches that search.</p>
+
+  <div class="listwrap" id="listwrap" hidden>
+    <table class="list">
+      <thead>
+        <tr class="label">
+          <th scope="col">No.</th><th scope="col"><span hidden>Photo</span></th><th scope="col">Style</th><th scope="col">Department</th>
+          <th scope="col" class="num">Price</th><th scope="col" class="num">Costs Quince</th>
+          <th scope="col" class="num">Difference</th><th scope="col" class="num">As % of price</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <footer class="colophon">
+    <div><h2 class="label">The source</h2><p>United States catalog, in US dollars. Costs are the breakdowns Quince publishes on its own product pages.</p></div>
+    <div><h2 class="label">What a style is</h2><p>One product at one price. Colours and sizes that share a price are counted together.</p></div>
+    <div><h2 class="label">What this is not</h2><p>A difference against disclosed cost, not Quince&rsquo;s profit or loss. Marketing, returns and overhead are not in it.</p></div>
+  </footer>
+</main>
+
+<div class="backdrop" id="backdrop">
+  <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></aside>
+</div>
+
+<script src="data.js"></script>
+<script>
+const { meta, items, catalog } = window.MOCK;
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const money = (v) => {
+  const n = Number(v);
+  return (n < 0 ? "−" : "") + "$" + Math.abs(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+};
+const signed = (v) => (Number(v) > 0 ? "+" : "") + money(v);
+const count = (n) => Number(n).toLocaleString("en-US");
+const photo = (url, w) => (url ? url.replace(/w=\d+/, "w=" + w) : "");
+const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+const date = (iso) => new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+
+items.forEach((item, i) => { item.index = i; });
+// The whole catalog, one compact row per style, sorted furthest below cost first. Used only by "search everything".
+const everything = catalog
+  .map(([name, dept, price, cost, gapMin, gapMax, cls, img, n, margin]) => ({ name, dept, cat: "", price, cost, gap: gapMin, gapMin, gapMax, cls, img: img ? meta.imgBase + img : "", n, margin, colors: [], sizes: [] }))
+  .sort((left, right) => Number(left.gapMin) - Number(right.gapMin));
+const GLOBAL_LIMIT = 24;
+
+function variantLine(item) {
+  if (item.n > 1) {
+    const parts = [];
+    if (item.colors.length > 1) parts.push(plural(item.colors.length, "colour"));
+    if (item.sizes.length > 1) parts.push(plural(item.sizes.length, "size"));
+    return parts.length ? `In ${parts.join(", ")}` : `${item.n} options at this price`;
+  }
+  return [item.colors[0] && `In ${item.colors[0]}`, item.sizes[0]].filter(Boolean).join(" · ");
+}
+// A group whose options disagree shows its range and says so; it never borrows one option's figure.
+function gapText(item) {
+  const min = item.gapMin ?? item.gap;
+  const max = item.gapMax ?? item.gap;
+  const same = Number(min) === Number(max);
+  if (item.cls === "mixed") return `${signed(min)} to ${signed(max)}, varies by option`;
+  if (item.cls === "break_even") return "Priced at reported cost";
+  const side = item.cls === "loss" ? "below cost" : "above cost";
+  return same ? `${signed(min)} ${side}` : `${signed(min)} to ${signed(max)} ${side}`;
+}
+function costText(item) {
+  return item.costMin && item.costMax && item.costMin !== item.costMax ? `${money(item.costMin)} to ${money(item.costMax)}` : money(item.cost);
+}
+const gapClass = (item) => (item.cls === "loss" ? "below" : "");
+const marginText = (item) => (item.margin === null || item.margin === undefined ? "—" : `${item.margin.toFixed(1).replace("-", "−")}%`);
+// Only below-cost styles carry cost lines in this mockup, so only they open the product sheet.
+const opens = (item) => item.index !== undefined;
+
+function card(item) {
+  const img = `<img src="${esc(photo(item.img, 640))}" alt="" loading="lazy" decoding="async">`;
+  return `
+  <li class="item">
+    ${opens(item) ? `<button class="photo" type="button" data-open="${item.index}" aria-label="${esc(item.name)}">${img}</button>` : `<span class="photo">${item.img ? img : ""}</span>`}
+    <span class="rank label">${opens(item) ? `No. ${item.index + 1}` : esc(item.dept)}</span>
+    ${opens(item) ? `<button class="name" type="button" data-open="${item.index}">${esc(item.name)}</button>` : `<span class="name">${esc(item.name)}</span>`}
+    <p class="variant">${esc(variantLine(item))}</p>
+    <div class="pricing">
+      <p class="paid fig"><strong>${money(item.price)}</strong><span>costs Quince ${costText(item)}</span></p>
+      <p class="diff fig ${gapClass(item)}">${gapText(item)}</p>
+    </div>
+  </li>`;
+}
+function row(item) {
+  return `
+  <tr>
+    <td class="rankcell fig">${opens(item) ? item.index + 1 : ""}</td>
+    <td class="thumbcell">${item.img ? `<img class="thumb" src="${esc(photo(item.img, 160))}" alt="" loading="lazy">` : ""}</td>
+    <td>${opens(item) ? `<button class="name" type="button" data-open="${item.index}">${esc(item.name)}</button>` : `<span class="name">${esc(item.name)}</span>`}<div class="variant">${esc(variantLine(item))}</div></td>
+    <td>${esc(item.dept)}${item.cat ? ` · ${esc(item.cat)}` : ""}</td>
+    <td class="num fig"><strong>${money(item.price)}</strong></td>
+    <td class="num fig quiet">${costText(item)}</td>
+    <td class="num fig ${gapClass(item)}">${gapText(item)}</td>
+    <td class="num fig ${gapClass(item)}">${marginText(item)}</td>
+  </tr>`;
+}
+
+document.getElementById("captured").textContent = date(meta.captured);
+document.getElementById("belowcount").textContent = count(meta.below);
+document.getElementById("totalcount").textContent = count(meta.total);
+document.getElementById("tab-below").textContent = count(meta.below);
+document.getElementById("tab-above").textContent = count(meta.above);
+document.getElementById("tab-all").textContent = count(meta.total);
+document.getElementById("cats").innerHTML =
+  `<a href="#" aria-current="true">All<span class="count">${meta.below}</span></a>` +
+  meta.cats.map(([label, n]) => `<a href="#">${esc(label)}<span class="count">${n}</span></a>`).join("");
+
+// Search: one box. It searches the styles on screen first, and offers the whole catalog on the line beneath.
+const state = { term: "", scope: "local", list: false };
+const grid = document.getElementById("grid");
+const listwrap = document.getElementById("listwrap");
+const scopeLine = document.getElementById("scope");
+const nomatch = document.getElementById("nomatch");
+const matches = (item, term) => `${item.name} ${item.dept} ${item.cat}`.toLowerCase().includes(term);
+function render() {
+  const term = state.term.trim().toLowerCase();
+  if (!term) state.scope = "local";
+  const local = term ? items.filter((item) => matches(item, term)) : items;
+  const global = term ? everything.filter((item) => matches(item, term)) : [];
+  const shown = state.scope === "global" ? global.slice(0, GLOBAL_LIMIT) : local;
+  const quoted = `“${esc(state.term.trim())}”`;
+
+  grid.innerHTML = shown.map(card).join("");
+  document.getElementById("rows").innerHTML = shown.map(row).join("");
+  grid.hidden = state.list || !shown.length;
+  listwrap.hidden = !state.list || !shown.length;
+  document.getElementById("v-photos").setAttribute("aria-pressed", String(!state.list));
+  document.getElementById("v-list").setAttribute("aria-pressed", String(state.list));
+
+  scopeLine.hidden = !term;
+  if (term) {
+    const global_ = state.scope === "global";
+    scopeLine.innerHTML = `<span>Results for ${quoted} in</span>
+      <span class="scopeswitch label" role="group" aria-label="Where to search">
+        <button type="button" data-scope="local" aria-pressed="${!global_}">Below cost<span class="count">${local.length}</span></button>
+        <button type="button" data-scope="global" aria-pressed="${global_}">Whole catalog<span class="count">${count(global.length)}</span></button>
+      </span>${global_ && global.length > GLOBAL_LIMIT ? `<span>First ${GLOBAL_LIMIT} shown</span>` : ""}`;
+  }
+  // Searching everything moves the tab to Everything, so the page never claims to show only below-cost styles.
+  const tabs = document.querySelectorAll(".tabs button");
+  tabs[0].setAttribute("aria-pressed", String(state.scope !== "global"));
+  tabs[2].setAttribute("aria-pressed", String(state.scope === "global"));
+  document.querySelector(".opening h1").textContent = state.scope === "global" ? "The whole catalog" : "Priced below cost";
+  nomatch.hidden = shown.length > 0;
+  nomatch.textContent = state.scope === "global" ? "Nothing in the catalog matches that." : "Nothing below cost matches that.";
+}
+document.getElementById("q").addEventListener("input", (event) => { state.term = event.target.value; render(); });
+document.getElementById("v-photos").addEventListener("click", () => { state.list = false; render(); });
+document.getElementById("v-list").addEventListener("click", () => { state.list = true; render(); });
+const themeButton = document.getElementById("theme");
+themeButton.addEventListener("click", () => {
+  const dark = document.documentElement.dataset.theme !== "dark";
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  themeButton.textContent = dark ? "Light" : "Dark";
+});
+
+// Product sheet
+const backdrop = document.getElementById("backdrop");
+const sheet = document.getElementById("sheet");
+const shades = [88, 66, 48, 34, 22, 12];
+let opener = null;
+function openSheet(i) {
+  const item = items[i];
+  const cost = Number(item.cost);
+  const price = Number(item.price);
+  const short = Math.max(0, Math.min(100, ((cost - price) / cost) * 100));
+  const shade = (k) => `color-mix(in srgb, var(--ink) ${shades[k % shades.length]}%, var(--paper))`;
+  const moved = item.hist.some((h) => h[1] !== item.hist[0][1] || h[2] !== item.hist[0][2]);
+  sheet.innerHTML = `
+    <button class="close label" type="button" id="close">Close</button>
+    <div class="photos">${item.imgs.map((u) => `<img src="${esc(photo(u, 520))}" alt="">`).join("")}</div>
+    <p class="where label">${esc(item.dept)} · ${esc(item.cat)} · No. ${i + 1} below cost</p>
+    <h2 id="sheet-title">${esc(item.name)}</h2>
+    <p class="variant">${esc(variantLine(item))}</p>
+
+    <h3>What Quince says it costs</h3>
+    <p class="lede">The bar is the reported cost, line by line. The strip beneath it shows how far the price reaches.</p>
+    <div class="costbar" role="img" aria-label="Reported cost ${money(cost)}, price ${money(price)}, ${money(cost - price)} short">
+      ${item.lines.map(([, amount], k) => `<span style="flex:${Number(amount)} 0 0;background:${shade(k)}"></span>`).join("")}
+    </div>
+    <div class="reach" aria-hidden="true"><span class="paid" style="width:${(100 - short).toFixed(2)}%"></span><span class="short"></span></div>
+    <div class="barkey"><span>You pay <span class="fig">${money(price)}</span></span><span class="below">Short by <span class="fig">${money(cost - price)}</span></span></div>
+    <ul class="receipt">
+      ${item.lines.map(([label, amount], k) => `<li><span class="swatch" style="background:${shade(k)}"></span><span>${esc(label)}</span><span class="leader"></span><span class="fig">${money(amount)}</span></li>`).join("")}
+      <li class="total sum"><span>Reported cost</span><span class="leader"></span><span class="fig">${money(cost)}</span></li>
+      <li class="sum"><span>You pay</span><span class="leader"></span><span class="fig">${money(price)}</span></li>
+      <li class="sum below"><span>Below cost by</span><span class="leader"></span><span class="fig">${money(cost - price)}</span></li>
+    </ul>
+
+    <h3>Since we started looking</h3>
+    <p class="lede">${plural(item.hist.length, "check")}. ${item.hist.length < 2 ? "Too early to say whether anything moves." : moved ? "The figures have moved." : "Nothing has moved between checks."}</p>
+    <table class="captures">
+      <thead><tr class="label"><th scope="col">Checked</th><th scope="col" class="num">Price</th><th scope="col" class="num">Reported cost</th></tr></thead>
+      <tbody>${item.hist.map(([d, p, c]) => `<tr><td>${date(d)}</td><td class="num fig">${money(p)}</td><td class="num fig">${money(c)}</td></tr>`).join("")}</tbody>
+    </table>
+
+    ${item.url ? `<a class="out label" href="${esc(item.url)}" target="_blank" rel="noreferrer">See it on Quince</a>` : ""}
+    <p class="caveat">This compares the listed price with the cost breakdown Quince publishes for this item. It says nothing about Quince&rsquo;s profit overall.</p>`;
+  backdrop.classList.add("open");
+  document.body.style.overflow = "hidden";
+  sheet.scrollTop = 0;
+  document.getElementById("close").addEventListener("click", closeSheet);
+  document.getElementById("close").focus();
+}
+function closeSheet() {
+  backdrop.classList.remove("open");
+  document.body.style.overflow = "";
+  if (opener) opener.focus();
+}
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-open]");
+  if (trigger) { opener = trigger; openSheet(Number(trigger.dataset.open)); }
+  else if (event.target === backdrop) closeSheet();
+  const scope = event.target.closest("[data-scope]");
+  if (scope) { state.scope = scope.dataset.scope; render(); document.getElementById("q").focus(); }
+});
+document.addEventListener("keydown", (event) => { if (event.key === "Escape" && backdrop.classList.contains("open")) closeSheet(); });
+
+// Deep links for comparing states: index.html#dark, #list, #open=7, #q=rug, #everything (combine with commas)
+for (const flag of decodeURIComponent(location.hash.slice(1)).split(",")) {
+  if (flag === "dark") themeButton.click();
+  if (flag === "list") state.list = true;
+  if (flag === "everything") state.scope = "global";
+  if (flag.startsWith("q=")) { state.term = flag.slice(2); document.getElementById("q").value = state.term; }
+  if (flag.startsWith("open=")) queueMicrotask(() => openSheet(Number(flag.slice(5))));
+}
+render();
+</script>
+</body>
+</html>

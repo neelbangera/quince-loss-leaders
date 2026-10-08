@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T19:31:51Z",
+  "title": "Design System: Quince Ledger",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#636363",
+          "#868686",
+          "#ababab",
+          "#cecece",
+          "#eeeeee"
+        ],
+        "purpose": "The page. Pure white, never cream or tinted."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b1b19",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242422",
+          "#424240",
+          "#636361",
+          "#868684",
+          "#ababa8",
+          "#cececb",
+          "#efefec"
+        ],
+        "purpose": "Primary text, the price, the toolbar's opening rule, outlined buttons, active underlines."
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft",
+        "canonical": "#6b6b66",
+        "tonalRamp": [
+          "#0b0b08",
+          "#242420",
+          "#43433e",
+          "#64645f",
+          "#868681",
+          "#ababa6",
+          "#cecec8",
+          "#efefe9"
+        ],
+        "purpose": "Secondary text, labels, captions, and Quince's reported cost beside a price."
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#d9d9d3",
+        "tonalRamp": [
+          "#0b0b08",
+          "#242420",
+          "#43433e",
+          "#64645e",
+          "#868681",
+          "#ababa5",
+          "#cecec8",
+          "#efefe9"
+        ],
+        "purpose": "Section rules and field borders."
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "#ecece7",
+        "tonalRamp": [
+          "#0b0b08",
+          "#242421",
+          "#43433f",
+          "#63635f",
+          "#868682",
+          "#ababa6",
+          "#cecec9",
+          "#efefea"
+        ],
+        "purpose": "Row rules in the list."
+      },
+      "well": {
+        "role": "neutral",
+        "displayName": "Well",
+        "canonical": "#eef1f5",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#404346",
+          "#616367",
+          "#84868a",
+          "#a8abaf",
+          "#cbced2",
+          "#eceff3"
+        ],
+        "purpose": "The ground behind a photograph while it loads."
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "Hover",
+        "canonical": "#f6f6f2",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#43433f",
+          "#636360",
+          "#868683",
+          "#ababa7",
+          "#cececa",
+          "#efefeb"
+        ],
+        "purpose": "The tint on a hovered list row."
+      },
+      "claret": {
+        "role": "primary",
+        "displayName": "Claret",
+        "canonical": "#7d1d2f",
+        "tonalRamp": [
+          "#230002",
+          "#50000f",
+          "#78182b",
+          "#9f3e4b",
+          "#c8626c",
+          "#ee8991",
+          "#feb9bd",
+          "#ffe4e6"
+        ],
+        "purpose": "Below cost, and nothing else."
+      },
+      "stripe": {
+        "role": "tertiary",
+        "displayName": "Oxford Stripe",
+        "canonical": "#9db4d3",
+        "tonalRamp": [
+          "#000a20",
+          "#12243c",
+          "#30435e",
+          "#506581",
+          "#7288a5",
+          "#96adcc",
+          "#b8d0f0",
+          "#ddf0ff"
+        ],
+        "purpose": "The 1px lines of the shirting band. Ornament only."
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "canonical": "#131412",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#232422",
+          "#424340",
+          "#626461",
+          "#858784",
+          "#aaaba8",
+          "#cdcecb",
+          "#edefec"
+        ],
+        "purpose": "Night-theme value. The page. Pure white, never cream or tinted."
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#efebe2",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27241d",
+          "#45423b",
+          "#66635b",
+          "#89867e",
+          "#aeaaa2",
+          "#d1cdc5",
+          "#f2eee5"
+        ],
+        "purpose": "Night-theme value. Primary text, the price, the toolbar's opening rule, outlined buttons, active underlines."
+      },
+      "night-soft": {
+        "role": "neutral",
+        "displayName": "Night Soft",
+        "canonical": "#a5a49c",
+        "tonalRamp": [
+          "#0c0b06",
+          "#25241e",
+          "#44433c",
+          "#64645c",
+          "#87867f",
+          "#acaba3",
+          "#cfcec6",
+          "#f0efe6"
+        ],
+        "purpose": "Night-theme value. Secondary text, labels, captions, and Quince's reported cost beside a price."
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "#3a3b35",
+        "tonalRamp": [
+          "#0b0c07",
+          "#24251f",
+          "#42433d",
+          "#63645d",
+          "#868780",
+          "#aaaca4",
+          "#cdcfc7",
+          "#eeefe8"
+        ],
+        "purpose": "Night-theme value. Section rules and field borders."
+      },
+      "night-rule-soft": {
+        "role": "neutral",
+        "displayName": "Night Soft Rule",
+        "canonical": "#262722",
+        "tonalRamp": [
+          "#0b0c08",
+          "#242520",
+          "#42433e",
+          "#63645e",
+          "#868781",
+          "#aaaca5",
+          "#cdcfc8",
+          "#eeefe8"
+        ],
+        "purpose": "Night-theme value. Row rules in the list."
+      },
+      "night-well": {
+        "role": "neutral",
+        "displayName": "Night Well",
+        "canonical": "#e9ecf0",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#404346",
+          "#616367",
+          "#84868a",
+          "#a8abaf",
+          "#cbced2",
+          "#eceff3"
+        ],
+        "purpose": "Night-theme value. The ground behind a photograph while it loads."
+      },
+      "night-hover": {
+        "role": "neutral",
+        "displayName": "Night Hover",
+        "canonical": "#1c1d1a",
+        "tonalRamp": [
+          "#0b0c09",
+          "#232421",
+          "#42433f",
+          "#636460",
+          "#858783",
+          "#aaaba7",
+          "#cdceca",
+          "#eeefeb"
+        ],
+        "purpose": "Night-theme value. The tint on a hovered list row."
+      },
+      "night-claret": {
+        "role": "primary",
+        "displayName": "Night Claret",
+        "canonical": "#eba0aa",
+        "tonalRamp": [
+          "#230004",
+          "#450919",
+          "#692b37",
+          "#8f4c57",
+          "#b56f79",
+          "#dd939d",
+          "#fdb9c1",
+          "#ffe4e8"
+        ],
+        "purpose": "Night-theme value. Below cost, and nothing else."
+      },
+      "night-stripe": {
+        "role": "tertiary",
+        "displayName": "Night Oxford Stripe",
+        "canonical": "#5d77a0",
+        "tonalRamp": [
+          "#000828",
+          "#0d2346",
+          "#2b4268",
+          "#4b648c",
+          "#6d87b1",
+          "#90acd8",
+          "#b3cffd",
+          "#dff0ff"
+        ],
+        "purpose": "Night-theme value. The 1px lines of the shirting band. Ornament only."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The page headline. One per screen."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "\"Quince Ledger\", centred in the masthead."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings on the product sheet and Method page."
+      },
+      "name": {
+        "displayName": "Name",
+        "purpose": "Product names in the grid, in sentence case as Quince writes them."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "The italic colour and size line under a name."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose and notes. Maximum line length 60ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase: navigation, tabs, category links, column heads, rank numbers, buttons."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Every price, cost, difference and count, in tabular numerals."
+      }
+    },
+    "shadows": [
+      {
+        "name": "product-sheet",
+        "value": "-24px 0 60px rgba(20, 20, 18, 0.18)",
+        "purpose": "The product sheet that slides over the page. The only shadow in the system."
+      },
+      {
+        "name": "product-sheet-night",
+        "value": "-24px 0 60px rgba(0, 0, 0, 0.5)",
+        "purpose": "The same sheet in the night theme."
+      }
+    ],
+    "motion": [
+      {
+        "name": "photo-dim",
+        "value": "opacity 0.2s",
+        "purpose": "A hovered catalog photograph dims to 0.92. Disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1000px"
+      },
+      {
+        "name": "phone",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Catalog item",
+      "kind": "card",
+      "refersTo": "photo-well",
+      "description": "A 4:5 photograph, rank, Garamond name, italic variant line, then the price block. No outline, no background behind the text.",
+      "html": "<article class=\"ds-item\"><div class=\"ds-item-photo\"></div><span class=\"ds-item-rank\">No. 8</span><a class=\"ds-item-name\" href=\"#\">Women's 100% Organic Cotton Fisherman Crew Sweater</a><p class=\"ds-item-variant\">In Big Sur Green · XS</p><div class=\"ds-item-pricing\"><p class=\"ds-item-paid\"><strong>$42.00</strong><span>costs Quince $47.99</span></p><p class=\"ds-item-diff\">−$5.99 below cost</p></div></article>",
+      "css": ".ds-item{width:300px;display:flex;flex-direction:column;color:#1b1b19;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;}.ds-item-photo{aspect-ratio:4/5;background:#eef1f5}.ds-item-rank{margin-top:14px;color:#6b6b66;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}.ds-item-name{margin-top:4px;font-family:'EB Garamond',Garamond,Georgia,serif;font-size:21px;line-height:1.2;color:inherit;text-decoration:none}.ds-item-name:hover,.ds-item-name:focus-visible{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}.ds-item-name:focus-visible{outline:2px solid #1b1b19;outline-offset:3px}.ds-item-variant{margin:4px 0 14px;font-family:'EB Garamond',Garamond,Georgia,serif;font-style:italic;font-size:16px;color:#6b6b66}.ds-item-pricing{padding-top:10px;border-top:1px solid #d9d9d3;font-variant-numeric:tabular-nums}.ds-item-paid{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px}.ds-item-paid strong{font-size:17px;font-weight:600}.ds-item-paid span{font-size:14px;color:#6b6b66}.ds-item-diff{margin:3px 0 0;font-size:16px;font-weight:500;color:#7d1d2f}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "The one search box, in the toolbar. Square, hairline border that turns ink on focus; the placeholder names the current view.",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-3.8-3.8\"/></svg><input type=\"search\" placeholder=\"Search below cost\" aria-label=\"Search below-cost styles\"></label>",
+      "css": ".ds-search{position:relative;display:inline-block;color:#6b6b66}.ds-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);pointer-events:none}.ds-search input{width:220px;height:40px;padding:0 12px 0 34px;border:1px solid #d9d9d3;border-radius:0;background:#fff;color:#1b1b19;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:15px}.ds-search input::placeholder{color:#6b6b66}.ds-search input:hover{border-color:#6b6b66}.ds-search input:focus{border-color:#1b1b19;outline:none}.ds-search input:focus-visible{outline:2px solid #1b1b19;outline-offset:2px}"
+    },
+    {
+      "name": "Search scope switch",
+      "kind": "custom",
+      "description": "Appears under the toolbar while there is a search term. Both counts are always shown; the active scope takes a 2px ink underline.",
+      "html": "<p class=\"ds-scope\"><span>Results for “linen” in</span><span class=\"ds-scope-switch\" role=\"group\" aria-label=\"Where to search\"><button type=\"button\" aria-pressed=\"true\">Below cost<span>2</span></button><button type=\"button\" aria-pressed=\"false\">Whole catalog<span>309</span></button></span></p>",
+      "css": ".ds-scope{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;color:#6b6b66;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:15px}.ds-scope-switch{display:flex;gap:20px}.ds-scope-switch button{background:none;border:0;border-bottom:2px solid transparent;padding:0 0 4px;cursor:pointer;color:#6b6b66;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}.ds-scope-switch button span{margin-left:6px;font-weight:500;font-variant-numeric:tabular-nums}.ds-scope-switch button:hover{color:#1b1b19}.ds-scope-switch button[aria-pressed=true]{color:#1b1b19;border-bottom-color:#1b1b19}.ds-scope-switch button:focus-visible{outline:2px solid #1b1b19;outline-offset:3px}"
+    },
+    {
+      "name": "View tabs",
+      "kind": "nav",
+      "description": "Below cost, Above cost, Everything, with counts in soft. The active tab takes a 2px ink underline and nothing else.",
+      "html": "<div class=\"ds-tabs\" role=\"group\" aria-label=\"Which styles to show\"><button type=\"button\" aria-pressed=\"true\">Below cost<span>38</span></button><button type=\"button\" aria-pressed=\"false\">Above cost<span>4,039</span></button><button type=\"button\" aria-pressed=\"false\">Everything<span>4,083</span></button></div>",
+      "css": ".ds-tabs{display:flex;gap:36px}.ds-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:0 0 8px;cursor:pointer;color:#1b1b19;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}.ds-tabs button span{color:#6b6b66;font-weight:500;margin-left:6px}.ds-tabs button:hover{border-bottom-color:#d9d9d3}.ds-tabs button[aria-pressed=true]{border-bottom-color:#1b1b19}.ds-tabs button:focus-visible{outline:2px solid #1b1b19;outline-offset:3px}"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "description": "Departments on the left, the Garamond wordmark centred, Method and the theme switch on the right, with the shirting band beneath.",
+      "html": "<header class=\"ds-mast\"><div class=\"ds-mast-row\"><nav aria-label=\"Departments\"><a href=\"#\">Women</a><a href=\"#\">Men</a><a href=\"#\">Home</a></nav><a class=\"ds-mast-word\" href=\"#\">Quince Ledger</a><div class=\"ds-mast-util\"><a href=\"#\">Method</a><a href=\"#\">Dark</a></div></div><div class=\"ds-mast-band\" aria-hidden=\"true\"></div></header>",
+      "css": ".ds-mast{background:#fff;color:#1b1b19;min-width:640px}.ds-mast-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:22px 24px 20px}.ds-mast nav,.ds-mast-util{display:flex;gap:26px;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}.ds-mast-util{justify-content:flex-end}.ds-mast a{color:inherit;text-decoration:none}.ds-mast nav a:hover,.ds-mast-util a:hover{text-decoration:underline;text-underline-offset:5px}.ds-mast a:focus-visible{outline:2px solid #1b1b19;outline-offset:3px}.ds-mast-word{font-family:'EB Garamond',Garamond,Georgia,serif;font-size:34px;line-height:1;letter-spacing:.01em;white-space:nowrap}.ds-mast-band{height:10px;background:repeating-linear-gradient(90deg,#9db4d3 0 1px,transparent 1px 5px)}"
+    },
+    {
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The only button shape: 1px ink border, label type, inverts to ink on hover.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">See it on Quince</a>",
+      "css": ".ds-btn-outline{display:inline-block;padding:14px 26px;border:1px solid #1b1b19;border-radius:0;background:#fff;color:#1b1b19;text-decoration:none;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;transition:background .15s,color .15s}.ds-btn-outline:hover{background:#1b1b19;color:#fff}.ds-btn-outline:focus-visible{outline:2px solid #1b1b19;outline-offset:3px}"
+    },
+    {
+      "name": "List row",
+      "kind": "custom",
+      "description": "One row of the list view: rank, name with its italic line, bold price, grey cost, claret difference. Hover tints the row.",
+      "html": "<table class=\"ds-list\"><thead><tr><th>No.</th><th>Style</th><th class=\"ds-num\">Price</th><th class=\"ds-num\">Costs Quince</th><th class=\"ds-num\">Difference</th></tr></thead><tbody><tr><td class=\"ds-list-rank\">1</td><td><span class=\"ds-list-name\">Sahara Hand-Tufted Wool Rug</span><span class=\"ds-list-variant\">In Light Blue · 8'9\" x 11'9\"</span></td><td class=\"ds-num\"><strong>$59.90</strong></td><td class=\"ds-num ds-quiet\">$479.15</td><td class=\"ds-num ds-below\">−$419.25 below cost</td></tr></tbody></table>",
+      "css": ".ds-list{border-collapse:collapse;min-width:640px;color:#1b1b19;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:15px;font-variant-numeric:tabular-nums}.ds-list th{padding:12px 12px 10px;text-align:left;color:#6b6b66;border-bottom:1px solid #1b1b19;white-space:nowrap;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}.ds-list td{padding:12px;border-bottom:1px solid #ecece7;vertical-align:middle}.ds-list tbody tr:hover{background:#f6f6f2}.ds-list .ds-num{text-align:right;white-space:nowrap}.ds-list-rank,.ds-list .ds-quiet{color:#6b6b66}.ds-list-name{display:block;font-family:'EB Garamond',Garamond,Georgia,serif;font-size:19px;line-height:1.2}.ds-list-variant{font-family:'EB Garamond',Garamond,Georgia,serif;font-style:italic;color:#6b6b66}.ds-list .ds-below{color:#7d1d2f;font-weight:500}"
+    },
+    {
+      "name": "Cost bar and receipt",
+      "kind": "custom",
+      "description": "The product sheet's signature: reported cost split by line in stepped greys, a strip showing how far the price reaches with the shortfall hatched in claret, then the itemised receipt.",
+      "html": "<div class=\"ds-cost\"><div class=\"ds-cost-bar\"><span style=\"flex:5.09;background:#363634\"></span><span style=\"flex:5.96;background:#696967\"></span><span style=\"flex:.2;background:#919190\"></span><span style=\"flex:26.18;background:#b1b1b0\"></span><span style=\"flex:1.26;background:#cdcdcc\"></span><span style=\"flex:9.3;background:#e4e4e3\"></span></div><div class=\"ds-cost-reach\"><span style=\"width:87.5%\"></span><i></i></div><div class=\"ds-cost-key\"><span>You pay $42.00</span><span class=\"ds-cost-below\">Short by $5.99</span></div><ul><li><span>Freight &amp; Handling</span><b></b><span>$26.18</span></li><li><span>Duties, Taxes, And Fees</span><b></b><span>$9.30</span></li><li class=\"ds-cost-total\"><span>Reported cost</span><b></b><span>$47.99</span></li><li class=\"ds-cost-sum\"><span>You pay</span><b></b><span>$42.00</span></li><li class=\"ds-cost-sum ds-cost-below\"><span>Below cost by</span><b></b><span>$5.99</span></li></ul></div>",
+      "css": ".ds-cost{width:560px;color:#1b1b19;font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:15px;font-variant-numeric:tabular-nums}.ds-cost-bar{display:flex;height:26px}.ds-cost-reach{display:flex;height:8px;margin-top:4px}.ds-cost-reach span{background:#1b1b19}.ds-cost-reach i{flex:1;background:repeating-linear-gradient(135deg,#7d1d2f 0 2px,transparent 2px 6px)}.ds-cost-key{display:flex;justify-content:space-between;margin-top:8px;font-size:13px;color:#6b6b66}.ds-cost-below,.ds-cost-key .ds-cost-below{color:#7d1d2f}.ds-cost ul{list-style:none;margin:20px 0 0;padding:0}.ds-cost li{display:flex;align-items:baseline;gap:10px;padding:7px 0}.ds-cost li b{flex:1;border-bottom:1px dotted #d9d9d3;transform:translateY(-4px)}.ds-cost li span:last-child{font-weight:500}.ds-cost-total{border-top:1px solid #1b1b19;margin-top:6px;padding-top:12px}.ds-cost-total span:first-child,.ds-cost-sum span:first-child{font-family:'EB Garamond',Garamond,Georgia,serif;font-size:21px}.ds-cost-total span:last-child,.ds-cost-sum span:last-child{font-size:18px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The White Oxford Shirt",
+    "overview": "**Creative North Star: \"The White Oxford Shirt\"**\n\nQuince Ledger looks like the website of a quiet, well-made clothing brand: white page, near-black ink, a Garamond wordmark centred in the masthead, large product photographs, and almost nothing else. The photographs carry all the colour. The one thing this shop prints that a retailer's does not is the cost: beside every price sits what Quince reports the item cost to make, and the difference between the two.\n\nThe reference implementation is `mockups/session-a/index.html`. Where this document and that mockup disagree, raise it; do not guess.\n\nIt replaces two earlier systems, both archived in `.impeccable/archive/`: the \"forest ledger\" and the navy \"mail-order catalog\". Rules about honesty carry over from both: every count states its unit, a caveat is printed beside the thing it qualifies, and a coloured figure always carries a word.",
+    "keyCharacteristics": [
+      "White paper, near-black ink, square corners, hairline rules. No cards, no pills, no shadows at rest, no side rail.",
+      "EB Garamond for the wordmark, headlines, product names and italic captions; Hanken Grotesk for labels, controls and every figure.",
+      "One colour with a meaning: claret marks below cost. Nothing else on the page is coloured.",
+      "A fine blue shirt stripe under the masthead is the only ornament.",
+      "The difference against cost is the figure that matters; Quince's cost is printed in grey beside the price."
+    ],
+    "rules": [
+      {
+        "name": "The One-Colour Rule",
+        "body": "Claret means below cost and nothing else. Above cost and \"varies\" are printed in ink with words, not given colours of their own, because below cost is the exception this product exists to find.",
+        "section": "colors"
+      },
+      {
+        "name": "The Word-With-Colour Rule",
+        "body": "A claret figure always carries a sign and the words \"below cost\". Colour alone never says which side of cost an item is on.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grey-Cost Rule",
+        "body": "Wherever price, reported cost and difference appear together, the price is ink and bold, the cost is grey and regular, and the difference is the emphasised line.",
+        "section": "colors"
+      },
+      {
+        "name": "The Caps-Are-For-Finding Rule",
+        "body": "Uppercase is only for things a shopper scans for: navigation, tabs, category links, column heads, buttons. Product names and sentences are never set in capitals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number uses tabular numerals and is right-aligned when it sits in a column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-Is-Flat Rule",
+        "body": "No shadow, lift or scale on hover. A hovered name underlines; a hovered photograph dims slightly.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do print Quince's cost in grey beside every price, and make the difference the emphasised figure.",
+      "Do state the unit beside every count (\"38 of 4,083 styles\").",
+      "Do keep the page white and let the photographs supply the colour.",
+      "Do put a sign and the words \"below cost\" or \"above cost\" with every difference.",
+      "Do keep a fee warning outside any element that truncates.",
+      "Do keep the product sheet keyboard-operable and every text pairing at 4.5:1 or better in both themes."
+    ],
+    "donts": [
+      "Don't round a corner, add a shadow at rest, or draw a card around an item.",
+      "Don't add a side rail, a stat strip, a status dot or a pill.",
+      "Don't use monospace anywhere.",
+      "Don't use claret for anything except below cost, or add a second meaning colour.",
+      "Don't add a second search box.",
+      "Don't describe a negative difference as Quince losing money overall; it is the gap against the costs Quince discloses, nothing more."
+    ]
+  }
+}

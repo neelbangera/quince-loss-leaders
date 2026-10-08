@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T17:16:26Z",
+  "title": "Design System: Quince Ledger",
+  "extensions": {
+    "colorMeta": {
+      "bottle-green": {
+        "role": "primary",
+        "displayName": "Bottle Green",
+        "canonical": "#254d3e",
+        "tonalRamp": [
+          "#020e09",
+          "#142a22",
+          "#2c493d",
+          "#456a5b",
+          "#668c7c",
+          "#8daea0",
+          "#b6d0c5",
+          "#dff4eb"
+        ],
+        "purpose": "Light theme structural accent. Dark theme lifts to #7bbfa0 — same hue (153 vs 158) and saturation (0.35) as the light value, lightness only."
+      },
+      "bottle-green-deep": {
+        "role": "primary",
+        "displayName": "Deep Bottle Green",
+        "canonical": "#19382e",
+        "tonalRamp": [
+          "#040e0a",
+          "#182923",
+          "#30483f",
+          "#4b695e",
+          "#6c8a7f",
+          "#92aca2",
+          "#b9cfc7",
+          "#e2f3ec"
+        ]
+      },
+      "on-bottle-green": {
+        "role": "neutral",
+        "displayName": "On Bottle Green",
+        "canonical": "#ffffff"
+      },
+      "terracotta-red": {
+        "role": "secondary",
+        "displayName": "Terracotta Red",
+        "canonical": "#b64e45",
+        "tonalRamp": [
+          "#200000",
+          "#460e0b",
+          "#702620",
+          "#9c3f37",
+          "#c36157",
+          "#e08a80",
+          "#fcb4ab",
+          "#ffdfd7"
+        ]
+      },
+      "terracotta-wash": {
+        "role": "secondary",
+        "displayName": "Terracotta Wash",
+        "canonical": "#fae9e5"
+      },
+      "terracotta-deep": {
+        "role": "secondary",
+        "displayName": "Terracotta Deep",
+        "canonical": "#a44b2b"
+      },
+      "ochre-gilt": {
+        "role": "tertiary",
+        "displayName": "Ochre Gilt (graphic)",
+        "canonical": "#a47c35",
+        "tonalRamp": [
+          "#160800",
+          "#352000",
+          "#583c01",
+          "#7d5a15",
+          "#a07b3c",
+          "#c0a06c",
+          "#e0c59b",
+          "#ffeccb"
+        ],
+        "purpose": "Graphic weight only: chart cost line, legend swatch, loading indicator."
+      },
+      "mint-wash": {
+        "role": "tertiary",
+        "displayName": "Mint Wash",
+        "canonical": "#dceee2",
+        "tonalRamp": [
+          "#070d09",
+          "#1f2722",
+          "#3a453e",
+          "#57655c",
+          "#78877d",
+          "#9ca9a0",
+          "#c1ccc5",
+          "#e8f1eb"
+        ]
+      },
+      "mint-deep": {
+        "role": "tertiary",
+        "displayName": "Mint Deep",
+        "canonical": "#b9d8c3"
+      },
+      "carbon-ink": {
+        "role": "neutral",
+        "displayName": "Carbon Ink",
+        "canonical": "#18241f",
+        "tonalRamp": [
+          "#080c0a",
+          "#202724",
+          "#3b4540",
+          "#58655f",
+          "#798680",
+          "#9da8a3",
+          "#c2ccc7",
+          "#e9f1ed"
+        ]
+      },
+      "sage-mute": {
+        "role": "neutral",
+        "displayName": "Sage Mute",
+        "canonical": "#53635b",
+        "tonalRamp": [
+          "#070d0a",
+          "#1f2723",
+          "#39453f",
+          "#56655e",
+          "#77877f",
+          "#9ba9a2",
+          "#c1ccc6",
+          "#e8f1ec"
+        ]
+      },
+      "chalk-paper": {
+        "role": "neutral",
+        "displayName": "Chalk Paper",
+        "canonical": "#f9fbf9",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242524",
+          "#414241",
+          "#606260",
+          "#818381",
+          "#a4a5a4",
+          "#c8c9c8",
+          "#eeefee"
+        ]
+      },
+      "surface-white": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#ffffff"
+      },
+      "surface-veil": {
+        "role": "neutral",
+        "displayName": "Surface Veil",
+        "canonical": "#fcfdfc"
+      },
+      "surface-mist": {
+        "role": "neutral",
+        "displayName": "Surface Mist",
+        "canonical": "#f6f8f6"
+      },
+      "surface-hover": {
+        "role": "neutral",
+        "displayName": "Surface Hover",
+        "canonical": "#f1f7f2"
+      },
+      "hairline-sage": {
+        "role": "neutral",
+        "displayName": "Hairline Sage",
+        "canonical": "#d6e0da"
+      },
+      "hairline-row": {
+        "role": "neutral",
+        "displayName": "Hairline Row",
+        "canonical": "#edf1ee"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "canonical": "#b8cec0"
+      },
+      "raw-linen-drawer": {
+        "role": "neutral",
+        "displayName": "Raw Linen Drawer",
+        "canonical": "#f8f5ef",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262522",
+          "#44423e",
+          "#63615c",
+          "#84827d",
+          "#a7a5a0",
+          "#cbc9c5",
+          "#f0eeeb"
+        ]
+      },
+      "raw-canvas": {
+        "role": "neutral",
+        "displayName": "Raw Canvas",
+        "canonical": "#f7f4ed"
+      },
+      "canvas-seam": {
+        "role": "neutral",
+        "displayName": "Canvas Seam",
+        "canonical": "#e2d9cc"
+      },
+      "status-green": {
+        "role": "neutral",
+        "displayName": "Status Green",
+        "canonical": "#4d9368"
+      },
+      "pine-mid": {
+        "role": "neutral",
+        "displayName": "Pine Mid",
+        "canonical": "#39715c"
+      },
+      "ochre-gilt-text": {
+        "role": "tertiary",
+        "displayName": "Ochre Gilt Text",
+        "canonical": "#805c18",
+        "tonalRamp": [
+          "#0e0500",
+          "#2b1500",
+          "#4b2c02",
+          "#6b4409",
+          "#8b6020",
+          "#ab8347",
+          "#cbb07f",
+          "#ecd9b5"
+        ]
+      },
+      "warm-linen-ink": {
+        "role": "neutral",
+        "displayName": "Warm Linen Ink",
+        "canonical": "#6b5a48",
+        "tonalRamp": [
+          "#0c0a07",
+          "#241f19",
+          "#3e362c",
+          "#5a5042",
+          "#786c5b",
+          "#988b78",
+          "#b9ac98",
+          "#dbd0be"
+        ]
+      },
+      "focus-ring": {
+        "role": "primary",
+        "displayName": "Focus Ring",
+        "canonical": "#254d3e",
+        "purpose": "The only focus indicator. 2px outline with offset. Dark theme uses #7bbfa0. Never reuse a surface tint as a focus ring.",
+        "tonalRamp": [
+          "#020e09",
+          "#142a22",
+          "#2c493d",
+          "#456a5b",
+          "#668c7c",
+          "#8daea0",
+          "#b6d0c5",
+          "#dff4eb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Masthead claim only. Source Serif 4 600 at clamp(28px, 2.8vw, 40px), tracking -0.02em."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The drawer product title. The second and last serif use in the system."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel and section headings in Public Sans."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Page prose and all control text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Labels and eyebrows. IBM Plex Mono, uppercase, tracked 0.12em. 11px floor."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Every number in the interface, including the summary strip figures. A serif figure anywhere is a defect."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-card",
+        "value": "0 20px 60px rgba(29, 52, 43, 0.08)",
+        "purpose": "Default major-card shadow (snapshot card and elevated panels). Broad and nearly invisible; separates without dramatizing. Dark theme: rgba(0,0,0,0.25)."
+      },
+      {
+        "name": "control-lift",
+        "value": "0 2px 8px rgba(30, 41, 38, 0.08)",
+        "purpose": "The only shadow permitted on a control, and only when active or selected (active view tab, active display-toggle). Dark theme: rgba(0,0,0,0.22)."
+      },
+      {
+        "name": "image-hover",
+        "value": "0 8px 22px rgba(29, 27, 24, 0.09)",
+        "purpose": "Hover lift on an image card, paired with translateY(-1px). Dark theme: rgba(0,0,0,0.3)."
+      },
+      {
+        "name": "drawer",
+        "value": "-18px 0 50px rgba(29, 27, 24, 0.18)",
+        "purpose": "The one heavy and the one directional shadow. Makes the detail drawer read as a sheet laid over the catalog. Dark theme: rgba(0,0,0,0.46)."
+      },
+      {
+        "name": "status-ring",
+        "value": "0 0 0 4px #e5f3e9",
+        "purpose": "Halo around the 8px connection status dot in its healthy state. Warning state uses #f7efdc."
+      },
+      {
+        "name": "focus-soft",
+        "value": "0 0 0 2px #dceee2",
+        "purpose": "Soft focus outline on search and select fields (paired with a border shift to Bottle Green). Strong variant #b9d8c3 on sortable column headers."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "ease",
+        "purpose": "Default easing for all state transitions in the system."
+      },
+      {
+        "name": "duration-fast",
+        "value": "140ms",
+        "purpose": "Row background transitions, image-card border/shadow/transform."
+      },
+      {
+        "name": "duration-image",
+        "value": "180ms",
+        "purpose": "Product image scale(1.02) on image-card hover."
+      },
+      {
+        "name": "shimmer",
+        "value": "shimmer 1.4s infinite",
+        "purpose": "Loading bar sweep: Soft Sage -> Loading Highlight -> Soft Sage, background-position 100% 0 -> -100% 0."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "shell-max",
+        "value": "1440px",
+        "purpose": "Shell width cap: min(1440px, calc(100% - 64px))."
+      },
+      {
+        "name": "stack",
+        "value": "900px",
+        "purpose": "Workspace collapses to one column; filter rail unpins; shell narrows to min(100% - 32px, 720px)."
+      },
+      {
+        "name": "compact",
+        "value": "560px",
+        "purpose": "Drawer insets to 42px 18px 34px; drawer metric grids fold 3 -> 2 columns; section headings stack."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Flat Bottle Green action block. No shadow, no gradient, no border.",
+      "html": "<button class=\"ds-btn-primary\">Apply filters</button>",
+      "css": ".ds-btn-primary { border: 0; border-radius: 7px; background: var(--forest); color: var(--on-forest); font-family: \"Public Sans\", sans-serif; font-size: 12px; padding: 9px 16px; cursor: pointer; transition: background-color 140ms ease; } .ds-btn-primary:hover { background: var(--forest-dark); } .ds-btn-primary:focus-visible { outline: 2px solid var(--focus-strong); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Bare Bottle Green text action. Hover adds an underline only.",
+      "html": "<button class=\"ds-btn-ghost\">Clear all</button>",
+      "css": ".ds-btn-ghost { border: 0; background: none; color: var(--forest); font-family: \"Public Sans\", sans-serif; font-size: 12px; padding: 2px 0; cursor: pointer; } .ds-btn-ghost:hover { text-decoration: underline; } .ds-btn-ghost:focus-visible { outline: 2px solid var(--focus-strong); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Segmented Tab",
+      "kind": "button",
+      "refersTo": "button-segment",
+      "description": "One third of the view-tab well. Active state is the only resting control allowed a shadow.",
+      "html": "<div class=\"ds-seg\"><button class=\"ds-seg-tab\">Losses</button><button class=\"ds-seg-tab ds-seg-tab-active\">Drivers</button><button class=\"ds-seg-tab\">All</button></div>",
+      "css": ".ds-seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; padding: 3px; border-radius: 9px; background: var(--soft); } .ds-seg-tab { border: 0; border-radius: 7px; background: transparent; color: var(--muted); font-family: \"Public Sans\", sans-serif; font-size: 11px; padding: 8px 4px; cursor: pointer; } .ds-seg-tab:hover { color: var(--ink); } .ds-seg-tab-active { background: var(--surface); color: var(--ink); box-shadow: 0 2px 8px rgba(30, 41, 38, 0.08); } .ds-seg-tab:focus-visible { outline: 2px solid var(--focus-strong); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Hairline field with a Bottle Green focus border and a Mint Wash halo.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-icon\" aria-hidden=\"true\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-3.5-3.5\"/></svg></span><input class=\"ds-field-input\" type=\"search\" placeholder=\"Search products\" /></label>",
+      "css": ".ds-field { display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--muted); font-family: \"Public Sans\", sans-serif; } .ds-field:focus-within { border-color: var(--forest); outline: 2px solid var(--focus-soft); } .ds-field-icon { display: inline-flex; } .ds-field-input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-family: \"Public Sans\", sans-serif; font-size: 12px; } .ds-field-input::placeholder { color: var(--muted); }"
+    },
+    {
+      "name": "Department Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Near-silent capsule. Display-only classification; it does not advertise.",
+      "html": "<span class=\"ds-chip\">Bedding</span>",
+      "css": ".ds-chip { display: inline-block; padding: 5px 8px; border-radius: 99px; background: var(--soft); color: var(--forest); font-family: \"Public Sans\", sans-serif; font-size: 10px; }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The system's punctuation. Opens every region.",
+      "html": "<p class=\"ds-eyebrow\">Ranking / Losses</p>",
+      "css": ".ds-eyebrow { margin: 0 0 14px; color: var(--forest); font-family: \"IBM Plex Mono\", monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Summary Strip",
+      "kind": "custom",
+      "refersTo": "summary-strip",
+      "description": "The catalog tally line. Hairline-ruled, mono figures, grain stated, buckets that partition.",
+      "html": "<div class=\"ds-strip\" role=\"group\" aria-label=\"Ranking summary\"><div class=\"ds-strip-grain\"><strong>4,083</strong><span>display groups</span></div><button class=\"ds-strip-item ds-strip-loss\" type=\"button\" aria-pressed=\"true\"><strong>39</strong><span>loss</span></button><button class=\"ds-strip-item ds-strip-profit\" type=\"button\" aria-pressed=\"false\"><strong>4,035</strong><span>positive</span></button><div class=\"ds-strip-item ds-strip-zero\"><strong>6</strong><span>break-even</span></div><div class=\"ds-strip-item ds-strip-mixed\"><strong>3</strong><span>mixed</span></div></div>",
+      "css": ".ds-strip { display: flex; flex-wrap: wrap; align-items: stretch; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-family: \"IBM Plex Mono\", monospace; } .ds-strip-grain, .ds-strip-item { display: grid; gap: 3px; padding: 14px 22px; border: 0; border-right: 1px solid var(--row-line); background: none; text-align: left; } .ds-strip-grain { padding-left: 0; } .ds-strip-item:last-child { border-right: 0; } .ds-strip strong { color: var(--ink); font-family: \"IBM Plex Mono\", monospace; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; } .ds-strip span { color: var(--muted); font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; } .ds-strip-loss strong { color: var(--red); } .ds-strip-profit strong { color: var(--forest); } .ds-strip-zero strong { color: var(--muted); } .ds-strip-mixed strong { color: var(--gold-text); } button.ds-strip-item { cursor: pointer; transition: background-color 140ms ease; } button.ds-strip-item:hover, button.ds-strip-item:focus-visible, button.ds-strip-item[aria-pressed=\"true\"] { background: var(--soft); } button.ds-strip-item:hover span, button.ds-strip-item:focus-visible span, button.ds-strip-item[aria-pressed=\"true\"] span { color: var(--ink); } :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }"
+    },
+    {
+      "name": "Image Card",
+      "kind": "card",
+      "refersTo": "card-image",
+      "description": "Product tile on a warm canvas well. Multiply blend seats white product photos into the paper.",
+      "html": "<article class=\"ds-imgcard\"><div class=\"ds-imgcard-media\"><span class=\"ds-imgcard-ph\">No image</span></div><div class=\"ds-imgcard-body\"><span class=\"ds-imgcard-title\">Italian Cashmere Ribbed Sweater<span class=\"ds-fee\">*</span></span><span class=\"ds-imgcard-meta\">Womens / Knitwear</span><div class=\"ds-imgcard-metrics\"><span>Price<strong>$79.90</strong></span><span>Spread<strong class=\"ds-loss\">-$14.20</strong></span></div></div></article>",
+      "css": ".ds-imgcard { overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-subtle); font-family: \"Public Sans\", sans-serif; transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease; } .ds-imgcard:hover { border-color: var(--line-strong); box-shadow: 0 8px 22px rgba(29, 27, 24, 0.09); transform: translateY(-1px); } .ds-imgcard-media { display: block; width: 100%; aspect-ratio: 4 / 5; border-bottom: 1px solid var(--image-line); background: var(--image-surface); } .ds-imgcard-ph { display: grid; height: 100%; place-items: center; color: var(--muted); font-family: \"IBM Plex Mono\", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; } .ds-imgcard-body { display: grid; gap: 8px; padding: 13px; } .ds-imgcard-title { color: var(--ink); font-size: 13px; font-weight: 600; line-height: 1.3; } .ds-fee { margin-left: 3px; color: var(--gold); font-size: 14px; vertical-align: super; } .ds-imgcard-meta { color: var(--muted); font-size: 11px; } .ds-imgcard-metrics { display: grid; gap: 5px; padding-top: 7px; border-top: 1px solid var(--row-line); font-family: \"IBM Plex Mono\", monospace; font-size: 10px; } .ds-imgcard-metrics span { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); } .ds-imgcard-metrics strong { color: var(--ink); font-weight: 500; } .ds-loss { color: var(--red) !important; }"
+    },
+    {
+      "name": "Ranking Table",
+      "kind": "custom",
+      "refersTo": "table",
+      "description": "Hairline-ruled catalog table. Mono cells, sans product cell, tonal row striping.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Product</th><th class=\"ds-numeric\">Price</th><th class=\"ds-numeric\">Spread</th></tr></thead><tbody><tr><td class=\"ds-product\"><strong>Italian Cashmere Ribbed Sweater</strong><span>Oak / Medium</span></td><td class=\"ds-numeric\">$79.90</td><td class=\"ds-numeric ds-loss\">-$14.20</td></tr><tr><td class=\"ds-product\"><strong>Washable Silk Slip Dress</strong><span>Black / Small</span></td><td class=\"ds-numeric\">$59.90</td><td class=\"ds-numeric ds-profit\">$12.40</td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; min-width: 720px; font-family: \"IBM Plex Mono\", monospace; } .ds-table th { padding: 13px 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface-muted); color: var(--muted); font-family: \"IBM Plex Mono\", monospace; font-size: 10.5px; font-weight: 400; letter-spacing: 0.05em; text-align: left; text-transform: uppercase; } .ds-table td { padding: 15px 10px; border-bottom: 1px solid var(--row-line); font-family: \"IBM Plex Mono\", monospace; font-size: 12px; vertical-align: middle; } .ds-table tbody tr:nth-child(even) { background: var(--surface-subtle); } .ds-table tbody tr:hover { background: var(--surface-hover); } .ds-numeric { text-align: right; white-space: nowrap; } .ds-product { display: grid; gap: 5px; font-family: \"Public Sans\", sans-serif; max-width: 370px; } .ds-product strong { color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: -0.015em; } .ds-product span { color: var(--muted); font-size: 11px; } .ds-loss { color: var(--red) !important; font-weight: 500; } .ds-profit { color: var(--forest) !important; font-weight: 500; }"
+    },
+    {
+      "name": "Detail Drawer",
+      "kind": "custom",
+      "refersTo": "drawer",
+      "description": "The signature moment: a warm parchment sheet laid over the catalog, with a hairline cost breakdown.",
+      "html": "<div class=\"ds-drawer\"><button class=\"ds-drawer-close\" aria-label=\"Close\">&times;</button><p class=\"ds-eyebrow\">Womens / Knitwear</p><h2 class=\"ds-drawer-title\">Italian Cashmere Ribbed Sweater</h2><div class=\"ds-breakdown\"><div class=\"ds-breakdown-row\"><span>Materials</span><strong>$41.00</strong></div><div class=\"ds-breakdown-row\"><span>Crafting</span><strong>$18.50</strong></div><div class=\"ds-breakdown-row ds-breakdown-total\"><span>Total reported cost</span><strong>$94.10</strong></div></div></div>",
+      "css": ".ds-drawer { position: relative; width: 100%; max-width: 680px; padding: 42px 34px 48px; background: var(--drawer); box-shadow: -18px 0 50px rgba(29, 27, 24, 0.18); font-family: \"Public Sans\", sans-serif; color: var(--ink); } .ds-drawer-close { position: absolute; top: 18px; right: 24px; border: 0; background: transparent; color: var(--ink-muted); font-size: 30px; line-height: 1; cursor: pointer; } .ds-drawer-title { margin: 8px 0 5px; max-width: 520px; font-family: \"Source Serif 4\", Georgia, serif; font-size: clamp(28px, 5vw, 42px); font-weight: 600; line-height: 1.05; letter-spacing: -0.03em; } .ds-breakdown { display: grid; gap: 1px; margin-top: 24px; border: 1px solid var(--drawer-line); background: var(--drawer-line); } .ds-breakdown-row { display: flex; justify-content: space-between; gap: 18px; padding: 11px 14px; background: var(--drawer-fill); color: var(--ink-muted); font-size: 13px; } .ds-breakdown-row strong { color: var(--ink); font-family: \"IBM Plex Mono\", monospace; font-size: 13px; font-weight: 500; } .ds-breakdown-total { background: var(--drawer-total); color: var(--ink); font-weight: 700; } .ds-breakdown-total strong { font-weight: 700; } .ds-eyebrow { margin: 0 0 14px; color: var(--forest); font-family: \"IBM Plex Mono\", monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Atelier Ledger",
+    "overview": "Quince Ledger is a boutique's own cost book, opened on the worktable and turned toward you. The system takes its authority from paper and ink rather than from dashboards: warm chalk-toned ground, deep forest figures, a literary serif for the claim and a monospace for the proof. The tension between those two voices *is* the brand — Source Serif 4 says \"here is the story,\" IBM Plex Mono says \"here is the receipt.\" Nothing else in the interface is allowed to shout over that exchange.\n\nThe mood is measured, warm, and quietly literary. Density is generous but disciplined: a wide reading shell, a sticky filter rail, and a results panel that treats a data table like a well-set page rather than a spreadsheet. Expression is spent in exactly three places — the display headline, the metric figures, and the parchment drawer that opens over the catalog — and nowhere else. Confirmed visual rejections: no neon accent, no glassmorphism, no gradient washes, no heavy dark-chrome \"analytics\" aesthetic, and no decorative iconography competing with the numbers.",
+    "keyCharacteristics": [
+      "Editorial serif for claims and headline-scale numerals; monospace for every figure, label, and datum.",
+      "Green-tinted chalk paper ground with forest ink; color is semantic before it is decorative.",
+      "Hairline-ruled surfaces with ambient lift reserved for major cards and the drawer.",
+      "A warm parchment drawer as the single immersive moment — the page flips from catalog to case file.",
+      "Restraint as a rule: one accent voice per screen region, never three."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Trio Rule",
+        "body": "Bottle Green means positive or proven. Terracotta means loss. Ochre Gilt means fee, mixed, or uncertain. These three never trade places, never appear as decoration, and never blend in a single value. Each of the three may carry two weights — a bright graphic value for lines, swatches, and indicators, and a darkened text value for any glyph below 18px. The pair is one voice, not two colors.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Voice Rule",
+        "body": "A screen region speaks in one accent. The hero speaks Bottle Green; a loss metric card speaks Terracotta on Terracotta Wash; the fee footnote speaks Ochre Gilt. If a region needs a fourth color, the region is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Paper Rule",
+        "body": "The page ground is Chalk Paper (#f9fbf9) and the drawer is Raw Linen (#f8f5ef). Never pure white as a page ground, never cool gray. The warmth is the substrate of the whole system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Figure Rule",
+        "body": "Source Serif 4 appears exactly twice — the masthead claim and the drawer product name. Every number in the interface, including the summary strip figures, is IBM Plex Mono. A serif figure anywhere else is a defect.",
+        "section": "typography"
+      },
+      {
+        "name": "The Eyebrow Rule",
+        "body": "The drawer opens each of its sections with a IBM Plex Mono eyebrow at 10px / 0.14em / uppercase in Bottle Green. The catalog surface above the table carries no eyebrows at all: its headings are large enough to name their own region, and a kicker above them would be redundant.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sticky Index Rule",
+        "body": "The filters panel is an index beside the catalog, never a header above it. It stays pinned and stays 260px from 900px up; below that it becomes a full-width band above the results, and only then.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ambient Lift Rule",
+        "body": "Shadows belong to major cards, the drawer, and hovered image cards — and to nothing else. A resting button, input, chip, tab, or table row carries no shadow. A control may borrow the 2px lift only to show it is active.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Every container is defined by a 1px rule first and a radius second. If a boundary can be expressed as a hairline, it must be — no shadow, no fill change, no glow.",
+        "section": "shapes"
+      },
+      {
+        "name": "The No-Void Rule",
+        "body": "A claim and its provenance belong in one composed band. A lifted card floating beside a headline is a hole in the page, not a layout.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do state the grain next to any count — \"display groups\", never a bare number presented as if it meant observations or variants.",
+      "Do keep every figure in IBM Plex Mono and Source Serif 4 for the claim and the product name only. See the Serif Figure Rule.",
+      "Do color spread and margin strictly by the Semantic Trio: Terracotta Red for negative, Bottle Green for positive, Ochre Gilt for mixed and zero, Sage Mute for neutral.",
+      "Do reach for the *text* weight of a semantic color on any glyph under 18px — Ochre Gilt Text (#805c18), not Ochre Gilt (#a47c35). The bright value clears only 3.81:1 and is reserved for lines, swatches, and indicator fills.",
+      "Do express boundaries as 1px hairlines (Hairline Sage for containers, Hairline Row for table rows) before reaching for shadow or fill.",
+      "Do reserve shadows for major cards, the drawer, and hovered image cards — and the 2px control lift for an active control only.",
+      "Do warm the drawer's material deliberately: Raw Linen (#f8f5ef) against Chalk Paper (#f9fbf9). The drawer should read as a different substrate.",
+      "Do render product imagery with object-fit: contain and mix-blend-mode: multiply on a Raw Canvas well.",
+      "Do meet WCAG 2.2 AA in both themes: full keyboard operability including drawer focus management, sufficient contrast for Carbon Ink/Sage Mute on every ground, and prefers-reduced-motion respected by the shimmer and the 140-180ms transitions."
+    ],
+    "donts": [
+      "Don't use Source Serif 4 below headline scale, or anywhere inside a table, chip, field, or control.",
+      "Don't let Terracotta, Ochre Gilt, or Bottle Green appear as decoration, as a large background field, or outside their Semantic Trio role.",
+      "Don't put a shadow on a resting button, input, chip, tab, table row, or metric card.",
+      "Don't use pure white (#ffffff) as a page ground or cool gray as a neutral — the system is warm substrate throughout.",
+      "Don't add a fourth accent, a gradient, a glassmorphic panel, a glow, or a neon highlight. Restraint is the identity.",
+      "Don't radii beyond 16px on a rectangular container, or introduce a pill where the shape is not encoding a category.",
+      "Don't let a mono figure share a line with a serif figure at the same size — the two voices only work at different scales.",
+      "Don't present a colored value without the classification that justifies it; a number's color is a claim about its sign and certainty."
+    ]
+  }
+}

@@ -150,6 +150,19 @@ filters, sorting, and product-level price/cost history charts. Click a product
 name or row to open its history. Set `NUXT_PUBLIC_API_BASE` if the API is
 running at a different address.
 
+Ranking rows group variants under the same parent product only when their
+current selling price matches. Different price tiers stay separate. When
+disclosed production costs differ within a same-price group, the row exposes
+the metric range and the detail drawer keeps each color/size history separate.
+
+The detail drawer carries a change ledger alongside the price/cost chart. It
+lists the moves between consecutive captures — the listed price, each disclosed
+cost line, and the resulting spread — with the amount on either side of every
+move, so a change can be read without inferring it from two figures. Captures
+where nothing moved are counted rather than listed. The `/method` page documents
+the disclosure basis, the display-group counting rules and classifications, the
+identity rules, the fee guardrail, and the limits of the analysis.
+
 To run the same dashboard from static JSON instead of the Python API, export
 the data into `web/public/data`, then start Nuxt with
 `NUXT_PUBLIC_STATIC_DATA_BASE=./data`. In that mode the full ranking is loaded
@@ -166,8 +179,14 @@ The API endpoints currently include:
 - `GET /api/facets`
 - `GET /api/product?product_key=...&variant_key=...` for chronological observations and summary analytics
 
+`GET /api/rankings` reports `generatedAt` for when the payload was built and
+`latestCapturedAt` for the newest observation behind it. The dashboard's
+"Last capture" stamp shows the latter: a capture time, not a build time.
+
 Ranking filters are query parameters so they can later be shared in URLs or
-connected to saved searches without changing the storage model.
+connected to saved searches without changing the storage model. The dashboard
+also offers an image-card view when the crawl captured a product image, and
+keeps the primary image in each ranking/history export for static hosting.
 
 ## Export historical data for a static site
 

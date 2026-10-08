@@ -21,7 +21,7 @@ import sqlite3
 import sys
 from threading import RLock
 from typing import Iterable, Mapping
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlsplit, urlunsplit
 
 from .history import display_name, history_file_path, product_detail
 from .models import cents_to_money
@@ -61,7 +61,39 @@ class _CatalogCache:
     signature: DatabaseSignature
     rows: tuple[RankingRow, ...]
     taxonomies: Mapping[RowKey, Taxonomy]
-    department_facets: tuple[dict[str, object], ...]
+    latest_captured_at: str | None = None
+
+
+@dataclass(frozen=True)
+class _RankingGroup:
+    """Display group for same-price variants of one parent product."""
+
+    rows: tuple[RankingRow, ...]
+    taxonomy: Taxonomy
+
+    @property
+    def classifications(self) -> frozenset[str]:
+        return frozenset(_classification(row) for row in self.rows)
+
+    @property
+    def classification(self) -> str:
+        values = self.classifications
+        return next(iter(values)) if len(values) == 1 else "mixed"
+
+    @property
+    def representative(self) -> RankingRow:
+        if "loss" in self.classifications:
+            return min(self.rows, key=lambda row: (row.unit_spread_cents, row.product_key, row.variant_key))
+        if "profit" in self.classifications:
+            return max(self.rows, key=lambda row: (row.unit_spread_cents, row.product_key, row.variant_key))
+        return self.rows[0]
+
+    def values(self, attribute: str) -> list[int | float]:
+        return [
+            value
+            for row in self.rows
+            if (value := getattr(row, attribute)) is not None
+        ]
 
 
 def _first(params: Mapping[str, list[str]], key: str, default: str = "") -> str:
@@ -126,6 +158,61 @@ def _classification(row: RankingRow) -> str:
     return "break_even"
 
 
+def _base_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    parsed = urlsplit(url)
+    if not parsed.scheme or not parsed.netloc:
+        return url
+    return urlunsplit(
+        (
+            parsed.scheme.lower(),
+            parsed.netloc.lower(),
+            parsed.path.rstrip("/") or "/",
+            "",
+            "",
+        )
+    )
+
+
+def _group_identity(row: RankingRow, taxonomy: Taxonomy) -> tuple[object, ...]:
+    parent = row.parent_key or _base_url(row.canonical_url) or display_name(row.name or row.product_key).lower()
+    return (
+        parent,
+        row.currency,
+        row.selling_price_cents,
+        taxonomy.department,
+        taxonomy.category,
+    )
+
+
+def _group_rows(
+    rows: Iterable[RankingRow],
+    taxonomies: Mapping[RowKey, Taxonomy],
+) -> tuple[_RankingGroup, ...]:
+    grouped: dict[tuple[object, ...], list[RankingRow]] = {}
+    for row in rows:
+        taxonomy = taxonomies[_row_key(row)]
+        grouped.setdefault(_group_identity(row, taxonomy), []).append(row)
+
+    result: list[_RankingGroup] = []
+    for group_rows in grouped.values():
+        ordered = tuple(
+            sorted(
+                group_rows,
+                key=lambda row: (
+                    (row.variant_label or "").lower(),
+                    (row.variant_color or "").lower(),
+                    (row.variant_size or "").lower(),
+                    row.product_key,
+                    row.variant_key,
+                ),
+            )
+        )
+        result.append(_RankingGroup(rows=ordered, taxonomy=taxonomies[_row_key(ordered[0])]))
+    return tuple(result)
+
+
 def _row_dict(row: RankingRow, taxonomy: Taxonomy | None = None) -> dict[str, object]:
     taxonomy = taxonomy or _row_taxonomy(row)
     return {
@@ -150,20 +237,74 @@ def _row_dict(row: RankingRow, taxonomy: Taxonomy | None = None) -> dict[str, ob
         "parseStatus": row.parse_status,
         "confidence": row.confidence,
         "hasExorbitantFees": row.has_exorbitant_fees,
+        "imageUrl": row.image_url,
         "historyPath": history_file_path(row.product_key, row.variant_key),
+        "parentProductId": row.parent_key,
+        "variantLabel": row.variant_label,
+        "variantColor": row.variant_color,
+        "variantSize": row.variant_size,
+        "variantCount": 1,
     }
 
 
-def _facet_values(
-    rows: Iterable[RankingRow],
-    attribute: str,
+def _group_dict(
+    group: _RankingGroup,
     taxonomies: Mapping[RowKey, Taxonomy],
+) -> dict[str, object]:
+    representative = group.representative
+    payload = _row_dict(representative, group.taxonomy)
+    payload["classification"] = group.classification
+    payload["capturedAt"] = max(row.captured_at for row in group.rows)
+    payload["variantCount"] = len(group.rows)
+    payload["isGrouped"] = len(group.rows) > 1
+
+    labels = [row.variant_label for row in group.rows if row.variant_label]
+    colors = sorted({row.variant_color for row in group.rows if row.variant_color})
+    sizes = sorted({row.variant_size for row in group.rows if row.variant_size})
+    payload["variantLabels"] = labels
+    payload["variantColors"] = colors
+    payload["variantSizes"] = sizes
+    payload["variantClassifications"] = sorted(group.classifications)
+
+    for attribute, minimum_key, maximum_key in (
+        ("selling_price_cents", "sellingPriceMin", "sellingPriceMax"),
+        ("reported_total_cost_cents", "reportedTotalCostMin", "reportedTotalCostMax"),
+        ("unit_spread_cents", "unitSpreadMin", "unitSpreadMax"),
+        ("margin_pct", "marginPctMin", "marginPctMax"),
+    ):
+        values = group.values(attribute)
+        if not values:
+            payload[minimum_key] = None
+            payload[maximum_key] = None
+            continue
+        if attribute == "margin_pct":
+            payload[minimum_key] = min(values)
+            payload[maximum_key] = max(values)
+        else:
+            payload[minimum_key] = _money(int(min(values)))
+            payload[maximum_key] = _money(int(max(values)))
+
+    payload["metricsMixed"] = any(
+        len(set(group.values(attribute))) > 1
+        for attribute in ("reported_total_cost_cents", "unit_spread_cents", "margin_pct")
+    ) or len(group.classifications) > 1
+    if len(group.rows) > 1:
+        payload["variants"] = [
+            _row_dict(row, taxonomies[_row_key(row)])
+            for row in group.rows
+        ]
+    payload["hasExorbitantFees"] = any(row.has_exorbitant_fees for row in group.rows)
+    return payload
+
+
+def _facet_values(
+    groups: Iterable[_RankingGroup],
+    attribute: str,
 ) -> list[dict[str, object]]:
     values: Counter[tuple[str, str]] = Counter()
-    for row in rows:
-        taxonomy = taxonomies[_row_key(row)]
-        key = getattr(taxonomy, attribute)
-        label = getattr(taxonomy, f"{attribute}_label")
+    for group in groups:
+        key = getattr(group.taxonomy, attribute)
+        label = getattr(group.taxonomy, f"{attribute}_label")
         values[(key, label)] += 1
     return [
         {"value": key, "label": label, "count": count}
@@ -234,11 +375,12 @@ class RankingService:
             after = _database_signature(self.database_path)
             if before == after:
                 taxonomies = {_row_key(row): _row_taxonomy(row) for row in rows}
+                capture_times = [row.captured_at for row in rows if row.captured_at]
                 return _CatalogCache(
                     signature=after,
                     rows=rows,
                     taxonomies=taxonomies,
-                    department_facets=tuple(_facet_values(rows, "department", taxonomies)),
+                    latest_captured_at=max(capture_times) if capture_times else None,
                 )
         raise RuntimeError("Database changed while loading; retry the request")
 
@@ -286,11 +428,11 @@ class RankingService:
         all_rows = catalog.rows
         taxonomies = catalog.taxonomies
         if view == "losses":
-            rows = [row for row in all_rows if row.unit_spread_cents < 0]
+            view_rows = [row for row in all_rows if row.unit_spread_cents < 0]
         elif view == "profit":
-            rows = [row for row in all_rows if row.unit_spread_cents > 0]
+            view_rows = [row for row in all_rows if row.unit_spread_cents > 0]
         else:
-            rows = all_rows
+            view_rows = list(all_rows)
 
         department = _first(query, "department").lower()
         category = _first(query, "category").lower()
@@ -301,11 +443,16 @@ class RankingService:
         min_price = _dollars_to_cents(_first(query, "min_price"))
         max_price = _dollars_to_cents(_first(query, "max_price"))
 
-        def matches(row: RankingRow) -> bool:
+        def matches(
+            row: RankingRow,
+            *,
+            include_department: bool = True,
+            include_category: bool = True,
+        ) -> bool:
             taxonomy = taxonomies[_row_key(row)]
-            if department and taxonomy.department != department:
+            if include_department and department and taxonomy.department != department:
                 return False
-            if category and taxonomy.category != category:
+            if include_category and category and taxonomy.category != category:
                 return False
             if brand and (row.brand or "").lower() != brand:
                 return False
@@ -334,40 +481,51 @@ class RankingService:
                 return False
             return True
 
-        rows = [row for row in rows if matches(row)]
+        matched_rows = [row for row in view_rows if matches(row)]
         if not sort:
             sort = "spread_desc" if view == "profit" else "spread_asc"
         if sort == "name":
             sort = "name_asc"
 
-        if sort == "spread_desc":
-            rows.sort(key=lambda row: row.unit_spread_cents, reverse=True)
-        elif sort == "spread_asc":
-            rows.sort(key=lambda row: row.unit_spread_cents)
-        elif sort == "price_desc":
-            rows.sort(key=lambda row: row.selling_price_cents or 0, reverse=True)
-        elif sort == "price_asc":
-            rows.sort(key=lambda row: row.selling_price_cents or 0)
-        elif sort == "cost_desc":
-            rows.sort(key=lambda row: row.reported_total_cost_cents or 0, reverse=True)
-        elif sort == "cost_asc":
-            rows.sort(key=lambda row: row.reported_total_cost_cents or 0)
-        elif sort == "margin_desc":
-            rows.sort(key=lambda row: row.margin_pct if row.margin_pct is not None else float("-inf"), reverse=True)
-        elif sort == "margin_asc":
-            rows.sort(key=lambda row: row.margin_pct if row.margin_pct is not None else float("inf"))
-        elif sort == "department_desc":
-            rows.sort(key=lambda row: taxonomies[_row_key(row)].department_label.lower(), reverse=True)
-        elif sort == "name_desc":
-            rows.sort(key=lambda row: display_name(row.name or row.product_key).lower(), reverse=True)
-        else:
-            # Includes name_asc and department_asc.
-            key = (
-                (lambda row: taxonomies[_row_key(row)].department_label.lower())
-                if sort == "department_asc"
-                else lambda row: display_name(row.name or row.product_key).lower()
+        def sort_groups(groups: Iterable[_RankingGroup]) -> list[_RankingGroup]:
+            grouped = list(groups)
+            descending = sort.endswith("_desc")
+            if sort in {"name_asc", "name_desc"}:
+                grouped.sort(
+                    key=lambda group: display_name(
+                        group.representative.name or group.representative.product_key
+                    ).lower(),
+                    reverse=descending,
+                )
+                return grouped
+            if sort in {"department_asc", "department_desc"}:
+                grouped.sort(
+                    key=lambda group: group.taxonomy.department_label.lower(),
+                    reverse=descending,
+                )
+                return grouped
+
+            attribute = {
+                "price_asc": "selling_price_cents",
+                "price_desc": "selling_price_cents",
+                "cost_asc": "reported_total_cost_cents",
+                "cost_desc": "reported_total_cost_cents",
+                "spread_asc": "unit_spread_cents",
+                "spread_desc": "unit_spread_cents",
+                "margin_asc": "margin_pct",
+                "margin_desc": "margin_pct",
+            }.get(sort, "unit_spread_cents")
+            grouped.sort(
+                key=lambda group: (
+                    max(group.values(attribute)) if descending else min(group.values(attribute))
+                )
+                if group.values(attribute)
+                else (float("-inf") if descending else float("inf")),
+                reverse=descending,
             )
-            rows.sort(key=key)
+            return grouped
+
+        matched_groups = sort_groups(_group_rows(matched_rows, taxonomies))
 
         try:
             offset = max(0, int(_first(query, "offset", "0")))
@@ -377,40 +535,64 @@ class RankingService:
         if limit < 1 or limit > 5000:
             raise ValueError("limit must be between 1 and 5000")
 
-        filtered_rows = rows
-        page = filtered_rows[offset : offset + limit]
-        summary_rows = all_rows
+        page = matched_groups[offset : offset + limit]
+        summary_groups = _group_rows(all_rows, taxonomies)
+        filtered_summary_groups = _group_rows(matched_rows, taxonomies)
+        def _partition(groups: Iterable[_RankingGroup]) -> dict[str, int]:
+            """Count each display group exactly once.
+
+            Groups are partitioned on ``_RankingGroup.classification``, which is a
+            total four-way label. Counting by membership in ``classifications``
+            instead would double-count mixed groups into every bucket they touch,
+            so the buckets would no longer sum to the group total.
+            """
+            counts = {"loss": 0, "profit": 0, "break_even": 0, "mixed": 0}
+            for group in groups:
+                counts[group.classification] += 1
+            return counts
+
+        filtered_counts = _partition(filtered_summary_groups)
         filtered_summary = {
-            "total": len(filtered_rows),
-            "losses": sum(row.unit_spread_cents < 0 for row in filtered_rows),
-            "profitDrivers": sum(row.unit_spread_cents > 0 for row in filtered_rows),
-            "breakEven": sum(row.unit_spread_cents == 0 for row in filtered_rows),
+            "total": len(filtered_summary_groups),
+            "losses": filtered_counts["loss"],
+            "profitDrivers": filtered_counts["profit"],
+            "breakEven": filtered_counts["break_even"],
+            "mixed": filtered_counts["mixed"],
         }
+        counts = _partition(summary_groups)
         summary = {
-            "total": len(summary_rows),
-            "losses": sum(row.unit_spread_cents < 0 for row in summary_rows),
-            "profitDrivers": sum(row.unit_spread_cents > 0 for row in summary_rows),
-            "breakEven": sum(row.unit_spread_cents == 0 for row in summary_rows),
+            "total": len(summary_groups),
+            "losses": counts["loss"],
+            "profitDrivers": counts["profit"],
+            "breakEven": counts["break_even"],
+            "mixed": counts["mixed"],
             "filtered": filtered_summary,
         }
 
-        facet_rows = [
-            row for row in all_rows
-            if not department or taxonomies[_row_key(row)].department == department
+        department_facet_rows = [
+            row for row in view_rows
+            if matches(row, include_department=False)
         ]
+        category_facet_rows = [
+            row for row in view_rows
+            if matches(row, include_category=False)
+        ]
+        department_facet_groups = _group_rows(department_facet_rows, taxonomies)
+        category_facet_groups = _group_rows(category_facet_rows, taxonomies)
         response = {
             "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "latestCapturedAt": catalog.latest_captured_at,
             "view": view,
             "offset": offset,
             "limit": limit,
-            "total": len(filtered_rows),
-            "hasMore": offset + len(page) < len(filtered_rows),
+            "total": len(matched_groups),
+            "hasMore": offset + len(page) < len(matched_groups),
             "summary": summary,
             "facets": {
-                "departments": list(catalog.department_facets),
-                "categories": _facet_values(facet_rows, "category", taxonomies),
+                "departments": _facet_values(department_facet_groups, "department"),
+                "categories": _facet_values(category_facet_groups, "category"),
             },
-            "results": [_row_dict(row, taxonomies[_row_key(row)]) for row in page],
+            "results": [_group_dict(group, taxonomies) for group in page],
         }
         with self._cache_lock:
             self._response_cache[cache_key] = response

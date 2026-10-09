@@ -50,13 +50,13 @@ Design and product context live beside these instruction files:
   layout, components, named rules, and a list of open decisions that must be
   asked about, not guessed.
 - `mockups/session-a/index.html` — the approved reference mockup, runnable
-  from the file system. It is the target for the UI rebuild.
+  from the file system. The app was built to match it.
 - `.impeccable/design.json` — a machine-readable companion to `DESIGN.md`;
   `.impeccable/archive/` holds two superseded systems that must not be built.
 
-As of October 8, 2026 the Nuxt app has not been rebuilt to the new design: the
-code in `web/app` still renders the earlier "forest ledger" look. `web/AGENTS.md`
-records the state of that rebuild and the cleanup that should come first.
+As of October 8, 2026 the Nuxt app in `web/app` has been rebuilt to this
+design. `web/AGENTS.md` records what was decided during the rebuild, what was
+verified, and the gaps that remain.
 
 More-specific files add context; they do not waive the root identity,
 provenance, authorization, data-retention, or publication guardrails.

@@ -1,15 +1,17 @@
 # Nuxt application code
 
-The `app/` directory is the browser-facing application. Its current UI is
-intentionally small and page-centered: `pages/index.vue` contains the dashboard
-state and rendering, while `assets/css/main.css` contains presentation rules.
+The `app/` directory is the browser-facing application. `pages/index.vue`
+holds catalog state and layout, `components/` holds the pieces it renders,
+`utils/` and `composables/` hold the logic, and `assets/css/main.css` holds
+the presentation rules.
 Keep data contracts and business calculations in the Python/export layers.
 
 ## Data flow
 
-1. Load a `RankingResponse` from the API or static `rankings.json`.
-2. Apply local search/filter/sort/page behavior where the mode requires it,
-   preserving the same result semantics in both modes.
+1. Load the whole catalog once as a `RankingResponse`, from the API
+   (`view=all`) or static `rankings.json`.
+2. Apply view, search, filter, sort and page behavior locally, with the same
+   code in both modes.
 3. Render grouped ranking rows. Nested variants remain available for labels,
    classification, price/cost ranges, and selection.
 4. On detail selection, request the matching product/variant history only when
@@ -33,9 +35,10 @@ reference supplied by the backend/export.
 - Keep theme selection persistent but respect system preference and maintain
   readable contrast. Avoid adding visual effects that compete with the data.
 
-The intended look is defined in the root `DESIGN.md` and the mockup at
-`mockups/session-a/index.html`; the code here predates it. See "UI rebuild:
-current state" in `web/AGENTS.md` before restyling anything.
+The look is defined in the root `DESIGN.md` and the mockup at
+`mockups/session-a/index.html`, and the code here implements it. See "UI
+rebuild: current state" in `web/AGENTS.md` for what was decided and what is
+still open.
 
 For page-specific behavior read `pages/AGENTS.md`; for visual changes read
 `assets/css/AGENTS.md`. Run the frontend checks in `web/AGENTS.md` after any

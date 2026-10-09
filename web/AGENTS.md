@@ -24,63 +24,40 @@ archived systems in `.impeccable/archive/`.
 
 ## UI rebuild: current state
 
-As of October 8, 2026:
+As of October 8, 2026 the app has been rebuilt to `DESIGN.md`. The catalog
+page, the product sheet and the Method page use the new system; the previous
+"forest ledger" versions of `index.vue`, `method.vue`, `main.css` and
+`ThemeSelect.vue` are kept in `.impeccable/archive/forest-ledger-app/` for
+reference only.
 
-- The design is approved as a mockup and written up in `DESIGN.md`. The app
-  code has not been rebuilt: `app/pages/index.vue` and `app/assets/css/main.css`
-  still implement the earlier "forest ledger" look (green-tinted paper,
-  monospace figures, rounded panels, a filter rail).
-- Baseline before the rebuild: `python3 -m unittest discover -s tests` passes
-  (52 tests) and `npm run typecheck` passes.
-- The mockup is static HTML with a data snapshot. Its tabs, category links,
-  department links and sort are drawn but inert; search, the Photos/List
-  switch, the theme switch and the product sheet work.
+Verified at the time of the rebuild: `npm run typecheck` and `npm run build`
+pass, the Python suite passes (52 tests), and the page was checked in a
+browser against the local API in both themes at desktop and phone width.
+**Static mode was not exercised** because no generated `public/data` existed;
+check it before a deploy.
 
-### Clean up before changing the look
+Decisions taken during the rebuild that `DESIGN.md` had listed as open:
 
-Do this as a behaviour-preserving refactor first, verified with typecheck and
-build, so the visual rebuild is a change of templates and styles only.
+- The catalog loads once (`view=all`) in both modes and every view, filter,
+  search and sort is local. A style whose options disagree therefore shows its
+  range under both Below cost and Above cost.
+- The app uses the mockup's words: below cost, above cost, styles, costs
+  Quince, difference. `README.md` and `PRODUCT.md` still use the older terms.
+- A flagged fee is an ink asterisk beside the name, explained in the colophon
+  and on the product sheet. No second colour.
+- The product sheet keeps the option picker, the change list ("What changed")
+  and the price-and-cost timeline, drawn in the new system.
 
-1. **Move pure logic out of `index.vue`** (about 1,100 lines of script) into
-   typed modules that can be tested without a browser:
-   - payload interfaces (`ProductResult`, `ProductDetail`, `RankingResponse`…) to `app/types/`;
-   - money, margin, date and range formatters to `app/utils/`;
-   - sorting and metric-bound helpers to `app/utils/`;
-   - the static-mode filter, facet and summary logic to a composable, since it must stay identical to the API's semantics;
-   - product-detail loading with its stale-response guard to a composable;
-   - the change-ledger computation and the history-chart geometry to `app/utils/`;
-   - the dialog focus trap and focus restore to a composable.
-2. **Extract repeated markup into components:** the masthead (copied into
-   `index.vue` and `method.vue`), pagination (twice), the fee flag (twice),
-   and the drawer header (three times across loading, error and loaded).
-   Then split the page into a catalog item, the list table and the product
-   sheet, matching the component names in `DESIGN.md`.
-3. **Remove small leftovers:** the unused `classification` parameter of
-   `formatSpreadValue`, the four one-line `formatProduct*` wrappers, and the
-   legacy bare `"name"` sort branch in `sortResults`.
-4. **Do not tidy `main.css`.** The rebuild replaces it. When rewriting, declare
-   the night-theme tokens once; today they are duplicated under
-   `[data-theme="dark"]` and the system media query, and the 560px media block
-   appears twice.
+Known gaps:
 
-### Gaps the rebuild must close
-
-- **Search scope.** The design has one search box with a Below cost / Whole
-  catalog switch. In API mode the page refetches on every keystroke with no
-  debounce and only for the current view; whole-catalog search needs a second
-  query or the full snapshot. Static mode already holds every style.
-- **Mixed styles in the Below cost view.** The `losses` view filters variants
-  before grouping, so a style whose options disagree reads as uniformly below
-  cost there and as "varies" in `all`. This is an open decision in `DESIGN.md`.
-- **No URL state.** View, filters, search, sort and view mode are lost on
-  refresh.
-- **First-paint hydration mismatch.** The server renders the empty state and
-  the client hydrates the loading state.
-- **Sheet content not yet designed:** the variant picker, change ledger and
-  timeline exist in the app and are not drawn in the mockup. Keep their
-  behaviour; ask before inventing their look.
-- **Wording.** The mockup's vocabulary ("below cost", "styles", "costs
-  Quince") is not yet approved for the app, Method page or README.
+- The product sheet's variant line comes from `/api/product`, which can
+  disagree with the ranking row for the same identity (Lennox Wool Rug reads
+  "Green" in the ranking and "Brown" in the detail). That is a backend
+  inconsistency; do not paper over it in the UI.
+- Page number and page size are not kept in the address bar; view, department,
+  category, search, scope, sort and Photos/List are.
+- There are still no browser tests. Pure logic now lives in `app/utils/` and
+  can be unit-tested without a browser; no test runner is set up for it yet.
 
 ## Runtime modes
 
@@ -95,27 +72,42 @@ build, so the visual rebuild is a change of templates and styles only.
 
 ## File ownership
 
-- `app/pages/index.vue` owns dashboard state, data loading, local filtering and
-  sorting, table/image views, pagination, detail drawers, variants, charts,
-  and theme selection.
+- `app/pages/index.vue` owns catalog state (view, filters, search and its
+  scope, sort, paging, Photos/List), address-bar sync, and the page layout. It
+  holds no formatting or ranking logic of its own.
 - `app/pages/method.vue` is the static method page: disclosure basis, counting
   and classification rules, identity rules, the fee guardrail, and the limits of
   the analysis. It owns no data loading and must not restate a calculation the
   backend owns.
-- `app/components/ThemeSelect.vue` owns the theme control and its persistence.
-  Both pages use it so the chrome and the saved preference stay identical.
+- `app/types/ranking.ts` mirrors the API/static payload. Change the exporter
+  and its tests before loosening a type here.
+- `app/utils/` holds pure logic: `format.ts` (money, dates, counts),
+  `ranking.ts` (views, filters, facets, sorting, the price/cost/difference
+  text), `changeLedger.ts` (moves between captures) and `historyChart.ts`
+  (chart geometry), and `costFamilies.ts` (which cost lines count as making
+  it, getting it to you, or other, and the shade each one takes).
+- `app/composables/` holds stateful pieces: `useDataSource` (API or static
+  JSON), `useProductDetail` (detail loading with the stale-response guard),
+  `useDialogFocus` (modal focus and Escape), `useFailedImages`.
+- `app/components/`: `SiteMasthead` (notice strip, masthead, shirting band, and the
+  department panel that lists a department's categories on hover or focus),
+  `FacetLinks` (text filters with a "More" menu), `TextMenu` (the drawn menu
+  behind More, Sort and Show; never a native `<select>`), `CatalogItem`, `RankingList`,
+  `ResultPagination`, `ProductSheet`, `FeeFlag`, and `ThemeSelect` (the
+  Dark/Light switch and its persistence).
 - `app/assets/css/main.css` owns the visual system, layout, contrast, themes,
-  responsive behavior, focus states, and restrained metric colors.
-- `app/app.vue` is only the global Nuxt shell.
+  responsive behavior and focus states. Tokens are declared once per theme.
+- `app/app.vue` is the global shell; it also resolves the theme before first
+  paint.
 - `nuxt.config.ts` owns runtime configuration and global CSS registration.
 - `package.json` owns scripts and intentional dependencies; keep the lockfile
   synchronized when dependencies change.
 
 ## Frontend contracts
 
-- Load the bounded/current ranking snapshot once per needed API query. Sort
-  direction, page size, and visible page should be local operations and should
-  not refetch the catalog.
+- Load the catalog once per visit (`/api/rankings?view=all&limit=5000`, or
+  `rankings.json` in static mode). Views, filters, search, sort, page size and
+  page are all local operations and must not refetch it.
 - Keep display groups separate from variant identity. A grouped row may show
   ranges and labels, but detail/history requests must carry the selected
   `productKey` and `variantKey`, never just a display name.

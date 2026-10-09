@@ -1,6 +1,6 @@
 # Dashboard pages
 
-`index.vue` is the main and currently monolithic dashboard page. It is the
+`index.vue` is the catalog page. It composes the components and is the
 presentation of the backend contracts, not a second ranking engine.
 `method.vue` is a static page explaining the disclosure basis and the counting
 rules; it renders fixed prose and definitions and must not compute a metric the
@@ -8,21 +8,26 @@ backend owns.
 
 ## State and data loading
 
-- `view` selects `losses`, `profit` (shown as `Drivers`), or `all`.
-- `search`, `department`, and `category` define filters; `sort`, `pageSize`,
-  and `currentPage` control local presentation.
-- `displayMode` switches table/image cards. The theme lives in
+- `view` selects `losses` (shown as Below cost), `profit` (Above cost), or
+  `all` (Everything).
+- `search`, `department`, and `category` define filters; `scope` says whether
+  a search covers the current view or the whole catalog; `sort`, `pageSize`,
+  and `currentPage` control local presentation. All but the last two are
+  mirrored in the address bar.
+- `displayMode` switches Photos and List. The theme lives in
   `components/ThemeSelect.vue`, not in the page.
-- `useAsyncData` loads rankings from the API in API mode or `rankings.json` in
-  static mode. Static mode applies its equivalent filtering/facet logic in the
-  browser.
-- `selectedProduct`, `selectedGroup`, and `detail` drive the product drawer.
-  A detail request must identify the selected variant, and a stale response
-  must not overwrite a newer selection.
+- `useAsyncData` loads the whole catalog once, from the API (`view=all`) or
+  static `rankings.json`. Views, facets, search and ranks are computed in the
+  browser with the helpers in `utils/ranking.ts`, identically in both modes.
+- A style's rank is its place in the current view, filters and sort before
+  searching, so a search never renumbers it.
+- `useProductDetail` drives the product sheet. A detail request must identify
+  the selected variant, and a stale response must not overwrite a newer
+  selection.
 
-The interfaces near the top of the file mirror the API/static payload. When a
+The interfaces in `types/ranking.ts` mirror the API/static payload. When a
 backend field changes, update the exporter/API contract and its tests before
-loosening or duplicating a TypeScript type here.
+loosening or duplicating a TypeScript type there.
 
 ## Display rules
 

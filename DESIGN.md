@@ -146,6 +146,9 @@ White paper and near-black ink, with one colour reserved for one meaning.
 **The One-Colour Rule.** Claret means below cost and nothing else. Above cost
 and "varies" are printed in ink with words, not given colours of their own,
 because below cost is the exception this product exists to find.
+The one place other colour appears is the cost bar in the product sheet, where
+blues and tans tell the cost lines apart (see "Cost-line colours"). They label
+parts of a cost; they never say whether an item is above or below it.
 
 **The Word-With-Colour Rule.** A claret figure always carries a sign and the
 words "below cost". Colour alone never says which side of cost an item is on.
@@ -241,6 +244,28 @@ All label type. Tabs and the search-scope switch mark the active item with a
 2px ink underline; category links mark it by turning from soft to ink; the
 Photos/List switch underlines the active word. Counts sit beside the label.
 
+### Menus
+More, Sort and Show open a drawn menu, never the operating system's dropdown.
+The trigger is label type with a small drawn chevron that flips when open. The
+list is a paper panel with a 1px ink border, square corners and no shadow,
+10px below the trigger and at least 220px wide. Each row is label type in soft,
+10px by 16px, with its count right-aligned in tabular figures; hover and
+keyboard focus fill the row with the hover tone and turn it ink; the current
+choice is ink with a 1px ink underline. Arrow keys move, Escape closes, and the
+list shifts sideways to stay 16px inside the page.
+
+### Department panel
+Pointing at a department in the masthead, or focusing it, opens a full-width
+panel under the shirting band: paper, a 1px ink rule along its bottom, no
+shadow. On the left, the department in headline serif (30px), an italic caption
+with its style count in the current view, and an underlined "All {department}"
+label. On the right, its categories in four columns of label type, soft turning
+ink on hover, each with its count; the current category is ink and underlined.
+Choosing one sets department and category together. It opens after a short
+pause and closes when the pointer leaves the masthead and panel; Down-arrow
+moves into it and Escape closes it. Touch has no hover: a tap picks the
+department and the category row below does the same job.
+
 ### Search
 One box in the toolbar: a magnifier, placeholder naming the current view
 ("Search below cost"), square, 40px tall, hairline border that turns ink on
@@ -259,12 +284,17 @@ In order: a Close button; up to three photographs in a row of thirds; a label
 line with department, category and rank; the name at 38px; the italic variant
 line; then sections headed in Garamond.
 
-- **What Quince says it costs.** A bar whose full width is the reported cost, split by cost line in stepped greys. A thin strip beneath it shows how far the price reaches in ink, with the shortfall hatched in claret. Then an itemised receipt with dotted leaders, ending in three larger lines: Reported cost, You pay, Below cost by (claret).
+- **What Quince says it costs.** Two bars on one scale, 48px tall, each with its label and figure in a 9.5em column at its left: "Costs Quince" over "Quince sells it for". Both start at the same left edge and the larger one spans the width, so the shorter is plain to see. The cost bar is split by cost line in the cost-line colours (below), with 2px gaps; a segment prints its name and amount inside when it is wide enough, its amount alone when narrower, nothing when narrower still. The price bar is solid ink. Under a hairline, one line in headline serif: "Sold below its reported cost by" with the amount at the right, in claret when below cost and ink otherwise. Then the cost lines in two columns, one per family, each headed by the family's name, total and share; every line has a 12px swatch, its name, its share and its amount. On a phone the labels sit above their bars and the two columns stack.
+- **Cost-line colours.** Used only for cost lines in the product sheet, never for a state. Blues are what goes into the product: Materials `#1f3a5f`, Crafting `#5f7fae`, Packaging `#b5c6de` (night: `#6f93c9`, `#a3bbe0`, `#d3dff0`). Tans are what it takes to reach the buyer: Freight `#8a5a24`, Duties and taxes `#c3965a`, Card fees `#e6cfa8` (night: `#b9853f`, `#d6ae78`, `#ecdcbd`). A line that fits neither family is stone `#a9a79c` (night `#8d8c84`). A line keeps its colour on every item. None is a red, so claret still has one meaning. The two families are this site's grouping, not Quince's.
 - **Since we started looking.** The number of checks, one sentence on whether anything moved, and a dated table of price and reported cost.
 - An outlined "See it on Quince" button, and a closing note that this compares against disclosed cost only.
 
-The variant picker, change ledger and timeline from the current app are not
-yet drawn in this system; see Open decisions.
+Between those sit three parts the mockup does not draw and the app does: an
+option picker (square outlined buttons, the active one ruled in ink) when a
+style has more than one option at this price; "What changed", a dated list of
+moves between checks with the amount on either side and a signed difference
+in ink; and a price-and-cost timeline with price as a solid ink line and
+reported cost as a dashed grey line.
 
 ### Buttons and links
 The only button shape is the outline button: 1px ink border, label type,
@@ -296,11 +326,14 @@ underlined link. Focus is a 2px ink outline, offset 3px.
 
 ## Open decisions
 
-These are not settled by the mockup and must not be invented during the build:
+Settled during the app rebuild (see `web/AGENTS.md`): the app uses the
+mockup's vocabulary; a style whose options disagree shows its range in every
+view; a flagged fee is an ink asterisk with an explanation; the product sheet
+keeps its option picker, change list and timeline.
 
-- **Vocabulary.** The mockup says "below cost", "above cost", "styles" and "costs Quince" where the app and README say losses, positive spread, display groups and reported cost. Adopting the new words also changes the Method page and README.
-- **Mixed groups in the Below cost tab.** The below-cost view returns only a style's below-cost options, so Lennox Wool Rug reads as a single below-cost figure there and as "varies by option" in the whole catalog. One rule is needed.
-- **Fee flag.** The asterisk for a flagged fee is not drawn. It needs a treatment that does not use a second colour.
-- **Product sheet depth.** The variant picker, the change ledger and the price-and-cost timeline exist in the app and are not yet drawn here.
-- **Break-even and "varies" emphasis.** Both are ink with words today; confirm that is enough.
-- **Department and Method pages.** Department links and the Method page are not mocked.
+Still open, and not to be invented:
+
+- **Vocabulary outside the app.** `README.md` and `PRODUCT.md` still say
+  losses, positive spread, display groups and reported cost.
+- **Break-even and "varies" emphasis.** Both are ink with words today; confirm
+  that is enough.

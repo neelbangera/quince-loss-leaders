@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Ledger — cost breakdown options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Tokens are the ones in DESIGN.md ("The White Oxford Shirt"). */
+:root {
+  --paper: #ffffff;
+  --ink: #1b1b19;
+  --soft: #6b6b66;
+  --rule: #d9d9d3;
+  --rule-soft: #ecece7;
+  --hover: #f6f6f2;
+  --claret: #7d1d2f;
+  --stripe: #9db4d3;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  --paper: #131412;
+  --ink: #efebe2;
+  --soft: #a5a49c;
+  --rule: #3a3b35;
+  --rule-soft: #262722;
+  --hover: #1c1d1a;
+  --claret: #eba0aa;
+  --stripe: #5d77a0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+p, h1, h2, h3, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; }
+.fig { font-variant-numeric: tabular-nums; font-weight: 500; }
+.soft { color: var(--soft); }
+.below { color: var(--claret); }
+.page { width: min(1400px, 100% - 64px); margin: 0 auto; }
+
+/* ---- Mockup chrome (not part of the design) */
+.top { padding: 32px 0 24px; border-bottom: 1px solid var(--ink); }
+.top h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; }
+.top p { margin-top: 8px; max-width: 70ch; color: var(--soft); }
+.switches { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 22px; }
+.switch { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; }
+.switch > span { color: var(--soft); }
+.switch button { color: var(--soft); padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.switch button:hover { color: var(--ink); }
+.switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 88px; padding-bottom: 96px; }
+.option { padding: 44px 0 52px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.option-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.option-letter { font-family: var(--serif); font-size: 30px; line-height: 1; }
+.option-why { color: var(--soft); max-width: 58ch; margin-bottom: 30px; font-size: 14px; }
+.stage { max-width: 612px; }
+
+/* ---- Shared sheet pieces */
+.stage h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin-bottom: 18px; }
+.item-line { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--soft); margin: -12px 0 20px; }
+.hatch { background: repeating-linear-gradient(135deg, var(--claret) 0 1.5px, transparent 1.5px 6px); }
+
+/* ---- A: the verdict, then a receipt with a bar on every line */
+.a-verdict { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.a-verdict > div { padding: 16px 0 18px; }
+.a-verdict > div + div { padding-left: 22px; border-left: 1px solid var(--rule); }
+.a-verdict dt { color: var(--soft); margin-bottom: 6px; }
+.a-verdict dd { font-family: var(--serif); font-size: 30px; line-height: 1.05; font-variant-numeric: tabular-nums lining-nums; }
+.a-verdict small { display: block; font-family: var(--sans); font-size: 13px; margin-top: 4px; }
+.a-rows li { display: grid; grid-template-columns: 11.5em 1fr 3.2em 5.5em; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule-soft); }
+.a-track { height: 7px; background: var(--rule-soft); }
+.a-track i { display: block; height: 100%; background: var(--ink); }
+.a-rows .share { text-align: right; color: var(--soft); font-size: 13px; }
+.a-rows .amt { text-align: right; }
+.a-total { display: flex; justify-content: space-between; padding: 14px 0 0; font-family: var(--serif); font-size: 19px; }
+
+/* ---- B: one bar, labelled where it is, with the price marked on it */
+.b-flag { position: relative; height: 46px; }
+.b-flag > div { position: absolute; bottom: 8px; white-space: nowrap; line-height: 1.2; }
+.b-flag strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.b-bar { position: relative; display: flex; gap: 2px; height: 52px; }
+.b-seg { min-width: 1px; background: color-mix(in srgb, var(--ink) 13%, var(--paper)); padding: 8px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.35; }
+.b-seg b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.b-room { flex: none; border: 1px solid var(--rule); border-left: 0; }
+.b-mark { position: absolute; top: -8px; bottom: -14px; width: 2px; background: var(--ink); }
+.b-reach { display: flex; height: 9px; margin-top: 3px; }
+.b-paid { background: var(--ink); flex: none; }
+.b-under { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; font-size: 14px; }
+.b-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 26px; border-top: 1px solid var(--rule); }
+.b-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule-soft); }
+
+/* ---- C: an order summary, type only, with two bars to compare the totals */
+.c-lines li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.c-lines { border-top: 1px solid var(--ink); padding: 8px 0; }
+.c-sums { border-top: 1px solid var(--rule); padding: 8px 0; }
+.c-sums li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.c-sums li:first-child { color: var(--soft); }
+.c-result { border-top: 1px solid var(--ink); padding-top: 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.c-result p { font-family: var(--serif); font-size: 26px; line-height: 1.15; }
+.c-result .fig { font-family: var(--serif); font-size: 26px; font-weight: 400; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.c-pair { margin-top: 26px; display: grid; grid-template-columns: 8.5em 1fr; gap: 10px 14px; align-items: center; }
+.c-pair .bar { height: 9px; }
+.c-pair .cost { background: var(--soft); }
+.c-pair .paid { background: var(--ink); }
+
+/* ---- D: a running balance: the price, then each cost taken away */
+.d-table { width: 100%; border-collapse: collapse; }
+.d-table th { text-align: left; color: var(--soft); padding: 0 0 10px; border-bottom: 1px solid var(--ink); font-weight: 600; }
+.d-table td { padding: 12px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: middle; }
+.d-table .num { text-align: right; white-space: nowrap; padding-left: 16px; }
+.d-table .left { width: 34%; padding-left: 20px; }
+.d-table tr.start td { font-family: var(--serif); font-size: 19px; }
+.d-table tr.end td { font-family: var(--serif); font-size: 21px; border-bottom: 0; border-top: 1px solid var(--ink); padding-top: 16px; }
+.d-left { position: relative; height: 7px; background: var(--rule-soft); }
+.d-left i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); }
+.d-left.gone { background: none; }
+.d-left.gone i { left: 0; right: 0; background: none; }
+.d-note { margin-top: 16px; font-size: 13px; color: var(--soft); max-width: 56ch; }
+
+@media (max-width: 1180px) {
+  .options { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .page { width: calc(100% - 32px); }
+  .a-rows li { grid-template-columns: 1fr 3.2em 5em; }
+  .a-track { display: none; }
+  .a-verdict dd { font-size: 23px; }
+  .b-list { grid-template-columns: 1fr; }
+  .d-table .left { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <h1>Cost breakdown: four options</h1>
+    <p>Each option is the &ldquo;What Quince says it costs&rdquo; section of the product sheet, at the sheet&rsquo;s real width, using figures from the local catalog. Switch the item to see how each one copes with a small shortfall, a huge one, and the usual above-cost case.</p>
+    <div class="switches label">
+      <div class="switch" id="items" role="group" aria-label="Item"><span>Item</span></div>
+      <div class="switch" id="themes" role="group" aria-label="Theme">
+        <span>Theme</span>
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
+      </div>
+    </div>
+  </header>
+  <main class="options" id="options"></main>
+</div>
+
+<script>
+const ITEMS = [
+  {
+    id: "sweater", tab: "Small shortfall",
+    name: "Women's 100% Organic Cotton Fisherman Crew Sweater", variant: "In Sapphire Blue · XS",
+    price: 42.00,
+    lines: [["Materials", 5.09], ["Crafting Cost", 5.96], ["Packaging", 0.20], ["Freight & Handling", 26.18], ["Credit Card Fees", 1.26], ["Duties, Taxes, And Fees", 9.30]],
+  },
+  {
+    id: "rug", tab: "Huge shortfall",
+    name: "Sahara Hand-Tufted Wool Rug", variant: "8'9\" x 11'9\"",
+    price: 59.90,
+    lines: [["Materials", 248.00], ["Crafting Cost", 200.00], ["Packaging", 2.00], ["Freight & Handling", 29.00], ["Credit Card Fees", 0.15], ["Duties, Taxes, And Fees", 0.00]],
+  },
+  {
+    id: "coat", tab: "Above cost",
+    name: "100% Mongolian Cashmere Trench Coat", variant: "In Heather Taupe · XS",
+    price: 600.00,
+    lines: [["Materials", 293.01], ["Crafting Cost", 29.00], ["Packaging", 2.00], ["Freight & Handling", 8.04], ["Credit Card Fees", 19.96], ["Duties, Taxes, And Fees", 30.00]],
+  },
+];
+
+const money = (value) => (value < 0 ? "−" : "") + "$" + Math.abs(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const pct = (part, whole) => (whole ? (part / whole) * 100 : 0);
+const share = (part, whole) => { const value = pct(part, whole); return value === 0 ? "0%" : value < 1 ? "<1%" : Math.round(value) + "%"; };
+const esc = (text) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function facts(item) {
+  const cost = item.lines.reduce((sum, line) => sum + line[1], 0);
+  const gap = item.price - cost;
+  const bySize = [...item.lines].sort((left, right) => right[1] - left[1]);
+  return { cost, gap, bySize, below: gap < 0, scale: Math.max(cost, item.price) };
+}
+const verdictWords = (f) => (f.below ? "below cost" : f.gap > 0 ? "above cost" : "at cost");
+const head = (item) => `<h3>What Quince says it costs</h3>`;
+
+// A: the three figures that matter first, then every line with its own bar.
+function optionA(item) {
+  const f = facts(item);
+  const largest = f.bySize[0][1] || 1;
+  return `${head(item)}
+    <dl class="a-verdict">
+      <div><dt class="label">You pay</dt><dd>${money(item.price)}</dd></div>
+      <div><dt class="label">Costs Quince</dt><dd class="soft">${money(f.cost)}</dd></div>
+      <div><dt class="label">Difference</dt><dd class="${f.below ? "below" : ""}">${money(f.gap).replace(/^\$/, "+$")}<small>${verdictWords(f)}</small></dd></div>
+    </dl>
+    <ul class="a-rows">
+      ${f.bySize.map(([label, amount]) => `<li>
+        <span>${esc(label)}</span>
+        <span class="a-track"><i style="width:${pct(amount, largest).toFixed(1)}%"></i></span>
+        <span class="share fig">${share(amount, f.cost)}</span>
+        <span class="amt fig">${money(amount)}</span>
+      </li>`).join("")}
+    </ul>
+    <p class="a-total"><span>Reported cost</span><span class="fig">${money(f.cost)}</span></p>`;
+}
+
+// B: one bar for the cost, labelled in place, with the price marked on the same scale.
+function optionB(item) {
+  const f = facts(item);
+  const costWidth = pct(f.cost, f.scale);
+  const priceAt = pct(item.price, f.scale);
+  const flagRight = priceAt > 55;
+  const segments = f.bySize.filter((line) => line[1] > 0).map(([label, amount]) => {
+    const share = pct(amount, f.cost);
+    const text = share > 24 ? `<b>${esc(label)}</b>${money(amount)}` : share > 11 ? money(amount) : "";
+    return `<div class="b-seg" style="flex:${amount} 0 0" title="${esc(label)} ${money(amount)}">${text}</div>`;
+  }).join("");
+  return `${head(item)}
+    <div class="b-flag"><div style="${flagRight ? `right:${(100 - priceAt).toFixed(2)}%;text-align:right` : `left:${priceAt.toFixed(2)}%`}">
+      <span class="label soft">You pay</span><strong>${money(item.price)}</strong>
+    </div></div>
+    <div class="b-bar">
+      <div style="display:flex;gap:2px;flex:none;width:${costWidth.toFixed(2)}%">${segments}</div>
+      ${f.below ? "" : `<div class="b-room" style="width:calc(${(100 - costWidth).toFixed(2)}% - 2px)"></div>`}
+      <div class="b-mark" style="left:calc(${priceAt.toFixed(2)}% - ${priceAt > 99 ? 2 : 1}px)"></div>
+    </div>
+    <div class="b-reach">
+      <span class="b-paid" style="width:${priceAt.toFixed(2)}%"></span>
+      ${f.below ? `<span class="hatch" style="flex:1"></span>` : ""}
+    </div>
+    <p class="b-under">
+      <span class="soft">Reported cost <span class="fig">${money(f.cost)}</span></span>
+      <span class="${f.below ? "below" : ""}"><span class="fig">${money(Math.abs(f.gap))}</span> ${f.below ? "of the cost is not covered by the price" : "above the reported cost"}</span>
+    </p>
+    <ul class="b-list">
+      ${f.bySize.map(([label, amount]) => `<li><span>${esc(label)}</span><span class="fig">${money(amount)}</span></li>`).join("")}
+    </ul>`;
+}
+
+// C: an order summary. Type does the work; two thin bars compare the totals.
+function optionC(item) {
+  const f = facts(item);
+  return `${head(item)}
+    <ul class="c-lines">
+      ${item.lines.map(([label, amount]) => `<li><span>${esc(label)}</span><span class="fig">${money(amount)}</span></li>`).join("")}
+    </ul>
+    <ul class="c-sums">
+      <li><span>Reported cost</span><span class="fig">${money(f.cost)}</span></li>
+      <li><span>You pay</span><span class="fig">${money(item.price)}</span></li>
+    </ul>
+    <div class="c-result ${f.below ? "below" : ""}">
+      <p>${f.below ? "Priced below its reported cost by" : "Priced above its reported cost by"}</p>
+      <span class="fig">${money(Math.abs(f.gap))}</span>
+    </div>
+    <div class="c-pair">
+      <span class="label soft">Costs Quince</span><span><span class="bar cost" style="display:block;width:${pct(f.cost, f.scale).toFixed(2)}%"></span></span>
+      <span class="label">You pay</span><span><span class="bar paid" style="display:block;width:${pct(item.price, f.scale).toFixed(2)}%"></span></span>
+    </div>`;
+}
+
+// D: a running balance. Start with the price and take each cost away.
+function optionD(item) {
+  const f = facts(item);
+  let left = item.price;
+  const rows = f.bySize.filter((line) => line[1] > 0).map(([label, amount]) => {
+    left -= amount;
+    const gone = left < 0;
+    return `<tr>
+      <td>${esc(label)}</td>
+      <td class="num fig soft">−${money(amount).replace("−", "")}</td>
+      <td class="num fig ${gone ? "below" : ""}">${money(left)}</td>
+      <td class="left"><div class="d-left ${gone ? "gone" : ""}"><i class="${gone ? "hatch" : ""}" style="${gone ? "" : `width:${pct(left, item.price).toFixed(1)}%`}"></i></div></td>
+    </tr>`;
+  }).join("");
+  return `${head(item)}
+    <table class="d-table">
+      <thead><tr class="label"><th scope="col">&nbsp;</th><th scope="col" class="num">Amount</th><th scope="col" class="num">Left of the price</th><th scope="col" class="left"><span style="position:absolute;clip-path:inset(50%)">Share left</span></th></tr></thead>
+      <tbody>
+        <tr class="start"><td>You pay</td><td class="num fig">${money(item.price)}</td><td class="num fig">${money(item.price)}</td><td class="left"><div class="d-left"><i style="width:100%"></i></div></td></tr>
+        ${rows}
+        <tr class="end ${f.below ? "below" : ""}"><td colspan="2">${f.below ? "Short of its reported cost" : "Left after its reported cost"}</td><td class="num fig">${money(f.gap)}</td><td class="left"></td></tr>
+      </tbody>
+    </table>
+    <p class="d-note">Costs are taken away largest first. The order changes where the balance runs out, not the final figure.</p>`;
+}
+
+const OPTIONS = [
+  ["A", "Verdict first, then a bar on every line", "The three figures you compare sit at the top, so the answer is read before the detail. Each cost line gets its own bar and share, largest first, so freight versus materials is a glance, not arithmetic.", optionA],
+  ["B", "One bar with the price marked on it", "A single picture: the bar is the cost, labelled in place, and a rule marks how far the price reaches. The strip underneath is solid where the price covers the cost and hatched in claret where it does not. Closest to today's, minus the grey shades and the explanatory sentence.", optionB],
+  ["C", "Order summary", "No chart in the list at all. It reads like the summary on a receipt from a good shop: lines, two totals, one sentence for the result, and two thin bars underneath for scale.", optionC],
+  ["D", "Running balance", "Starts from what you pay and subtracts each cost, like a bank statement. You watch the price run out. The most literal reading of the word “ledger”.", optionD],
+];
+
+let current = ITEMS[0];
+function render() {
+  document.getElementById("options").innerHTML = OPTIONS.map(([letter, title, why, build]) => `
+    <section class="option">
+      <div class="option-head"><span class="option-letter">${letter}</span><span class="label">${title}</span></div>
+      <p class="option-why">${why}</p>
+      <div class="stage">${build(current)}<p class="item-line" style="margin:22px 0 0">${esc(current.name)} · ${esc(current.variant)}</p></div>
+    </section>`).join("");
+  document.querySelectorAll("#items button").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.item === current.id)));
+}
+
+const items = document.getElementById("items");
+for (const item of ITEMS) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.item = item.id;
+  button.textContent = item.tab;
+  button.addEventListener("click", () => { current = item; render(); });
+  items.append(button);
+}
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll("[data-theme-set]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.themeSet === theme)));
+}
+document.querySelectorAll("[data-theme-set]").forEach((button) => button.addEventListener("click", () => setTheme(button.dataset.themeSet)));
+
+// Deep links for screenshots: #rug, #coat, #dark (comma-separated).
+const flags = location.hash.slice(1).split(",");
+current = ITEMS.find((item) => flags.includes(item.id)) ?? ITEMS[0];
+setTheme(flags.includes("dark") ? "dark" : "light");
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Ledger — price bar options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Tokens are the ones in DESIGN.md ("The White Oxford Shirt"). */
+:root {
+  --paper: #ffffff;
+  --ink: #1b1b19;
+  --soft: #6b6b66;
+  --rule: #d9d9d3;
+  --rule-soft: #ecece7;
+  --hover: #f6f6f2;
+  --claret: #7d1d2f;
+  --stripe: #9db4d3;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  --paper: #131412;
+  --ink: #efebe2;
+  --soft: #a5a49c;
+  --rule: #3a3b35;
+  --rule-soft: #262722;
+  --hover: #1c1d1a;
+  --claret: #eba0aa;
+  --stripe: #5d77a0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+p, h1, h2, h3, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; }
+.fig { font-variant-numeric: tabular-nums; font-weight: 500; }
+.soft { color: var(--soft); }
+.below { color: var(--claret); }
+.page { width: min(1400px, 100% - 64px); margin: 0 auto; }
+
+/* ---- Mockup chrome (not part of the design) */
+.top { padding: 32px 0 24px; border-bottom: 1px solid var(--ink); }
+.top h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; }
+.top p { margin-top: 8px; max-width: 70ch; color: var(--soft); }
+.switches { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 22px; }
+.switch { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; }
+.switch > span { color: var(--soft); }
+.switch button { color: var(--soft); padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.switch button:hover { color: var(--ink); }
+.switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 88px; padding-bottom: 96px; }
+.option { padding: 44px 0 52px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.option-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.option-letter { font-family: var(--serif); font-size: 30px; line-height: 1; }
+.option-why { color: var(--soft); max-width: 58ch; margin-bottom: 30px; font-size: 14px; }
+.stage { max-width: 612px; }
+
+/* ---- Shared sheet pieces */
+.stage h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin-bottom: 18px; }
+.item-line { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--soft); margin-top: 22px; }
+.hatch { background: repeating-linear-gradient(135deg, var(--claret) 0 1.5px, transparent 1.5px 6px); }
+
+/* Cost-line colours. Claret stays reserved for "below cost"; none of these is a red. */
+:root {
+  --navy: #1f3a5f; --oxford: #7f9cc4; --forest: #2f5d46; --camel: #b98b52; --maize: #dcc06a; --stone: #a9a79c;
+  --blue-1: #17304f; --blue-2: #33557f; --blue-3: #5f7fae; --blue-4: #8ea8cc; --blue-5: #b9cae2; --blue-6: #dde6f1;
+  --make-1: #1f3a5f; --make-2: #5f7fae; --make-3: #b5c6de;
+  --send-1: #8a5a24; --send-2: #c3965a; --send-3: #e6cfa8;
+  --on-dark: #ffffff; --on-light: #1b1b19;
+}
+:root[data-theme="dark"] {
+  --navy: #6f93c9; --oxford: #b4c8e6; --forest: #6fa888; --camel: #d0a56e; --maize: #e8d283; --stone: #8d8c84;
+  --blue-1: #dde6f1; --blue-2: #b9cae2; --blue-3: #8ea8cc; --blue-4: #6f8fbe; --blue-5: #4d6c9c; --blue-6: #324c74;
+  --make-1: #6f93c9; --make-2: #a3bbe0; --make-3: #d3dff0;
+  --send-1: #b9853f; --send-2: #d6ae78; --send-3: #ecdcbd;
+  --on-dark: #131412; --on-light: #131412;
+}
+
+.flag { position: relative; height: 46px; }
+.flag > div { position: absolute; bottom: 8px; white-space: nowrap; line-height: 1.2; }
+.flag strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.bar { position: relative; display: flex; height: 52px; }
+.segs { display: flex; gap: 2px; flex: none; }
+/* No padding on the segment itself: padding would stop small lines shrinking to their true share. */
+.seg { min-width: 2px; overflow: hidden; white-space: nowrap; font-size: 12px; line-height: 1.35; }
+.seg > span { display: block; padding: 8px 10px; overflow: hidden; text-overflow: ellipsis; }
+.seg b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.room { flex: 1; margin-left: 2px; border: 1px solid var(--rule); border-left: 0; }
+.mark { position: absolute; top: -8px; bottom: -14px; width: 2px; background: var(--ink); }
+.reach { display: flex; height: 9px; margin-top: 3px; }
+.reach .paid { background: var(--ink); flex: none; }
+.under { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; font-size: 14px; }
+.key { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 26px; border-top: 1px solid var(--rule); }
+.key li { display: grid; grid-template-columns: 12px 1fr auto auto; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule-soft); }
+.key i { width: 12px; height: 12px; }
+.key .pc { color: var(--soft); font-size: 13px; width: 3em; text-align: right; }
+.key .amt { width: 4.6em; text-align: right; }
+
+/* Grouped option: brackets under the bar name the two halves */
+.groups { display: flex; gap: 2px; margin-top: 6px; }
+.groups > div { border-top: 1px solid var(--ink); padding-top: 7px; min-width: 0; font-size: 13px; line-height: 1.3; white-space: nowrap; }
+.groups b { display: block; font-weight: 600; }
+.key.grouped { grid-template-columns: 1fr 1fr; }
+.key.grouped > div > p { padding: 12px 0 8px; color: var(--soft); border-bottom: 1px solid var(--rule-soft); }
+
+/* Two-bar option: the price over the cost, on one scale */
+.pair { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px 16px; align-items: center; }
+.pair .name b { display: block; font-family: var(--serif); font-weight: 400; font-size: 20px; font-variant-numeric: tabular-nums lining-nums; line-height: 1.2; }
+.pair .track { display: flex; height: 52px; }
+.pair .ink { background: var(--ink); flex: none; }
+.pair .gap { flex: 1; }
+.pair .gap.over { margin-left: 2px; border: 1px solid var(--rule); border-left: 0; }
+
+/* A: dimension lines, the way a tailor marks a measurement */
+.dimrow { display: flex; align-items: flex-end; height: 56px; margin-bottom: 10px; }
+.dim { position: relative; flex: none; min-width: 0; padding-bottom: 8px; border-bottom: 1px solid currentColor; white-space: nowrap; line-height: 1.2; }
+.dim::before, .dim::after { content: ""; position: absolute; bottom: -5px; width: 1px; height: 9px; background: currentColor; }
+.dim::before { left: 0; }
+.dim::after { right: 0; }
+.dim b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.dim.short { flex: 1; margin-left: 3px; display: flex; flex-direction: column; align-items: flex-end; }
+.room.said { display: flex; align-items: center; padding-left: 12px; font-size: 13px; white-space: nowrap; overflow: hidden; }
+
+/* B: a slim ink measuring stick laid along the top of the cost bar */
+.heads { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 8px; line-height: 1.2; }
+.heads b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.heads > div:last-child { text-align: right; color: var(--soft); }
+.stick { display: flex; height: 14px; margin-bottom: 3px; }
+.stick .ink { flex: none; background: var(--ink); }
+.stick .hatch { flex: 1; }
+
+/* C: the price fills the bar; what it does not reach stays pale */
+.fill { position: relative; height: 52px; }
+.fill .layer { position: absolute; top: 0; bottom: 0; left: 0; display: flex; gap: 2px; }
+.fill .pale { opacity: 0.25; }
+.fill .unreached { position: absolute; top: 0; bottom: 0; right: 0; }
+.fill .room { position: absolute; top: 0; bottom: 0; right: 0; margin: 0; }
+
+/* D: a pin for the price and a claret frame around what it leaves uncovered */
+.frame { position: absolute; top: -3px; bottom: -3px; right: -3px; border: 2px solid var(--claret); }
+
+@media (max-width: 1180px) { .options { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .page { width: calc(100% - 32px); }
+  .key, .key.grouped { grid-template-columns: 1fr; }
+  .pair { grid-template-columns: 1fr; gap: 4px; }
+  .pair .track { margin-bottom: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <h1>Price against the cost bar: four options</h1>
+    <p>The cost bar is settled: blues for making it, tans for getting it to you. These four change only how your price is shown against it. Switch the item and the theme to compare.</p>
+    <div class="switches label">
+      <div class="switch" id="items" role="group" aria-label="Item"><span>Item</span></div>
+      <div class="switch" id="themes" role="group" aria-label="Theme">
+        <span>Theme</span>
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
+      </div>
+    </div>
+  </header>
+  <main class="options" id="options"></main>
+</div>
+
+<script>
+const ITEMS = [
+  {
+    id: "sweater", tab: "Small shortfall",
+    name: "Women's 100% Organic Cotton Fisherman Crew Sweater", variant: "In Sapphire Blue · XS",
+    price: 42.00,
+    lines: [["Materials", 5.09], ["Crafting Cost", 5.96], ["Packaging", 0.20], ["Freight & Handling", 26.18], ["Credit Card Fees", 1.26], ["Duties, Taxes, And Fees", 9.30]],
+  },
+  {
+    id: "rug", tab: "Huge shortfall",
+    name: "Sahara Hand-Tufted Wool Rug", variant: "8'9\" x 11'9\"",
+    price: 59.90,
+    lines: [["Materials", 248.00], ["Crafting Cost", 200.00], ["Packaging", 2.00], ["Freight & Handling", 29.00], ["Credit Card Fees", 0.15], ["Duties, Taxes, And Fees", 0.00]],
+  },
+  {
+    id: "coat", tab: "Above cost",
+    name: "100% Mongolian Cashmere Trench Coat", variant: "In Heather Taupe · XS",
+    price: 600.00,
+    lines: [["Materials", 293.01], ["Crafting Cost", 29.00], ["Packaging", 2.00], ["Freight & Handling", 8.04], ["Credit Card Fees", 19.96], ["Duties, Taxes, And Fees", 30.00]],
+  },
+];
+
+const money = (value) => (value < 0 ? "−" : "") + "$" + Math.abs(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const pct = (part, whole) => (whole ? (part / whole) * 100 : 0);
+const share = (part, whole) => { const value = pct(part, whole); return value === 0 ? "0%" : value < 1 ? "<1%" : Math.round(value) + "%"; };
+const esc = (text) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function facts(item) {
+  const cost = item.lines.reduce((sum, line) => sum + line[1], 0);
+  const gap = item.price - cost;
+  return { cost, gap, below: gap < 0, scale: Math.max(cost, item.price) };
+}
+const bySize = (lines) => [...lines].sort((left, right) => right[1] - left[1]);
+
+// Colour belongs to the cost line, not to its rank, so Materials is the same colour on every item.
+const PREP = {
+  "Materials": ["--navy", "--on-dark"], "Crafting Cost": ["--oxford", "--on-light"], "Packaging": ["--stone", "--on-light"],
+  "Freight & Handling": ["--forest", "--on-dark"], "Duties, Taxes, And Fees": ["--camel", "--on-light"], "Credit Card Fees": ["--maize", "--on-light"],
+};
+const GROUPS = [
+  ["Making it", [["Materials", "--make-1", "--on-dark"], ["Crafting Cost", "--make-2", "--on-light"], ["Packaging", "--make-3", "--on-light"]]],
+  ["Getting it to you", [["Freight & Handling", "--send-1", "--on-dark"], ["Duties, Taxes, And Fees", "--send-2", "--on-light"], ["Credit Card Fees", "--send-3", "--on-light"]]],
+];
+const BLUES = [["--blue-1", "--on-dark"], ["--blue-2", "--on-dark"], ["--blue-3", "--on-light"], ["--blue-4", "--on-light"], ["--blue-5", "--on-light"], ["--blue-6", "--on-light"]];
+const prepSegs = (item) => bySize(item.lines).map(([label, amount]) => ({ label, amount, bg: PREP[label][0], fg: PREP[label][1] }));
+const blueSegs = (item) => bySize(item.lines).map(([label, amount], index) => ({ label, amount, bg: BLUES[index][0], fg: BLUES[index][1] }));
+const groupSegs = (item) => GROUPS.map(([name, lines]) => ({
+  name,
+  segs: lines.map(([label, bg, fg]) => ({ label, amount: (item.lines.find((line) => line[0] === label) ?? [label, 0])[1], bg, fg })),
+}));
+
+const segHtml = (segs, cost) => segs.filter((seg) => seg.amount > 0).map((seg) => {
+  const part = pct(seg.amount, cost);
+  const text = part > 24 ? `<b>${esc(seg.label)}</b>${money(seg.amount)}` : part > 11 ? money(seg.amount) : "";
+  return `<div class="seg" style="flex:${seg.amount} 0 0;background:var(${seg.bg});color:var(${seg.fg})" title="${esc(seg.label)} ${money(seg.amount)}">${text ? `<span>${text}</span>` : ""}</div>`;
+}).join("");
+const keyRow = (seg, cost) => `<li><i style="background:var(${seg.bg})"></i><span>${esc(seg.label)}</span><span class="pc fig">${share(seg.amount, cost)}</span><span class="amt fig">${money(seg.amount)}</span></li>`;
+
+function flagAndBar(item, f, segs, extra = "") {
+  const costWidth = pct(f.cost, f.scale);
+  const priceAt = pct(item.price, f.scale);
+  const flagRight = priceAt > 55;
+  return `<div class="flag"><div style="${flagRight ? `right:${(100 - priceAt).toFixed(2)}%;text-align:right` : `left:${priceAt.toFixed(2)}%`}">
+      <span class="label soft">You pay</span><strong>${money(item.price)}</strong>
+    </div></div>
+    <div class="bar">
+      <div class="segs" style="width:${costWidth.toFixed(2)}%">${segHtml(segs, f.cost)}</div>
+      ${f.below ? "" : `<div class="room"></div>`}
+      <div class="mark" style="left:calc(${priceAt.toFixed(2)}% - ${priceAt > 99 ? 2 : 1}px)"></div>
+    </div>
+    <div class="reach"><span class="paid" style="width:${priceAt.toFixed(2)}%"></span>${f.below ? `<span class="hatch" style="flex:1"></span>` : ""}</div>
+    ${extra}
+    <p class="under">
+      <span class="soft">Reported cost <span class="fig">${money(f.cost)}</span></span>
+      <span class="${f.below ? "below" : ""}"><span class="fig">${money(Math.abs(f.gap))}</span> ${f.below ? "of the cost is not covered by the price" : "above the reported cost"}</span>
+    </p>`;
+}
+
+function parts(item) {
+  const f = facts(item); const groups = groupSegs(item);
+  const all = groups.flatMap((group) => group.segs);
+  const costWidth = pct(f.cost, f.scale); const priceAt = pct(item.price, f.scale);
+  const brackets = `<div class="groups" style="width:${costWidth.toFixed(2)}%">${groups.map((group) => {
+    const sum = group.segs.reduce((total, seg) => total + seg.amount, 0);
+    return sum > 0 ? `<div style="flex:${sum} 0 0${pct(sum, f.cost) < 25 && group !== groups[0] ? ";display:flex;flex-direction:column;align-items:flex-end" : ""}"><b>${group.name}</b><span class="fig soft">${money(sum)} · ${share(sum, f.cost)}</span></div>` : "";
+  }).join("")}</div>`;
+  const key = `<div class="key grouped">${groups.map((group) => `<div><p class="label">${group.name}</p><ul>${group.segs.map((seg) => keyRow(seg, f.cost)).join("")}</ul></div>`).join("")}</div>`;
+  const verdict = `<p class="under">
+      <span class="soft">Reported cost <span class="fig">${money(f.cost)}</span></span>
+      <span class="${f.below ? "below" : ""}"><span class="fig">${money(Math.abs(f.gap))}</span> ${f.below ? "of the cost is not covered by the price" : "above the reported cost"}</span>
+    </p>`;
+  const flag = `<div class="flag"><div style="${priceAt > 55 ? `right:${(100 - priceAt).toFixed(2)}%;text-align:right` : `left:${priceAt.toFixed(2)}%`}">
+      <span class="label soft">You pay</span><strong>${money(item.price)}</strong></div></div>`;
+  const mark = `<div class="mark" style="bottom:-8px;left:calc(${priceAt.toFixed(2)}% - ${priceAt > 99 ? 2 : 1}px)"></div>`;
+  return { f, all, costWidth, priceAt, brackets, key, verdict, flag, mark };
+}
+const title = `<h3>What Quince says it costs</h3>`;
+
+function optionDim(item) {
+  const p = parts(item); const f = p.f;
+  return `${title}
+    <div class="dimrow">
+      <div class="dim" style="width:${p.priceAt.toFixed(2)}%"><span class="label soft">You pay</span><b>${money(item.price)}</b></div>
+      ${f.below ? `<div class="dim short below"><span class="label">Short</span><b>${money(f.gap)}</b></div>` : ""}
+    </div>
+    <div class="bar">
+      <div class="segs" style="width:${p.costWidth.toFixed(2)}%">${segHtml(p.all, f.cost)}</div>
+      ${f.below || f.gap === 0 ? "" : `<div class="room said"><span class="fig">+${money(f.gap)} above cost</span></div>`}
+    </div>
+    ${p.brackets}${p.verdict}${p.key}`;
+}
+
+function optionStick(item) {
+  const p = parts(item); const f = p.f;
+  return `${title}
+    <div class="heads">
+      <div><span class="label soft">You pay</span><b>${money(item.price)}</b></div>
+      <div><span class="label">Costs Quince</span><b>${money(f.cost)}</b></div>
+    </div>
+    <div class="stick"><span class="ink" style="width:${p.priceAt.toFixed(2)}%"></span>${f.below ? `<span class="hatch"></span>` : ""}</div>
+    <div class="bar">
+      <div class="segs" style="width:${p.costWidth.toFixed(2)}%">${segHtml(p.all, f.cost)}</div>
+      ${f.below ? "" : `<div class="room"></div>`}
+    </div>
+    ${p.brackets}${p.verdict}${p.key}`;
+}
+
+function optionFill(item) {
+  const p = parts(item); const f = p.f;
+  const plain = p.all.filter((seg) => seg.amount > 0).map((seg) => `<div class="seg" style="flex:${seg.amount} 0 0;background:var(${seg.bg})"></div>`).join("");
+  const reached = Math.min(100, pct(item.price, f.cost));
+  return `${title}${p.flag}
+    <div class="bar fill">
+      <div class="layer pale" style="width:${p.costWidth.toFixed(2)}%">${plain}</div>
+      <div class="layer" style="width:${p.costWidth.toFixed(2)}%;clip-path:inset(0 ${(100 - reached).toFixed(2)}% 0 0)">${plain}</div>
+      ${f.below ? `<div class="unreached hatch" style="left:${p.priceAt.toFixed(2)}%"></div>` : `<div class="room" style="left:${p.costWidth.toFixed(2)}%"></div>`}
+      ${p.mark}
+    </div>
+    ${p.brackets}${p.verdict}${p.key}`;
+}
+
+function optionFrame(item) {
+  const p = parts(item); const f = p.f;
+  return `${title}${p.flag}
+    <div class="bar">
+      <div class="segs" style="width:${p.costWidth.toFixed(2)}%">${segHtml(p.all, f.cost)}</div>
+      ${f.below ? `<div class="frame" style="left:calc(${p.priceAt.toFixed(2)}% + 1px)"></div>` : `<div class="room"></div>`}
+      ${p.mark}
+    </div>
+    ${p.brackets}${p.verdict}${p.key}`;
+}
+
+const OPTIONS = [
+  ["1", "Dimension lines", "The price is drawn as a measurement along the top of the bar, the way a pattern marks a length, and the shortfall is a second measurement in claret. Nothing sits on the bar itself, so the colours stay clean.", optionDim],
+  ["2", "Measuring stick", "A slim ink bar laid directly on top of the cost bar, on the same scale. Where it stops short, the rest is hatched. Price and cost totals sit as a pair above.", optionStick],
+  ["3", "The price fills the bar", "The cost bar is full colour as far as your price reaches and pale beyond it, like a level. You see what is covered rather than a marker to interpret.", optionFill],
+  ["4", "Pin and frame", "A pin marks the price; a claret frame boxes the part of the cost it leaves uncovered. No extra strip, and the segment labels stay readable.", optionFrame],
+];
+
+let current = ITEMS[0];
+function render() {
+  document.getElementById("options").innerHTML = OPTIONS.map(([letter, title, why, build]) => `
+    <section class="option">
+      <div class="option-head"><span class="option-letter">${letter}</span><span class="label">${title}</span></div>
+      <p class="option-why">${why}</p>
+      <div class="stage">${build(current)}<p class="item-line">${esc(current.name)} · ${esc(current.variant)}</p></div>
+    </section>`).join("");
+  document.querySelectorAll("#items button").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.item === current.id)));
+}
+
+const items = document.getElementById("items");
+for (const item of ITEMS) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.item = item.id;
+  button.textContent = item.tab;
+  button.addEventListener("click", () => { current = item; render(); });
+  items.append(button);
+}
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll("[data-theme-set]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.themeSet === theme)));
+}
+document.querySelectorAll("[data-theme-set]").forEach((button) => button.addEventListener("click", () => setTheme(button.dataset.themeSet)));
+
+// Deep links for screenshots: #rug, #coat, #dark (comma-separated).
+const flags = location.hash.slice(1).split(",");
+current = ITEMS.find((item) => flags.includes(item.id)) ?? ITEMS[0];
+setTheme(flags.includes("dark") ? "dark" : "light");
+render();
+</script>
+</body>
+</html>

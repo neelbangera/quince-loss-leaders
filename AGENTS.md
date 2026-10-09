@@ -132,9 +132,10 @@ present in a fresh checkout:
   CLI uses `data/quince.sqlite3`, while the crawler and API use
   `data/quince-us.sqlite3` (or `QUINCE_DATABASE` when configured). Always
   confirm which database a command or process is using before comparing results.
-- The dashboard’s `Losses`, `Drivers`, and `All` tabs correspond to API views
-  `losses`, `profit`, and `all`. “Drivers” is the product-facing name for
-  positive disclosed spread; it is not a separate data source or calculation.
+- The dashboard’s `Below cost`, `Above cost`, and `Everything` tabs correspond
+  to API views `losses`, `profit`, and `all`. “Above cost” is the
+  product-facing name for positive disclosed spread; it is not a separate data
+  source or calculation. (Older notes call these tabs Losses, Drivers and All.)
 - A process that was started before a backend change continues serving the old
   code. If `/api/rankings` lacks fields such as `variantCount` or `isGrouped`,
   the API has not been restarted and its response cannot be used to validate
@@ -168,7 +169,7 @@ There are two distinct local input paths:
 The local read API exposes four application routes: `/api/health` for process and
 database diagnostics, `/api/rankings` for filtered current rankings,
 `/api/facets` for filter choices/counts, and `/api/product` for one
-product/variant’s detail and history. The Nuxt `Drivers` tab maps to the API’s
+product/variant’s detail and history. The Nuxt `Above cost` tab maps to the API’s
 `profit` view. A live API process and a Nuxt process are separate processes, so
 restarting Nuxt does not load changed Python code; restart the API after backend
 changes.
@@ -687,10 +688,12 @@ Implementation sequence:
 
 Files involved:
 
-- `web/app/pages/index.vue` owns dashboard state and behavior: view tabs,
-  search, taxonomy filters, local sort, page size, table/image display,
-  theme selection, detail loading, variant selection, history charts, and
-  component-change rendering.
+- `web/app/pages/index.vue` owns catalog state and page layout: view tabs,
+  search and its scope, taxonomy filters, local sort, page size, and the
+  Photos/List switch. Formatting and ranking helpers live in `web/app/utils/`,
+  detail loading and dialog focus in `web/app/composables/`, and the product
+  sheet, menus, masthead and theme switch in `web/app/components/`. See
+  `web/AGENTS.md` for the full file map.
 - `web/app/assets/css/main.css` owns the visual system, responsive layout,
   readable contrast, light/dark profiles, table states, image cards, metric
   colors, and detail-drawer styling. It should not contain data-fetching or

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:38:58+00:00",
+    "capturedAt": "2026-10-09T15:20:43+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "22.78",
     "unitSpread": "27.12",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "22.78",
     "highestCost": "27.35",
-    "averageSpread": "24.07",
+    "averageSpread": "24.51",
     "firstObservedAt": "2026-10-03T13:23:35+00:00",
-    "lastObservedAt": "2026-10-08T15:38:58+00:00"
+    "lastObservedAt": "2026-10-09T15:20:43+00:00"
   },
   "history": [
     {
@@ -274,6 +274,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:38:58+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "22.78",
+      "unitSpread": "27.12",
+      "marginPct": 54.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.67"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.47"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.04"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:20:43+00:00",
       "sellingPrice": "49.90",
       "reportedTotalCost": "22.78",
       "unitSpread": "27.12",

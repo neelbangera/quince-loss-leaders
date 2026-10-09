@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:56:48+00:00",
+    "capturedAt": "2026-10-09T15:38:41+00:00",
     "sellingPrice": "64.00",
     "reportedTotalCost": "43.84",
     "unitSpread": "20.16",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "51.00",
     "highestPrice": "64.00",
     "lowestCost": "34.52",
     "highestCost": "43.84",
-    "averageSpread": "18.93",
+    "averageSpread": "19.24",
     "firstObservedAt": "2026-10-06T15:32:04+00:00",
-    "lastObservedAt": "2026-10-08T15:56:48+00:00"
+    "lastObservedAt": "2026-10-09T15:38:41+00:00"
   },
   "history": [
     {
@@ -151,6 +151,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:56:48+00:00",
+      "sellingPrice": "64.00",
+      "reportedTotalCost": "43.84",
+      "unitSpread": "20.16",
+      "marginPct": 31.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "16.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.86"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.32"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.88"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.86"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:38:41+00:00",
       "sellingPrice": "64.00",
       "reportedTotalCost": "43.84",
       "unitSpread": "20.16",

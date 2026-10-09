@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:45:39+00:00",
+    "capturedAt": "2026-10-09T15:27:29+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "19.79",
     "unitSpread": "20.11",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 28,
+    "observationCount": 29,
     "lossObservations": 0,
-    "profitObservations": 28,
+    "profitObservations": 29,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "18.92",
     "highestCost": "19.79",
-    "averageSpread": "20.89",
+    "averageSpread": "20.86",
     "firstObservedAt": "2026-09-11T12:55:40+00:00",
-    "lastObservedAt": "2026-10-08T15:45:39+00:00"
+    "lastObservedAt": "2026-10-09T15:27:29+00:00"
   },
   "history": [
     {
@@ -1176,6 +1176,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:45:39+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "19.79",
+      "unitSpread": "20.11",
+      "marginPct": 50.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.95"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.81"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.70"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.47"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.36"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:27:29+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "19.79",
       "unitSpread": "20.11",

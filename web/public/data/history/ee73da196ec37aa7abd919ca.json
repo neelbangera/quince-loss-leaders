@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:56:10+00:00",
+    "capturedAt": "2026-10-09T15:38:03+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "19.08",
     "unitSpread": "0.82",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "13.67",
     "highestCost": "19.08",
-    "averageSpread": "4.07",
+    "averageSpread": "3.53",
     "firstObservedAt": "2026-09-28T17:04:10+00:00",
-    "lastObservedAt": "2026-10-08T15:56:10+00:00"
+    "lastObservedAt": "2026-10-09T15:38:03+00:00"
   },
   "history": [
     {
@@ -233,6 +233,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:56:10+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "19.08",
+      "unitSpread": "0.82",
+      "marginPct": 4.12,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.29"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.77"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.17"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:38:03+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "19.08",
       "unitSpread": "0.82",

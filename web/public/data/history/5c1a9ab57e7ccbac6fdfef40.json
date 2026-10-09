@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:50:45+00:00",
+    "capturedAt": "2026-10-09T15:32:38+00:00",
     "sellingPrice": "98.00",
     "reportedTotalCost": "56.27",
     "unitSpread": "41.73",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 28,
+    "observationCount": 29,
     "lossObservations": 0,
-    "profitObservations": 28,
+    "profitObservations": 29,
     "lowestPrice": "98.00",
     "highestPrice": "98.00",
     "lowestCost": "45.05",
     "highestCost": "56.27",
-    "averageSpread": "44.31",
+    "averageSpread": "44.22",
     "firstObservedAt": "2026-09-11T12:50:42+00:00",
-    "lastObservedAt": "2026-10-08T15:50:45+00:00"
+    "lastObservedAt": "2026-10-09T15:32:38+00:00"
   },
   "history": [
     {
@@ -1176,6 +1176,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:50:45+00:00",
+      "sellingPrice": "98.00",
+      "reportedTotalCost": "56.27",
+      "unitSpread": "41.73",
+      "marginPct": 42.58,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "24.56"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "17.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.96"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.88"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:32:38+00:00",
       "sellingPrice": "98.00",
       "reportedTotalCost": "56.27",
       "unitSpread": "41.73",

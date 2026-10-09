@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:38:09+00:00",
+    "capturedAt": "2026-10-09T15:19:54+00:00",
     "sellingPrice": "25.00",
     "reportedTotalCost": "17.20",
     "unitSpread": "7.80",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 15,
+    "observationCount": 16,
     "lossObservations": 0,
-    "profitObservations": 15,
+    "profitObservations": 16,
     "lowestPrice": "25.00",
     "highestPrice": "25.00",
     "lowestCost": "15.56",
     "highestCost": "17.20",
-    "averageSpread": "9.22",
+    "averageSpread": "9.13",
     "firstObservedAt": "2026-09-11T12:57:40+00:00",
-    "lastObservedAt": "2026-10-08T15:38:09+00:00"
+    "lastObservedAt": "2026-10-09T15:19:54+00:00"
   },
   "history": [
     {
@@ -643,6 +643,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:38:09+00:00",
+      "sellingPrice": "25.00",
+      "reportedTotalCost": "17.20",
+      "unitSpread": "7.80",
+      "marginPct": 31.2,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.32"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.30"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:19:54+00:00",
       "sellingPrice": "25.00",
       "reportedTotalCost": "17.20",
       "unitSpread": "7.80",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:52:08+00:00",
+    "capturedAt": "2026-10-09T15:34:01+00:00",
     "sellingPrice": "848.00",
     "reportedTotalCost": "602.04",
     "unitSpread": "245.96",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 41,
+    "observationCount": 42,
     "lossObservations": 0,
-    "profitObservations": 41,
+    "profitObservations": 42,
     "lowestPrice": "848.00",
     "highestPrice": "848.00",
     "lowestCost": "594.29",
     "highestCost": "602.04",
-    "averageSpread": "253.33",
+    "averageSpread": "253.16",
     "firstObservedAt": "2026-08-29T21:20:16+00:00",
-    "lastObservedAt": "2026-10-08T15:52:08+00:00"
+    "lastObservedAt": "2026-10-09T15:34:01+00:00"
   },
   "history": [
     {
@@ -1709,6 +1709,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:52:08+00:00",
+      "sellingPrice": "848.00",
+      "reportedTotalCost": "602.04",
+      "unitSpread": "245.96",
+      "marginPct": 29.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "477.54"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "50.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.12"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "22.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "30.97"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:34:01+00:00",
       "sellingPrice": "848.00",
       "reportedTotalCost": "602.04",
       "unitSpread": "245.96",

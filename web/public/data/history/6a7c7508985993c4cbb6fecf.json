@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:43:33+00:00",
+    "capturedAt": "2026-10-09T15:25:21+00:00",
     "sellingPrice": "48.00",
     "reportedTotalCost": "29.64",
     "unitSpread": "18.36",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 28,
+    "observationCount": 29,
     "lossObservations": 0,
-    "profitObservations": 28,
+    "profitObservations": 29,
     "lowestPrice": "48.00",
     "highestPrice": "48.00",
     "lowestCost": "29.64",
     "highestCost": "33.05",
-    "averageSpread": "15.43",
+    "averageSpread": "15.53",
     "firstObservedAt": "2026-09-11T12:57:11+00:00",
-    "lastObservedAt": "2026-10-08T15:43:33+00:00"
+    "lastObservedAt": "2026-10-09T15:25:21+00:00"
   },
   "history": [
     {
@@ -1176,6 +1176,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:43:33+00:00",
+      "sellingPrice": "48.00",
+      "reportedTotalCost": "29.64",
+      "unitSpread": "18.36",
+      "marginPct": 38.25,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "16.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.37"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.59"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:25:21+00:00",
       "sellingPrice": "48.00",
       "reportedTotalCost": "29.64",
       "unitSpread": "18.36",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:41:58+00:00",
+    "capturedAt": "2026-10-09T15:23:46+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "14.40",
     "unitSpread": "10.50",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "14.40",
     "highestCost": "15.47",
-    "averageSpread": "9.64",
+    "averageSpread": "9.72",
     "firstObservedAt": "2026-09-28T17:05:13+00:00",
-    "lastObservedAt": "2026-10-08T15:41:58+00:00"
+    "lastObservedAt": "2026-10-09T15:23:46+00:00"
   },
   "history": [
     {
@@ -438,6 +438,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:41:58+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "14.40",
+      "unitSpread": "10.50",
+      "marginPct": 42.17,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.83"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.14"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.21"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.82"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.80"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:23:46+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "14.40",
       "unitSpread": "10.50",

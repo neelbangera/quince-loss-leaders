@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:41:44+00:00",
+    "capturedAt": "2026-10-09T15:23:31+00:00",
     "sellingPrice": "55.00",
     "reportedTotalCost": "24.79",
     "unitSpread": "30.21",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "55.00",
     "highestPrice": "55.00",
     "lowestCost": "24.79",
     "highestCost": "27.85",
-    "averageSpread": "29.19",
+    "averageSpread": "29.45",
     "firstObservedAt": "2026-10-06T15:17:05+00:00",
-    "lastObservedAt": "2026-10-08T15:41:44+00:00"
+    "lastObservedAt": "2026-10-09T15:23:31+00:00"
   },
   "history": [
     {
@@ -151,6 +151,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:41:44+00:00",
+      "sellingPrice": "55.00",
+      "reportedTotalCost": "24.79",
+      "unitSpread": "30.21",
+      "marginPct": 54.93,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.59"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.20"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-09T15:23:31+00:00",
       "sellingPrice": "55.00",
       "reportedTotalCost": "24.79",
       "unitSpread": "30.21",

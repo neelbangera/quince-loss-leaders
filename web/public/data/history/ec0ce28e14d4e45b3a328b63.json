@@ -3,7 +3,7 @@
   "product": {
     "productKey": "sku:46282448928938",
     "variantKey": "119531",
-    "name": "Swim Trunk",
+    "name": "Swim Trunk - Kid in Dinosaurs, Size 10",
     "url": "https://www.quince.com/unisex/kid-swim-trunk",
     "brand": null,
     "department": "unisex",
@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-22T13:42:29+00:00",
+    "capturedAt": "2026-10-10T14:45:13+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "17.86",
-    "unitSpread": "2.04",
-    "marginPct": 10.25,
+    "reportedTotalCost": "17.51",
+    "unitSpread": "2.39",
+    "marginPct": 12.01,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,12 +40,12 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.79"
+        "amount": "6.43"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "0.61"
+        "amount": "0.62"
       },
       {
         "label": "Duties, Taxes, And Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
-    "lowestCost": "17.86",
+    "lowestCost": "17.51",
     "highestCost": "17.86",
-    "averageSpread": "2.04",
+    "averageSpread": "2.22",
     "firstObservedAt": "2026-09-22T13:42:29+00:00",
-    "lastObservedAt": "2026-09-22T13:42:29+00:00"
+    "lastObservedAt": "2026-10-10T14:45:13+00:00"
   },
   "history": [
     {
@@ -100,6 +100,47 @@
           "label": "Credit Card Fees",
           "type": "credit_card_fees",
           "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.76"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:45:13+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "17.51",
+      "unitSpread": "2.39",
+      "marginPct": 12.01,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.95"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.25"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.43"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.62"
         },
         {
           "label": "Duties, Taxes, And Fees",

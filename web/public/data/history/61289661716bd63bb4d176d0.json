@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:18:40+00:00",
+    "capturedAt": "2026-10-10T14:28:41+00:00",
     "sellingPrice": "4500.00",
     "reportedTotalCost": "4050.00",
     "unitSpread": "450.00",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 29,
+    "observationCount": 30,
     "lossObservations": 0,
-    "profitObservations": 29,
+    "profitObservations": 30,
     "lowestPrice": "4500.00",
     "highestPrice": "4500.00",
     "lowestCost": "3913.49",
     "highestCost": "4050.00",
-    "averageSpread": "572.39",
+    "averageSpread": "568.31",
     "firstObservedAt": "2026-09-11T13:07:53+00:00",
-    "lastObservedAt": "2026-10-09T15:18:40+00:00"
+    "lastObservedAt": "2026-10-10T14:28:41+00:00"
   },
   "history": [
     {
@@ -1217,6 +1217,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:18:40+00:00",
+      "sellingPrice": "4500.00",
+      "reportedTotalCost": "4050.00",
+      "unitSpread": "450.00",
+      "marginPct": 10.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1330.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1626.86"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "166.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "828.40"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "98.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:28:41+00:00",
       "sellingPrice": "4500.00",
       "reportedTotalCost": "4050.00",
       "unitSpread": "450.00",

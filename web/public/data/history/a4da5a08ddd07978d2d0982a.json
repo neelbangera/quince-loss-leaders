@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:36:11+00:00",
+    "capturedAt": "2026-10-10T14:46:19+00:00",
     "sellingPrice": "40.00",
     "reportedTotalCost": "26.82",
     "unitSpread": "13.18",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 22,
+    "observationCount": 23,
     "lossObservations": 0,
-    "profitObservations": 22,
+    "profitObservations": 23,
     "lowestPrice": "40.00",
     "highestPrice": "40.00",
     "lowestCost": "26.82",
     "highestCost": "27.23",
-    "averageSpread": "12.83",
+    "averageSpread": "12.84",
     "firstObservedAt": "2026-09-11T13:07:25+00:00",
-    "lastObservedAt": "2026-10-09T15:36:11+00:00"
+    "lastObservedAt": "2026-10-10T14:46:19+00:00"
   },
   "history": [
     {
@@ -930,6 +930,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:36:11+00:00",
+      "sellingPrice": "40.00",
+      "reportedTotalCost": "26.82",
+      "unitSpread": "13.18",
+      "marginPct": 32.95,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.77"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.48"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.12"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.45"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:46:19+00:00",
       "sellingPrice": "40.00",
       "reportedTotalCost": "26.82",
       "unitSpread": "13.18",

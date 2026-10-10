@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-08T15:38:45+00:00",
+    "capturedAt": "2026-10-10T14:30:31+00:00",
     "sellingPrice": "99.90",
     "reportedTotalCost": "55.43",
     "unitSpread": "44.47",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 23,
+    "observationCount": 24,
     "lossObservations": 0,
-    "profitObservations": 23,
+    "profitObservations": 24,
     "lowestPrice": "99.90",
     "highestPrice": "99.90",
     "lowestCost": "55.43",
     "highestCost": "56.15",
-    "averageSpread": "43.78",
+    "averageSpread": "43.81",
     "firstObservedAt": "2026-09-11T13:03:31+00:00",
-    "lastObservedAt": "2026-10-08T15:38:45+00:00"
+    "lastObservedAt": "2026-10-10T14:30:31+00:00"
   },
   "history": [
     {
@@ -971,6 +971,47 @@
     },
     {
       "capturedAt": "2026-10-08T15:38:45+00:00",
+      "sellingPrice": "99.90",
+      "reportedTotalCost": "55.43",
+      "unitSpread": "44.47",
+      "marginPct": 44.51,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "25.64"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.34"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.70"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.03"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "9.92"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:30:31+00:00",
       "sellingPrice": "99.90",
       "reportedTotalCost": "55.43",
       "unitSpread": "44.47",

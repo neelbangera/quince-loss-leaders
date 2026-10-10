@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:31:56+00:00",
+    "capturedAt": "2026-10-10T14:41:59+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "18.81",
     "unitSpread": "6.09",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "18.81",
     "highestCost": "19.71",
-    "averageSpread": "5.53",
+    "averageSpread": "5.59",
     "firstObservedAt": "2026-10-02T14:55:04+00:00",
-    "lastObservedAt": "2026-10-09T15:31:56+00:00"
+    "lastObservedAt": "2026-10-10T14:41:59+00:00"
   },
   "history": [
     {
@@ -356,6 +356,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:31:56+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "18.81",
+      "unitSpread": "6.09",
+      "marginPct": 24.46,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.46"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.75"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.70"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:41:59+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "18.81",
       "unitSpread": "6.09",

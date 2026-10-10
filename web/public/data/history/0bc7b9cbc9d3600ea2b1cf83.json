@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:23:42+00:00",
+    "capturedAt": "2026-10-10T14:33:44+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "11.95",
     "unitSpread": "12.95",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 29,
+    "observationCount": 30,
     "lossObservations": 0,
-    "profitObservations": 29,
+    "profitObservations": 30,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "11.95",
     "highestCost": "15.89",
-    "averageSpread": "9.42",
+    "averageSpread": "9.54",
     "firstObservedAt": "2026-09-11T12:56:56+00:00",
-    "lastObservedAt": "2026-10-09T15:23:42+00:00"
+    "lastObservedAt": "2026-10-10T14:33:44+00:00"
   },
   "history": [
     {
@@ -1217,6 +1217,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:23:42+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "11.95",
+      "unitSpread": "12.95",
+      "marginPct": 52.01,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.84"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.11"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.22"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.35"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:33:44+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "11.95",
       "unitSpread": "12.95",

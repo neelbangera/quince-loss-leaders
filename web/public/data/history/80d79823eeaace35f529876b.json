@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:28:30+00:00",
+    "capturedAt": "2026-10-10T14:38:32+00:00",
     "sellingPrice": "2000.00",
     "reportedTotalCost": "1800.00",
     "unitSpread": "200.00",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 29,
+    "observationCount": 30,
     "lossObservations": 0,
-    "profitObservations": 29,
+    "profitObservations": 30,
     "lowestPrice": "2000.00",
     "highestPrice": "2000.00",
     "lowestCost": "1800.00",
     "highestCost": "1800.00",
     "averageSpread": "200.00",
     "firstObservedAt": "2026-09-11T13:01:47+00:00",
-    "lastObservedAt": "2026-10-09T15:28:30+00:00"
+    "lastObservedAt": "2026-10-10T14:38:32+00:00"
   },
   "history": [
     {
@@ -1217,6 +1217,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:28:30+00:00",
+      "sellingPrice": "2000.00",
+      "reportedTotalCost": "1800.00",
+      "unitSpread": "200.00",
+      "marginPct": 10.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "611.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "626.43"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "76.45"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "441.66"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "43.86"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:38:32+00:00",
       "sellingPrice": "2000.00",
       "reportedTotalCost": "1800.00",
       "unitSpread": "200.00",

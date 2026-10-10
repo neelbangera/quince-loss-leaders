@@ -3,7 +3,7 @@
   "product": {
     "productKey": "sku:46588467151018",
     "variantKey": "126228",
-    "name": "Softest Rib Leggings",
+    "name": "Softest Rib Leggings in Deep Sea Blue, Size 0 3M",
     "url": "https://www.quince.com/unisex/baby-softest-rib-leggings",
     "brand": null,
     "department": "unisex",
@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-13T13:34:55+00:00",
+    "capturedAt": "2026-10-10T14:32:31+00:00",
     "sellingPrice": "14.90",
-    "reportedTotalCost": "10.89",
-    "unitSpread": "4.01",
-    "marginPct": 26.91,
+    "reportedTotalCost": "8.88",
+    "unitSpread": "6.02",
+    "marginPct": 40.4,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.80"
+        "amount": "3.79"
       },
       {
         "label": "Credit Card Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "14.90",
     "highestPrice": "14.90",
-    "lowestCost": "10.89",
+    "lowestCost": "8.88",
     "highestCost": "10.89",
-    "averageSpread": "4.01",
+    "averageSpread": "4.51",
     "firstObservedAt": "2026-09-11T13:06:00+00:00",
-    "lastObservedAt": "2026-09-13T13:34:55+00:00"
+    "lastObservedAt": "2026-10-10T14:32:31+00:00"
   },
   "history": [
     {
@@ -177,6 +177,47 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "5.80"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.30"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:32:31+00:00",
+      "sellingPrice": "14.90",
+      "reportedTotalCost": "8.88",
+      "unitSpread": "6.02",
+      "marginPct": 40.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.47"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.53"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.79"
         },
         {
           "label": "Credit Card Fees",

@@ -14,7 +14,7 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-09T15:22:07+00:00",
+    "capturedAt": "2026-10-10T14:32:08+00:00",
     "sellingPrice": "89.90",
     "reportedTotalCost": "30.86",
     "unitSpread": "59.04",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "89.90",
     "highestPrice": "89.90",
     "lowestCost": "30.86",
     "highestCost": "39.93",
-    "averageSpread": "52.99",
+    "averageSpread": "53.60",
     "firstObservedAt": "2026-10-01T15:53:48+00:00",
-    "lastObservedAt": "2026-10-09T15:22:07+00:00"
+    "lastObservedAt": "2026-10-10T14:32:08+00:00"
   },
   "history": [
     {
@@ -397,6 +397,47 @@
     },
     {
       "capturedAt": "2026-10-09T15:22:07+00:00",
+      "sellingPrice": "89.90",
+      "reportedTotalCost": "30.86",
+      "unitSpread": "59.04",
+      "marginPct": 65.67,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "14.37"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.92"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.57"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.20"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.80"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-10T14:32:08+00:00",
       "sellingPrice": "89.90",
       "reportedTotalCost": "30.86",
       "unitSpread": "59.04",

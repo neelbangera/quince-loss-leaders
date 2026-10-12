@@ -3,7 +3,7 @@
   "product": {
     "productKey": "sku:41782486565034",
     "variantKey": "8832",
-    "name": "100% European Linen Stripe Sheet Set",
+    "name": "100% European Linen Stripe Sheet Set in Mist/White Stripe, Size Twin",
     "url": "https://www.quince.com/home/european-linen-stripe-sheet-set",
     "brand": null,
     "department": "home",
@@ -14,11 +14,11 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-09-28T16:51:24+00:00",
+    "capturedAt": "2026-10-12T17:55:08+00:00",
     "sellingPrice": "144.00",
-    "reportedTotalCost": "108.98",
-    "unitSpread": "35.02",
-    "marginPct": 24.32,
+    "reportedTotalCost": "106.60",
+    "unitSpread": "37.40",
+    "marginPct": 25.97,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.46"
+        "amount": "5.08"
       },
       {
         "label": "Credit Card Fees",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "144.00",
     "highestPrice": "144.00",
-    "lowestCost": "108.98",
+    "lowestCost": "106.60",
     "highestCost": "108.98",
-    "averageSpread": "35.02",
+    "averageSpread": "35.81",
     "firstObservedAt": "2026-09-15T13:43:38+00:00",
-    "lastObservedAt": "2026-09-28T16:51:24+00:00"
+    "lastObservedAt": "2026-10-12T17:55:08+00:00"
   },
   "history": [
     {
@@ -136,6 +136,47 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "7.46"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.42"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "22.64"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-12T17:55:08+00:00",
+      "sellingPrice": "144.00",
+      "reportedTotalCost": "106.60",
+      "unitSpread": "37.40",
+      "marginPct": 25.97,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "71.36"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.08"
         },
         {
           "label": "Credit Card Fees",

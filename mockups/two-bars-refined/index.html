@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Ledger — two bars, refined</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Tokens are the ones in DESIGN.md ("The White Oxford Shirt"). */
+:root {
+  --paper: #ffffff;
+  --ink: #1b1b19;
+  --soft: #6b6b66;
+  --rule: #d9d9d3;
+  --rule-soft: #ecece7;
+  --hover: #f6f6f2;
+  --claret: #7d1d2f;
+  --stripe: #9db4d3;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  --paper: #131412;
+  --ink: #efebe2;
+  --soft: #a5a49c;
+  --rule: #3a3b35;
+  --rule-soft: #262722;
+  --hover: #1c1d1a;
+  --claret: #eba0aa;
+  --stripe: #5d77a0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+p, h1, h2, h3, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; }
+.fig { font-variant-numeric: tabular-nums; font-weight: 500; }
+.soft { color: var(--soft); }
+.below { color: var(--claret); }
+.page { width: min(1400px, 100% - 64px); margin: 0 auto; }
+
+/* ---- Mockup chrome (not part of the design) */
+.top { padding: 32px 0 24px; border-bottom: 1px solid var(--ink); }
+.top h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; }
+.top p { margin-top: 8px; max-width: 70ch; color: var(--soft); }
+.switches { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 22px; }
+.switch { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; }
+.switch > span { color: var(--soft); }
+.switch button { color: var(--soft); padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.switch button:hover { color: var(--ink); }
+.switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 88px; padding-bottom: 96px; }
+.option { padding: 44px 0 52px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.option-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.option-letter { font-family: var(--serif); font-size: 30px; line-height: 1; }
+.option-why { color: var(--soft); max-width: 58ch; margin-bottom: 30px; font-size: 14px; }
+.stage { max-width: 612px; }
+
+/* ---- Shared sheet pieces */
+.stage h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin-bottom: 18px; }
+.item-line { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--soft); margin-top: 22px; }
+.hatch { background: repeating-linear-gradient(135deg, var(--claret) 0 1.5px, transparent 1.5px 6px); }
+
+/* Cost-line colours. Claret stays reserved for "below cost"; none of these is a red. */
+:root {
+  --navy: #1f3a5f; --oxford: #7f9cc4; --forest: #2f5d46; --camel: #b98b52; --maize: #dcc06a; --stone: #a9a79c;
+  --blue-1: #17304f; --blue-2: #33557f; --blue-3: #5f7fae; --blue-4: #8ea8cc; --blue-5: #b9cae2; --blue-6: #dde6f1;
+  --make-1: #1f3a5f; --make-2: #5f7fae; --make-3: #b5c6de;
+  --send-1: #8a5a24; --send-2: #c3965a; --send-3: #e6cfa8;
+  --on-dark: #ffffff; --on-light: #1b1b19;
+}
+:root[data-theme="dark"] {
+  --navy: #6f93c9; --oxford: #b4c8e6; --forest: #6fa888; --camel: #d0a56e; --maize: #e8d283; --stone: #8d8c84;
+  --blue-1: #dde6f1; --blue-2: #b9cae2; --blue-3: #8ea8cc; --blue-4: #6f8fbe; --blue-5: #4d6c9c; --blue-6: #324c74;
+  --make-1: #6f93c9; --make-2: #a3bbe0; --make-3: #d3dff0;
+  --send-1: #b9853f; --send-2: #d6ae78; --send-3: #ecdcbd;
+  --on-dark: #131412; --on-light: #131412;
+}
+
+.flag { position: relative; height: 46px; }
+.flag > div { position: absolute; bottom: 8px; white-space: nowrap; line-height: 1.2; }
+.flag strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.bar { position: relative; display: flex; height: 52px; }
+.segs { display: flex; gap: 2px; flex: none; }
+/* No padding on the segment itself: padding would stop small lines shrinking to their true share. */
+.seg { min-width: 2px; overflow: hidden; white-space: nowrap; font-size: 12px; line-height: 1.35; }
+.seg > span { display: block; padding: 8px 10px; overflow: hidden; text-overflow: ellipsis; }
+.seg b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.room { flex: 1; margin-left: 2px; border: 1px solid var(--rule); border-left: 0; }
+.mark { position: absolute; top: -8px; bottom: -14px; width: 2px; background: var(--ink); }
+.reach { display: flex; height: 9px; margin-top: 3px; }
+.reach .paid { background: var(--ink); flex: none; }
+.under { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; font-size: 14px; }
+.key { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 26px; border-top: 1px solid var(--rule); }
+.key li { display: grid; grid-template-columns: 12px 1fr auto auto; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule-soft); }
+.key i { width: 12px; height: 12px; }
+.key .pc { color: var(--soft); font-size: 13px; width: 3em; text-align: right; }
+.key .amt { width: 4.6em; text-align: right; }
+
+/* Grouped option: brackets under the bar name the two halves */
+.groups { display: flex; gap: 2px; margin-top: 6px; }
+.groups > div { border-top: 1px solid var(--ink); padding-top: 7px; min-width: 0; font-size: 13px; line-height: 1.3; white-space: nowrap; }
+.groups b { display: block; font-weight: 600; }
+.key.grouped { grid-template-columns: 1fr 1fr; }
+.key.grouped > div > p { padding: 12px 0 8px; color: var(--soft); border-bottom: 1px solid var(--rule-soft); }
+
+/* Two-bar option: the price over the cost, on one scale */
+.pair { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px 16px; align-items: center; }
+.pair .name b { display: block; font-family: var(--serif); font-weight: 400; font-size: 20px; font-variant-numeric: tabular-nums lining-nums; line-height: 1.2; }
+.pair .track { display: flex; height: 52px; }
+.pair .ink { background: var(--ink); flex: none; }
+.pair .gap { flex: 1; }
+.pair .gap.over { margin-left: 2px; border: 1px solid var(--rule); border-left: 0; }
+
+/* A: dimension lines, the way a tailor marks a measurement */
+.dimrow { display: flex; align-items: flex-end; height: 56px; margin-bottom: 10px; }
+.dim { position: relative; flex: none; min-width: 0; padding-bottom: 8px; border-bottom: 1px solid currentColor; white-space: nowrap; line-height: 1.2; }
+.dim::before, .dim::after { content: ""; position: absolute; bottom: -5px; width: 1px; height: 9px; background: currentColor; }
+.dim::before { left: 0; }
+.dim::after { right: 0; }
+.dim b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.dim.short { flex: 1; margin-left: 3px; display: flex; flex-direction: column; align-items: flex-end; }
+.room.said { display: flex; align-items: center; padding-left: 12px; font-size: 13px; white-space: nowrap; overflow: hidden; }
+
+/* B: a slim ink measuring stick laid along the top of the cost bar */
+.heads { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 8px; line-height: 1.2; }
+.heads b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; font-variant-numeric: tabular-nums lining-nums; }
+.heads > div:last-child { text-align: right; color: var(--soft); }
+.stick { display: flex; height: 14px; margin-bottom: 3px; }
+.stick .ink { flex: none; background: var(--ink); }
+.stick .hatch { flex: 1; }
+
+/* C: the price fills the bar; what it does not reach stays pale */
+.fill { position: relative; height: 52px; }
+.fill .layer { position: absolute; top: 0; bottom: 0; left: 0; display: flex; gap: 2px; }
+.fill .pale { opacity: 0.25; }
+.fill .unreached { position: absolute; top: 0; bottom: 0; right: 0; }
+.fill .room { position: absolute; top: 0; bottom: 0; right: 0; margin: 0; }
+
+/* D: a pin for the price and a claret frame around what it leaves uncovered */
+.frame { position: absolute; top: -3px; bottom: -3px; right: -3px; border: 2px solid var(--claret); }
+
+/* Two bars on one scale */
+.rows { display: grid; grid-template-columns: 9.5em 1fr; gap: 14px 18px; align-items: center; }
+.rows .name { line-height: 1.25; }
+.rows .name b, .over b { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; font-variant-numeric: tabular-nums lining-nums; }
+.track { display: flex; height: 48px; }
+.track .ink { flex: none; background: var(--ink); }
+.track .rest { flex: 1; }
+.track .open { flex: 1; margin-left: 2px; border: 1px solid var(--rule); border-left: 0; }
+.track .pad { flex: none; }
+.track .piece { flex: none; }
+.track .piece.more { border: 1px solid var(--ink); }
+.stack > .over { display: flex; align-items: baseline; gap: 12px; margin: 0 0 8px; }
+.stack > .over b { font-size: 24px; }
+.stack > .track { margin-bottom: 22px; }
+.sum { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.sum p { font-family: var(--serif); font-size: 22px; line-height: 1.2; }
+.sum .fig { font-family: var(--serif); font-weight: 400; font-size: 24px; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.key.grouped > div > p { display: flex; justify-content: space-between; gap: 12px; }
+.key.grouped > div > p span { letter-spacing: 0; text-transform: none; font-weight: 500; font-size: 13px; }
+
+.track { position: relative; }
+.track .line { flex: none; border: 1.5px solid var(--ink); }
+.track .gapnote { align-self: center; padding-left: 10px; font-size: 13px; white-space: nowrap; }
+.guide { position: absolute; top: -8px; bottom: -8px; width: 0; border-left: 1px dashed var(--ink); }
+.segs.split { gap: 10px; }
+.segs.split > div { display: flex; gap: 2px; min-width: 0; }
+.heads2 { display: flex; gap: 10px; font-size: 12px; line-height: 1.3; white-space: nowrap; margin-bottom: -8px; }
+.heads2 > div { min-width: 0; }
+.heads2 b { font-weight: 600; }
+
+@media (max-width: 640px) {
+  .rows { grid-template-columns: 1fr; gap: 6px; }
+  .rows .name { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; }
+}
+@media (max-width: 1180px) { .options { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .page { width: calc(100% - 32px); }
+  .key, .key.grouped { grid-template-columns: 1fr; }
+  .pair { grid-template-columns: 1fr; gap: 4px; }
+  .pair .track { margin-bottom: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <h1>Two bars, labels at the side: six finishes</h1>
+    <p>The layout is settled: cost on top, price underneath, figures at the side, one scale. These six change only how the bars themselves are drawn. Switch the item and the theme to compare.</p>
+    <div class="switches label">
+      <div class="switch" id="items" role="group" aria-label="Item"><span>Item</span></div>
+      <div class="switch" id="themes" role="group" aria-label="Theme">
+        <span>Theme</span>
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
+      </div>
+    </div>
+  </header>
+  <main class="options" id="options"></main>
+</div>
+
+<script>
+const ITEMS = [
+  {
+    id: "sweater", tab: "Small shortfall",
+    name: "Women's 100% Organic Cotton Fisherman Crew Sweater", variant: "In Sapphire Blue · XS",
+    price: 42.00,
+    lines: [["Materials", 5.09], ["Crafting Cost", 5.96], ["Packaging", 0.20], ["Freight & Handling", 26.18], ["Credit Card Fees", 1.26], ["Duties, Taxes, And Fees", 9.30]],
+  },
+  {
+    id: "rug", tab: "Huge shortfall",
+    name: "Sahara Hand-Tufted Wool Rug", variant: "8'9\" x 11'9\"",
+    price: 59.90,
+    lines: [["Materials", 248.00], ["Crafting Cost", 200.00], ["Packaging", 2.00], ["Freight & Handling", 29.00], ["Credit Card Fees", 0.15], ["Duties, Taxes, And Fees", 0.00]],
+  },
+  {
+    id: "coat", tab: "Above cost",
+    name: "100% Mongolian Cashmere Trench Coat", variant: "In Heather Taupe · XS",
+    price: 600.00,
+    lines: [["Materials", 293.01], ["Crafting Cost", 29.00], ["Packaging", 2.00], ["Freight & Handling", 8.04], ["Credit Card Fees", 19.96], ["Duties, Taxes, And Fees", 30.00]],
+  },
+];
+
+const money = (value) => (value < 0 ? "−" : "") + "$" + Math.abs(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const pct = (part, whole) => (whole ? (part / whole) * 100 : 0);
+const share = (part, whole) => { const value = pct(part, whole); return value === 0 ? "0%" : value < 1 ? "<1%" : Math.round(value) + "%"; };
+const esc = (text) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function facts(item) {
+  const cost = item.lines.reduce((sum, line) => sum + line[1], 0);
+  const gap = item.price - cost;
+  return { cost, gap, below: gap < 0, scale: Math.max(cost, item.price) };
+}
+const bySize = (lines) => [...lines].sort((left, right) => right[1] - left[1]);
+
+// Colour belongs to the cost line, not to its rank, so Materials is the same colour on every item.
+const PREP = {
+  "Materials": ["--navy", "--on-dark"], "Crafting Cost": ["--oxford", "--on-light"], "Packaging": ["--stone", "--on-light"],
+  "Freight & Handling": ["--forest", "--on-dark"], "Duties, Taxes, And Fees": ["--camel", "--on-light"], "Credit Card Fees": ["--maize", "--on-light"],
+};
+const GROUPS = [
+  ["Making it", [["Materials", "--make-1", "--on-dark"], ["Crafting Cost", "--make-2", "--on-light"], ["Packaging", "--make-3", "--on-light"]]],
+  ["Getting it to you", [["Freight & Handling", "--send-1", "--on-dark"], ["Duties, Taxes, And Fees", "--send-2", "--on-light"], ["Credit Card Fees", "--send-3", "--on-light"]]],
+];
+const BLUES = [["--blue-1", "--on-dark"], ["--blue-2", "--on-dark"], ["--blue-3", "--on-light"], ["--blue-4", "--on-light"], ["--blue-5", "--on-light"], ["--blue-6", "--on-light"]];
+const prepSegs = (item) => bySize(item.lines).map(([label, amount]) => ({ label, amount, bg: PREP[label][0], fg: PREP[label][1] }));
+const blueSegs = (item) => bySize(item.lines).map(([label, amount], index) => ({ label, amount, bg: BLUES[index][0], fg: BLUES[index][1] }));
+const groupSegs = (item) => GROUPS.map(([name, lines]) => ({
+  name,
+  segs: lines.map(([label, bg, fg]) => ({ label, amount: (item.lines.find((line) => line[0] === label) ?? [label, 0])[1], bg, fg })),
+}));
+
+const segHtml = (segs, cost) => segs.filter((seg) => seg.amount > 0).map((seg) => {
+  const part = pct(seg.amount, cost);
+  const text = part > 24 ? `<b>${esc(seg.label)}</b>${money(seg.amount)}` : part > 11 ? money(seg.amount) : "";
+  return `<div class="seg" style="flex:${seg.amount} 0 0;background:var(${seg.bg});color:var(${seg.fg})" title="${esc(seg.label)} ${money(seg.amount)}">${text ? `<span>${text}</span>` : ""}</div>`;
+}).join("");
+const keyRow = (seg, cost) => `<li><i style="background:var(${seg.bg})"></i><span>${esc(seg.label)}</span><span class="pc fig">${share(seg.amount, cost)}</span><span class="amt fig">${money(seg.amount)}</span></li>`;
+
+function flagAndBar(item, f, segs, extra = "") {
+  const costWidth = pct(f.cost, f.scale);
+  const priceAt = pct(item.price, f.scale);
+  const flagRight = priceAt > 55;
+  return `<div class="flag"><div style="${flagRight ? `right:${(100 - priceAt).toFixed(2)}%;text-align:right` : `left:${priceAt.toFixed(2)}%`}">
+      <span class="label soft">You pay</span><strong>${money(item.price)}</strong>
+    </div></div>
+    <div class="bar">
+      <div class="segs" style="width:${costWidth.toFixed(2)}%">${segHtml(segs, f.cost)}</div>
+      ${f.below ? "" : `<div class="room"></div>`}
+      <div class="mark" style="left:calc(${priceAt.toFixed(2)}% - ${priceAt > 99 ? 2 : 1}px)"></div>
+    </div>
+    <div class="reach"><span class="paid" style="width:${priceAt.toFixed(2)}%"></span>${f.below ? `<span class="hatch" style="flex:1"></span>` : ""}</div>
+    ${extra}
+    <p class="under">
+      <span class="soft">Reported cost <span class="fig">${money(f.cost)}</span></span>
+      <span class="${f.below ? "below" : ""}"><span class="fig">${money(Math.abs(f.gap))}</span> ${f.below ? "of the cost is not covered by the price" : "above the reported cost"}</span>
+    </p>`;
+}
+
+// One builder, six finishes. `o` says how the bars are drawn.
+function build(item, o) {
+  const f = facts(item); const groups = groupSegs(item);
+  const all = groups.flatMap((group) => group.segs);
+  const costWidth = pct(f.cost, f.scale); const priceWidth = pct(item.price, f.scale);
+  const height = o.height ?? 48;
+  const labelled = (segs) => (o.labels === false ? segs.map((seg) => ({ ...seg, label: "", amount: seg.amount, bare: true })) : segs);
+  const segsHtml = (segs) => (o.labels === false
+    ? segs.filter((seg) => seg.amount > 0).map((seg) => `<div class="seg" style="flex:${seg.amount} 0 0;background:var(${seg.bg})"></div>`).join("")
+    : segHtml(segs, f.cost));
+  const sums = groups.map((group) => group.segs.reduce((total, seg) => total + seg.amount, 0));
+  const costInner = o.split
+    ? groups.map((group, index) => (sums[index] > 0 ? `<div style="flex:${sums[index]} 0 0">${segsHtml(group.segs)}</div>` : "")).join("")
+    : segsHtml(all);
+  const note = (text, cls = "") => `<span class="gapnote fig ${cls}">${text}</span>`;
+  const guide = o.guide && f.gap !== 0 ? `<i class="guide" style="left:${Math.min(costWidth, priceWidth).toFixed(2)}%"></i>` : "";
+  const cost = `<div class="track" style="height:${height}px">
+      <div class="segs ${o.split ? "split" : ""}" style="width:${costWidth.toFixed(2)}%">${costInner}</div>
+      ${o.box && f.gap > 0 ? `<span class="open"></span>` : ""}
+      ${o.guide && f.gap > 0 ? note("+" + money(f.gap) + " above cost") : ""}${guide}
+    </div>`;
+  const price = `<div class="track" style="height:${height}px">
+      <span class="${o.outline ? "line" : "ink"}" style="width:${priceWidth.toFixed(2)}%"></span>
+      ${o.hatch && f.below ? `<span class="rest hatch"></span>` : ""}
+      ${o.guide && f.below ? note(money(f.gap), "below") : ""}${guide}
+    </div>`;
+  const heads = o.split ? `<div></div><div class="heads2" style="width:${costWidth.toFixed(2)}%">${groups.map((group, index) => (sums[index] > 0
+    ? `<div style="flex:${sums[index]} 0 0${pct(sums[index], f.cost) < 30 && index > 0 ? ";display:flex;justify-content:flex-end" : ""}"><span><b>${group.name}</b> <span class="soft fig">${share(sums[index], f.cost)}</span></span></div>` : "")).join("")}</div>` : "";
+  const key = `<div class="key grouped">${groups.map((group, index) => `<div><p class="label"><b>${group.name}</b><span class="fig">${money(sums[index])} · ${share(sums[index], f.cost)}</span></p><ul>${group.segs.map((seg) => keyRow(seg, f.cost)).join("")}</ul></div>`).join("")}</div>`;
+  const sum = `<div class="sum ${f.below ? "below" : ""}"><p>${f.below ? "Sold below its reported cost by" : f.gap > 0 ? "Sold above its reported cost by" : "Sold at its reported cost"}</p>${f.gap === 0 ? "" : `<span class="fig">${money(Math.abs(f.gap))}</span>`}</div>`;
+  return `<h3>What Quince says it costs</h3>
+    <div class="rows">
+      ${heads}
+      <div class="name"><span class="label soft">Costs Quince</span><b>${money(f.cost)}</b></div>${cost}
+      <div class="name"><span class="label soft">Quince sells it for</span><b>${money(item.price)}</b></div>${price}
+    </div>
+    ${sum}${key}`;
+}
+
+const OPTIONS = [
+  ["1", "As picked", "The version you chose, unchanged: two solid bars of equal height, cost labelled inside its larger segments, price in ink.", (item) => build(item, {})],
+  ["2", "Slim", "The same two bars at a third of the height with no text inside them. Reads as two ruled lines rather than two blocks; the list underneath carries every label.", (item) => build(item, { height: 16, labels: false })],
+  ["3", "Shortfall hatched in place", "Where the price bar stops short of the cost, the missing length is hatched in claret. When the price runs past, the cost row gets an open box instead.", (item) => build(item, { hatch: true, box: true })],
+  ["4", "Outlined price bar", "The price is an ink outline, not a solid block, so the cost bar's colour is the only weight on the page and the price reads as a measure laid beside it.", (item) => build(item, { outline: true })],
+  ["5", "Cost bar split in two", "A wider gap separates making it from getting it to you, each half named above the bar with its share. The two-family idea shows without reading the list.", (item) => build(item, { split: true })],
+  ["6", "Guide rule and gap figure", "A dashed rule drops from the end of the shorter bar through both rows, and the difference is written in the space it leaves.", (item) => build(item, { guide: true })],
+];
+
+let current = ITEMS[0];
+function render() {
+  document.getElementById("options").innerHTML = OPTIONS.map(([letter, title, why, build]) => `
+    <section class="option">
+      <div class="option-head"><span class="option-letter">${letter}</span><span class="label">${title}</span></div>
+      <p class="option-why">${why}</p>
+      <div class="stage">${build(current)}<p class="item-line">${esc(current.name)} · ${esc(current.variant)}</p></div>
+    </section>`).join("");
+  document.querySelectorAll("#items button").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.item === current.id)));
+}
+
+const items = document.getElementById("items");
+for (const item of ITEMS) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.item = item.id;
+  button.textContent = item.tab;
+  button.addEventListener("click", () => { current = item; render(); });
+  items.append(button);
+}
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll("[data-theme-set]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.themeSet === theme)));
+}
+document.querySelectorAll("[data-theme-set]").forEach((button) => button.addEventListener("click", () => setTheme(button.dataset.themeSet)));
+
+// Deep links for screenshots: #rug, #coat, #dark (comma-separated).
+const flags = location.hash.slice(1).split(",");
+current = ITEMS.find((item) => flags.includes(item.id)) ?? ITEMS[0];
+setTheme(flags.includes("dark") ? "dark" : "light");
+render();
+</script>
+</body>
+</html>

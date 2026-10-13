@@ -107,6 +107,86 @@ class RankingRow:
     parse_status: str
     confidence: float
     has_exorbitant_fees: bool = False
+    image_url: str | None = None
+    parent_key: str | None = None
+    variant_label: str | None = None
+    variant_color: str | None = None
+    variant_size: str | None = None
+
+
+def _image_url_from_metadata(metadata_json: str | None) -> str | None:
+    try:
+        metadata = json.loads(metadata_json or "{}")
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(metadata, dict):
+        return None
+
+    image_urls = metadata.get("image_urls")
+    if isinstance(image_urls, list):
+        for image_url in image_urls:
+            if isinstance(image_url, str) and image_url.strip():
+                return image_url.strip()
+    image_url = metadata.get("image_url")
+    return image_url.strip() if isinstance(image_url, str) and image_url.strip() else None
+
+
+def _variant_metadata_from_json(
+    metadata_json: str | None,
+    product_name: str | None = None,
+) -> tuple[str | None, str | None, str | None, str | None]:
+    """Read parent and human-readable variant identity from observation metadata."""
+
+    try:
+        metadata = json.loads(metadata_json or "{}")
+    except json.JSONDecodeError:
+        return None, None, None, None
+    if not isinstance(metadata, dict):
+        return None, None, None, None
+
+    embedded = metadata.get("embedded_pricing")
+    embedded_variant = embedded.get("variant") if isinstance(embedded, dict) else None
+    if not isinstance(embedded_variant, dict):
+        embedded_variant = {}
+
+    parent_value = metadata.get("parent_product_id")
+    if parent_value is None and isinstance(embedded, dict):
+        parent_value = embedded.get("product_id")
+    parent_key = str(parent_value).strip() if parent_value is not None else None
+    if not parent_key:
+        parent_key = None
+
+    label_value = metadata.get("variant_label") or embedded_variant.get("name")
+    label = str(label_value).strip() if label_value is not None else None
+    if not label:
+        label = None
+
+    color_value = metadata.get("variant_color")
+    size_value = metadata.get("variant_size")
+    # Older observations predate the explicit variant fields and may have
+    # selected the first embedded cost variant. The page title still carries
+    # the displayed color, which is a useful compatibility hint until those
+    # snapshots are re-parsed with the corrected selector.
+    title_color: str | None = None
+    if isinstance(product_name, str):
+        title_parts = [part.strip() for part in product_name.rsplit(" in ", 1)]
+        if len(title_parts) == 2 and all(title_parts):
+            title_color = title_parts[1]
+    if not color_value and title_color:
+        color_value = title_color
+        if label:
+            label_parts = [part.strip() for part in label.rsplit("/", 1)]
+            if len(label_parts) == 2 and label_parts[0]:
+                label = f"{label_parts[0]} / {title_color}"
+    if (not color_value or not size_value) and label:
+        parts = [part.strip() for part in label.rsplit("/", 1)]
+        if len(parts) == 2 and all(parts):
+            size_value = size_value or parts[0]
+            color_value = color_value or parts[1]
+
+    color = str(color_value).strip() if color_value is not None else None
+    size = str(size_value).strip() if size_value is not None else None
+    return parent_key, label, color or None, size or None
 
 
 class Repository:
@@ -287,16 +367,31 @@ class Repository:
                 r.product_key, r.variant_key, p.name, p.canonical_url, p.brand,
                 p.brand_type, p.category, r.captured_at, r.currency, r.selling_price_cents,
                 r.reported_total_cost_cents, r.unit_spread_cents, r.margin_pct,
-                r.parse_status, r.confidence,
-                EXISTS (
-                    SELECT 1
-                    FROM cost_lines cl
-                    WHERE cl.observation_id = r.observation_id
-                      AND cl.normalized_type IN (
-                          'freight_handling', 'credit_card_fees', 'duties_taxes_fees'
-                      )
-                      AND r.selling_price_cents IS NOT NULL
-                      AND cl.amount_cents >= r.selling_price_cents
+                r.parse_status, r.confidence, r.metadata_json,
+                (
+                    COALESCE(json_extract(r.metadata_json, '$.fee_warning'), 0) = 1
+                    OR EXISTS (
+                        SELECT 1
+                        FROM cost_lines cl
+                        WHERE cl.observation_id = r.observation_id
+                          AND cl.normalized_type IN (
+                              'freight_handling', 'credit_card_fees', 'duties_taxes_fees'
+                          )
+                          AND r.selling_price_cents IS NOT NULL
+                          AND cl.amount_cents >= r.selling_price_cents
+                    )
+                    OR EXISTS (
+                        SELECT 1
+                        FROM cost_lines duties
+                        WHERE duties.observation_id = r.observation_id
+                          AND duties.normalized_type = 'duties_taxes_fees'
+                          AND duties.amount_cents > (
+                              SELECT COALESCE(SUM(other.amount_cents), 0)
+                              FROM cost_lines other
+                              WHERE other.observation_id = r.observation_id
+                                AND other.normalized_type <> 'duties_taxes_fees'
+                          )
+                    )
                 ) AS has_exorbitant_fees
             FROM ranked r
             JOIN products p ON p.product_key = r.product_key
@@ -459,6 +554,10 @@ class Repository:
             spread = row["unit_spread_cents"]
             if spread is None:
                 continue
+            parent_key, variant_label, variant_color, variant_size = _variant_metadata_from_json(
+                row["metadata_json"],
+                row["name"],
+            )
             result.append(
                 RankingRow(
                     product_key=row["product_key"],
@@ -477,6 +576,11 @@ class Repository:
                     parse_status=row["parse_status"],
                     confidence=row["confidence"],
                     has_exorbitant_fees=bool(row["has_exorbitant_fees"]),
+                    image_url=_image_url_from_metadata(row["metadata_json"]),
+                    parent_key=parent_key,
+                    variant_label=variant_label,
+                    variant_color=variant_color,
+                    variant_size=variant_size,
                 )
             )
         result.sort(key=lambda item: item.unit_spread_cents, reverse=descending)

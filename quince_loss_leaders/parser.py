@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import replace
 from datetime import datetime
 from html.parser import HTMLParser
 import hashlib
@@ -7,7 +8,7 @@ import json
 import re
 from decimal import Decimal, InvalidOperation
 from typing import Any, Iterable
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, unquote, urljoin, urlsplit
 
 from .models import CostLine, ProductObservation
 
@@ -16,6 +17,16 @@ MONEY_RE = re.compile(
     r"(?<![A-Za-z0-9])(?:USD\s*)?\$\s*"
     r"((?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?)"
     r"(?![0-9,])"
+)
+
+
+NON_PRODUCT_IMAGE_RE = re.compile(
+    r"(?:^|[/_.-])(?:"
+    r"privacyoptions(?:[0-9]+x[0-9]+)?|"
+    r"app[_-]?icon|favicon|logo|checkbox|checkmark|sprite|placeholder|"
+    r"tracking|pixel|trustarc"
+    r")(?:[/_.-]|$)",
+    re.IGNORECASE,
 )
 
 
@@ -98,6 +109,7 @@ class _HTMLCollector(HTMLParser):
         self.jsonld_parts: list[str] = []
         self.application_json_parts: list[str] = []
         self.price_attribute_values: list[str] = []
+        self.image_candidates: list[str] = []
 
         self._row: list[str] | None = None
         self._cell: list[str] | None = None
@@ -122,6 +134,19 @@ class _HTMLCollector(HTMLParser):
 
         if tag == "link" and attributes.get("rel", "").lower() == "canonical":
             self.canonical = attributes.get("href") or None
+
+        if tag in {"img", "source"}:
+            for attribute in ("data-src", "data-original", "data-lazy-src", "src"):
+                value = attributes.get(attribute)
+                if value:
+                    self.image_candidates.append(value)
+            srcset = attributes.get("data-srcset") or attributes.get("srcset")
+            if srcset:
+                self.image_candidates.extend(
+                    candidate.split()[0]
+                    for candidate in srcset.split(",")
+                    if candidate.split()
+                )
 
         for attr_name in ("data-price", "data-product-price", "data-selling-price"):
             if attributes.get(attr_name):
@@ -225,6 +250,8 @@ EMBEDDED_COST_COMPONENTS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
     ("Credit Card Fees", "credit_card_fees", ("creditCardFees",)),
     ("Duties, Taxes, And Fees", "duties_taxes_fees", ("dutyFee",)),
 )
+
+DUTIES_TAXES_FEES_TYPE = "duties_taxes_fees"
 
 
 def _embedded_cost_lines(variant: dict[str, Any]) -> list[CostLine]:
@@ -377,11 +404,205 @@ def _jsonld_products(parts: Iterable[str]) -> list[dict[str, Any]]:
     return products
 
 
+def _variant_metadata(variant: dict[str, Any]) -> dict[str, str]:
+    """Return displayable size/color fields from an embedded variant label."""
+
+    raw_name = variant.get("name")
+    if not isinstance(raw_name, str) or not raw_name.strip():
+        return {}
+
+    label = normalize_space(raw_name)
+    metadata = {"variant_label": label}
+    parts = [normalize_space(part) for part in label.rsplit("/", 1)]
+    if len(parts) == 2 and all(parts):
+        metadata["variant_size"] = parts[0]
+        metadata["variant_color"] = parts[1]
+    return metadata
+
+
+def _jsonld_image_values(product: dict[str, Any]) -> list[str]:
+    value = product.get("image")
+    values = value if isinstance(value, list) else [value]
+    images: list[str] = []
+    for candidate in values:
+        if isinstance(candidate, dict):
+            candidate = candidate.get("url") or candidate.get("contentUrl")
+        if isinstance(candidate, str) and candidate.strip():
+            images.append(candidate.strip())
+    return images
+
+
+def _extract_image_urls(
+    collector: _HTMLCollector,
+    products: Iterable[dict[str, Any]],
+    base_url: str | None,
+) -> list[str]:
+    """Return stable, browser-loadable product image URLs from a page."""
+
+    candidates: list[str] = []
+    # Quince embeds recommendation products in the same document. The first
+    # Product object is the page's product; using every Product would make
+    # unrelated recommendation imagery look like gallery images.
+    first_product = next(iter(products), None)
+    if first_product is not None:
+        candidates.extend(_jsonld_image_values(first_product))
+    for key in ("og:image", "og:image:url", "twitter:image"):
+        if collector.meta.get(key):
+            candidates.append(collector.meta[key])
+    candidates.extend(collector.image_candidates)
+
+    images: list[str] = []
+    seen: set[str] = set()
+    seen_assets: set[str] = set()
+    for candidate in candidates:
+        resolved = urljoin(base_url or "", candidate.strip())
+        parsed = urlsplit(resolved)
+        if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+            continue
+        if parsed.path.lower().endswith(".svg"):
+            continue
+        if resolved in seen:
+            continue
+        asset_name = unquote(parsed.path.rsplit("/", 1)[-1]).lower()
+        if NON_PRODUCT_IMAGE_RE.search(asset_name):
+            continue
+        if asset_name and asset_name in seen_assets:
+            continue
+        seen.add(resolved)
+        if asset_name:
+            seen_assets.add(asset_name)
+        images.append(resolved)
+        if len(images) == 8:
+            break
+    return images
+
+
+def _normalize_cost_anomalies(
+    cost_lines: list[CostLine],
+    total_cost: Decimal | None,
+    total_source: str,
+    selling_price: Decimal | None,
+) -> tuple[list[CostLine], Decimal | None, str, dict[str, str] | None]:
+    """Discard disclosed cost components that cannot be per-unit costs.
+
+    Two documented rules, applied in order. Both retain the originally disclosed
+    amount in the warning and never silently drop source data.
+
+    1. Exorbitant duties. A duties/taxes/fees component that exceeds the sum of
+       every other disclosed cost is not a plausible per-unit breakdown; it is
+       normalised to zero. Threshold: ``duties > sum(other lines)``.
+
+    2. Ancillary component above the selling price. An ancillary line (freight,
+       fees, packaging, duties) larger than the selling price cannot be a
+       per-unit cost -- the unit would cost more to move or pay for than it
+       fetches. This is what catches runaway ``shippingHandling`` values such as
+       4580.83 against a 1300.00 bed, which rule 1 alone missed because freight
+       was only ever compared to the other lines.
+       Threshold: ``ancillary component > selling_price``.
+
+       The bound deliberately applies to *ancillary* lines only. Materials and
+       crafting are the cost of the thing itself, and them exceeding the price is
+       precisely what a loss leader is; a blanket rule would normalise real
+       losses into profits. A share-based threshold was rejected for the same
+       reason in the other direction: freight legitimately exceeds half of cost
+       on many cheap garments.
+    """
+
+    ANCILLARY_TYPES = frozenset(
+        {
+            "freight_handling",
+            "credit_card_fees",
+            "packaging",
+            "duties_taxes_fees",
+        }
+    )
+
+    warnings: dict[str, str] | None = None
+    original_total = total_cost
+
+    def record(original: Decimal, other: Decimal, kind: str) -> None:
+        nonlocal warnings
+        entry = {
+            "rule": kind,
+            "original_amount": str(original),
+            "other_cost_total": str(other),
+            "replacement_amount": "0.00",
+        }
+        if original_total is not None:
+            entry["original_total"] = str(original_total)
+        warnings = entry
+
+    duties_total = sum(
+        (
+            line.amount
+            for line in cost_lines
+            if line.normalized_type == DUTIES_TAXES_FEES_TYPE
+        ),
+        Decimal("0.00"),
+    ).quantize(Decimal("0.01"))
+    other_total = sum(
+        (
+            line.amount
+            for line in cost_lines
+            if line.normalized_type != DUTIES_TAXES_FEES_TYPE
+        ),
+        Decimal("0.00"),
+    ).quantize(Decimal("0.01"))
+
+    if duties_total > other_total:
+        cost_lines = [
+            replace(line, amount=Decimal("0.00"))
+            if line.normalized_type == DUTIES_TAXES_FEES_TYPE
+            else line
+            for line in cost_lines
+        ]
+        record(duties_total, other_total, "exceeds_other_costs")
+        total_cost = other_total
+        total_source = "normalized_fee_excluded"
+
+    if selling_price is not None:
+        for line in cost_lines:
+            if line.normalized_type not in ANCILLARY_TYPES:
+                continue
+            if line.amount <= selling_price:
+                continue
+            rest = sum(
+                (
+                    other.amount
+                    for other in cost_lines
+                    if other is not line and other.amount != Decimal("0.00")
+                ),
+                Decimal("0.00"),
+            ).quantize(Decimal("0.01"))
+            original = line.amount
+            cost_lines = [
+                replace(other, amount=Decimal("0.00")) if other is line else other
+                for other in cost_lines
+            ]
+            record(original, rest, "exceeds_selling_price")
+            total_cost = sum(
+                (other.amount for other in cost_lines), Decimal("0.00")
+            ).quantize(Decimal("0.01"))
+            total_source = "normalized_fee_excluded"
+
+    return cost_lines, total_cost, total_source, warnings
+
+
 def _jsonld_offer(product: dict[str, Any]) -> dict[str, Any] | None:
     offers = product.get("offers")
     if isinstance(offers, list):
         return offers[0] if offers and isinstance(offers[0], dict) else None
     return offers if isinstance(offers, dict) else None
+
+
+def _selected_variant_url(product: dict[str, Any], base_url: str | None) -> str | None:
+    """Use the selected JSON-LD offer to identify the embedded variant."""
+
+    offer = _jsonld_offer(product)
+    raw_url = offer.get("url") if offer else None
+    if not isinstance(raw_url, str) or not raw_url.strip():
+        return base_url
+    return urljoin(base_url or "", raw_url.strip())
 
 
 def _jsonld_brand(product: dict[str, Any]) -> str | None:
@@ -520,12 +741,20 @@ def parse_html(
     *,
     captured_at: datetime | None = None,
     canonical_url: str | None = None,
+    target_variant_key: str | None = None,
 ) -> ProductObservation:
     """Parse a saved product page into one observation.
 
     This function intentionally does not fetch URLs. Keeping ingestion local
     makes it useful for authorized page exports and parser tests, and leaves a
     future approved API/feed adapter independent from the parsing logic.
+
+    ``target_variant_key`` asserts which embedded variant this capture
+    represents. It is only used by callers that already hold that identity --
+    a reparse of a stored observation, for instance -- and is routed through
+    ``_variant_score``'s existing ``?variant=<id>`` evidence path rather than
+    forcing a match. If the page has no such variant the normal selection
+    applies and the mismatch is left visible to the caller.
     """
 
     collector = _HTMLCollector()
@@ -545,7 +774,12 @@ def parse_html(
         str((_jsonld_offer(product) or {}).get("priceCurrency") or "USD").upper()
     )
     selling_price = _extract_price(collector, products)
-    embedded_pricing = _extract_embedded_pricing(collector, canonical or source_ref)
+    selected_variant_url = _selected_variant_url(product, canonical or source_ref)
+    pricing_ref = selected_variant_url or canonical or source_ref
+    if target_variant_key:
+        separator = "&" if "?" in pricing_ref else "?"
+        pricing_ref = f"{pricing_ref}{separator}variant={target_variant_key}"
+    embedded_pricing = _extract_embedded_pricing(collector, pricing_ref)
     if selling_price is None and embedded_pricing:
         selling_price = _embedded_money(embedded_pricing["variant"].get("totalPrice"))
 
@@ -566,15 +800,34 @@ def parse_html(
         or embedded_variant.get("name")
         or ""
     )
+    cost_lines, total_cost, total_source, fee_warning = _normalize_cost_anomalies(
+        cost_lines,
+        total_cost,
+        total_source,
+        selling_price,
+    )
+
     metadata: dict[str, Any] = {
         "headings": collector.headings,
         "jsonld_product_count": len(products),
     }
+    image_urls = _extract_image_urls(collector, products, canonical or source_ref)
+    if image_urls:
+        metadata["image_urls"] = image_urls
+        metadata["image_url"] = image_urls[0]
     if embedded_pricing:
+        variant_metadata = _variant_metadata(embedded_variant)
         metadata["embedded_pricing"] = {
             "product_id": embedded_pricing["product_id"],
             "variant": embedded_variant,
         }
+        metadata["parent_product_id"] = str(embedded_pricing["product_id"])
+        metadata.update(variant_metadata)
+        if selected_variant_url:
+            metadata["selected_variant_url"] = selected_variant_url
+    if fee_warning is not None:
+        metadata["fee_warning"] = True
+        metadata["fee_normalization"] = fee_warning
 
     observation = ProductObservation(
         source_ref=source_ref,
@@ -595,6 +848,20 @@ def parse_html(
         metadata=metadata,
     )
     observation.finalize_identity()
+
+    if fee_warning is not None:
+        rule = fee_warning.get("rule", "exceeds_other_costs")
+        if rule == "exceeds_selling_price":
+            message = (
+                "A disclosed cost component exceeded the selling price; "
+                "treating that line as $0.00."
+            )
+        else:
+            message = (
+                "Duties, taxes, and fees exceeded the rest of the cost breakdown; "
+                "treating that line as $0.00."
+            )
+        observation.add_issue("normalized_exorbitant_fee", message)
 
     if selling_price is None:
         observation.add_issue("missing_price", "Could not find the product selling price.", "error")

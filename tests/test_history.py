@@ -1,3 +1,4 @@
+from dataclasses import replace
 from datetime import datetime, timezone
 from decimal import Decimal
 import json
@@ -5,7 +6,14 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from quince_loss_leaders.history import display_name, export_history, export_static_data, history_file_path
+from quince_loss_leaders.history import (
+    display_name,
+    export_history,
+    export_static_data,
+    history_file_path,
+    merge_product_detail,
+    product_detail,
+)
 from quince_loss_leaders.parser import parse_html
 from quince_loss_leaders.storage import Repository
 
@@ -60,9 +68,12 @@ class HistoryExportTests(unittest.TestCase):
             self.assertEqual(detail["history"][0]["sellingPrice"], "29.99")
             self.assertEqual(detail["history"][1]["sellingPrice"], "39.99")
             self.assertEqual(detail["history"][0]["unitSpread"], "-2.01")
+            self.assertEqual(detail["history"][0]["costLines"][0]["label"], "Materials")
+            self.assertEqual(detail["history"][0]["costLines"][0]["amount"], "10.00")
             self.assertEqual(detail["current"]["sellingPrice"], "39.99")
             self.assertEqual(rankings["schemaVersion"], 1)
             self.assertEqual(rankings["results"][0]["historyPath"], entry["historyPath"])
+            self.assertEqual(rankings["latestCapturedAt"], rankings["results"][0]["capturedAt"])
 
     def test_export_merge_keeps_existing_history_and_deduplicates_reruns(self) -> None:
         html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
@@ -99,6 +110,43 @@ class HistoryExportTests(unittest.TestCase):
             self.assertEqual(merged.observation_count, 2)
             self.assertEqual(rerun.observation_count, 2)
             self.assertEqual(len(detail["history"]), 2)
+
+    def test_merge_keeps_same_totals_when_a_cost_component_changes(self) -> None:
+        html = (FIXTURES / "loss-example.html").read_text(encoding="utf-8")
+        first = parse_html(
+            html,
+            "loss-example.html",
+            captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+        )
+        second = parse_html(
+            html,
+            "loss-example.html",
+            captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+        )
+        second.cost_lines[0] = replace(second.cost_lines[0], amount=Decimal("11.00"))
+
+        merged = merge_product_detail(product_detail([first]), product_detail([second]))
+
+        self.assertEqual(len(merged["history"]), 2)
+        self.assertEqual(
+            {point["costLines"][0]["amount"] for point in merged["history"]},
+            {"10.00", "11.00"},
+        )
+
+    def test_product_detail_exports_image_metadata(self) -> None:
+        html = """
+        <html><head>
+          <link rel="canonical" href="https://www.quince.com/men/image-product">
+          <meta property="og:image" content="/images/product.jpg">
+        </head><body><h1>Image Product</h1></body></html>
+        """
+        observation = parse_html(html, "image-product.html")
+
+        detail = product_detail([observation])
+
+        self.assertEqual(detail["product"]["imageUrl"], "https://www.quince.com/images/product.jpg")
+        self.assertEqual(detail["product"]["imageUrls"], ["https://www.quince.com/images/product.jpg"])
+        self.assertEqual(detail["history"][0]["imageUrls"], ["https://www.quince.com/images/product.jpg"])
 
     def test_history_file_path_is_stable_for_product_variant(self) -> None:
         first = history_file_path("sku:EXAMPLE", "color:red")

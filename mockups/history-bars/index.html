@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Ledger — history, simplified</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Tokens are the ones in DESIGN.md ("The White Oxford Shirt"). */
+:root {
+  --paper: #ffffff;
+  --ink: #1b1b19;
+  --soft: #6b6b66;
+  --rule: #d9d9d3;
+  --rule-soft: #ecece7;
+  --hover: #f6f6f2;
+  --claret: #7d1d2f;
+  --make-1: #1f3a5f; --make-2: #5f7fae; --make-3: #b5c6de;
+  --send-1: #8a5a24; --send-2: #c3965a; --send-3: #e6cfa8;
+  --on-deep: #ffffff; --on-pale: #1b1b19;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  --paper: #131412;
+  --ink: #efebe2;
+  --soft: #a5a49c;
+  --rule: #3a3b35;
+  --rule-soft: #262722;
+  --hover: #1c1d1a;
+  --claret: #eba0aa;
+  --make-1: #6f93c9; --make-2: #a3bbe0; --make-3: #d3dff0;
+  --send-1: #b9853f; --send-2: #d6ae78; --send-3: #ecdcbd;
+  --on-deep: #131412; --on-pale: #131412;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+p, h1, h2, h3, ul, ol { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; }
+.fig { font-variant-numeric: tabular-nums; font-weight: 500; }
+.soft { color: var(--soft); }
+.below { color: var(--claret); }
+.page { width: min(1400px, 100% - 64px); margin: 0 auto; }
+
+/* ---- Mockup chrome (not part of the design) */
+.top { padding: 32px 0 24px; border-bottom: 1px solid var(--ink); }
+.top h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; }
+.top p { margin-top: 8px; max-width: 74ch; color: var(--soft); }
+.switches { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 22px; }
+.switch { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; }
+.switch > span { color: var(--soft); }
+.switch button { color: var(--soft); padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.switch button:hover { color: var(--ink); }
+.switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 88px; padding-bottom: 96px; }
+.option { padding: 44px 0 52px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.option-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.option-letter { font-family: var(--serif); font-size: 30px; line-height: 1; }
+.option-why { color: var(--soft); max-width: 58ch; margin-bottom: 30px; font-size: 14px; }
+.stage { max-width: 612px; }
+.item-line { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--soft); margin-top: 26px; }
+
+/* ---- The settled cost breakdown: two bars on one scale */
+.stage h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin-bottom: 18px; }
+.rows { display: grid; grid-template-columns: 9.5em 1fr; gap: 14px 18px; align-items: center; }
+.rows .name { line-height: 1.25; }
+.rows .name b { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; font-variant-numeric: tabular-nums lining-nums; }
+.track { position: relative; display: flex; height: 40px; }
+.track .ink { flex: none; background: var(--ink); }
+.segs { display: flex; gap: 2px; flex: none; }
+.seg { min-width: 2px; }
+.sum { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.sum p { font-family: var(--serif); font-size: 22px; line-height: 1.2; }
+.sum .fig { font-family: var(--serif); font-weight: 400; font-size: 24px; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.elided { margin-top: 14px; padding: 10px 0; border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); color: var(--soft); font-size: 13px; }
+
+/* ---- History, shared */
+.since { margin-top: 18px; font-family: var(--serif); font-size: 18px; line-height: 1.35; }
+.since.quiet { color: var(--soft); }
+.moves { margin-top: 14px; border-top: 1px solid var(--rule); }
+.moves > li { padding: 12px 0; border-bottom: 1px solid var(--rule-soft); }
+.moves time { display: block; color: var(--soft); margin-bottom: 4px; }
+.moves ul li { display: grid; grid-template-columns: 1fr auto 5.4em; gap: 12px; align-items: baseline; padding: 2px 0; font-size: 14px; }
+.moves ul li .was { color: var(--soft); }
+.moves ul li .delta { text-align: right; }
+.moves ul li.total { font-weight: 600; }
+
+/* A: earlier states as thin copies of the two bars */
+.states { margin-top: 16px; border-top: 1px solid var(--rule); }
+.states > li { display: grid; grid-template-columns: 9.5em 1fr; gap: 6px 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--rule-soft); }
+.states .when { line-height: 1.3; }
+.states .when span { display: block; color: var(--soft); font-size: 13px; }
+.states .thin { display: grid; gap: 3px; }
+.states .thin .track { height: 10px; }
+.states .then { grid-column: 2; font-size: 13px; color: var(--soft); }
+
+/* B: a tick on each bar marks where it stood before the last change */
+.wasrow { position: relative; height: 20px; margin-top: -8px; }
+.wasrow .tick { position: absolute; top: -3px; width: 0; height: 12px; border-left: 2px solid var(--ink); }
+.wasrow .txt { position: absolute; top: 2px; font-size: 12px; color: var(--soft); white-space: nowrap; padding: 0 7px; }
+.track .ghost { position: absolute; top: 0; bottom: 0; border: 1px dashed var(--ink); border-left: 0; }
+
+/* C: one line, the difference, against a zero rule */
+.spark { position: relative; height: 96px; margin: 20px 0 22px; }
+.spark svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.spark path { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.spark .above { stroke: var(--ink); }
+.spark .under { stroke: var(--claret); }
+.spark .zero { stroke: var(--soft); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.spark .zero-name { position: absolute; left: 0; font-size: 12px; line-height: 1; color: var(--soft); white-space: nowrap; }
+.spark .zero-name.under { transform: translateY(5px); }
+.spark .zero-name.over { transform: translateY(calc(-100% - 5px)); }
+.spark-ends { display: flex; justify-content: space-between; gap: 16px; margin-top: 8px; font-size: 13px; line-height: 1.3; }
+.spark-ends > div:last-child { text-align: right; }
+.spark-ends span { display: block; color: var(--soft); }
+
+@media (max-width: 1180px) { .options { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .page { width: calc(100% - 32px); }
+  .rows, .states > li { grid-template-columns: 1fr; gap: 6px; }
+  .rows .name { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; }
+  .states .then { grid-column: 1; }
+  .wasrow { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <h1>History, simplified: four ways to fold it into the cost breakdown</h1>
+    <p>The two bars at the top of each option are the settled breakdown, with its key left out. What changes is everything after the verdict: how the sheet says what has moved since the first check. Most items have one or two checks and nothing has moved, so try &ldquo;Nothing moved&rdquo; and &ldquo;One check&rdquo; as well as the busy ones.</p>
+    <div class="switches label">
+      <div class="switch" id="items" role="group" aria-label="Item"><span>Item</span></div>
+      <div class="switch" id="themes" role="group" aria-label="Theme">
+        <span>Theme</span>
+        <button type="button" data-theme-set="light">Light</button>
+        <button type="button" data-theme-set="dark">Dark</button>
+      </div>
+    </div>
+  </header>
+  <main class="options" id="options"></main>
+</div>
+
+<script>
+// Cost lines in a fixed order: Materials, Crafting, Packaging, Freight, Duties, Card fees.
+const LINES = [
+  ["Materials", "--make-1"], ["Crafting Cost", "--make-2"], ["Packaging", "--make-3"],
+  ["Freight & Handling", "--send-1"], ["Duties, Taxes, And Fees", "--send-2"], ["Credit Card Fees", "--send-3"],
+];
+const check = (date, price, lines) => ({ date, price, lines });
+
+// The first five are real captures from data/quince-us.sqlite3. The last is invented to show a long run.
+const shirtDays = () => {
+  const days = [];
+  for (let day = 0; day < 40; day += 1) {
+    const date = new Date(Date.UTC(2026, 7, 20 + day)).toISOString().slice(0, 10);
+    const price = day < 9 ? 29.90 : day < 33 ? 19.90 : 24.90;
+    const freight = day < 21 ? 7.96 : 9.40;
+    const materials = day < 9 ? 6.62 : 5.79;
+    const crafting = day < 9 ? 3.87 : 2.67;
+    days.push(check(date, price, [materials, crafting, 0.41, freight, 3.51, 1.08]));
+  }
+  return days;
+};
+const ITEMS = [
+  {
+    id: "shirt", tab: "Price cut, cost fell",
+    name: "Organic Cotton Stretch Poplin Camp Shirt", variant: "In Light Blue",
+    checks: [
+      check("2026-08-20", 29.90, [6.62, 3.87, 0.41, 7.96, 3.51, 1.08]),
+      check("2026-08-29", 19.90, [5.79, 2.67, 0.41, 7.96, 3.51, 1.08]),
+    ],
+  },
+  {
+    id: "quilt", tab: "Freight fell",
+    name: "100% European Linen Box Quilt Set", variant: "In Sand",
+    checks: [
+      check("2026-08-20", 194.00, [61.63, 7.09, 0.20, 94.55, 17.44, 4.68]),
+      check("2026-08-29", 194.00, [61.63, 7.09, 0.20, 94.55, 17.44, 4.68]),
+      check("2026-08-29", 194.00, [61.63, 7.09, 0.20, 23.49, 20.68, 4.68]),
+    ],
+  },
+  {
+    id: "band", tab: "Cost crept up",
+    name: "Diamond Alternating Round Band", variant: "In Yellow Gold",
+    checks: [
+      check("2026-08-20", 598.00, [258.50, 25.75, 2.30, 10.39, 47.28, 15.69]),
+      check("2026-08-29", 598.00, [268.11, 25.75, 2.30, 10.39, 48.87, 15.69]),
+    ],
+  },
+  {
+    id: "pillow", tab: "Nothing moved",
+    name: "Luxe Leather Pillow Cover", variant: "In Cognac",
+    checks: [
+      check("2026-08-20", 69.90, [40.64, 5.96, 1.20, 19.14, 4.78, 2.97]),
+      check("2026-08-29", 69.90, [40.64, 5.96, 1.20, 19.14, 4.78, 2.97]),
+    ],
+  },
+  {
+    id: "parfum", tab: "One check",
+    name: "Côte d'Azur Eau de Parfum", variant: "",
+    checks: [check("2026-08-29", 50.00, [7.15, 3.50, 3.00, 9.93, 0, 1.48])],
+  },
+  {
+    id: "long", tab: "40 daily checks (invented)",
+    name: "Invented run to test a long history", variant: "Not real data",
+    checks: shirtDays(),
+  },
+];
+
+const money = (value) => (value < 0 ? "−" : "") + "$" + Math.abs(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const signed = (value) => (value > 0 ? "+" : "") + money(value);
+const esc = (text) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const cents = (value) => Math.round(value * 100);
+const costOf = (entry) => entry.lines.reduce((sum, amount) => sum + cents(amount), 0) / 100;
+const gapOf = (entry) => (cents(entry.price) - cents(costOf(entry))) / 100;
+const day = (date, long = false) => new Date(date + "T12:00:00Z").toLocaleDateString("en-US", long ? { month: "long", day: "numeric" } : { month: "short", day: "numeric" });
+const times = (count) => (count === 1 ? "once" : count === 2 ? "twice" : `${count} times`);
+const placing = (entry) => { const gap = gapOf(entry); return gap < 0 ? `${money(Math.abs(gap))} below cost` : gap > 0 ? `${money(gap)} above cost` : "at reported cost"; };
+
+// A state is a stretch of checks with the same price and cost lines. A move is the step between two states.
+function story(item) {
+  const states = [];
+  for (const entry of item.checks) {
+    const last = states[states.length - 1];
+    const same = last && cents(last.price) === cents(entry.price) && last.lines.every((amount, index) => cents(amount) === cents(entry.lines[index]));
+    if (!same) states.push(entry);
+  }
+  const moves = states.slice(1).map((next, index) => {
+    const before = states[index];
+    const rows = [];
+    if (cents(before.price) !== cents(next.price)) rows.push({ label: "Price", from: before.price, to: next.price });
+    LINES.forEach(([label], line) => {
+      if (cents(before.lines[line]) !== cents(next.lines[line])) rows.push({ label, from: before.lines[line], to: next.lines[line] });
+    });
+    return { date: next.date, rows, before, next };
+  });
+  const now = states[states.length - 1];
+  const scale = Math.max(...states.map((entry) => Math.max(entry.price, costOf(entry))));
+  return { states, moves, now, scale, count: item.checks.length, first: item.checks[0].date };
+}
+
+function sentence(s) {
+  if (s.count === 1) return `Checked once, on ${day(s.first, true)}. The price hasn’t moved.`;
+  const lead = `Checked ${times(s.count)} since ${day(s.first, true)}.`;
+  if (!s.moves.length) return `${lead} Nothing has moved.`;
+  const dates = s.moves.map((move) => day(move.date, true));
+  return `${lead} Something moved ${times(s.moves.length)}, ${dates.length === 1 ? `on ${dates[0]}` : `last on ${dates[dates.length - 1]}`}.`;
+}
+const sinceHtml = (s) => `<p class="since ${s.moves.length ? "" : "quiet"}">${sentence(s)}</p>`;
+
+const segsHtml = (entry, scale) => `<div class="segs" style="width:${((costOf(entry) / scale) * 100).toFixed(2)}%">${
+  LINES.map(([, tone], index) => (entry.lines[index] > 0 ? `<div class="seg" style="flex:${entry.lines[index]} 0 0;background:var(${tone})"></div>` : "")).join("")}</div>`;
+const inkHtml = (entry, scale) => `<span class="ink" style="width:${((entry.price / scale) * 100).toFixed(2)}%"></span>`;
+
+// The settled breakdown. `mark` lets option B draw where each bar stood before.
+function breakdown(s, mark = null) {
+  const now = s.now; const gap = gapOf(now);
+  const was = (value, current, text) => {
+    if (!mark || cents(value) === cents(current)) return "";
+    const at = (value / s.scale) * 100;
+    const side = at > 60 ? `right:${(100 - at).toFixed(2)}%` : `left:${at.toFixed(2)}%`;
+    return `<div></div><div class="wasrow"><i class="tick" style="left:${at.toFixed(2)}%"></i><span class="txt" style="${side}">${text}</span></div>`;
+  };
+  const ghost = (value, current) => (mark && value > current
+    ? `<i class="ghost" style="left:${((current / s.scale) * 100).toFixed(2)}%;width:${(((value - current) / s.scale) * 100).toFixed(2)}%"></i>` : "");
+  return `<h3>What Quince says it costs</h3>
+    <div class="rows">
+      <div class="name"><span class="label soft">Costs Quince</span><b>${money(costOf(now))}</b></div>
+      <div class="track">${segsHtml(now, s.scale)}${mark ? ghost(costOf(mark), costOf(now)) : ""}</div>
+      ${mark ? was(costOf(mark), costOf(now), `was ${money(costOf(mark))}`) : ""}
+      <div class="name"><span class="label soft">Quince sells it for</span><b>${money(now.price)}</b></div>
+      <div class="track">${inkHtml(now, s.scale)}${mark ? ghost(mark.price, now.price) : ""}</div>
+      ${mark ? was(mark.price, now.price, `was ${money(mark.price)}`) : ""}
+    </div>
+    <div class="sum ${gap < 0 ? "below" : ""}"><p>${gap < 0 ? "Sold below its reported cost by" : gap > 0 ? "Sold above its reported cost by" : "Sold at its reported cost"}</p>${gap === 0 ? "" : `<span class="fig">${money(Math.abs(gap))}</span>`}</div>
+    <p class="elided">The cost-line key sits here, unchanged.</p>`;
+}
+
+// The moves in words, newest first. Used on its own in D and as the detail under B and C.
+function movesHtml(s) {
+  if (!s.moves.length) return "";
+  return `<ol class="moves">${[...s.moves].reverse().map((move) => {
+    const before = gapOf(move.before); const after = gapOf(move.next);
+    return `<li><time class="label">${day(move.date, true)}</time><ul>
+      ${move.rows.map((row) => `<li><span>${esc(row.label)}</span><span class="fig was">${money(row.from)} to ${money(row.to)}</span><span class="fig delta">${signed((cents(row.to) - cents(row.from)) / 100)}</span></li>`).join("")}
+      <li class="total ${after < 0 ? "below" : ""}"><span>Now ${placing(move.next)}</span><span class="fig was">was ${placing(move.before)}</span><span class="fig delta">${signed((cents(after) - cents(before)) / 100)}</span></li>
+    </ul></li>`;
+  }).join("")}</ol>`;
+}
+
+// A: every earlier state as a thin copy of the two bars, newest first.
+function optionA(item) {
+  const s = story(item);
+  const earlier = s.states.slice(0, -1).map((entry, index) => ({ entry, move: s.moves[index] })).reverse();
+  const rows = earlier.map(({ entry, move }) => `<li>
+      <div class="when"><b class="label">Before ${day(move.date)}</b><span class="fig">${money(entry.price)} · cost ${money(costOf(entry))}</span></div>
+      <div class="thin"><div class="track">${segsHtml(entry, s.scale)}</div><div class="track">${inkHtml(entry, s.scale)}</div></div>
+      <p class="then"><span class="${gapOf(entry) < 0 ? "below" : ""}">${placing(entry)}.</span> Then ${move.rows.map((row) => `${esc(row.label.toLowerCase())} ${signed((cents(row.to) - cents(row.from)) / 100)}`).join("; ")}.</p>
+    </li>`).join("");
+  return breakdown(s) + sinceHtml(s) + (rows ? `<ol class="states">${rows}</ol>` : "");
+}
+
+// B: nothing new is drawn; the main bars carry a tick where they stood before the last move.
+function optionB(item) {
+  const s = story(item);
+  const before = s.moves.length ? s.moves[s.moves.length - 1].before : null;
+  return breakdown(s, before) + sinceHtml(s) + movesHtml(s);
+}
+
+// C: one stepped line for the difference, on elapsed time, against a zero rule.
+function optionC(item) {
+  const s = story(item);
+  if (!s.moves.length) return breakdown(s) + sinceHtml(s);
+  const stamp = (date) => new Date(date + "T12:00:00Z").getTime();
+  const start = stamp(item.checks[0].date); const span = Math.max(1, stamp(item.checks[item.checks.length - 1].date) - start);
+  const gaps = item.checks.map(gapOf);
+  let low = Math.min(0, ...gaps); let high = Math.max(0, ...gaps);
+  const pad = (high - low) * 0.12 || 1; low -= pad; high += pad;
+  const RUN = 880; // the last check sits here; the rest of the width is "now"
+  const x = (entry, index) => (span > 1 ? ((stamp(entry.date) - start) / span) * RUN : (index / (item.checks.length - 1)) * RUN);
+  const y = (value) => ((high - value) / (high - low)) * 100;
+  const xs = item.checks.map(x);
+  const path = item.checks.map((entry, index) => (index === 0
+    ? `M ${xs[0].toFixed(1)} ${y(gaps[0]).toFixed(1)}`
+    : `H ${xs[index].toFixed(1)} V ${y(gaps[index]).toFixed(1)}`)).join(" ") + ` H 1000`;
+  const zero = y(0);
+  const id = `clip-${item.id}`;
+  const first = item.checks[0];
+  return breakdown(s) + sinceHtml(s) + `
+    <div class="spark" role="img" aria-label="Difference between price and reported cost over time">
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="${id}-a"><rect x="-10" y="-10" width="1020" height="${(zero + 10).toFixed(1)}"/></clipPath>
+          <clipPath id="${id}-u"><rect x="-10" y="${zero.toFixed(1)}" width="1020" height="${(110 - zero).toFixed(1)}"/></clipPath>
+        </defs>
+        <line class="zero" x1="0" x2="1000" y1="${zero.toFixed(1)}" y2="${zero.toFixed(1)}"/>
+        <path class="above" d="${path}" clip-path="url(#${id}-a)"/>
+        <path class="under" d="${path}" clip-path="url(#${id}-u)"/>
+      </svg>
+      <span class="zero-name ${gaps[0] < 0 ? "over" : "under"}">Reported cost</span>
+    </div>
+    <div class="spark-ends">
+      <div><b class="fig ${gapOf(first) < 0 ? "below" : ""}">${placing(first)}</b><span>${day(first.date, true)}</span></div>
+      <div><b class="fig ${gapOf(s.now) < 0 ? "below" : ""}">${placing(s.now)}</b><span>Now</span></div>
+    </div>` + movesHtml(s);
+}
+
+// D: no drawing at all. The sentence, then the moves in words.
+function optionD(item) {
+  const s = story(item);
+  return breakdown(s) + sinceHtml(s) + movesHtml(s);
+}
+
+const OPTIONS = [
+  ["A", "Earlier bars underneath", "Each earlier state is a thin copy of the same two bars on the same scale, newest first, with one line saying what happened next. You compare lengths straight down the page. Unchanged checks draw nothing.", optionA],
+  ["B", "Ticks on the bars you already have", "Nothing new is drawn. A tick and a dashed outline on the main bars show where cost and price stood before the last change, and the list beneath gives each move in words.", optionB],
+  ["C", "One line: the difference", "A single stepped line for price minus cost, against a dashed rule at reported cost. It turns claret when it drops below. This is the only option with a time axis, so it is the one that suits a long daily run.", optionC],
+  ["D", "Words only", "The sentence, then a dated list of what moved and by how much. No second graphic competes with the breakdown. The plainest option, and the cheapest to build.", optionD],
+];
+
+let current = ITEMS[0];
+function render() {
+  document.getElementById("options").innerHTML = OPTIONS.map(([letter, title, why, build]) => `
+    <section class="option">
+      <div class="option-head"><span class="option-letter">${letter}</span><span class="label">${title}</span></div>
+      <p class="option-why">${why}</p>
+      <div class="stage">${build(current)}<p class="item-line">${esc(current.name)}${current.variant ? ` · ${esc(current.variant)}` : ""}</p></div>
+    </section>`).join("");
+  // The zero rule's label sits on the rule, wherever the scale puts it.
+  document.querySelectorAll(".spark").forEach((spark) => {
+    const line = spark.querySelector(".zero");
+    spark.querySelector(".zero-name").style.top = `${line.getAttribute("y1")}%`;
+  });
+  document.querySelectorAll("#items button").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.item === current.id)));
+}
+
+const items = document.getElementById("items");
+for (const item of ITEMS) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.item = item.id;
+  button.textContent = item.tab;
+  button.addEventListener("click", () => { current = item; render(); });
+  items.append(button);
+}
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll("[data-theme-set]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.themeSet === theme)));
+}
+document.querySelectorAll("[data-theme-set]").forEach((button) => button.addEventListener("click", () => setTheme(button.dataset.themeSet)));
+
+// Deep links for screenshots: #quilt, #band, #pillow, #parfum, #long, #dark (comma-separated).
+const flags = location.hash.slice(1).split(",");
+current = ITEMS.find((item) => flags.includes(item.id)) ?? ITEMS[0];
+setTheme(flags.includes("dark") ? "dark" : "light");
+render();
+</script>
+</body>
+</html>

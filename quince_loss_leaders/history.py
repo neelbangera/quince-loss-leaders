@@ -72,6 +72,28 @@ def _classification(value: Decimal | None) -> str:
 def _has_exorbitant_fees(observation: ProductObservation) -> bool:
     if observation.selling_price is None:
         return False
+    if observation.metadata.get("fee_warning") is True:
+        return True
+
+    duties_total = sum(
+        (
+            line.amount
+            for line in observation.cost_lines
+            if line.normalized_type == "duties_taxes_fees"
+        ),
+        Decimal("0.00"),
+    )
+    other_total = sum(
+        (
+            line.amount
+            for line in observation.cost_lines
+            if line.normalized_type != "duties_taxes_fees"
+        ),
+        Decimal("0.00"),
+    )
+    if duties_total > other_total:
+        return True
+
     return any(
         line.normalized_type in {"freight_handling", "credit_card_fees", "duties_taxes_fees"}
         and line.amount >= observation.selling_price
@@ -79,10 +101,68 @@ def _has_exorbitant_fees(observation: ProductObservation) -> bool:
     )
 
 
+def _image_urls(observation: ProductObservation) -> list[str]:
+    raw_urls = observation.metadata.get("image_urls")
+    candidates = raw_urls if isinstance(raw_urls, list) else [observation.metadata.get("image_url")]
+    urls: list[str] = []
+    for candidate in candidates:
+        if isinstance(candidate, str) and candidate.strip() and candidate.strip() not in urls:
+            urls.append(candidate.strip())
+    return urls
+
+
+def _variant_metadata(observation: ProductObservation) -> dict[str, str]:
+    """Return stable parent and displayable variant fields for detail views."""
+
+    raw_metadata = observation.metadata
+    embedded = raw_metadata.get("embedded_pricing")
+    embedded_variant = embedded.get("variant") if isinstance(embedded, dict) else None
+    if not isinstance(embedded_variant, dict):
+        embedded_variant = {}
+
+    result: dict[str, str] = {}
+    parent_product_id = raw_metadata.get("parent_product_id")
+    if parent_product_id is None and isinstance(embedded, dict):
+        parent_product_id = embedded.get("product_id")
+    if parent_product_id is not None and str(parent_product_id).strip():
+        result["parentProductId"] = str(parent_product_id).strip()
+
+    label_value = raw_metadata.get("variant_label") or embedded_variant.get("name")
+    if isinstance(label_value, str) and label_value.strip():
+        label = label_value.strip()
+        result["variantLabel"] = label
+        parts = [part.strip() for part in label.rsplit("/", 1)]
+        if len(parts) == 2 and all(parts):
+            result["variantSize"] = parts[0]
+            result["variantColor"] = parts[1]
+
+    for source_key, output_key in (
+        ("variant_color", "variantColor"),
+        ("variant_size", "variantSize"),
+    ):
+        value = raw_metadata.get(source_key)
+        if isinstance(value, str) and value.strip():
+            result[output_key] = value.strip()
+
+    # Keep older stored observations readable until their source snapshots
+    # are re-parsed. Their product name often retains the selected color even
+    # when the old embedded-variant metadata was mismatched.
+    if "variantColor" not in result and isinstance(observation.product_name, str):
+        title_parts = [part.strip() for part in observation.product_name.rsplit(" in ", 1)]
+        if len(title_parts) == 2 and all(title_parts):
+            result["variantColor"] = title_parts[1]
+            label = result.get("variantLabel")
+            if label:
+                label_parts = [part.strip() for part in label.rsplit("/", 1)]
+                if len(label_parts) == 2 and label_parts[0]:
+                    result["variantLabel"] = f"{label_parts[0]} / {title_parts[1]}"
+    return result
+
+
 def observation_point(observation: ProductObservation) -> dict[str, object]:
     """Serialize the chart-friendly fields for one observation."""
 
-    return {
+    point: dict[str, object] = {
         "capturedAt": as_utc_iso(observation.captured_at),
         "sellingPrice": _money(observation.selling_price),
         "reportedTotalCost": _money(observation.reported_total_cost),
@@ -99,6 +179,10 @@ def observation_point(observation: ProductObservation) -> dict[str, object]:
             for line in observation.cost_lines
         ],
     }
+    image_urls = _image_urls(observation)
+    if image_urls:
+        point["imageUrls"] = image_urls
+    return point
 
 
 def _product_metadata(observation: ProductObservation) -> dict[str, object]:
@@ -108,7 +192,7 @@ def _product_metadata(observation: ProductObservation) -> dict[str, object]:
         observation.product_name,
         observation.category,
     )
-    return {
+    metadata: dict[str, object] = {
         "productKey": product_key,
         "variantKey": observation.variant_key,
         "name": display_name(observation.product_name or product_key),
@@ -121,6 +205,12 @@ def _product_metadata(observation: ProductObservation) -> dict[str, object]:
         "currency": observation.currency,
         "hasExorbitantFees": _has_exorbitant_fees(observation),
     }
+    metadata.update(_variant_metadata(observation))
+    image_urls = _image_urls(observation)
+    if image_urls:
+        metadata["imageUrl"] = image_urls[0]
+        metadata["imageUrls"] = image_urls
+    return metadata
 
 
 def _analytics(history: list[dict[str, object]]) -> dict[str, object]:
@@ -177,7 +267,21 @@ def product_detail(observations: Iterable[ProductObservation]) -> dict[str, obje
 
 
 def _point_identity(point: dict[str, object]) -> tuple[object, ...]:
-    """Identify duplicate exports without depending on cost-line ordering."""
+    """Identify duplicate exports, including component-level cost changes."""
+
+    raw_cost_lines = point.get("costLines", [])
+    cost_lines: list[tuple[str, str, str]] = []
+    if isinstance(raw_cost_lines, list):
+        for raw_line in raw_cost_lines:
+            if not isinstance(raw_line, dict):
+                continue
+            cost_lines.append(
+                (
+                    str(raw_line.get("type") or ""),
+                    str(raw_line.get("label") or ""),
+                    str(raw_line.get("amount") or ""),
+                )
+            )
 
     return (
         point.get("capturedAt"),
@@ -185,6 +289,7 @@ def _point_identity(point: dict[str, object]) -> tuple[object, ...]:
         point.get("reportedTotalCost"),
         point.get("unitSpread"),
         point.get("marginPct"),
+        tuple(sorted(cost_lines)),
     )
 
 
@@ -213,7 +318,10 @@ def merge_product_detail(
 
     existing_product = existing.get("product")
     current_product = current.get("product")
-    product = current_product if isinstance(current_product, dict) else existing_product
+    if isinstance(existing_product, dict) and isinstance(current_product, dict):
+        product = {**existing_product, **current_product}
+    else:
+        product = current_product if isinstance(current_product, dict) else existing_product
     if not isinstance(product, dict):
         raise ValueError("Static history is missing product metadata")
     return _detail_from_history(dict(product), points)
@@ -258,6 +366,7 @@ def _manifest_entry(payload: dict[str, object], path: str) -> dict[str, object]:
         "variantKey": product.get("variantKey", ""),
         "name": product.get("name", ""),
         "url": product.get("url"),
+        "imageUrl": product.get("imageUrl"),
         "brand": product.get("brand"),
         "department": product.get("department"),
         "departmentLabel": product.get("departmentLabel"),

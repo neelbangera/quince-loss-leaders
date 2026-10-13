@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T19:04:59Z",
+  "title": "Design System: Quince Ledger",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Blazer Navy",
+        "canonical": "#12213f",
+        "purpose": "Ink, wordmark, primary buttons, table head rules. Carries no meaning.",
+        "tonalRamp": [
+          "#0e1930",
+          "#192e57",
+          "#274787",
+          "#3460b6",
+          "#5880cf",
+          "#88a4dd",
+          "#b8c9eb",
+          "#e3eaf7"
+        ]
+      },
+      "navy-deep": {
+        "role": "primary",
+        "displayName": "Deep Navy",
+        "canonical": "#0b1730",
+        "purpose": "Hover and pressed state of navy fills."
+      },
+      "crimson": {
+        "role": "secondary",
+        "displayName": "Varsity Crimson",
+        "canonical": "#9b1b30",
+        "purpose": "Below cost. Nothing else.",
+        "tonalRamp": [
+          "#340910",
+          "#60111e",
+          "#941a2e",
+          "#c8233e",
+          "#df4961",
+          "#e87d8e",
+          "#f1b1bb",
+          "#fae1e5"
+        ]
+      },
+      "crimson-wash": {
+        "role": "secondary",
+        "displayName": "Crimson Wash",
+        "canonical": "#f8e9eb",
+        "purpose": "Tint behind a selected below-cost row."
+      },
+      "hunter": {
+        "role": "secondary",
+        "displayName": "Hunter Green",
+        "canonical": "#1d5a3c",
+        "purpose": "Above cost. Nothing else.",
+        "tonalRamp": [
+          "#0f2e1f",
+          "#1b5539",
+          "#2a8357",
+          "#39b176",
+          "#5dcb95",
+          "#8bdab3",
+          "#bae9d1",
+          "#e4f6ed"
+        ]
+      },
+      "hunter-wash": {
+        "role": "secondary",
+        "displayName": "Hunter Wash",
+        "canonical": "#e6f0ea",
+        "purpose": "Ground of the Above cost flag."
+      },
+      "gold": {
+        "role": "tertiary",
+        "displayName": "Old Gold",
+        "canonical": "#b48a2c",
+        "purpose": "Uncertain: graphics and the reported-cost chart line.",
+        "tonalRamp": [
+          "#31260c",
+          "#5a4516",
+          "#8b6b22",
+          "#bd912e",
+          "#d5ad53",
+          "#e1c484",
+          "#eddcb5",
+          "#f8f1e2"
+        ]
+      },
+      "gold-ink": {
+        "role": "tertiary",
+        "displayName": "Old Gold Ink",
+        "canonical": "#76570f",
+        "purpose": "The only gold allowed on text."
+      },
+      "gold-wash": {
+        "role": "tertiary",
+        "displayName": "Gold Wash",
+        "canonical": "#f6efdc",
+        "purpose": "Ground of the Varies and Fee flagged flags."
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "purpose": "The page. Pure white."
+      },
+      "chino": {
+        "role": "neutral",
+        "displayName": "Chino",
+        "canonical": "#f3eee4",
+        "purpose": "Behind product photographs and loading placeholders only.",
+        "tonalRamp": [
+          "#2a2313",
+          "#4e3f23",
+          "#786235",
+          "#a28448",
+          "#bda26b",
+          "#d0bc95",
+          "#e3d7bf",
+          "#f4efe6"
+        ]
+      },
+      "chino-deep": {
+        "role": "neutral",
+        "displayName": "Deep Chino",
+        "canonical": "#e4dccb",
+        "purpose": "Reported-cost bar in the tally."
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#566079",
+        "purpose": "Secondary text.",
+        "tonalRamp": [
+          "#191c24",
+          "#2f3442",
+          "#485065",
+          "#616d89",
+          "#828ca6",
+          "#a6adbf",
+          "#c9ced9",
+          "#eaecf0"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#d5d9e2",
+        "purpose": "Field borders and section rules."
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "#e9ebf0",
+        "purpose": "Row rules in the order form."
+      },
+      "blazer-paper": {
+        "role": "neutral",
+        "displayName": "Blazer Paper",
+        "canonical": "#0d1730",
+        "purpose": "Dark theme ground."
+      },
+      "blazer-surface": {
+        "role": "neutral",
+        "displayName": "Blazer Surface",
+        "canonical": "#142142",
+        "purpose": "Dark theme raised surface."
+      },
+      "blazer-ink": {
+        "role": "neutral",
+        "displayName": "Blazer Ink",
+        "canonical": "#f2efe8",
+        "purpose": "Dark theme text."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Wordmark, page headline, product name. One per screen."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Italic only: colour and size lines, provenance notes."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product names, uppercase."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose and control text, 68ch maximum."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, column heads, flags, buttons. Uppercase."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Every number; tabular, right-aligned in columns."
+      }
+    },
+    "shadows": [
+      {
+        "name": "product-page-sheet",
+        "value": "-24px 0 60px rgba(11, 23, 48, 0.22)",
+        "purpose": "The product page sliding over the catalog. The only shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Product page slide and state changes."
+      },
+      {
+        "name": "duration-state",
+        "value": "140ms",
+        "purpose": "Hover and focus transitions."
+      },
+      {
+        "name": "duration-sheet",
+        "value": "220ms",
+        "purpose": "Product page open and close."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "620px"
+      },
+      {
+        "name": "tablet",
+        "value": "900px"
+      },
+      {
+        "name": "wide",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square navy action, white capitals.",
+      "html": "<button class=\"ds-btn-primary\">View on Quince</button>",
+      "css": ".ds-btn-primary { height: 44px; padding: 0 24px; border: 1px solid #12213f; border-radius: 0; background: #12213f; color: #fff; font-family: Jost, Futura, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 140ms ease-out; } .ds-btn-primary:hover { background: #0b1730; } .ds-btn-primary:focus-visible { outline: 2px solid #12213f; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Paper fill with a navy outline; used for Retry.",
+      "html": "<button class=\"ds-btn-secondary\">Retry</button>",
+      "css": ".ds-btn-secondary { height: 44px; padding: 0 24px; border: 1px solid #12213f; border-radius: 0; background: #fff; color: #12213f; font-family: Jost, Futura, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 140ms ease-out; } .ds-btn-secondary:hover { background: #f3eee4; } .ds-btn-secondary:focus-visible { outline: 2px solid #12213f; outline-offset: 2px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Square 44px field with its label above in capitals.",
+      "html": "<label class=\"ds-field\"><span>Search</span><input type=\"search\" placeholder=\"Rug, robe, sweater\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; color: #12213f; } .ds-field span { font-family: Jost, Futura, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; } .ds-field input { width: 240px; height: 44px; padding: 0 12px; border: 1px solid #d5d9e2; border-radius: 0; background: #fff; color: #12213f; font-family: Jost, Futura, sans-serif; font-size: 15px; } .ds-field input:focus { border-color: #12213f; outline: 2px solid #12213f; outline-offset: 2px; }"
+    },
+    {
+      "name": "Department Row",
+      "kind": "nav",
+      "refersTo": "masthead",
+      "description": "The shop navigation; the active department is underlined in navy.",
+      "html": "<nav class=\"ds-dept\"><a class=\"ds-on\" href=\"#\">All</a><a href=\"#\">Women</a><a href=\"#\">Men</a><a href=\"#\">Home</a></nav>",
+      "css": ".ds-dept { display: flex; gap: 32px; border-bottom: 1px solid #d5d9e2; } .ds-dept a { padding: 16px 0 14px; border-bottom: 2px solid transparent; color: #12213f; text-decoration: none; font-family: Jost, Futura, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; } .ds-dept a:hover { border-bottom-color: #d5d9e2; } .ds-dept a.ds-on { border-bottom-color: #12213f; } .ds-dept a:focus-visible { outline: 2px solid #12213f; outline-offset: 2px; }"
+    },
+    {
+      "name": "Flags",
+      "kind": "chip",
+      "refersTo": "flag-below",
+      "description": "Square labels saying which side of cost an item is on.",
+      "html": "<span class=\"ds-flag ds-flag-below\">Below cost</span> <span class=\"ds-flag ds-flag-above\">Above cost</span> <span class=\"ds-flag ds-flag-varies\">Varies</span>",
+      "css": ".ds-flag { display: inline-block; padding: 3px 7px; font-family: Jost, Futura, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; } .ds-flag-below { background: #9b1b30; color: #fff; } .ds-flag-above { background: #e6f0ea; color: #1d5a3c; } .ds-flag-varies { background: #f6efdc; color: #76570f; }"
+    },
+    {
+      "name": "Catalog Item",
+      "kind": "card",
+      "refersTo": "catalog-item-well",
+      "description": "Photograph in a chino well, then name, variants, price with reported cost, and the gap.",
+      "html": "<article class=\"ds-item\"><div class=\"ds-item-photo\"></div><a class=\"ds-item-name\" href=\"#\">Organic Turkish Waffle Robe</a><p class=\"ds-item-var\">In 2 colours · XS</p><p class=\"ds-item-price\"><strong>$52.00</strong> <span>costs Quince $55.72</span></p><p class=\"ds-item-gap\">−$3.72 below cost</p></article>",
+      "css": ".ds-item { width: 220px; color: #12213f; font-family: Jost, Futura, sans-serif; } .ds-item-photo { aspect-ratio: 4 / 5; background: #f3eee4; } .ds-item-name { display: block; margin-top: 12px; color: #12213f; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; } .ds-item:hover .ds-item-name { text-decoration: underline; text-underline-offset: 3px; } .ds-item-var { margin: 2px 0 0; color: #566079; font-family: \"Libre Caslon Text\", Georgia, serif; font-style: italic; font-size: 14px; } .ds-item-price { margin: 8px 0 0; font-variant-numeric: tabular-nums; } .ds-item-price span { color: #566079; font-size: 13px; } .ds-item-gap { margin: 2px 0 0; color: #9b1b30; font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Price-and-cost Tally",
+      "kind": "custom",
+      "refersTo": "catalog-item-well",
+      "description": "Signature: price and reported cost on one scale, overhang in crimson.",
+      "html": "<div class=\"ds-tally\"><div class=\"ds-tally-row\"><span>You pay</span><strong>$42.00</strong></div><div class=\"ds-bar\"><i style=\"width:87.5%;background:#12213f\"></i></div><div class=\"ds-tally-row\"><span>Quince reports it costs</span><strong>$47.99</strong></div><div class=\"ds-bar\"><i style=\"width:87.5%;background:#e4dccb\"></i><i style=\"width:12.5%;background:#9b1b30\"></i></div><p>−$5.99 below cost</p></div>",
+      "css": ".ds-tally { width: 420px; color: #12213f; font-family: Jost, Futura, sans-serif; font-size: 15px; font-variant-numeric: tabular-nums; } .ds-tally-row { display: flex; justify-content: space-between; margin-top: 14px; } .ds-bar { display: flex; height: 14px; margin-top: 6px; } .ds-bar i { display: block; height: 100%; } .ds-tally p { margin: 14px 0 0; color: #9b1b30; font-weight: 500; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Mail-Order Catalog",
+    "overview": "Quince Ledger looks like a prep clothier's mail-order catalog from the late\n1980s: white uncoated paper, navy ink, tall product photographs, a Caslon\nheadline, and Futura-style capitals for everything a shopper has to find fast.\nThe ranking is a catalog spread. The table view is the catalog's order form.\nThe one thing this catalog prints that no retailer's does is the cost: beside\nevery price sits what Quince reports the item cost to make, and the gap.\n\nThe page is a shop first and an analysis second. Product photography is the\nonly decoration, and the page stays quiet so the photographs and three\nschool colours can do the work: crimson for below cost, hunter green for above,\nold gold for anything uncertain. Navy is the ink, never a meaning.\n\nIt replaces the earlier \"forest ledger\" system (archived in\n`.impeccable/archive/`). Several of that system's rules were about honesty\nrather than looks and carry over unchanged: every count states its unit, a\ncaveat is printed beside the thing it qualifies, each colour has one job, and\na fee warning is never clipped away by truncation.",
+    "keyCharacteristics": [
+      "White paper, navy ink, square corners, hairline rules. No cards, no shadows at rest.",
+      "Caslon for headlines and italic captions; Jost for names, labels, controls and figures.",
+      "Photographs sit in a chino well; nothing else on the page is tinted.",
+      "Three school colours, one meaning each: crimson below cost, hunter above, gold uncertain.",
+      "A plain white header with a centred Caslon wordmark, like a shop. No coloured bar, no stripes."
+    ],
+    "rules": [
+      {
+        "name": "The School Colours Rule",
+        "body": "Crimson means below cost, hunter means above cost, gold means uncertain. None of the three is ever used for decoration, links, or emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Word-With-Colour Rule",
+        "body": "A coloured figure always carries a sign or a word (\"−$5.99 below cost\"). Colour alone never says which side of cost an item is on.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cost-Moves-In-Ink Rule",
+        "body": "Movement in a cost line (materials up, freight down) is shown with a signed amount and an arrow in navy, not in crimson or hunter. Those colours describe the gap, not a change.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Label-Above-A-Heading Rule",
+        "body": "A heading is never preceded by a small capitalised kicker. If a section needs a name, the heading is the name.",
+        "section": "typography"
+      },
+      {
+        "name": "The Caps-Are-For-Finding Rule",
+        "body": "Uppercase is used only for things a shopper scans for: navigation, product names, column heads, flags, buttons. Sentences are never set in capitals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-Is-Flat Rule",
+        "body": "No shadow, lift, or scale on hover. A hovered catalog item swaps to its second photograph and underlines its name.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** print the reported cost beside every price, and the unit beside every count (\"4,083 styles at one price\").",
+      "**Do** keep the page white. Chino belongs behind photographs only.",
+      "**Do** put a sign or a word with every coloured figure.",
+      "**Do** keep a fee warning outside any element that truncates.",
+      "**Do** set every number in Jost with tabular numerals, right-aligned in columns.",
+      "**Do** keep the product-page dialog keyboard-operable and every text pairing at 4.5:1 or better in both themes."
+    ],
+    "donts": [
+      "**Don't** round a corner, add a shadow at rest, or draw a card around a group.",
+      "**Don't** put a small capitalised label above a heading.",
+      "**Don't** use monospace, a status dot, a pill, or a letter-in-a-box logo.",
+      "**Don't** put a coloured band or stripes across the top of the page.",
+      "**Don't** use crimson, hunter or gold for anything except their meaning.",
+      "**Don't** use a cream or tinted page ground in the light theme.",
+      "**Don't** describe a negative gap as Quince losing money overall; it is the gap against the costs Quince discloses, nothing more."
+    ]
+  }
+}

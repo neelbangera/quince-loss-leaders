@@ -16,6 +16,9 @@ new contract is introduced.
   manifests, stable file paths, merge behavior, and static ranking output.
 - `test_api.py` covers ranking views, filters, facets, summaries, grouping,
   sorting, cache behavior, health, and product-detail responses.
+- `test_taxonomy.py` covers department and category inference: last-noun
+  reading, phrases, colour suffixes, plurals, and children's items filed under
+  other departments.
 - `test_crawler.py` covers authorization, URL/origin policy, robots, discovery,
   bounded parallel fetching, snapshots, parser coverage, diagnostics, and CLI
   quality gates.

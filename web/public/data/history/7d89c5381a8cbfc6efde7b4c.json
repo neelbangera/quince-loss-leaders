@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "tops",
-    "categoryLabel": "Tops",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6399",
+    "variantLabel": "Oatmeal / XS",
+    "variantSize": "Oatmeal",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/4z5hqP1okWzaVYv80ohf2R/069dfc00d5dac53670440356a189b255/W-SWT-49-OAT-234352.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4z5hqP1okWzaVYv80ohf2R/069dfc00d5dac53670440356a189b255/W-SWT-49-OAT-234352.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:12:43+00:00",
+    "capturedAt": "2026-10-13T19:27:30+00:00",
     "sellingPrice": "99.90",
     "reportedTotalCost": "76.38",
     "unitSpread": "23.52",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "9.04"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4z5hqP1okWzaVYv80ohf2R/069dfc00d5dac53670440356a189b255/W-SWT-49-OAT-234352.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "84.90",
     "highestPrice": "99.90",
     "lowestCost": "76.38",
     "highestCost": "79.47",
-    "averageSpread": "20.63",
+    "averageSpread": "20.72",
     "firstObservedAt": "2026-09-11T13:08:38+00:00",
-    "lastObservedAt": "2026-10-13T16:12:43+00:00"
+    "lastObservedAt": "2026-10-13T19:27:30+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "9.04"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:27:30+00:00",
+      "sellingPrice": "99.90",
+      "reportedTotalCost": "76.38",
+      "unitSpread": "23.52",
+      "marginPct": 23.54,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "40.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.28"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "9.04"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4z5hqP1okWzaVYv80ohf2R/069dfc00d5dac53670440356a189b255/W-SWT-49-OAT-234352.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

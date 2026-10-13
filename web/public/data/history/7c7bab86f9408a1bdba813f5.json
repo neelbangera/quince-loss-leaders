@@ -8,13 +8,22 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1313",
+    "variantLabel": "Ivory/Tan / 50x70",
+    "variantSize": "Ivory/Tan",
+    "variantColor": "50x70",
+    "imageUrl": "https://images.quince.com/3NB23nXGvzsqAgFxrgOF9W/efb3223105be5603f8e39700080017b0/ivory_throw_2__1_.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3NB23nXGvzsqAgFxrgOF9W/efb3223105be5603f8e39700080017b0/ivory_throw_2__1_.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/63osSXWTSSxWbwdZPS0HW8/6630524f4caf752a037015dfd6730b6d/ivory_grey.jpg?w=48&h=48&fm=webp"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:14:07+00:00",
+    "capturedAt": "2026-10-13T19:26:50+00:00",
     "sellingPrice": "154.00",
     "reportedTotalCost": "150.28",
     "unitSpread": "3.72",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "21.22"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3NB23nXGvzsqAgFxrgOF9W/efb3223105be5603f8e39700080017b0/ivory_throw_2__1_.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/63osSXWTSSxWbwdZPS0HW8/6630524f4caf752a037015dfd6730b6d/ivory_grey.jpg?w=48&h=48&fm=webp"
     ]
   },
   "analytics": {
-    "observationCount": 45,
+    "observationCount": 46,
     "lossObservations": 1,
-    "profitObservations": 44,
+    "profitObservations": 45,
     "lowestPrice": "134.00",
     "highestPrice": "154.00",
     "lowestCost": "139.47",
     "highestCost": "150.28",
-    "averageSpread": "12.39",
+    "averageSpread": "12.20",
     "firstObservedAt": "2026-08-29T21:12:34+00:00",
-    "lastObservedAt": "2026-10-13T16:14:07+00:00"
+    "lastObservedAt": "2026-10-13T19:26:50+00:00"
   },
   "history": [
     {
@@ -1910,6 +1923,51 @@
           "type": "duties_taxes_fees",
           "amount": "21.22"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:26:50+00:00",
+      "sellingPrice": "154.00",
+      "reportedTotalCost": "150.28",
+      "unitSpread": "3.72",
+      "marginPct": 2.42,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "100.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.08"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.73"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.25"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "21.22"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3NB23nXGvzsqAgFxrgOF9W/efb3223105be5603f8e39700080017b0/ivory_throw_2__1_.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/63osSXWTSSxWbwdZPS0HW8/6630524f4caf752a037015dfd6730b6d/ivory_grey.jpg?w=48&h=48&fm=webp"
       ]
     }
   ]

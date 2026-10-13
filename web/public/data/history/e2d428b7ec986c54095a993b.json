@@ -11,10 +11,18 @@
     "category": "other",
     "categoryLabel": "Other",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "10434",
+    "variantLabel": "No Color / One Size",
+    "variantSize": "No Color",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/3Z8UTqWstNAQP9YG8Z2RYC/755dd2306ad391cd8e903cd91e357ccc/878-4.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3Z8UTqWstNAQP9YG8Z2RYC/755dd2306ad391cd8e903cd91e357ccc/878-4.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:02:50+00:00",
+    "capturedAt": "2026-10-13T19:21:02+00:00",
     "sellingPrice": "210.00",
     "reportedTotalCost": "146.55",
     "unitSpread": "63.45",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3Z8UTqWstNAQP9YG8Z2RYC/755dd2306ad391cd8e903cd91e357ccc/878-4.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "210.00",
     "highestPrice": "210.00",
     "lowestCost": "146.55",
     "highestCost": "146.55",
     "averageSpread": "63.45",
     "firstObservedAt": "2026-10-13T16:02:50+00:00",
-    "lastObservedAt": "2026-10-13T16:02:50+00:00"
+    "lastObservedAt": "2026-10-13T19:21:02+00:00"
   },
   "history": [
     {
@@ -106,6 +117,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:21:02+00:00",
+      "sellingPrice": "210.00",
+      "reportedTotalCost": "146.55",
+      "unitSpread": "63.45",
+      "marginPct": 30.21,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "120.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "21.81"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.74"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3Z8UTqWstNAQP9YG8Z2RYC/755dd2306ad391cd8e903cd91e357ccc/878-4.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

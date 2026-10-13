@@ -8,13 +8,21 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "bath",
-    "categoryLabel": "Bath",
+    "category": "shorts",
+    "categoryLabel": "Shorts",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4158",
+    "variantLabel": "Bayberry Olive / S",
+    "variantSize": "Bayberry Olive",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/2qLDeeioE72EA74IWXX5gJ/e7c154834401ac8bfcddd967ed9c8336/M-SHT-19-BAYOLI-01_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2qLDeeioE72EA74IWXX5gJ/e7c154834401ac8bfcddd967ed9c8336/M-SHT-19-BAYOLI-01_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:00:40+00:00",
+    "capturedAt": "2026-10-13T19:33:55+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "10.64",
     "unitSpread": "29.26",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "1.25"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2qLDeeioE72EA74IWXX5gJ/e7c154834401ac8bfcddd967ed9c8336/M-SHT-19-BAYOLI-01_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 25,
+    "observationCount": 26,
     "lossObservations": 0,
-    "profitObservations": 25,
+    "profitObservations": 26,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "10.64",
     "highestCost": "16.94",
-    "averageSpread": "24.72",
+    "averageSpread": "24.90",
     "firstObservedAt": "2026-09-18T13:06:27+00:00",
-    "lastObservedAt": "2026-10-13T16:00:40+00:00"
+    "lastObservedAt": "2026-10-13T19:33:55+00:00"
   },
   "history": [
     {
@@ -1090,6 +1101,50 @@
           "type": "duties_taxes_fees",
           "amount": "1.25"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:33:55+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "10.64",
+      "unitSpread": "29.26",
+      "marginPct": 73.33,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.37"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.22"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.25"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2qLDeeioE72EA74IWXX5gJ/e7c154834401ac8bfcddd967ed9c8336/M-SHT-19-BAYOLI-01_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

@@ -11,16 +11,24 @@
     "category": "shoes",
     "categoryLabel": "Shoes",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": true,
+    "parentProductId": "6208",
+    "variantLabel": "Pecan / 5",
+    "variantSize": "Pecan",
+    "variantColor": "5",
+    "imageUrl": "https://images.quince.com/6quKJPxQQRZ9x2uJZ5WgKD/4070f9393b585ba1eea91b68f47d0cdd/F-OTH-5-PECBRO-198_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/6quKJPxQQRZ9x2uJZ5WgKD/4070f9393b585ba1eea91b68f47d0cdd/F-OTH-5-PECBRO-198_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:07:00+00:00",
+    "capturedAt": "2026-10-13T19:25:45+00:00",
     "sellingPrice": "70.00",
-    "reportedTotalCost": "40.44",
-    "unitSpread": "29.56",
-    "marginPct": 42.23,
+    "reportedTotalCost": "20.21",
+    "unitSpread": "49.79",
+    "marginPct": 71.13,
     "parseStatus": "complete",
-    "totalCostSource": "embedded_inferred",
+    "totalCostSource": "normalized_fee_excluded",
     "costLines": [
       {
         "label": "Materials",
@@ -50,21 +58,24 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "20.23"
+        "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/6quKJPxQQRZ9x2uJZ5WgKD/4070f9393b585ba1eea91b68f47d0cdd/F-OTH-5-PECBRO-198_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "70.00",
     "highestPrice": "70.00",
-    "lowestCost": "40.44",
+    "lowestCost": "20.21",
     "highestCost": "40.44",
-    "averageSpread": "29.56",
+    "averageSpread": "32.93",
     "firstObservedAt": "2026-10-09T15:29:52+00:00",
-    "lastObservedAt": "2026-10-13T16:07:00+00:00"
+    "lastObservedAt": "2026-10-13T19:25:45+00:00"
   },
   "history": [
     {
@@ -270,6 +281,50 @@
           "type": "duties_taxes_fees",
           "amount": "20.23"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:25:45+00:00",
+      "sellingPrice": "70.00",
+      "reportedTotalCost": "20.21",
+      "unitSpread": "49.79",
+      "marginPct": 71.13,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.92"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.40"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.05"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.81"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.03"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6quKJPxQQRZ9x2uJZ5WgKD/4070f9393b585ba1eea91b68f47d0cdd/F-OTH-5-PECBRO-198_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

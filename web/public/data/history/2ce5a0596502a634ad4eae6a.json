@@ -8,13 +8,22 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "furniture",
-    "categoryLabel": "Furniture",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "275",
+    "variantLabel": "Terracotta / One Size",
+    "variantSize": "Terracotta",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1PqIFb6mfZD2TYonNHjDV4/259d1746a2133bb7d534cd29b86da4c7/Copy_of_QUINCE_AP_2024_03_0140510_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1PqIFb6mfZD2TYonNHjDV4/259d1746a2133bb7d534cd29b86da4c7/Copy_of_QUINCE_AP_2024_03_0140510_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1EveqUVpcqrklnDIc7q7v9/37ee3c2dd394f77699867d5284a2a5c3/Copy_of_QUINCE_AP_2024_03_0140517_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:05:11+00:00",
+    "capturedAt": "2026-10-13T19:32:46+00:00",
     "sellingPrice": "34.90",
     "reportedTotalCost": "21.29",
     "unitSpread": "13.61",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "2.56"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1PqIFb6mfZD2TYonNHjDV4/259d1746a2133bb7d534cd29b86da4c7/Copy_of_QUINCE_AP_2024_03_0140510_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1EveqUVpcqrklnDIc7q7v9/37ee3c2dd394f77699867d5284a2a5c3/Copy_of_QUINCE_AP_2024_03_0140517_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "34.90",
     "highestPrice": "34.90",
     "lowestCost": "21.29",
     "highestCost": "32.73",
-    "averageSpread": "12.34",
+    "averageSpread": "12.47",
     "firstObservedAt": "2026-10-05T17:15:17+00:00",
-    "lastObservedAt": "2026-10-13T16:05:11+00:00"
+    "lastObservedAt": "2026-10-13T19:32:46+00:00"
   },
   "history": [
     {
@@ -434,6 +447,51 @@
           "type": "duties_taxes_fees",
           "amount": "2.56"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:32:46+00:00",
+      "sellingPrice": "34.90",
+      "reportedTotalCost": "21.29",
+      "unitSpread": "13.61",
+      "marginPct": 39.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.64"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.21"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.98"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1PqIFb6mfZD2TYonNHjDV4/259d1746a2133bb7d534cd29b86da4c7/Copy_of_QUINCE_AP_2024_03_0140510_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1EveqUVpcqrklnDIc7q7v9/37ee3c2dd394f77699867d5284a2a5c3/Copy_of_QUINCE_AP_2024_03_0140517_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

@@ -11,16 +11,28 @@
     "category": "accessories",
     "categoryLabel": "Accessories",
     "currency": "USD",
-    "hasExorbitantFees": true
+    "hasExorbitantFees": true,
+    "parentProductId": "7551",
+    "variantLabel": "Charcoal / 30-34",
+    "variantSize": "Charcoal",
+    "variantColor": "30-34",
+    "imageUrl": "https://images.quince.com/3GNxQiMkx5iYPGeza7F0AZ/abb595fe43ba9cbb44e0cd5255e18460/M-BLT-10-CHAR-040_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3GNxQiMkx5iYPGeza7F0AZ/abb595fe43ba9cbb44e0cd5255e18460/M-BLT-10-CHAR-040_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1inp31KoHdOQiYxPgA704m/83148455cb7b74bd74b942e28ac12075/M-BLT-10-CHAR_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4h6V8VqklTMMuuMLkntqWD/7359fce42c9bd55879c44b94d2941ce9/M-BLT-10-CHAR-046_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5IxWfcTPw2F67O3MDyXwAk/fc12762b502089283de7148e5f59f72b/M-BLT-10-CHAR_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3QJq9FdjiPlPAT7qX1OkBQ/f75204c9e6364e3860da008276c43030/M-BLT-10-CHAR-128_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:08:33+00:00",
+    "capturedAt": "2026-10-13T19:17:52+00:00",
     "sellingPrice": "30.00",
-    "reportedTotalCost": "56.48",
-    "unitSpread": "-26.48",
-    "marginPct": -88.27,
+    "reportedTotalCost": "14.16",
+    "unitSpread": "15.84",
+    "marginPct": 52.8,
     "parseStatus": "complete",
-    "totalCostSource": "embedded_inferred",
+    "totalCostSource": "normalized_fee_excluded",
     "costLines": [
       {
         "label": "Materials",
@@ -50,21 +62,28 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "42.32"
+        "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3GNxQiMkx5iYPGeza7F0AZ/abb595fe43ba9cbb44e0cd5255e18460/M-BLT-10-CHAR-040_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1inp31KoHdOQiYxPgA704m/83148455cb7b74bd74b942e28ac12075/M-BLT-10-CHAR_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4h6V8VqklTMMuuMLkntqWD/7359fce42c9bd55879c44b94d2941ce9/M-BLT-10-CHAR-046_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5IxWfcTPw2F67O3MDyXwAk/fc12762b502089283de7148e5f59f72b/M-BLT-10-CHAR_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3QJq9FdjiPlPAT7qX1OkBQ/f75204c9e6364e3860da008276c43030/M-BLT-10-CHAR-128_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 22,
+    "observationCount": 23,
     "lossObservations": 22,
-    "profitObservations": 0,
+    "profitObservations": 1,
     "lowestPrice": "30.00",
     "highestPrice": "30.00",
-    "lowestCost": "56.48",
+    "lowestCost": "14.16",
     "highestCost": "57.60",
-    "averageSpread": "-27.24",
+    "averageSpread": "-25.37",
     "firstObservedAt": "2026-09-18T13:01:43+00:00",
-    "lastObservedAt": "2026-10-13T16:08:33+00:00"
+    "lastObservedAt": "2026-10-13T19:17:52+00:00"
   },
   "history": [
     {
@@ -967,6 +986,54 @@
           "type": "duties_taxes_fees",
           "amount": "42.32"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:17:52+00:00",
+      "sellingPrice": "30.00",
+      "reportedTotalCost": "14.16",
+      "unitSpread": "15.84",
+      "marginPct": 52.8,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.54"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.56"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.78"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.88"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3GNxQiMkx5iYPGeza7F0AZ/abb595fe43ba9cbb44e0cd5255e18460/M-BLT-10-CHAR-040_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1inp31KoHdOQiYxPgA704m/83148455cb7b74bd74b942e28ac12075/M-BLT-10-CHAR_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4h6V8VqklTMMuuMLkntqWD/7359fce42c9bd55879c44b94d2941ce9/M-BLT-10-CHAR-046_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5IxWfcTPw2F67O3MDyXwAk/fc12762b502089283de7148e5f59f72b/M-BLT-10-CHAR_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3QJq9FdjiPlPAT7qX1OkBQ/f75204c9e6364e3860da008276c43030/M-BLT-10-CHAR-128_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

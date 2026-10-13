@@ -8,13 +8,21 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "tops",
-    "categoryLabel": "Tops",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6416",
+    "variantLabel": "Navy / S",
+    "variantSize": "Navy",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/6X9dmw1W5qIKY0UXSNiClR/5d98d6912c8363ce43ab432aea171e86/M-SWT-16-NAV_1807.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/6X9dmw1W5qIKY0UXSNiClR/5d98d6912c8363ce43ab432aea171e86/M-SWT-16-NAV_1807.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:18:47+00:00",
+    "capturedAt": "2026-10-13T19:32:08+00:00",
     "sellingPrice": "89.90",
     "reportedTotalCost": "65.84",
     "unitSpread": "24.06",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "7.19"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/6X9dmw1W5qIKY0UXSNiClR/5d98d6912c8363ce43ab432aea171e86/M-SWT-16-NAV_1807.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "89.90",
     "highestPrice": "89.90",
     "lowestCost": "65.84",
     "highestCost": "65.84",
     "averageSpread": "24.06",
     "firstObservedAt": "2026-10-09T15:35:57+00:00",
-    "lastObservedAt": "2026-10-13T16:18:47+00:00"
+    "lastObservedAt": "2026-10-13T19:32:08+00:00"
   },
   "history": [
     {
@@ -270,6 +281,50 @@
           "type": "duties_taxes_fees",
           "amount": "7.19"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:32:08+00:00",
+      "sellingPrice": "89.90",
+      "reportedTotalCost": "65.84",
+      "unitSpread": "24.06",
+      "marginPct": 26.76,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "31.57"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "12.51"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.57"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.19"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6X9dmw1W5qIKY0UXSNiClR/5d98d6912c8363ce43ab432aea171e86/M-SWT-16-NAV_1807.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

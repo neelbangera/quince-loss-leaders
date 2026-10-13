@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5230",
+    "variantLabel": "Taupe / XS",
+    "variantSize": "Taupe",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/7GK7gG3TJnbXyyxUUGSVyk/f4cbe4d2c86bf458758d7b7bafc6fd3c/W-HKT-28-TPE-7249_EDITED_1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/7GK7gG3TJnbXyyxUUGSVyk/f4cbe4d2c86bf458758d7b7bafc6fd3c/W-HKT-28-TPE-7249_EDITED_1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:01:45+00:00",
+    "capturedAt": "2026-10-13T19:17:44+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "18.23",
     "unitSpread": "21.67",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.72"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/7GK7gG3TJnbXyyxUUGSVyk/f4cbe4d2c86bf458758d7b7bafc6fd3c/W-HKT-28-TPE-7249_EDITED_1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "18.23",
     "highestCost": "24.17",
-    "averageSpread": "19.51",
+    "averageSpread": "19.69",
     "firstObservedAt": "2026-10-02T14:47:39+00:00",
-    "lastObservedAt": "2026-10-13T16:01:45+00:00"
+    "lastObservedAt": "2026-10-13T19:17:44+00:00"
   },
   "history": [
     {
@@ -516,6 +527,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.72"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:17:44+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "18.23",
+      "unitSpread": "21.67",
+      "marginPct": 54.31,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.45"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.21"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.32"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.33"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.72"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7GK7gG3TJnbXyyxUUGSVyk/f4cbe4d2c86bf458758d7b7bafc6fd3c/W-HKT-28-TPE-7249_EDITED_1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

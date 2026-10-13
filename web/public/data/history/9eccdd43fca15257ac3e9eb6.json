@@ -8,13 +8,25 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "furniture",
+    "categoryLabel": "Furniture",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8376",
+    "variantLabel": "Flax / 119\" Right Arm",
+    "variantSize": "Flax",
+    "variantColor": "119\" Right Arm",
+    "imageUrl": "https://images.quince.com/3FX7dbYIofbAEsz27vwtjC/ba1d27ab2e8ae1acb83570313a8a4d07/Chunk__Arm_Deep_Seat_Chais_Sectional_119_Right_Arm_Bru_Colourwash_Flax.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3FX7dbYIofbAEsz27vwtjC/ba1d27ab2e8ae1acb83570313a8a4d07/Chunk__Arm_Deep_Seat_Chais_Sectional_119_Right_Arm_Bru_Colourwash_Flax.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/YHygbNJXoUXd2cGfxGGzV/4fdef2532ac07afc4f763e3cc5941f60/basketweave1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7Ce7n6xMPHfEiN2X1nfple/805b6b6fbca304b850c3f49ff3d1c06c/basketweave2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3UiFZqlhLyhBQlekCJRBEO/5e00550eb3f951c884122bfb668dc038/basketweave3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4ePeNb7k6KagMKxGVBwKSR/497bdac4e36a90515a8d73b5106a3df7/basketweave4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:12:26+00:00",
+    "capturedAt": "2026-10-13T19:17:34+00:00",
     "sellingPrice": "2800.00",
     "reportedTotalCost": "2121.24",
     "unitSpread": "678.76",
@@ -52,19 +64,26 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3FX7dbYIofbAEsz27vwtjC/ba1d27ab2e8ae1acb83570313a8a4d07/Chunk__Arm_Deep_Seat_Chais_Sectional_119_Right_Arm_Bru_Colourwash_Flax.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/YHygbNJXoUXd2cGfxGGzV/4fdef2532ac07afc4f763e3cc5941f60/basketweave1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7Ce7n6xMPHfEiN2X1nfple/805b6b6fbca304b850c3f49ff3d1c06c/basketweave2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3UiFZqlhLyhBQlekCJRBEO/5e00550eb3f951c884122bfb668dc038/basketweave3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4ePeNb7k6KagMKxGVBwKSR/497bdac4e36a90515a8d73b5106a3df7/basketweave4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "2800.00",
     "highestPrice": "2800.00",
     "lowestCost": "2020.15",
     "highestCost": "2121.24",
-    "averageSpread": "758.41",
+    "averageSpread": "756.06",
     "firstObservedAt": "2026-09-11T13:00:53+00:00",
-    "lastObservedAt": "2026-10-13T16:12:26+00:00"
+    "lastObservedAt": "2026-10-13T19:17:34+00:00"
   },
   "history": [
     {
@@ -1418,6 +1437,54 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:17:34+00:00",
+      "sellingPrice": "2800.00",
+      "reportedTotalCost": "2121.24",
+      "unitSpread": "678.76",
+      "marginPct": 24.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "663.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "737.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "73.75"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "584.90"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "61.34"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3FX7dbYIofbAEsz27vwtjC/ba1d27ab2e8ae1acb83570313a8a4d07/Chunk__Arm_Deep_Seat_Chais_Sectional_119_Right_Arm_Bru_Colourwash_Flax.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/YHygbNJXoUXd2cGfxGGzV/4fdef2532ac07afc4f763e3cc5941f60/basketweave1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7Ce7n6xMPHfEiN2X1nfple/805b6b6fbca304b850c3f49ff3d1c06c/basketweave2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3UiFZqlhLyhBQlekCJRBEO/5e00550eb3f951c884122bfb668dc038/basketweave3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4ePeNb7k6KagMKxGVBwKSR/497bdac4e36a90515a8d73b5106a3df7/basketweave4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

@@ -8,13 +8,21 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6017",
+    "variantLabel": "No Color / One Size",
+    "variantSize": "No Color",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1pAg6yds1hdYLMedAZ5FXn/2f681219262aad37593f60d3a30d90ca/07_26_U_KTCH_144_SS_0070.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1pAg6yds1hdYLMedAZ5FXn/2f681219262aad37593f60d3a30d90ca/07_26_U_KTCH_144_SS_0070.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:05:09+00:00",
+    "capturedAt": "2026-10-13T19:18:04+00:00",
     "sellingPrice": "59.95",
     "reportedTotalCost": "44.57",
     "unitSpread": "15.38",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1pAg6yds1hdYLMedAZ5FXn/2f681219262aad37593f60d3a30d90ca/07_26_U_KTCH_144_SS_0070.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 47,
+    "observationCount": 48,
     "lossObservations": 0,
-    "profitObservations": 47,
+    "profitObservations": 48,
     "lowestPrice": "59.95",
     "highestPrice": "59.95",
     "lowestCost": "44.57",
     "highestCost": "46.20",
-    "averageSpread": "13.99",
+    "averageSpread": "14.02",
     "firstObservedAt": "2026-08-29T21:21:19+00:00",
-    "lastObservedAt": "2026-10-13T16:05:09+00:00"
+    "lastObservedAt": "2026-10-13T19:18:04+00:00"
   },
   "history": [
     {
@@ -1992,6 +2003,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:18:04+00:00",
+      "sellingPrice": "59.95",
+      "reportedTotalCost": "44.57",
+      "unitSpread": "15.38",
+      "marginPct": 25.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "34.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.11"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.46"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1pAg6yds1hdYLMedAZ5FXn/2f681219262aad37593f60d3a30d90ca/07_26_U_KTCH_144_SS_0070.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

@@ -8,17 +8,25 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5369",
+    "variantLabel": "Yellow Gold / One Size",
+    "variantSize": "Yellow Gold",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/2pvyJjq2U4ZgcUK973ZBsF/44fb692b48982d2d274eea479ef0e567/W-EARR-188_0219_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2pvyJjq2U4ZgcUK973ZBsF/44fb692b48982d2d274eea479ef0e567/W-EARR-188_0219_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:02:03+00:00",
+    "capturedAt": "2026-10-13T19:29:30+00:00",
     "sellingPrice": "398.00",
-    "reportedTotalCost": "304.43",
-    "unitSpread": "93.57",
-    "marginPct": 23.51,
+    "reportedTotalCost": "304.48",
+    "unitSpread": "93.52",
+    "marginPct": 23.5,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,21 +58,24 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "20.95"
+        "amount": "21.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2pvyJjq2U4ZgcUK973ZBsF/44fb692b48982d2d274eea479ef0e567/W-EARR-188_0219_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "398.00",
     "highestPrice": "398.00",
     "lowestCost": "274.97",
     "highestCost": "317.20",
-    "averageSpread": "87.76",
+    "averageSpread": "87.93",
     "firstObservedAt": "2026-09-11T12:59:20+00:00",
-    "lastObservedAt": "2026-10-13T16:02:03+00:00"
+    "lastObservedAt": "2026-10-13T19:29:30+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "20.95"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:29:30+00:00",
+      "sellingPrice": "398.00",
+      "reportedTotalCost": "304.48",
+      "unitSpread": "93.52",
+      "marginPct": 23.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "243.13"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "20.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "10.10"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "21.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2pvyJjq2U4ZgcUK973ZBsF/44fb692b48982d2d274eea479ef0e567/W-EARR-188_0219_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

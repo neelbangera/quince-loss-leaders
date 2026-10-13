@@ -8,17 +8,25 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "973",
+    "variantLabel": "Platinum / 4",
+    "variantSize": "Platinum",
+    "variantColor": "4",
+    "imageUrl": "https://images.quince.com/Qh7bDkt3Ztwgdvlawwgp1/3d11f4836b22bad2f76fbb8a1fed6814/white_ring.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/Qh7bDkt3Ztwgdvlawwgp1/3d11f4836b22bad2f76fbb8a1fed6814/white_ring.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:10:19+00:00",
+    "capturedAt": "2026-10-13T19:37:27+00:00",
     "sellingPrice": "348.00",
-    "reportedTotalCost": "220.41",
-    "unitSpread": "127.59",
-    "marginPct": 36.66,
+    "reportedTotalCost": "212.94",
+    "unitSpread": "135.06",
+    "marginPct": 38.81,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,21 +58,24 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "18.06"
+        "amount": "10.59"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/Qh7bDkt3Ztwgdvlawwgp1/3d11f4836b22bad2f76fbb8a1fed6814/white_ring.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "348.00",
     "highestPrice": "348.00",
     "lowestCost": "192.42",
     "highestCost": "226.61",
-    "averageSpread": "126.61",
+    "averageSpread": "126.86",
     "firstObservedAt": "2026-09-11T13:10:30+00:00",
-    "lastObservedAt": "2026-10-13T16:10:19+00:00"
+    "lastObservedAt": "2026-10-13T19:37:27+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "18.06"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:37:27+00:00",
+      "sellingPrice": "348.00",
+      "reportedTotalCost": "212.94",
+      "unitSpread": "135.06",
+      "marginPct": 38.81,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "165.13"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "13.37"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "9.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "10.59"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/Qh7bDkt3Ztwgdvlawwgp1/3d11f4836b22bad2f76fbb8a1fed6814/white_ring.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

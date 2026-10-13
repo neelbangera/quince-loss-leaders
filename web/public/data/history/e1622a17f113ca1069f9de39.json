@@ -11,10 +11,18 @@
     "category": "shoes",
     "categoryLabel": "Shoes",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7787",
+    "variantLabel": "Birch / 5",
+    "variantSize": "Birch",
+    "variantColor": "5",
+    "imageUrl": "https://images.quince.com/2yiWE4Jkr8JKFIX6slp004/acd0eeea50a8bafb9c8a778247e76dfe/W--410-BIR-230_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2yiWE4Jkr8JKFIX6slp004/acd0eeea50a8bafb9c8a778247e76dfe/W--410-BIR-230_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:05:19+00:00",
+    "capturedAt": "2026-10-13T19:37:41+00:00",
     "sellingPrice": "94.00",
     "reportedTotalCost": "48.49",
     "unitSpread": "45.51",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "10.84"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2yiWE4Jkr8JKFIX6slp004/acd0eeea50a8bafb9c8a778247e76dfe/W--410-BIR-230_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 21,
+    "observationCount": 22,
     "lossObservations": 0,
-    "profitObservations": 21,
+    "profitObservations": 22,
     "lowestPrice": "94.00",
     "highestPrice": "94.00",
     "lowestCost": "48.49",
     "highestCost": "52.12",
-    "averageSpread": "43.09",
+    "averageSpread": "43.20",
     "firstObservedAt": "2026-09-23T13:51:50+00:00",
-    "lastObservedAt": "2026-10-13T16:05:19+00:00"
+    "lastObservedAt": "2026-10-13T19:37:41+00:00"
   },
   "history": [
     {
@@ -926,6 +937,50 @@
           "type": "duties_taxes_fees",
           "amount": "10.84"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:37:41+00:00",
+      "sellingPrice": "94.00",
+      "reportedTotalCost": "48.49",
+      "unitSpread": "45.51",
+      "marginPct": 48.41,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.98"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.07"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.29"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.11"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "10.84"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2yiWE4Jkr8JKFIX6slp004/acd0eeea50a8bafb9c8a778247e76dfe/W--410-BIR-230_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

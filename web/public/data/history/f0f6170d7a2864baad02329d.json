@@ -8,13 +8,21 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "shoes",
+    "categoryLabel": "Shoes",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7021",
+    "variantLabel": "Black / 7",
+    "variantSize": "Black",
+    "variantColor": "7",
+    "imageUrl": "https://images.quince.com/1IJ6s9YZIR0TdrKjDaD35x/784ea52870d0266a31f62762e23f6659/W--373-BLA-066_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1IJ6s9YZIR0TdrKjDaD35x/784ea52870d0266a31f62762e23f6659/W--373-BLA-066_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:13:19+00:00",
+    "capturedAt": "2026-10-13T19:20:43+00:00",
     "sellingPrice": "125.00",
     "reportedTotalCost": "71.35",
     "unitSpread": "53.65",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "18.55"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1IJ6s9YZIR0TdrKjDaD35x/784ea52870d0266a31f62762e23f6659/W--373-BLA-066_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "100.00",
     "highestPrice": "125.00",
     "lowestCost": "71.35",
     "highestCost": "75.64",
-    "averageSpread": "49.51",
+    "averageSpread": "49.63",
     "firstObservedAt": "2026-09-11T13:03:36+00:00",
-    "lastObservedAt": "2026-10-13T16:13:19+00:00"
+    "lastObservedAt": "2026-10-13T19:20:43+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "18.55"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:20:43+00:00",
+      "sellingPrice": "125.00",
+      "reportedTotalCost": "71.35",
+      "unitSpread": "53.65",
+      "marginPct": 42.92,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "23.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "19.05"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.76"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "18.55"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1IJ6s9YZIR0TdrKjDaD35x/784ea52870d0266a31f62762e23f6659/W--373-BLA-066_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

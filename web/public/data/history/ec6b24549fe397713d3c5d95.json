@@ -8,13 +8,21 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "tops",
-    "categoryLabel": "Tops",
+    "category": "outerwear",
+    "categoryLabel": "Outerwear",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7381",
+    "variantLabel": "Black / S",
+    "variantSize": "Black",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/ptFBvy7wFsTcJmsZW3dH9/abbe869824f959f5ea57b98fb170e523/M-JKT-132-BLA_02_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/ptFBvy7wFsTcJmsZW3dH9/abbe869824f959f5ea57b98fb170e523/M-JKT-132-BLA_02_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:09:15+00:00",
+    "capturedAt": "2026-10-13T19:21:42+00:00",
     "sellingPrice": "450.00",
     "reportedTotalCost": "282.43",
     "unitSpread": "167.57",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "21.82"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/ptFBvy7wFsTcJmsZW3dH9/abbe869824f959f5ea57b98fb170e523/M-JKT-132-BLA_02_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "450.00",
     "highestPrice": "450.00",
     "lowestCost": "282.43",
     "highestCost": "286.05",
-    "averageSpread": "164.72",
+    "averageSpread": "164.80",
     "firstObservedAt": "2026-09-11T12:59:23+00:00",
-    "lastObservedAt": "2026-10-13T16:09:15+00:00"
+    "lastObservedAt": "2026-10-13T19:21:42+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "21.82"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:21:42+00:00",
+      "sellingPrice": "450.00",
+      "reportedTotalCost": "282.43",
+      "unitSpread": "167.57",
+      "marginPct": 37.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "207.18"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "32.57"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.97"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "14.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "21.82"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/ptFBvy7wFsTcJmsZW3dH9/abbe869824f959f5ea57b98fb170e523/M-JKT-132-BLA_02_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

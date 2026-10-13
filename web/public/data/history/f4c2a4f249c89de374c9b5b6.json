@@ -11,10 +11,18 @@
     "category": "shoes",
     "categoryLabel": "Shoes",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "2358",
+    "variantLabel": "Coffee Bean / 6",
+    "variantSize": "Coffee Bean",
+    "variantColor": "6",
+    "imageUrl": "https://images.quince.com/3HM5KRQIJC7RHNXQooJsz7/d30ee506e4e0fe312db9d195da189a26/U-OTH-12-COFBEA-11-108_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3HM5KRQIJC7RHNXQooJsz7/d30ee506e4e0fe312db9d195da189a26/U-OTH-12-COFBEA-11-108_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:02:05+00:00",
+    "capturedAt": "2026-10-13T19:28:32+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "41.36",
     "unitSpread": "28.54",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "18.62"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3HM5KRQIJC7RHNXQooJsz7/d30ee506e4e0fe312db9d195da189a26/U-OTH-12-COFBEA-11-108_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 29,
+    "observationCount": 30,
     "lossObservations": 0,
-    "profitObservations": 29,
+    "profitObservations": 30,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "41.36",
     "highestCost": "41.65",
-    "averageSpread": "28.32",
+    "averageSpread": "28.33",
     "firstObservedAt": "2026-09-15T13:51:31+00:00",
-    "lastObservedAt": "2026-10-13T16:02:05+00:00"
+    "lastObservedAt": "2026-10-13T19:28:32+00:00"
   },
   "history": [
     {
@@ -1254,6 +1265,50 @@
           "type": "duties_taxes_fees",
           "amount": "18.62"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:28:32+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "41.36",
+      "unitSpread": "28.54",
+      "marginPct": 40.83,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.41"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.78"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.05"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "18.62"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3HM5KRQIJC7RHNXQooJsz7/d30ee506e4e0fe312db9d195da189a26/U-OTH-12-COFBEA-11-108_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

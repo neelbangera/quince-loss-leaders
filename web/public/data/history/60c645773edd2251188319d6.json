@@ -8,13 +8,22 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4271",
+    "variantLabel": "Grey/White Stripe / One Size",
+    "variantSize": "Grey/White Stripe",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1J4eWxm7lzTGfKqO86RQr7/f97bfd9e9617bb5715ce4ca91ad6dbde/Grey_White_Stripes_12.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1J4eWxm7lzTGfKqO86RQr7/f97bfd9e9617bb5715ce4ca91ad6dbde/Grey_White_Stripes_12.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/5pwmHkclGKnqLrGLNiBLds/298ee0920a47410d1d698a43c6181905/image_1.jpg?w=48&h=48&fm=webp"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:08:39+00:00",
+    "capturedAt": "2026-10-13T19:31:02+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "43.21",
     "unitSpread": "26.69",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "8.78"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1J4eWxm7lzTGfKqO86RQr7/f97bfd9e9617bb5715ce4ca91ad6dbde/Grey_White_Stripes_12.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/5pwmHkclGKnqLrGLNiBLds/298ee0920a47410d1d698a43c6181905/image_1.jpg?w=48&h=48&fm=webp"
     ]
   },
   "analytics": {
-    "observationCount": 45,
+    "observationCount": 46,
     "lossObservations": 0,
-    "profitObservations": 45,
+    "profitObservations": 46,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "43.20",
     "highestCost": "43.21",
     "averageSpread": "26.70",
     "firstObservedAt": "2026-08-29T21:11:11+00:00",
-    "lastObservedAt": "2026-10-13T16:08:39+00:00"
+    "lastObservedAt": "2026-10-13T19:31:02+00:00"
   },
   "history": [
     {
@@ -1910,6 +1923,51 @@
           "type": "duties_taxes_fees",
           "amount": "8.78"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:31:02+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "43.21",
+      "unitSpread": "26.69",
+      "marginPct": 38.18,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "19.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.41"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.77"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "8.78"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1J4eWxm7lzTGfKqO86RQr7/f97bfd9e9617bb5715ce4ca91ad6dbde/Grey_White_Stripes_12.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5pwmHkclGKnqLrGLNiBLds/298ee0920a47410d1d698a43c6181905/image_1.jpg?w=48&h=48&fm=webp"
       ]
     }
   ]

@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bath",
+    "categoryLabel": "Bath",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8529",
+    "variantLabel": "White / One Size",
+    "variantSize": "White",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/3tYaSEsrYWFvRZjQt03xRf/8d82a513bdaaebaf9f1fa634b04a66e8/U-BATH-106-WHIT-0224_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3tYaSEsrYWFvRZjQt03xRf/8d82a513bdaaebaf9f1fa634b04a66e8/U-BATH-106-WHIT-0224_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T15:59:47+00:00",
+    "capturedAt": "2026-10-13T19:31:44+00:00",
     "sellingPrice": "28.00",
     "reportedTotalCost": "36.53",
     "unitSpread": "-8.53",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "17.30"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3tYaSEsrYWFvRZjQt03xRf/8d82a513bdaaebaf9f1fa634b04a66e8/U-BATH-106-WHIT-0224_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 26,
-    "lossObservations": 26,
+    "observationCount": 27,
+    "lossObservations": 27,
     "profitObservations": 0,
     "lowestPrice": "28.00",
     "highestPrice": "28.00",
     "lowestCost": "36.53",
     "highestCost": "58.66",
-    "averageSpread": "-24.70",
+    "averageSpread": "-24.10",
     "firstObservedAt": "2026-09-18T13:16:38+00:00",
-    "lastObservedAt": "2026-10-13T15:59:47+00:00"
+    "lastObservedAt": "2026-10-13T19:31:44+00:00"
   },
   "history": [
     {
@@ -1131,6 +1142,50 @@
           "type": "duties_taxes_fees",
           "amount": "17.30"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:31:44+00:00",
+      "sellingPrice": "28.00",
+      "reportedTotalCost": "36.53",
+      "unitSpread": "-8.53",
+      "marginPct": -30.46,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.28"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "13.35"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.76"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "17.30"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3tYaSEsrYWFvRZjQt03xRf/8d82a513bdaaebaf9f1fa634b04a66e8/U-BATH-106-WHIT-0224_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

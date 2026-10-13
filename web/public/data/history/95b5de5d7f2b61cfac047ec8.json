@@ -8,13 +8,21 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7994",
+    "variantLabel": "Polished Nickel / Set of 3",
+    "variantSize": "Polished Nickel",
+    "variantColor": "Set of 3",
+    "imageUrl": "https://images.quince.com/2pFo1VFZEQFjV4AiQdNB61/31c86b12316301df59b95de484a4ff19/U-HAC-553-BRAS-4881_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2pFo1VFZEQFjV4AiQdNB61/31c86b12316301df59b95de484a4ff19/U-HAC-553-BRAS-4881_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:13:53+00:00",
+    "capturedAt": "2026-10-13T19:30:57+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "33.24",
     "unitSpread": "36.66",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.20"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2pFo1VFZEQFjV4AiQdNB61/31c86b12316301df59b95de484a4ff19/U-HAC-553-BRAS-4881_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "25.21",
     "highestCost": "33.24",
-    "averageSpread": "42.99",
+    "averageSpread": "42.80",
     "firstObservedAt": "2026-09-11T13:07:46+00:00",
-    "lastObservedAt": "2026-10-13T16:13:53+00:00"
+    "lastObservedAt": "2026-10-13T19:30:57+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.20"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:30:57+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "33.24",
+      "unitSpread": "36.66",
+      "marginPct": 52.45,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "3.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.31"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.73"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2pFo1VFZEQFjV4AiQdNB61/31c86b12316301df59b95de484a4ff19/U-HAC-553-BRAS-4881_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

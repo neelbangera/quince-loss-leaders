@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "bedding",
-    "categoryLabel": "Bedding",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "378",
+    "variantLabel": "Indigo / Individual",
+    "variantSize": "Indigo",
+    "variantColor": "Individual",
+    "imageUrl": "https://images.quince.com/79iVRdgMFXyzuUzfTOoxr1/c424773c2d8e35c923c5a5e89c495093/navy_pillow_Fixed.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/79iVRdgMFXyzuUzfTOoxr1/c424773c2d8e35c923c5a5e89c495093/navy_pillow_Fixed.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:07:28+00:00",
+    "capturedAt": "2026-10-13T19:25:31+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "48.22",
     "unitSpread": "1.68",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.52"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/79iVRdgMFXyzuUzfTOoxr1/c424773c2d8e35c923c5a5e89c495093/navy_pillow_Fixed.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "48.22",
     "highestCost": "48.22",
     "averageSpread": "1.68",
     "firstObservedAt": "2026-09-11T13:06:58+00:00",
-    "lastObservedAt": "2026-10-13T16:07:28+00:00"
+    "lastObservedAt": "2026-10-13T19:25:31+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.52"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:25:31+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "48.22",
+      "unitSpread": "1.68",
+      "marginPct": 3.37,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "17.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "21.38"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.32"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.52"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/79iVRdgMFXyzuUzfTOoxr1/c424773c2d8e35c923c5a5e89c495093/navy_pillow_Fixed.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

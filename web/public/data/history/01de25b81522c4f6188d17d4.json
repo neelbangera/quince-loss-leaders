@@ -8,17 +8,25 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4641",
+    "variantLabel": "Yellow Gold / One Size",
+    "variantSize": "Yellow Gold",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/3QjYdFngsPzKypbKRGtDlf/e8fc6bf31897d2659600b9e3738334eb/W-EARR-167-YG_4_3CT.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3QjYdFngsPzKypbKRGtDlf/e8fc6bf31897d2659600b9e3738334eb/W-EARR-167-YG_4_3CT.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:09:14+00:00",
+    "capturedAt": "2026-10-13T19:27:36+00:00",
     "sellingPrice": "1500.00",
-    "reportedTotalCost": "839.70",
-    "unitSpread": "660.30",
-    "marginPct": 44.02,
+    "reportedTotalCost": "778.17",
+    "unitSpread": "721.83",
+    "marginPct": 48.12,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "26.64"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -50,21 +58,24 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "133.93"
+        "amount": "99.04"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3QjYdFngsPzKypbKRGtDlf/e8fc6bf31897d2659600b9e3738334eb/W-EARR-167-YG_4_3CT.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "1500.00",
     "highestPrice": "1500.00",
     "lowestCost": "747.69",
     "highestCost": "839.70",
-    "averageSpread": "727.93",
+    "averageSpread": "727.75",
     "firstObservedAt": "2026-09-11T12:56:35+00:00",
-    "lastObservedAt": "2026-10-13T16:09:14+00:00"
+    "lastObservedAt": "2026-10-13T19:27:36+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "133.93"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:27:36+00:00",
+      "sellingPrice": "1500.00",
+      "reportedTotalCost": "778.17",
+      "unitSpread": "721.83",
+      "marginPct": 48.12,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "611.18"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "25.46"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "40.19"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "99.04"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3QjYdFngsPzKypbKRGtDlf/e8fc6bf31897d2659600b9e3738334eb/W-EARR-167-YG_4_3CT.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

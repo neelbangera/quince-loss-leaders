@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "2823",
+    "variantLabel": "Natural / Standard",
+    "variantSize": "Natural",
+    "variantColor": "Standard",
+    "imageUrl": "https://images.quince.com/3VsCddZm1ITGuhspmzaTA8/4559c22ea88a5828bfa297a2470f3856/U--Bedd-239-Oat_189130.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3VsCddZm1ITGuhspmzaTA8/4559c22ea88a5828bfa297a2470f3856/U--Bedd-239-Oat_189130.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:17:02+00:00",
+    "capturedAt": "2026-10-13T19:20:48+00:00",
     "sellingPrice": "44.90",
     "reportedTotalCost": "22.72",
     "unitSpread": "22.18",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "4.22"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3VsCddZm1ITGuhspmzaTA8/4559c22ea88a5828bfa297a2470f3856/U--Bedd-239-Oat_189130.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 31,
+    "observationCount": 32,
     "lossObservations": 0,
-    "profitObservations": 31,
+    "profitObservations": 32,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "22.72",
     "highestCost": "24.46",
-    "averageSpread": "20.72",
+    "averageSpread": "20.77",
     "firstObservedAt": "2026-09-11T13:03:48+00:00",
-    "lastObservedAt": "2026-10-13T16:17:02+00:00"
+    "lastObservedAt": "2026-10-13T19:20:48+00:00"
   },
   "history": [
     {
@@ -1336,6 +1347,50 @@
           "type": "duties_taxes_fees",
           "amount": "4.22"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:20:48+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "22.72",
+      "unitSpread": "22.18",
+      "marginPct": 49.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.89"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.04"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.19"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.23"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.22"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3VsCddZm1ITGuhspmzaTA8/4559c22ea88a5828bfa297a2470f3856/U--Bedd-239-Oat_189130.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

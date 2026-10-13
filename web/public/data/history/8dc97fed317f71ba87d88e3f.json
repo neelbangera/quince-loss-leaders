@@ -8,13 +8,21 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "bedding",
-    "categoryLabel": "Bedding",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6135",
+    "variantLabel": "Flax / 12\"x48\"",
+    "variantSize": "Flax",
+    "variantColor": "12\"x48\"",
+    "imageUrl": "https://images.quince.com/lLpYSyzAAZ4UTk47MuIi8/da85af3ce8a526a96b854fb43c650917/U-TEXT-34-GROD_10466_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/lLpYSyzAAZ4UTk47MuIi8/da85af3ce8a526a96b854fb43c650917/U-TEXT-34-GROD_10466_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:06:15+00:00",
+    "capturedAt": "2026-10-13T19:37:16+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "33.20",
     "unitSpread": "36.70",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "6.30"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/lLpYSyzAAZ4UTk47MuIi8/da85af3ce8a526a96b854fb43c650917/U-TEXT-34-GROD_10466_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 39,
+    "observationCount": 40,
     "lossObservations": 0,
-    "profitObservations": 39,
+    "profitObservations": 40,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "33.20",
     "highestCost": "44.43",
-    "averageSpread": "27.20",
+    "averageSpread": "27.44",
     "firstObservedAt": "2026-09-01T13:45:08+00:00",
-    "lastObservedAt": "2026-10-13T16:06:15+00:00"
+    "lastObservedAt": "2026-10-13T19:37:16+00:00"
   },
   "history": [
     {
@@ -1664,6 +1675,50 @@
           "type": "duties_taxes_fees",
           "amount": "6.30"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:37:16+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "33.20",
+      "unitSpread": "36.70",
+      "marginPct": 52.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "14.12"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.40"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.48"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.02"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.88"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.30"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/lLpYSyzAAZ4UTk47MuIi8/da85af3ce8a526a96b854fb43c650917/U-TEXT-34-GROD_10466_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

@@ -11,10 +11,18 @@
     "category": "pants",
     "categoryLabel": "Pants",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6046",
+    "variantLabel": "Espresso / 0",
+    "variantSize": "Espresso",
+    "variantColor": "0",
+    "imageUrl": "https://images.quince.com/7pgd4wqe8akpWvQovfWUUS/2a1efee078e4b8bcd5287b91672f0a0e/W-PNT-180-ESPRS-15223_EDITED_1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/7pgd4wqe8akpWvQovfWUUS/2a1efee078e4b8bcd5287b91672f0a0e/W-PNT-180-ESPRS-15223_EDITED_1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:10:40+00:00",
+    "capturedAt": "2026-10-13T19:24:09+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "34.13",
     "unitSpread": "25.77",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "6.23"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/7pgd4wqe8akpWvQovfWUUS/2a1efee078e4b8bcd5287b91672f0a0e/W-PNT-180-ESPRS-15223_EDITED_1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "34.13",
     "highestCost": "34.76",
-    "averageSpread": "25.27",
+    "averageSpread": "25.29",
     "firstObservedAt": "2026-09-11T13:00:09+00:00",
-    "lastObservedAt": "2026-10-13T16:10:40+00:00"
+    "lastObservedAt": "2026-10-13T19:24:09+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "6.23"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:24:09+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "34.13",
+      "unitSpread": "25.77",
+      "marginPct": 43.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.28"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "9.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.70"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.38"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.23"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7pgd4wqe8akpWvQovfWUUS/2a1efee078e4b8bcd5287b91672f0a0e/W-PNT-180-ESPRS-15223_EDITED_1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

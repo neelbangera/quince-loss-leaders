@@ -11,10 +11,18 @@
     "category": "home-decor",
     "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8718",
+    "variantLabel": "Beige / 5' x 8'",
+    "variantSize": "Beige",
+    "variantColor": "5' x 8'",
+    "imageUrl": "https://images.quince.com/5ODAueuQLuDTbsJsJhLjs0/fc883d3d0eca583625c72c2653e665fb/S3420-DBEI.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5ODAueuQLuDTbsJsJhLjs0/fc883d3d0eca583625c72c2653e665fb/S3420-DBEI.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:13:46+00:00",
+    "capturedAt": "2026-10-13T19:35:59+00:00",
     "sellingPrice": "499.90",
     "reportedTotalCost": "339.73",
     "unitSpread": "160.17",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5ODAueuQLuDTbsJsJhLjs0/fc883d3d0eca583625c72c2653e665fb/S3420-DBEI.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "499.90",
     "highestPrice": "499.90",
     "lowestCost": "328.81",
     "highestCost": "339.73",
-    "averageSpread": "168.77",
+    "averageSpread": "168.52",
     "firstObservedAt": "2026-09-11T13:05:23+00:00",
-    "lastObservedAt": "2026-10-13T16:13:46+00:00"
+    "lastObservedAt": "2026-10-13T19:35:59+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:35:59+00:00",
+      "sellingPrice": "499.90",
+      "reportedTotalCost": "339.73",
+      "unitSpread": "160.17",
+      "marginPct": 32.04,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "179.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "122.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "25.66"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "11.07"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5ODAueuQLuDTbsJsJhLjs0/fc883d3d0eca583625c72c2653e665fb/S3420-DBEI.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

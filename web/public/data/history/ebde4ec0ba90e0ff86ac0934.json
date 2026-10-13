@@ -8,13 +8,21 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "tops",
-    "categoryLabel": "Tops",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6409",
+    "variantLabel": "Black / S",
+    "variantSize": "Black",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/4nMY425asD4Y3rstj3HoEg/f135bfa4402943f8ef8162d28d188451/M-HKT-5-BLK_1823.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4nMY425asD4Y3rstj3HoEg/f135bfa4402943f8ef8162d28d188451/M-HKT-5-BLK_1823.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:06:35+00:00",
+    "capturedAt": "2026-10-13T19:27:58+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "55.61",
     "unitSpread": "4.29",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "6.50"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4nMY425asD4Y3rstj3HoEg/f135bfa4402943f8ef8162d28d188451/M-HKT-5-BLK_1823.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 26,
-    "profitObservations": 7,
+    "profitObservations": 8,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "55.61",
     "highestCost": "59.94",
-    "averageSpread": "0.88",
+    "averageSpread": "0.98",
     "firstObservedAt": "2026-09-11T12:57:14+00:00",
-    "lastObservedAt": "2026-10-13T16:06:35+00:00"
+    "lastObservedAt": "2026-10-13T19:27:58+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "6.50"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:27:58+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "55.61",
+      "unitSpread": "4.29",
+      "marginPct": 7.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "32.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.73"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.08"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.65"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4nMY425asD4Y3rstj3HoEg/f135bfa4402943f8ef8162d28d188451/M-HKT-5-BLK_1823.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

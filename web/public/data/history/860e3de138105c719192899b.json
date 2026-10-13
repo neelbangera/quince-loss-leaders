@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5016",
+    "variantLabel": "Blue Fog / One Size",
+    "variantSize": "Blue Fog",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/5BXrb8LWz96fREgaI7gU8v/6fb2aee86487d457648b82d2b258a068/Gingham_Napkins_BLUE_42160_EDITED_12.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5BXrb8LWz96fREgaI7gU8v/6fb2aee86487d457648b82d2b258a068/Gingham_Napkins_BLUE_42160_EDITED_12.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:18:32+00:00",
+    "capturedAt": "2026-10-13T19:34:57+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "46.21",
     "unitSpread": "23.69",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "8.78"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5BXrb8LWz96fREgaI7gU8v/6fb2aee86487d457648b82d2b258a068/Gingham_Napkins_BLUE_42160_EDITED_12.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 32,
+    "observationCount": 33,
     "lossObservations": 0,
-    "profitObservations": 32,
+    "profitObservations": 33,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "42.61",
     "highestCost": "46.21",
-    "averageSpread": "26.50",
+    "averageSpread": "26.42",
     "firstObservedAt": "2026-09-11T12:56:47+00:00",
-    "lastObservedAt": "2026-10-13T16:18:32+00:00"
+    "lastObservedAt": "2026-10-13T19:34:57+00:00"
   },
   "history": [
     {
@@ -1377,6 +1388,50 @@
           "type": "duties_taxes_fees",
           "amount": "8.78"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:34:57+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "46.21",
+      "unitSpread": "23.69",
+      "marginPct": 33.89,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "24.86"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.81"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.59"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.41"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.76"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "8.78"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5BXrb8LWz96fREgaI7gU8v/6fb2aee86487d457648b82d2b258a068/Gingham_Napkins_BLUE_42160_EDITED_12.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

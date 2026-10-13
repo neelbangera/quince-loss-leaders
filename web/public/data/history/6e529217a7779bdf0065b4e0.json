@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "dresses",
-    "categoryLabel": "Dresses",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "32",
+    "variantLabel": "Gold Vermeil / One Size",
+    "variantSize": "Gold Vermeil",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/5T6LbETEh8RA85h5vRXWmX/43efff789d33f52089a1e1e8ae0f6b4b/W-EARR-8_4340.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5T6LbETEh8RA85h5vRXWmX/43efff789d33f52089a1e1e8ae0f6b4b/W-EARR-8_4340.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:14:52+00:00",
+    "capturedAt": "2026-10-13T19:36:44+00:00",
     "sellingPrice": "68.00",
     "reportedTotalCost": "33.55",
     "unitSpread": "34.45",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.09"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5T6LbETEh8RA85h5vRXWmX/43efff789d33f52089a1e1e8ae0f6b4b/W-EARR-8_4340.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "68.00",
     "highestPrice": "68.00",
     "lowestCost": "26.09",
     "highestCost": "33.55",
-    "averageSpread": "37.55",
+    "averageSpread": "37.46",
     "firstObservedAt": "2026-09-11T13:00:26+00:00",
-    "lastObservedAt": "2026-10-13T16:14:52+00:00"
+    "lastObservedAt": "2026-10-13T19:36:44+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.09"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:36:44+00:00",
+      "sellingPrice": "68.00",
+      "reportedTotalCost": "33.55",
+      "unitSpread": "34.45",
+      "marginPct": 50.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.55"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "20.53"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.78"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.09"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5T6LbETEh8RA85h5vRXWmX/43efff789d33f52089a1e1e8ae0f6b4b/W-EARR-8_4340.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

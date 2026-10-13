@@ -9,12 +9,20 @@
     "department": "men",
     "departmentLabel": "Men",
     "category": "bags",
-    "categoryLabel": "Bags",
+    "categoryLabel": "Bags & Wallets",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "495",
+    "variantLabel": "Chocolate Brown / One Size",
+    "variantSize": "Chocolate Brown",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1DrK2mMNjcBM8hG9JT5Shy/71494aac4b01e5011b7af1279779231d/M-BAG-6_171440.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1DrK2mMNjcBM8hG9JT5Shy/71494aac4b01e5011b7af1279779231d/M-BAG-6_171440.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:12:52+00:00",
+    "capturedAt": "2026-10-13T19:34:34+00:00",
     "sellingPrice": "32.00",
     "reportedTotalCost": "13.25",
     "unitSpread": "18.75",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "1.34"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1DrK2mMNjcBM8hG9JT5Shy/71494aac4b01e5011b7af1279779231d/M-BAG-6_171440.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "32.00",
     "highestPrice": "32.00",
     "lowestCost": "13.25",
     "highestCost": "14.46",
-    "averageSpread": "17.80",
+    "averageSpread": "17.82",
     "firstObservedAt": "2026-09-11T13:09:52+00:00",
-    "lastObservedAt": "2026-10-13T16:12:52+00:00"
+    "lastObservedAt": "2026-10-13T19:34:34+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "1.34"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:34:34+00:00",
+      "sellingPrice": "32.00",
+      "reportedTotalCost": "13.25",
+      "unitSpread": "18.75",
+      "marginPct": 58.59,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.56"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.49"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.96"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.34"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1DrK2mMNjcBM8hG9JT5Shy/71494aac4b01e5011b7af1279779231d/M-BAG-6_171440.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

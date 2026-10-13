@@ -8,13 +8,21 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4868",
+    "variantLabel": "No Color / One Size",
+    "variantSize": "No Color",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/4rSn1lj47HpnRXg5XMmyNo/fe390201989cb25a682ee24c3a6a15ce/U-HAC-423_BSS-GOOD-BND-BLU-1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4rSn1lj47HpnRXg5XMmyNo/fe390201989cb25a682ee24c3a6a15ce/U-HAC-423_BSS-GOOD-BND-BLU-1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:19:39+00:00",
+    "capturedAt": "2026-10-13T19:27:35+00:00",
     "sellingPrice": "89.90",
     "reportedTotalCost": "61.61",
     "unitSpread": "28.29",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4rSn1lj47HpnRXg5XMmyNo/fe390201989cb25a682ee24c3a6a15ce/U-HAC-423_BSS-GOOD-BND-BLU-1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 46,
+    "observationCount": 47,
     "lossObservations": 0,
-    "profitObservations": 46,
+    "profitObservations": 47,
     "lowestPrice": "89.90",
     "highestPrice": "89.90",
     "lowestCost": "61.61",
     "highestCost": "62.79",
-    "averageSpread": "27.29",
+    "averageSpread": "27.31",
     "firstObservedAt": "2026-08-29T21:25:05+00:00",
-    "lastObservedAt": "2026-10-13T16:19:39+00:00"
+    "lastObservedAt": "2026-10-13T19:27:35+00:00"
   },
   "history": [
     {
@@ -1951,6 +1962,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:27:35+00:00",
+      "sellingPrice": "89.90",
+      "reportedTotalCost": "61.61",
+      "unitSpread": "28.29",
+      "marginPct": 31.47,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "50.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.50"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.11"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4rSn1lj47HpnRXg5XMmyNo/fe390201989cb25a682ee24c3a6a15ce/U-HAC-423_BSS-GOOD-BND-BLU-1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

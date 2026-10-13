@@ -8,13 +8,22 @@
     "brand": "Quince",
     "department": "men",
     "departmentLabel": "Men",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "tops",
+    "categoryLabel": "Tops",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "203",
+    "variantLabel": "Sailor Blue / XS",
+    "variantSize": "Sailor Blue",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/3lk6t9J8OTdUBeLLq80wGh/45bdd13405cfa21c23b1bbf18185b8a3/M-LKT-1-WHT.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3lk6t9J8OTdUBeLLq80wGh/45bdd13405cfa21c23b1bbf18185b8a3/M-LKT-1-WHT.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/27UCeURG8OIzPXp8O70Smz/977caac2f4cf69ad51c69639ed1f3261/M-LKT-1-LDNGRN-01_EDITED__1_.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:12:28+00:00",
+    "capturedAt": "2026-10-13T19:28:41+00:00",
     "sellingPrice": "96.00",
     "reportedTotalCost": "14.28",
     "unitSpread": "81.72",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "3.70"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3lk6t9J8OTdUBeLLq80wGh/45bdd13405cfa21c23b1bbf18185b8a3/M-LKT-1-WHT.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/27UCeURG8OIzPXp8O70Smz/977caac2f4cf69ad51c69639ed1f3261/M-LKT-1-LDNGRN-01_EDITED__1_.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 46,
+    "observationCount": 47,
     "lossObservations": 0,
-    "profitObservations": 46,
+    "profitObservations": 47,
     "lowestPrice": "89.70",
     "highestPrice": "96.00",
     "lowestCost": "12.65",
     "highestCost": "17.65",
-    "averageSpread": "80.22",
+    "averageSpread": "80.25",
     "firstObservedAt": "2026-08-29T21:14:38+00:00",
-    "lastObservedAt": "2026-10-13T16:12:28+00:00"
+    "lastObservedAt": "2026-10-13T19:28:41+00:00"
   },
   "history": [
     {
@@ -1951,6 +1964,51 @@
           "type": "duties_taxes_fees",
           "amount": "3.70"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:28:41+00:00",
+      "sellingPrice": "96.00",
+      "reportedTotalCost": "14.28",
+      "unitSpread": "81.72",
+      "marginPct": 85.13,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.47"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.72"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.11"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.29"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.99"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.70"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3lk6t9J8OTdUBeLLq80wGh/45bdd13405cfa21c23b1bbf18185b8a3/M-LKT-1-WHT.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/27UCeURG8OIzPXp8O70Smz/977caac2f4cf69ad51c69639ed1f3261/M-LKT-1-LDNGRN-01_EDITED__1_.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

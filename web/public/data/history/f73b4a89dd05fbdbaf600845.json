@@ -8,13 +8,25 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "food",
+    "categoryLabel": "Food",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6522",
+    "variantLabel": "No Color / One Size",
+    "variantSize": "No Color",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/4BfFRPmY607c28qVzv79HE/87372ca8e89f10fac47a9f02126a1999/caviar.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4BfFRPmY607c28qVzv79HE/87372ca8e89f10fac47a9f02126a1999/caviar.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/7E76UDweU0ZNxxSRWz9bkA/1013a4e819e382253ecebe3e049e2047/caviar1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3cdracU0sSunNBKjnmRqyF/9afcbf35c3b1b1bd0fd4ad390abbbe0a/caviar2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7oIH4snJBSoYDhGAxIufrj/ebc4f0f3299657803ca25cabd3b34dc6/caviar3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/206qM2StKCxKikRsSY0VQt/3d49122901ca7dc100fc645d1c21badc/caviar4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:06:15+00:00",
+    "capturedAt": "2026-10-13T19:24:28+00:00",
     "sellingPrice": "125.00",
     "reportedTotalCost": "91.99",
     "unitSpread": "33.01",
@@ -52,19 +64,26 @@
         "type": "duties_taxes_fees",
         "amount": "21.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4BfFRPmY607c28qVzv79HE/87372ca8e89f10fac47a9f02126a1999/caviar.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/7E76UDweU0ZNxxSRWz9bkA/1013a4e819e382253ecebe3e049e2047/caviar1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3cdracU0sSunNBKjnmRqyF/9afcbf35c3b1b1bd0fd4ad390abbbe0a/caviar2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7oIH4snJBSoYDhGAxIufrj/ebc4f0f3299657803ca25cabd3b34dc6/caviar3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/206qM2StKCxKikRsSY0VQt/3d49122901ca7dc100fc645d1c21badc/caviar4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 46,
+    "observationCount": 47,
     "lossObservations": 0,
-    "profitObservations": 46,
+    "profitObservations": 47,
     "lowestPrice": "125.00",
     "highestPrice": "125.00",
     "lowestCost": "76.16",
     "highestCost": "91.99",
-    "averageSpread": "46.43",
+    "averageSpread": "46.15",
     "firstObservedAt": "2026-08-29T21:14:33+00:00",
-    "lastObservedAt": "2026-10-13T16:06:15+00:00"
+    "lastObservedAt": "2026-10-13T19:24:28+00:00"
   },
   "history": [
     {
@@ -1951,6 +1970,54 @@
           "type": "duties_taxes_fees",
           "amount": "21.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:24:28+00:00",
+      "sellingPrice": "125.00",
+      "reportedTotalCost": "91.99",
+      "unitSpread": "33.01",
+      "marginPct": 26.41,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "33.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "28.08"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.91"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "21.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4BfFRPmY607c28qVzv79HE/87372ca8e89f10fac47a9f02126a1999/caviar.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7E76UDweU0ZNxxSRWz9bkA/1013a4e819e382253ecebe3e049e2047/caviar1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3cdracU0sSunNBKjnmRqyF/9afcbf35c3b1b1bd0fd4ad390abbbe0a/caviar2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7oIH4snJBSoYDhGAxIufrj/ebc4f0f3299657803ca25cabd3b34dc6/caviar3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/206qM2StKCxKikRsSY0VQt/3d49122901ca7dc100fc645d1c21badc/caviar4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

@@ -8,13 +8,25 @@
     "brand": "Quince",
     "department": "baby-kids",
     "departmentLabel": "Baby & Kids",
-    "category": "kids",
-    "categoryLabel": "Kids",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "630",
+    "variantLabel": "Ivory/Black Stripe / 0-3M",
+    "variantSize": "Ivory/Black Stripe",
+    "variantColor": "0-3M",
+    "imageUrl": "https://images.quince.com/5HJnU8PLr00IfUGW74whzi/cbb11c6aa6fd2661c484b7b13ed0116e/Bundle_Crewneck_Jogger_NVY_Baby.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5HJnU8PLr00IfUGW74whzi/cbb11c6aa6fd2661c484b7b13ed0116e/Bundle_Crewneck_Jogger_NVY_Baby.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/15xFwJJafjy9vu1YiRRiR1/9a13575e2d3a75d9a1b9bf86e312885f/Bundle_Crewneck_Jogger_OAT_Baby.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/2mLM801VzRO1vY8T6nTi6t/fe5ac103b9a6ae3889f03c14f16464cc/Bundle_Crewneck_Jogger_MNMLPNK_Baby.jpg?w=1600&q=50&h=2000&fm=avif&reqOrigin=website-ssr",
+      "https://images.quince.com/51Bwan7V13EKCGSaPFmXdn/1b975c13bed4f6cebd67f373801e218d/Baby-Cashmere-Sweater-MP_Version2.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4s9WoF8nlXds56rPS6EXOA/29a60f8f865cc0e4329fd8b989a60250/U-KID-28C_12522_CROPPED.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:18:13+00:00",
+    "capturedAt": "2026-10-13T19:22:41+00:00",
     "sellingPrice": "83.80",
     "reportedTotalCost": "29.01",
     "unitSpread": "54.79",
@@ -52,19 +64,26 @@
         "type": "duties_taxes_fees",
         "amount": "5.49"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5HJnU8PLr00IfUGW74whzi/cbb11c6aa6fd2661c484b7b13ed0116e/Bundle_Crewneck_Jogger_NVY_Baby.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/15xFwJJafjy9vu1YiRRiR1/9a13575e2d3a75d9a1b9bf86e312885f/Bundle_Crewneck_Jogger_OAT_Baby.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/2mLM801VzRO1vY8T6nTi6t/fe5ac103b9a6ae3889f03c14f16464cc/Bundle_Crewneck_Jogger_MNMLPNK_Baby.jpg?w=1600&q=50&h=2000&fm=avif&reqOrigin=website-ssr",
+      "https://images.quince.com/51Bwan7V13EKCGSaPFmXdn/1b975c13bed4f6cebd67f373801e218d/Baby-Cashmere-Sweater-MP_Version2.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4s9WoF8nlXds56rPS6EXOA/29a60f8f865cc0e4329fd8b989a60250/U-KID-28C_12522_CROPPED.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 18,
+    "observationCount": 19,
     "lossObservations": 0,
-    "profitObservations": 18,
+    "profitObservations": 19,
     "lowestPrice": "83.80",
     "highestPrice": "83.80",
     "lowestCost": "21.83",
     "highestCost": "29.01",
-    "averageSpread": "61.45",
+    "averageSpread": "61.10",
     "firstObservedAt": "2026-09-19T12:34:22+00:00",
-    "lastObservedAt": "2026-10-13T16:18:13+00:00"
+    "lastObservedAt": "2026-10-13T19:22:41+00:00"
   },
   "history": [
     {
@@ -803,6 +822,54 @@
           "type": "duties_taxes_fees",
           "amount": "5.49"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:22:41+00:00",
+      "sellingPrice": "83.80",
+      "reportedTotalCost": "29.01",
+      "unitSpread": "54.79",
+      "marginPct": 65.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.49"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.70"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.03"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.49"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5HJnU8PLr00IfUGW74whzi/cbb11c6aa6fd2661c484b7b13ed0116e/Bundle_Crewneck_Jogger_NVY_Baby.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/15xFwJJafjy9vu1YiRRiR1/9a13575e2d3a75d9a1b9bf86e312885f/Bundle_Crewneck_Jogger_OAT_Baby.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2mLM801VzRO1vY8T6nTi6t/fe5ac103b9a6ae3889f03c14f16464cc/Bundle_Crewneck_Jogger_MNMLPNK_Baby.jpg?w=1600&q=50&h=2000&fm=avif&reqOrigin=website-ssr",
+        "https://images.quince.com/51Bwan7V13EKCGSaPFmXdn/1b975c13bed4f6cebd67f373801e218d/Baby-Cashmere-Sweater-MP_Version2.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4s9WoF8nlXds56rPS6EXOA/29a60f8f865cc0e4329fd8b989a60250/U-KID-28C_12522_CROPPED.jpg?w=500&q=50&h=500&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

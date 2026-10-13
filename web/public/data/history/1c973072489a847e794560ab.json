@@ -11,10 +11,18 @@
     "category": "furniture",
     "categoryLabel": "Furniture",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7698",
+    "variantLabel": "Linen / Queen",
+    "variantSize": "Linen",
+    "variantColor": "Queen",
+    "imageUrl": "https://images.quince.com/2aW6MtEpDAqoZeZDAayAXd/df0478c66ffa8924ff02005f08b2b8f1/U-FURN-278-Hero.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2aW6MtEpDAqoZeZDAayAXd/df0478c66ffa8924ff02005f08b2b8f1/U-FURN-278-Hero.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:00:44+00:00",
+    "capturedAt": "2026-10-13T19:28:13+00:00",
     "sellingPrice": "1200.00",
     "reportedTotalCost": "589.13",
     "unitSpread": "610.87",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "70.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2aW6MtEpDAqoZeZDAayAXd/df0478c66ffa8924ff02005f08b2b8f1/U-FURN-278-Hero.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 12,
+    "observationCount": 13,
     "lossObservations": 0,
-    "profitObservations": 12,
+    "profitObservations": 13,
     "lowestPrice": "1200.00",
     "highestPrice": "1200.00",
     "lowestCost": "589.13",
     "highestCost": "824.13",
-    "averageSpread": "512.95",
+    "averageSpread": "520.49",
     "firstObservedAt": "2026-10-02T14:46:37+00:00",
-    "lastObservedAt": "2026-10-13T16:00:44+00:00"
+    "lastObservedAt": "2026-10-13T19:28:13+00:00"
   },
   "history": [
     {
@@ -557,6 +568,50 @@
           "type": "duties_taxes_fees",
           "amount": "70.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:28:13+00:00",
+      "sellingPrice": "1200.00",
+      "reportedTotalCost": "589.13",
+      "unitSpread": "610.87",
+      "marginPct": 50.91,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "225.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "135.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "90.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "40.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "29.13"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "70.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2aW6MtEpDAqoZeZDAayAXd/df0478c66ffa8924ff02005f08b2b8f1/U-FURN-278-Hero.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

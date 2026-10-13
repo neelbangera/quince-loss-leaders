@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "jewelry",
-    "categoryLabel": "Jewelry",
+    "category": "travel",
+    "categoryLabel": "Travel",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "752",
+    "variantLabel": "Black / One Size",
+    "variantSize": "Black",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/57NxWvDkc2lwP9Ez3DnfqP/af3b424b3619d7eabf3b9dad9ea1b3e9/black_1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/57NxWvDkc2lwP9Ez3DnfqP/af3b424b3619d7eabf3b9dad9ea1b3e9/black_1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:10:24+00:00",
+    "capturedAt": "2026-10-13T19:34:34+00:00",
     "sellingPrice": "40.00",
     "reportedTotalCost": "18.38",
     "unitSpread": "21.62",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "1.72"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/57NxWvDkc2lwP9Ez3DnfqP/af3b424b3619d7eabf3b9dad9ea1b3e9/black_1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "40.00",
     "highestPrice": "40.00",
     "lowestCost": "18.38",
     "highestCost": "19.42",
-    "averageSpread": "20.80",
+    "averageSpread": "20.82",
     "firstObservedAt": "2026-09-11T13:07:00+00:00",
-    "lastObservedAt": "2026-10-13T16:10:24+00:00"
+    "lastObservedAt": "2026-10-13T19:34:34+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "1.72"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:34:34+00:00",
+      "sellingPrice": "40.00",
+      "reportedTotalCost": "18.38",
+      "unitSpread": "21.62",
+      "marginPct": 54.05,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.52"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.65"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.72"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/57NxWvDkc2lwP9Ez3DnfqP/af3b424b3619d7eabf3b9dad9ea1b3e9/black_1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

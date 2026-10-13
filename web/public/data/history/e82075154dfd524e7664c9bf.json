@@ -11,16 +11,24 @@
     "category": "furniture",
     "categoryLabel": "Furniture",
     "currency": "USD",
-    "hasExorbitantFees": true
+    "hasExorbitantFees": true,
+    "parentProductId": "8955",
+    "variantLabel": "Black / One Size",
+    "variantSize": "Black",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/3eYEhzwsAdL3Wc8EkgrAGw/b8d1e654967c3ce2a3142324cb3e9410/U-FURN-426-Hero.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3eYEhzwsAdL3Wc8EkgrAGw/b8d1e654967c3ce2a3142324cb3e9410/U-FURN-426-Hero.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:07:32+00:00",
+    "capturedAt": "2026-10-13T19:26:19+00:00",
     "sellingPrice": "900.00",
-    "reportedTotalCost": "2307.33",
-    "unitSpread": "-1407.33",
-    "marginPct": -156.37,
+    "reportedTotalCost": "322.54",
+    "unitSpread": "577.46",
+    "marginPct": 64.16,
     "parseStatus": "complete",
-    "totalCostSource": "embedded_inferred",
+    "totalCostSource": "normalized_fee_excluded",
     "costLines": [
       {
         "label": "Materials",
@@ -40,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "1984.79"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3eYEhzwsAdL3Wc8EkgrAGw/b8d1e654967c3ce2a3142324cb3e9410/U-FURN-426-Hero.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 46,
+    "observationCount": 47,
     "lossObservations": 7,
-    "profitObservations": 39,
+    "profitObservations": 40,
     "lowestPrice": "900.00",
     "highestPrice": "900.00",
-    "lowestCost": "642.40",
+    "lowestCost": "322.54",
     "highestCost": "2307.33",
-    "averageSpread": "4.24",
+    "averageSpread": "16.44",
     "firstObservedAt": "2026-08-29T21:24:06+00:00",
-    "lastObservedAt": "2026-10-13T16:07:32+00:00"
+    "lastObservedAt": "2026-10-13T19:26:19+00:00"
   },
   "history": [
     {
@@ -1951,6 +1962,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:26:19+00:00",
+      "sellingPrice": "900.00",
+      "reportedTotalCost": "322.54",
+      "unitSpread": "577.46",
+      "marginPct": 64.16,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "151.36"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "75.68"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "75.68"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "19.82"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3eYEhzwsAdL3Wc8EkgrAGw/b8d1e654967c3ce2a3142324cb3e9410/U-FURN-426-Hero.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

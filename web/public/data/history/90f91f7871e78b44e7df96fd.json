@@ -11,10 +11,19 @@
     "category": "outerwear",
     "categoryLabel": "Outerwear",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "3545",
+    "variantLabel": "Lavender Mist / 2T",
+    "variantSize": "Lavender Mist",
+    "variantColor": "2T",
+    "imageUrl": "https://images.quince.com/5YDXvRkO3y8wYwIE9mvA2J/da3aa6031ffecf4fb80a1cf54f92d968/U--465-LAVMIS_EDITED_01.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5YDXvRkO3y8wYwIE9mvA2J/da3aa6031ffecf4fb80a1cf54f92d968/U--465-LAVMIS_EDITED_01.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/6pBW1vARqujIHdJTN3GJH6/e377739f1f80212a1b7a552d5ccc5302/Frame_30.jpg?w=48&h=48&fm=webp"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:11:33+00:00",
+    "capturedAt": "2026-10-13T19:21:24+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "25.46",
     "unitSpread": "14.44",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "3.68"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5YDXvRkO3y8wYwIE9mvA2J/da3aa6031ffecf4fb80a1cf54f92d968/U--465-LAVMIS_EDITED_01.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/6pBW1vARqujIHdJTN3GJH6/e377739f1f80212a1b7a552d5ccc5302/Frame_30.jpg?w=48&h=48&fm=webp"
     ]
   },
   "analytics": {
-    "observationCount": 32,
+    "observationCount": 33,
     "lossObservations": 0,
-    "profitObservations": 32,
+    "profitObservations": 33,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "25.46",
     "highestCost": "27.29",
-    "averageSpread": "13.51",
+    "averageSpread": "13.53",
     "firstObservedAt": "2026-09-11T12:54:14+00:00",
-    "lastObservedAt": "2026-10-13T16:11:33+00:00"
+    "lastObservedAt": "2026-10-13T19:21:24+00:00"
   },
   "history": [
     {
@@ -1377,6 +1390,51 @@
           "type": "duties_taxes_fees",
           "amount": "3.68"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:21:24+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "25.46",
+      "unitSpread": "14.44",
+      "marginPct": 36.19,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.65"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "9.35"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.68"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.10"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.68"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5YDXvRkO3y8wYwIE9mvA2J/da3aa6031ffecf4fb80a1cf54f92d968/U--465-LAVMIS_EDITED_01.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6pBW1vARqujIHdJTN3GJH6/e377739f1f80212a1b7a552d5ccc5302/Frame_30.jpg?w=48&h=48&fm=webp"
       ]
     }
   ]

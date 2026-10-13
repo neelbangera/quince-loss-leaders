@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "dresses",
+    "categoryLabel": "Dresses & Jumpsuits",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1344",
+    "variantLabel": "Black / XS",
+    "variantSize": "Black",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/5gX0PUxIefpEdUuNM38j0z/93ed3b2f5fd11727be136c08f26a3c62/W-DRS-40-BLK_0450.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5gX0PUxIefpEdUuNM38j0z/93ed3b2f5fd11727be136c08f26a3c62/W-DRS-40-BLK_0450.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:07:58+00:00",
+    "capturedAt": "2026-10-13T19:32:42+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "29.57",
     "unitSpread": "40.33",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "4.37"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5gX0PUxIefpEdUuNM38j0z/93ed3b2f5fd11727be136c08f26a3c62/W-DRS-40-BLK_0450.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 20,
+    "observationCount": 21,
     "lossObservations": 0,
-    "profitObservations": 20,
+    "profitObservations": 21,
     "lowestPrice": "55.90",
     "highestPrice": "69.90",
     "lowestCost": "29.57",
     "highestCost": "38.95",
-    "averageSpread": "33.53",
+    "averageSpread": "33.86",
     "firstObservedAt": "2026-09-20T13:14:29+00:00",
-    "lastObservedAt": "2026-10-13T16:07:58+00:00"
+    "lastObservedAt": "2026-10-13T19:32:42+00:00"
   },
   "history": [
     {
@@ -885,6 +896,50 @@
           "type": "duties_taxes_fees",
           "amount": "4.37"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:32:42+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "29.57",
+      "unitSpread": "40.33",
+      "marginPct": 57.7,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.23"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.03"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.27"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.28"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.39"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.37"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5gX0PUxIefpEdUuNM38j0z/93ed3b2f5fd11727be136c08f26a3c62/W-DRS-40-BLK_0450.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

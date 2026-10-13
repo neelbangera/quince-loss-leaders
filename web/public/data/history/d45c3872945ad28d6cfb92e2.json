@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5199",
+    "variantLabel": "Yellow Gold / 4",
+    "variantSize": "Yellow Gold",
+    "variantColor": "4",
+    "imageUrl": "https://images.quince.com/3uqctI9GM0iZiZRPHWDCCM/22e14190095d4b5ff2b5bf36d68bee54/RNG-213_0416_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3uqctI9GM0iZiZRPHWDCCM/22e14190095d4b5ff2b5bf36d68bee54/RNG-213_0416_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:18:29+00:00",
+    "capturedAt": "2026-10-13T19:29:35+00:00",
     "sellingPrice": "1800.00",
     "reportedTotalCost": "818.08",
     "unitSpread": "981.92",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "100.92"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3uqctI9GM0iZiZRPHWDCCM/22e14190095d4b5ff2b5bf36d68bee54/RNG-213_0416_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "1800.00",
     "highestPrice": "1800.00",
     "lowestCost": "815.97",
     "highestCost": "853.56",
-    "averageSpread": "967.90",
+    "averageSpread": "968.31",
     "firstObservedAt": "2026-09-11T13:08:44+00:00",
-    "lastObservedAt": "2026-10-13T16:18:29+00:00"
+    "lastObservedAt": "2026-10-13T19:29:35+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "100.92"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:29:35+00:00",
+      "sellingPrice": "1800.00",
+      "reportedTotalCost": "818.08",
+      "unitSpread": "981.92",
+      "marginPct": 54.55,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "612.92"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "38.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "46.36"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "100.92"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3uqctI9GM0iZiZRPHWDCCM/22e14190095d4b5ff2b5bf36d68bee54/RNG-213_0416_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

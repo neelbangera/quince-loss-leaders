@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5",
+    "variantLabel": "Yellow Gold / 4",
+    "variantSize": "Yellow Gold",
+    "variantColor": "4",
+    "imageUrl": "https://images.quince.com/5BHYcgPuQkQi5hg7jF9nOV/f3de64035bd42dc50a10f6c2f977d816/Bold_stacker_Ring.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5BHYcgPuQkQi5hg7jF9nOV/f3de64035bd42dc50a10f6c2f977d816/Bold_stacker_Ring.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:14:37+00:00",
+    "capturedAt": "2026-10-13T19:31:24+00:00",
     "sellingPrice": "238.00",
     "reportedTotalCost": "192.08",
     "unitSpread": "45.92",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "11.16"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5BHYcgPuQkQi5hg7jF9nOV/f3de64035bd42dc50a10f6c2f977d816/Bold_stacker_Ring.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "238.00",
     "highestPrice": "238.00",
     "lowestCost": "152.95",
     "highestCost": "198.18",
-    "averageSpread": "73.97",
+    "averageSpread": "73.14",
     "firstObservedAt": "2026-09-11T12:56:48+00:00",
-    "lastObservedAt": "2026-10-13T16:14:37+00:00"
+    "lastObservedAt": "2026-10-13T19:31:24+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "11.16"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:31:24+00:00",
+      "sellingPrice": "238.00",
+      "reportedTotalCost": "192.08",
+      "unitSpread": "45.92",
+      "marginPct": 19.29,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "112.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "50.29"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "6.63"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "11.16"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5BHYcgPuQkQi5hg7jF9nOV/f3de64035bd42dc50a10f6c2f977d816/Bold_stacker_Ring.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

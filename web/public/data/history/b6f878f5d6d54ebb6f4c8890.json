@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "sleep-underwear",
+    "categoryLabel": "Sleep & Underwear",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "772",
+    "variantLabel": "Cocoa / XS",
+    "variantSize": "Cocoa",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/5rnLHlIUgZneP4Ys4YUoq8/fb7a08f97bb792facfa049b653926a57/W--9-COCA_1657.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5rnLHlIUgZneP4Ys4YUoq8/fb7a08f97bb792facfa049b653926a57/W--9-COCA_1657.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:04:23+00:00",
+    "capturedAt": "2026-10-13T19:23:18+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "14.46",
     "unitSpread": "15.44",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.55"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5rnLHlIUgZneP4Ys4YUoq8/fb7a08f97bb792facfa049b653926a57/W--9-COCA_1657.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "14.46",
     "highestCost": "15.62",
-    "averageSpread": "14.53",
+    "averageSpread": "14.55",
     "firstObservedAt": "2026-09-11T13:02:53+00:00",
-    "lastObservedAt": "2026-10-13T16:04:23+00:00"
+    "lastObservedAt": "2026-10-13T19:23:18+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.55"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:23:18+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "14.46",
+      "unitSpread": "15.44",
+      "marginPct": 51.64,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.77"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.55"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5rnLHlIUgZneP4Ys4YUoq8/fb7a08f97bb792facfa049b653926a57/W--9-COCA_1657.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

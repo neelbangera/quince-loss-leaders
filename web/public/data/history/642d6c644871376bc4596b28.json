@@ -8,17 +8,25 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "9003",
+    "variantLabel": "Yellow Gold / One Size",
+    "variantSize": "Yellow Gold",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1vfJKotlgVujlINummYXuP/b8d9ade49652229e0bb0957a7905c0e0/W-EARR-245-167_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1vfJKotlgVujlINummYXuP/b8d9ade49652229e0bb0957a7905c0e0/W-EARR-245-167_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:06:40+00:00",
+    "capturedAt": "2026-10-13T19:19:00+00:00",
     "sellingPrice": "3400.00",
-    "reportedTotalCost": "1990.35",
-    "unitSpread": "1409.65",
-    "marginPct": 41.46,
+    "reportedTotalCost": "1990.71",
+    "unitSpread": "1409.29",
+    "marginPct": 41.45,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,21 +58,24 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "247.31"
+        "amount": "247.67"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1vfJKotlgVujlINummYXuP/b8d9ade49652229e0bb0957a7905c0e0/W-EARR-245-167_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "3400.00",
     "highestPrice": "3400.00",
     "lowestCost": "1858.39",
-    "highestCost": "1990.35",
-    "averageSpread": "1505.30",
+    "highestCost": "1990.71",
+    "averageSpread": "1502.47",
     "firstObservedAt": "2026-09-11T12:58:03+00:00",
-    "lastObservedAt": "2026-10-13T16:06:40+00:00"
+    "lastObservedAt": "2026-10-13T19:19:00+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "247.31"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:19:00+00:00",
+      "sellingPrice": "3400.00",
+      "reportedTotalCost": "1990.71",
+      "unitSpread": "1409.29",
+      "marginPct": 41.45,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1555.56"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "40.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "130.09"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "247.67"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1vfJKotlgVujlINummYXuP/b8d9ade49652229e0bb0957a7905c0e0/W-EARR-245-167_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

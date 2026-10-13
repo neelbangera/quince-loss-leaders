@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "10214",
+    "variantLabel": "Latte / Standard",
+    "variantSize": "Latte",
+    "variantColor": "Standard",
+    "imageUrl": "https://images.quince.com/1MhaYp4sQT8oIojJUqnsoA/42a7c48ad1bd91e9450bf063812f0549/U-BEDD-591-LAT-0227_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1MhaYp4sQT8oIojJUqnsoA/42a7c48ad1bd91e9450bf063812f0549/U-BEDD-591-LAT-0227_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T15:59:12+00:00",
+    "capturedAt": "2026-10-13T19:22:18+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "23.06",
     "unitSpread": "36.84",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.59"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1MhaYp4sQT8oIojJUqnsoA/42a7c48ad1bd91e9450bf063812f0549/U-BEDD-591-LAT-0227_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 27,
+    "observationCount": 28,
     "lossObservations": 0,
-    "profitObservations": 27,
+    "profitObservations": 28,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "23.06",
     "highestCost": "33.74",
-    "averageSpread": "29.32",
+    "averageSpread": "29.59",
     "firstObservedAt": "2026-09-11T13:01:46+00:00",
-    "lastObservedAt": "2026-10-13T15:59:12+00:00"
+    "lastObservedAt": "2026-10-13T19:22:18+00:00"
   },
   "history": [
     {
@@ -1172,6 +1183,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.59"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:22:18+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "23.06",
+      "unitSpread": "36.84",
+      "marginPct": 61.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.79"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.94"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.18"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "2.93"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.63"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.59"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1MhaYp4sQT8oIojJUqnsoA/42a7c48ad1bd91e9450bf063812f0549/U-BEDD-591-LAT-0227_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

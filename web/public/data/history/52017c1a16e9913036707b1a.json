@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6052",
+    "variantLabel": "Natural / Euro",
+    "variantSize": "Natural",
+    "variantColor": "Euro",
+    "imageUrl": "https://images.quince.com/65VTAWmlg2ha9gjfYFFNiA/0e6d1f9c4f90142c671630534b1b909b/U-BEDD-146_NAT_CHAMB_3725_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/65VTAWmlg2ha9gjfYFFNiA/0e6d1f9c4f90142c671630534b1b909b/U-BEDD-146_NAT_CHAMB_3725_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:14:46+00:00",
+    "capturedAt": "2026-10-13T19:18:02+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "16.55",
     "unitSpread": "13.35",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.97"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/65VTAWmlg2ha9gjfYFFNiA/0e6d1f9c4f90142c671630534b1b909b/U-BEDD-146_NAT_CHAMB_3725_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "16.30",
     "highestCost": "16.55",
-    "averageSpread": "13.54",
+    "averageSpread": "13.53",
     "firstObservedAt": "2026-09-11T13:03:01+00:00",
-    "lastObservedAt": "2026-10-13T16:14:46+00:00"
+    "lastObservedAt": "2026-10-13T19:18:02+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.97"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:18:02+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "16.55",
+      "unitSpread": "13.35",
+      "marginPct": 44.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.95"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "2.81"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.87"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.97"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/65VTAWmlg2ha9gjfYFFNiA/0e6d1f9c4f90142c671630534b1b909b/U-BEDD-146_NAT_CHAMB_3725_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

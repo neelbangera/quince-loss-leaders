@@ -8,13 +8,21 @@
     "brand": "Quince",
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5529",
+    "variantLabel": "Olivewood / One Size",
+    "variantSize": "Olivewood",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/4Rgq2yx4nO1IVKmrIlOcbq/79ebfc29ec8ebe0b5462c4bfb697f018/Olivewood_Serving_Utensil_Set_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4Rgq2yx4nO1IVKmrIlOcbq/79ebfc29ec8ebe0b5462c4bfb697f018/Olivewood_Serving_Utensil_Set_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:09:01+00:00",
+    "capturedAt": "2026-10-13T19:17:54+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "26.89",
     "unitSpread": "-1.99",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "12.50"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4Rgq2yx4nO1IVKmrIlOcbq/79ebfc29ec8ebe0b5462c4bfb697f018/Olivewood_Serving_Utensil_Set_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 45,
-    "lossObservations": 45,
+    "observationCount": 46,
+    "lossObservations": 46,
     "profitObservations": 0,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "26.89",
     "highestCost": "27.70",
-    "averageSpread": "-2.67",
+    "averageSpread": "-2.66",
     "firstObservedAt": "2026-08-29T21:10:08+00:00",
-    "lastObservedAt": "2026-10-13T16:09:01+00:00"
+    "lastObservedAt": "2026-10-13T19:17:54+00:00"
   },
   "history": [
     {
@@ -1910,6 +1921,50 @@
           "type": "duties_taxes_fees",
           "amount": "12.50"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:17:54+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "26.89",
+      "unitSpread": "-1.99",
+      "marginPct": -7.99,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.55"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.89"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.70"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "12.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4Rgq2yx4nO1IVKmrIlOcbq/79ebfc29ec8ebe0b5462c4bfb697f018/Olivewood_Serving_Utensil_Set_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

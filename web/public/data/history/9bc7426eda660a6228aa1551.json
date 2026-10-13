@@ -8,13 +8,21 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "swim",
+    "categoryLabel": "Swimwear",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4255",
+    "variantLabel": "Black / XS",
+    "variantSize": "Black",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/2QeJncxHtNvaubASVHyOSB/3e16078e530eb5245a02ee0586ad2f86/W--217-BLK_0381.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2QeJncxHtNvaubASVHyOSB/3e16078e530eb5245a02ee0586ad2f86/W--217-BLK_0381.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:11:25+00:00",
+    "capturedAt": "2026-10-13T19:26:59+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "29.00",
     "unitSpread": "20.90",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.78"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2QeJncxHtNvaubASVHyOSB/3e16078e530eb5245a02ee0586ad2f86/W--217-BLK_0381.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "29.00",
     "highestCost": "30.30",
-    "averageSpread": "19.88",
+    "averageSpread": "19.91",
     "firstObservedAt": "2026-09-11T12:59:47+00:00",
-    "lastObservedAt": "2026-10-13T16:11:25+00:00"
+    "lastObservedAt": "2026-10-13T19:26:59+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.78"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:26:59+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "29.00",
+      "unitSpread": "20.90",
+      "marginPct": 41.88,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.69"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "7.60"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.13"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.78"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2QeJncxHtNvaubASVHyOSB/3e16078e530eb5245a02ee0586ad2f86/W--217-BLK_0381.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

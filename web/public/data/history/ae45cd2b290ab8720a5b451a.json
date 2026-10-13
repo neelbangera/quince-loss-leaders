@@ -8,13 +8,21 @@
     "brand": null,
     "department": "unisex",
     "departmentLabel": "Unisex",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7651",
+    "variantLabel": "White / S",
+    "variantSize": "White",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/7eJMy7O9INBIsXb3z4Xkl6/afeb7c949ab8e21e6132349d8d9a4618/U--1225-WHI-008_EDITED_2.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/7eJMy7O9INBIsXb3z4Xkl6/afeb7c949ab8e21e6132349d8d9a4618/U--1225-WHI-008_EDITED_2.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T15:59:31+00:00",
+    "capturedAt": "2026-10-13T19:28:40+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "11.87",
     "unitSpread": "18.03",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.20"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/7eJMy7O9INBIsXb3z4Xkl6/afeb7c949ab8e21e6132349d8d9a4618/U--1225-WHI-008_EDITED_2.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 22,
+    "observationCount": 23,
     "lossObservations": 0,
-    "profitObservations": 22,
+    "profitObservations": 23,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "11.87",
     "highestCost": "13.72",
-    "averageSpread": "16.52",
+    "averageSpread": "16.58",
     "firstObservedAt": "2026-09-18T13:11:36+00:00",
-    "lastObservedAt": "2026-10-13T15:59:31+00:00"
+    "lastObservedAt": "2026-10-13T19:28:40+00:00"
   },
   "history": [
     {
@@ -967,6 +978,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.20"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:28:40+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "11.87",
+      "unitSpread": "18.03",
+      "marginPct": 60.3,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.43"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.84"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7eJMy7O9INBIsXb3z4Xkl6/afeb7c949ab8e21e6132349d8d9a4618/U--1225-WHI-008_EDITED_2.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

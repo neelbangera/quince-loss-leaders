@@ -11,10 +11,18 @@
     "category": "bath",
     "categoryLabel": "Bath",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1834",
+    "variantLabel": "Heather Grey / XS",
+    "variantSize": "Heather Grey",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/2vQ4mAE6SlGnA5Ngavbwy0/612f8c97b24f467f9621cc91e33a1019/HOME-1-HGREY_1896.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2vQ4mAE6SlGnA5Ngavbwy0/612f8c97b24f467f9621cc91e33a1019/HOME-1-HGREY_1896.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:05:41+00:00",
+    "capturedAt": "2026-10-13T19:22:47+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "24.80",
     "unitSpread": "25.10",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.89"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2vQ4mAE6SlGnA5Ngavbwy0/612f8c97b24f467f9621cc91e33a1019/HOME-1-HGREY_1896.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "24.80",
     "highestCost": "34.30",
-    "averageSpread": "17.62",
+    "averageSpread": "17.84",
     "firstObservedAt": "2026-09-11T12:54:15+00:00",
-    "lastObservedAt": "2026-10-13T16:05:41+00:00"
+    "lastObservedAt": "2026-10-13T19:22:47+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.89"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:22:47+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "24.80",
+      "unitSpread": "25.10",
+      "marginPct": 50.3,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.96"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.32"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2vQ4mAE6SlGnA5Ngavbwy0/612f8c97b24f467f9621cc91e33a1019/HOME-1-HGREY_1896.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

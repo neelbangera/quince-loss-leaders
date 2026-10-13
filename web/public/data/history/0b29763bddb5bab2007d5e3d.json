@@ -11,10 +11,18 @@
     "category": "pants",
     "categoryLabel": "Pants",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1342",
+    "variantLabel": "Black / XS",
+    "variantSize": "Black",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/4TMporGT4MYH1gX3viTbv5/33ba2ba91ac24c9c1c5b5f5449822dda/W-PNT-42-BLK_1022_copy.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4TMporGT4MYH1gX3viTbv5/33ba2ba91ac24c9c1c5b5f5449822dda/W-PNT-42-BLK_1022_copy.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T15:59:02+00:00",
+    "capturedAt": "2026-10-13T19:29:28+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "28.39",
     "unitSpread": "21.51",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "3.43"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4TMporGT4MYH1gX3viTbv5/33ba2ba91ac24c9c1c5b5f5449822dda/W-PNT-42-BLK_1022_copy.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "28.39",
     "highestCost": "28.71",
-    "averageSpread": "21.26",
+    "averageSpread": "21.27",
     "firstObservedAt": "2026-09-11T12:54:25+00:00",
-    "lastObservedAt": "2026-10-13T15:59:02+00:00"
+    "lastObservedAt": "2026-10-13T19:29:28+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.43"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:29:28+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "28.39",
+      "unitSpread": "21.51",
+      "marginPct": 43.11,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.91"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.87"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.26"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.86"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.06"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.43"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4TMporGT4MYH1gX3viTbv5/33ba2ba91ac24c9c1c5b5f5449822dda/W-PNT-42-BLK_1022_copy.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

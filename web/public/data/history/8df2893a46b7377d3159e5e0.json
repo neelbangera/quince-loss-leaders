@@ -11,10 +11,19 @@
     "category": "tops",
     "categoryLabel": "Tops",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8440",
+    "variantLabel": "Bayside Stripe Blue/White / S",
+    "variantSize": "Bayside Stripe Blue/White",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/X1wVbQr31I6hPEFNcd4hm/b757f51f56b930f143cab098994905b3/M-WVN-86-BAYSTRB-01_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/X1wVbQr31I6hPEFNcd4hm/b757f51f56b930f143cab098994905b3/M-WVN-86-BAYSTRB-01_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1Pd11dp0htBQMlOlBPMMuS/a559fabcd3e6490e1d633669da5f0589/Frame_59.jpg?w=48&h=48&fm=webp"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:17:46+00:00",
+    "capturedAt": "2026-10-13T19:32:26+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "22.97",
     "unitSpread": "19.03",
@@ -52,19 +61,23 @@
         "type": "duties_taxes_fees",
         "amount": "2.69"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/X1wVbQr31I6hPEFNcd4hm/b757f51f56b930f143cab098994905b3/M-WVN-86-BAYSTRB-01_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1Pd11dp0htBQMlOlBPMMuS/a559fabcd3e6490e1d633669da5f0589/Frame_59.jpg?w=48&h=48&fm=webp"
     ]
   },
   "analytics": {
-    "observationCount": 16,
+    "observationCount": 17,
     "lossObservations": 0,
-    "profitObservations": 16,
+    "profitObservations": 17,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "16.44",
     "highestCost": "22.97",
-    "averageSpread": "23.04",
+    "averageSpread": "22.81",
     "firstObservedAt": "2026-09-20T13:14:59+00:00",
-    "lastObservedAt": "2026-10-13T16:17:46+00:00"
+    "lastObservedAt": "2026-10-13T19:32:26+00:00"
   },
   "history": [
     {
@@ -721,6 +734,51 @@
           "type": "duties_taxes_fees",
           "amount": "2.69"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:32:26+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "22.97",
+      "unitSpread": "19.03",
+      "marginPct": 45.31,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.71"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.85"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.89"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.33"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.69"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/X1wVbQr31I6hPEFNcd4hm/b757f51f56b930f143cab098994905b3/M-WVN-86-BAYSTRB-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1Pd11dp0htBQMlOlBPMMuS/a559fabcd3e6490e1d633669da5f0589/Frame_59.jpg?w=48&h=48&fm=webp"
       ]
     }
   ]

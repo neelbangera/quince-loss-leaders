@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "furniture",
+    "categoryLabel": "Furniture",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "30208",
+    "variantLabel": "Snow / One Size",
+    "variantSize": "Snow",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/1rz78GH7woDpe73uYaMquY/39b72e0a2c5a373408b60c45fa63e4e3/Oasis_5-Piece_L_Sectional_Snow.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1rz78GH7woDpe73uYaMquY/39b72e0a2c5a373408b60c45fa63e4e3/Oasis_5-Piece_L_Sectional_Snow.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T16:07:30+00:00",
+    "capturedAt": "2026-10-13T19:29:25+00:00",
     "sellingPrice": "3750.00",
     "reportedTotalCost": "2420.73",
     "unitSpread": "1329.27",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1rz78GH7woDpe73uYaMquY/39b72e0a2c5a373408b60c45fa63e4e3/Oasis_5-Piece_L_Sectional_Snow.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "3750.00",
     "highestPrice": "3750.00",
     "lowestCost": "2420.73",
     "highestCost": "2420.73",
     "averageSpread": "1329.27",
     "firstObservedAt": "2026-10-08T15:46:27+00:00",
-    "lastObservedAt": "2026-10-13T16:07:30+00:00"
+    "lastObservedAt": "2026-10-13T19:29:25+00:00"
   },
   "history": [
     {
@@ -311,6 +322,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:29:25+00:00",
+      "sellingPrice": "3750.00",
+      "reportedTotalCost": "2420.73",
+      "unitSpread": "1329.27",
+      "marginPct": 35.45,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1265.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "622.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "186.75"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "255.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "90.73"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1rz78GH7woDpe73uYaMquY/39b72e0a2c5a373408b60c45fa63e4e3/Oasis_5-Piece_L_Sectional_Snow.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

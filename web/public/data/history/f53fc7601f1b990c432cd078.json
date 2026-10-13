@@ -11,10 +11,18 @@
     "category": "shoes",
     "categoryLabel": "Shoes",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8026",
+    "variantLabel": "Garnet / 5",
+    "variantSize": "Garnet",
+    "variantColor": "5",
+    "imageUrl": "https://images.quince.com/5zXqtDkm9obVJhbQMgaKwU/75c31e4296cb86a589cabcdf6815efbc/W--419-GARN-113_EDITED_01.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5zXqtDkm9obVJhbQMgaKwU/75c31e4296cb86a589cabcdf6815efbc/W--419-GARN-113_EDITED_01.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-13T15:58:56+00:00",
+    "capturedAt": "2026-10-13T19:18:48+00:00",
     "sellingPrice": "84.00",
     "reportedTotalCost": "45.60",
     "unitSpread": "38.40",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "7.27"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5zXqtDkm9obVJhbQMgaKwU/75c31e4296cb86a589cabcdf6815efbc/W--419-GARN-113_EDITED_01.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 33,
+    "observationCount": 34,
     "lossObservations": 0,
-    "profitObservations": 33,
+    "profitObservations": 34,
     "lowestPrice": "84.00",
     "highestPrice": "84.00",
     "lowestCost": "41.24",
     "highestCost": "45.74",
-    "averageSpread": "39.79",
+    "averageSpread": "39.75",
     "firstObservedAt": "2026-09-11T13:10:01+00:00",
-    "lastObservedAt": "2026-10-13T15:58:56+00:00"
+    "lastObservedAt": "2026-10-13T19:18:48+00:00"
   },
   "history": [
     {
@@ -1418,6 +1429,50 @@
           "type": "duties_taxes_fees",
           "amount": "7.27"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T19:18:48+00:00",
+      "sellingPrice": "84.00",
+      "reportedTotalCost": "45.60",
+      "unitSpread": "38.40",
+      "marginPct": 45.71,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.78"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.94"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.19"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.92"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.27"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5zXqtDkm9obVJhbQMgaKwU/75c31e4296cb86a589cabcdf6815efbc/W--419-GARN-113_EDITED_01.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

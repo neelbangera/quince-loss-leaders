@@ -14,18 +14,18 @@
     "hasExorbitantFees": false
   },
   "current": {
-    "capturedAt": "2026-10-12T18:02:22+00:00",
+    "capturedAt": "2026-10-13T16:06:37+00:00",
     "sellingPrice": "698.00",
-    "reportedTotalCost": "337.48",
-    "unitSpread": "360.52",
-    "marginPct": 51.65,
+    "reportedTotalCost": "338.53",
+    "unitSpread": "359.47",
+    "marginPct": 51.5,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "229.58"
+        "amount": "230.63"
       },
       {
         "label": "Crafting Cost",
@@ -55,16 +55,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 32,
+    "observationCount": 33,
     "lossObservations": 0,
-    "profitObservations": 32,
+    "profitObservations": 33,
     "lowestPrice": "698.00",
     "highestPrice": "698.00",
     "lowestCost": "337.48",
     "highestCost": "350.05",
-    "averageSpread": "353.09",
+    "averageSpread": "353.28",
     "firstObservedAt": "2026-09-11T13:08:41+00:00",
-    "lastObservedAt": "2026-10-12T18:02:22+00:00"
+    "lastObservedAt": "2026-10-13T16:06:37+00:00"
   },
   "history": [
     {
@@ -1351,6 +1351,47 @@
           "label": "Materials",
           "type": "materials",
           "amount": "229.58"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "32.70"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "14.40"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "17.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "41.01"
+        }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-13T16:06:37+00:00",
+      "sellingPrice": "698.00",
+      "reportedTotalCost": "338.53",
+      "unitSpread": "359.47",
+      "marginPct": 51.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "230.63"
         },
         {
           "label": "Crafting Cost",

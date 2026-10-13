@@ -48,9 +48,11 @@ loosening or duplicating a TypeScript type there.
 ## History/detail rules
 
 History points are chronological observations and cost lines are component data,
-not merely chart labels. Preserve repeated timestamps/lines with unique keys,
-use elapsed time for a time series, and provide a readable fallback when a chart
-cannot render. The drawer should behave as an accessible dialog with keyboard
+not merely chart labels. Preserve repeated timestamps/lines with unique keys.
+The sheet draws no time series: the two cost-breakdown bars carry a tick, and a
+dashed outline for lost length, where cost and price stood at the capture before
+the most recent move, and the same figures are in the bars' text alternative.
+The drawer should behave as an accessible dialog with keyboard
 close/focus behavior and should restore focus when closed.
 
 The change ledger is derived from the same history points, never from a second

@@ -16,7 +16,7 @@ Keep data contracts and business calculations in the Python/export layers.
    classification, price/cost ranges, and selection.
 4. On detail selection, request the matching product/variant history only when
    needed. Render current metrics, complete cost lines, component changes, and
-   history charts from that response.
+   the earlier-position ticks from that response.
 
 The UI must not infer a product identity from a cleaned title or merge histories
 because two rows look alike. Use `productKey`, `variantKey`, and the history

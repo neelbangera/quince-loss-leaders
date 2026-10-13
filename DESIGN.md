@@ -286,15 +286,16 @@ line; then sections headed in Garamond.
 
 - **What Quince says it costs.** Two bars on one scale, 48px tall, each with its label and figure in a 9.5em column at its left: "Costs Quince" over "Quince sells it for". Both start at the same left edge and the larger one spans the width, so the shorter is plain to see. The cost bar is split by cost line in the cost-line colours (below), with 2px gaps; a segment prints its name and amount inside when it is wide enough, its amount alone when narrower, nothing when narrower still. The price bar is solid ink. Under a hairline, one line in headline serif: "Sold below its reported cost by" with the amount at the right, in claret when below cost and ink otherwise. Then the cost lines in two columns, one per family, each headed by the family's name, total and share; every line has a 12px swatch, its name, its share and its amount. On a phone the labels sit above their bars and the two columns stack.
 - **Cost-line colours.** Used only for cost lines in the product sheet, never for a state. Blues are what goes into the product: Materials `#1f3a5f`, Crafting `#5f7fae`, Packaging `#b5c6de` (night: `#6f93c9`, `#a3bbe0`, `#d3dff0`). Tans are what it takes to reach the buyer: Freight `#8a5a24`, Duties and taxes `#c3965a`, Card fees `#e6cfa8` (night: `#b9853f`, `#d6ae78`, `#ecdcbd`). A line that fits neither family is stone `#a9a79c` (night `#8d8c84`). A line keeps its colour on every item. None is a red, so claret still has one meaning. The two families are this site's grouping, not Quince's.
-- **Since we started looking.** The number of checks, one sentence on whether anything moved, and a dated table of price and reported cost.
+- **Earlier position.** When cost or price has moved, the bar it belongs to shows where it stood before the last change: a 2px ink tick, 12px tall, just under the bar at the old length, with "was $29.90" in 12px soft text beside it, and a 1px dashed ink outline over any length the bar has lost. Both bars are scaled to include the earlier figures. Nothing is drawn when nothing has moved.
+- **Since we started looking.** One sentence in 18px serif under the cost lines: how many checks, since when, and whether anything moved ("Checked twice since August 20. Something moved once, on August 29."), in soft text when nothing has. Then the dated list of moves, newest first, and a text link that opens a dated table of every check.
 - An outlined "See it on Quince" button, and a closing note that this compares against disclosed cost only.
 
 Between those sit three parts the mockup does not draw and the app does: an
 option picker (square outlined buttons, the active one ruled in ink) when a
-style has more than one option at this price; "What changed", a dated list of
-moves between checks with the amount on either side and a signed difference
-in ink; and a price-and-cost timeline with price as a solid ink line and
-reported cost as a dashed grey line.
+style has more than one option at this price; and the dated list of moves
+between checks, with the amount on either side and a signed difference in ink.
+There is no line chart; `mockups/history-bars/index.html` (option B) is the
+reference for how history is shown.
 
 ### Buttons and links
 The only button shape is the outline button: 1px ink border, label type,
@@ -329,7 +330,8 @@ underlined link. Focus is a 2px ink outline, offset 3px.
 Settled during the app rebuild (see `web/AGENTS.md`): the app uses the
 mockup's vocabulary; a style whose options disagree shows its range in every
 view; a flagged fee is an ink asterisk with an explanation; the product sheet
-keeps its option picker, change list and timeline.
+keeps its option picker and change list; the timeline was later replaced by
+ticks on the cost-breakdown bars.
 
 Still open, and not to be invented:
 

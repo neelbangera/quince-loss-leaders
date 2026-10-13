@@ -45,8 +45,12 @@ Decisions taken during the rebuild that `DESIGN.md` had listed as open:
   Quince, difference. `README.md` and `PRODUCT.md` still use the older terms.
 - A flagged fee is an ink asterisk beside the name, explained in the colophon
   and on the product sheet. No second colour.
-- The product sheet keeps the option picker, the change list ("What changed")
-  and the price-and-cost timeline, drawn in the new system.
+- The product sheet keeps the option picker and the change list. The
+  price-and-cost line chart was removed on October 9, 2026: history is now a
+  tick on each bar of the cost breakdown showing where it stood before the
+  last change, one sentence, and the change list (see
+  `mockups/history-bars/index.html`, option B). Every check is still available
+  as a table behind a "Show all checks" link.
 
 Known gaps:
 
@@ -83,8 +87,8 @@ Known gaps:
   and its tests before loosening a type here.
 - `app/utils/` holds pure logic: `format.ts` (money, dates, counts),
   `ranking.ts` (views, filters, facets, sorting, the price/cost/difference
-  text), `changeLedger.ts` (moves between captures) and `historyChart.ts`
-  (chart geometry), and `costFamilies.ts` (which cost lines count as making
+  text), `changeLedger.ts` (moves between captures, and the capture before the last
+  change), and `costFamilies.ts` (which cost lines count as making
   it, getting it to you, or other, and the shade each one takes).
 - `app/composables/` holds stateful pieces: `useDataSource` (API or static
   JSON), `useProductDetail` (detail loading with the stale-response guard),

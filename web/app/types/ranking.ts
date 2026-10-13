@@ -135,21 +135,3 @@ export interface ChangeEvent {
   kind: "anchor" | "update";
   moves: ChangeMove[];
 }
-
-export interface HistoryChartPoint {
-  capturedAt: string;
-  x: number;
-  price: number | null;
-  cost: number | null;
-  priceY: number | null;
-  costY: number | null;
-  label: string;
-}
-
-export interface HistoryChart {
-  points: HistoryChartPoint[];
-  pricePath: string;
-  costPath: string;
-  gridLines: { y: number; label: string }[];
-  axisLabels: { x: number; label: string; anchor: "start" | "middle" | "end" }[];
-}

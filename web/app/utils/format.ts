@@ -50,12 +50,6 @@ export function formatDate(value: string | null | undefined) {
   return new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(parsed);
 }
 
-export function shortDate(value: string) {
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "Unknown";
-  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(parsed);
-}
-
 // Quince serves product photographs at a requested width; ask for one that fits the slot.
 export function photoUrl(url: string | null | undefined, width: number) {
   if (!url) return null;

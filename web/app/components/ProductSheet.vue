@@ -16,8 +16,6 @@ useDialogFocus(sheet, isOpen, () => emit("close"));
 
 const { markFailed, usable } = useFailedImages();
 
-const RECENT_CHECKS = 10;
-
 const product = computed(() => props.detail?.product ?? null);
 const currency = computed(() => normalizeCurrency(product.value?.currency));
 const money = (value: string | number | null | undefined) => formatMoney(value, currency.value);
@@ -30,21 +28,48 @@ const images = computed(() => {
 });
 
 // Two bars on one scale: the cost bar is as long as the reported cost, the
-// price bar as long as the price, and whichever is larger spans the width.
+// price bar as long as the price, and the largest figure drawn spans the width.
+// When either has moved, a tick marks where it stood before the last change.
+const before = computed(() => captureBeforeLastChange(props.detail?.history ?? []));
 const tally = computed(() => {
   const price = numericValue(props.detail?.current.sellingPrice);
   const cost = numericValue(props.detail?.current.reportedTotalCost);
   if (price === null || cost === null || price <= 0 || cost <= 0) return null;
-  const scale = Math.max(price, cost);
+  const earlier = (value: number | null, current: number) => (value !== null && value > 0 && value !== current ? value : null);
+  const wasPrice = earlier(numericValue(before.value?.sellingPrice), price);
+  const wasCost = earlier(numericValue(before.value?.reportedTotalCost), cost);
+  const scale = Math.max(price, cost, wasPrice ?? 0, wasCost ?? 0);
+  const share = (value: number) => (value / scale) * 100;
+  // The tick sits where the bar used to end; a dashed outline fills the length it has lost.
+  const mark = (was: number | null, current: number) => {
+    if (was === null) return null;
+    const at = share(was);
+    return {
+      amount: was,
+      tick: { left: `${at.toFixed(2)}%` },
+      text: at > 60 ? { right: `${(100 - at).toFixed(2)}%` } : { left: `${at.toFixed(2)}%` },
+      ghost: was > current ? { left: `${share(current).toFixed(2)}%`, width: `${(at - share(current)).toFixed(2)}%` } : null,
+    };
+  };
   const gap = price - cost;
   return {
     price,
     cost,
     gap,
-    costWidth: `${((cost / scale) * 100).toFixed(2)}%`,
-    paidWidth: `${((price / scale) * 100).toFixed(2)}%`,
+    costWidth: `${share(cost).toFixed(2)}%`,
+    paidWidth: `${share(price).toFixed(2)}%`,
+    wasCost: mark(wasCost, cost),
+    wasPrice: mark(wasPrice, price),
     verdict: gap < 0 ? "Sold below its reported cost by" : gap > 0 ? "Sold above its reported cost by" : "Sold at its reported cost",
   };
+});
+const tallyLabel = computed(() => {
+  const now = tally.value;
+  if (!now) return "";
+  const parts = [`Reported cost ${money(now.cost)}, price ${money(now.price)}.`, `${now.verdict}${now.gap === 0 ? "" : ` ${money(Math.abs(now.gap))}`}.`];
+  if (now.wasCost) parts.push(`The reported cost was ${money(now.wasCost.amount)} before the last change.`);
+  if (now.wasPrice) parts.push(`The price was ${money(now.wasPrice.amount)} before the last change.`);
+  return parts.join(" ");
 });
 
 const families = computed(() => groupCostLines(props.detail?.current.costLines ?? []));
@@ -52,23 +77,24 @@ const linesTotal = computed(() => families.value.reduce((sum, family) => sum + f
 const segments = computed(() => families.value.flatMap((family) => family.lines).filter((line) => line.value > 0));
 
 const changeLog = computed(() => buildChangeLog(props.detail?.history ?? [], currency.value));
-const updates = computed(() => changeLog.value.filter((event) => event.kind === "update"));
-const chart = computed(() => buildHistoryChart(props.detail?.history ?? [], currency.value));
+// Newest first, so the move the ticks describe leads the list.
+const updates = computed(() => changeLog.value.filter((event) => event.kind === "update").reverse());
 const checkCount = computed(() => props.detail?.history.length ?? 0);
-const allChecks = ref(false);
-const listedChecks = computed(() => {
-  const newestFirst = [...(props.detail?.history ?? [])].reverse();
-  return allChecks.value ? newestFirst : newestFirst.slice(0, RECENT_CHECKS);
-});
+const everyCheck = computed(() => [...(props.detail?.history ?? [])].reverse());
+const showChecks = ref(false);
 watch(() => props.selectedProduct, () => {
-  allChecks.value = false;
+  showChecks.value = false;
 });
 
-const movementSentence = computed(() => {
-  if (checkCount.value < 2) return "Too early to say whether anything moves.";
-  return updates.value.length
-    ? `The price or a cost line moved on ${countLabel(updates.value.length, "check")}.`
-    : "Nothing has moved between checks.";
+const times = (count: number) => (count === 1 ? "once" : count === 2 ? "twice" : `${formatNumber(count)} times`);
+const sinceSentence = computed(() => {
+  const analytics = props.detail?.analytics;
+  if (!analytics || !checkCount.value) return "";
+  if (checkCount.value < 2) return `Checked once, on ${formatDate(analytics.lastObservedAt)}. The price hasn’t moved.`;
+  const lead = `Checked ${times(checkCount.value)} since ${formatDate(analytics.firstObservedAt)}.`;
+  const latest = updates.value[0];
+  if (!latest) return `${lead} Nothing has moved.`;
+  return `${lead} Something moved ${times(updates.value.length)}, ${updates.value.length === 1 ? "on" : "last on"} ${formatDate(latest.capturedAt)}.`;
 });
 </script>
 
@@ -133,7 +159,7 @@ const movementSentence = computed(() => {
             <div
               class="twobars"
               role="img"
-              :aria-label="`Reported cost ${money(tally.cost)}, price ${money(tally.price)}. ${tally.verdict}${tally.gap === 0 ? '' : ` ${money(Math.abs(tally.gap))}`}.`"
+              :aria-label="tallyLabel"
             >
               <p class="twobars-name"><span class="label">Costs Quince</span><b class="fig">{{ money(tally.cost) }}</b></p>
               <div class="twobars-track">
@@ -142,9 +168,19 @@ const movementSentence = computed(() => {
                     <span><b>{{ line.label }}</b>{{ money(line.amount) }}</span>
                   </span>
                 </div>
+                <i v-if="tally.wasCost?.ghost" class="twobars-ghost" :style="tally.wasCost.ghost" />
               </div>
+              <p v-if="tally.wasCost" class="twobars-was">
+                <i :style="tally.wasCost.tick" /><span class="fig" :style="tally.wasCost.text">was {{ money(tally.wasCost.amount) }}</span>
+              </p>
               <p class="twobars-name"><span class="label">Quince sells it for</span><b class="fig">{{ money(tally.price) }}</b></p>
-              <div class="twobars-track"><span class="twobars-price" :style="{ width: tally.paidWidth }" /></div>
+              <div class="twobars-track">
+                <span class="twobars-price" :style="{ width: tally.paidWidth }" />
+                <i v-if="tally.wasPrice?.ghost" class="twobars-ghost" :style="tally.wasPrice.ghost" />
+              </div>
+              <p v-if="tally.wasPrice" class="twobars-was">
+                <i :style="tally.wasPrice.tick" /><span class="fig" :style="tally.wasPrice.text">was {{ money(tally.wasPrice.amount) }}</span>
+              </p>
             </div>
             <p class="verdict" :class="{ below: tally.gap < 0 }">
               <span>{{ tally.verdict }}</span><span v-if="tally.gap !== 0" class="fig">{{ money(Math.abs(tally.gap)) }}</span>
@@ -171,10 +207,10 @@ const movementSentence = computed(() => {
           </p>
         </section>
 
-        <section v-if="updates.length">
-          <h3>What changed</h3>
-          <p class="lede">Moves between one check and the next, with the amount on either side.</p>
-          <ol class="ledger">
+        <section>
+          <h3 class="sr-only">Since we started looking</h3>
+          <p class="since" :class="{ quiet: !updates.length }">{{ sinceSentence }}</p>
+          <ol v-if="updates.length" class="ledger">
             <li v-for="(event, eventIndex) in updates" :key="`${event.capturedAt}-${eventIndex}`">
               <time class="label" :datetime="event.capturedAt">{{ formatDate(event.capturedAt) }}</time>
               <ul>
@@ -195,45 +231,17 @@ const movementSentence = computed(() => {
               </ul>
             </li>
           </ol>
-        </section>
-
-        <section>
-          <h3>Since we started looking</h3>
-          <p class="lede">
-            {{ countLabel(checkCount, "check") }}, the latest on <time :datetime="detail.analytics.lastObservedAt">{{ formatDate(detail.analytics.lastObservedAt) }}</time>. {{ movementSentence }}
+          <p v-if="checkCount > 1" class="note">
+            <button class="text-link" type="button" :aria-expanded="showChecks" @click="showChecks = !showChecks">
+              {{ showChecks ? "Hide the checks" : `Show all ${countLabel(checkCount, "check")}` }}
+            </button>
           </p>
-          <figure v-if="chart.points.length > 1" class="chart">
-            <figcaption class="chart-key">
-              <span><i class="key-price" />Price</span>
-              <span><i class="key-cost" />Reported cost</span>
-            </figcaption>
-            <svg :viewBox="`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`" role="img" :aria-label="`Price and reported cost over time for ${product.name}`">
-              <g v-for="line in chart.gridLines" :key="line.y">
-                <line class="chart-grid" :x1="CHART_LEFT" :y1="line.y" :x2="CHART_WIDTH - CHART_RIGHT" :y2="line.y" />
-                <text class="chart-text" x="0" :y="line.y + 4">{{ line.label }}</text>
-              </g>
-              <path v-if="chart.costPath" class="chart-line chart-cost" :d="chart.costPath" />
-              <path v-if="chart.pricePath" class="chart-line chart-price" :d="chart.pricePath" />
-              <template v-for="(point, index) in chart.points" :key="`${point.capturedAt}-${index}`">
-                <circle v-if="point.costY !== null" class="chart-dot chart-cost" :cx="point.x" :cy="point.costY" r="3" />
-                <circle v-if="point.priceY !== null" class="chart-dot chart-price" :cx="point.x" :cy="point.priceY" r="3" />
-              </template>
-              <text
-                v-for="(axisLabel, index) in chart.axisLabels"
-                :key="`axis-${index}`"
-                class="chart-text"
-                :x="axisLabel.x"
-                :y="CHART_HEIGHT - 8"
-                :text-anchor="axisLabel.anchor"
-              >{{ axisLabel.label }}</text>
-            </svg>
-          </figure>
-          <table class="checks">
+          <table v-if="showChecks" class="checks">
             <thead>
               <tr class="label"><th scope="col">Checked</th><th scope="col" class="num">Price</th><th scope="col" class="num">Reported cost</th><th scope="col" class="num">Difference</th></tr>
             </thead>
             <tbody>
-              <tr v-for="(point, index) in listedChecks" :key="`${point.capturedAt}-${index}`">
+              <tr v-for="(point, index) in everyCheck" :key="`${point.capturedAt}-${index}`">
                 <td><time :datetime="point.capturedAt">{{ formatDate(point.capturedAt) }}</time></td>
                 <td class="num fig">{{ money(point.sellingPrice) }}</td>
                 <td class="num fig quiet">{{ money(point.reportedTotalCost) }}</td>
@@ -241,16 +249,6 @@ const movementSentence = computed(() => {
               </tr>
             </tbody>
           </table>
-          <p v-if="checkCount > RECENT_CHECKS" class="note">
-            {{ allChecks ? `All ${countLabel(checkCount, "check")} are listed.` : `The latest ${RECENT_CHECKS} of ${countLabel(checkCount, "check")} are listed.` }}
-            <button class="text-link" type="button" :aria-expanded="allChecks" @click="allChecks = !allChecks">{{ allChecks ? "Show fewer" : "Show all" }}</button>
-          </p>
-          <dl class="observed">
-            <div><dt class="label">Lowest price seen</dt><dd class="fig">{{ money(detail.analytics.lowestPrice) }}</dd></div>
-            <div><dt class="label">Highest price seen</dt><dd class="fig">{{ money(detail.analytics.highestPrice) }}</dd></div>
-            <div><dt class="label">Highest reported cost</dt><dd class="fig">{{ money(detail.analytics.highestCost) }}</dd></div>
-            <div><dt class="label">Checks below cost</dt><dd class="fig">{{ formatNumber(detail.analytics.lossObservations) }} of {{ formatNumber(detail.analytics.observationCount) }}</dd></div>
-          </dl>
         </section>
 
         <a v-if="product.url" class="outline-button label" :href="product.url" target="_blank" rel="noreferrer">See it on Quince</a>

@@ -146,7 +146,7 @@ npm run dev
 
 Open `http://localhost:3000`. The dashboard supports loss leaders, positive
 spread drivers, the full ranking, search, inferred department/category
-filters, sorting, and product-level price/cost history charts. Click a product
+filters, sorting, and product-level price/cost history. Click a product
 name or row to open its history. Set `NUXT_PUBLIC_API_BASE` if the API is
 running at a different address.
 
@@ -155,7 +155,8 @@ current selling price matches. Different price tiers stay separate. When
 disclosed production costs differ within a same-price group, the row exposes
 the metric range and the detail drawer keeps each color/size history separate.
 
-The detail drawer carries a change ledger alongside the price/cost chart. It
+The detail drawer carries a change ledger, and marks on its cost and price bars
+where each stood before the last change. The ledger
 lists the moves between consecutive captures — the listed price, each disclosed
 cost line, and the resulting spread — with the amount on either side of every
 move, so a change can be read without inferring it from two figures. Captures

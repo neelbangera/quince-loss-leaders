@@ -120,3 +120,22 @@ export function buildChangeLog(history: ProductHistoryPoint[], currencyCode: str
 
   return events;
 }
+
+function pointsDiffer(left: ProductHistoryPoint, right: ProductHistoryPoint) {
+  if (numericValue(left.sellingPrice) !== numericValue(right.sellingPrice)) return true;
+  if (numericValue(left.reportedTotalCost) !== numericValue(right.reportedTotalCost)) return true;
+  const leftLines = uniqueCostLineKeys(left.costLines);
+  const rightLines = new Map(uniqueCostLineKeys(right.costLines).map((entry) => [entry.key, entry.line]));
+  if (leftLines.length !== rightLines.size) return true;
+  return leftLines.some((entry) => numericValue(entry.line.amount) !== numericValue(rightLines.get(entry.key)?.amount ?? null));
+}
+
+// The capture just before the most recent move, or null when nothing has moved.
+export function captureBeforeLastChange(history: ProductHistoryPoint[]): ProductHistoryPoint | null {
+  for (let index = history.length - 1; index > 0; index -= 1) {
+    const previous = history[index - 1];
+    const next = history[index];
+    if (previous && next && pointsDiffer(previous, next)) return previous;
+  }
+  return null;
+}

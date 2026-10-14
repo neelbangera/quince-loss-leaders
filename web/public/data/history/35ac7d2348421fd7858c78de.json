@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:32:58+00:00",
+    "capturedAt": "2026-10-14T13:59:39+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "12.83",
     "unitSpread": "17.07",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 21,
+    "observationCount": 22,
     "lossObservations": 0,
-    "profitObservations": 21,
+    "profitObservations": 22,
     "lowestPrice": "23.90",
     "highestPrice": "29.90",
     "lowestCost": "12.83",
     "highestCost": "14.31",
-    "averageSpread": "15.87",
+    "averageSpread": "15.92",
     "firstObservedAt": "2026-09-24T13:42:55+00:00",
-    "lastObservedAt": "2026-10-13T19:32:58+00:00"
+    "lastObservedAt": "2026-10-14T13:59:39+00:00"
   },
   "history": [
     {
@@ -908,6 +908,54 @@
     },
     {
       "capturedAt": "2026-10-13T19:32:58+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "12.83",
+      "unitSpread": "17.07",
+      "marginPct": 57.09,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.85"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.83"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1wmYpV5hR7hNfrGnAKrGKt/ad888f4c2c6eed131587dda248c715ab/U--165-Colony-Blue-343_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2JjbCXVkNvQ8S60Xi3wmM/a15b46f57011e57544bce6383eac0f8f/Frame_95.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/NZSk9C8Yy9BfeKSr2X2KZ/7ccdd7c303a2036adda9c4131e6ec7ef/Frame_123.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/c60653613aa228932a4a1c87/82aebfeef8407e3483495433d555afec/sleepbags1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/bbd1488413b54889cdb8d661/a90f85464a00768d87ae27901978e196/sleepbags2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:59:39+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "12.83",
       "unitSpread": "17.07",

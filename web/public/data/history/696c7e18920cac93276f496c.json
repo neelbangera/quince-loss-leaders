@@ -22,11 +22,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:35:27+00:00",
+    "capturedAt": "2026-10-14T14:02:08+00:00",
     "sellingPrice": "60.00",
-    "reportedTotalCost": "36.26",
-    "unitSpread": "23.74",
-    "marginPct": 39.57,
+    "reportedTotalCost": "34.06",
+    "unitSpread": "25.94",
+    "marginPct": 43.23,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "8.50"
+        "amount": "6.30"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "60.00",
     "highestPrice": "60.00",
-    "lowestCost": "36.26",
+    "lowestCost": "34.06",
     "highestCost": "36.26",
-    "averageSpread": "23.74",
+    "averageSpread": "24.84",
     "firstObservedAt": "2026-10-13T19:35:27+00:00",
-    "lastObservedAt": "2026-10-13T19:35:27+00:00"
+    "lastObservedAt": "2026-10-14T14:02:08+00:00"
   },
   "history": [
     {
@@ -116,6 +116,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "8.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/rpo4W40kHmAy4TLa9f6LT/3f6423140a883207f65fbaa60620f590/W-JKT-84-INDBLU-01_EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T14:02:08+00:00",
+      "sellingPrice": "60.00",
+      "reportedTotalCost": "34.06",
+      "unitSpread": "25.94",
+      "marginPct": 43.23,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.41"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "13.93"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.02"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.00"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.30"
         }
       ],
       "imageUrls": [

@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:18:17+00:00",
+    "capturedAt": "2026-10-14T13:45:00+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "22.09",
     "unitSpread": "27.91",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "22.09",
     "highestCost": "22.09",
     "averageSpread": "27.91",
     "firstObservedAt": "2026-10-13T19:18:17+00:00",
-    "lastObservedAt": "2026-10-13T19:18:17+00:00"
+    "lastObservedAt": "2026-10-14T13:45:00+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:18:17+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "22.09",
+      "unitSpread": "27.91",
+      "marginPct": 55.82,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.65"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.36"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2xN4rRRzuAhgMTslxU9YIl/81399d4db9f2b69b38d081e948ed71b1/CORA-BLACK-POLARIZED-7023.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5X0EDjyZwlDi3VZCi2NflR/153280a108795366dc6794f4259d976f/Group_2869.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/ZlHfcAmUbpHaYz11lqHFR/bedefad421f465b407eed2c8344005c2/Group_2874.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:45:00+00:00",
       "sellingPrice": "50.00",
       "reportedTotalCost": "22.09",
       "unitSpread": "27.91",

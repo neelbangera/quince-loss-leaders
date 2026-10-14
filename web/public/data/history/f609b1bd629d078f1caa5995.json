@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:27:40+00:00",
+    "capturedAt": "2026-10-14T13:54:22+00:00",
     "sellingPrice": "550.00",
     "reportedTotalCost": "495.00",
     "unitSpread": "55.00",
@@ -66,20 +66,64 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "550.00",
     "highestPrice": "550.00",
     "lowestCost": "495.00",
     "highestCost": "495.00",
     "averageSpread": "55.00",
     "firstObservedAt": "2026-10-13T19:27:40+00:00",
-    "lastObservedAt": "2026-10-13T19:27:40+00:00"
+    "lastObservedAt": "2026-10-14T13:54:22+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:27:40+00:00",
+      "sellingPrice": "550.00",
+      "reportedTotalCost": "495.00",
+      "unitSpread": "55.00",
+      "marginPct": 10.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "145.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "65.33"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "17.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "255.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "12.17"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4OiyLIFb4SD5SSEi7QIipp/34cf0dd36510b81c2474aa9999eecd41/Atlas_Midcentury_Collection_Flax_Midcentury_Ottoman_Front.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:54:22+00:00",
       "sellingPrice": "550.00",
       "reportedTotalCost": "495.00",
       "unitSpread": "55.00",

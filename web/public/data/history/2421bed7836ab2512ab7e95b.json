@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:17:39+00:00",
+    "capturedAt": "2026-10-14T13:44:21+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "21.48",
     "unitSpread": "28.52",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "21.48",
     "highestCost": "21.48",
     "averageSpread": "28.52",
     "firstObservedAt": "2026-10-13T19:17:39+00:00",
-    "lastObservedAt": "2026-10-13T19:17:39+00:00"
+    "lastObservedAt": "2026-10-14T13:44:21+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:17:39+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "21.48",
+      "unitSpread": "28.52",
+      "marginPct": 57.04,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.79"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.69"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5rzk2gwEmdnnMe0wnDbYnK/39de9a992aa53c7deec40c7fad683376/W-PNT-171-DKWSH_0503_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6zK8qJ0VnblPWRERfNoCMP/b8426740598a0eb61f4ad8c2f207a47e/Sequence_01.00_00_06_15.Still007.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/gwGpq9clvOlAnGPDvZ19m/29c478a2dae2e1e53adb63d3746742ee/Frame_128.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:44:21+00:00",
       "sellingPrice": "50.00",
       "reportedTotalCost": "21.48",
       "unitSpread": "28.52",

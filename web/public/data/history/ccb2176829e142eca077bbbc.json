@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:24:36+00:00",
+    "capturedAt": "2026-10-14T13:51:19+00:00",
     "sellingPrice": "100.00",
     "reportedTotalCost": "82.95",
     "unitSpread": "17.05",
@@ -66,20 +66,64 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "100.00",
     "highestPrice": "100.00",
     "lowestCost": "82.95",
     "highestCost": "82.95",
     "averageSpread": "17.05",
     "firstObservedAt": "2026-10-13T19:24:36+00:00",
-    "lastObservedAt": "2026-10-13T19:24:36+00:00"
+    "lastObservedAt": "2026-10-14T13:51:19+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:24:36+00:00",
+      "sellingPrice": "100.00",
+      "reportedTotalCost": "82.95",
+      "unitSpread": "17.05",
+      "marginPct": 17.05,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "52.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.60"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.04"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.53"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.66"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "16.62"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/DaLXUinNxUIax7w2JAUym/8c6825755e83050683b8025fd2f1b6b2/W-SCV-26_0379.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:51:19+00:00",
       "sellingPrice": "100.00",
       "reportedTotalCost": "82.95",
       "unitSpread": "17.05",

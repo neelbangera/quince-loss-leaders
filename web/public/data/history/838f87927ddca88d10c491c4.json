@@ -22,11 +22,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:28:32+00:00",
+    "capturedAt": "2026-10-14T13:55:13+00:00",
     "sellingPrice": "2500.00",
-    "reportedTotalCost": "1106.30",
-    "unitSpread": "1393.70",
-    "marginPct": 55.75,
+    "reportedTotalCost": "1106.66",
+    "unitSpread": "1393.34",
+    "marginPct": 55.73,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "137.43"
+        "amount": "137.79"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "2500.00",
     "highestPrice": "2500.00",
     "lowestCost": "1106.30",
-    "highestCost": "1106.30",
-    "averageSpread": "1393.70",
+    "highestCost": "1106.66",
+    "averageSpread": "1393.52",
     "firstObservedAt": "2026-10-13T19:28:32+00:00",
-    "lastObservedAt": "2026-10-13T19:28:32+00:00"
+    "lastObservedAt": "2026-10-14T13:55:13+00:00"
   },
   "history": [
     {
@@ -116,6 +116,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "137.43"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4teRfN47owcN6odCB60TBj/2c2015f38b69d6825cea5a085e2c1328/RNG-241_WG_0156_2_EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:55:13+00:00",
+      "sellingPrice": "2500.00",
+      "reportedTotalCost": "1106.66",
+      "unitSpread": "1393.34",
+      "marginPct": 55.73,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "847.69"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "39.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "62.30"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "137.79"
         }
       ],
       "imageUrls": [

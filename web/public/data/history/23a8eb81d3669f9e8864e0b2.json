@@ -9,12 +9,20 @@
     "department": "women",
     "departmentLabel": "Women",
     "category": "dresses",
-    "categoryLabel": "Dresses",
+    "categoryLabel": "Dresses & Jumpsuits",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6594",
+    "variantLabel": "Wine Tasting Red / XS",
+    "variantSize": "Wine Tasting Red",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/6j7rAOaRNJjTfP0jlFveaB/a4ec5dacc589343c9d7a01e1b22f7b5e/W-DRS-196-WINETA-01_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/6j7rAOaRNJjTfP0jlFveaB/a4ec5dacc589343c9d7a01e1b22f7b5e/W-DRS-196-WINETA-01_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-10T14:48:03+00:00",
+    "capturedAt": "2026-10-14T14:03:10+00:00",
     "sellingPrice": "150.00",
     "reportedTotalCost": "80.09",
     "unitSpread": "69.91",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "7.15"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/6j7rAOaRNJjTfP0jlFveaB/a4ec5dacc589343c9d7a01e1b22f7b5e/W-DRS-196-WINETA-01_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "150.00",
     "highestPrice": "150.00",
     "lowestCost": "79.23",
     "highestCost": "80.09",
-    "averageSpread": "70.34",
+    "averageSpread": "70.20",
     "firstObservedAt": "2026-09-19T12:38:48+00:00",
-    "lastObservedAt": "2026-10-10T14:48:03+00:00"
+    "lastObservedAt": "2026-10-14T14:03:10+00:00"
   },
   "history": [
     {
@@ -147,6 +158,50 @@
           "type": "duties_taxes_fees",
           "amount": "7.15"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T14:03:10+00:00",
+      "sellingPrice": "150.00",
+      "reportedTotalCost": "80.09",
+      "unitSpread": "69.91",
+      "marginPct": 46.61,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "36.81"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "25.54"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "6.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.15"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6j7rAOaRNJjTfP0jlFveaB/a4ec5dacc589343c9d7a01e1b22f7b5e/W-DRS-196-WINETA-01_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

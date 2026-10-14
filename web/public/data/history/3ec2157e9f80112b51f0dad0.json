@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:29:55+00:00",
+    "capturedAt": "2026-10-14T13:56:37+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "23.88",
     "unitSpread": "26.12",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "23.88",
     "highestCost": "23.88",
     "averageSpread": "26.12",
     "firstObservedAt": "2026-10-13T19:29:55+00:00",
-    "lastObservedAt": "2026-10-13T19:29:55+00:00"
+    "lastObservedAt": "2026-10-14T13:56:37+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:29:55+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "23.88",
+      "unitSpread": "26.12",
+      "marginPct": 52.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.44"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.46"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.88"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4BVzFyYbjIJYJOcXLYKLpq/398cc5d70886cbbae8b93343214ebd65/RYDER-FAWN-POLARIZED-1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7I9xZ8Zf4ovl5x1eYFkSdP/7c40f92bc1d9eae1744d28c1575a1bd6/Group_2874.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/5X0EDjyZwlDi3VZCi2NflR/153280a108795366dc6794f4259d976f/Group_2869.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:56:37+00:00",
       "sellingPrice": "50.00",
       "reportedTotalCost": "23.88",
       "unitSpread": "26.12",

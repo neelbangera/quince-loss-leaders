@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "bedding",
-    "categoryLabel": "Bedding",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1541",
+    "variantLabel": "Neutral / 20x20",
+    "variantSize": "Neutral",
+    "variantColor": "20x20",
+    "imageUrl": "https://images.quince.com/7EYTEpeEhsBsBqomLz6OOz/607b0555f2add13643c4639eb3bfe1f8/chunky_wool_pillow_cover__2_.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/7EYTEpeEhsBsBqomLz6OOz/607b0555f2add13643c4639eb3bfe1f8/chunky_wool_pillow_cover__2_.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-12T18:15:30+00:00",
+    "capturedAt": "2026-10-14T13:45:57+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "21.51",
     "unitSpread": "38.39",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "1.63"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/7EYTEpeEhsBsBqomLz6OOz/607b0555f2add13643c4639eb3bfe1f8/chunky_wool_pillow_cover__2_.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 16,
+    "observationCount": 17,
     "lossObservations": 0,
-    "profitObservations": 16,
+    "profitObservations": 17,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "21.51",
     "highestCost": "24.80",
-    "averageSpread": "36.33",
+    "averageSpread": "36.45",
     "firstObservedAt": "2026-09-11T13:06:20+00:00",
-    "lastObservedAt": "2026-10-12T18:15:30+00:00"
+    "lastObservedAt": "2026-10-14T13:45:57+00:00"
   },
   "history": [
     {
@@ -721,6 +732,50 @@
           "type": "duties_taxes_fees",
           "amount": "1.63"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:45:57+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "21.51",
+      "unitSpread": "38.39",
+      "marginPct": 64.09,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.07"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.63"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7EYTEpeEhsBsBqomLz6OOz/607b0555f2add13643c4639eb3bfe1f8/chunky_wool_pillow_cover__2_.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

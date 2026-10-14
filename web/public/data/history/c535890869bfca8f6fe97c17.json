@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:17:56+00:00",
+    "capturedAt": "2026-10-14T13:44:39+00:00",
     "sellingPrice": "14.90",
     "reportedTotalCost": "4.20",
     "unitSpread": "10.70",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 22,
+    "observationCount": 23,
     "lossObservations": 7,
-    "profitObservations": 15,
+    "profitObservations": 16,
     "lowestPrice": "14.90",
     "highestPrice": "14.90",
     "lowestCost": "4.20",
     "highestCost": "19.29",
-    "averageSpread": "0.63",
+    "averageSpread": "1.07",
     "firstObservedAt": "2026-09-23T13:43:17+00:00",
-    "lastObservedAt": "2026-10-13T19:17:56+00:00"
+    "lastObservedAt": "2026-10-14T13:44:39+00:00"
   },
   "history": [
     {
@@ -945,6 +945,52 @@
     },
     {
       "capturedAt": "2026-10-13T19:17:56+00:00",
+      "sellingPrice": "14.90",
+      "reportedTotalCost": "4.20",
+      "unitSpread": "10.70",
+      "marginPct": 71.81,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.01"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.67"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.13"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.90"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1OZPvin786WHONXvJiEZL0/5b40edbf3b7e1dbd1a14aadb60a153d3/U-1051-NVY-025_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5j4LvTDQjwHBYSxDedCZ0d/de36320492d31a655e719f35e76e0ed6/Frame_2147224535.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/5S7JGuU3arslqO11ydTNrH/fd13f58574fe26618d99147213a6a10c/Black-White_Stripe.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:44:39+00:00",
       "sellingPrice": "14.90",
       "reportedTotalCost": "4.20",
       "unitSpread": "10.70",

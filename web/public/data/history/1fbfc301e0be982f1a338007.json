@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:25:09+00:00",
+    "capturedAt": "2026-10-14T13:51:51+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "37.12",
     "unitSpread": "22.78",
@@ -66,20 +66,64 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "37.12",
     "highestCost": "37.12",
     "averageSpread": "22.78",
     "firstObservedAt": "2026-10-13T19:25:09+00:00",
-    "lastObservedAt": "2026-10-13T19:25:09+00:00"
+    "lastObservedAt": "2026-10-14T13:51:51+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:25:09+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "37.12",
+      "unitSpread": "22.78",
+      "marginPct": 38.03,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "26.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.66"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.46"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2feryNLfx8dWnwRml6PEdK/09f861a1d4929b17fe4a2859c3ccb19a/NMA_6200LBL.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:51:51+00:00",
       "sellingPrice": "59.90",
       "reportedTotalCost": "37.12",
       "unitSpread": "22.78",

@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6165",
+    "variantLabel": "Dried Sage / Euro",
+    "variantSize": "Dried Sage",
+    "variantColor": "Euro",
+    "imageUrl": "https://images.quince.com/6kxT8dcYMzV1WWBafGsssM/62b5af0f063a2e5bf0acb4bc45f09118/U-BEDD-412-DSAGE-17622_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/6kxT8dcYMzV1WWBafGsssM/62b5af0f063a2e5bf0acb4bc45f09118/U-BEDD-412-DSAGE-17622_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-11T15:07:31+00:00",
+    "capturedAt": "2026-10-14T13:55:55+00:00",
     "sellingPrice": "32.00",
     "reportedTotalCost": "13.71",
     "unitSpread": "18.29",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.25"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/6kxT8dcYMzV1WWBafGsssM/62b5af0f063a2e5bf0acb4bc45f09118/U-BEDD-412-DSAGE-17622_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "32.00",
     "highestPrice": "32.00",
     "lowestCost": "13.71",
     "highestCost": "13.71",
     "averageSpread": "18.29",
     "firstObservedAt": "2026-10-09T15:30:35+00:00",
-    "lastObservedAt": "2026-10-11T15:07:31+00:00"
+    "lastObservedAt": "2026-10-14T13:55:55+00:00"
   },
   "history": [
     {
@@ -147,6 +158,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.25"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-14T13:55:55+00:00",
+      "sellingPrice": "32.00",
+      "reportedTotalCost": "13.71",
+      "unitSpread": "18.29",
+      "marginPct": 57.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.63"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.92"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.25"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6kxT8dcYMzV1WWBafGsssM/62b5af0f063a2e5bf0acb4bc45f09118/U-BEDD-412-DSAGE-17622_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

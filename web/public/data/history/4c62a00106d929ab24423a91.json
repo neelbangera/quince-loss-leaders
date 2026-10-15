@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-14T13:56:38+00:00",
+    "capturedAt": "2026-10-15T13:34:56+00:00",
     "sellingPrice": "118.00",
     "reportedTotalCost": "50.59",
     "unitSpread": "67.41",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "118.00",
     "highestPrice": "118.00",
     "lowestCost": "50.59",
     "highestCost": "57.99",
-    "averageSpread": "66.67",
+    "averageSpread": "66.74",
     "firstObservedAt": "2026-10-06T15:22:22+00:00",
-    "lastObservedAt": "2026-10-14T13:56:38+00:00"
+    "lastObservedAt": "2026-10-15T13:34:56+00:00"
   },
   "history": [
     {
@@ -455,6 +455,51 @@
     },
     {
       "capturedAt": "2026-10-14T13:56:38+00:00",
+      "sellingPrice": "118.00",
+      "reportedTotalCost": "50.59",
+      "unitSpread": "67.41",
+      "marginPct": 57.13,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.67"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.43"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.19"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.40"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "12.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6wJm6QpJZ506dkpT0QzWoH/815181e238bc2cba8a1cc811ff0a2318/U-OTH-117-COCOBROW-0217_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/egEtnJ4nXeGpOM5AdkRyF/9bd773cf9a939ef43078d57faa509a65/U-OTH-117-BLK-137_EDITED.jpg?w=1600&q=50&h=2000&fm=avif&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:34:56+00:00",
       "sellingPrice": "118.00",
       "reportedTotalCost": "50.59",
       "unitSpread": "67.41",

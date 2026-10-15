@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-14T13:46:59+00:00",
+    "capturedAt": "2026-10-15T13:38:31+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "19.34",
     "unitSpread": "20.56",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "19.34",
     "highestCost": "19.34",
     "averageSpread": "20.56",
     "firstObservedAt": "2026-10-13T19:20:17+00:00",
-    "lastObservedAt": "2026-10-14T13:46:59+00:00"
+    "lastObservedAt": "2026-10-15T13:38:31+00:00"
   },
   "history": [
     {
@@ -133,6 +133,53 @@
     },
     {
       "capturedAt": "2026-10-14T13:46:59+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "19.34",
+      "unitSpread": "20.56",
+      "marginPct": 51.53,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.22"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.91"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.26"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/bZb8YrMckSOLBjI728THJ/3dbe532542cd5ee083d4bd8a47c756a2/U--256_PEACH_FLORAL_RETOUCHED_KID.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/C4lSh2P74NOm7LmjqW35E/61a2019bce3a0f9dae6b5f46674bff59/Frame_140.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/4AsmPEZBkrLd7xzlc0bYAT/6809e1f4e72c8fff884d503edc4568e9/Frame_2147224541.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/OlKk8kyaY4hYNxY9PwXMd/828d560d68883b95c9aedf195807eff2/Frame_77.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:38:31+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "19.34",
       "unitSpread": "20.56",

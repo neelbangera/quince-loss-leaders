@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:19:50+00:00",
+    "capturedAt": "2026-10-15T13:27:40+00:00",
     "sellingPrice": "84.00",
     "reportedTotalCost": "36.41",
     "unitSpread": "47.59",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "84.00",
     "highestPrice": "84.00",
     "lowestCost": "36.41",
     "highestCost": "36.41",
     "averageSpread": "47.59",
     "firstObservedAt": "2026-10-13T19:19:50+00:00",
-    "lastObservedAt": "2026-10-13T19:19:50+00:00"
+    "lastObservedAt": "2026-10-15T13:27:40+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:19:50+00:00",
+      "sellingPrice": "84.00",
+      "reportedTotalCost": "36.41",
+      "unitSpread": "47.59",
+      "marginPct": 56.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.87"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.72"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.02"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.30"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hxyspHNiGInZrsfMVkvsT/0d0e033946fb31279e7983ffcf15bf89/W-DRS-114-FLAX-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1csewxEx1TI0BXG6G2b0wt/56274727f704c2f4dc8871e7d146bc9c/Frame_112.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/1qcwZ5CQ1FEibqRGuRhdXb/6b9b75dc24968618c3f3138c4121c711/Frame_75.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/4TE7XEpNaCKNiJXJkb0QW7/739ea0d59fb261d20dd186b5eac4a0e9/Group_3043.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:27:40+00:00",
       "sellingPrice": "84.00",
       "reportedTotalCost": "36.41",
       "unitSpread": "47.59",

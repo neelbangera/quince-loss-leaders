@@ -22,11 +22,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-14T14:03:41+00:00",
+    "capturedAt": "2026-10-15T13:31:20+00:00",
     "sellingPrice": "168.00",
-    "reportedTotalCost": "124.37",
-    "unitSpread": "43.63",
-    "marginPct": 25.97,
+    "reportedTotalCost": "131.11",
+    "unitSpread": "36.89",
+    "marginPct": 21.96,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "0.00"
+        "amount": "6.74"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "168.00",
     "highestPrice": "168.00",
     "lowestCost": "118.77",
     "highestCost": "134.08",
-    "averageSpread": "39.77",
+    "averageSpread": "39.53",
     "firstObservedAt": "2026-10-05T17:21:34+00:00",
-    "lastObservedAt": "2026-10-14T14:03:41+00:00"
+    "lastObservedAt": "2026-10-15T13:31:20+00:00"
   },
   "history": [
     {
@@ -529,6 +529,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5bCc4IvY4x13A51I74Jota/90094c8fefc472860de55f2df58c37c0/W-BRAC-100-YELGOL-642-EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:31:20+00:00",
+      "sellingPrice": "168.00",
+      "reportedTotalCost": "131.11",
+      "unitSpread": "36.89",
+      "marginPct": 21.96,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "95.41"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "16.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.09"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.74"
         }
       ],
       "imageUrls": [

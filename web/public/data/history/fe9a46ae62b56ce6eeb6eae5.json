@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:18:48+00:00",
+    "capturedAt": "2026-10-15T13:45:16+00:00",
     "sellingPrice": "110.00",
     "reportedTotalCost": "49.15",
     "unitSpread": "60.85",
@@ -66,20 +66,64 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "110.00",
     "highestPrice": "110.00",
     "lowestCost": "49.15",
     "highestCost": "49.15",
     "averageSpread": "60.85",
     "firstObservedAt": "2026-10-13T19:18:48+00:00",
-    "lastObservedAt": "2026-10-13T19:18:48+00:00"
+    "lastObservedAt": "2026-10-15T13:45:16+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:18:48+00:00",
+      "sellingPrice": "110.00",
+      "reportedTotalCost": "49.15",
+      "unitSpread": "60.85",
+      "marginPct": 55.32,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "17.48"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.70"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.29"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "12.09"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5dh4vBBAyn6XnqddVsgMbg/70fc872fde10ef3637763bf047902674/W--460-OXBLOOD_39120_EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:45:16+00:00",
       "sellingPrice": "110.00",
       "reportedTotalCost": "49.15",
       "unitSpread": "60.85",

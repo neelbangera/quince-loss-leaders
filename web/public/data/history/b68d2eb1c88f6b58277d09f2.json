@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "bedding",
-    "categoryLabel": "Bedding",
+    "category": "home-decor",
+    "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "2436",
+    "variantLabel": "Terracotta / 20x20",
+    "variantSize": "Terracotta",
+    "variantColor": "20x20",
+    "imageUrl": "https://images.quince.com/1uGwjWkPkLHWY3PsxG6p3U/d71b4858429e7726cc610bab17e1848b/U-DCP-61-TERR_176382.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/1uGwjWkPkLHWY3PsxG6p3U/d71b4858429e7726cc610bab17e1848b/U-DCP-61-TERR_176382.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-12T18:09:22+00:00",
+    "capturedAt": "2026-10-15T13:38:37+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "19.79",
     "unitSpread": "20.11",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "1.06"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/1uGwjWkPkLHWY3PsxG6p3U/d71b4858429e7726cc610bab17e1848b/U-DCP-61-TERR_176382.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 32,
+    "observationCount": 33,
     "lossObservations": 0,
-    "profitObservations": 32,
+    "profitObservations": 33,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "12.46",
     "highestCost": "19.79",
-    "averageSpread": "25.99",
+    "averageSpread": "25.81",
     "firstObservedAt": "2026-09-11T12:57:02+00:00",
-    "lastObservedAt": "2026-10-12T18:09:22+00:00"
+    "lastObservedAt": "2026-10-15T13:38:37+00:00"
   },
   "history": [
     {
@@ -1377,6 +1388,50 @@
           "type": "duties_taxes_fees",
           "amount": "1.06"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:38:37+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "19.79",
+      "unitSpread": "20.11",
+      "marginPct": 50.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.08"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.06"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1uGwjWkPkLHWY3PsxG6p3U/d71b4858429e7726cc610bab17e1848b/U-DCP-61-TERR_176382.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

@@ -11,14 +11,22 @@
     "category": "accessories",
     "categoryLabel": "Accessories",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "10332",
+    "variantLabel": "Chocolate Brown / One Size",
+    "variantSize": "Chocolate Brown",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/2EqdIZtmfucCJQtINGlN1C/d9d9333823eec0ce0aae30795155c93c/W-SCV-55-CHOBRO-01_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2EqdIZtmfucCJQtINGlN1C/d9d9333823eec0ce0aae30795155c93c/W-SCV-55-CHOBRO-01_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-03T13:42:34+00:00",
+    "capturedAt": "2026-10-15T13:33:51+00:00",
     "sellingPrice": "55.00",
-    "reportedTotalCost": "31.04",
-    "unitSpread": "23.96",
-    "marginPct": 43.56,
+    "reportedTotalCost": "27.94",
+    "unitSpread": "27.06",
+    "marginPct": 49.2,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +48,34 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.99"
+        "amount": "3.56"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "0.15"
+        "amount": "1.48"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "3.70"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2EqdIZtmfucCJQtINGlN1C/d9d9333823eec0ce0aae30795155c93c/W-SCV-55-CHOBRO-01_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "55.00",
     "highestPrice": "55.00",
-    "lowestCost": "31.04",
+    "lowestCost": "27.94",
     "highestCost": "31.04",
-    "averageSpread": "23.96",
+    "averageSpread": "24.22",
     "firstObservedAt": "2026-09-23T13:44:48+00:00",
-    "lastObservedAt": "2026-10-03T13:42:34+00:00"
+    "lastObservedAt": "2026-10-15T13:33:51+00:00"
   },
   "history": [
     {
@@ -516,6 +527,50 @@
           "type": "duties_taxes_fees",
           "amount": "3.70"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:33:51+00:00",
+      "sellingPrice": "55.00",
+      "reportedTotalCost": "27.94",
+      "unitSpread": "27.06",
+      "marginPct": 49.2,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.96"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.12"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.12"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.56"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.48"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.70"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2EqdIZtmfucCJQtINGlN1C/d9d9333823eec0ce0aae30795155c93c/W-SCV-55-CHOBRO-01_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

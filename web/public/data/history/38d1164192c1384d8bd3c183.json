@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-13T19:35:28+00:00",
+    "capturedAt": "2026-10-15T13:32:05+00:00",
     "sellingPrice": "104.00",
     "reportedTotalCost": "42.03",
     "unitSpread": "61.97",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "104.00",
     "highestPrice": "104.00",
     "lowestCost": "42.03",
     "highestCost": "42.03",
     "averageSpread": "61.97",
     "firstObservedAt": "2026-10-13T19:35:28+00:00",
-    "lastObservedAt": "2026-10-13T19:35:28+00:00"
+    "lastObservedAt": "2026-10-15T13:32:05+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-13T19:35:28+00:00",
+      "sellingPrice": "104.00",
+      "reportedTotalCost": "42.03",
+      "unitSpread": "61.97",
+      "marginPct": 59.59,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.28"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.05"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.46"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.47"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "14.25"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1WQGFaUk031VYAHJIYybTe/0ad72141cae9a0099457c1d3b0cbeb38/U-BEDD-524-TASTRNIT-0158_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5XpeasoGL6cVjUHpo0uMed/8230b8f74ed8fcce31f89b4b992acc3f/Frame_58.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/4oOTrp1M4pv3aMZJQALMIQ/4665d2b2c663e9082c533806b58ba803/Frame_35.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-15T13:32:05+00:00",
       "sellingPrice": "104.00",
       "reportedTotalCost": "42.03",
       "unitSpread": "61.97",

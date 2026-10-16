@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-15T13:39:39+00:00",
+    "capturedAt": "2026-10-16T13:24:23+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "11.79",
     "unitSpread": "13.11",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "19.90",
     "highestPrice": "24.90",
     "lowestCost": "11.79",
     "highestCost": "12.87",
-    "averageSpread": "12.56",
+    "averageSpread": "12.60",
     "firstObservedAt": "2026-10-06T15:19:31+00:00",
-    "lastObservedAt": "2026-10-15T13:39:39+00:00"
+    "lastObservedAt": "2026-10-16T13:24:23+00:00"
   },
   "history": [
     {
@@ -500,6 +500,51 @@
     },
     {
       "capturedAt": "2026-10-15T13:39:39+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "11.79",
+      "unitSpread": "13.11",
+      "marginPct": 52.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.26"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.32"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.14"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.71"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.96"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3qi0F5kfm1ksJbKUDWcE9m/b155ff6f3936cc6c5ec93e1990bea769/W-SOK-3-BRIIVO-60986_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2K3ztwKRP8ZCwegpIjrAV3/ca6271a2ddf1bcf5c7503cbf8da9a39c/grey_charcoal.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-16T13:24:23+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "11.79",
       "unitSpread": "13.11",

@@ -29,7 +29,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-15T13:44:12+00:00",
+    "capturedAt": "2026-10-16T13:22:15+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "31.64",
     "unitSpread": "18.36",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 48,
+    "observationCount": 49,
     "lossObservations": 0,
-    "profitObservations": 48,
+    "profitObservations": 49,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "31.60",
     "highestCost": "35.10",
-    "averageSpread": "15.69",
+    "averageSpread": "15.75",
     "firstObservedAt": "2026-08-29T21:10:48+00:00",
-    "lastObservedAt": "2026-10-15T13:44:12+00:00"
+    "lastObservedAt": "2026-10-16T13:22:15+00:00"
   },
   "history": [
     {
@@ -2041,6 +2041,57 @@
     },
     {
       "capturedAt": "2026-10-15T13:44:12+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "31.64",
+      "unitSpread": "18.36",
+      "marginPct": 36.72,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.37"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.27"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5izYNAwMQoec55AgCLryVd/2b7d15f587bbc589730a80ce42a282d3/U--1847-323-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/XuDwKuMzkyPQyF1tJrBMK/f0c48bb86b78e25c840b8dad1552783f/image1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1FN32zlZdWcxaYGfT56ahf/eb664b05b6e76b6da11f4ec765f99376/image2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5J8nMKzjzXo659msePdCIt/7e14f70932385fbe66a5790186caab07/image3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/52IveMN3hQOVSPp6tEqVZp/1562e45ab683773e99445638538a5f8b/image4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/10jcDEbesRyW8zVCJWYF7J/6bc2daad40bbc77b439b81a48366b089/single_wick.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/GaaXxDoYeHzffsJTPxuG9/cafc1058f01064f4b683ab9492b7aa09/three_wick.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6CLgEKaBe789te6tdZQjGW/324d9c803eebbf2eab24407c9f89a637/luxurycandles.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-16T13:22:15+00:00",
       "sellingPrice": "50.00",
       "reportedTotalCost": "31.64",
       "unitSpread": "18.36",

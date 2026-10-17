@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:36:06+00:00",
+    "capturedAt": "2026-10-17T12:12:36+00:00",
     "sellingPrice": "1300.00",
     "reportedTotalCost": "1312.41",
     "unitSpread": "-12.41",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 26,
-    "lossObservations": 8,
+    "observationCount": 27,
+    "lossObservations": 9,
     "profitObservations": 18,
     "lowestPrice": "1300.00",
     "highestPrice": "1300.00",
     "lowestCost": "1072.00",
     "highestCost": "1312.41",
-    "averageSpread": "131.09",
+    "averageSpread": "125.77",
     "firstObservedAt": "2026-09-22T13:39:17+00:00",
-    "lastObservedAt": "2026-10-16T13:36:06+00:00"
+    "lastObservedAt": "2026-10-17T12:12:36+00:00"
   },
   "history": [
     {
@@ -1119,6 +1119,51 @@
     },
     {
       "capturedAt": "2026-10-16T13:36:06+00:00",
+      "sellingPrice": "1300.00",
+      "reportedTotalCost": "1312.41",
+      "unitSpread": "-12.41",
+      "marginPct": -0.95,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "275.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "220.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "55.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "403.85"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "28.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "330.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1nvkT5mlG9d6YB5ODBtzTV/87fa151c844c93e105ffd9e22a5ee02c/U-FURN-417-Hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3X8Kwtsp9UiOgjqVupAY1k/c27f16f7d5bbd17487f8f115418b8c5c/Frame_84.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:12:36+00:00",
       "sellingPrice": "1300.00",
       "reportedTotalCost": "1312.41",
       "unitSpread": "-12.41",

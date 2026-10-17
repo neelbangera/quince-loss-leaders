@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:28:33+00:00",
+    "capturedAt": "2026-10-17T12:24:58+00:00",
     "sellingPrice": "210.00",
-    "reportedTotalCost": "156.26",
-    "unitSpread": "53.74",
-    "marginPct": 25.59,
+    "reportedTotalCost": "143.52",
+    "unitSpread": "66.48",
+    "marginPct": 31.66,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "21.28"
+        "amount": "8.04"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "33.96"
+        "amount": "34.46"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "210.00",
     "highestPrice": "210.00",
-    "lowestCost": "156.26",
+    "lowestCost": "143.52",
     "highestCost": "156.26",
-    "averageSpread": "53.74",
+    "averageSpread": "60.11",
     "firstObservedAt": "2026-10-16T13:28:33+00:00",
-    "lastObservedAt": "2026-10-16T13:28:33+00:00"
+    "lastObservedAt": "2026-10-17T12:24:58+00:00"
   },
   "history": [
     {
@@ -120,6 +120,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "33.96"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/67LhobpWJeB6oG6IMYUhhP/e0c25c07248ddd705a92923eaf75e0ff/W-JKT-197-JACLEO-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6tVQ2u9e0HRWlciwRWDeSk/bec713522f45a99739ae2664433ee12e/W-JKT-197-BLA_01_EDITED.jpg?w=1600&q=50&h=2000&fm=avif&reqOrigin=website-ssr",
+        "https://images.quince.com/48np5LKlWwgbklXQyf4hFa/024572572fa3abbbb6aa258154e1d0d6/Jacquard_Leopard.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:24:58+00:00",
+      "sellingPrice": "210.00",
+      "reportedTotalCost": "143.52",
+      "unitSpread": "66.48",
+      "marginPct": 31.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "69.04"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "23.95"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.55"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "7.48"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "34.46"
         }
       ],
       "imageUrls": [

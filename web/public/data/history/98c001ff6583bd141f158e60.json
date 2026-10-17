@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:16:07+00:00",
+    "capturedAt": "2026-10-17T12:13:45+00:00",
     "sellingPrice": "99.90",
     "reportedTotalCost": "39.48",
     "unitSpread": "60.42",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "99.90",
     "highestPrice": "99.90",
     "lowestCost": "39.48",
     "highestCost": "39.48",
     "averageSpread": "60.42",
     "firstObservedAt": "2026-10-15T13:26:35+00:00",
-    "lastObservedAt": "2026-10-16T13:16:07+00:00"
+    "lastObservedAt": "2026-10-17T12:13:45+00:00"
   },
   "history": [
     {
@@ -133,6 +133,53 @@
     },
     {
       "capturedAt": "2026-10-16T13:16:07+00:00",
+      "sellingPrice": "99.90",
+      "reportedTotalCost": "39.48",
+      "unitSpread": "60.42",
+      "marginPct": 60.48,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.33"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.94"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.88"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.61"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.41"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.31"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2XRY2p4oZ29p0y5RO1emMi/ea523dbdef859c7e1c8b5a4e287ca825/U-BEDD-468-WHINAV-157-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1tjWPxcS0FsBqR6ANysyU7/cd5302c6c580e07b05717b7414fe0379/Frame_2147224565.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/jH6qyjpeqdkenepQSa0JH/c74c5b7c20b7e57f8acbdbddcb538aa8/Frame_2147224567.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/7E6EydAqanjPfR4aQolWGo/31f5ff201411ab4d96044c844f331ed8/Frame_2147224566.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:13:45+00:00",
       "sellingPrice": "99.90",
       "reportedTotalCost": "39.48",
       "unitSpread": "60.42",

@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:16:06+00:00",
+    "capturedAt": "2026-10-17T12:24:25+00:00",
     "sellingPrice": "98.00",
     "reportedTotalCost": "67.15",
     "unitSpread": "30.85",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "98.00",
     "highestPrice": "98.00",
     "lowestCost": "67.15",
     "highestCost": "67.15",
     "averageSpread": "30.85",
     "firstObservedAt": "2026-10-13T19:36:16+00:00",
-    "lastObservedAt": "2026-10-16T13:16:06+00:00"
+    "lastObservedAt": "2026-10-17T12:24:25+00:00"
   },
   "history": [
     {
@@ -232,6 +232,54 @@
     },
     {
       "capturedAt": "2026-10-16T13:16:06+00:00",
+      "sellingPrice": "98.00",
+      "reportedTotalCost": "67.15",
+      "unitSpread": "30.85",
+      "marginPct": 31.48,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "18.99"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "17.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.79"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.47"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "20.30"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7EiFAvwHwQwQznn4nlFrIL/23674195b3ebf4453e3f1d63bc2f92d5/U-HAT-6-CHESBROW-171_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7wa8gCs1ux8aR9xbTdc4hn/513f43646f381197abc91a0b52f5ceb4/hats1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/70K8lsbHPSxm3wqAJdQmpr/d1afa5632d8dcc2479ae1a5502bea38c/hats2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/13t5idv5es5f4saVxjeJIn/b528cc98b5027fa7e77422f61705b127/hats3.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1yxr1GtG90bImPk2nda5ZL/603c529de171e94c6564afa21bf7d98b/hats4.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:24:25+00:00",
       "sellingPrice": "98.00",
       "reportedTotalCost": "67.15",
       "unitSpread": "30.85",

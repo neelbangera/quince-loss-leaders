@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:32:32+00:00",
+    "capturedAt": "2026-10-17T12:17:35+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "12.34",
     "unitSpread": "17.56",
@@ -66,20 +66,64 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "12.34",
     "highestCost": "12.34",
     "averageSpread": "17.56",
     "firstObservedAt": "2026-10-16T13:32:32+00:00",
-    "lastObservedAt": "2026-10-16T13:32:32+00:00"
+    "lastObservedAt": "2026-10-17T12:17:35+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-16T13:32:32+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "12.34",
+      "unitSpread": "17.56",
+      "marginPct": 58.73,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.50"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.84"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.05"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5EGJHejvobpTSESkU0ZhZm/445dff427c24de9b66f935d7a6fb42cd/BLK_Crew_Socks.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:17:35+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "12.34",
       "unitSpread": "17.56",

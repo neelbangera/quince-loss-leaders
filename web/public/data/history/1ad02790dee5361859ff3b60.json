@@ -11,14 +11,22 @@
     "category": "home-decor",
     "categoryLabel": "Home Decor",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1329",
+    "variantLabel": "Champagne / 48x84",
+    "variantSize": "Champagne",
+    "variantColor": "48x84",
+    "imageUrl": "https://images.quince.com/7zd46QMJHvweZvFnbCKcie/ac82a37cba7549954731f8ab05e017a4/U-WNDW-20-CHMP_1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/7zd46QMJHvweZvFnbCKcie/ac82a37cba7549954731f8ab05e017a4/U-WNDW-20-CHMP_1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-04T14:13:53+00:00",
+    "capturedAt": "2026-10-17T12:19:44+00:00",
     "sellingPrice": "82.00",
-    "reportedTotalCost": "42.21",
-    "unitSpread": "39.79",
-    "marginPct": 48.52,
+    "reportedTotalCost": "39.76",
+    "unitSpread": "42.24",
+    "marginPct": 51.51,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +48,34 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "12.15"
+        "amount": "9.69"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "2.19"
+        "amount": "2.20"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "4.89"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/7zd46QMJHvweZvFnbCKcie/ac82a37cba7549954731f8ab05e017a4/U-WNDW-20-CHMP_1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "82.00",
     "highestPrice": "82.00",
-    "lowestCost": "42.21",
+    "lowestCost": "39.76",
     "highestCost": "42.21",
-    "averageSpread": "39.79",
+    "averageSpread": "40.01",
     "firstObservedAt": "2026-09-11T13:02:51+00:00",
-    "lastObservedAt": "2026-10-04T14:13:53+00:00"
+    "lastObservedAt": "2026-10-17T12:19:44+00:00"
   },
   "history": [
     {
@@ -475,6 +486,50 @@
           "type": "duties_taxes_fees",
           "amount": "4.89"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:19:44+00:00",
+      "sellingPrice": "82.00",
+      "reportedTotalCost": "39.76",
+      "unitSpread": "42.24",
+      "marginPct": 51.51,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "16.98"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.69"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.20"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7zd46QMJHvweZvFnbCKcie/ac82a37cba7549954731f8ab05e017a4/U-WNDW-20-CHMP_1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

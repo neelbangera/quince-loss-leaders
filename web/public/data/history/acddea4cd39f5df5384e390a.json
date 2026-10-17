@@ -11,10 +11,18 @@
     "category": "pants",
     "categoryLabel": "Pants",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5433",
+    "variantLabel": "Soft Camel / XS",
+    "variantSize": "Soft Camel",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/3LCmK5NLWzrs8vClWdXHBc/840a8dea100ed26a254dcb010fd2b440/W-PNT-150-SFTCML-1713_EDITED_1.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3LCmK5NLWzrs8vClWdXHBc/840a8dea100ed26a254dcb010fd2b440/W-PNT-150-SFTCML-1713_EDITED_1.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-12T18:06:25+00:00",
+    "capturedAt": "2026-10-17T12:12:31+00:00",
     "sellingPrice": "52.00",
     "reportedTotalCost": "26.80",
     "unitSpread": "25.20",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "7.50"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3LCmK5NLWzrs8vClWdXHBc/840a8dea100ed26a254dcb010fd2b440/W-PNT-150-SFTCML-1713_EDITED_1.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "52.00",
     "highestPrice": "52.00",
     "lowestCost": "26.80",
     "highestCost": "26.80",
     "averageSpread": "25.20",
     "firstObservedAt": "2026-10-08T15:36:45+00:00",
-    "lastObservedAt": "2026-10-12T18:06:25+00:00"
+    "lastObservedAt": "2026-10-17T12:12:31+00:00"
   },
   "history": [
     {
@@ -147,6 +158,50 @@
           "type": "duties_taxes_fees",
           "amount": "7.50"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:12:31+00:00",
+      "sellingPrice": "52.00",
+      "reportedTotalCost": "26.80",
+      "unitSpread": "25.20",
+      "marginPct": 48.46,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.41"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.09"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.48"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.07"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3LCmK5NLWzrs8vClWdXHBc/840a8dea100ed26a254dcb010fd2b440/W-PNT-150-SFTCML-1713_EDITED_1.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

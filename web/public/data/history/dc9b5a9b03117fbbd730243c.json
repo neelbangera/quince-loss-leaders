@@ -8,17 +8,25 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "867",
+    "variantLabel": "Grey / Standard",
+    "variantSize": "Grey",
+    "variantColor": "Standard",
+    "imageUrl": "https://images.quince.com/2Z5ok1eqziMs4LRWgv6ZbI/4f7c3029035f969954a4588ad1b5e46b/U-BEDD-120-GRY.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2Z5ok1eqziMs4LRWgv6ZbI/4f7c3029035f969954a4588ad1b5e46b/U-BEDD-120-GRY.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-02T14:55:10+00:00",
+    "capturedAt": "2026-10-17T12:22:16+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "15.53",
-    "unitSpread": "24.37",
-    "marginPct": 61.08,
+    "reportedTotalCost": "14.18",
+    "unitSpread": "25.72",
+    "marginPct": 64.46,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.40"
+        "amount": "2.05"
       },
       {
         "label": "Credit Card Fees",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "2.55"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2Z5ok1eqziMs4LRWgv6ZbI/4f7c3029035f969954a4588ad1b5e46b/U-BEDD-120-GRY.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
-    "lowestCost": "15.53",
+    "lowestCost": "14.18",
     "highestCost": "15.53",
-    "averageSpread": "24.37",
+    "averageSpread": "24.49",
     "firstObservedAt": "2026-09-11T13:03:00+00:00",
-    "lastObservedAt": "2026-10-02T14:55:10+00:00"
+    "lastObservedAt": "2026-10-17T12:22:16+00:00"
   },
   "history": [
     {
@@ -475,6 +486,50 @@
           "type": "duties_taxes_fees",
           "amount": "2.55"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-17T12:22:16+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "14.18",
+      "unitSpread": "25.72",
+      "marginPct": 64.46,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "2.05"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.55"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2Z5ok1eqziMs4LRWgv6ZbI/4f7c3029035f969954a4588ad1b5e46b/U-BEDD-120-GRY.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

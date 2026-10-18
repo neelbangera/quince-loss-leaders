@@ -22,7 +22,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-17T12:20:16+00:00",
+    "capturedAt": "2026-10-18T12:53:23+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "24.36",
     "unitSpread": "17.64",
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "24.36",
     "highestCost": "24.36",
     "averageSpread": "17.64",
     "firstObservedAt": "2026-10-15T13:39:17+00:00",
-    "lastObservedAt": "2026-10-17T12:20:16+00:00"
+    "lastObservedAt": "2026-10-18T12:53:23+00:00"
   },
   "history": [
     {
@@ -175,6 +175,50 @@
     },
     {
       "capturedAt": "2026-10-17T12:20:16+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "24.36",
+      "unitSpread": "17.64",
+      "marginPct": 42.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.49"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.36"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "3.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.97"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.23"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.01"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6A9JGDs4dpwcM0duR7kmMm/39c56cf2cb569e50f86905f369e6d8e6/W-JKT-170-HGRY-11846_EDITED_1.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-18T12:53:23+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "24.36",
       "unitSpread": "17.64",

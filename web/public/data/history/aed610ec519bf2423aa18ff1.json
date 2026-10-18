@@ -9,16 +9,24 @@
     "department": "women",
     "departmentLabel": "Women",
     "category": "bags",
-    "categoryLabel": "Bags",
+    "categoryLabel": "Bags & Wallets",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7529",
+    "variantLabel": "Whiskey / One Size",
+    "variantSize": "Whiskey",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/41sd3jqejGUXXs7bqzUYk0/7ba686e08594079462b6b7d62e3d38a8/W-BAG-200-WHSKY-165_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/41sd3jqejGUXXs7bqzUYk0/7ba686e08594079462b6b7d62e3d38a8/W-BAG-200-WHSKY-165_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-06T15:20:12+00:00",
-    "sellingPrice": "143.00",
-    "reportedTotalCost": "98.99",
-    "unitSpread": "44.01",
-    "marginPct": 30.78,
+    "capturedAt": "2026-10-18T12:45:33+00:00",
+    "sellingPrice": "168.00",
+    "reportedTotalCost": "95.41",
+    "unitSpread": "72.59",
+    "marginPct": 43.21,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +48,34 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "8.04"
+        "amount": "4.03"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "4.60"
+        "amount": "5.03"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "23.83"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/41sd3jqejGUXXs7bqzUYk0/7ba686e08594079462b6b7d62e3d38a8/W-BAG-200-WHSKY-165_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 26,
+    "observationCount": 27,
     "lossObservations": 0,
-    "profitObservations": 26,
+    "profitObservations": 27,
     "lowestPrice": "143.00",
     "highestPrice": "168.00",
-    "lowestCost": "98.99",
+    "lowestCost": "95.41",
     "highestCost": "98.99",
-    "averageSpread": "68.05",
+    "averageSpread": "68.22",
     "firstObservedAt": "2026-09-11T13:05:40+00:00",
-    "lastObservedAt": "2026-10-06T15:20:12+00:00"
+    "lastObservedAt": "2026-10-18T12:45:33+00:00"
   },
   "history": [
     {
@@ -1131,6 +1142,50 @@
           "type": "duties_taxes_fees",
           "amount": "23.83"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-18T12:45:33+00:00",
+      "sellingPrice": "168.00",
+      "reportedTotalCost": "95.41",
+      "unitSpread": "72.59",
+      "marginPct": 43.21,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "44.62"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "15.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.03"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.03"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "23.83"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/41sd3jqejGUXXs7bqzUYk0/7ba686e08594079462b6b7d62e3d38a8/W-BAG-200-WHSKY-165_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

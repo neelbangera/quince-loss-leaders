@@ -22,33 +22,33 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-16T13:28:25+00:00",
+    "capturedAt": "2026-10-18T12:43:52+00:00",
     "sellingPrice": "14.90",
-    "reportedTotalCost": "14.61",
-    "unitSpread": "0.29",
-    "marginPct": 1.95,
+    "reportedTotalCost": "16.06",
+    "unitSpread": "-1.16",
+    "marginPct": -7.79,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "3.69"
+        "amount": "3.98"
       },
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "2.50"
+        "amount": "1.76"
       },
       {
         "label": "Packaging",
         "type": "packaging",
-        "amount": "0.50"
+        "amount": "0.18"
       },
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.23"
+        "amount": "7.00"
       },
       {
         "label": "Credit Card Fees",
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "1.20"
+        "amount": "2.65"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
-    "lossObservations": 0,
+    "observationCount": 5,
+    "lossObservations": 1,
     "profitObservations": 4,
     "lowestPrice": "14.90",
     "highestPrice": "14.90",
     "lowestCost": "14.61",
-    "highestCost": "14.61",
-    "averageSpread": "0.29",
+    "highestCost": "16.06",
+    "averageSpread": "0.00",
     "firstObservedAt": "2026-10-13T19:19:46+00:00",
-    "lastObservedAt": "2026-10-16T13:28:25+00:00"
+    "lastObservedAt": "2026-10-18T12:43:52+00:00"
   },
   "history": [
     {
@@ -248,6 +248,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "1.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/M9UVnkpqoFCA8EWwxKrdG/1a6e6caf90e9efc0828e4655671555ab/U--1041-WTR_MELON-021_EDITED_BB.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-18T12:43:52+00:00",
+      "sellingPrice": "14.90",
+      "reportedTotalCost": "16.06",
+      "unitSpread": "-1.16",
+      "marginPct": -7.79,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.98"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.76"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.18"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.65"
         }
       ],
       "imageUrls": [

@@ -8,13 +8,21 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4201",
+    "variantLabel": "Willowleaf / Standard",
+    "variantSize": "Willowleaf",
+    "variantColor": "Standard",
+    "imageUrl": "https://images.quince.com/2p78SqGS8dZ4i2WhKx1dOL/9d7630a95fa13eebd81cb4cd3a09d4b9/U-BEDD-304-WIL-7213_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2p78SqGS8dZ4i2WhKx1dOL/9d7630a95fa13eebd81cb4cd3a09d4b9/U-BEDD-304-WIL-7213_EDITED.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-12T18:08:15+00:00",
+    "capturedAt": "2026-10-18T12:49:26+00:00",
     "sellingPrice": "32.00",
     "reportedTotalCost": "9.95",
     "unitSpread": "22.05",
@@ -52,19 +60,22 @@
         "type": "duties_taxes_fees",
         "amount": "0.68"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2p78SqGS8dZ4i2WhKx1dOL/9d7630a95fa13eebd81cb4cd3a09d4b9/U-BEDD-304-WIL-7213_EDITED.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "32.00",
     "highestPrice": "32.00",
     "lowestCost": "9.95",
     "highestCost": "9.95",
     "averageSpread": "22.05",
     "firstObservedAt": "2026-10-12T18:08:15+00:00",
-    "lastObservedAt": "2026-10-12T18:08:15+00:00"
+    "lastObservedAt": "2026-10-18T12:49:26+00:00"
   },
   "history": [
     {
@@ -106,6 +117,50 @@
           "type": "duties_taxes_fees",
           "amount": "0.68"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-18T12:49:26+00:00",
+      "sellingPrice": "32.00",
+      "reportedTotalCost": "9.95",
+      "unitSpread": "22.05",
+      "marginPct": 68.91,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.58"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.25"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.32"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.87"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.68"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2p78SqGS8dZ4i2WhKx1dOL/9d7630a95fa13eebd81cb4cd3a09d4b9/U-BEDD-304-WIL-7213_EDITED.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

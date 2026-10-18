@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-17T12:14:30+00:00",
+    "capturedAt": "2026-10-18T12:51:12+00:00",
     "sellingPrice": "32.00",
     "reportedTotalCost": "19.00",
     "unitSpread": "13.00",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "32.00",
     "highestPrice": "32.00",
     "lowestCost": "19.00",
     "highestCost": "19.00",
     "averageSpread": "13.00",
     "firstObservedAt": "2026-10-13T19:30:03+00:00",
-    "lastObservedAt": "2026-10-17T12:14:30+00:00"
+    "lastObservedAt": "2026-10-18T12:51:12+00:00"
   },
   "history": [
     {
@@ -268,6 +268,51 @@
     },
     {
       "capturedAt": "2026-10-17T12:14:30+00:00",
+      "sellingPrice": "32.00",
+      "reportedTotalCost": "19.00",
+      "unitSpread": "13.00",
+      "marginPct": 40.63,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.55"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.95"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2Zk20KJ8QMDVp0nee6DfYf/ad1479e0d0f09296ac0fd9c837bc103f/W-JKT-81-Taup_191619.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5mGRhsYPoDk6TZBbh0ROox/6bffbce60bad321c1fcc1b4547075235/Screenshot_2023-12-15_at_10.51.28_AM.png?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-18T12:51:12+00:00",
       "sellingPrice": "32.00",
       "reportedTotalCost": "19.00",
       "unitSpread": "13.00",

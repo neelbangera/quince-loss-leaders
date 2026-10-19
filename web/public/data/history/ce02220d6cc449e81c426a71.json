@@ -22,23 +22,23 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-18T12:43:54+00:00",
+    "capturedAt": "2026-10-19T16:07:24+00:00",
     "sellingPrice": "398.00",
-    "reportedTotalCost": "240.21",
-    "unitSpread": "157.79",
-    "marginPct": 39.65,
+    "reportedTotalCost": "202.38",
+    "unitSpread": "195.62",
+    "marginPct": 49.15,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "174.23"
+        "amount": "156.46"
       },
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "26.64"
+        "amount": "23.33"
       },
       {
         "label": "Packaging",
@@ -48,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "9.65"
+        "amount": "9.15"
       },
       {
         "label": "Credit Card Fees",
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "16.25"
+        "amount": "0.00"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "398.00",
     "highestPrice": "398.00",
-    "lowestCost": "240.21",
+    "lowestCost": "202.38",
     "highestCost": "250.88",
-    "averageSpread": "156.01",
+    "averageSpread": "161.67",
     "firstObservedAt": "2026-10-13T19:19:52+00:00",
-    "lastObservedAt": "2026-10-18T12:43:54+00:00"
+    "lastObservedAt": "2026-10-19T16:07:24+00:00"
   },
   "history": [
     {
@@ -342,6 +342,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "16.25"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6Vc5tBrQ9JsWdzFGX05PrT/d97b3daafc29dc9b380a31283358cad6/sapphire_1.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-19T16:07:24+00:00",
+      "sellingPrice": "398.00",
+      "reportedTotalCost": "202.38",
+      "unitSpread": "195.62",
+      "marginPct": 49.15,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "156.46"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "23.33"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.15"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "11.14"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
         }
       ],
       "imageUrls": [

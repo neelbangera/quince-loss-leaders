@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-18T12:41:01+00:00",
+    "capturedAt": "2026-10-19T16:06:46+00:00",
     "sellingPrice": "34.90",
     "reportedTotalCost": "23.64",
     "unitSpread": "11.26",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 40,
+    "observationCount": 41,
     "lossObservations": 0,
-    "profitObservations": 40,
+    "profitObservations": 41,
     "lowestPrice": "34.90",
     "highestPrice": "34.90",
     "lowestCost": "23.64",
     "highestCost": "31.19",
-    "averageSpread": "6.16",
+    "averageSpread": "6.29",
     "firstObservedAt": "2026-09-10T13:07:16+00:00",
-    "lastObservedAt": "2026-10-18T12:41:01+00:00"
+    "lastObservedAt": "2026-10-19T16:06:46+00:00"
   },
   "history": [
     {
@@ -1719,6 +1719,53 @@
     },
     {
       "capturedAt": "2026-10-18T12:41:01+00:00",
+      "sellingPrice": "34.90",
+      "reportedTotalCost": "23.64",
+      "unitSpread": "11.26",
+      "marginPct": 32.26,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.73"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.91"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6JCKXNNzybRP7cG54FnPDF/750b43a2aff3336a8829f0d1a61b83db/U--1960-IVOBLU-02.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3GpSiz2i9SU7NAV6bc6MOC/e04a2fa2291561f09c86b662a5d407fd/pearl-garden-roses-ivory-blush-4x5-thumbnail.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/Jp7eN9WEA3qQij3s5Hlm2/bbf2b1160a7079c478ec996f47acf82c/pearlgardenrosedesktop1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/vwc30mwGHofZyfTMinUrX/f7b73f438319d968c900c264593f9661/pearlgardenrosedesktop2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-19T16:06:46+00:00",
       "sellingPrice": "34.90",
       "reportedTotalCost": "23.64",
       "unitSpread": "11.26",

@@ -8,17 +8,28 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bedding",
+    "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "4195",
+    "variantLabel": "White/Mineral / Standard",
+    "variantSize": "White/Mineral",
+    "variantColor": "Standard",
+    "imageUrl": "https://images.quince.com/2PVWv8Pz7c7qfcC3QEDBq1/978bbfff4bb48788032c04c132de32d3/U-BEDD-454-WHIMIN-48088_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/2PVWv8Pz7c7qfcC3QEDBq1/978bbfff4bb48788032c04c132de32d3/U-BEDD-454-WHIMIN-48088_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/45XZeIsVHO3N6R1esKKkcj/6818b46948a6757ce33bdb67f7f18f2e/Frame_2147224530.jpg?w=48&h=48&fm=webp",
+      "https://images.quince.com/47lnjxBlBRoKobccZS0EzV/06dcbf1e3b7fa57e8f4391bc87ae0fd9/Frame_49.jpg?w=48&h=48&fm=webp",
+      "https://images.quince.com/6GhwwHoZJRJQ7sxcHxP7Wu/2fbd5ec37252fa35ca1c66f22be70a78/white_mist.jpg?w=48&h=48&fm=webp"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-05T17:13:24+00:00",
+    "capturedAt": "2026-10-19T16:14:06+00:00",
     "sellingPrice": "42.00",
-    "reportedTotalCost": "28.64",
-    "unitSpread": "13.36",
-    "marginPct": 31.81,
+    "reportedTotalCost": "14.14",
+    "unitSpread": "27.86",
+    "marginPct": 66.33,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +51,37 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "17.58"
+        "amount": "3.00"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.07"
+        "amount": "1.15"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "1.25"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/2PVWv8Pz7c7qfcC3QEDBq1/978bbfff4bb48788032c04c132de32d3/U-BEDD-454-WHIMIN-48088_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/45XZeIsVHO3N6R1esKKkcj/6818b46948a6757ce33bdb67f7f18f2e/Frame_2147224530.jpg?w=48&h=48&fm=webp",
+      "https://images.quince.com/47lnjxBlBRoKobccZS0EzV/06dcbf1e3b7fa57e8f4391bc87ae0fd9/Frame_49.jpg?w=48&h=48&fm=webp",
+      "https://images.quince.com/6GhwwHoZJRJQ7sxcHxP7Wu/2fbd5ec37252fa35ca1c66f22be70a78/white_mist.jpg?w=48&h=48&fm=webp"
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
-    "lowestCost": "28.64",
+    "lowestCost": "14.14",
     "highestCost": "28.64",
-    "averageSpread": "13.36",
+    "averageSpread": "14.57",
     "firstObservedAt": "2026-09-11T12:56:00+00:00",
-    "lastObservedAt": "2026-10-05T17:13:24+00:00"
+    "lastObservedAt": "2026-10-19T16:14:06+00:00"
   },
   "history": [
     {
@@ -516,6 +533,53 @@
           "type": "duties_taxes_fees",
           "amount": "1.25"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-19T16:14:06+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "14.14",
+      "unitSpread": "27.86",
+      "marginPct": 66.33,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.37"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.84"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.53"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.25"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2PVWv8Pz7c7qfcC3QEDBq1/978bbfff4bb48788032c04c132de32d3/U-BEDD-454-WHIMIN-48088_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/45XZeIsVHO3N6R1esKKkcj/6818b46948a6757ce33bdb67f7f18f2e/Frame_2147224530.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/47lnjxBlBRoKobccZS0EzV/06dcbf1e3b7fa57e8f4391bc87ae0fd9/Frame_49.jpg?w=48&h=48&fm=webp",
+        "https://images.quince.com/6GhwwHoZJRJQ7sxcHxP7Wu/2fbd5ec37252fa35ca1c66f22be70a78/white_mist.jpg?w=48&h=48&fm=webp"
       ]
     }
   ]

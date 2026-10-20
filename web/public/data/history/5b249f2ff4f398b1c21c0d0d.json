@@ -22,18 +22,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-19T16:21:25+00:00",
+    "capturedAt": "2026-10-20T13:48:44+00:00",
     "sellingPrice": "158.00",
-    "reportedTotalCost": "89.71",
-    "unitSpread": "68.29",
-    "marginPct": 43.22,
+    "reportedTotalCost": "89.46",
+    "unitSpread": "68.54",
+    "marginPct": 43.38,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "68.32"
+        "amount": "68.07"
       },
       {
         "label": "Crafting Cost",
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 53,
+    "observationCount": 54,
     "lossObservations": 0,
-    "profitObservations": 53,
+    "profitObservations": 54,
     "lowestPrice": "158.00",
     "highestPrice": "158.00",
     "lowestCost": "79.84",
     "highestCost": "100.80",
-    "averageSpread": "63.28",
+    "averageSpread": "63.38",
     "firstObservedAt": "2026-08-29T21:23:05+00:00",
-    "lastObservedAt": "2026-10-19T16:21:25+00:00"
+    "lastObservedAt": "2026-10-20T13:48:44+00:00"
   },
   "history": [
     {
@@ -2245,6 +2245,50 @@
           "label": "Materials",
           "type": "materials",
           "amount": "68.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.60"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.98"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.94"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.57"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1Q5YQmdhTe3aDRb7XckthH/e7a84e9386416ae6496dc98719bf6e33/NECK-197_EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-20T13:48:44+00:00",
+      "sellingPrice": "158.00",
+      "reportedTotalCost": "89.46",
+      "unitSpread": "68.54",
+      "marginPct": 43.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "68.07"
         },
         {
           "label": "Crafting Cost",

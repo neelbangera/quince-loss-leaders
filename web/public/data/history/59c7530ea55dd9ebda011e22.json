@@ -22,18 +22,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-19T16:09:08+00:00",
+    "capturedAt": "2026-10-20T13:37:06+00:00",
     "sellingPrice": "188.00",
-    "reportedTotalCost": "118.83",
-    "unitSpread": "69.17",
-    "marginPct": 36.79,
+    "reportedTotalCost": "107.22",
+    "unitSpread": "80.78",
+    "marginPct": 42.97,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "83.16"
+        "amount": "82.74"
       },
       {
         "label": "Crafting Cost",
@@ -48,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.07"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "6.12"
+        "amount": "0.00"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 16,
+    "observationCount": 17,
     "lossObservations": 0,
-    "profitObservations": 16,
+    "profitObservations": 17,
     "lowestPrice": "188.00",
     "highestPrice": "188.00",
-    "lowestCost": "107.64",
+    "lowestCost": "107.22",
     "highestCost": "121.31",
-    "averageSpread": "70.01",
+    "averageSpread": "70.65",
     "firstObservedAt": "2026-10-05T17:18:49+00:00",
-    "lastObservedAt": "2026-10-19T16:09:08+00:00"
+    "lastObservedAt": "2026-10-20T13:37:06+00:00"
   },
   "history": [
     {
@@ -761,6 +761,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "6.12"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1W68dxIAWLiuHLJrF9v4qN/1e95d1feb3430661b4118f3e8d09f579/W-BRAC-96-YELGOL-630-EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-20T13:37:06+00:00",
+      "sellingPrice": "188.00",
+      "reportedTotalCost": "107.22",
+      "unitSpread": "80.78",
+      "marginPct": 42.97,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "82.74"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "16.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
         }
       ],
       "imageUrls": [

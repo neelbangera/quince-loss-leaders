@@ -22,18 +22,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-19T16:15:24+00:00",
+    "capturedAt": "2026-10-20T13:42:06+00:00",
     "sellingPrice": "748.00",
-    "reportedTotalCost": "373.97",
-    "unitSpread": "374.03",
-    "marginPct": 50.0,
+    "reportedTotalCost": "373.09",
+    "unitSpread": "374.91",
+    "marginPct": 50.12,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "292.39"
+        "amount": "291.51"
       },
       {
         "label": "Crafting Cost",
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 53,
+    "observationCount": 54,
     "lossObservations": 0,
-    "profitObservations": 53,
+    "profitObservations": 54,
     "lowestPrice": "748.00",
     "highestPrice": "748.00",
     "lowestCost": "352.80",
     "highestCost": "383.84",
-    "averageSpread": "382.60",
+    "averageSpread": "382.45",
     "firstObservedAt": "2026-08-29T21:20:44+00:00",
-    "lastObservedAt": "2026-10-19T16:15:24+00:00"
+    "lastObservedAt": "2026-10-20T13:42:06+00:00"
   },
   "history": [
     {
@@ -2241,6 +2241,50 @@
           "label": "Materials",
           "type": "materials",
           "amount": "292.39"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "20.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "14.97"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "20.37"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "23.94"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4nxifzRqOz3zsdHEqGOVSF/1b860a1ddf41618b898a3395d49047d3/W-EARR-232-1.5ct_EDITED.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-20T13:42:06+00:00",
+      "sellingPrice": "748.00",
+      "reportedTotalCost": "373.09",
+      "unitSpread": "374.91",
+      "marginPct": 50.12,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "291.51"
         },
         {
           "label": "Crafting Cost",

@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-19T16:03:50+00:00",
+    "capturedAt": "2026-10-20T13:36:56+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "22.30",
     "unitSpread": "7.60",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 15,
+    "observationCount": 16,
     "lossObservations": 0,
-    "profitObservations": 15,
+    "profitObservations": 16,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "20.28",
     "highestCost": "22.30",
-    "averageSpread": "8.68",
+    "averageSpread": "8.61",
     "firstObservedAt": "2026-09-11T13:01:56+00:00",
-    "lastObservedAt": "2026-10-19T16:03:50+00:00"
+    "lastObservedAt": "2026-10-20T13:36:56+00:00"
   },
   "history": [
     {
@@ -680,6 +680,51 @@
     },
     {
       "capturedAt": "2026-10-19T16:03:50+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "22.30",
+      "unitSpread": "7.60",
+      "marginPct": 25.42,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.14"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.14"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.84"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.87"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hFiXugr65wCCu44FRK9Hn/0f373b9d2a15b3a7d54eca3086a0b028/U--1311-HAPFLO-212_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1ikPz4GgFWTF8o7JVsuCBc/0b3a2ad6a98d2f6548cd9a981dbfeb0f/Frame_108.jpg?w=48&h=48&fm=webp"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-20T13:36:56+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "22.30",
       "unitSpread": "7.60",

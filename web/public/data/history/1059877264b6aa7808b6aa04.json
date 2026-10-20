@@ -26,18 +26,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-19T16:09:51+00:00",
+    "capturedAt": "2026-10-20T13:51:27+00:00",
     "sellingPrice": "2900.00",
-    "reportedTotalCost": "929.30",
-    "unitSpread": "1970.70",
-    "marginPct": 67.96,
+    "reportedTotalCost": "926.05",
+    "unitSpread": "1973.95",
+    "marginPct": 68.07,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "746.11"
+        "amount": "742.86"
       },
       {
         "label": "Crafting Cost",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 40,
+    "observationCount": 41,
     "lossObservations": 0,
-    "profitObservations": 40,
+    "profitObservations": 41,
     "lowestPrice": "2900.00",
     "highestPrice": "2900.00",
-    "lowestCost": "929.30",
+    "lowestCost": "926.05",
     "highestCost": "1024.30",
-    "averageSpread": "1909.28",
+    "averageSpread": "1910.85",
     "firstObservedAt": "2026-09-11T12:54:41+00:00",
-    "lastObservedAt": "2026-10-19T16:09:51+00:00"
+    "lastObservedAt": "2026-10-20T13:51:27+00:00"
   },
   "history": [
     {
@@ -1746,6 +1746,54 @@
           "label": "Materials",
           "type": "materials",
           "amount": "746.11"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "29.20"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "31.01"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "74.20"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "46.48"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1yYKBgyKkCKlGsaGriMPXq/ea16db600be0c9e269a86fb4e8d4004c/RNG-153-834_YG_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2KU7VVWaCPdANaute1PV8f/ac10ea86f743777e7dd406f2a509fdb9/linen-crib-sheet_terra_detail_13419_10.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5TxkPrsaI4Z3eDdxwLSKzR/15d8130b01d425b480820b12e66f7836/linen-crib-sheet_terra_detail_13419_10-1.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2oU0VUe5Tv4egHZL1buUsO/2c5f961c926661eb807c790b70599b86/linen-crib-sheet_terra_detail_13419_10-2.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5gmHBReiHL9D6kpoYtvEU3/c11ef3651b92a9c52565887d129d83bb/image.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-20T13:51:27+00:00",
+      "sellingPrice": "2900.00",
+      "reportedTotalCost": "926.05",
+      "unitSpread": "1973.95",
+      "marginPct": 68.07,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "742.86"
         },
         {
           "label": "Crafting Cost",

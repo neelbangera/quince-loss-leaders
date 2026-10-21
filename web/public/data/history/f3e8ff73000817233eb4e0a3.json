@@ -11,16 +11,28 @@
     "category": "bath",
     "categoryLabel": "Bath",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": true,
+    "parentProductId": "4248",
+    "variantLabel": "White / One Size",
+    "variantSize": "White",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/3qc2ypyR9Zq4VYW10dP5NV/eb90d1187fc4566c546b92b4c5e88e38/U-Bath-57-GRY_193665.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3qc2ypyR9Zq4VYW10dP5NV/eb90d1187fc4566c546b92b4c5e88e38/U-Bath-57-GRY_193665.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/4HWNEnXrpWvzfXtKBwLPk3/1b38d810512e87df8a8259ea3151c83c/linen-crib-sheet_terra_detail_13419_10.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/hbdscH8YWBg5uBT40Q4yT/8fea7dc81be29f96f0e1f16afe563ea9/linen-crib-sheet_terra_detail_13419_11.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/12rOWrTfRZ6cpikl1xHIDy/3891270b31f52614e48fd9dcce93745e/image.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4XIKsWxufWPupuGikueLKL/bf2531dfe55df4dc25cad9f96fe48063/linen-crib-sheet_terra_detail_13419_9.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-09T15:39:35+00:00",
+    "capturedAt": "2026-10-21T13:58:31+00:00",
     "sellingPrice": "29.90",
-    "reportedTotalCost": "23.72",
-    "unitSpread": "6.18",
-    "marginPct": 20.67,
+    "reportedTotalCost": "9.44",
+    "unitSpread": "20.46",
+    "marginPct": 68.43,
     "parseStatus": "complete",
-    "totalCostSource": "embedded_inferred",
+    "totalCostSource": "normalized_fee_excluded",
     "costLines": [
       {
         "label": "Materials",
@@ -50,21 +62,28 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "14.28"
+        "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3qc2ypyR9Zq4VYW10dP5NV/eb90d1187fc4566c546b92b4c5e88e38/U-Bath-57-GRY_193665.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/4HWNEnXrpWvzfXtKBwLPk3/1b38d810512e87df8a8259ea3151c83c/linen-crib-sheet_terra_detail_13419_10.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/hbdscH8YWBg5uBT40Q4yT/8fea7dc81be29f96f0e1f16afe563ea9/linen-crib-sheet_terra_detail_13419_11.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/12rOWrTfRZ6cpikl1xHIDy/3891270b31f52614e48fd9dcce93745e/image.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4XIKsWxufWPupuGikueLKL/bf2531dfe55df4dc25cad9f96fe48063/linen-crib-sheet_terra_detail_13419_9.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 35,
+    "observationCount": 36,
     "lossObservations": 0,
-    "profitObservations": 35,
+    "profitObservations": 36,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
-    "lowestCost": "23.72",
+    "lowestCost": "9.44",
     "highestCost": "25.14",
-    "averageSpread": "4.88",
+    "averageSpread": "5.31",
     "firstObservedAt": "2026-09-04T12:52:54+00:00",
-    "lastObservedAt": "2026-10-09T15:39:35+00:00"
+    "lastObservedAt": "2026-10-21T13:58:31+00:00"
   },
   "history": [
     {
@@ -1500,6 +1519,54 @@
           "type": "duties_taxes_fees",
           "amount": "14.28"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-21T13:58:31+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "9.44",
+      "unitSpread": "20.46",
+      "marginPct": 68.43,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.85"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.02"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.82"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3qc2ypyR9Zq4VYW10dP5NV/eb90d1187fc4566c546b92b4c5e88e38/U-Bath-57-GRY_193665.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4HWNEnXrpWvzfXtKBwLPk3/1b38d810512e87df8a8259ea3151c83c/linen-crib-sheet_terra_detail_13419_10.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/hbdscH8YWBg5uBT40Q4yT/8fea7dc81be29f96f0e1f16afe563ea9/linen-crib-sheet_terra_detail_13419_11.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/12rOWrTfRZ6cpikl1xHIDy/3891270b31f52614e48fd9dcce93745e/image.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4XIKsWxufWPupuGikueLKL/bf2531dfe55df4dc25cad9f96fe48063/linen-crib-sheet_terra_detail_13419_9.jpg?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

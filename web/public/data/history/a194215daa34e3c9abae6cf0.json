@@ -22,18 +22,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-20T13:33:58+00:00",
+    "capturedAt": "2026-10-21T13:54:21+00:00",
     "sellingPrice": "258.00",
-    "reportedTotalCost": "153.91",
-    "unitSpread": "104.09",
-    "marginPct": 40.34,
+    "reportedTotalCost": "175.44",
+    "unitSpread": "82.56",
+    "marginPct": 32.0,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "135.80"
+        "amount": "134.08"
       },
       {
         "label": "Crafting Cost",
@@ -48,7 +48,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "0.00"
+        "amount": "10.52"
       },
       {
         "label": "Credit Card Fees",
@@ -58,7 +58,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "0.00"
+        "amount": "12.73"
       }
     ],
     "imageUrls": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 41,
+    "observationCount": 42,
     "lossObservations": 0,
-    "profitObservations": 41,
+    "profitObservations": 42,
     "lowestPrice": "258.00",
     "highestPrice": "258.00",
     "lowestCost": "153.91",
     "highestCost": "181.59",
-    "averageSpread": "85.13",
+    "averageSpread": "85.07",
     "firstObservedAt": "2026-09-11T12:54:11+00:00",
-    "lastObservedAt": "2026-10-20T13:33:58+00:00"
+    "lastObservedAt": "2026-10-21T13:54:21+00:00"
   },
   "history": [
     {
@@ -1780,6 +1780,50 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/HzhD5oibmMCoEV0wjBWN2/9a00dd20dc24667fe34df055c89b1373/NECK-15-YG_1.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-21T13:54:21+00:00",
+      "sellingPrice": "258.00",
+      "reportedTotalCost": "175.44",
+      "unitSpread": "82.56",
+      "marginPct": 32.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "134.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "9.11"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.52"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "6.70"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "12.73"
         }
       ],
       "imageUrls": [

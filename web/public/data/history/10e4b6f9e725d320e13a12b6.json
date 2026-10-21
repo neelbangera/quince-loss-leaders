@@ -11,14 +11,22 @@
     "category": "bedding",
     "categoryLabel": "Bedding",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "2821",
+    "variantLabel": "Natural / Twin",
+    "variantSize": "Natural",
+    "variantColor": "Twin",
+    "imageUrl": "https://images.quince.com/5t6OtaZ2q41sqokRpTrdB2/be06b6cae0f058e12c70362c48cfc765/U--Bedd-237-Oat_189153.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5t6OtaZ2q41sqokRpTrdB2/be06b6cae0f058e12c70362c48cfc765/U--Bedd-237-Oat_189153.jpg?fm=webP&q=90&w=1600"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-06T15:20:52+00:00",
+    "capturedAt": "2026-10-21T14:07:28+00:00",
     "sellingPrice": "124.00",
-    "reportedTotalCost": "80.74",
-    "unitSpread": "43.26",
-    "marginPct": 34.89,
+    "reportedTotalCost": "80.53",
+    "unitSpread": "43.47",
+    "marginPct": 35.06,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +48,34 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.29"
+        "amount": "5.06"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "3.08"
+        "amount": "3.10"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "16.70"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5t6OtaZ2q41sqokRpTrdB2/be06b6cae0f058e12c70362c48cfc765/U--Bedd-237-Oat_189153.jpg?fm=webP&q=90&w=1600"
     ]
   },
   "analytics": {
-    "observationCount": 26,
+    "observationCount": 27,
     "lossObservations": 0,
-    "profitObservations": 26,
+    "profitObservations": 27,
     "lowestPrice": "124.00",
     "highestPrice": "124.00",
-    "lowestCost": "80.74",
+    "lowestCost": "80.53",
     "highestCost": "80.74",
-    "averageSpread": "43.26",
+    "averageSpread": "43.27",
     "firstObservedAt": "2026-09-11T12:57:55+00:00",
-    "lastObservedAt": "2026-10-06T15:20:52+00:00"
+    "lastObservedAt": "2026-10-21T14:07:28+00:00"
   },
   "history": [
     {
@@ -1131,6 +1142,50 @@
           "type": "duties_taxes_fees",
           "amount": "16.70"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-21T14:07:28+00:00",
+      "sellingPrice": "124.00",
+      "reportedTotalCost": "80.53",
+      "unitSpread": "43.47",
+      "marginPct": 35.06,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "52.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.57"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.06"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.10"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "16.70"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5t6OtaZ2q41sqokRpTrdB2/be06b6cae0f058e12c70362c48cfc765/U--Bedd-237-Oat_189153.jpg?fm=webP&q=90&w=1600"
       ]
     }
   ]

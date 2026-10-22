@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-21T14:06:05+00:00",
+    "capturedAt": "2026-10-22T14:04:25+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "16.01",
     "unitSpread": "8.89",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "15.81",
     "highestCost": "20.91",
-    "averageSpread": "7.95",
+    "averageSpread": "8.04",
     "firstObservedAt": "2026-10-10T14:45:13+00:00",
-    "lastObservedAt": "2026-10-21T14:06:05+00:00"
+    "lastObservedAt": "2026-10-22T14:04:25+00:00"
   },
   "history": [
     {
@@ -516,6 +516,52 @@
     },
     {
       "capturedAt": "2026-10-21T14:06:05+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "16.01",
+      "unitSpread": "8.89",
+      "marginPct": 35.7,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.70"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.70"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.72"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.94"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6FrgmbukAxadnbsP1uMvKk/ebbad48124400efe90485fb337a95c45/U--1187-PINCOR-12-18M-0069_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2vmLIMIzbSXgXpHSklRl9y/f30319f546d97788703882563cf6d180/U--1187-PINCOR-12-18M-0070_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6MWvMpB5SUMqC3r7zlgB0o/7bfa86bce33803a48dba368d140bc407/U--1187-PINCOR-12-18M-0071_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-22T14:04:25+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "16.01",
       "unitSpread": "8.89",

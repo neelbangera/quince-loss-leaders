@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-21T14:07:07+00:00",
+    "capturedAt": "2026-10-22T14:00:59+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "39.45",
     "unitSpread": "30.45",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "39.45",
     "highestCost": "39.45",
     "averageSpread": "30.45",
     "firstObservedAt": "2026-10-13T19:36:50+00:00",
-    "lastObservedAt": "2026-10-21T14:07:07+00:00"
+    "lastObservedAt": "2026-10-22T14:00:59+00:00"
   },
   "history": [
     {
@@ -438,6 +438,52 @@
     },
     {
       "capturedAt": "2026-10-21T14:07:07+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "39.45",
+      "unitSpread": "30.45",
+      "marginPct": 43.56,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "20.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.40"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.77"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.68"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4A3QpppEeEfBBJdzRQTAUM/f9ab25718069735562c916f7030621ec/U-1022-MST-18548_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/47zEBui4tXTTu9db5qalEF/d89f1728d1ce8bd04da37772fb8fb395/U-1023-MST-18181_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2gjor5y9KO7GoAtqYECEST/de2bddd016f3cc88619e01387d147e73/U-1022-MST-18288_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-22T14:00:59+00:00",
       "sellingPrice": "69.90",
       "reportedTotalCost": "39.45",
       "unitSpread": "30.45",

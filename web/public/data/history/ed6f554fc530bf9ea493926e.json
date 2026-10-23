@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:55:22+00:00",
+    "capturedAt": "2026-10-23T13:35:26+00:00",
     "sellingPrice": "80.00",
     "reportedTotalCost": "44.64",
     "unitSpread": "35.36",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "80.00",
     "highestPrice": "80.00",
     "lowestCost": "44.64",
     "highestCost": "44.64",
     "averageSpread": "35.36",
     "firstObservedAt": "2026-10-22T13:55:22+00:00",
-    "lastObservedAt": "2026-10-22T13:55:22+00:00"
+    "lastObservedAt": "2026-10-23T13:35:26+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-22T13:55:22+00:00",
+      "sellingPrice": "80.00",
+      "reportedTotalCost": "44.64",
+      "unitSpread": "35.36",
+      "marginPct": 44.2,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.21"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "15.39"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.53"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "10.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6CsDY28X7i6eCqE8wmrLGy/4f8dc627229a14190438409c33db65a2/W-DRS-253-HOTFUD-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4Q7of1JWddtYVTSDa25g6m/89bb792ad8dac2fc358bd0d736550068/W-DRS-253-HOTFUD-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6Ez6fvw9aGlVWEDQwGahws/1c73781c5fc6ca714a36b5152ab26dab/W-DRS-253-HOTFUD-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3TntxfgvP9zrIKcksHUsJn/d51b768d9c18c850394297119ae35a67/W-DRS-253-HOTFUD-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4H39aAElSYK3GT33TxuUcp/80ee80ab126dd75eee313819b4dbc869/W-DRS-253-HOTFUD-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:35:26+00:00",
       "sellingPrice": "80.00",
       "reportedTotalCost": "44.64",
       "unitSpread": "35.36",

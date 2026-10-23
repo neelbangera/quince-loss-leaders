@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:58:49+00:00",
+    "capturedAt": "2026-10-23T13:26:34+00:00",
     "sellingPrice": "119.90",
     "reportedTotalCost": "104.58",
     "unitSpread": "15.32",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "119.90",
     "highestPrice": "119.90",
     "lowestCost": "104.58",
     "highestCost": "104.58",
     "averageSpread": "15.32",
     "firstObservedAt": "2026-10-22T13:58:49+00:00",
-    "lastObservedAt": "2026-10-22T13:58:49+00:00"
+    "lastObservedAt": "2026-10-23T13:26:34+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-22T13:58:49+00:00",
+      "sellingPrice": "119.90",
+      "reportedTotalCost": "104.58",
+      "unitSpread": "15.32",
+      "marginPct": 12.78,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "45.43"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "18.17"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "16.30"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.07"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "20.31"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3UrYYhEKjqJyX9CKwwHGxT/755738a01f919619c66b9014956d052e/Curtain_SilkDupioniBlackout_Silver_275.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2SzzDWrUbfIwnAQPjjCqVa/6362b93d3d4e2a3e1a6cb860bed6bb1c/Curtain_SilkDupioniBlackout_Silver_278.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/611vurdb4PBPvsRc16Y04F/1fb4f7ffb4c3e4c0153aef9fd9ae35a9/Curtain_SilkDupioniBlackout_Silver_285.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4eYe9MIZwEbjiKj69Xy24u/48f3ff8db70f57dd700239f273a66693/Curtains_Silk_Group_4773.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:26:34+00:00",
       "sellingPrice": "119.90",
       "reportedTotalCost": "104.58",
       "unitSpread": "15.32",

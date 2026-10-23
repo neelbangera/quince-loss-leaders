@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:56:00+00:00",
+    "capturedAt": "2026-10-23T13:36:00+00:00",
     "sellingPrice": "17.90",
     "reportedTotalCost": "10.31",
     "unitSpread": "7.59",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "10.31",
     "highestCost": "10.31",
     "averageSpread": "7.59",
     "firstObservedAt": "2026-10-13T19:36:47+00:00",
-    "lastObservedAt": "2026-10-22T13:56:00+00:00"
+    "lastObservedAt": "2026-10-23T13:36:00+00:00"
   },
   "history": [
     {
@@ -321,6 +321,53 @@
     },
     {
       "capturedAt": "2026-10-22T13:56:00+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "10.31",
+      "unitSpread": "7.59",
+      "marginPct": 42.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.25"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.49"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.96"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2jCR1E5AkistFb40uqhus1/d74f118f6f2148ff72d44299faad73f2/U-892_Puppies-098_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/295XQr7k0DS85GG0wgkAFT/6c41e23c17d19898ff79d9a8e9691252/U--892-Puppies-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3ebTuJ9eBvZsXBPcqGmHb4/81ee4e3269319d02b15000f27d566154/U--892-Puppies.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2c66ZQWrkMHDCQdtzOTZr6/30400c6766135c2f2df9e67e9e4cf95f/U-891_Puppies_Details-074_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:36:00+00:00",
       "sellingPrice": "17.90",
       "reportedTotalCost": "10.31",
       "unitSpread": "7.59",

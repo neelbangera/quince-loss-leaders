@@ -27,18 +27,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:51:06+00:00",
+    "capturedAt": "2026-10-23T13:35:43+00:00",
     "sellingPrice": "69.90",
-    "reportedTotalCost": "57.21",
-    "unitSpread": "12.69",
-    "marginPct": 18.15,
+    "reportedTotalCost": "52.68",
+    "unitSpread": "17.22",
+    "marginPct": 24.64,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "22.07"
+        "amount": "24.25"
       },
       {
         "label": "Crafting Cost",
@@ -53,7 +53,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.37"
+        "amount": "3.75"
       },
       {
         "label": "Credit Card Fees",
@@ -63,7 +63,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "12.59"
+        "amount": "9.50"
       }
     ],
     "imageUrls": [
@@ -76,16 +76,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "48.33",
     "highestCost": "57.21",
-    "averageSpread": "20.68",
+    "averageSpread": "20.37",
     "firstObservedAt": "2026-10-13T19:25:18+00:00",
-    "lastObservedAt": "2026-10-22T13:51:06+00:00"
+    "lastObservedAt": "2026-10-23T13:35:43+00:00"
   },
   "history": [
     {
@@ -532,6 +532,55 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "12.59"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1oHwRTfJbjTxYBcAEGaYTM/a6740df3983d0c33b10182f679e93dbe/W-SWT-209-COULRED-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2gD8UJ6etPOEBqHyO5m4bd/c59b906e8e5ece7cde2d2bfe7871d1e9/W-SWT-209-COULRED-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5AyvXDoKZLfqvLQH9GfdUV/5bfbcf7b0636ae916dcd2d2cf3c2b473/W-SWT-209-COULRED-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1u0xYvFGMfGlgqUiOz7Tfn/96d165241ea5ddce91a0382aa98df8be/W-SWT-209-COULRED-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4BGtsMjpTxnrN5sOpXBxnD/dec6a29ec1cd8a4770d85ff4a04c87c1/W-SWT-209-COULRED-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2F5bFFtv28KjsGSwQJUEJF/70af3aa7be30c5d51022e0deddad1f7d/W-SWT-209-COULRED-06_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:35:43+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "52.68",
+      "unitSpread": "17.22",
+      "marginPct": 24.64,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "24.25"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.40"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.75"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.28"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "9.50"
         }
       ],
       "imageUrls": [

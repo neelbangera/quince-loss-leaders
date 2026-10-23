@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:54:34+00:00",
+    "capturedAt": "2026-10-23T13:37:25+00:00",
     "sellingPrice": "34.90",
     "reportedTotalCost": "28.02",
     "unitSpread": "6.88",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "34.90",
     "highestPrice": "34.90",
     "lowestCost": "28.02",
     "highestCost": "28.02",
     "averageSpread": "6.88",
     "firstObservedAt": "2026-10-13T19:16:54+00:00",
-    "lastObservedAt": "2026-10-22T13:54:34+00:00"
+    "lastObservedAt": "2026-10-23T13:37:25+00:00"
   },
   "history": [
     {
@@ -216,6 +216,52 @@
     },
     {
       "capturedAt": "2026-10-22T13:54:34+00:00",
+      "sellingPrice": "34.90",
+      "reportedTotalCost": "28.02",
+      "unitSpread": "6.88",
+      "marginPct": 19.71,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.59"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.96"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "19.14"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.03"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.10"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/49h8TA1vlg0rRGoAFjTuJ9/8fa576f503aad1c972eeb9a3bfd6d9e5/U-DCP-223-MIS-20X20-0187_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7nIIF3xScLtKKcxvycR6OQ/3755ee285c8829a0d70a73a20e8502b1/U-DCP-223-MIS-20X20-0263_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7FVdWd2mei1qhpn1w71bHw/042f574de97706aa4af7ae9f010fe18f/U-DCP-223-MIS-20X20-0139_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:37:25+00:00",
       "sellingPrice": "34.90",
       "reportedTotalCost": "28.02",
       "unitSpread": "6.88",

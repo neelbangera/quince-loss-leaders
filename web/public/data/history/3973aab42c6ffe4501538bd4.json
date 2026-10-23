@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T14:01:21+00:00",
+    "capturedAt": "2026-10-23T13:46:22+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "19.53",
     "unitSpread": "20.37",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "19.53",
     "highestCost": "19.53",
     "averageSpread": "20.37",
     "firstObservedAt": "2026-10-20T13:49:33+00:00",
-    "lastObservedAt": "2026-10-22T14:01:21+00:00"
+    "lastObservedAt": "2026-10-23T13:46:22+00:00"
   },
   "history": [
     {
@@ -174,6 +174,52 @@
     },
     {
       "capturedAt": "2026-10-22T14:01:21+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "19.53",
+      "unitSpread": "20.37",
+      "marginPct": 51.05,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.68"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.97"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/14vOgdwsYku50D6bQsrVB3/abd99ba95a07a09a4f70a0f1ab6c5681/Waffle_Duvet_Cover_Olive_43019_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3gSNMaZ1aCZEb87320xmh7/43aeb747f8f640f6b06a93e6404664fd/Waffle_Duvet_Cover_Olive_42954_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1f3BVJffHXWwiAUqH6ctbo/2f18b45ded9cbc8ef62c15045e44e87d/Waffle_Duvet_Cover_Olive_42948_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-23T13:46:22+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "19.53",
       "unitSpread": "20.37",

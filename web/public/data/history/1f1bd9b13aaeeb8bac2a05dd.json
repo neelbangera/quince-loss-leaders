@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-23T13:36:41+00:00",
+    "capturedAt": "2026-10-24T13:01:33+00:00",
     "sellingPrice": "2100.00",
     "reportedTotalCost": "895.72",
     "unitSpread": "1204.28",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "2100.00",
     "highestPrice": "2100.00",
     "lowestCost": "895.72",
     "highestCost": "897.44",
-    "averageSpread": "1203.19",
+    "averageSpread": "1203.28",
     "firstObservedAt": "2026-10-13T19:37:42+00:00",
-    "lastObservedAt": "2026-10-23T13:36:41+00:00"
+    "lastObservedAt": "2026-10-24T13:01:33+00:00"
   },
   "history": [
     {
@@ -535,6 +535,53 @@
     },
     {
       "capturedAt": "2026-10-23T13:36:41+00:00",
+      "sellingPrice": "2100.00",
+      "reportedTotalCost": "895.72",
+      "unitSpread": "1204.28",
+      "marginPct": 57.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "677.10"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "40.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "47.23"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "111.51"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2OqRTtvcUeH9ro7f0XGGdq/fd60f02ca2bb71ebe96e373b65849065/RNG-219_WG_0150_2_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1udDMmhReOQtmb0wzWbkYZ/fa9ca81bbde14d987f9dc17c7a49f7d0/RNG-219_WG_0132_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4OnAHk8KaWHfvFQmoxtheI/a535ff91e363f334f68b630ac9edf3e3/RNG-219_WG_0093_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6mLfNt0s02WIRMtQrMnTAE/7907364a0635a79b3019b1bce057c701/RNG-219_WG_0146_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-24T13:01:33+00:00",
       "sellingPrice": "2100.00",
       "reportedTotalCost": "895.72",
       "unitSpread": "1204.28",

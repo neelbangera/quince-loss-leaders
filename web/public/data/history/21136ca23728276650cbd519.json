@@ -27,7 +27,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-23T13:33:05+00:00",
+    "capturedAt": "2026-10-24T12:52:31+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "23.93",
     "unitSpread": "18.07",
@@ -76,20 +76,69 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "23.93",
     "highestCost": "23.93",
     "averageSpread": "18.07",
     "firstObservedAt": "2026-10-23T13:33:05+00:00",
-    "lastObservedAt": "2026-10-23T13:33:05+00:00"
+    "lastObservedAt": "2026-10-24T12:52:31+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-23T13:33:05+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "23.93",
+      "unitSpread": "18.07",
+      "marginPct": 43.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.52"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.08"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.46"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.24"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.38"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3j1U47CSuhNnsM5LAU2M1H/38be9022c4631ab9dbf481edb82debdd/W-HKT-37-NAV-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5OOXN1zq6x3QiBvhCQl8Fi/2f3540c88308b0b36a780dd4a914cc1e/W-HKT-37-NAV-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6qajoGPdz9eWewoFBnF5at/b906f2a4f59ddf23da9d262f0e0cf41f/W-HKT-37-NAV-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/ErQd16ajt6ooxHVpFOm7i/e63bbf94cf8ab3db9e7e342a747c4b9e/W-HKT-37-NAV-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7wHYkjfqEinHgmbCRCAUjt/7bfb30174f1714063ccfd92e48473f06/W-HKT-37-NAV-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1X3QFxtCdGYS6o7ofYFPPD/22c13f0cd3e5776d6c43b7f9ee4314b4/W-HKT-37-NAV-06_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-24T12:52:31+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "23.93",
       "unitSpread": "18.07",

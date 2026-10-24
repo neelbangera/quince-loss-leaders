@@ -11,14 +11,26 @@
     "category": "outerwear",
     "categoryLabel": "Outerwear",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7588",
+    "variantLabel": "Winetasting / XS",
+    "variantSize": "Winetasting",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/4jNPb6pbYAlFVh8ChaOQrZ/bcefa31759d17aab8ee63375b23d1428/W-JKT-196-WINTAS-1916-EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4jNPb6pbYAlFVh8ChaOQrZ/bcefa31759d17aab8ee63375b23d1428/W-JKT-196-WINTAS-1916-EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/2W1eVQM21Mcp8veUMbetoy/b6afd9f8ec30a491f1d78fd7b6edd387/W-JKT-196-WINTAS-1927-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3nwLZNZRpjSOgr662gWCRq/818bd424a9340360ec10d33ecd84d3a9/W-JKT-196-WINTAS-1933-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5IooKzpmdS9FNf21rDACew/49196c60817f4025fdf64bcc0aa726a2/W-JKT-196-WINTAS-1955-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5ZyjwXS6QUj2xglgsFKLnr/0c304182df9a1bf5ac010ba433250159/W-JKT-196-WINTAS-1971-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-05T17:27:13+00:00",
+    "capturedAt": "2026-10-24T12:44:19+00:00",
     "sellingPrice": "200.00",
-    "reportedTotalCost": "148.34",
-    "unitSpread": "51.66",
-    "marginPct": 25.83,
+    "reportedTotalCost": "144.08",
+    "unitSpread": "55.92",
+    "marginPct": 27.96,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +52,38 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.99"
+        "amount": "3.53"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "7.35"
+        "amount": "7.55"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "22.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4jNPb6pbYAlFVh8ChaOQrZ/bcefa31759d17aab8ee63375b23d1428/W-JKT-196-WINTAS-1916-EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/2W1eVQM21Mcp8veUMbetoy/b6afd9f8ec30a491f1d78fd7b6edd387/W-JKT-196-WINTAS-1927-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3nwLZNZRpjSOgr662gWCRq/818bd424a9340360ec10d33ecd84d3a9/W-JKT-196-WINTAS-1933-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5IooKzpmdS9FNf21rDACew/49196c60817f4025fdf64bcc0aa726a2/W-JKT-196-WINTAS-1955-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5ZyjwXS6QUj2xglgsFKLnr/0c304182df9a1bf5ac010ba433250159/W-JKT-196-WINTAS-1971-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 7,
+    "observationCount": 8,
     "lossObservations": 0,
-    "profitObservations": 7,
+    "profitObservations": 8,
     "lowestPrice": "200.00",
     "highestPrice": "200.00",
-    "lowestCost": "148.34",
+    "lowestCost": "144.08",
     "highestCost": "148.34",
-    "averageSpread": "51.66",
+    "averageSpread": "52.19",
     "firstObservedAt": "2026-09-29T14:55:52+00:00",
-    "lastObservedAt": "2026-10-05T17:27:13+00:00"
+    "lastObservedAt": "2026-10-24T12:44:19+00:00"
   },
   "history": [
     {
@@ -352,6 +371,54 @@
           "type": "duties_taxes_fees",
           "amount": "22.00"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-24T12:44:19+00:00",
+      "sellingPrice": "200.00",
+      "reportedTotalCost": "144.08",
+      "unitSpread": "55.92",
+      "marginPct": 27.96,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "73.41"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "36.09"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.53"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "7.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "22.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4jNPb6pbYAlFVh8ChaOQrZ/bcefa31759d17aab8ee63375b23d1428/W-JKT-196-WINTAS-1916-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2W1eVQM21Mcp8veUMbetoy/b6afd9f8ec30a491f1d78fd7b6edd387/W-JKT-196-WINTAS-1927-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3nwLZNZRpjSOgr662gWCRq/818bd424a9340360ec10d33ecd84d3a9/W-JKT-196-WINTAS-1933-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5IooKzpmdS9FNf21rDACew/49196c60817f4025fdf64bcc0aa726a2/W-JKT-196-WINTAS-1955-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5ZyjwXS6QUj2xglgsFKLnr/0c304182df9a1bf5ac010ba433250159/W-JKT-196-WINTAS-1971-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-23T13:36:01+00:00",
+    "capturedAt": "2026-10-24T12:57:49+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "7.49",
     "unitSpread": "12.41",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "7.49",
     "highestCost": "7.49",
     "averageSpread": "12.41",
     "firstObservedAt": "2026-10-21T13:57:49+00:00",
-    "lastObservedAt": "2026-10-23T13:36:01+00:00"
+    "lastObservedAt": "2026-10-24T12:57:49+00:00"
   },
   "history": [
     {
@@ -133,6 +133,53 @@
     },
     {
       "capturedAt": "2026-10-23T13:36:01+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "7.49",
+      "unitSpread": "12.41",
+      "marginPct": 62.36,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.06"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "1.32"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.60"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.51"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/79fTJ82qMB47ffIQPQnFgA/bdbffe53709f9db904eff1ce87b2ac18/U-HAC-528-RED-37070_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3AUXys5ZqZZePuiUfbLvRs/434d28893cafce65e674e2fb0f318657/U-HAC-528-RED-0215_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1FItSUhc3Cxeh8DfpFi2yb/4134b1f7faa18f10dd956cac57ccd7be/U-TBLE-146-0128.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3Z5eyqJvdFIlllV6TRRtH5/02420dc308cd8bff1e1eadeec40ea416/U-TBLE-146-0171.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-24T12:57:49+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "7.49",
       "unitSpread": "12.41",

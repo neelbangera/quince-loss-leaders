@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:51:14+00:00",
+    "capturedAt": "2026-10-24T13:01:32+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "11.29",
     "unitSpread": "13.61",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "11.29",
     "highestCost": "11.29",
     "averageSpread": "13.61",
     "firstObservedAt": "2026-10-22T13:51:14+00:00",
-    "lastObservedAt": "2026-10-22T13:51:14+00:00"
+    "lastObservedAt": "2026-10-24T13:01:32+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-22T13:51:14+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "11.29",
+      "unitSpread": "13.61",
+      "marginPct": 54.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.96"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.70"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.33"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7ioAUT3GVZNFzkTytnjSZp/e1080498485e347ea52a4b5efb03c8d5/U--1674-IVO_22893_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6qq4E3Yflt3lzS2dI05EOh/649e4568d05a987cc14c1dd692559157/U--1674-IVO-0301-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2HpkAsI3lxVtk1DPWRLoJL/9ba792d66bd9c9557d1cea4fbb5f02d2/U--1674-IVO_22896_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-24T13:01:32+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "11.29",
       "unitSpread": "13.61",

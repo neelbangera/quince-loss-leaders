@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-23T13:31:26+00:00",
+    "capturedAt": "2026-10-25T13:25:38+00:00",
     "sellingPrice": "399.90",
     "reportedTotalCost": "242.52",
     "unitSpread": "157.38",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "399.90",
     "highestPrice": "399.90",
     "lowestCost": "242.52",
     "highestCost": "242.52",
     "averageSpread": "157.38",
     "firstObservedAt": "2026-10-17T12:23:44+00:00",
-    "lastObservedAt": "2026-10-23T13:31:26+00:00"
+    "lastObservedAt": "2026-10-25T13:25:38+00:00"
   },
   "history": [
     {
@@ -130,6 +130,53 @@
     },
     {
       "capturedAt": "2026-10-23T13:31:26+00:00",
+      "sellingPrice": "399.90",
+      "reportedTotalCost": "242.52",
+      "unitSpread": "157.38",
+      "marginPct": 39.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "124.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "84.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "23.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "8.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/uwnxHaSCHQgKw9hoqEUJ6/2fabecd8af3854afcb9639056b58937f/HUE30506300WHE-SILO.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7B80S1d9NJgd01MCeg8dCG/7427d7274ee07f33bbe88b460a4dcf39/HUE30506300WHE-CORNER.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/29wQCrm80MWjQbbZJiJFX6/2c1bf166ec7ec05e0d1d83137c2bf5dc/HUE30506300WHE-ROLL.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/24lFSTUolnCOWwN1fFd9cC/7c47e0ab986457572ec90b82b877b52b/HUE30506300WHE-BACK.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-25T13:25:38+00:00",
       "sellingPrice": "399.90",
       "reportedTotalCost": "242.52",
       "unitSpread": "157.38",

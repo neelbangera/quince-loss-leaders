@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-24T12:44:41+00:00",
+    "capturedAt": "2026-10-25T13:17:09+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "29.13",
     "unitSpread": "12.87",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "29.13",
     "highestCost": "29.13",
     "averageSpread": "12.87",
     "firstObservedAt": "2026-10-16T13:30:55+00:00",
-    "lastObservedAt": "2026-10-24T12:44:41+00:00"
+    "lastObservedAt": "2026-10-25T13:17:09+00:00"
   },
   "history": [
     {
@@ -436,6 +436,51 @@
     },
     {
       "capturedAt": "2026-10-24T12:44:41+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "29.13",
+      "unitSpread": "12.87",
+      "marginPct": 30.64,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "16.25"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.23"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.22"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.43"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.20"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.80"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1iEfvHPppsgh9xlPLRVTDk/613c6e8ab4709d6c62589ad26b69d999/W-SCV-31-DUNERED-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3lcbjwMC4TIrjg6CRuC1ZG/504a9d71c44767f6074aa1d448b18769/W-SCV-31-DUNERED-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-25T13:17:09+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "29.13",
       "unitSpread": "12.87",

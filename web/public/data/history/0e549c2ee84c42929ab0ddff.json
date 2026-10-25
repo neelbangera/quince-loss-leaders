@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-24T12:43:43+00:00",
+    "capturedAt": "2026-10-25T13:17:50+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "17.46",
     "unitSpread": "12.44",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "17.46",
     "highestCost": "17.46",
     "averageSpread": "12.44",
     "firstObservedAt": "2026-10-13T19:27:12+00:00",
-    "lastObservedAt": "2026-10-24T12:43:43+00:00"
+    "lastObservedAt": "2026-10-25T13:17:50+00:00"
   },
   "history": [
     {
@@ -219,6 +219,53 @@
     },
     {
       "capturedAt": "2026-10-24T12:43:43+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "17.46",
+      "unitSpread": "12.44",
+      "marginPct": 41.61,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.42"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.18"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.62"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.94"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3YRzJsYIE2Io84EZRyshM8/1db20464b592b9bfdb0c5883bb639818/W--3-RSMY_0995_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1cTOZMpR93vXRwzmlVaJqA/48d4ad242df73c88cb6028b149253512/W--3-RSMY_1019.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6FAgnFSXi7VCqEt4qU1MDF/54d652586f252fb76b69102fedb5ca09/W--3-RSMY_0995.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2GIZmBPISqlXGmn1HFe4Vc/aec6c9ca4daef0ffb278e6c98dc81d9f/W--3-RSMY_1035.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-25T13:17:50+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "17.46",
       "unitSpread": "12.44",

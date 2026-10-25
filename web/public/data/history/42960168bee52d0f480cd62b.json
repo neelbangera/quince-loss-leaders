@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-24T12:50:14+00:00",
+    "capturedAt": "2026-10-25T13:19:13+00:00",
     "sellingPrice": "36.00",
     "reportedTotalCost": "20.91",
     "unitSpread": "15.09",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "36.00",
     "highestPrice": "36.00",
     "lowestCost": "20.91",
     "highestCost": "20.91",
     "averageSpread": "15.09",
     "firstObservedAt": "2026-10-24T12:50:14+00:00",
-    "lastObservedAt": "2026-10-24T12:50:14+00:00"
+    "lastObservedAt": "2026-10-25T13:19:13+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-24T12:50:14+00:00",
+      "sellingPrice": "36.00",
+      "reportedTotalCost": "20.91",
+      "unitSpread": "15.09",
+      "marginPct": 41.92,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.14"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.56"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.33"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.01"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.37"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3AIhbQp47gwUjMhVXAw5Ae/27241e2d5bdf88353c8ef2b0b06b841c/U-SCV-2-DUNERED-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1lJfHDHioIcUyNEH2ipVmY/7da538cab8c290ab1f0bcbeb111f5e5c/U-SCV-2-DUNERED-53346_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2qfZs10HxjxBm1XP3WJpHD/fd57120db1017c1d66d110e494a14a6f/U-SCV-2-DUNERED-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2fnIhkrP0OQp1EokA2QAhK/9cab6b7d3fe537fd87dc78ffb80b0c21/U-SCV-2-DUNERED-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-25T13:19:13+00:00",
       "sellingPrice": "36.00",
       "reportedTotalCost": "20.91",
       "unitSpread": "15.09",

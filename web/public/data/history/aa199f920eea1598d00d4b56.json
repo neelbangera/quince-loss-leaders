@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:22:45+00:00",
+    "capturedAt": "2026-10-26T15:25:38+00:00",
     "sellingPrice": "20.00",
     "reportedTotalCost": "14.20",
     "unitSpread": "5.80",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 34,
+    "observationCount": 35,
     "lossObservations": 0,
-    "profitObservations": 34,
+    "profitObservations": 35,
     "lowestPrice": "20.00",
     "highestPrice": "20.00",
     "lowestCost": "14.04",
     "highestCost": "14.20",
-    "averageSpread": "5.95",
+    "averageSpread": "5.94",
     "firstObservedAt": "2026-08-29T21:19:53+00:00",
-    "lastObservedAt": "2026-10-25T13:22:45+00:00"
+    "lastObservedAt": "2026-10-26T15:25:38+00:00"
   },
   "history": [
     {
@@ -1447,6 +1447,52 @@
     },
     {
       "capturedAt": "2026-10-25T13:22:45+00:00",
+      "sellingPrice": "20.00",
+      "reportedTotalCost": "14.20",
+      "unitSpread": "5.80",
+      "marginPct": 29.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.70"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.05"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.24"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/69QxSW6Hd9KNqsSsmZHr3h/ee1a70f3a9b756692690ec460c79ebbe/U--1871-NOCOL-01.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/55aZUybZBRaCiA5cj7BRme/144bfd4a2fdf3b066d515de5af49f6bc/U--1871-NOCOL-02.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3NHwUdO4diDD4ctjJ3GUlL/5419b2509f3b4269a6ca6c26cf947e86/U--1871-NOCOL-03.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-26T15:25:38+00:00",
       "sellingPrice": "20.00",
       "reportedTotalCost": "14.20",
       "unitSpread": "5.80",

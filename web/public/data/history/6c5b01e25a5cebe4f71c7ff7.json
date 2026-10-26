@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:26:22+00:00",
+    "capturedAt": "2026-10-26T15:12:43+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "21.25",
     "unitSpread": "28.75",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "21.25",
     "highestCost": "21.61",
-    "averageSpread": "28.63",
+    "averageSpread": "28.65",
     "firstObservedAt": "2026-09-24T13:50:59+00:00",
-    "lastObservedAt": "2026-10-25T13:26:22+00:00"
+    "lastObservedAt": "2026-10-26T15:12:43+00:00"
   },
   "history": [
     {
@@ -304,6 +304,52 @@
     },
     {
       "capturedAt": "2026-10-25T13:26:22+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "21.25",
+      "unitSpread": "28.75",
+      "marginPct": 57.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.55"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.23"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.54"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.43"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7h9obKTzzylZIXnqPwKQZU/cbdc1df3f3ef2273cedd659082f30990/U-U-SUN-66_0075_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2f26ezjtLYQ64lQZ8UrYBP/3f4bd9243c4aee5f32d31b35b5cce719/U-U-SUN-66_0078_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2GfM5mnEDm2Gcc8QvQGfZh/bb721f9ce485ed1c57cdc90be55e3152/U-U-SUN-66_0083_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-26T15:12:43+00:00",
       "sellingPrice": "50.00",
       "reportedTotalCost": "21.25",
       "unitSpread": "28.75",

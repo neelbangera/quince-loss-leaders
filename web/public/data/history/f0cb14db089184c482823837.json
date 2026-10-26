@@ -29,7 +29,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:20:31+00:00",
+    "capturedAt": "2026-10-26T15:15:22+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "19.85",
     "unitSpread": "10.05",
@@ -80,20 +80,71 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "19.85",
     "highestCost": "19.85",
     "averageSpread": "10.05",
     "firstObservedAt": "2026-10-25T13:20:31+00:00",
-    "lastObservedAt": "2026-10-25T13:20:31+00:00"
+    "lastObservedAt": "2026-10-26T15:15:22+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-25T13:20:31+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "19.85",
+      "unitSpread": "10.05",
+      "marginPct": 33.61,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.09"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.88"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.28"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.85"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.80"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/lVBKNNTSv3pcpZx9w8AkQ/78065ca6713e0f7e8f7068b6f870717b/W--205-BLA-04_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2YTpO5YC0qo1NBeznFvvHp/b9a5f13ecc6f9dcb0db7918c0a920d20/W--205-SAN-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4qja2mnHbdVM0JMlPbDX4u/6dcbc5ec181a99127098cada686cc8c5/W--205-BLA-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/Ve7o8fMdHIhyqzvNvZ0SQ/48c19b5ddf773251ccd3018e8a8821bd/W--205-SAN-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1snwxv6wvq7X3aERmCTCax/72b4aa7ea3690220a4ee333aea91206f/W--205-BLA-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/12IeL07A3mVWfZrlpNoIaS/179e36bd1d7c4bd3b0c9f5c096532e0d/W--205-SAN-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/48sC6oyqaq4gmsBbsxx37h/9fbf2a858571b292e96055c3e5be6953/W--205-BLA-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7GDb3u8CZhIxWnWtye8z54/75ddf152aad8bd694ab7ef0f85a8e875/W--205-SAN-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-26T15:15:22+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "19.85",
       "unitSpread": "10.05",

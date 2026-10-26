@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:18:52+00:00",
+    "capturedAt": "2026-10-26T15:12:46+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "19.97",
     "unitSpread": "4.93",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "19.97",
     "highestCost": "19.97",
     "averageSpread": "4.93",
     "firstObservedAt": "2026-10-25T13:18:52+00:00",
-    "lastObservedAt": "2026-10-25T13:18:52+00:00"
+    "lastObservedAt": "2026-10-26T15:12:46+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-25T13:18:52+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "19.97",
+      "unitSpread": "4.93",
+      "marginPct": 19.8,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.45"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.88"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.84"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.74"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3bmC0yOCD9f7rJ2Xcc9sqM/cf58f3987fab8f920ce1e15acab2886c/U--868_BABY_Long_Sleeve_Tie_One-Piece_Swimsuit_Happy_Floral_29417_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4sD27qSAz0x22pbQ69rd2L/488c1012932fe5a05e306546287f5cd2/U--868_BABY_Long_Sleeve_Tie_One-Piece_Swimsuit_Happy_Floral_29418_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4VP1GIWP1TWjAEG0Ttw9k0/0c805b7c3d3c5baad47996200f3185c8/U--868_BABY_Long_Sleeve_Tie_One-Piece_Swimsuit_Happy_Floral_29423_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-26T15:12:46+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "19.97",
       "unitSpread": "4.93",

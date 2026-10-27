@@ -28,11 +28,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-26T15:20:31+00:00",
+    "capturedAt": "2026-10-27T14:40:21+00:00",
     "sellingPrice": "55.00",
-    "reportedTotalCost": "29.00",
-    "unitSpread": "26.00",
-    "marginPct": 47.27,
+    "reportedTotalCost": "25.09",
+    "unitSpread": "29.91",
+    "marginPct": 54.38,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -54,7 +54,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.71"
+        "amount": "3.80"
       },
       {
         "label": "Credit Card Fees",
@@ -78,16 +78,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "55.00",
     "highestPrice": "55.00",
-    "lowestCost": "29.00",
+    "lowestCost": "25.09",
     "highestCost": "29.00",
-    "averageSpread": "26.00",
+    "averageSpread": "26.43",
     "firstObservedAt": "2026-10-19T16:09:19+00:00",
-    "lastObservedAt": "2026-10-26T15:20:31+00:00"
+    "lastObservedAt": "2026-10-27T14:40:21+00:00"
   },
   "history": [
     {
@@ -466,6 +466,56 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "7.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.79"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.92"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/25ydGkwSYaB6RgKCaM82Tp/a3a5ebb8c4e557e8714a406ade13b46c/W-SWT-195-TWIBLUM-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2GL8ompBE13JI6a26hDbV/7d8cdec41359e15f3abf2771485448ac/W-SWT-195-NVY-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/31I214DjpVJgnVI7mhGQ7f/d9316944990d2a8fa6f732ededda5255/W-SWT-195-NVY-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/egH5Jwyt3TOwnyttL5Lp3/bcfa970721fa26e6016e5fbfe380da03/W-SWT-195-NVY-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6OB71rbrkN2cUFWzOylEwJ/be044420d9b3c0e73aeaada2e331a622/W-SWT-195-NVY-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/424P9obu1xcWYsmoM8eCwf/87441e1b91b42c7d85ae517b8aa9584f/W-SWT-195-NVY-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7ebX71uFpQrUsLj75U5WxU/d8306b7f874de928d57f5c4c2ff28c58/W-SWT-195-NVY-06_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-27T14:40:21+00:00",
+      "sellingPrice": "55.00",
+      "reportedTotalCost": "25.09",
+      "unitSpread": "29.91",
+      "marginPct": 54.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.93"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.80"
         },
         {
           "label": "Credit Card Fees",

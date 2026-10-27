@@ -25,18 +25,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-26T15:24:18+00:00",
+    "capturedAt": "2026-10-27T14:44:08+00:00",
     "sellingPrice": "2000.00",
-    "reportedTotalCost": "926.66",
-    "unitSpread": "1073.34",
-    "marginPct": 53.67,
+    "reportedTotalCost": "899.60",
+    "unitSpread": "1100.40",
+    "marginPct": 55.02,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "773.15"
+        "amount": "746.09"
       },
       {
         "label": "Crafting Cost",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 47,
+    "observationCount": 48,
     "lossObservations": 0,
-    "profitObservations": 47,
+    "profitObservations": 48,
     "lowestPrice": "2000.00",
     "highestPrice": "2000.00",
-    "lowestCost": "926.66",
+    "lowestCost": "899.60",
     "highestCost": "1005.44",
-    "averageSpread": "1024.64",
+    "averageSpread": "1026.22",
     "firstObservedAt": "2026-09-11T13:02:58+00:00",
-    "lastObservedAt": "2026-10-26T15:24:18+00:00"
+    "lastObservedAt": "2026-10-27T14:44:08+00:00"
   },
   "history": [
     {
@@ -2043,6 +2043,53 @@
           "label": "Materials",
           "type": "materials",
           "amount": "773.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "22.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "26.35"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "55.81"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "47.05"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1v3A9X4ZhLnaKjonNGlQpN/a9d891ea5e3a58710458687cef5615c5/W-EARR-214-YG-546_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2tiaaso4CgQ1qsLGjtRcMy/e34688aaada95998797828fa13e6f9de/W-EARR-214-YG-1804_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3rReDfGBzBwmE1BfeCIVr3/e398bb19c4bf1fa803355ad71ed0738f/W-EARR-214-YG-544_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4fzXzuK0yOf9G10QeZd8rK/7730ed362349f2c185857a189a5b2fe5/W-EARR-214-YG-1791_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-27T14:44:08+00:00",
+      "sellingPrice": "2000.00",
+      "reportedTotalCost": "899.60",
+      "unitSpread": "1100.40",
+      "marginPct": 55.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "746.09"
         },
         {
           "label": "Crafting Cost",

@@ -24,18 +24,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-26T15:12:54+00:00",
+    "capturedAt": "2026-10-27T14:32:44+00:00",
     "sellingPrice": "48.00",
-    "reportedTotalCost": "24.30",
-    "unitSpread": "23.70",
-    "marginPct": 49.38,
+    "reportedTotalCost": "24.58",
+    "unitSpread": "23.42",
+    "marginPct": 48.79,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "4.10"
+        "amount": "4.38"
       },
       {
         "label": "Crafting Cost",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 47,
+    "observationCount": 48,
     "lossObservations": 0,
-    "profitObservations": 47,
+    "profitObservations": 48,
     "lowestPrice": "48.00",
     "highestPrice": "48.00",
     "lowestCost": "14.14",
-    "highestCost": "24.30",
-    "averageSpread": "28.19",
+    "highestCost": "24.58",
+    "averageSpread": "28.09",
     "firstObservedAt": "2026-09-11T12:57:13+00:00",
-    "lastObservedAt": "2026-10-26T15:12:54+00:00"
+    "lastObservedAt": "2026-10-27T14:32:44+00:00"
   },
   "history": [
     {
@@ -2034,6 +2034,52 @@
           "label": "Materials",
           "type": "materials",
           "amount": "4.10"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.48"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.35"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3xhLbQ48ZmzeWO6UlC1P8D/4d08954fedea255c85c58cdf5baa583c/RNG-102-GV_9070.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5qDX10XpbloUkJ3TIFnWfm/0efc1dcde8d75e3144b2b7cfef19aad0/RNG-102-GV_1432.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/vTSiLPTMht4FWMZdgZKh7/6ddfbf76f26ae56e79044186dc688821/RNG-102-GV_9075.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-27T14:32:44+00:00",
+      "sellingPrice": "48.00",
+      "reportedTotalCost": "24.58",
+      "unitSpread": "23.42",
+      "marginPct": 48.79,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.38"
         },
         {
           "label": "Crafting Cost",

@@ -11,14 +11,26 @@
     "category": "pants",
     "categoryLabel": "Pants",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "8429",
+    "variantLabel": "Mocha Taupe / XS",
+    "variantSize": "Mocha Taupe",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/3yZBw7XmT7UUzYI9WyxY9G/d122b9a3647d465030e1323cdff1cc09/W-PNT-248-MOCHTAU-01_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/3yZBw7XmT7UUzYI9WyxY9G/d122b9a3647d465030e1323cdff1cc09/W-PNT-248-MOCHTAU-01_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/42kh0vD7VVpcDsKu9HrBp2/94a6a3881cb58406f508138c781b35d4/W-PNT-248-MOCHTAU-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/CYwRcimjYdH3gWQlo2TuO/bc9de0a0bb8889f7f88833749c2696fd/W-PNT-248-MOCHTAU-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7eZ4YY4ScerVeXKsh2NZ5W/90c6488e2ae3430f1eda27146ee08e9a/W-PNT-248-MOCHTAU-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7r0PKFBSLUN2SmBxvOCWDu/ae98bc626836f3aff4dda859c01b7d3a/W-PNT-248-MOCHTAU-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-05T17:09:40+00:00",
+    "capturedAt": "2026-10-27T14:49:12+00:00",
     "sellingPrice": "60.00",
-    "reportedTotalCost": "28.51",
-    "unitSpread": "31.49",
-    "marginPct": 52.48,
+    "reportedTotalCost": "27.71",
+    "unitSpread": "32.29",
+    "marginPct": 53.82,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -45,26 +57,33 @@
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "2.26"
+        "amount": "1.46"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "6.50"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/3yZBw7XmT7UUzYI9WyxY9G/d122b9a3647d465030e1323cdff1cc09/W-PNT-248-MOCHTAU-01_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/42kh0vD7VVpcDsKu9HrBp2/94a6a3881cb58406f508138c781b35d4/W-PNT-248-MOCHTAU-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/CYwRcimjYdH3gWQlo2TuO/bc9de0a0bb8889f7f88833749c2696fd/W-PNT-248-MOCHTAU-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7eZ4YY4ScerVeXKsh2NZ5W/90c6488e2ae3430f1eda27146ee08e9a/W-PNT-248-MOCHTAU-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7r0PKFBSLUN2SmBxvOCWDu/ae98bc626836f3aff4dda859c01b7d3a/W-PNT-248-MOCHTAU-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "60.00",
     "highestPrice": "60.00",
-    "lowestCost": "28.51",
+    "lowestCost": "27.71",
     "highestCost": "28.51",
-    "averageSpread": "31.49",
+    "averageSpread": "31.69",
     "firstObservedAt": "2026-10-03T13:40:22+00:00",
-    "lastObservedAt": "2026-10-05T17:09:40+00:00"
+    "lastObservedAt": "2026-10-27T14:49:12+00:00"
   },
   "history": [
     {
@@ -188,6 +207,54 @@
           "type": "duties_taxes_fees",
           "amount": "6.50"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-27T14:49:12+00:00",
+      "sellingPrice": "60.00",
+      "reportedTotalCost": "27.71",
+      "unitSpread": "32.29",
+      "marginPct": 53.82,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.16"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.99"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.26"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.34"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.46"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3yZBw7XmT7UUzYI9WyxY9G/d122b9a3647d465030e1323cdff1cc09/W-PNT-248-MOCHTAU-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/42kh0vD7VVpcDsKu9HrBp2/94a6a3881cb58406f508138c781b35d4/W-PNT-248-MOCHTAU-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/CYwRcimjYdH3gWQlo2TuO/bc9de0a0bb8889f7f88833749c2696fd/W-PNT-248-MOCHTAU-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7eZ4YY4ScerVeXKsh2NZ5W/90c6488e2ae3430f1eda27146ee08e9a/W-PNT-248-MOCHTAU-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7r0PKFBSLUN2SmBxvOCWDu/ae98bc626836f3aff4dda859c01b7d3a/W-PNT-248-MOCHTAU-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

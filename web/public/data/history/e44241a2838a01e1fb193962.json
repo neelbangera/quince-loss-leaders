@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-26T15:12:21+00:00",
+    "capturedAt": "2026-10-27T14:32:09+00:00",
     "sellingPrice": "55.00",
-    "reportedTotalCost": "31.86",
-    "unitSpread": "23.14",
-    "marginPct": 42.07,
+    "reportedTotalCost": "27.86",
+    "unitSpread": "27.14",
+    "marginPct": 49.35,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,12 +55,12 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.71"
+        "amount": "3.84"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.60"
+        "amount": "1.47"
       },
       {
         "label": "Duties, Taxes, And Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "55.00",
     "highestPrice": "55.00",
-    "lowestCost": "31.86",
+    "lowestCost": "27.86",
     "highestCost": "31.86",
-    "averageSpread": "23.14",
+    "averageSpread": "23.58",
     "firstObservedAt": "2026-10-19T16:03:36+00:00",
-    "lastObservedAt": "2026-10-26T15:12:21+00:00"
+    "lastObservedAt": "2026-10-27T14:32:09+00:00"
   },
   "history": [
     {
@@ -467,6 +467,57 @@
           "label": "Credit Card Fees",
           "type": "credit_card_fees",
           "amount": "1.60"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.77"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5NAz2efNmNjzZN75ySVvBW/d8a560b7e1974b999b0d7cfcdd846211/W-SWT-214-DEBRRED-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7jTZk7mNRDxVM36Ez3z3oC/f65f61c087570f36343d185262ae15e3/W-SWT-214-IVO_02-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6gWtdNsABoOSrB7yeX5WU7/69349a086e6fa5bcb9e2e5c3a5512448/W-SWT-214-IVO_01-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/s4fQuQroOf8WlEoEdEu8h/404c8a38b9d4a6a049bfaac16b3afb5e/W-SWT-214-IVO_05-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/20lMmUvkjJsPdjmBHDSfVv/6eabfe48405e1229f026f8ec763ab024/W-SWT-214-IVO_03-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4mIy4MEIHkPzPiP5u1ca3z/6439643a9fe6af337f3bf26c9526b47b/W-SWT-214-IVO_04-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4WLur3oncJgLcXeBFKXPRx/603b01d96f10d01ae608241ce124bdaf/W-SWT-214-IVO_06-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/23niK66uylBvGtdxrJP9kz/53a6fcb094ca6c7b92df68ec3c05edf6/organic-cotton-waffle-open-cardigan-heather-dove-grey-4x5-thumbnail.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-27T14:32:09+00:00",
+      "sellingPrice": "55.00",
+      "reportedTotalCost": "27.86",
+      "unitSpread": "27.14",
+      "marginPct": 49.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.38"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "9.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.84"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.47"
         },
         {
           "label": "Duties, Taxes, And Fees",

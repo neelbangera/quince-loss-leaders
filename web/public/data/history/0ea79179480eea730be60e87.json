@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-27T14:49:07+00:00",
+    "capturedAt": "2026-10-28T15:17:40+00:00",
     "sellingPrice": "1300.00",
-    "reportedTotalCost": "694.52",
-    "unitSpread": "605.48",
-    "marginPct": 46.58,
+    "reportedTotalCost": "723.05",
+    "unitSpread": "576.95",
+    "marginPct": 44.38,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "27.60"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "36.21"
+        "amount": "92.34"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 48,
+    "observationCount": 49,
     "lossObservations": 0,
-    "profitObservations": 48,
+    "profitObservations": 49,
     "lowestPrice": "1300.00",
     "highestPrice": "1300.00",
     "lowestCost": "694.52",
     "highestCost": "843.89",
-    "averageSpread": "529.26",
+    "averageSpread": "530.23",
     "firstObservedAt": "2026-09-11T13:05:02+00:00",
-    "lastObservedAt": "2026-10-27T14:49:07+00:00"
+    "lastObservedAt": "2026-10-28T15:17:40+00:00"
   },
   "history": [
     {
@@ -2112,6 +2112,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "36.21"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4BzZwyFn4FQrBSgaVsNkJV/7ebcd2c540362dbff70814f0545a599d/W-EARR-234-039_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3a2eaDXM4tUTz4jQs3mC0Y/245ce7c64ecae958478591f036e8a4be/W-EARR-234_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4qUtT53VyMM9PALLImosMv/f4889c8ff59e29a6898bac1e7aa2004f/W-EARR-234-059_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5XUYvldKys9ZHUrJkLgqlo/bb34a4a74f9402c352102970ee65ce35/W-EARR-234_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-28T15:17:40+00:00",
+      "sellingPrice": "1300.00",
+      "reportedTotalCost": "723.05",
+      "unitSpread": "576.95",
+      "marginPct": 44.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "570.93"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "22.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "34.98"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "92.34"
         }
       ],
       "imageUrls": [

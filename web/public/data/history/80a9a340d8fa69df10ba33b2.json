@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-27T14:34:08+00:00",
+    "capturedAt": "2026-10-28T15:22:05+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "37.56",
     "unitSpread": "12.34",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 13,
+    "observationCount": 14,
     "lossObservations": 0,
-    "profitObservations": 13,
+    "profitObservations": 14,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "37.56",
     "highestCost": "37.56",
     "averageSpread": "12.34",
     "firstObservedAt": "2026-10-14T13:59:58+00:00",
-    "lastObservedAt": "2026-10-27T14:34:08+00:00"
+    "lastObservedAt": "2026-10-28T15:22:05+00:00"
   },
   "history": [
     {
@@ -629,6 +629,53 @@
     },
     {
       "capturedAt": "2026-10-27T14:34:08+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "37.56",
+      "unitSpread": "12.34",
+      "marginPct": 24.73,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.11"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.38"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.38"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.61"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7jBW8laT0LsqxNAyM5nHxC/3a9f279d77673759f7f3f34eb7c60ca0/U-DCP-205-FREBLU-0092_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3aZApdGvsO7jiwUUZUHCP5/15ef993667cf68614f0f096321b355cf/U-DCP-205-FREBLU-0377_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/36c5X153MMrL60KKYV45Wl/0891cdca1fc77670eee8034306ec474a/U-DCP-205-FREBLU-0079_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7tGkMnO06KG7kvJZlHCfdx/11429a49a05bf4f313061f0341dfc302/U-DCP-205-FREBLU-0094_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-28T15:22:05+00:00",
       "sellingPrice": "49.90",
       "reportedTotalCost": "37.56",
       "unitSpread": "12.34",

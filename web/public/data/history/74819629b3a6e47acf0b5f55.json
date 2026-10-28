@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-27T14:44:31+00:00",
+    "capturedAt": "2026-10-28T15:08:11+00:00",
     "sellingPrice": "128.00",
-    "reportedTotalCost": "74.15",
-    "unitSpread": "53.85",
-    "marginPct": 42.07,
+    "reportedTotalCost": "84.79",
+    "unitSpread": "43.21",
+    "marginPct": 33.76,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "0.00"
+        "amount": "4.46"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "0.00"
+        "amount": "6.18"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 48,
+    "observationCount": 49,
     "lossObservations": 0,
-    "profitObservations": 48,
+    "profitObservations": 49,
     "lowestPrice": "128.00",
     "highestPrice": "128.00",
     "lowestCost": "74.15",
     "highestCost": "89.87",
-    "averageSpread": "42.32",
+    "averageSpread": "42.34",
     "firstObservedAt": "2026-09-11T12:51:37+00:00",
-    "lastObservedAt": "2026-10-27T14:44:31+00:00"
+    "lastObservedAt": "2026-10-28T15:08:11+00:00"
   },
   "history": [
     {
@@ -2112,6 +2112,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1q1F8WsT2BBG49XmnCYizg/8f3ca3871b2f050340379f54274161c9/Stracking_ring.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4nf6kJ60pRJrrkXnIMJAdS/6f29afa1f3ee01bdafda7649aabe3f61/14k-gold-stacker-ring-13318324060271.jpeg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6sfDeef2Y0pYXUqEloEjl/17bbc786febf667b103f47f40525ff7d/W-RNG-3-YG_4328.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7Eb6MvDXqLb5wmWbOuYV28/9fd5703dba4465f3216c7a4f308c4b6a/14k-gold-stacker-ring-13318324093039.jpeg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-28T15:08:11+00:00",
+      "sellingPrice": "128.00",
+      "reportedTotalCost": "84.79",
+      "unitSpread": "43.21",
+      "marginPct": 33.76,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "60.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.13"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.46"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.57"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.18"
         }
       ],
       "imageUrls": [

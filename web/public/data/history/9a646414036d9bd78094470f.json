@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-28T15:19:42+00:00",
+    "capturedAt": "2026-10-29T15:33:41+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "11.77",
     "unitSpread": "8.13",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "11.77",
     "highestCost": "11.77",
     "averageSpread": "8.13",
     "firstObservedAt": "2026-10-28T15:19:42+00:00",
-    "lastObservedAt": "2026-10-28T15:19:42+00:00"
+    "lastObservedAt": "2026-10-29T15:33:41+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-28T15:19:42+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "11.77",
+      "unitSpread": "8.13",
+      "marginPct": 40.85,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.05"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.72"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.60"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.40"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/UgH987fr5sEPU4y5VU0p7/4985cdd54a372224a36013b81f7ff6bc/U--320-Todd-Girl-Grey-Ditsy-Floral_184964.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6okmcMJAJgpIZmmo1Cd056/5d653e78d3563c56af98bc01c2f3046a/Organic_Cotton_Fit_and_Flare_Pocket_Dress_Multi_Katie_Sansom_4x5_Thumbnail.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2Ci8D3VLWmt2dMc9ZJ4Chd/d559e1d570f131938bf158768a179524/U--319-GREDITF.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/71oznVYL5h04OS1cdmD4bE/ffbaf9d455220a1ff540d8b00f89090d/U--319-GREDITF_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:33:41+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "11.77",
       "unitSpread": "8.13",

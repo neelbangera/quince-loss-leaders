@@ -8,24 +8,35 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "jewelry",
+    "categoryLabel": "Jewelry",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "5887",
+    "variantLabel": "Yellow Gold / 5",
+    "variantSize": "Yellow Gold",
+    "variantColor": "5",
+    "imageUrl": "https://images.quince.com/5csCuPgt2firLviixxAQFP/61addeb56f078a331f38c9bab27cd8c6/RNG-241_0156_2_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/5csCuPgt2firLviixxAQFP/61addeb56f078a331f38c9bab27cd8c6/RNG-241_0156_2_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1AbCfxF4lnEnHQN6uwuRjM/e291c6d227fb2cd044f47135bc83bf5a/W-BRAC-58_0198_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/17PtHAFLhippVVZiE1ngby/9ebed1573672dff28b47c993d770f92c/RNG-241_0102_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4BKH5y7JiBnTIE22S4c69x/b9ee4c8d7d8079250883993daeb41745/W-BRAC-58_0209_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-06T15:16:50+00:00",
+    "capturedAt": "2026-10-29T15:32:28+00:00",
     "sellingPrice": "2500.00",
-    "reportedTotalCost": "1105.60",
-    "unitSpread": "1394.40",
-    "marginPct": 55.78,
+    "reportedTotalCost": "1093.23",
+    "unitSpread": "1406.77",
+    "marginPct": 56.27,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "845.57"
+        "amount": "836.06"
       },
       {
         "label": "Crafting Cost",
@@ -45,26 +56,32 @@
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "63.68"
+        "amount": "62.30"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "137.47"
+        "amount": "135.99"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/5csCuPgt2firLviixxAQFP/61addeb56f078a331f38c9bab27cd8c6/RNG-241_0156_2_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1AbCfxF4lnEnHQN6uwuRjM/e291c6d227fb2cd044f47135bc83bf5a/W-BRAC-58_0198_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/17PtHAFLhippVVZiE1ngby/9ebed1573672dff28b47c993d770f92c/RNG-241_0102_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4BKH5y7JiBnTIE22S4c69x/b9ee4c8d7d8079250883993daeb41745/W-BRAC-58_0209_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "2500.00",
     "highestPrice": "2500.00",
-    "lowestCost": "1105.60",
+    "lowestCost": "1093.23",
     "highestCost": "1121.85",
-    "averageSpread": "1380.18",
+    "averageSpread": "1383.14",
     "firstObservedAt": "2026-09-23T13:51:43+00:00",
-    "lastObservedAt": "2026-10-06T15:16:50+00:00"
+    "lastObservedAt": "2026-10-29T15:32:28+00:00"
   },
   "history": [
     {
@@ -393,6 +410,53 @@
           "type": "duties_taxes_fees",
           "amount": "137.47"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:32:28+00:00",
+      "sellingPrice": "2500.00",
+      "reportedTotalCost": "1093.23",
+      "unitSpread": "1406.77",
+      "marginPct": 56.27,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "836.06"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "39.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "62.30"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "135.99"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5csCuPgt2firLviixxAQFP/61addeb56f078a331f38c9bab27cd8c6/RNG-241_0156_2_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1AbCfxF4lnEnHQN6uwuRjM/e291c6d227fb2cd044f47135bc83bf5a/W-BRAC-58_0198_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/17PtHAFLhippVVZiE1ngby/9ebed1573672dff28b47c993d770f92c/RNG-241_0102_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4BKH5y7JiBnTIE22S4c69x/b9ee4c8d7d8079250883993daeb41745/W-BRAC-58_0209_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

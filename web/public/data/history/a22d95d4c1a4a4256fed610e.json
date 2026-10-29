@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-28T15:19:28+00:00",
+    "capturedAt": "2026-10-29T15:17:10+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "9.79",
     "unitSpread": "10.11",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "9.79",
     "highestCost": "9.79",
     "averageSpread": "10.11",
     "firstObservedAt": "2026-10-20T13:36:49+00:00",
-    "lastObservedAt": "2026-10-28T15:19:28+00:00"
+    "lastObservedAt": "2026-10-29T15:17:10+00:00"
   },
   "history": [
     {
@@ -455,6 +455,52 @@
     },
     {
       "capturedAt": "2026-10-28T15:19:28+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "9.79",
+      "unitSpread": "10.11",
+      "marginPct": 50.8,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.52"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.67"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.83"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.60"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.82"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3fP1751eC0QpIUxI3gk2wf/7f350f9acbf7ab4e59ef42b62766d3d7/U--890-GRESTR_TOP_40417_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6chL8rlXv98debXMir9SMd/9387c3594ee28593895dbdf98cfce42a/U--890-GRESTR_TOP_40417_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1yDPue3SnW2xLEyDSPibqC/e5827f476b074f8c4eb68007af97daa2/U--890-GRESTR_BOTTOM_40449_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:17:10+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "9.79",
       "unitSpread": "10.11",

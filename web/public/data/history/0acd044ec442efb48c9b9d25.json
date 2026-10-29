@@ -23,18 +23,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-28T15:20:30+00:00",
+    "capturedAt": "2026-10-29T15:27:07+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "11.51",
-    "unitSpread": "8.39",
-    "marginPct": 42.16,
+    "reportedTotalCost": "13.13",
+    "unitSpread": "6.77",
+    "marginPct": 34.02,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "2.25"
+        "amount": "2.11"
       },
       {
         "label": "Crafting Cost",
@@ -49,7 +49,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "4.13"
+        "amount": "6.52"
       },
       {
         "label": "Credit Card Fees",
@@ -59,7 +59,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.00"
+        "amount": "1.37"
       }
     ],
     "imageUrls": [
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 27,
+    "observationCount": 28,
     "lossObservations": 0,
-    "profitObservations": 27,
+    "profitObservations": 28,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "11.51",
     "highestCost": "15.20",
-    "averageSpread": "7.84",
+    "averageSpread": "7.81",
     "firstObservedAt": "2026-10-03T13:43:27+00:00",
-    "lastObservedAt": "2026-10-28T15:20:30+00:00"
+    "lastObservedAt": "2026-10-29T15:27:07+00:00"
   },
   "history": [
     {
@@ -1251,6 +1251,51 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2eKkKXGzhhMXvsQKmjw6rc/d3ce3db0befab44ec8d5978fd92505e4/U--1658-COCSTR-12-18M-0107_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5DciznvHqVbXUelSxYa5sn/9abbcb1834b0421ecdc10884bf7b1788/U--1658-COCSTR-12-18M-0108_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:27:07+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "13.13",
+      "unitSpread": "6.77",
+      "marginPct": 34.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.11"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.40"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.52"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.58"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.37"
         }
       ],
       "imageUrls": [

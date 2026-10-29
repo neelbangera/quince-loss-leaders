@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-24T12:55:56+00:00",
+    "capturedAt": "2026-10-29T15:29:23+00:00",
     "sellingPrice": "22.90",
     "reportedTotalCost": "11.77",
     "unitSpread": "11.13",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "22.90",
     "highestPrice": "22.90",
     "lowestCost": "11.77",
     "highestCost": "11.77",
     "averageSpread": "11.13",
     "firstObservedAt": "2026-10-13T19:25:09+00:00",
-    "lastObservedAt": "2026-10-24T12:55:56+00:00"
+    "lastObservedAt": "2026-10-29T15:29:23+00:00"
   },
   "history": [
     {
@@ -532,6 +532,51 @@
     },
     {
       "capturedAt": "2026-10-24T12:55:56+00:00",
+      "sellingPrice": "22.90",
+      "reportedTotalCost": "11.77",
+      "unitSpread": "11.13",
+      "marginPct": 48.6,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1.62"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.77"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.45"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.64"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.61"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6SdgF6feqLtHb39V8kzN8O/7e6a9b78f148657c3bb33c55f7d9fed1/U--874-DEEBLU-081_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/68VHtG3UeA7Su2ODKQt3Fh/72a66d916bbd1512d1ac883a8bba3ef0/U--874-DEEBLU-087_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:29:23+00:00",
       "sellingPrice": "22.90",
       "reportedTotalCost": "11.77",
       "unitSpread": "11.13",

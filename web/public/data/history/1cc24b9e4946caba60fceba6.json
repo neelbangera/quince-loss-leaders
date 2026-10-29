@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-28T15:22:48+00:00",
+    "capturedAt": "2026-10-29T15:20:00+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "14.14",
     "unitSpread": "10.76",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 16,
+    "observationCount": 17,
     "lossObservations": 0,
-    "profitObservations": 16,
+    "profitObservations": 17,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "14.14",
     "highestCost": "14.14",
     "averageSpread": "10.76",
     "firstObservedAt": "2026-10-13T19:17:13+00:00",
-    "lastObservedAt": "2026-10-28T15:22:48+00:00"
+    "lastObservedAt": "2026-10-29T15:20:00+00:00"
   },
   "history": [
     {
@@ -760,6 +760,52 @@
     },
     {
       "capturedAt": "2026-10-28T15:22:48+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "14.14",
+      "unitSpread": "10.76",
+      "marginPct": 43.21,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.32"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.71"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.70"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1mSdqj1VugsmsbyQdxYb9R/e7537f1aeb37c98f723a026a7a15c955/U--1146_BABPIN_35813_EDITED_2.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/13huTK29TtfEwFJtt6l1yk/98b069665b3b7d8570740512577dbd09/U--1146_BABPIN_235864_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/mU6hFxOQtOsUw0AtGoJUK/44468fa2c8ddddc45c9de09a1602a1c9/U--1146_BABPIN_35813_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-29T15:20:00+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "14.14",
       "unitSpread": "10.76",

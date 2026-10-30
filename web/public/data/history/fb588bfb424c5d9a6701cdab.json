@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:29:54+00:00",
+    "capturedAt": "2026-10-30T15:18:50+00:00",
     "sellingPrice": "17.90",
-    "reportedTotalCost": "9.52",
-    "unitSpread": "8.38",
-    "marginPct": 46.82,
+    "reportedTotalCost": "11.34",
+    "unitSpread": "6.56",
+    "marginPct": 36.65,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "1.36"
+        "amount": "1.25"
       },
       {
         "label": "Packaging",
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.16"
+        "amount": "5.60"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "1.85"
+        "amount": "1.34"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "9.52",
-    "highestCost": "9.52",
-    "averageSpread": "8.38",
+    "highestCost": "11.34",
+    "averageSpread": "7.47",
     "firstObservedAt": "2026-10-29T15:29:54+00:00",
-    "lastObservedAt": "2026-10-29T15:29:54+00:00"
+    "lastObservedAt": "2026-10-30T15:18:50+00:00"
   },
   "history": [
     {
@@ -120,6 +120,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "1.85"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3e9wY5VNMDoP6kweRLUy7s/1a88edef7869745168b5a8feb99d5b13/U-635-BLUECAR-29942_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/77FntzZYlIP3k3zDaE5Ia5/2c99b599346d01cc5536c83f943778ea/U-635-BLUECAR-29942_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4fLVWgL4o4PkKKMGO04wF0/45b0456988aee33325e5db2324371d93/U-635-BLUECAR-29947_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:18:50+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "11.34",
+      "unitSpread": "6.56",
+      "marginPct": 36.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.26"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.25"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.33"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.60"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.34"
         }
       ],
       "imageUrls": [

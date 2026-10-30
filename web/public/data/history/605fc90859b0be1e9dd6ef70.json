@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:15:05+00:00",
+    "capturedAt": "2026-10-30T15:04:01+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "18.77",
     "unitSpread": "31.13",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "18.77",
     "highestCost": "18.77",
     "averageSpread": "31.13",
     "firstObservedAt": "2026-10-21T13:52:54+00:00",
-    "lastObservedAt": "2026-10-29T15:15:05+00:00"
+    "lastObservedAt": "2026-10-30T15:04:01+00:00"
   },
   "history": [
     {
@@ -459,6 +459,53 @@
     },
     {
       "capturedAt": "2026-10-29T15:15:05+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "18.77",
+      "unitSpread": "31.13",
+      "marginPct": 62.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.16"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.71"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.34"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.44"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.29"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.83"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1tDdZhdob5iKN12N4DoWVi/120d16a1b6c10cbbc0bc2d1a2cea0280/U-Tble-12-DUNE_172521.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6D8SHSH4LL1DsKcMqtskj8/baed96af133d06f701dbbf1117fdaaed/U-TBLE-12-DNE_0775.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/32XbxCgbBLbncoIKChANky/dad0d093739116e60f16bd2e3d8cec21/U-TBLE-12-DNE_0747.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2bsliq3Ps7Oqfx1eQpdxDM/b5e8c60cf30fd3317b66af75494be7e1/U-TBLE-12-DNE_0734.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:04:01+00:00",
       "sellingPrice": "49.90",
       "reportedTotalCost": "18.77",
       "unitSpread": "31.13",

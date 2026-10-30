@@ -28,11 +28,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:20:04+00:00",
+    "capturedAt": "2026-10-30T15:09:00+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "12.89",
-    "unitSpread": "7.01",
-    "marginPct": 35.23,
+    "reportedTotalCost": "15.85",
+    "unitSpread": "4.05",
+    "marginPct": 20.35,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -44,7 +44,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "1.65"
+        "amount": "1.47"
       },
       {
         "label": "Packaging",
@@ -54,7 +54,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.48"
+        "amount": "7.39"
       },
       {
         "label": "Credit Card Fees",
@@ -64,7 +64,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.80"
+        "amount": "2.03"
       }
     ],
     "imageUrls": [
@@ -78,16 +78,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "12.89",
-    "highestCost": "12.89",
-    "averageSpread": "7.01",
+    "highestCost": "15.85",
+    "averageSpread": "5.53",
     "firstObservedAt": "2026-10-29T15:20:04+00:00",
-    "lastObservedAt": "2026-10-29T15:20:04+00:00"
+    "lastObservedAt": "2026-10-30T15:09:00+00:00"
   },
   "history": [
     {
@@ -128,6 +128,56 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.80"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3GbHm7Rnbr9bO4dvlhEfy0/a36398ba54f4dcda881f454f166c6d65/U--809-LILSHEEP-040_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6pj2aeQIHHxbTR2LG1tMUy/569bbfe1914ecf53b4ae7441df8e4839/U--809-Little_Sheep-581_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5tESn7Pz3Ey9RtRzxgxo7o/53ecc2bbd2058cad88698e475c003867/U--809-Little_Sheep-586_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/mnwUzZV6AWCRrOtzqPaau/eb6b32fdf7d6afd7974f64e1ff126fe0/U--809-Little_Sheep-583_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5kX7NKFh9eTp6HTU3dJYiZ/977e626b22ca97cc17e069b37c96909d/U--809-Little_Sheep-587_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7ohvFq6vgJKmt0p3S8BSID/6cb01e8c428e85e60c5b404cfd6de67e/U--809-LILSHEEP-044_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7dfX2Xz1TIzOGaVSaByc6I/9e2cf7b32326d60d043295531f528e88/U--809-LILSHEEP-042_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:09:00+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "15.85",
+      "unitSpread": "4.05",
+      "marginPct": 20.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.10"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.47"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.39"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.03"
         }
       ],
       "imageUrls": [

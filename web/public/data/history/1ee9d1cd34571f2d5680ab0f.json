@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:14:23+00:00",
+    "capturedAt": "2026-10-30T15:03:19+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "15.45",
     "unitSpread": "24.45",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 14,
+    "observationCount": 15,
     "lossObservations": 0,
-    "profitObservations": 14,
+    "profitObservations": 15,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "15.45",
     "highestCost": "15.45",
     "averageSpread": "24.45",
     "firstObservedAt": "2026-10-13T19:17:58+00:00",
-    "lastObservedAt": "2026-10-29T15:14:23+00:00"
+    "lastObservedAt": "2026-10-30T15:03:19+00:00"
   },
   "history": [
     {
@@ -685,6 +685,53 @@
     },
     {
       "capturedAt": "2026-10-29T15:14:23+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "15.45",
+      "unitSpread": "24.45",
+      "marginPct": 61.28,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.32"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.55"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6Rb0Gt9EzabfkSy9XziQsR/9b4304d5cde770e8d999198389659de9/U-BEDD-120-NAT.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1jywCL8qIxkXeKC6RmG4Uf/205a2acdacecefac06b7959af2b63b69/U-BEDD-121-NAT_4.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/71M6Je4VrEKJpcqLZuztlE/b3d16d4d65648275f2c2565bc9226658/U-BEDD-121-NAT_3.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4D8yA5fZNF6rRNn9tEspoT/e9ad677482dc3bd3c3dfeb6b274d9531/U-BEDD-121-NAT_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:03:19+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "15.45",
       "unitSpread": "24.45",

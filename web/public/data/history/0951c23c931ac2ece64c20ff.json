@@ -23,18 +23,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:20:10+00:00",
+    "capturedAt": "2026-10-30T15:09:06+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "12.38",
-    "unitSpread": "7.52",
-    "marginPct": 37.79,
+    "reportedTotalCost": "7.30",
+    "unitSpread": "12.60",
+    "marginPct": 63.32,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "6.37"
+        "amount": "6.05"
       },
       {
         "label": "Crafting Cost",
@@ -49,7 +49,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "4.13"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -59,7 +59,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "1.73"
+        "amount": "1.10"
       }
     ],
     "imageUrls": [
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
-    "lowestCost": "12.38",
+    "lowestCost": "7.30",
     "highestCost": "12.38",
-    "averageSpread": "7.52",
+    "averageSpread": "10.06",
     "firstObservedAt": "2026-10-29T15:20:10+00:00",
-    "lastObservedAt": "2026-10-29T15:20:10+00:00"
+    "lastObservedAt": "2026-10-30T15:09:06+00:00"
   },
   "history": [
     {
@@ -118,6 +118,51 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "1.73"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5N52rIxN0m5eT6yPsg4cuS/abb5919198d493a95852f3ef444a67bf/U--830-ONFARM-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3DwGWdM4eFN1ePTzRT09M4/f950bcf98b7c57384199cabda8f66437/U--830-ONFARM-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:09:06+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "7.30",
+      "unitSpread": "12.60",
+      "marginPct": 63.32,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.05"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.15"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.10"
         }
       ],
       "imageUrls": [

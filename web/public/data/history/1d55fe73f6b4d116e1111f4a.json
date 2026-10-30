@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:15:09+00:00",
+    "capturedAt": "2026-10-30T15:04:05+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "17.13",
     "unitSpread": "12.77",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 21,
+    "observationCount": 22,
     "lossObservations": 0,
-    "profitObservations": 21,
+    "profitObservations": 22,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "17.13",
     "highestCost": "17.14",
     "averageSpread": "12.77",
     "firstObservedAt": "2026-09-27T14:00:02+00:00",
-    "lastObservedAt": "2026-10-29T15:15:09+00:00"
+    "lastObservedAt": "2026-10-30T15:04:05+00:00"
   },
   "history": [
     {
@@ -961,6 +961,51 @@
     },
     {
       "capturedAt": "2026-10-29T15:15:09+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "17.13",
+      "unitSpread": "12.77",
+      "marginPct": 42.71,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.23"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.45"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.45"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.90"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.80"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/JHxASMIvdhnN9Nv5AuJgf/db4960204d067495c832c28d37d3e858/U--1452-PICGIN-059-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7Jcpo6IufFT1uRnkSRrStm/67c1b7cac4c7bb28bc7011e88ea2c3c0/U--1452-PICGIN-059-EDITED_2.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:04:05+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "17.13",
       "unitSpread": "12.77",

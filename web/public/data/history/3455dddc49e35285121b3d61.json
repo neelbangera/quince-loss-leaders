@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:32:52+00:00",
+    "capturedAt": "2026-10-30T15:21:49+00:00",
     "sellingPrice": "100.00",
     "reportedTotalCost": "78.27",
     "unitSpread": "21.73",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "100.00",
     "highestPrice": "100.00",
     "lowestCost": "78.27",
     "highestCost": "78.27",
     "averageSpread": "21.73",
     "firstObservedAt": "2026-10-23T13:46:29+00:00",
-    "lastObservedAt": "2026-10-29T15:32:52+00:00"
+    "lastObservedAt": "2026-10-30T15:21:49+00:00"
   },
   "history": [
     {
@@ -133,6 +133,53 @@
     },
     {
       "capturedAt": "2026-10-29T15:32:52+00:00",
+      "sellingPrice": "100.00",
+      "reportedTotalCost": "78.27",
+      "unitSpread": "21.73",
+      "marginPct": 21.73,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "40.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "15.60"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.60"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.14"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.63"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "14.10"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1Xa2HUPkWdObOTIdWPt0xo/7dd2e0e4e7531d15829ad2a82f28ecfe/W-DRS-202-BLA_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/76aiPg0fMYrYDdzxUGxYUb/3c75fa3b65c6566f9a3ea60c82d6b98a/W-DRS-202-BLA_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/36f7JFvkTSactUG2h2o0rn/2ac7be0092f25ebf34b0157f39de44fa/W-DRS-202-BLA_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4E208Pi8evmPYjmSbIVvn3/f2e48ea0fd05a7f1cfa01d3216afc4d1/W-DRS-202-BLA_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:21:49+00:00",
       "sellingPrice": "100.00",
       "reportedTotalCost": "78.27",
       "unitSpread": "21.73",

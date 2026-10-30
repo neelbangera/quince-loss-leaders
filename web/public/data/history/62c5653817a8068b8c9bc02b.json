@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:29:23+00:00",
+    "capturedAt": "2026-10-30T15:18:20+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "50.69",
     "unitSpread": "9.21",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "50.69",
     "highestCost": "50.69",
     "averageSpread": "9.21",
     "firstObservedAt": "2026-10-29T15:29:23+00:00",
-    "lastObservedAt": "2026-10-29T15:29:23+00:00"
+    "lastObservedAt": "2026-10-30T15:18:20+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-29T15:29:23+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "50.69",
+      "unitSpread": "9.21",
+      "marginPct": 15.38,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "14.09"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.18"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.75"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.17"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "14.15"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3s6HYH9R5u5C5NudEwYyTR/b6f55f1033f6ee083a3d26b284f57806/U-BEDD-85-MST-0486_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6jxd83zk3urTyyzZgzjUXQ/33e11d206f9c6512389db19b3c54db3a/U-BEDD-85-MST_0646_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7gegRtAy6rHZRvP8cD1lJ/f4c0634ac557ebbd665d0821a2e29d5c/U-BEDD-85-MST_0640_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1pQWdbLVxSXNbokGcBjpHV/836262fd530327cc33b0a084fa82d73d/linen_quilt_bedding_technical_call_out.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:18:20+00:00",
       "sellingPrice": "59.90",
       "reportedTotalCost": "50.69",
       "unitSpread": "9.21",

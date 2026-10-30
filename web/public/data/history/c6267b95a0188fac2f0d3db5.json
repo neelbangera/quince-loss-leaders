@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-27T14:50:50+00:00",
+    "capturedAt": "2026-10-30T15:10:01+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "19.20",
     "unitSpread": "10.70",
@@ -68,20 +68,65 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "19.20",
     "highestCost": "19.20",
     "averageSpread": "10.70",
     "firstObservedAt": "2026-10-27T14:50:50+00:00",
-    "lastObservedAt": "2026-10-27T14:50:50+00:00"
+    "lastObservedAt": "2026-10-30T15:10:01+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-27T14:50:50+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "19.20",
+      "unitSpread": "10.70",
+      "marginPct": 35.79,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.80"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.76"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3ilGxE6hjOY7sN0JQNh4mo/8135fb17ca9ad9cda910f8f5291e0e6e/U--602-LILAC-6785_CROPPED_Kid.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/I4u2acSsSFm3495ZgXqSQ/73284fc83aaa2af57b6d3eda11e1ff0d/U--602-LILAC-DETAIL-6786_CROPPED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:10:01+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "19.20",
       "unitSpread": "10.70",

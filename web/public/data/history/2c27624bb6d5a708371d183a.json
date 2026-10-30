@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:23:35+00:00",
+    "capturedAt": "2026-10-30T15:12:31+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "15.63",
     "unitSpread": "4.27",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "15.63",
     "highestCost": "15.63",
     "averageSpread": "4.27",
     "firstObservedAt": "2026-10-26T15:11:56+00:00",
-    "lastObservedAt": "2026-10-29T15:23:35+00:00"
+    "lastObservedAt": "2026-10-30T15:12:31+00:00"
   },
   "history": [
     {
@@ -176,6 +176,52 @@
     },
     {
       "capturedAt": "2026-10-29T15:23:35+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "15.63",
+      "unitSpread": "4.27",
+      "marginPct": 21.46,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.28"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.97"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.88"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.64"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.36"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2YgoyFncFWdSCjP2XW0TSW/c9710bc9231b5a1b506ff18f9aebe44d/U--863-LEMONADE-150_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/pp779GMd7puKV42Qdhtq2/7ba44f85e070f0684e2f71e90433c6e4/Swimwear_callout-2.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4oJ6gZnkNt6kHRMzTf4SZY/ad2f52d5e567b67c069523662806d854/U--863-LEMONADE-145_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:12:31+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "15.63",
       "unitSpread": "4.27",

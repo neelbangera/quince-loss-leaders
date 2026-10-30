@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:34:24+00:00",
+    "capturedAt": "2026-10-30T15:23:21+00:00",
     "sellingPrice": "84.00",
     "reportedTotalCost": "23.19",
     "unitSpread": "60.81",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "84.00",
     "highestPrice": "84.00",
     "lowestCost": "23.19",
     "highestCost": "23.19",
     "averageSpread": "60.81",
     "firstObservedAt": "2026-10-19T16:19:25+00:00",
-    "lastObservedAt": "2026-10-29T15:34:24+00:00"
+    "lastObservedAt": "2026-10-30T15:23:21+00:00"
   },
   "history": [
     {
@@ -550,6 +550,53 @@
     },
     {
       "capturedAt": "2026-10-29T15:34:24+00:00",
+      "sellingPrice": "84.00",
+      "reportedTotalCost": "23.19",
+      "unitSpread": "60.81",
+      "marginPct": 72.39,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.33"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.17"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.07"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.12"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2nXav0f8IsRBeKIEUH1eAg/24216cd39cbe96093c8889d8188662df/U_BEDD_305_CAF_2152.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/KdBs6Z1Y90y3hn5F8N5jm/03e9a3151c47e39832f6b50d8db57017/U_BEDD_303_CAF_1968.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/12GJQTE6aebtrwGUQnN7qk/35d06732b5e8d42fb0868e2b9ebc3533/U_BEDD_303_CAF_1920.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4dqgPJcTgjBBE0EuOwxoN6/2a51331df0b7848627a091e8b2be8413/U-BEDD-CAF_303_2016.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:23:21+00:00",
       "sellingPrice": "84.00",
       "reportedTotalCost": "23.19",
       "unitSpread": "60.81",

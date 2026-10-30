@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:28:11+00:00",
+    "capturedAt": "2026-10-30T15:17:08+00:00",
     "sellingPrice": "17.90",
-    "reportedTotalCost": "10.63",
-    "unitSpread": "7.27",
-    "marginPct": 40.61,
+    "reportedTotalCost": "12.21",
+    "unitSpread": "5.69",
+    "marginPct": 31.79,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -41,7 +41,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "1.40"
+        "amount": "1.27"
       },
       {
         "label": "Packaging",
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.47"
+        "amount": "5.71"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.10"
+        "amount": "1.57"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "10.63",
-    "highestCost": "10.63",
-    "averageSpread": "7.27",
+    "highestCost": "12.21",
+    "averageSpread": "7.09",
     "firstObservedAt": "2026-10-21T13:48:18+00:00",
-    "lastObservedAt": "2026-10-29T15:28:11+00:00"
+    "lastObservedAt": "2026-10-30T15:17:08+00:00"
   },
   "history": [
     {
@@ -454,6 +454,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.10"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3VyUOHshpIimnVb6SKCWXk/4fba5a91b67e8a699fbaa93aa3cfe919/U--905-SUNSHIN-019_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7xxQdJyhL6khL3jRXXG78I/fccf5de7dde44f9ed18d733a8743cde3/U--905-Sunshine-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3EvjZmesRCPkFX3Q5FEx55/5977c1a87e03cb3a630df6ed378b9ad9/U--905-Sunshine.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4W4Jit5msODmfJc33XCVVz/59eb7caf7d608a94522ae6a8c0c97bb3/U--905-SUNSHIN-021_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:17:08+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "12.21",
+      "unitSpread": "5.69",
+      "marginPct": 31.79,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.27"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
         }
       ],
       "imageUrls": [

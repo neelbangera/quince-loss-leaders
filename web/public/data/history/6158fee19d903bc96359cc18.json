@@ -26,11 +26,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:18:57+00:00",
+    "capturedAt": "2026-10-30T15:07:52+00:00",
     "sellingPrice": "24.90",
-    "reportedTotalCost": "14.17",
-    "unitSpread": "10.73",
-    "marginPct": 43.09,
+    "reportedTotalCost": "16.84",
+    "unitSpread": "8.06",
+    "marginPct": 32.37,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -42,7 +42,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "2.40"
+        "amount": "2.03"
       },
       {
         "label": "Packaging",
@@ -52,7 +52,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.54"
+        "amount": "6.72"
       },
       {
         "label": "Credit Card Fees",
@@ -62,7 +62,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.50"
+        "amount": "2.36"
       }
     ],
     "imageUrls": [
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 42,
+    "observationCount": 43,
     "lossObservations": 0,
-    "profitObservations": 42,
+    "profitObservations": 43,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "14.17",
-    "highestCost": "14.29",
-    "averageSpread": "10.68",
+    "highestCost": "16.84",
+    "averageSpread": "10.62",
     "firstObservedAt": "2026-09-19T12:39:07+00:00",
-    "lastObservedAt": "2026-10-29T15:18:57+00:00"
+    "lastObservedAt": "2026-10-30T15:07:52+00:00"
   },
   "history": [
     {
@@ -1905,6 +1905,54 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5zwubldEoM8doOIfMkUwG1/4046e398a2ae08528aa48a49dda79277/U--447-PINWHIM.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1udCURSpVX1aFhAr7ZXfAq/451aa50ce67aab02fbd00b19d1e72e5f/U--151_PINWHIM_29556_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5z6gpy5oVXZm5kjzdRw9nv/5847b73f00de2b5370e9475b9c225e16/U--151_PINWHIM_29549_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1OmuS6Ss1QPoUzmdaFFrSb/36d2d29057558ae3d251ea09374fe43e/U--151_PINWHIM_29558_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1E3edoWzOeAHDroK4meBAU/6a517367dd207c92643e0a700f1352ff/U--151_PINWHIM_29560_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:07:52+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "16.84",
+      "unitSpread": "8.06",
+      "marginPct": 32.37,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.03"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.61"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.72"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.72"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.36"
         }
       ],
       "imageUrls": [

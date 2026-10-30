@@ -8,13 +8,26 @@
     "brand": null,
     "department": "women",
     "departmentLabel": "Women",
-    "category": "tops",
-    "categoryLabel": "Tops",
+    "category": "sweaters",
+    "categoryLabel": "Sweaters",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "2641",
+    "variantLabel": "Warm Taupe / XS",
+    "variantSize": "Warm Taupe",
+    "variantColor": "XS",
+    "imageUrl": "https://images.quince.com/488DQg21z6tW5J2yg0aElP/3022e71801f0756b217d1ffea041d373/W-SWT-39-HWT_0583_copy.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/488DQg21z6tW5J2yg0aElP/3022e71801f0756b217d1ffea041d373/W-SWT-39-HWT_0583_copy.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1f71TgQIzLA5ULCKqQyMb4/3369dacf60b6641458eeab4091df65ea/W-SWT-39-HWT_0583.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6UWWqIx2uO3yzOzGAHvsOy/6a05adc30f31f61d291524364b7f6df8/W-SWT-39-HWT_0628.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5OBHbxHE4B6Zmye9IEeHSd/9ac90075dc98120739c33f72ae16621c/W-SWT-39-HWT_0588.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7xegXNCbka113YomShN77z/7c9293d38d90c9052ce501779c24dd7a/W-SWT-39-HWT_0609.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6DRRkyHuRclFMeyba611bL/2b3ac9a9c6773a026a9265e5d3156660/W-SWT-39-HWT_0604.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-11T15:06:59+00:00",
+    "capturedAt": "2026-10-30T15:17:41+00:00",
     "sellingPrice": "49.90",
     "reportedTotalCost": "30.09",
     "unitSpread": "19.81",
@@ -52,19 +65,27 @@
         "type": "duties_taxes_fees",
         "amount": "6.89"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/488DQg21z6tW5J2yg0aElP/3022e71801f0756b217d1ffea041d373/W-SWT-39-HWT_0583_copy.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1f71TgQIzLA5ULCKqQyMb4/3369dacf60b6641458eeab4091df65ea/W-SWT-39-HWT_0583.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6UWWqIx2uO3yzOzGAHvsOy/6a05adc30f31f61d291524364b7f6df8/W-SWT-39-HWT_0628.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5OBHbxHE4B6Zmye9IEeHSd/9ac90075dc98120739c33f72ae16621c/W-SWT-39-HWT_0588.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/7xegXNCbka113YomShN77z/7c9293d38d90c9052ce501779c24dd7a/W-SWT-39-HWT_0609.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6DRRkyHuRclFMeyba611bL/2b3ac9a9c6773a026a9265e5d3156660/W-SWT-39-HWT_0604.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 13,
+    "observationCount": 14,
     "lossObservations": 0,
-    "profitObservations": 13,
+    "profitObservations": 14,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "30.09",
     "highestCost": "32.14",
-    "averageSpread": "18.23",
+    "averageSpread": "18.35",
     "firstObservedAt": "2026-09-11T13:08:08+00:00",
-    "lastObservedAt": "2026-10-11T15:06:59+00:00"
+    "lastObservedAt": "2026-10-30T15:17:41+00:00"
   },
   "history": [
     {
@@ -598,6 +619,55 @@
           "type": "duties_taxes_fees",
           "amount": "6.89"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:17:41+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "30.09",
+      "unitSpread": "19.81",
+      "marginPct": 39.7,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.15"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "7.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.60"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.39"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/488DQg21z6tW5J2yg0aElP/3022e71801f0756b217d1ffea041d373/W-SWT-39-HWT_0583_copy.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1f71TgQIzLA5ULCKqQyMb4/3369dacf60b6641458eeab4091df65ea/W-SWT-39-HWT_0583.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6UWWqIx2uO3yzOzGAHvsOy/6a05adc30f31f61d291524364b7f6df8/W-SWT-39-HWT_0628.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5OBHbxHE4B6Zmye9IEeHSd/9ac90075dc98120739c33f72ae16621c/W-SWT-39-HWT_0588.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7xegXNCbka113YomShN77z/7c9293d38d90c9052ce501779c24dd7a/W-SWT-39-HWT_0609.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6DRRkyHuRclFMeyba611bL/2b3ac9a9c6773a026a9265e5d3156660/W-SWT-39-HWT_0604.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

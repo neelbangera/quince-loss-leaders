@@ -29,7 +29,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-29T15:21:01+00:00",
+    "capturedAt": "2026-10-30T15:09:57+00:00",
     "sellingPrice": "297.90",
     "reportedTotalCost": "68.64",
     "unitSpread": "229.26",
@@ -40,7 +40,7 @@
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "22.30"
+        "amount": "22.26"
       },
       {
         "label": "Crafting Cost",
@@ -50,7 +50,7 @@
       {
         "label": "Packaging",
         "type": "packaging",
-        "amount": "2.10"
+        "amount": "2.14"
       },
       {
         "label": "Freight & Handling",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 43,
+    "observationCount": 44,
     "lossObservations": 0,
-    "profitObservations": 43,
+    "profitObservations": 44,
     "lowestPrice": "297.90",
     "highestPrice": "297.90",
     "lowestCost": "53.33",
     "highestCost": "72.05",
-    "averageSpread": "229.53",
+    "averageSpread": "229.52",
     "firstObservedAt": "2026-09-09T13:08:32+00:00",
-    "lastObservedAt": "2026-10-29T15:21:01+00:00"
+    "lastObservedAt": "2026-10-30T15:09:57+00:00"
   },
   "history": [
     {
@@ -1962,6 +1962,57 @@
           "label": "Packaging",
           "type": "packaging",
           "amount": "2.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.57"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.46"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "17.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/26oWCTiw3kAqV6JVChKsLQ/0988c95696b9e186023f9426a3b18318/check_in_dark_green.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/9TXRD69j88VHpbWCPAnCz/edb944b5b71d9d56a6b4a86791ce8296/Voyage_Nylon_Split_Travel_Bag.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3JfeBUibHvgUfzGOC6ZNGa/981eca61d8caa1c4188f25133465ab86/U-OTH-23-DGRN_1480.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5q3QOoD6XjiHHKDMSYjVIF/147523a480973499783f935fb8ced3e5/U-BAG-4-DARGRE_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2Wdp0l7gP4Ena26CiYkaF2/76470df32576bd50fc00f61e12ffdb70/check_in__black.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/yyGacMQg6U9asZ6AxIaxc/8ddac3e14541fd780dba156751c8404f/U-OTH-23-BLK_0987.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/qOQ0gXTSjuHBZ1mlyQH4k/360d1a5a64d87a7702cf04a186238c54/U-BAG-4-BLK_Voyage_Nylon_Split_Travel_Bag_Black_PRODUCT_ONLY_1740_CROPPED__1_.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/56wxMhI3N84NFuH182mm6n/6b4f8c43a624179dc0e54906fbdca9b6/check_in__beige.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:09:57+00:00",
+      "sellingPrice": "297.90",
+      "reportedTotalCost": "68.64",
+      "unitSpread": "229.26",
+      "marginPct": 76.96,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "22.26"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "16.01"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.14"
         },
         {
           "label": "Freight & Handling",

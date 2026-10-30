@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:28:33+00:00",
+    "capturedAt": "2026-10-30T15:05:38+00:00",
     "sellingPrice": "80.00",
     "reportedTotalCost": "78.67",
     "unitSpread": "1.33",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "80.00",
     "highestPrice": "80.00",
     "lowestCost": "78.67",
     "highestCost": "78.67",
     "averageSpread": "1.33",
     "firstObservedAt": "2026-10-25T13:28:33+00:00",
-    "lastObservedAt": "2026-10-25T13:28:33+00:00"
+    "lastObservedAt": "2026-10-30T15:05:38+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-25T13:28:33+00:00",
+      "sellingPrice": "80.00",
+      "reportedTotalCost": "78.67",
+      "unitSpread": "1.33",
+      "marginPct": 1.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "25.04"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.83"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.38"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "21.65"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.90"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "25.87"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/IwIH8EyNxXKHY2KVQrsyh/789e91011a1e2095813143e422e8e0d1/U-BATH-103-GRA-0148_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/53E8VZD9c3Yrqs4iaORC9u/bafebb950dbd550423e97be6fcef5718/U-BATH-103-GRA-0133_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2Ojqpb3Szo7r8nJwEMzJWE/651b299243bb6e672cc753b67ea6eea7/U-BATH-102-GRA-0359_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/bOoVxMgCwSINAnb4KQGNH/c8afab7a585ffe01888dce755a1ea33b/U-BATH-101-GRA-0232_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2jclvhe70uVBbA8bKOofeL/16d96899028af3079a8a2fbc16b05b49/U-BATH-104-COLLECTION-0330_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-30T15:05:38+00:00",
       "sellingPrice": "80.00",
       "reportedTotalCost": "78.67",
       "unitSpread": "1.33",

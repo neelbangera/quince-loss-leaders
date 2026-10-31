@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-30T15:11:00+00:00",
+    "capturedAt": "2026-10-31T14:35:34+00:00",
     "sellingPrice": "22.90",
     "reportedTotalCost": "12.50",
     "unitSpread": "10.40",
@@ -68,20 +68,65 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "22.90",
     "highestPrice": "22.90",
     "lowestCost": "12.50",
     "highestCost": "12.50",
     "averageSpread": "10.40",
     "firstObservedAt": "2026-10-30T15:11:00+00:00",
-    "lastObservedAt": "2026-10-30T15:11:00+00:00"
+    "lastObservedAt": "2026-10-31T14:35:34+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-10-30T15:11:00+00:00",
+      "sellingPrice": "22.90",
+      "reportedTotalCost": "12.50",
+      "unitSpread": "10.40",
+      "marginPct": 45.41,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.88"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.54"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/Ahk4hEe40bppiwPJUycml/d20b29df176169254be108dc1d016c3f/U--1044-TANEAR-148_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7KGDFydaIoKBmLHir7dj1R/4c219d8c2e4dc6662f29ea3616af6b62/U--1044-TANEAR-150_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-31T14:35:34+00:00",
       "sellingPrice": "22.90",
       "reportedTotalCost": "12.50",
       "unitSpread": "10.40",

@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-22T13:57:35+00:00",
+    "capturedAt": "2026-10-31T14:36:10+00:00",
     "sellingPrice": "17.90",
-    "reportedTotalCost": "10.89",
-    "unitSpread": "7.01",
-    "marginPct": 39.16,
+    "reportedTotalCost": "12.21",
+    "unitSpread": "5.69",
+    "marginPct": 31.79,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -41,7 +41,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "1.40"
+        "amount": "1.27"
       },
       {
         "label": "Packaging",
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.73"
+        "amount": "5.71"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.10"
+        "amount": "1.57"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "10.89",
-    "highestCost": "10.89",
-    "averageSpread": "7.01",
+    "highestCost": "12.21",
+    "averageSpread": "6.68",
     "firstObservedAt": "2026-10-19T16:04:10+00:00",
-    "lastObservedAt": "2026-10-22T13:57:35+00:00"
+    "lastObservedAt": "2026-10-31T14:36:10+00:00"
   },
   "history": [
     {
@@ -222,6 +222,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.10"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6UJPsaO5YB3nKyw1yztqdT/1a4bb5b7aff728737544bc0dfc51d8ba/U--905-ICEBEAR-030_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/EHwniWjCuaRMXqYWj8Td4/eecee3eceaf578feb8354857c97d6ece/U--905-Ice_Cream_Bears-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3oENrIIEPxUv75eFS0AuqM/95c16214bd7ae53f6fbc72287931ebd0/U--905-Ice_Cream_Bears.jpg?w=200&q=50&h=249&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2C9TaHwwUmLOT6qriEBodd/0ccc521fa50d22c7bb9ba5d9867c54f7/U--905-ICEBEAR-035_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-31T14:36:10+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "12.21",
+      "unitSpread": "5.69",
+      "marginPct": 31.79,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.27"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
         }
       ],
       "imageUrls": [

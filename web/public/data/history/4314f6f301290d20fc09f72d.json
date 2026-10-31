@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-30T15:04:55+00:00",
+    "capturedAt": "2026-10-31T14:47:20+00:00",
     "sellingPrice": "159.90",
     "reportedTotalCost": "121.24",
     "unitSpread": "38.66",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 10,
+    "observationCount": 11,
     "lossObservations": 0,
-    "profitObservations": 10,
+    "profitObservations": 11,
     "lowestPrice": "159.90",
     "highestPrice": "159.90",
     "lowestCost": "121.24",
     "highestCost": "121.24",
     "averageSpread": "38.66",
     "firstObservedAt": "2026-10-21T13:51:34+00:00",
-    "lastObservedAt": "2026-10-30T15:04:55+00:00"
+    "lastObservedAt": "2026-10-31T14:47:20+00:00"
   },
   "history": [
     {
@@ -487,6 +487,51 @@
     },
     {
       "capturedAt": "2026-10-30T15:04:55+00:00",
+      "sellingPrice": "159.90",
+      "reportedTotalCost": "121.24",
+      "unitSpread": "38.66",
+      "marginPct": 24.18,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "36.21"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "60.77"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "6.08"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "14.54"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.64"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5WxvJPBslT1XwKX7s5wfN6/dbf8da324f62c6436e5e55e607654c70/Blue_Plant_by_Marco_Marella_White_hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1yN2v8G78s70eaHxOso6J2/813877984eae3431a45ac8bf503d05cd/Blue_Plant_by_Marco_Marella_White_20x20.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-31T14:47:20+00:00",
       "sellingPrice": "159.90",
       "reportedTotalCost": "121.24",
       "unitSpread": "38.66",

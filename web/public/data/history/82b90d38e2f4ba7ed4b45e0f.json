@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-28T15:14:01+00:00",
+    "capturedAt": "2026-10-31T14:39:51+00:00",
     "sellingPrice": "29.90",
-    "reportedTotalCost": "19.74",
-    "unitSpread": "10.16",
-    "marginPct": 33.98,
+    "reportedTotalCost": "20.96",
+    "unitSpread": "8.94",
+    "marginPct": 29.9,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,7 +40,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "5.46"
+        "amount": "5.04"
       },
       {
         "label": "Packaging",
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.47"
+        "amount": "6.45"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "5.00"
+        "amount": "3.66"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "19.74",
-    "highestCost": "19.74",
-    "averageSpread": "10.16",
+    "highestCost": "20.96",
+    "averageSpread": "9.55",
     "firstObservedAt": "2026-10-28T15:14:01+00:00",
-    "lastObservedAt": "2026-10-28T15:14:01+00:00"
+    "lastObservedAt": "2026-10-31T14:39:51+00:00"
   },
   "history": [
     {
@@ -120,6 +120,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "5.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3vc6gVLKcyRtznjSmhfzyW/b3628aa664e46616c233098b6e9d4553/U--1341-LIGWAS_030_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1aD4CiVwmFhSKqUqsLDsvh/ffee4ccd1307a22218a3685c6775f477/U--1341-LIGWAS_039_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4k6HLmwCsHdI2fCrWIBeqx/06ae0b8f8bcb771653f3320d17d9db90/U--1341-LIGWAS_089_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-10-31T14:39:51+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "20.96",
+      "unitSpread": "8.94",
+      "marginPct": 29.9,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.67"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.04"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.28"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.45"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.86"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.66"
         }
       ],
       "imageUrls": [

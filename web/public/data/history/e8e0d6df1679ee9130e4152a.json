@@ -8,17 +8,27 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "6100",
+    "variantLabel": "Natural / One Size",
+    "variantSize": "Natural",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/ADERZcu2Qw8PYG2EpWfW8/9cfe651f3743ad86448aae6ff9e312a8/U_TBLE_137_NAT_6191_EDITED_8.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/ADERZcu2Qw8PYG2EpWfW8/9cfe651f3743ad86448aae6ff9e312a8/U_TBLE_137_NAT_6191_EDITED_8.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1IDewVSa8vVgY49nZD8S3G/0e3a5e26cff9a98fa06dc18d1ac9a2d8/U_TBLE_137_NAT_7035_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/1JK8sWZXo2vmVyerlZMjbo/9a4e52f04353232d561ebb784ce9a119/U_TBLE_137_NAT_7054_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-05T17:11:24+00:00",
+    "capturedAt": "2026-11-01T15:17:14+00:00",
     "sellingPrice": "69.90",
-    "reportedTotalCost": "45.80",
-    "unitSpread": "24.10",
-    "marginPct": 34.48,
+    "reportedTotalCost": "36.13",
+    "unitSpread": "33.77",
+    "marginPct": 48.31,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +50,36 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "14.21"
+        "amount": "4.48"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.74"
+        "amount": "1.80"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "3.92"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/ADERZcu2Qw8PYG2EpWfW8/9cfe651f3743ad86448aae6ff9e312a8/U_TBLE_137_NAT_6191_EDITED_8.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1IDewVSa8vVgY49nZD8S3G/0e3a5e26cff9a98fa06dc18d1ac9a2d8/U_TBLE_137_NAT_7035_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/1JK8sWZXo2vmVyerlZMjbo/9a4e52f04353232d561ebb784ce9a119/U_TBLE_137_NAT_7054_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
-    "lowestCost": "45.80",
+    "lowestCost": "36.13",
     "highestCost": "45.80",
-    "averageSpread": "24.10",
+    "averageSpread": "28.94",
     "firstObservedAt": "2026-10-05T17:11:24+00:00",
-    "lastObservedAt": "2026-10-05T17:11:24+00:00"
+    "lastObservedAt": "2026-11-01T15:17:14+00:00"
   },
   "history": [
     {
@@ -106,6 +121,52 @@
           "type": "duties_taxes_fees",
           "amount": "3.92"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-11-01T15:17:14+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "36.13",
+      "unitSpread": "33.77",
+      "marginPct": 48.31,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "21.93"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.48"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.92"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/ADERZcu2Qw8PYG2EpWfW8/9cfe651f3743ad86448aae6ff9e312a8/U_TBLE_137_NAT_6191_EDITED_8.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1IDewVSa8vVgY49nZD8S3G/0e3a5e26cff9a98fa06dc18d1ac9a2d8/U_TBLE_137_NAT_7035_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1JK8sWZXo2vmVyerlZMjbo/9a4e52f04353232d561ebb784ce9a119/U_TBLE_137_NAT_7054_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

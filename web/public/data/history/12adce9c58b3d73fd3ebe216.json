@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-01T15:19:54+00:00",
+    "capturedAt": "2026-11-02T18:34:02+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "16.50",
     "unitSpread": "25.50",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "16.47",
     "highestCost": "16.50",
     "averageSpread": "25.52",
     "firstObservedAt": "2026-09-19T12:35:05+00:00",
-    "lastObservedAt": "2026-11-01T15:19:54+00:00"
+    "lastObservedAt": "2026-11-02T18:34:02+00:00"
   },
   "history": [
     {
@@ -252,6 +252,54 @@
     },
     {
       "capturedAt": "2026-11-01T15:19:54+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "16.50",
+      "unitSpread": "25.50",
+      "marginPct": 60.71,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.05"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.92"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.41"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.92"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1lF5jQaYrBsEek1SuDKgdq/f4876b7baf8530c54fb05c39283f13c2/W-HKT-45-CLAWHI_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/52HAGzfiSyZ8SVH13PMP8V/78f3511f55cd97512c382e8f6643687d/W-HKT-45-CLAWHI_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6ubK1v23CS8O3eXDfR5kof/0b805b75d9ad5ddda36ad2a0e9efa724/W-HKT-45-CLAWHI_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3uhFwaKg7naggk0IWkzxn2/a27b083e106a918d2c73ddf5daaa570b/W-HKT-45-CLAWHI_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5sMmChgnPrGJaAPHEtgYZ2/4202a639cff059c49a3919a7659995bb/W-HKT-45-CLAWHI_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-02T18:34:02+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "16.50",
       "unitSpread": "25.50",

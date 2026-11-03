@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-01T15:25:39+00:00",
+    "capturedAt": "2026-11-03T16:33:37+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "35.50",
     "unitSpread": "4.40",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "35.50",
     "highestCost": "35.50",
     "averageSpread": "4.40",
     "firstObservedAt": "2026-11-01T15:25:39+00:00",
-    "lastObservedAt": "2026-11-01T15:25:39+00:00"
+    "lastObservedAt": "2026-11-03T16:33:37+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-01T15:25:39+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "35.50",
+      "unitSpread": "4.40",
+      "marginPct": 11.03,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.20"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.18"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.75"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.17"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.52"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6x65yzsHbIdIiYlTMwq4vM/317d4519f3c15fd43e05468326eed5ed/U--BEDD-152-PEN-048_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6Zs6uuQ4CLoFNdOLqhKPAH/627c92722aecc8cb4fe7f8e8ddc0a6f5/U_BEDD_33_PEN5529_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/57hFUSk2hbQPXHMUqKw1q/d41e34ef4160e61e3cc1e128a9cd760c/U_BEDD_152_PEN_5469_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2pLCuSo83nFT5opbwWn3j3/e2ca6817805123167ec58192cf62d5a6/linen_technical_call_out.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-03T16:33:37+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "35.50",
       "unitSpread": "4.40",

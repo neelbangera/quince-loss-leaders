@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-01T15:10:46+00:00",
+    "capturedAt": "2026-11-03T16:18:43+00:00",
     "sellingPrice": "24.90",
-    "reportedTotalCost": "14.65",
-    "unitSpread": "10.25",
-    "marginPct": 41.16,
+    "reportedTotalCost": "20.27",
+    "unitSpread": "4.63",
+    "marginPct": 18.59,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -41,7 +41,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "3.25"
+        "amount": "2.79"
       },
       {
         "label": "Packaging",
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "2.36"
+        "amount": "6.33"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.20"
+        "amount": "4.31"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "14.65",
-    "highestCost": "14.65",
-    "averageSpread": "10.25",
+    "highestCost": "20.27",
+    "averageSpread": "9.31",
     "firstObservedAt": "2026-10-19T16:03:16+00:00",
-    "lastObservedAt": "2026-11-01T15:10:46+00:00"
+    "lastObservedAt": "2026-11-03T16:18:43+00:00"
   },
   "history": [
     {
@@ -304,6 +304,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/t7LbZlShI4w0PkjQQI4kJ/683c38c6f19f04b7c4d110eaebd3f2d5/U--999-DEENAV_35736_EDITED_copy.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7lKOrYAT0LN6oNsyIWqbwz/4bdf7efbe41378a9e8dbb5a00c0a2dd6/U--999-DEENAV_35636_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6zXaU4vc8YqErlnztySQxm/cca30f346a7db3ca3d26c17d9a3b8aa7/U--999-DEENAV_35642_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3bfRoAqa4DXZaTP8G89Gge/44804e9409944624fad9f28ab2564eb5/U--999-DEENAV_35646_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-03T16:18:43+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "20.27",
+      "unitSpread": "4.63",
+      "marginPct": 18.59,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.72"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.79"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.33"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.77"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.31"
         }
       ],
       "imageUrls": [

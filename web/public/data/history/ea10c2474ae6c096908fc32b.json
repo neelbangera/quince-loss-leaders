@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-03T16:23:21+00:00",
+    "capturedAt": "2026-11-04T16:39:19+00:00",
     "sellingPrice": "69.90",
     "reportedTotalCost": "40.61",
     "unitSpread": "29.29",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "69.90",
     "highestPrice": "69.90",
     "lowestCost": "40.61",
     "highestCost": "40.61",
     "averageSpread": "29.29",
     "firstObservedAt": "2026-11-03T16:23:21+00:00",
-    "lastObservedAt": "2026-11-03T16:23:21+00:00"
+    "lastObservedAt": "2026-11-04T16:39:19+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-03T16:23:21+00:00",
+      "sellingPrice": "69.90",
+      "reportedTotalCost": "40.61",
+      "unitSpread": "29.29",
+      "marginPct": 41.9,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.93"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.68"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "16.27"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.79"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.94"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1lCsIXgi0Bxoks99LO4tPk/60f9fbcc3b74921ae1c9fb4dcb57a5ad/U-THRW-2-CHOC-50X70-0023_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/gRRsiopY9DXlJ4GN05dy8/4b499dad44c031064b8f58a8a80930f6/U-THRW-2-CHOC-50X70-0130_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/14nW0Y6O6gC8BKo7cz3gQD/dd64f669b34b82777dd88dc46d9dac47/U-THRW-2-CHOC-50X70-0026_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-04T16:39:19+00:00",
       "sellingPrice": "69.90",
       "reportedTotalCost": "40.61",
       "unitSpread": "29.29",

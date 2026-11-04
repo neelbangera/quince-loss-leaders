@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-03T16:18:04+00:00",
+    "capturedAt": "2026-11-04T16:45:13+00:00",
     "sellingPrice": "24.90",
     "reportedTotalCost": "20.13",
     "unitSpread": "4.77",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
     "lowestCost": "15.55",
     "highestCost": "20.13",
-    "averageSpread": "8.59",
+    "averageSpread": "8.04",
     "firstObservedAt": "2026-10-19T16:01:10+00:00",
-    "lastObservedAt": "2026-11-03T16:18:04+00:00"
+    "lastObservedAt": "2026-11-04T16:45:13+00:00"
   },
   "history": [
     {
@@ -315,6 +315,53 @@
     },
     {
       "capturedAt": "2026-11-03T16:18:04+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "20.13",
+      "unitSpread": "4.77",
+      "marginPct": 19.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.65"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.06"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.67"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/cIbkC45PyiXwTu50Hq35z/3b93f35733eeb36a486b4ea094493bb3/U--998-DEENAV_35719_EDITED_copy.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5gtx1cpKUjpkzOFLZcAjka/a92d39a8daedeef8867bae0a63e07ab0/U--998-DEENAV_35723_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1IRnJmFWflwGf8lMYT3rx0/3e39d55b7fd837281047cdaff4666931/U--998-DEENAV_35729_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/CtryN7mm68lRAst5Ucbuc/0455f69afc2bbcb8d383176eb92b9baf/U--998-DEENAV_35733_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-04T16:45:13+00:00",
       "sellingPrice": "24.90",
       "reportedTotalCost": "20.13",
       "unitSpread": "4.77",

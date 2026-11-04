@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-02T18:27:52+00:00",
+    "capturedAt": "2026-11-04T16:28:44+00:00",
     "sellingPrice": "44.90",
     "reportedTotalCost": "23.05",
     "unitSpread": "21.85",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "23.05",
     "highestCost": "23.05",
     "averageSpread": "21.85",
     "firstObservedAt": "2026-11-02T18:27:52+00:00",
-    "lastObservedAt": "2026-11-02T18:27:52+00:00"
+    "lastObservedAt": "2026-11-04T16:28:44+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-02T18:27:52+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "23.05",
+      "unitSpread": "21.85",
+      "marginPct": 48.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.53"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.26"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.36"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hOh55xLOmk0auGEj79Vp7/a27f0513cc3f220ecf689f00e31c396a/U-TEXT-44-PIN-41955_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5NcDjwBQwFweeLDJy3F84m/f52d2fc4023cc9878b28a2213c9535b7/U-TEXT-44-PIN-0285_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3I0HFdiNyh9PUHEMueYueR/ae7acad54dc0259a3c11de36c2f338ec/U-TEXT-44-PIN-41984_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-04T16:28:44+00:00",
       "sellingPrice": "44.90",
       "reportedTotalCost": "23.05",
       "unitSpread": "21.85",

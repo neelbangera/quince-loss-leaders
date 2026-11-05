@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-03T16:24:22+00:00",
+    "capturedAt": "2026-11-05T16:28:50+00:00",
     "sellingPrice": "80.00",
     "reportedTotalCost": "42.39",
     "unitSpread": "37.61",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "80.00",
     "highestPrice": "80.00",
     "lowestCost": "42.39",
     "highestCost": "42.39",
     "averageSpread": "37.61",
     "firstObservedAt": "2026-11-03T16:24:22+00:00",
-    "lastObservedAt": "2026-11-03T16:24:22+00:00"
+    "lastObservedAt": "2026-11-05T16:28:50+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-03T16:24:22+00:00",
+      "sellingPrice": "80.00",
+      "reportedTotalCost": "42.39",
+      "unitSpread": "37.61",
+      "marginPct": 47.01,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.47"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "13.74"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.85"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.53"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "10.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6KdANcLhlLqtMplqCtKk7G/9cdc4097f31a1384b9645964c52cbee6/W-DRS-254-NVY-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4KI1sxCdiCNYJJriXpUl5e/7b5d46d7b1b99e149d1272c68b0792c0/W-DRS-254-NVY-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2GVBPOIThcUBUPGRQyai6d/e8b97a230c8ea1d8842ea803eb8ca49c/W-DRS-254-NVY-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1zGwS44uwP39y9Fa9XxBVC/36af5eecd4a9a741d79918075698b8da/W-DRS-254-NVY-04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-05T16:28:50+00:00",
       "sellingPrice": "80.00",
       "reportedTotalCost": "42.39",
       "unitSpread": "37.61",

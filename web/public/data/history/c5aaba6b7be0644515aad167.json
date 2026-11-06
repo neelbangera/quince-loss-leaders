@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-05T16:44:24+00:00",
+    "capturedAt": "2026-11-06T15:59:23+00:00",
     "sellingPrice": "548.00",
     "reportedTotalCost": "343.33",
     "unitSpread": "204.67",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "548.00",
     "highestPrice": "548.00",
     "lowestCost": "343.33",
     "highestCost": "343.33",
     "averageSpread": "204.67",
     "firstObservedAt": "2026-11-05T16:44:24+00:00",
-    "lastObservedAt": "2026-11-05T16:44:24+00:00"
+    "lastObservedAt": "2026-11-06T15:59:23+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-05T16:44:24+00:00",
+      "sellingPrice": "548.00",
+      "reportedTotalCost": "343.33",
+      "unitSpread": "204.67",
+      "marginPct": 37.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "300.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "7.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "19.37"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hwonbsvEX4PuObxJUKZlC/9b87ee786d2f810a6674f7b8451c037c/W-EARR-251-0511-0521_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/xmBZ7Qk4hW5zCLuTaSwtP/bef6ab0d3c026ceb2fff90afd6ec1bdc/W-EARR-251-YELGOL-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/38Kk2tGGFri4KWLNM9VzV9/75680c875d916b9d8da7f1889134e3c6/W-EARR-251-0063_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5svu2kmnhnbpPHK1ZiQAa2/e4392e128ee72facdb151cff892981e3/W-EARR-251-YELGOL-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-06T15:59:23+00:00",
       "sellingPrice": "548.00",
       "reportedTotalCost": "343.33",
       "unitSpread": "204.67",

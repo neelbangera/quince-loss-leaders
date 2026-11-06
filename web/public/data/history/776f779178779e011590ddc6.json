@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-05T16:46:01+00:00",
+    "capturedAt": "2026-11-06T16:03:36+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "20.83",
     "unitSpread": "-0.93",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 28,
-    "lossObservations": 1,
+    "observationCount": 29,
+    "lossObservations": 2,
     "profitObservations": 27,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "18.22",
     "highestCost": "20.83",
-    "averageSpread": "1.09",
+    "averageSpread": "1.02",
     "firstObservedAt": "2026-09-11T13:01:48+00:00",
-    "lastObservedAt": "2026-11-05T16:46:01+00:00"
+    "lastObservedAt": "2026-11-06T16:03:36+00:00"
   },
   "history": [
     {
@@ -1218,6 +1218,51 @@
     },
     {
       "capturedAt": "2026-11-05T16:46:01+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "20.83",
+      "unitSpread": "-0.93",
+      "marginPct": -4.67,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.29"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.31"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.64"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.59"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3qfui636qxGPdvNPqzNntQ/675aa2ff9a1cb53460726c05b440328b/U--946-IVORY-6707_CROPPED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4LhhrCbgQXHnH7oi41sgkL/6392cdf94b9423335269072751798747/U--946-IVORY-DETAIL-6708_CROPPED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-06T16:03:36+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "20.83",
       "unitSpread": "-0.93",

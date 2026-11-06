@@ -8,17 +8,27 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "kitchen-dining",
+    "categoryLabel": "Kitchen & Dining",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "9564",
+    "variantLabel": "Mist/White Stripe / One Size",
+    "variantSize": "Mist/White Stripe",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/6fPChgfhY37Bj9r53QE2c3/8beaebf07d6d2eb60a1ac36398faf34c/U-TBLE-191-MISWHIS-15603_EDITED_Setof8.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/6fPChgfhY37Bj9r53QE2c3/8beaebf07d6d2eb60a1ac36398faf34c/U-TBLE-191-MISWHIS-15603_EDITED_Setof8.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/UoZsItctzjRjKDfSOOtkN/367d6e58b5a4e268618458b0bb51102f/U-TBLE-191-MISWHIS-SET-20045_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/2xirvOk0cEdEeAPeeziCIs/afac2019b7175c09c09207cd3e144fd9/U-TBLE-191-MISWHIS-20037_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-09-23T13:39:22+00:00",
+    "capturedAt": "2026-11-06T16:00:45+00:00",
     "sellingPrice": "54.90",
-    "reportedTotalCost": "42.67",
-    "unitSpread": "12.23",
-    "marginPct": 22.28,
+    "reportedTotalCost": "42.15",
+    "unitSpread": "12.75",
+    "marginPct": 23.22,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +50,36 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.71"
+        "amount": "7.24"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.47"
+        "amount": "1.42"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "7.73"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/6fPChgfhY37Bj9r53QE2c3/8beaebf07d6d2eb60a1ac36398faf34c/U-TBLE-191-MISWHIS-15603_EDITED_Setof8.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/UoZsItctzjRjKDfSOOtkN/367d6e58b5a4e268618458b0bb51102f/U-TBLE-191-MISWHIS-SET-20045_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/2xirvOk0cEdEeAPeeziCIs/afac2019b7175c09c09207cd3e144fd9/U-TBLE-191-MISWHIS-20037_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "54.90",
     "highestPrice": "54.90",
-    "lowestCost": "42.67",
+    "lowestCost": "42.15",
     "highestCost": "42.67",
-    "averageSpread": "12.23",
+    "averageSpread": "12.49",
     "firstObservedAt": "2026-09-23T13:39:22+00:00",
-    "lastObservedAt": "2026-09-23T13:39:22+00:00"
+    "lastObservedAt": "2026-11-06T16:00:45+00:00"
   },
   "history": [
     {
@@ -106,6 +121,52 @@
           "type": "duties_taxes_fees",
           "amount": "7.73"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-11-06T16:00:45+00:00",
+      "sellingPrice": "54.90",
+      "reportedTotalCost": "42.15",
+      "unitSpread": "12.75",
+      "marginPct": 23.22,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.46"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "9.02"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.28"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.24"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.42"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.73"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6fPChgfhY37Bj9r53QE2c3/8beaebf07d6d2eb60a1ac36398faf34c/U-TBLE-191-MISWHIS-15603_EDITED_Setof8.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/UoZsItctzjRjKDfSOOtkN/367d6e58b5a4e268618458b0bb51102f/U-TBLE-191-MISWHIS-SET-20045_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2xirvOk0cEdEeAPeeziCIs/afac2019b7175c09c09207cd3e144fd9/U-TBLE-191-MISWHIS-20037_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

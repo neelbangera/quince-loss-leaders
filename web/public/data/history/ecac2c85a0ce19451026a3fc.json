@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-05T16:29:01+00:00",
+    "capturedAt": "2026-11-06T16:03:42+00:00",
     "sellingPrice": "179.90",
     "reportedTotalCost": "127.29",
     "unitSpread": "52.61",
@@ -68,20 +68,65 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "179.90",
     "highestPrice": "179.90",
     "lowestCost": "127.29",
     "highestCost": "127.29",
     "averageSpread": "52.61",
     "firstObservedAt": "2026-11-05T16:29:01+00:00",
-    "lastObservedAt": "2026-11-05T16:29:01+00:00"
+    "lastObservedAt": "2026-11-06T16:03:42+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-05T16:29:01+00:00",
+      "sellingPrice": "179.90",
+      "reportedTotalCost": "127.29",
+      "unitSpread": "52.61",
+      "marginPct": 29.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "52.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "53.57"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "5.36"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.78"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hufnW3mjRfJjSORB1OYpw/b534a2249475cbe883d0f96333785b89/Through_the_Mist_Black_Hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3DmeLUq2SINZG1cHU4TGaN/1f29b9aca308380b8440dbaf3d3fe8a5/Through_the_Mist_Black_20X25.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-06T16:03:42+00:00",
       "sellingPrice": "179.90",
       "reportedTotalCost": "127.29",
       "unitSpread": "52.61",

@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-05T16:33:15+00:00",
+    "capturedAt": "2026-11-06T16:03:43+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "12.73",
     "unitSpread": "7.17",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "12.73",
     "highestCost": "13.10",
-    "averageSpread": "6.99",
+    "averageSpread": "7.02",
     "firstObservedAt": "2026-09-12T12:30:35+00:00",
-    "lastObservedAt": "2026-11-05T16:33:15+00:00"
+    "lastObservedAt": "2026-11-06T16:03:43+00:00"
   },
   "history": [
     {
@@ -209,6 +209,51 @@
     },
     {
       "capturedAt": "2026-11-05T16:33:15+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "12.73",
+      "unitSpread": "7.17",
+      "marginPct": 36.03,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.88"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.85"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.15"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.63"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.92"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5vjfLuPiW8ouhB4nufxEvS/de9f0f5634e1ed0013b8fa6df3f380c4/U--954-NAVY-201_EDITED_Kid.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7fufAtOk7pu0I62adoLewA/5cee6a014989702839219454342dc239/U--954-NAVY-DETAIL-202_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-06T16:03:43+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "12.73",
       "unitSpread": "7.17",

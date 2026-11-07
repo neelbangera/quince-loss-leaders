@@ -8,13 +8,25 @@
     "brand": null,
     "department": "men",
     "departmentLabel": "Men",
-    "category": "pants",
-    "categoryLabel": "Pants",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "1954",
+    "variantLabel": "Bourbon / 30",
+    "variantSize": "Bourbon",
+    "variantColor": "30",
+    "imageUrl": "https://images.quince.com/4MKz70Mxry4BVGw9KjTVP3/a5f5e48901230e03fa943157c63f3a4f/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon007_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/4MKz70Mxry4BVGw9KjTVP3/a5f5e48901230e03fa943157c63f3a4f/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon007_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/68xMJklm6daV8qaHKJo82m/e7dc6952e85414d37bebaaa18e4f526a/M-BLT-4-BOU_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3j1qgg9VSWaG4U90OhZr8W/8e2a2ba06c2b4da2d87ae7033cd5c846/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon024_stack_back_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5LhVW3oRjg6uPkDn78imI8/4799529da5330f16491020a6c985bc15/M-BLT-4-BOU_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3Ge92pq2tDjaNHnKASJ77B/789684f338dc49ef1966b3f021a349ec/M-BLT-4-BOU_Adam_Heritage_Leather_Jeans_Belt_Bourbon156_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-10T14:37:59+00:00",
+    "capturedAt": "2026-11-07T15:13:15+00:00",
     "sellingPrice": "50.00",
     "reportedTotalCost": "29.41",
     "unitSpread": "20.59",
@@ -52,19 +64,26 @@
         "type": "duties_taxes_fees",
         "amount": "1.20"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/4MKz70Mxry4BVGw9KjTVP3/a5f5e48901230e03fa943157c63f3a4f/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon007_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/68xMJklm6daV8qaHKJo82m/e7dc6952e85414d37bebaaa18e4f526a/M-BLT-4-BOU_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3j1qgg9VSWaG4U90OhZr8W/8e2a2ba06c2b4da2d87ae7033cd5c846/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon024_stack_back_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5LhVW3oRjg6uPkDn78imI8/4799529da5330f16491020a6c985bc15/M-BLT-4-BOU_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3Ge92pq2tDjaNHnKASJ77B/789684f338dc49ef1966b3f021a349ec/M-BLT-4-BOU_Adam_Heritage_Leather_Jeans_Belt_Bourbon156_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "50.00",
     "highestPrice": "50.00",
     "lowestCost": "29.41",
     "highestCost": "29.41",
     "averageSpread": "20.59",
     "firstObservedAt": "2026-10-09T15:27:57+00:00",
-    "lastObservedAt": "2026-10-10T14:37:59+00:00"
+    "lastObservedAt": "2026-11-07T15:13:15+00:00"
   },
   "history": [
     {
@@ -147,6 +166,54 @@
           "type": "duties_taxes_fees",
           "amount": "1.20"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-11-07T15:13:15+00:00",
+      "sellingPrice": "50.00",
+      "reportedTotalCost": "29.41",
+      "unitSpread": "20.59",
+      "marginPct": 41.18,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "16.57"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.89"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.64"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.43"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4MKz70Mxry4BVGw9KjTVP3/a5f5e48901230e03fa943157c63f3a4f/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon007_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/68xMJklm6daV8qaHKJo82m/e7dc6952e85414d37bebaaa18e4f526a/M-BLT-4-BOU_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3j1qgg9VSWaG4U90OhZr8W/8e2a2ba06c2b4da2d87ae7033cd5c846/M-BLT-4_Adam_Heritage_Leather_Jeans_Belt_Bourbon024_stack_back_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5LhVW3oRjg6uPkDn78imI8/4799529da5330f16491020a6c985bc15/M-BLT-4-BOU_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3Ge92pq2tDjaNHnKASJ77B/789684f338dc49ef1966b3f021a349ec/M-BLT-4-BOU_Adam_Heritage_Leather_Jeans_Belt_Bourbon156_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

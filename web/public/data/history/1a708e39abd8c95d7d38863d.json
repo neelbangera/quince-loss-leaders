@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-04T16:47:59+00:00",
+    "capturedAt": "2026-11-07T14:56:57+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "13.23",
     "unitSpread": "6.67",
@@ -68,20 +68,65 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "13.23",
     "highestCost": "13.23",
     "averageSpread": "6.67",
     "firstObservedAt": "2026-11-04T16:47:59+00:00",
-    "lastObservedAt": "2026-11-04T16:47:59+00:00"
+    "lastObservedAt": "2026-11-07T14:56:57+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-04T16:47:59+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "13.23",
+      "unitSpread": "6.67",
+      "marginPct": 33.52,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.01"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.64"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.58"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.35"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/70JGKMw5E2qwgQVp09EIn8/175abadb9249cdd461719f35b3df6cac/U--1659-DOODLESTR-3T-0056_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5So7qkejuynmyDnsm3YFnp/0997bbd11393d9e9eefd8514085af156/U--1658-DOODLESTR-12-18M-0115_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-07T14:56:57+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "13.23",
       "unitSpread": "6.67",

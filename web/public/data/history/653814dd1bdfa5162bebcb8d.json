@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-06T16:10:47+00:00",
+    "capturedAt": "2026-11-07T15:01:26+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "15.16",
     "unitSpread": "4.74",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "15.16",
     "highestCost": "15.16",
     "averageSpread": "4.74",
     "firstObservedAt": "2026-11-06T16:10:47+00:00",
-    "lastObservedAt": "2026-11-06T16:10:47+00:00"
+    "lastObservedAt": "2026-11-07T15:01:26+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-06T16:10:47+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "15.16",
+      "unitSpread": "4.74",
+      "marginPct": 23.82,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.73"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.56"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.16"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.63"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.45"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2n8NAOL8pz08S0ssq0OcXn/96aca358962f64dd0b246634b189c6d7/U--862-FRUP-104_Hero_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/yWrO1VV0AI38f48peb9mS/e9aec5b74b5a6a1c839ce60c7bb2e08c/Swimwear_callout.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2RrwE7P0gQKZ9GTMpyX8wK/33b1055567c75d1dac75f860be1a6243/U--862-FRUP-104_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/79pwjPOpQsPkpFlupbbwG8/834fd5e3adf61a0dfafafd23e3989116/U--862-FRUP-124_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/10AmFsRLBH7XzAq3jvwPMC/9d8f21f15b5f6b0be986f50a34eced4e/U--862-FRUP-102_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-07T15:01:26+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "15.16",
       "unitSpread": "4.74",

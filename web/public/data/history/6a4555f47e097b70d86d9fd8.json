@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-06T15:56:11+00:00",
+    "capturedAt": "2026-11-07T15:01:26+00:00",
     "sellingPrice": "4900.00",
     "reportedTotalCost": "3687.23",
     "unitSpread": "1212.77",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "4900.00",
     "highestPrice": "4900.00",
     "lowestCost": "3687.23",
     "highestCost": "3687.23",
     "averageSpread": "1212.77",
     "firstObservedAt": "2026-11-06T15:56:11+00:00",
-    "lastObservedAt": "2026-11-06T15:56:11+00:00"
+    "lastObservedAt": "2026-11-07T15:01:26+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-06T15:56:11+00:00",
+      "sellingPrice": "4900.00",
+      "reportedTotalCost": "3687.23",
+      "unitSpread": "1212.77",
+      "marginPct": 24.75,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2085.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "937.05"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "302.27"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "255.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "107.23"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3d3TwNcLpW0XDpR92QX4rH/dfac1a5bf4378a2c72935e0b1005063d/Stillman-_Leather_116x116_L_Sectional_Scotch.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6V88EZ4x2e8QnYzDZA2h76/4222b100d45b91285f305925ba6e015b/L_-_116_-_Scotch.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/24ywd3eVu1HTC5jDlomSCD/acd68578934e7b2fccd721619bce4478/116_-_Tech_-_01.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/BCUDgFDl5zC2soohOKUKc/44cd93e513879b7e4a46a5a3d2722a5f/116_-_Tech_-_02.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-07T15:01:26+00:00",
       "sellingPrice": "4900.00",
       "reportedTotalCost": "3687.23",
       "unitSpread": "1212.77",

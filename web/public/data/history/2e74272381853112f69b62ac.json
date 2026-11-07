@@ -8,17 +8,28 @@
     "brand": null,
     "department": "unisex",
     "departmentLabel": "Unisex",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
     "currency": "USD",
-    "hasExorbitantFees": false
+    "hasExorbitantFees": false,
+    "parentProductId": "7429",
+    "variantLabel": "Heather Grey / S",
+    "variantSize": "Heather Grey",
+    "variantColor": "S",
+    "imageUrl": "https://images.quince.com/617Kk401vwmBzLBQF0H6kW/2639158e2e9f7fe45e0d8a6af627d77c/U--1160-HEAGRER-027_EDITED_3Pack.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/617Kk401vwmBzLBQF0H6kW/2639158e2e9f7fe45e0d8a6af627d77c/U--1160-HEAGRER-027_EDITED_3Pack.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1KiDqoifwakkT3O3Tjh0xL/a17db98b5bbca3482a09592b532d7a23/U--1160-HEAGRE_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5Es8ZFdcfzAD1bne8IaIbs/98ff871bc5e748f382e636abdf4ce442/U--1160-HEAGRER-027_EDITED_1Pack.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3IMKwtBOximZ3wLDs3Oksi/6caddb15ae3d304e98a1316de9ba78d5/U--1160-HEAGRE_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-05T17:15:56+00:00",
+    "capturedAt": "2026-11-07T15:09:27+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "27.12",
-    "unitSpread": "12.78",
-    "marginPct": 32.03,
+    "reportedTotalCost": "22.81",
+    "unitSpread": "17.09",
+    "marginPct": 42.83,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -40,31 +51,37 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.71"
+        "amount": "3.39"
       },
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.06"
+        "amount": "1.07"
       },
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
         "amount": "4.03"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/617Kk401vwmBzLBQF0H6kW/2639158e2e9f7fe45e0d8a6af627d77c/U--1160-HEAGRER-027_EDITED_3Pack.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/1KiDqoifwakkT3O3Tjh0xL/a17db98b5bbca3482a09592b532d7a23/U--1160-HEAGRE_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/5Es8ZFdcfzAD1bne8IaIbs/98ff871bc5e748f382e636abdf4ce442/U--1160-HEAGRER-027_EDITED_1Pack.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/3IMKwtBOximZ3wLDs3Oksi/6caddb15ae3d304e98a1316de9ba78d5/U--1160-HEAGRE_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 25,
+    "observationCount": 26,
     "lossObservations": 0,
-    "profitObservations": 25,
+    "profitObservations": 26,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
-    "lowestCost": "27.12",
+    "lowestCost": "22.81",
     "highestCost": "27.12",
-    "averageSpread": "12.78",
+    "averageSpread": "12.95",
     "firstObservedAt": "2026-09-11T13:08:55+00:00",
-    "lastObservedAt": "2026-10-05T17:15:56+00:00"
+    "lastObservedAt": "2026-11-07T15:09:27+00:00"
   },
   "history": [
     {
@@ -1090,6 +1107,53 @@
           "type": "duties_taxes_fees",
           "amount": "4.03"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-11-07T15:09:27+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "22.81",
+      "unitSpread": "17.09",
+      "marginPct": 42.83,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.72"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.20"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.39"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.07"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.03"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/617Kk401vwmBzLBQF0H6kW/2639158e2e9f7fe45e0d8a6af627d77c/U--1160-HEAGRER-027_EDITED_3Pack.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1KiDqoifwakkT3O3Tjh0xL/a17db98b5bbca3482a09592b532d7a23/U--1160-HEAGRE_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5Es8ZFdcfzAD1bne8IaIbs/98ff871bc5e748f382e636abdf4ce442/U--1160-HEAGRER-027_EDITED_1Pack.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3IMKwtBOximZ3wLDs3Oksi/6caddb15ae3d304e98a1316de9ba78d5/U--1160-HEAGRE_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

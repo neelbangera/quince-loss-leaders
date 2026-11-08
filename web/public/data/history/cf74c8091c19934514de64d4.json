@@ -23,11 +23,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-23T13:36:10+00:00",
+    "capturedAt": "2026-11-08T15:14:12+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "25.70",
-    "unitSpread": "14.20",
-    "marginPct": 35.59,
+    "reportedTotalCost": "29.26",
+    "unitSpread": "10.64",
+    "marginPct": 26.67,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -39,7 +39,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "9.35"
+        "amount": "8.50"
       },
       {
         "label": "Packaging",
@@ -49,7 +49,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.92"
+        "amount": "8.07"
       },
       {
         "label": "Credit Card Fees",
@@ -59,7 +59,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "3.68"
+        "amount": "3.94"
       }
     ],
     "imageUrls": [
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "25.70",
-    "highestCost": "25.70",
-    "averageSpread": "14.20",
+    "highestCost": "29.26",
+    "averageSpread": "13.01",
     "firstObservedAt": "2026-10-21T13:57:59+00:00",
-    "lastObservedAt": "2026-10-23T13:36:10+00:00"
+    "lastObservedAt": "2026-11-08T15:14:12+00:00"
   },
   "history": [
     {
@@ -163,6 +163,51 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "3.68"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2x33CX88xzXHSOh1xKTDGg/43f7697b2e3b258fe00a6bb728c32749/U--465-DARGRE_EDITED_01__1_.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5nyhKIC7ZoRFt0CON0EXxQ/6ff0bab4b32a927cfa3e2a685fd83162/U--465-DARGRE_EDITED_02.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:14:12+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "29.26",
+      "unitSpread": "10.64",
+      "marginPct": 26.67,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.65"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.10"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.94"
         }
       ],
       "imageUrls": [

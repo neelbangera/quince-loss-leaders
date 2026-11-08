@@ -28,11 +28,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T14:57:07+00:00",
+    "capturedAt": "2026-11-08T15:21:37+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "23.91",
-    "unitSpread": "15.99",
-    "marginPct": 40.08,
+    "reportedTotalCost": "24.12",
+    "unitSpread": "15.78",
+    "marginPct": 39.55,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -54,7 +54,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "9.81"
+        "amount": "10.02"
       },
       {
         "label": "Credit Card Fees",
@@ -78,16 +78,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "23.91",
-    "highestCost": "23.91",
-    "averageSpread": "15.99",
+    "highestCost": "24.12",
+    "averageSpread": "15.92",
     "firstObservedAt": "2026-11-06T16:06:08+00:00",
-    "lastObservedAt": "2026-11-07T14:57:07+00:00"
+    "lastObservedAt": "2026-11-08T15:21:37+00:00"
   },
   "history": [
     {
@@ -168,6 +168,56 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "9.81"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.51"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.64"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/YvCamm4cbhlLTXbkpoVnA/0feb91a4111a12595e5433cdf5d39c93/Nicole_Chavez_Editorial_02-436_255_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3ZsrdsEZBmhxAg5xlVFl4/d36339035877fe189741125b19f11faf/W-HKT-41-LIGHEA_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/54Sv4vYx2RLCPUAXQV1RSz/d00ab108faf6c14720f00edf82a4e5f0/W-HKT-41-LIGHEA_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/NJBAGZNXpQ04f14sfZZc2/690b26448ef8cf045ccd5aa004f41846/W-HKT-41-LIGHEA_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2C9yLYoiqQLiXcQmUyMLmW/7e18955c940269109ec6fc4089517bce/W-HKT-41-LIGHEA_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3seW91D6R5ej6Ej6fJvtq/51f92f53112a326070f6707065e89a4f/W-HKT-41-LIGHEA_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/wYmTkLCsTyYikHfdJ7D2A/b29eb8c321457006f0405de25c75e41c/W-HKT-41-LIGHEAG-088_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:21:37+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "24.12",
+      "unitSpread": "15.78",
+      "marginPct": 39.55,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.16"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.48"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.02"
         },
         {
           "label": "Credit Card Fees",

@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:12:08+00:00",
+    "capturedAt": "2026-11-08T15:24:46+00:00",
     "sellingPrice": "134.00",
-    "reportedTotalCost": "81.73",
-    "unitSpread": "52.27",
-    "marginPct": 39.01,
+    "reportedTotalCost": "81.46",
+    "unitSpread": "52.54",
+    "marginPct": 39.21,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "9.72"
+        "amount": "9.45"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "134.00",
     "highestPrice": "134.00",
-    "lowestCost": "81.73",
+    "lowestCost": "81.46",
     "highestCost": "81.73",
-    "averageSpread": "52.27",
+    "averageSpread": "52.41",
     "firstObservedAt": "2026-11-07T15:12:08+00:00",
-    "lastObservedAt": "2026-11-07T15:12:08+00:00"
+    "lastObservedAt": "2026-11-08T15:24:46+00:00"
   },
   "history": [
     {
@@ -120,6 +120,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "9.72"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.58"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "10.93"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2yCn97x4LUL6tzjVZfgEte/857965e0af94ad2ba442bf72a8f924a3/Esme_Suede_Shoulder_Bag.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1dgsxTsqcZ0AUjX0R6IpNs/5565e46885d9b1d3b8619c87c58a90de/italian-suede-slouchy-shoulder-bag-basilico-4x5.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4Sjgu4ro8RafSdrU4eUPqs/244e09cee3df52e52310037fbfa70205/W-BAG-148-BAS_070_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4Lxf6YFQXSc6s0nY2Fqh8q/fdee7c3ae0f70a3f9a6e65510b55f322/W-BAG-148-BSLC-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6MydDYuWz7V75J8aFzKisV/bd44f1cba3719c43d313900d32026077/W-BAG-148-BAS_078_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4JI5hBOTvkOnMGzTPYEwCe/0c5a32d2a85c05df3a89fefbca46f7a5/W-BAG-148-BSLC-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/50qi6EnkbEDHRriUwbnMBJ/9650fc2b6c1d57b83258183f846f4684/W-BAG-148-BAS_163_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6yiGgQO0JGQdPjCBrjCAtI/7a0dd3ff73e90e6cb15194f170314925/W-BAG-148-BAS_154_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:24:46+00:00",
+      "sellingPrice": "134.00",
+      "reportedTotalCost": "81.46",
+      "unitSpread": "52.54",
+      "marginPct": 39.21,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "39.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "14.75"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "3.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "9.45"
         },
         {
           "label": "Credit Card Fees",

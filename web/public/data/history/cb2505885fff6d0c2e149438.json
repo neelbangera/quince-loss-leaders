@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:07:50+00:00",
+    "capturedAt": "2026-11-08T15:19:08+00:00",
     "sellingPrice": "44.90",
-    "reportedTotalCost": "25.72",
-    "unitSpread": "19.18",
-    "marginPct": 42.72,
+    "reportedTotalCost": "26.69",
+    "unitSpread": "18.21",
+    "marginPct": 40.56,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.55"
+        "amount": "8.52"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "25.72",
-    "highestCost": "25.72",
-    "averageSpread": "19.18",
+    "highestCost": "26.69",
+    "averageSpread": "18.70",
     "firstObservedAt": "2026-11-07T15:07:50+00:00",
-    "lastObservedAt": "2026-11-07T15:07:50+00:00"
+    "lastObservedAt": "2026-11-08T15:19:08+00:00"
   },
   "history": [
     {
@@ -110,6 +110,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "7.55"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.19"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.12"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2qwdxPgodZqHTfFI7NrFq0/996a1012c7e20a8fbf6f17514e451c69/U-TEXT-48-051_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1tceocUljWBMA5urTZnZ3Z/64ff03254b0b92a9ceabd158ebe5ef0b/U-BEDD-419-35079_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6QosleGh5TwUBm6JH1kAAf/6f096b7712c0392c9ce0a1c81bad033d/U-BEDD-419-35009_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:19:08+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "26.69",
+      "unitSpread": "18.21",
+      "marginPct": 40.56,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.53"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.64"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.69"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.52"
         },
         {
           "label": "Credit Card Fees",

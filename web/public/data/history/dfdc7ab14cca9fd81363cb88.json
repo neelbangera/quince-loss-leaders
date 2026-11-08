@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T14:57:25+00:00",
+    "capturedAt": "2026-11-08T15:32:47+00:00",
     "sellingPrice": "119.90",
-    "reportedTotalCost": "92.68",
-    "unitSpread": "27.22",
-    "marginPct": 22.7,
+    "reportedTotalCost": "92.33",
+    "unitSpread": "27.57",
+    "marginPct": 22.99,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "14.35"
+        "amount": "14.00"
       },
       {
         "label": "Credit Card Fees",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "119.90",
     "highestPrice": "119.90",
-    "lowestCost": "92.68",
+    "lowestCost": "92.33",
     "highestCost": "92.68",
-    "averageSpread": "27.22",
+    "averageSpread": "27.28",
     "firstObservedAt": "2026-11-02T18:30:23+00:00",
-    "lastObservedAt": "2026-11-07T14:57:25+00:00"
+    "lastObservedAt": "2026-11-08T15:32:47+00:00"
   },
   "history": [
     {
@@ -300,6 +300,53 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "14.35"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "2.93"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "14.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5o43jZdd5KWmTcpjsuHaQW/793de86b147f5a0eae1fb29485651279/U-DCP-7-BLUE_174202.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6i8cCU2csejE3okBLyZGLh/1e5174d013b5c0f1891f24e288c5ec49/PIllow_MongolianLamb_Blue_711.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/xQZCX9YRIks5iM737TZ0w/b99211a8acda57d338248ab22cd23784/U-DCP-7-BLUE_174211.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2lN8oMrb1EADpfw1gDtLBD/536e657f13ceb8feb7e5a11c3968ff33/PIllow_MongolianLamb_Group_726.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:32:47+00:00",
+      "sellingPrice": "119.90",
+      "reportedTotalCost": "92.33",
+      "unitSpread": "27.57",
+      "marginPct": 22.99,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "48.96"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.74"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "14.00"
         },
         {
           "label": "Credit Card Fees",

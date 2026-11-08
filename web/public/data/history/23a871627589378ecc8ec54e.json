@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:09:11+00:00",
+    "capturedAt": "2026-11-08T15:24:54+00:00",
     "sellingPrice": "49.90",
-    "reportedTotalCost": "23.48",
-    "unitSpread": "26.42",
-    "marginPct": 52.95,
+    "reportedTotalCost": "23.75",
+    "unitSpread": "26.15",
+    "marginPct": 52.4,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.80"
+        "amount": "7.07"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "23.48",
-    "highestCost": "23.48",
-    "averageSpread": "26.42",
+    "highestCost": "23.75",
+    "averageSpread": "26.29",
     "firstObservedAt": "2026-11-07T15:09:11+00:00",
-    "lastObservedAt": "2026-11-07T15:09:11+00:00"
+    "lastObservedAt": "2026-11-08T15:24:54+00:00"
   },
   "history": [
     {
@@ -120,6 +120,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "6.80"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.33"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.85"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7E9huMQU0vBtXXyC3sS5hZ/5f0945bdd0b6baadf7e4cc7d339cf7e0/U-Bedd-248-DNE_172957__1_.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/uNXOuZvNNVh2kUySA9SXq/5fade0027fbe91d1e058fff6e6c18359/U-BEDD-247-OLVE_0211.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/owRz0CuqrekbIfAyeAu2D/1ef6109bfe2ceffba37d3d1ef8c28dfa/U-BEDD-247-OLVE_0195__1_.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7JNpxPvudEDC0bbWYa9E40/ef108e90760dbecfa6b87fce938cf631/cotton_gauze_quilts.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6QQlwlVjkcmSRelQt2YF2p/c96b7067d7060e9db63e474d7608b1ed/image.png?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2Rd7bPAB8Cv6XQzhbci80I/e73e4ad4eb7764d32925239c9aba30b3/image-1.png?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/40RNkoZpd5UMZXwAySE9Nt/af619394a113d272d3dcd8b8ec4c1520/image-2.png?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7ah4RCK0LJ4ViamBcjSqcX/b0fc69acbeb1f960124b217f65e416bd/image-3.png?w=1600&q=50&h=1600&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:24:54+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "23.75",
+      "unitSpread": "26.15",
+      "marginPct": 52.4,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.43"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.30"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.77"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.07"
         },
         {
           "label": "Credit Card Fees",

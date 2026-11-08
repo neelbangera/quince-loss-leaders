@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T14:55:50+00:00",
+    "capturedAt": "2026-11-08T15:25:58+00:00",
     "sellingPrice": "35.00",
-    "reportedTotalCost": "28.09",
-    "unitSpread": "6.91",
-    "marginPct": 19.74,
+    "reportedTotalCost": "28.40",
+    "unitSpread": "6.60",
+    "marginPct": 18.86,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "14.69"
+        "amount": "15.00"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "35.00",
     "highestPrice": "35.00",
     "lowestCost": "28.09",
-    "highestCost": "28.09",
-    "averageSpread": "6.91",
+    "highestCost": "28.40",
+    "averageSpread": "6.76",
     "firstObservedAt": "2026-11-07T14:55:50+00:00",
-    "lastObservedAt": "2026-11-07T14:55:50+00:00"
+    "lastObservedAt": "2026-11-08T15:25:58+00:00"
   },
   "history": [
     {
@@ -120,6 +120,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "14.69"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.05"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.79"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/uMgzrX2PbR6Bj7aPeb7zy/9b2752f0b249a757940dc5ed98d7c8b1/M-HAT-2-DEENAV-041-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/13LXWhr5eNpJGeJzT6Y4IW/536446942386802629e6bfae90004728/M-HAT-2-DEENAV_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6l2kD8iETSR6TZXlLRCq0f/64932ce03037776139c8d68f83d51777/M-HAT-2-DEENAV-138-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/0T70VQSnvJI4Jdskfeomh/0415443d671c3787461d4b7ab817c54e/M-HAT-2-DEENAV_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3ef8Nd9NUdJW2gQg32Ku4c/060413a38766289ad5abd82ca64b7d47/M-HAT-2-DEENAV-153-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/46WsxBSz05eGmddyDvRjJm/b9e87dcda07f1a4cdf8da723bb7d6659/M-HAT-2-DEENAV_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6JwER8jB6wjUK8RQw8EDwD/b84bcf8c23057a505b8761e45e70faec/M-HAT-2-DEENAV-324-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5qprcRV2nKhkuhDMpuGqPl/c3466c65dca674ac538f0d6c1ebe5af2/M-HAT-DETAIL-343-EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:25:58+00:00",
+      "sellingPrice": "35.00",
+      "reportedTotalCost": "28.40",
+      "unitSpread": "6.60",
+      "marginPct": 18.86,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.39"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.37"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.80"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.00"
         },
         {
           "label": "Credit Card Fees",

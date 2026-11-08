@@ -26,11 +26,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:00:32+00:00",
+    "capturedAt": "2026-11-08T15:28:03+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "16.18",
-    "unitSpread": "3.72",
-    "marginPct": 18.69,
+    "reportedTotalCost": "16.48",
+    "unitSpread": "3.42",
+    "marginPct": 17.19,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -52,7 +52,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.88"
+        "amount": "6.18"
       },
       {
         "label": "Credit Card Fees",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "16.18",
-    "highestCost": "16.18",
-    "averageSpread": "3.72",
+    "highestCost": "16.48",
+    "averageSpread": "3.62",
     "firstObservedAt": "2026-11-06T15:59:08+00:00",
-    "lastObservedAt": "2026-11-07T15:00:32+00:00"
+    "lastObservedAt": "2026-11-08T15:28:03+00:00"
   },
   "history": [
     {
@@ -162,6 +162,54 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "5.88"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.62"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7514kpKrPdrZ0reAeuRRND/038674fb1196d592302cf1ba35e44fb9/U--861-FRUP-104_Toddler_Hero_Toddler_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/yWrO1VV0AI38f48peb9mS/e9aec5b74b5a6a1c839ce60c7bb2e08c/Swimwear_callout.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/VmsSthIJzHn0mLAfyXJCI/308468df651b69a20d762bba9b3e7ca7/U--861-FRUP-104_Toddler_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7mk3jr0iSXgcAXe3Ic9djx/7b9efc527626fc0130dfaf245d680b00/U--861-FRUP-124_Toddler_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5AzaDTzMXO6dVRYrtU5T1/89f3258d7813d236aaed44e899223ebc/U--861-HAPFLO-082_Toddler_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:28:03+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "16.48",
+      "unitSpread": "3.42",
+      "marginPct": 17.19,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.09"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.64"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.95"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.18"
         },
         {
           "label": "Credit Card Fees",

@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:07:07+00:00",
+    "capturedAt": "2026-11-08T15:18:28+00:00",
     "sellingPrice": "29.90",
-    "reportedTotalCost": "13.97",
-    "unitSpread": "15.93",
-    "marginPct": 53.28,
+    "reportedTotalCost": "13.44",
+    "unitSpread": "16.46",
+    "marginPct": 55.05,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.22"
+        "amount": "5.69"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
-    "lowestCost": "13.97",
+    "lowestCost": "13.44",
     "highestCost": "15.05",
-    "averageSpread": "15.71",
+    "averageSpread": "15.84",
     "firstObservedAt": "2026-10-01T15:51:52+00:00",
-    "lastObservedAt": "2026-11-07T15:07:07+00:00"
+    "lastObservedAt": "2026-11-08T15:18:28+00:00"
   },
   "history": [
     {
@@ -289,6 +289,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "6.22"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.97"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.44"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4SRpIKaLbMYHPM1NMhqX0V/5aa16c7cdb42af87ffd0b19bbac3f387/W--57-SND_2907.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5xnnVLwJM7vhdVLcb6nyZ/df5734b731e68d5ea4dac4a3d94425f3/W-57-SND_172285.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3p1FpncTTMFfZbZZ9uueZU/1c3ef80a6c65843aa82905f509b776e8/W--57-SND_3018.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:18:28+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "13.44",
+      "unitSpread": "16.46",
+      "marginPct": 55.05,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.36"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.88"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.69"
         },
         {
           "label": "Credit Card Fees",

@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:11:07+00:00",
+    "capturedAt": "2026-11-08T15:29:13+00:00",
     "sellingPrice": "154.00",
-    "reportedTotalCost": "81.44",
-    "unitSpread": "72.56",
-    "marginPct": 47.12,
+    "reportedTotalCost": "83.01",
+    "unitSpread": "70.99",
+    "marginPct": 46.1,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.61"
+        "amount": "8.18"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "154.00",
     "highestPrice": "154.00",
     "lowestCost": "81.44",
-    "highestCost": "81.44",
-    "averageSpread": "72.56",
+    "highestCost": "83.01",
+    "averageSpread": "72.04",
     "firstObservedAt": "2026-11-05T16:44:38+00:00",
-    "lastObservedAt": "2026-11-07T15:11:07+00:00"
+    "lastObservedAt": "2026-11-08T15:29:13+00:00"
   },
   "history": [
     {
@@ -171,6 +171,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "6.61"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.75"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "8.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/77wVkA3M03Xxq8ffUM70As/4384dc3d41558acfe83e581e79dd50b4/U-BEDD-206-_DSTOLV_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5WPsAHrxY8QqRsKzy0BEk6/0810a2dfc3bb9b74d8fa24d9d1241241/U-BEDD-206-DSTOLV-15542_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5PEAG1WqSW3hGD5s4uEVnS/0691dcbe5012d4b3c309563bd56ec140/U-BEDD-207-DSTOLV-15614_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6Y5lvXOLJCQGs0GDd0JwNl/1769d8a6d7dbc9491e5119cb1ee4b210/Double_Flange.png?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2zKxlZZUqDhWvNisPSeNZp/6b045bbaf4ebc14566b5ee65eae22db1/U-BEDD-207-DSTOLV-15567_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4nUv3ZJYoLbj4MWZFdJBnb/97a79e0a84bc8963c8e463de0f68f500/U-BEDD-205-DSTOLV-15630_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/mOFC9UfIlzrSoRWuEDyqB/0a1e9da443a70ed834a2efaf44ed1d81/U-BEDD-205-DSTOLV-15638_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2pLCuSo83nFT5opbwWn3j3/e2ca6817805123167ec58192cf62d5a6/linen_technical_call_out.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:29:13+00:00",
+      "sellingPrice": "154.00",
+      "reportedTotalCost": "83.01",
+      "unitSpread": "70.99",
+      "marginPct": 46.1,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "43.19"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "18.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.18"
         },
         {
           "label": "Credit Card Fees",

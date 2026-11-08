@@ -26,11 +26,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:14:38+00:00",
+    "capturedAt": "2026-11-08T15:29:13+00:00",
     "sellingPrice": "17.90",
-    "reportedTotalCost": "12.69",
-    "unitSpread": "5.21",
-    "marginPct": 29.11,
+    "reportedTotalCost": "12.42",
+    "unitSpread": "5.48",
+    "marginPct": 30.61,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -52,7 +52,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.20"
+        "amount": "5.93"
       },
       {
         "label": "Credit Card Fees",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "10.77",
     "highestCost": "12.69",
-    "averageSpread": "5.53",
+    "averageSpread": "5.52",
     "firstObservedAt": "2026-10-16T13:17:03+00:00",
-    "lastObservedAt": "2026-11-07T15:14:38+00:00"
+    "lastObservedAt": "2026-11-08T15:29:13+00:00"
   },
   "history": [
     {
@@ -353,6 +353,54 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "6.20"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4J5l3EbsYRdgDN6TgY7TQN/b5453498e73491cd335e6242869e145b/U--636-YDNTS-060_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3yyfgovE7t1zMPW0Wh0ufm/b7ca4bb49e777343f96389cd981de04a/U--636-Yummy_Donuts-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/66G0rqMYN7syEehIKEfCUd/90856b398d86dff291b93ab71e72c615/U--636-YDNTS-060_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1J7hWmJLCj7JttB7Umwhnn/343300ed46afb56fcafac847a90beaea/U--636-Yummy_Donuts.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5JsxRSsudNP2jSd1kEmse0/c75b9b67c34c0db29dc1198d40eff2fd/U--636-YDNTS-073_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:29:13+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "12.42",
+      "unitSpread": "5.48",
+      "marginPct": 30.61,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.36"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.33"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.93"
         },
         {
           "label": "Credit Card Fees",

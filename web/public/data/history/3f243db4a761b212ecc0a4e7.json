@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T14:57:21+00:00",
+    "capturedAt": "2026-11-08T15:13:57+00:00",
     "sellingPrice": "12.00",
-    "reportedTotalCost": "7.77",
-    "unitSpread": "4.23",
-    "marginPct": 35.25,
+    "reportedTotalCost": "7.19",
+    "unitSpread": "4.81",
+    "marginPct": 40.08,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "5.42"
+        "amount": "4.84"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "12.00",
     "highestPrice": "12.00",
-    "lowestCost": "7.77",
+    "lowestCost": "7.19",
     "highestCost": "7.77",
-    "averageSpread": "4.23",
+    "averageSpread": "4.42",
     "firstObservedAt": "2026-10-13T19:21:15+00:00",
-    "lastObservedAt": "2026-11-07T14:57:21+00:00"
+    "lastObservedAt": "2026-11-08T15:13:57+00:00"
   },
   "history": [
     {
@@ -157,6 +157,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "5.42"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.41"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.45"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6KoHQnKdFX0vMPCS8SADTE/cc2b0c393e2db73d79353653811dfdc2/U--39-07437.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/15HFhYBDYlM3cObzEVHjhp/b6a4afbbe522f48085094db6b649983a/U--39-GRY_1414.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6mTvTrI8nBqn9EdLFucU7h/888331d176bca576fca456d2ab8af86a/U--39-GRY_1411.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:13:57+00:00",
+      "sellingPrice": "12.00",
+      "reportedTotalCost": "7.19",
+      "unitSpread": "4.81",
+      "marginPct": 40.08,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "0.74"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.65"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.84"
         },
         {
           "label": "Credit Card Fees",

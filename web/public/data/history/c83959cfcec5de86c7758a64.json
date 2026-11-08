@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:04:07+00:00",
+    "capturedAt": "2026-11-08T15:21:48+00:00",
     "sellingPrice": "52.00",
     "reportedTotalCost": "26.02",
     "unitSpread": "25.98",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "52.00",
     "highestPrice": "52.00",
     "lowestCost": "26.02",
     "highestCost": "26.02",
     "averageSpread": "25.98",
     "firstObservedAt": "2026-11-07T15:04:07+00:00",
-    "lastObservedAt": "2026-11-07T15:04:07+00:00"
+    "lastObservedAt": "2026-11-08T15:21:48+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-07T15:04:07+00:00",
+      "sellingPrice": "52.00",
+      "reportedTotalCost": "26.02",
+      "unitSpread": "25.98",
+      "marginPct": 49.96,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.21"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "11.50"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.29"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.70"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.43"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4wEE8VBSwnkpaBbNjkz8JD/77c2b1bf4321b3bc3fdad68ddb7828ec/U-OTH-43-GLD_196477.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4mxuSCgXpJ8l5bvZBTt1q3/ecff71dfee3d60592a99df481d35215a/U-OTH-43-GLD_2276_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5RPcTfRpwzwYkU8bLu7MfL/4c9656a0e922639f76e9045a1dfaf69b/U-OTH-43-GLD_196460.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3V8iMfNewMwccQaOmXKMH3/fe325db8a93c58e9aa9559e354188257/U-OTH-43-GLD_2289_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:21:48+00:00",
       "sellingPrice": "52.00",
       "reportedTotalCost": "26.02",
       "unitSpread": "25.98",

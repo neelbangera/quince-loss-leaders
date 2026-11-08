@@ -29,7 +29,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T14:55:13+00:00",
+    "capturedAt": "2026-11-08T15:25:01+00:00",
     "sellingPrice": "1400.00",
     "reportedTotalCost": "1260.00",
     "unitSpread": "140.00",
@@ -45,7 +45,7 @@
       {
         "label": "Crafting Cost",
         "type": "crafting_cost",
-        "amount": "476.32"
+        "amount": "455.45"
       },
       {
         "label": "Packaging",
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "272.93"
+        "amount": "293.80"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "1400.00",
     "highestPrice": "1400.00",
     "lowestCost": "1260.00",
     "highestCost": "1260.00",
     "averageSpread": "140.00",
     "firstObservedAt": "2026-11-04T16:45:59+00:00",
-    "lastObservedAt": "2026-11-07T14:55:13+00:00"
+    "lastObservedAt": "2026-11-08T15:25:01+00:00"
   },
   "history": [
     {
@@ -273,6 +273,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "272.93"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "30.75"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/64LCbyHyoMAaZy6AIrE5YP/835962ecbf6dedd16ad46274eb900bb5/Slipcover_Bed_100-_Linen_Steel_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/ztV3WXhL9NRxq7ca5CLdG/193442467a05bc941a42929a80ddacc1/Copy_of_U-FURN-280-33377_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/729dbH7bd6bh1GQZvVytLl/c09b8af7c5dc3dd454efa6ae6bbc8b86/Slipcover_Bed_Full.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/22y5l7LZodbxATc7Xa5wzO/f1a033d75e5a47e1fee5f31d51163486/Slipcover_Bed_100__Linen_Steel.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1RuAqvN80j4i3PahGzk434/c8c2d7e9889364c407902e37ebbedba9/Slipcover_Bed_100__Linen_Steel_Front_angle.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6JFtFBPIQFN4ZXj1zGSso4/af7e84800c1bbcea8dda658b6a9878ae/Slipcover_Bed_100__Linen_Steel_Side.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/704BuEDqfOF3hoPwJxYZne/6309ec5fb4bd4783ee30cf22bd8805db/Slipcover_Bed_100__Linen_Steel_Back_Angle.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1BtKmq2m8042Grq27d8FBJ/c658fbd3c51ccc802df1c5c0ca917eeb/Steel_linen_slipcover.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:25:01+00:00",
+      "sellingPrice": "1400.00",
+      "reportedTotalCost": "1260.00",
+      "unitSpread": "140.00",
+      "marginPct": 10.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "432.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "455.45"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "48.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "293.80"
         },
         {
           "label": "Credit Card Fees",

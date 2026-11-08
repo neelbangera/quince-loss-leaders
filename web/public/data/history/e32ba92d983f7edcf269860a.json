@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:09:38+00:00",
+    "capturedAt": "2026-11-08T15:11:41+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "22.22",
-    "unitSpread": "17.68",
-    "marginPct": 44.31,
+    "reportedTotalCost": "22.47",
+    "unitSpread": "17.43",
+    "marginPct": 43.68,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "6.53"
+        "amount": "6.78"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "22.22",
-    "highestCost": "22.22",
-    "averageSpread": "17.68",
+    "highestCost": "22.47",
+    "averageSpread": "17.56",
     "firstObservedAt": "2026-11-07T15:09:38+00:00",
-    "lastObservedAt": "2026-11-07T15:09:38+00:00"
+    "lastObservedAt": "2026-11-08T15:11:41+00:00"
   },
   "history": [
     {
@@ -120,6 +120,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "6.53"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.20"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.19"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/45BQgjy1ZbesRs3uamqNXF/64b38f5e016208018de500a13115331f/W-PNT-78-DARCOA_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4JhWVHGnJPm0l18yq1I3s3/c2c1d4009edbf9acbe3fe7ab028b682c/W-PNT-78-DARCOA_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3PFdm3ZnZUQpLUUCQZZ2Zn/1249cd52fee7b4daf25d8a519b9553be/W-PNT-78-DARCOA_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3ysyrVrdyjaKsUBFui034e/3cc5e8305a08fdc4367a1bb7c9aca7b1/Leggings_Comparison.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1iL1wfVsoe71Um1KGbX8RK/ade2eebee3dccbabaf5715a73269997a/W-PNT-78-DARCOA_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5eqkqQN477Z88AGfNDhl2Y/f889eb5d41cc39b6044bdc97a36f60b3/W-PNT-78-DARCOA_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6kG466U44q30llpKFwrCt5/088c739d904a57b021e8c5715d0c416e/W-PNT-78-DARCOA_06_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2E1o83pX1L53VsjmHYLJKS/7b26c9f2d8b0a75b1c6122238f81bd89/W-PNT-78-DARCOA_07_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:11:41+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "22.47",
+      "unitSpread": "17.43",
+      "marginPct": 43.68,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.80"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.27"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.23"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.78"
         },
         {
           "label": "Credit Card Fees",

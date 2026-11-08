@@ -28,11 +28,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:00:13+00:00",
+    "capturedAt": "2026-11-08T15:14:00+00:00",
     "sellingPrice": "65.00",
-    "reportedTotalCost": "42.90",
-    "unitSpread": "22.10",
-    "marginPct": 34.0,
+    "reportedTotalCost": "42.88",
+    "unitSpread": "22.12",
+    "marginPct": 34.03,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -54,7 +54,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "15.86"
+        "amount": "15.84"
       },
       {
         "label": "Credit Card Fees",
@@ -78,16 +78,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "65.00",
     "highestPrice": "65.00",
-    "lowestCost": "42.90",
+    "lowestCost": "42.88",
     "highestCost": "42.90",
-    "averageSpread": "22.10",
+    "averageSpread": "22.11",
     "firstObservedAt": "2026-11-07T15:00:13+00:00",
-    "lastObservedAt": "2026-11-07T15:00:13+00:00"
+    "lastObservedAt": "2026-11-08T15:14:00+00:00"
   },
   "history": [
     {
@@ -118,6 +118,56 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "15.86"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.97"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/yO7Kvnw5FlOaxNxlcfBf6/a6894c2a12b28915bcdba65107e4eab9/M-M--3-PEANUT-130_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/QQWtGTFfNYctcX0Akk5YM/801cb81f7eb35ecb4944885228d6ad2f/M-M--3-PEANUT_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2anoXzzRFSdDezy5MHneY5/c6b56109b1df21ba88bdd1cbdea795e0/M-M--3-PEANUT-175_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6qn0FbcoSu9WbqkBTGW2DI/2610f27eee15a7ecd27c4840fed081d3/M-M--3-PEANUT_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/r8qqqdxhNozxqAAHSEgRL/cc105e6a508e22775dead42cbe7fbc74/M-M--3-PEANUT-204_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5mgA2seMVyW9jraaomcDHO/733fa5b9b536ccac03ff8d368daedccb/M-M--3-PEANUT-145_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7mh9cWGqiqJOyqBWN3wDPD/b5aae67ddfbf6e3bed6d492d847fc596/M-M--3-PEANUT-131_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-08T15:14:00+00:00",
+      "sellingPrice": "65.00",
+      "reportedTotalCost": "42.88",
+      "unitSpread": "22.12",
+      "marginPct": 34.03,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.79"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "5.38"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.34"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.84"
         },
         {
           "label": "Credit Card Fees",

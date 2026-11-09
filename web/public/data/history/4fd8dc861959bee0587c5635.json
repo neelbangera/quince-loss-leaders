@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-08T15:12:12+00:00",
+    "capturedAt": "2026-11-09T19:00:19+00:00",
     "sellingPrice": "1100.00",
     "reportedTotalCost": "432.85",
     "unitSpread": "667.15",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "1100.00",
     "highestPrice": "1100.00",
     "lowestCost": "432.85",
     "highestCost": "432.85",
     "averageSpread": "667.15",
     "firstObservedAt": "2026-11-05T16:31:31+00:00",
-    "lastObservedAt": "2026-11-08T15:12:12+00:00"
+    "lastObservedAt": "2026-11-09T19:00:19+00:00"
   },
   "history": [
     {
@@ -222,6 +222,52 @@
     },
     {
       "capturedAt": "2026-11-08T15:12:12+00:00",
+      "sellingPrice": "1100.00",
+      "reportedTotalCost": "432.85",
+      "unitSpread": "667.15",
+      "marginPct": 60.65,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "338.36"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "31.90"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "33.05"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "22.17"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5ubawvssUS6wyYdSGlpOTA/8880f5c530ddf8600a353581627e5e6c/RNG-341_HERO_32761-32774_EDITED_WG.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4MaB3vE3xBF8sM9pGMFiGA/af97d12bd82c85c4a0321b7a96bb0558/RNG-341_01_WG_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2pQ9cFyUnApaEZnDYSYqk1/ae00e5e130e31d38c3921ceed8bd55bc/RNG-341_HERO_32590_EDITED_WG.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-09T19:00:19+00:00",
       "sellingPrice": "1100.00",
       "reportedTotalCost": "432.85",
       "unitSpread": "667.15",

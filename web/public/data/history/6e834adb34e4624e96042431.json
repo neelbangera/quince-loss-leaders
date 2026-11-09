@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-06T16:15:18+00:00",
+    "capturedAt": "2026-11-09T18:58:10+00:00",
     "sellingPrice": "59.90",
-    "reportedTotalCost": "39.35",
-    "unitSpread": "20.55",
-    "marginPct": 34.31,
+    "reportedTotalCost": "36.53",
+    "unitSpread": "23.37",
+    "marginPct": 39.02,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "21.04"
+        "amount": "18.22"
       },
       {
         "label": "Credit Card Fees",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "31.99",
     "highestCost": "39.35",
-    "averageSpread": "24.23",
+    "averageSpread": "23.94",
     "firstObservedAt": "2026-09-21T15:15:59+00:00",
-    "lastObservedAt": "2026-11-06T16:15:18+00:00"
+    "lastObservedAt": "2026-11-09T18:58:10+00:00"
   },
   "history": [
     {
@@ -153,6 +153,53 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "21.04"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.35"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7ion4DUCq8kO0H9qGoetys/98ffd1b6a8db11ec2450182dacd1e9b3/U-DCP-167-TANSTR-12X20-25370_SET_OF_2_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5zs1xt2z0o1yvLINjfIfQo/13ff6891cb2036a1a58cba1436827f62/U-DCP-167-TANSTR-12X20-25476_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1TZwXbta2NhONMcrHujMPa/d8128617a7e6dcf50fdb49616630be87/U-DCP-167-TANSTR-12X20-25482_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4EpowRSettppGyAeeU7duI/d6d908708b46d1410d1f27bc1978af2e/U-DCP-167-TANSTR-12X20-25478_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-09T18:58:10+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "36.53",
+      "unitSpread": "23.37",
+      "marginPct": 39.02,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "18.22"
         },
         {
           "label": "Credit Card Fees",

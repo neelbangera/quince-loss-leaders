@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-09T18:56:40+00:00",
+    "capturedAt": "2026-11-10T16:25:50+00:00",
     "sellingPrice": "34.90",
     "reportedTotalCost": "20.12",
     "unitSpread": "14.78",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "34.90",
     "highestPrice": "34.90",
     "lowestCost": "20.12",
     "highestCost": "20.12",
     "averageSpread": "14.78",
     "firstObservedAt": "2026-11-09T18:56:40+00:00",
-    "lastObservedAt": "2026-11-09T18:56:40+00:00"
+    "lastObservedAt": "2026-11-10T16:25:50+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-09T18:56:40+00:00",
+      "sellingPrice": "34.90",
+      "reportedTotalCost": "20.12",
+      "unitSpread": "14.78",
+      "marginPct": 42.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.88"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.76"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.92"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1GQayy8xwEWxy2LebteWq5/92c48e9cf8589fc112f532201778240d/U--1024-MIS-0116_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5WGc1SRlQFOvpKdmBPrHeo/46b5f020b9dd16f91b4c7ef95f2457fc/U--1024-MIS-0123_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4WxdlfDQVpnM1BjXeT516a/67f6c271577775843f009893e1c22cc0/Crib_mist.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7niXSllI6twCZwYPPxL5Cv/5b8c093371ca6aabde66213817f5571e/U--1024-MIS-0133_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-10T16:25:50+00:00",
       "sellingPrice": "34.90",
       "reportedTotalCost": "20.12",
       "unitSpread": "14.78",

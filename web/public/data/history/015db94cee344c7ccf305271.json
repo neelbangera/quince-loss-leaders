@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-09T18:55:26+00:00",
+    "capturedAt": "2026-11-10T16:46:21+00:00",
     "sellingPrice": "179.90",
     "reportedTotalCost": "148.99",
     "unitSpread": "30.91",
@@ -68,20 +68,65 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "179.90",
     "highestPrice": "179.90",
     "lowestCost": "148.99",
     "highestCost": "148.99",
     "averageSpread": "30.91",
     "firstObservedAt": "2026-11-09T18:55:26+00:00",
-    "lastObservedAt": "2026-11-09T18:55:26+00:00"
+    "lastObservedAt": "2026-11-10T16:46:21+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-09T18:55:26+00:00",
+      "sellingPrice": "179.90",
+      "reportedTotalCost": "148.99",
+      "unitSpread": "30.91",
+      "marginPct": 17.18,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "63.46"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "64.76"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "6.48"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.21"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "4.08"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2dPDGKxFnF9c3IELroUoDn/062029c16d6c70fc3e1b24042eff56cc/Set_Sail_Oak_Hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6r0YOntY5fjtEcMCHtEEVP/57911c2cfbece27bb04f18df000a9770/Set_Sail_Oak_20X25.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-10T16:46:21+00:00",
       "sellingPrice": "179.90",
       "reportedTotalCost": "148.99",
       "unitSpread": "30.91",

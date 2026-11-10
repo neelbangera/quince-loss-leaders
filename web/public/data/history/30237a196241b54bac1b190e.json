@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:05:50+00:00",
+    "capturedAt": "2026-11-10T16:29:02+00:00",
     "sellingPrice": "49.90",
-    "reportedTotalCost": "31.12",
-    "unitSpread": "18.78",
-    "marginPct": 37.64,
+    "reportedTotalCost": "24.38",
+    "unitSpread": "25.52",
+    "marginPct": 51.14,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "15.09"
+        "amount": "8.35"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
-    "lowestCost": "31.12",
+    "lowestCost": "24.38",
     "highestCost": "31.12",
-    "averageSpread": "18.78",
+    "averageSpread": "20.47",
     "firstObservedAt": "2026-11-05T16:39:25+00:00",
-    "lastObservedAt": "2026-11-07T15:05:50+00:00"
+    "lastObservedAt": "2026-11-10T16:29:02+00:00"
   },
   "history": [
     {
@@ -202,6 +202,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.54"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.69"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2UM2wy2MK26fFrDvVKeT7O/aaacb1c21ad2556d49913a2b40b40d0a/U-DCP-199-SAGHOR-20X20-0003_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2p9kIeeO0SyZ4uw0PBZ05W/e58cff443758f6498d25b4fd106aa3b2/U-DCP-199-SAGHOR-20X20-0093_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/JAeIom2yBfLePCVZljMag/31033942677f257f4b6c2f61b4f6ca0b/U-DCP-199-SAGHOR-20X20-0011_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-10T16:29:02+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "24.38",
+      "unitSpread": "25.52",
+      "marginPct": 51.14,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.10"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.20"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.35"
         },
         {
           "label": "Credit Card Fees",

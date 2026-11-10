@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-09T19:07:25+00:00",
+    "capturedAt": "2026-11-10T16:33:20+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "15.97",
     "unitSpread": "13.93",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "15.97",
     "highestCost": "19.17",
-    "averageSpread": "11.37",
+    "averageSpread": "11.80",
     "firstObservedAt": "2026-10-30T15:10:34+00:00",
-    "lastObservedAt": "2026-11-09T19:07:25+00:00"
+    "lastObservedAt": "2026-11-10T16:33:20+00:00"
   },
   "history": [
     {
@@ -268,6 +268,52 @@
     },
     {
       "capturedAt": "2026-11-09T19:07:25+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "15.97",
+      "unitSpread": "13.93",
+      "marginPct": 46.59,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.41"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.59"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.33"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.83"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.56"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5L4I2OxHmvBMsBxJfrTRFd/2ddca732bd46043ad906fcc6f7a6afa7/U-BEDD-467-TOFFLO-59105-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4fjxYDK9vtVq3n7zvYzRGJ/69e1e7217f24deb43afc7cb004bba2c3/U-BEDD-464-BLUFLO--0825_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/44DixjmRevb3oWZKzwNGZl/a3f3a7274e3c8540b65b3ff2eb5c9736/U-BEDD-467-BLUFLO--0793_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-10T16:33:20+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "15.97",
       "unitSpread": "13.93",

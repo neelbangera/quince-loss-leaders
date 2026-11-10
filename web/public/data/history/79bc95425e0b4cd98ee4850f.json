@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:03:25+00:00",
+    "capturedAt": "2026-11-10T16:29:20+00:00",
     "sellingPrice": "44.90",
     "reportedTotalCost": "23.10",
     "unitSpread": "21.80",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "23.10",
     "highestCost": "23.10",
     "averageSpread": "21.80",
     "firstObservedAt": "2026-11-07T15:03:25+00:00",
-    "lastObservedAt": "2026-11-07T15:03:25+00:00"
+    "lastObservedAt": "2026-11-10T16:29:20+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-07T15:03:25+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "23.10",
+      "unitSpread": "21.80",
+      "marginPct": 48.55,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.89"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.26"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.78"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.22"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.60"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/7tHfmfjE5EB7upNpZWhlrF/03ad0a9e119880eac74922fd9de624e8/W-SWT-254-HEACHA_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5vNq3vKc908KyKwuV0HwwR/cd9d429678f7588c5208909af7901b53/W-SWT-254-HEACHA_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/kOdqy64bUVIWVZTdZqGO7/bff98f62f4fe05eb4dd6f0dc2d556927/W-SWT-254-HEACHA_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7vDE7szmLaVV5kc8q0uB8w/d1ace0490662934a5cebedb3549f352c/W-SWT-254-HEACHA_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4ccyApZnBmGcNMlsopSbnX/fa8430b53288b560aec3a2445064f094/W-SWT-254-HEACHA_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-10T16:29:20+00:00",
       "sellingPrice": "44.90",
       "reportedTotalCost": "23.10",
       "unitSpread": "21.80",

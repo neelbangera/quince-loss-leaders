@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:31:44+00:00",
+    "capturedAt": "2026-11-11T16:19:04+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "15.85",
     "unitSpread": "4.05",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "14.50",
     "highestCost": "15.85",
-    "averageSpread": "4.39",
+    "averageSpread": "4.35",
     "firstObservedAt": "2026-11-03T16:16:26+00:00",
-    "lastObservedAt": "2026-11-10T16:31:44+00:00"
+    "lastObservedAt": "2026-11-11T16:19:04+00:00"
   },
   "history": [
     {
@@ -406,6 +406,52 @@
     },
     {
       "capturedAt": "2026-11-10T16:31:44+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "15.85",
+      "unitSpread": "4.05",
+      "marginPct": 20.35,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.10"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.47"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.39"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.03"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5J3yS1QDCkPmQVMX8dLzlx/d780d0d45a3c4acfdd2ab1575504a7c2/U--809-DINODRE-3T-0020_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6jctf3O7kI625MKesxHNLA/10a7e162befff9328c4530a500218c11/U--809-DINODRE-3T-0117_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2vwDSuyjw8OLcIJFZIY3mv/9cd90a7476e40fccf011e81c6d1f2250/U--809-DINODRE-3T-0114_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:19:04+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "15.85",
       "unitSpread": "4.05",

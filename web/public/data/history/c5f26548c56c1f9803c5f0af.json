@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:34:55+00:00",
+    "capturedAt": "2026-11-11T16:24:59+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "39.64",
     "unitSpread": "20.26",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "39.64",
     "highestCost": "39.64",
     "averageSpread": "20.26",
     "firstObservedAt": "2026-11-10T16:34:55+00:00",
-    "lastObservedAt": "2026-11-10T16:34:55+00:00"
+    "lastObservedAt": "2026-11-11T16:24:59+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-10T16:34:55+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "39.64",
+      "unitSpread": "20.26",
+      "marginPct": 33.82,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.12"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.39"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.49"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.66"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.48"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "6.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2apKuKM4GJMtbErqR8D2Te/db89ba9212dda2f0de2064005352e895/U-KTCH-161-BLK-01.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5grlSnLEFBnD6AJ89ue6LB/0178bd6074c6921dec26d8fb6459e572/Copy_of_U-KTCH-161-BLA-21202_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2PB43KA8rpIrK8l5mz8xMX/f8ef0a17460c0db75e6d9f12ae677d44/Copy_of_U-KTCH-161-BLA-21221_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:24:59+00:00",
       "sellingPrice": "59.90",
       "reportedTotalCost": "39.64",
       "unitSpread": "20.26",

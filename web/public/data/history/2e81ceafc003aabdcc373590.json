@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-07T15:10:20+00:00",
+    "capturedAt": "2026-11-11T16:26:22+00:00",
     "sellingPrice": "49.90",
-    "reportedTotalCost": "17.49",
-    "unitSpread": "32.41",
-    "marginPct": 64.95,
+    "reportedTotalCost": "20.92",
+    "unitSpread": "28.98",
+    "marginPct": 58.08,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.71"
+        "amount": "7.14"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "49.90",
     "highestPrice": "49.90",
     "lowestCost": "17.49",
-    "highestCost": "17.49",
-    "averageSpread": "32.41",
+    "highestCost": "20.92",
+    "averageSpread": "31.55",
     "firstObservedAt": "2026-11-05T16:43:52+00:00",
-    "lastObservedAt": "2026-11-07T15:10:20+00:00"
+    "lastObservedAt": "2026-11-11T16:26:22+00:00"
   },
   "history": [
     {
@@ -202,6 +202,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "3.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.34"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.78"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4xZea8MMfUjKwcYd0mUqkX/95b2756656666fa647ca0e6d29ce28ac/U-TEXT-38-ESP-143_EDITED_12x20.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1mZ6f1fjNs0YJa92Tft5xt/0ad0c54ab15127b5678e03682b6d56f6/U-TEXT-38-12-20-ESP-9220_EDITED_12x20.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7pWZAkCYue4Z8coVOugZDf/aa068c0e6a0cdfb0fc47e5dd766668c0/U-TEXT-59-TPE-SIZES-35422_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:26:22+00:00",
+      "sellingPrice": "49.90",
+      "reportedTotalCost": "20.92",
+      "unitSpread": "28.98",
+      "marginPct": 58.08,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.66"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.14"
         },
         {
           "label": "Credit Card Fees",

@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:45:40+00:00",
+    "capturedAt": "2026-11-11T16:16:10+00:00",
     "sellingPrice": "16.90",
     "reportedTotalCost": "11.21",
     "unitSpread": "5.69",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "16.90",
     "highestPrice": "16.90",
     "lowestCost": "11.21",
     "highestCost": "11.21",
     "averageSpread": "5.69",
     "firstObservedAt": "2026-11-09T18:56:34+00:00",
-    "lastObservedAt": "2026-11-10T16:45:40+00:00"
+    "lastObservedAt": "2026-11-11T16:16:10+00:00"
   },
   "history": [
     {
@@ -130,6 +130,52 @@
     },
     {
       "capturedAt": "2026-11-10T16:45:40+00:00",
+      "sellingPrice": "16.90",
+      "reportedTotalCost": "11.21",
+      "unitSpread": "5.69",
+      "marginPct": 33.67,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.02"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3tWIMvgUvEtBlHC2s6dbwu/8f75f08eeed3e4973026458b019fffcd/U--1220-RAIFLO-19995_CROPPED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1NjE0kC45V5y6cHodVwlGn/9e411bd1bf9995cfd4ff20f82f045249/U--1220-RAIFLO-19995_CROPPED_2.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3KcEBg0YkufKB4SEq4usCm/6bc0c4ad0ee0ca75952d4a7a86900317/U--1218-RAIFLO-20099_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:16:10+00:00",
       "sellingPrice": "16.90",
       "reportedTotalCost": "11.21",
       "unitSpread": "5.69",

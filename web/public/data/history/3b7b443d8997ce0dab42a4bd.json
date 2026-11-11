@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:30:30+00:00",
+    "capturedAt": "2026-11-11T16:25:52+00:00",
     "sellingPrice": "22.90",
     "reportedTotalCost": "17.14",
     "unitSpread": "5.76",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "22.90",
     "highestPrice": "22.90",
     "lowestCost": "17.14",
     "highestCost": "17.14",
     "averageSpread": "5.76",
     "firstObservedAt": "2026-11-09T18:50:30+00:00",
-    "lastObservedAt": "2026-11-10T16:30:30+00:00"
+    "lastObservedAt": "2026-11-11T16:25:52+00:00"
   },
   "history": [
     {
@@ -130,6 +130,52 @@
     },
     {
       "capturedAt": "2026-11-10T16:30:30+00:00",
+      "sellingPrice": "22.90",
+      "reportedTotalCost": "17.14",
+      "unitSpread": "5.76",
+      "marginPct": 25.15,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.17"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.36"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.68"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.13"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5e3IURR9Ypu5kXsNm57ta4/62e89d512a281bb740c9aff65c1dc520/U--855-NAVSEA-019_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1Ran6JY8Nc5wlYu9UafWfN/a326cbf6024209e50bab1d39054500f3/Swimwear_callout-1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2UB0Vb4pC4y7hc6MbtY7Jh/ee12c31dd0c21741480ed62d34df9ab0/U--855-NAVSEA-025_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:25:52+00:00",
       "sellingPrice": "22.90",
       "reportedTotalCost": "17.14",
       "unitSpread": "5.76",

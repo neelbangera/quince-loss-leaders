@@ -26,11 +26,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-01T15:22:52+00:00",
+    "capturedAt": "2026-11-11T16:11:16+00:00",
     "sellingPrice": "39.90",
-    "reportedTotalCost": "14.13",
-    "unitSpread": "25.77",
-    "marginPct": 64.59,
+    "reportedTotalCost": "14.21",
+    "unitSpread": "25.69",
+    "marginPct": 64.39,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -52,7 +52,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.87"
+        "amount": "3.95"
       },
       {
         "label": "Credit Card Fees",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "14.13",
-    "highestCost": "14.13",
-    "averageSpread": "25.77",
+    "highestCost": "14.21",
+    "averageSpread": "25.73",
     "firstObservedAt": "2026-11-01T15:22:52+00:00",
-    "lastObservedAt": "2026-11-01T15:22:52+00:00"
+    "lastObservedAt": "2026-11-11T16:11:16+00:00"
   },
   "history": [
     {
@@ -114,6 +114,54 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "3.87"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.74"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.51"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5jOSgx8e3AR24LORzplnVc/e4b876813247e36f1f4f309485d1639d/W-DRS-142-TRUBLA_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/44hOkXZh8blwCycEJb8kfS/21746c318dc9c0162ef3e4ab84ae295c/W-DRS-142-TRUBLA_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6yohkRa0yG95xjbVCE31HU/6e938bc51f06b61f1f1993955d69affc/W-DRS-142-TRUBLA_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6IHI7gi3UYZLfdrAM3LA33/d6b4e4ef8d51564c5874ba103f331a76/W-DRS-142-TRUBLA_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/57qODjwlkqOU98WGZ2B8rv/a72fbab1555f295f07184cb1f344fb14/W-DRS-142-TRUBLA_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:11:16+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "14.21",
+      "unitSpread": "25.69",
+      "marginPct": 64.39,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.73"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.96"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.32"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.95"
         },
         {
           "label": "Credit Card Fees",

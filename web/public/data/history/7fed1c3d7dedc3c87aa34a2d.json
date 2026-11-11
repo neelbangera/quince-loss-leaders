@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:40:55+00:00",
+    "capturedAt": "2026-11-11T16:23:44+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "18.98",
     "unitSpread": "20.92",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "18.98",
     "highestCost": "18.98",
     "averageSpread": "20.92",
     "firstObservedAt": "2026-11-10T16:40:55+00:00",
-    "lastObservedAt": "2026-11-10T16:40:55+00:00"
+    "lastObservedAt": "2026-11-11T16:23:44+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-10T16:40:55+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "18.98",
+      "unitSpread": "20.92",
+      "marginPct": 52.43,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.75"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.55"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.25"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.12"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2NAbWQSUD85AwA9nng4DtT/afd3f925f50d40c1391fd2dfe58a8631/W--394-HEAGREEN_01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4ERYO61K33F3gg4C4kcCav/7cd0bd26501a4bd65c1b77be56e2199e/W--394-HEAGREEN_02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2IpV7MzYiFr99Im8tlK4um/8020b03a0a932ec17a9e32685082c5d4/W--394-HEAGREEN_04_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7d8k4fAIG9nb0nu70LCNcu/35f480c0eaabd174a0e6c1c93e64c95f/W--394-HEAGREEN_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5uyPVJ4euvIf7BB3WUR7Tq/9230f12b0f4a5231199bf82bd7a085e1/W--394-HEAGREEN_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-11T16:23:44+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "18.98",
       "unitSpread": "20.92",

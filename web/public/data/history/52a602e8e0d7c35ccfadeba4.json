@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-11T16:26:13+00:00",
+    "capturedAt": "2026-11-12T16:58:34+00:00",
     "sellingPrice": "17.90",
     "reportedTotalCost": "11.68",
     "unitSpread": "6.22",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "11.68",
     "highestCost": "11.68",
     "averageSpread": "6.22",
     "firstObservedAt": "2026-11-11T16:26:13+00:00",
-    "lastObservedAt": "2026-11-11T16:26:13+00:00"
+    "lastObservedAt": "2026-11-12T16:58:34+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-11T16:26:13+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "11.68",
+      "unitSpread": "6.22",
+      "marginPct": 34.75,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.25"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.40"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.54"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.14"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3K5I2Fwq9KUuasEpRqQAr2/25007de8c5145a72a841cdd0cb012a1a/U--611-CATS-TOP-113_EDITED_Sets.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/KlEPnzSV2kRKs4bkMrh9M/820a05e37407f7559fb886cca6794796/U--611-Cats-Hero_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4HDEYkGoiQ9QmEtvPw2jXs/c79cae517666d5b033f79c937bdf69b5/U--611-Cats-Detail_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5C2lJW4Y0N4jONPXeGkv6Y/5ac96619d6a6f4288c41ab3d552461ad/U--611-CATS-TOP-113_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5TMilRkKSkxkIrHjsRcHHH/efed61c2217593cec7ba66bd6960d4b1/U--611-CATS-BOTTOM-145_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-12T16:58:34+00:00",
       "sellingPrice": "17.90",
       "reportedTotalCost": "11.68",
       "unitSpread": "6.22",

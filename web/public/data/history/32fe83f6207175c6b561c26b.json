@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-10T16:41:01+00:00",
+    "capturedAt": "2026-11-12T16:54:25+00:00",
     "sellingPrice": "59.90",
     "reportedTotalCost": "32.87",
     "unitSpread": "27.03",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "59.90",
     "highestPrice": "59.90",
     "lowestCost": "22.00",
     "highestCost": "32.87",
-    "averageSpread": "32.47",
+    "averageSpread": "30.65",
     "firstObservedAt": "2026-11-03T16:27:28+00:00",
-    "lastObservedAt": "2026-11-10T16:41:01+00:00"
+    "lastObservedAt": "2026-11-12T16:54:25+00:00"
   },
   "history": [
     {
@@ -130,6 +130,52 @@
     },
     {
       "capturedAt": "2026-11-10T16:41:01+00:00",
+      "sellingPrice": "59.90",
+      "reportedTotalCost": "32.87",
+      "unitSpread": "27.03",
+      "marginPct": 45.13,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.08"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.32"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.35"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "13.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.59"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.58"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/68CV6fP52nWBerZhexmMNY/beaae09f05b701d50b227f3dd1aecd86/U-DCP-66-OLI_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4t4KwCjI881pIErpn3QC7c/dce0b8e9012693515de01162eb421729/U-DCP-66-OLI-0164_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2NXzTYWbu2U0hve2tXu8Ii/dac5327c174a1715d48742553d7ffaa2/U-DCP-66-OLI-0050_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-12T16:54:25+00:00",
       "sellingPrice": "59.90",
       "reportedTotalCost": "32.87",
       "unitSpread": "27.03",

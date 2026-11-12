@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-09T19:09:11+00:00",
+    "capturedAt": "2026-11-12T17:08:13+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "23.74",
     "unitSpread": "6.16",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "20.88",
     "highestCost": "23.74",
-    "averageSpread": "7.59",
+    "averageSpread": "7.11",
     "firstObservedAt": "2026-10-13T19:16:57+00:00",
-    "lastObservedAt": "2026-11-09T19:09:11+00:00"
+    "lastObservedAt": "2026-11-12T17:08:13+00:00"
   },
   "history": [
     {
@@ -128,6 +128,52 @@
     },
     {
       "capturedAt": "2026-11-09T19:09:11+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "23.74",
+      "unitSpread": "6.16",
+      "marginPct": 20.6,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.70"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "4.91"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.91"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.91"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5quurb8b0MpmtChGtRTqie/77765632ea1c31357124c4ef69ca0cdf/U--1343-MEDWAS_230_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5LilDyyObF8H8oPfOgD3F5/9abe0be6d03236d92fefbf3a71d4310e/U--1343-MEDWAS_233_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/66s6gI1uAzgn9D971SMcXw/b61b55d0beeebe16fb31419454829e01/U--1343-MEDWAS_284_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-12T17:08:13+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "23.74",
       "unitSpread": "6.16",

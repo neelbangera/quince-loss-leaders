@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-11T16:12:59+00:00",
+    "capturedAt": "2026-11-12T17:01:53+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "15.45",
     "unitSpread": "4.45",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "15.45",
     "highestCost": "15.45",
     "averageSpread": "4.45",
     "firstObservedAt": "2026-11-09T19:06:04+00:00",
-    "lastObservedAt": "2026-11-11T16:12:59+00:00"
+    "lastObservedAt": "2026-11-12T17:01:53+00:00"
   },
   "history": [
     {
@@ -176,6 +176,52 @@
     },
     {
       "capturedAt": "2026-11-11T16:12:59+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "15.45",
+      "unitSpread": "4.45",
+      "marginPct": 22.36,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.21"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.89"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.19"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.54"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.01"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3On5EkqgQZZcduaStUsraW/ec4f7bfbbbf027dbed8cdc0e42073214/U--881-WAVES-043_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2XWnY2U6dKpKVs8zxF31zU/7f2b0e1f422032ea909083f71ec334b6/image__28_.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6nYZhd5v0VOtZ8w86yquys/2dd881802e8b0b59b8ecbea8a6b30307/U--880-WAVES-043_EDITED_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-12T17:01:53+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "15.45",
       "unitSpread": "4.45",

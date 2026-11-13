@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T16:56:08+00:00",
+    "capturedAt": "2026-11-13T16:42:39+00:00",
     "sellingPrice": "17.90",
     "reportedTotalCost": "12.69",
     "unitSpread": "5.21",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "12.69",
     "highestCost": "12.69",
     "averageSpread": "5.21",
     "firstObservedAt": "2026-11-12T16:56:08+00:00",
-    "lastObservedAt": "2026-11-12T16:56:08+00:00"
+    "lastObservedAt": "2026-11-13T16:42:39+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-12T16:56:08+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "12.69",
+      "unitSpread": "5.21",
+      "marginPct": 29.11,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.36"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.33"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.20"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4aLrEYCeQX87misfP1lYbA/98375482510c2e8d451e9ed8adf30a2a/U--637-BLUECAR-113_EDITED_Toddler_Hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1hkpS4r5IE5qZtkgf28adq/721bb4717d529b2ecb4539adf5d7a087/U--636-Blue_Cars-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6Px1wV4QKrV2fCZiKGc9l7/8137963626332d14edc7a70ae2a0f892/U--637-BLUECAR-083_EDITED_Toddler.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2Eyh3PuEumvCUx0MPwmQK6/c3a28dc1c75a74a4749451f3952ba395/U--636-Blue_Cars.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6YezZ3dTpBzbENfKcDm8em/d1037e535f0fa361f78864bf8dbaec7b/U--637-BLUECAR-113_EDITED_Toddler.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:42:39+00:00",
       "sellingPrice": "17.90",
       "reportedTotalCost": "12.69",
       "unitSpread": "5.21",

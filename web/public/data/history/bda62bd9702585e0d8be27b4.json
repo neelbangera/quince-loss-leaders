@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T17:04:27+00:00",
+    "capturedAt": "2026-11-13T16:26:14+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "13.58",
     "unitSpread": "6.32",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "13.58",
     "highestCost": "13.58",
     "averageSpread": "6.32",
     "firstObservedAt": "2026-11-12T17:04:27+00:00",
-    "lastObservedAt": "2026-11-12T17:04:27+00:00"
+    "lastObservedAt": "2026-11-13T16:26:14+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-12T17:04:27+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "13.58",
+      "unitSpread": "6.32",
+      "marginPct": 31.76,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.44"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.42"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.33"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.91"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.87"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/Gco00Rux9rvMKkEPc6hNO/92678d9db38de226f7d76b8462610a5d/U--637-CELDRE-075_EDITED_Hero.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5FJkW7oyxsZWvidnGIxKgq/b4a4e200deb2263e9e5b1a046f3909a3/U--637-Celestial_Dreams-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/244UqPybVlhpncY9AIPaUV/db169a2256097103706bd45b44211aea/U--637-CELDRE-075_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3WyACZRk8oqkewRJGp7ZlM/0de98a1efaea9a6b99b97456b389157d/U--637-Celestial_Dreams.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7aK3jX5LIsoQQZrcp3Wp2C/66c23288910362d6a6341d041f60570a/U--637-CELDRE-105_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:26:14+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "13.58",
       "unitSpread": "6.32",

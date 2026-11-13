@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T17:07:15+00:00",
+    "capturedAt": "2026-11-13T16:30:07+00:00",
     "sellingPrice": "140.40",
-    "reportedTotalCost": "29.37",
-    "unitSpread": "111.03",
-    "marginPct": 79.08,
+    "reportedTotalCost": "29.38",
+    "unitSpread": "111.02",
+    "marginPct": 79.07,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -60,7 +60,7 @@
       {
         "label": "Credit Card Fees",
         "type": "credit_card_fees",
-        "amount": "1.52"
+        "amount": "1.53"
       },
       {
         "label": "Duties, Taxes, And Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "140.40",
     "highestPrice": "140.40",
     "lowestCost": "29.37",
-    "highestCost": "29.37",
+    "highestCost": "29.38",
     "averageSpread": "111.03",
     "firstObservedAt": "2026-11-11T16:18:09+00:00",
-    "lastObservedAt": "2026-11-12T17:07:15+00:00"
+    "lastObservedAt": "2026-11-13T16:30:07+00:00"
   },
   "history": [
     {
@@ -176,6 +176,57 @@
           "label": "Credit Card Fees",
           "type": "credit_card_fees",
           "amount": "1.52"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.62"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5obti0rd7bf0uNnFwsLgA1/4ef3e5413e400e08693cafdcf727ecfa/M-LKT-40-NAV-BUNDLE.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2Y2Ob888H6KoRhOSF0HrBM/6d5d7d53733706debd5ceed8f6a8204d/M-LKT-40-HEAGRE-BUNDLE.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4LUi9oVD83anRrzIVnSgAA/9b56bd563e7641a24b49e919b4da9f95/M-LKT-40-HEAGRE_01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1H0fXOaYxxDmQUa0XCm2Mk/b5406d3a6da42eff0ddbdbcfe37b3091/M-LKT-40-NAV-05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5BELCY5uS3EoNAEttu8RoN/13a72bbb42c39401c66962f269de6751/M-LKT-40-NAV-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7FMEukgI2GncXGDksEuUgC/4c5298718160c74762159180a4ce66f7/M-LKT-40-NAV-07_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6OFENfKEl6xseIf4usEX9P/ebd68b12a7f61e102adf7705601e801e/M-LKT-40-HEAGRE_03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4hiwweuC9t7qwgXVmaAxe9/012d394ae57776c5e15e5a8238a0e04e/M-LKT-40-HEAGRE_05_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:30:07+00:00",
+      "sellingPrice": "140.40",
+      "reportedTotalCost": "29.38",
+      "unitSpread": "111.02",
+      "marginPct": 79.07,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.71"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.88"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.29"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.35"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.53"
         },
         {
           "label": "Duties, Taxes, And Fees",

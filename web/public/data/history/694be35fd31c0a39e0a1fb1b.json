@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T17:02:02+00:00",
+    "capturedAt": "2026-11-13T16:24:25+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "16.07",
     "unitSpread": "3.83",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "12.25",
     "highestCost": "16.07",
-    "averageSpread": "6.38",
+    "averageSpread": "5.74",
     "firstObservedAt": "2026-10-16T13:25:25+00:00",
-    "lastObservedAt": "2026-11-12T17:02:02+00:00"
+    "lastObservedAt": "2026-11-13T16:24:25+00:00"
   },
   "history": [
     {
@@ -186,6 +186,54 @@
     },
     {
       "capturedAt": "2026-11-12T17:02:02+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "16.07",
+      "unitSpread": "3.83",
+      "marginPct": 19.25,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.49"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.67"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.25"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.51"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.54"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3LkciqNM5A2ndk4Pjf4NPh/ccdf3f2b2218d534aee01448e9b1fc24/U--898-WOLDFLO_TOP_40494_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/53sqaccXSzuxnYCkmmKqck/4c5454895b58606131d182a348febdb7/U--898-Woodland_Floral-Hero.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/XjSH1rH0N9tUM61YelF0p/01f737da940f7d5af19140c114f11cb3/U--898-WOLDFLO_TOP_40494_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1a0qAvzgVLRjYZ4XtiSc5F/a5c7c48e6e34c5346128a6dbad7d71d4/U--898-Woodland_Floral.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/62G1Ovm0ohLtRMcn8BNlZi/d7ce6a74a54a9dcf2ed4f38cf1c2a4e8/U--898-WOLDFLO_BOTTOM_40463_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:24:25+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "16.07",
       "unitSpread": "3.83",

@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-06T16:09:36+00:00",
+    "capturedAt": "2026-11-13T16:42:36+00:00",
     "sellingPrice": "2100.00",
-    "reportedTotalCost": "1458.84",
-    "unitSpread": "641.16",
-    "marginPct": 30.53,
+    "reportedTotalCost": "1413.77",
+    "unitSpread": "686.23",
+    "marginPct": 32.68,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -55,7 +55,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "403.80"
+        "amount": "358.73"
       },
       {
         "label": "Credit Card Fees",
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "2100.00",
     "highestPrice": "2100.00",
-    "lowestCost": "1458.84",
+    "lowestCost": "1413.77",
     "highestCost": "1458.84",
-    "averageSpread": "641.16",
+    "averageSpread": "652.43",
     "firstObservedAt": "2026-11-04T16:41:54+00:00",
-    "lastObservedAt": "2026-11-06T16:09:36+00:00"
+    "lastObservedAt": "2026-11-13T16:42:36+00:00"
   },
   "history": [
     {
@@ -222,6 +222,57 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "403.80"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "46.04"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3H6D6xuVp5ntbzDPjHQKbK/ab45de395eae2ab91ae23a960b4869fa/Varick-80-MIDSOFA_Bru_Colourwash_Navy.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4hNDuMgsT49au86LJCZ1cQ/caaaf068eb7b2bdfbd2b6602a5d2572b/U-FURN-359-PIN-42274-GIF-1_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4Zii14sKGYbWEtjL9TzsRB/723273cd612f9c4925fa09e30b0a4a53/Copy_of_U-FURN-359-IVY-42219_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1m5s0pYGRntVoITjHFzD5w/1112ebf3f22d932c62cd0cb2c63f61e9/SIERRA_SLEEPER_BASKETWEAVE_-7FT-3.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2lDOVq1Ggv2hQYI6l40PJA/07a6715968d2d5b05b4885a34e3c334d/Copy_of_U-FURN-359-IVY-41759_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6MvgOe8iaKooONlVOS05SG/aac28aa9679d0478130b46879c79690c/Copy_of_U-FURN-359-IVY-41758_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6QwOTsTTY5YP3HNYfKyPJN/5b0065d8587d70ed356aa98e263be89e/Copy_of_U-FURN-359-IVY-41737_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/InY1KU5yhGhq8ozBwtho7/f7969212bbc8bdf34b3fdba7b4618f47/Copy_of_U-FURN-359-IVY-42225_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:42:36+00:00",
+      "sellingPrice": "2100.00",
+      "reportedTotalCost": "1413.77",
+      "unitSpread": "686.23",
+      "marginPct": 32.68,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "544.86"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "363.24"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "100.90"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "358.73"
         },
         {
           "label": "Credit Card Fees",

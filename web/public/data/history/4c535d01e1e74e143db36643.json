@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-06T16:16:02+00:00",
+    "capturedAt": "2026-11-13T16:38:42+00:00",
     "sellingPrice": "24.90",
-    "reportedTotalCost": "19.03",
-    "unitSpread": "5.87",
-    "marginPct": 23.57,
+    "reportedTotalCost": "17.37",
+    "unitSpread": "7.53",
+    "marginPct": 30.24,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "9.41"
+        "amount": "7.75"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "24.90",
     "highestPrice": "24.90",
-    "lowestCost": "19.03",
+    "lowestCost": "17.37",
     "highestCost": "19.03",
-    "averageSpread": "5.87",
+    "averageSpread": "6.42",
     "firstObservedAt": "2026-11-05T16:44:12+00:00",
-    "lastObservedAt": "2026-11-06T16:16:02+00:00"
+    "lastObservedAt": "2026-11-13T16:38:42+00:00"
   },
   "history": [
     {
@@ -156,6 +156,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "9.41"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.73"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/33W4yBCef0hzytKsMD3U1c/5d751b3306ed315ead996c3a39b040f3/U--1186-LAVAQUA-113_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4ArbHZipQmCkLh8siEvC3J/6849dad7fb3a4c8b58edd90bba661622/U--1185-LAVAQUA-114_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7sKU6Hy3jkXmDzMOUhH2tL/0c06784d91dc7fb972210eea039b5133/U--1185-LAVAQUA-115_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:38:42+00:00",
+      "sellingPrice": "24.90",
+      "reportedTotalCost": "17.37",
+      "unitSpread": "7.53",
+      "marginPct": 30.24,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.05"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.25"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.70"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.75"
         },
         {
           "label": "Credit Card Fees",

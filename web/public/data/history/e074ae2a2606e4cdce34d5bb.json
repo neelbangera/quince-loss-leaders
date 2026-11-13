@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T16:48:24+00:00",
+    "capturedAt": "2026-11-13T16:38:10+00:00",
     "sellingPrice": "349.90",
     "reportedTotalCost": "259.02",
     "unitSpread": "90.88",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 31,
+    "observationCount": 32,
     "lossObservations": 0,
-    "profitObservations": 31,
+    "profitObservations": 32,
     "lowestPrice": "349.90",
     "highestPrice": "349.90",
     "lowestCost": "240.72",
     "highestCost": "259.02",
-    "averageSpread": "106.23",
+    "averageSpread": "105.75",
     "firstObservedAt": "2026-10-13T19:26:44+00:00",
-    "lastObservedAt": "2026-11-12T16:48:24+00:00"
+    "lastObservedAt": "2026-11-13T16:38:10+00:00"
   },
   "history": [
     {
@@ -1469,6 +1469,53 @@
     },
     {
       "capturedAt": "2026-11-12T16:48:24+00:00",
+      "sellingPrice": "349.90",
+      "reportedTotalCost": "259.02",
+      "unitSpread": "90.88",
+      "marginPct": 25.97,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "120.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "82.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "47.22"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "7.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/63isOiRrvPhIIwuUP4TuPD/9b4184ecaab7666d25e85632caa42993/tahii3703-1014_5__x_8_.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3mYuYY2qQFNkKErs58sNs0/0c434f2fd5e519cc4bd0cb0a6cfb3b84/tahii3703-front.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5GSikM8X7uSrsnzAa1m9mB/68a92b894ec4c6d1ae0715e682161843/tahii3703-texture.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3rPY6uzPoe5ZkFi2mHzEpY/9383efb907a4be94e78cb0bea919b48b/tahii3703-fold.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:38:10+00:00",
       "sellingPrice": "349.90",
       "reportedTotalCost": "259.02",
       "unitSpread": "90.88",

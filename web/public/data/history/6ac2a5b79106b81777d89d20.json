@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-11T16:25:17+00:00",
+    "capturedAt": "2026-11-13T16:37:18+00:00",
     "sellingPrice": "44.90",
     "reportedTotalCost": "31.75",
     "unitSpread": "13.15",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "31.75",
     "highestCost": "31.75",
     "averageSpread": "13.15",
     "firstObservedAt": "2026-11-11T16:25:17+00:00",
-    "lastObservedAt": "2026-11-11T16:25:17+00:00"
+    "lastObservedAt": "2026-11-13T16:37:18+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-11T16:25:17+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "31.75",
+      "unitSpread": "13.15",
+      "marginPct": 29.29,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.22"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.84"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "15.09"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.17"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.43"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/wli8WvSdXFAoMb3L7lefe/6157e47ee4480d5befa8878409f1f318/U-BEDD-117-TOF-026_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2hfa2YjP9nSkrKQyIlh5OB/775f458a48b4293571b9bc4ae542368e/U-BEDD-118-TOF-52463_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5VcYYlVA9HmNMnIOI3Oksi/b51523020ee02c92317a6f3aca56dac6/U-BEDD-118-TOF-52448_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2T1qs7XsYOHDHQYFjQQmbq/999141758d30290babb8cea5687d3c02/U-BEDD-118-TOF-52498_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:37:18+00:00",
       "sellingPrice": "44.90",
       "reportedTotalCost": "31.75",
       "unitSpread": "13.15",

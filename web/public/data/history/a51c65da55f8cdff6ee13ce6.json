@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T17:09:05+00:00",
+    "capturedAt": "2026-11-13T16:35:05+00:00",
     "sellingPrice": "19.90",
     "reportedTotalCost": "16.53",
     "unitSpread": "3.37",
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "16.53",
     "highestCost": "16.53",
     "averageSpread": "3.37",
     "firstObservedAt": "2026-11-10T16:28:44+00:00",
-    "lastObservedAt": "2026-11-12T17:09:05+00:00"
+    "lastObservedAt": "2026-11-13T16:35:05+00:00"
   },
   "history": [
     {
@@ -180,6 +180,53 @@
     },
     {
       "capturedAt": "2026-11-12T17:09:05+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "16.53",
+      "unitSpread": "3.37",
+      "marginPct": 16.93,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "6.06"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.95"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.91"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4V8sDu0Dg1TtLpVF0Nv9o3/d0b831207f640ef1940b8db41d303390/U--320_PINJUNC_35772_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1UBaBqZZyWBpaJoWmETQJN/055d6f359724183a8c4ab7b5d457d8c6/U--320-PINJUNC.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1OpvfEhbF10tWiXZHkNoZb/05a0a56f6173c581aa0a4c62279d05ae/U--320_PINJUNC_35775_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2ZSc7kRlco6cxTYBEscJPk/3753e31280e39b577e4ca0cc095c79c1/U--320-PINJUNC_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:35:05+00:00",
       "sellingPrice": "19.90",
       "reportedTotalCost": "16.53",
       "unitSpread": "3.37",

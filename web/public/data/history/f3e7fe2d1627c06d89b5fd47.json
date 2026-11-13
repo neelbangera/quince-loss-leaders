@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-12T17:07:36+00:00",
+    "capturedAt": "2026-11-13T16:41:18+00:00",
     "sellingPrice": "44.90",
     "reportedTotalCost": "34.65",
     "unitSpread": "10.25",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "44.90",
     "highestPrice": "44.90",
     "lowestCost": "34.65",
     "highestCost": "35.26",
-    "averageSpread": "9.92",
+    "averageSpread": "9.95",
     "firstObservedAt": "2026-11-02T18:29:35+00:00",
-    "lastObservedAt": "2026-11-12T17:07:36+00:00"
+    "lastObservedAt": "2026-11-13T16:41:18+00:00"
   },
   "history": [
     {
@@ -544,6 +544,52 @@
     },
     {
       "capturedAt": "2026-11-12T17:07:36+00:00",
+      "sellingPrice": "44.90",
+      "reportedTotalCost": "34.65",
+      "unitSpread": "10.25",
+      "marginPct": 22.83,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.44"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "10.06"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.36"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.45"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.19"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.15"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/J7K710VZrc5rXcmY9X73w/92a9588f8f0b6fa6a42ceb96013c16a0/U--1660-ROSPET-8Y-0152_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2DJw1z2FHzl5bdOflCOqdy/14c5f642cffc827364bf9512440bdd8c/U--1660-ROSPET-8Y-0153_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6rn0HKJW8S21I2muv3RfAg/5f4b19f9542bef4124d93f593ee8e6b5/U--1660-ROSPET-8Y-0154_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-13T16:41:18+00:00",
       "sellingPrice": "44.90",
       "reportedTotalCost": "34.65",
       "unitSpread": "10.25",

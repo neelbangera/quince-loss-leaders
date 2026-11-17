@@ -8,19 +8,32 @@
     "brand": null,
     "department": "home",
     "departmentLabel": "Home",
-    "category": "other",
-    "categoryLabel": "Other",
+    "category": "bath",
+    "categoryLabel": "Bath",
     "currency": "USD",
-    "hasExorbitantFees": true
+    "hasExorbitantFees": true,
+    "parentProductId": "8670",
+    "variantLabel": "Natural / One Size",
+    "variantSize": "Natural",
+    "variantColor": "One Size",
+    "imageUrl": "https://images.quince.com/11xqNHbiqrjyyqJW67dlWQ/b15521ae5871c1a37893cc22d59baab3/U-HAC-565-NAT-4688-HANDLE-HOLE_EDITED.jpg?fm=webP&q=90&w=1600",
+    "imageUrls": [
+      "https://images.quince.com/11xqNHbiqrjyyqJW67dlWQ/b15521ae5871c1a37893cc22d59baab3/U-HAC-565-NAT-4688-HANDLE-HOLE_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/32nKsrr2KUiMHbOfiOUvAg/e990fce3561014e2436a8c8b8a52398f/U-HAC-565-NAT-5524_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6nDIJHIIvPw7WWV2wG3aZc/8db31b712ee8a0c04b997a1b04ddbb37/U-HAC-565-NAT-5526_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/1tAcmp5iCeUZAIkHggdOB0/66dd582af192b7e2a7478d5d04f753b9/U-HAC-565-NAT-4689_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6xNDieBR9EDE1FHXE3XsdN/b3d063aac9305acbb78df70c9565aa5b/U-HAC-565-NAT-4693_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4kfNtudL7kEL0ZfEdXWZ06/fff059652d3b1a42552c3dac24e06ae1/U-HAC-565-NAT-4684_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+    ]
   },
   "current": {
-    "capturedAt": "2026-10-09T15:30:51+00:00",
+    "capturedAt": "2026-11-17T17:38:28+00:00",
     "sellingPrice": "139.90",
-    "reportedTotalCost": "214.95",
-    "unitSpread": "-75.05",
-    "marginPct": -53.65,
+    "reportedTotalCost": "62.53",
+    "unitSpread": "77.37",
+    "marginPct": 55.3,
     "parseStatus": "complete",
-    "totalCostSource": "embedded_inferred",
+    "totalCostSource": "normalized_fee_excluded",
     "costLines": [
       {
         "label": "Materials",
@@ -50,21 +63,29 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "152.42"
+        "amount": "0.00"
       }
+    ],
+    "imageUrls": [
+      "https://images.quince.com/11xqNHbiqrjyyqJW67dlWQ/b15521ae5871c1a37893cc22d59baab3/U-HAC-565-NAT-4688-HANDLE-HOLE_EDITED.jpg?fm=webP&q=90&w=1600",
+      "https://images.quince.com/32nKsrr2KUiMHbOfiOUvAg/e990fce3561014e2436a8c8b8a52398f/U-HAC-565-NAT-5524_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6nDIJHIIvPw7WWV2wG3aZc/8db31b712ee8a0c04b997a1b04ddbb37/U-HAC-565-NAT-5526_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/1tAcmp5iCeUZAIkHggdOB0/66dd582af192b7e2a7478d5d04f753b9/U-HAC-565-NAT-4689_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/6xNDieBR9EDE1FHXE3XsdN/b3d063aac9305acbb78df70c9565aa5b/U-HAC-565-NAT-4693_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+      "https://images.quince.com/4kfNtudL7kEL0ZfEdXWZ06/fff059652d3b1a42552c3dac24e06ae1/U-HAC-565-NAT-4684_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
     ]
   },
   "analytics": {
-    "observationCount": 18,
+    "observationCount": 19,
     "lossObservations": 18,
-    "profitObservations": 0,
+    "profitObservations": 1,
     "lowestPrice": "139.90",
     "highestPrice": "139.90",
-    "lowestCost": "214.95",
+    "lowestCost": "62.53",
     "highestCost": "220.19",
-    "averageSpread": "-79.42",
+    "averageSpread": "-71.16",
     "firstObservedAt": "2026-09-22T13:33:39+00:00",
-    "lastObservedAt": "2026-10-09T15:30:51+00:00"
+    "lastObservedAt": "2026-11-17T17:38:28+00:00"
   },
   "history": [
     {
@@ -803,6 +824,55 @@
           "type": "duties_taxes_fees",
           "amount": "152.42"
         }
+      ]
+    },
+    {
+      "capturedAt": "2026-11-17T17:38:28+00:00",
+      "sellingPrice": "139.90",
+      "reportedTotalCost": "62.53",
+      "unitSpread": "77.37",
+      "marginPct": 55.3,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "47.58"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.36"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.59"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/11xqNHbiqrjyyqJW67dlWQ/b15521ae5871c1a37893cc22d59baab3/U-HAC-565-NAT-4688-HANDLE-HOLE_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/32nKsrr2KUiMHbOfiOUvAg/e990fce3561014e2436a8c8b8a52398f/U-HAC-565-NAT-5524_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6nDIJHIIvPw7WWV2wG3aZc/8db31b712ee8a0c04b997a1b04ddbb37/U-HAC-565-NAT-5526_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1tAcmp5iCeUZAIkHggdOB0/66dd582af192b7e2a7478d5d04f753b9/U-HAC-565-NAT-4689_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6xNDieBR9EDE1FHXE3XsdN/b3d063aac9305acbb78df70c9565aa5b/U-HAC-565-NAT-4693_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4kfNtudL7kEL0ZfEdXWZ06/fff059652d3b1a42552c3dac24e06ae1/U-HAC-565-NAT-4684_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
       ]
     }
   ]

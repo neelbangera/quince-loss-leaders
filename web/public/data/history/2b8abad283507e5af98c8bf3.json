@@ -26,11 +26,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-16T18:44:31+00:00",
+    "capturedAt": "2026-11-17T17:40:58+00:00",
     "sellingPrice": "72.00",
-    "reportedTotalCost": "35.30",
-    "unitSpread": "36.70",
-    "marginPct": 50.97,
+    "reportedTotalCost": "35.27",
+    "unitSpread": "36.73",
+    "marginPct": 51.01,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -52,7 +52,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "10.63"
+        "amount": "10.60"
       },
       {
         "label": "Credit Card Fees",
@@ -74,16 +74,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
+    "observationCount": 4,
     "lossObservations": 0,
-    "profitObservations": 3,
+    "profitObservations": 4,
     "lowestPrice": "72.00",
     "highestPrice": "72.00",
-    "lowestCost": "35.30",
+    "lowestCost": "35.27",
     "highestCost": "35.30",
-    "averageSpread": "36.70",
+    "averageSpread": "36.71",
     "firstObservedAt": "2026-11-14T15:17:17+00:00",
-    "lastObservedAt": "2026-11-16T18:44:31+00:00"
+    "lastObservedAt": "2026-11-17T17:40:58+00:00"
   },
   "history": [
     {
@@ -210,6 +210,54 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "10.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.88"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.89"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6PBszRoWFDS5o5tIsld6ys/c636a570916003982e4920da6ed2a80f/W-BAG-58-ALPIMIST-0128_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6vsCWc2nC039BlPioxspWr/ca4662bb569268e0794e08bda481cccb/W-BAG-58-ALPIMIST-0134_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/42QGTE6Ld5I9NsvHOcvN3n/1ef271986c6869f441148e9f9596bff2/W-BAG-58-ALPIMIST-0352_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7rmBidEyDdRYvlYxt38Wjt/e8f064856a961152ea84b9f7c83cce85/W-BAG-58-ALPIMIST-0356_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1aiexZDoDuoahaYjef2PWI/26755b21a34a32c7add36964c201afe2/W-BAG-58-ALPIMIST-0361_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-17T17:40:58+00:00",
+      "sellingPrice": "72.00",
+      "reportedTotalCost": "35.27",
+      "unitSpread": "36.73",
+      "marginPct": 51.01,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "12.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "6.08"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.14"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "10.60"
         },
         {
           "label": "Credit Card Fees",

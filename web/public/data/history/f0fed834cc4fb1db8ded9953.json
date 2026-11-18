@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-17T17:59:15+00:00",
+    "capturedAt": "2026-11-18T17:24:24+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "24.55",
     "unitSpread": "15.35",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "39.90",
     "highestPrice": "39.90",
     "lowestCost": "24.55",
     "highestCost": "24.55",
     "averageSpread": "15.35",
     "firstObservedAt": "2026-11-17T17:59:15+00:00",
-    "lastObservedAt": "2026-11-17T17:59:15+00:00"
+    "lastObservedAt": "2026-11-18T17:24:24+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-17T17:59:15+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "24.55",
+      "unitSpread": "15.35",
+      "marginPct": 38.47,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "13.04"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.29"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.06"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.66"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6sAEJybcaPAcHubGLIj7MW/ac180564b36e0725c343435362e1cdef/U--Bedd-241-Char_189030.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1WiLzlgPDhCeAxhAVfky6U/a80b29256e71c850952bc74898d513f9/Euro_Linen_Chambry_Char_189459.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5aZXUvJtQgFabGwMbboxJH/bb0314c3761928c21375d0d968595b2d/Euro_Linen_Chambry_Char_189439.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2pLCuSo83nFT5opbwWn3j3/e2ca6817805123167ec58192cf62d5a6/linen_technical_call_out.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-18T17:24:24+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "24.55",
       "unitSpread": "15.35",

@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-17T17:49:46+00:00",
+    "capturedAt": "2026-11-18T17:24:15+00:00",
     "sellingPrice": "17.90",
     "reportedTotalCost": "13.99",
     "unitSpread": "3.91",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "17.90",
     "highestPrice": "17.90",
     "lowestCost": "13.99",
     "highestCost": "13.99",
     "averageSpread": "3.91",
     "firstObservedAt": "2026-11-17T17:49:46+00:00",
-    "lastObservedAt": "2026-11-17T17:49:46+00:00"
+    "lastObservedAt": "2026-11-18T17:24:15+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-17T17:49:46+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "13.99",
+      "unitSpread": "3.91",
+      "marginPct": 21.84,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.75"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.57"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.47"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1dS8FfJRQo6D4fQ4oiyRI3/2d31ba823f9fa5d120b42e49fd141f23/U--1301-PINROS-118_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2QDxAYWoeptqFWgwt7hrl1/5fda718893c028b6d60faa75f6b57667/U--1301-PINROS-119_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4X8lOeTZLmtEIrwieXZ4EC/78797fb2138b329c09b5fde65a67f2e7/U--1301-PINROS-120_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-18T17:24:15+00:00",
       "sellingPrice": "17.90",
       "reportedTotalCost": "13.99",
       "unitSpread": "3.91",

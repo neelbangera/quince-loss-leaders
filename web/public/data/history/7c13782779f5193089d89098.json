@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-15T15:42:59+00:00",
+    "capturedAt": "2026-11-18T17:21:17+00:00",
     "sellingPrice": "29.90",
     "reportedTotalCost": "14.21",
     "unitSpread": "15.69",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "29.90",
     "highestPrice": "29.90",
     "lowestCost": "14.21",
     "highestCost": "14.21",
     "averageSpread": "15.69",
     "firstObservedAt": "2026-11-15T15:42:59+00:00",
-    "lastObservedAt": "2026-11-15T15:42:59+00:00"
+    "lastObservedAt": "2026-11-18T17:21:17+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-15T15:42:59+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "14.21",
+      "unitSpread": "15.69",
+      "marginPct": 52.47,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.03"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.18"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.80"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.20"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3oLkP7DloUGmg9T4u1y7lr/7a3f849e6fc0d610d39258d0b524d7a0/U--1647-FORGRE-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7qcO86SCqWq862HvSiN59T/d22ac58ec29e436f1f229d799dca6d07/U--1646-FORGRE-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5mv5ZXBTb7KHXoNqWVObes/652e3eceb8faac806a356bdd71c22abf/U--1648-FORGRE-12-18M-0094_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-18T17:21:17+00:00",
       "sellingPrice": "29.90",
       "reportedTotalCost": "14.21",
       "unitSpread": "15.69",

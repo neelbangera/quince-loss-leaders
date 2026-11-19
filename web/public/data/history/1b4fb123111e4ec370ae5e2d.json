@@ -24,18 +24,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-21T14:05:24+00:00",
+    "capturedAt": "2026-11-19T17:35:35+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "16.57",
-    "unitSpread": "3.33",
-    "marginPct": 16.73,
+    "reportedTotalCost": "18.70",
+    "unitSpread": "1.20",
+    "marginPct": 6.03,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "5.90"
+        "amount": "7.30"
       },
       {
         "label": "Crafting Cost",
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.90"
+        "amount": "8.12"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "2.15"
+        "amount": "2.66"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "16.57",
-    "highestCost": "16.57",
-    "averageSpread": "3.33",
+    "highestCost": "18.70",
+    "averageSpread": "2.62",
     "firstObservedAt": "2026-10-20T13:47:39+00:00",
-    "lastObservedAt": "2026-10-21T14:05:24+00:00"
+    "lastObservedAt": "2026-11-19T17:35:35+00:00"
   },
   "history": [
     {
@@ -169,6 +169,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "2.15"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/27MF2ImT4jzEYveVkgXe9o/9264d41e67e9573851e2c746496fb2e1/U--1049-HEARTGR-294_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7fqsQyTJ0OSw8vRRSM8jFd/9ed6545f67efc9797d562b1af1498977/U--1049-HEARTGR-295_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7Fm4jKJLx630n4oTsHcI6Q/c0e5b7fab73ceb399b8188ad912a1314/U--1049-HEARTGR-296_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-19T17:35:35+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "18.70",
+      "unitSpread": "1.20",
+      "marginPct": 6.03,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.30"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.12"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.62"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.66"
         }
       ],
       "imageUrls": [

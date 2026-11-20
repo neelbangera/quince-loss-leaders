@@ -22,11 +22,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-19T17:37:29+00:00",
-    "sellingPrice": "24.90",
+    "capturedAt": "2026-11-20T17:12:53+00:00",
+    "sellingPrice": "19.90",
     "reportedTotalCost": "16.64",
-    "unitSpread": "8.26",
-    "marginPct": 33.17,
+    "unitSpread": "3.26",
+    "marginPct": 16.38,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 38,
+    "observationCount": 39,
     "lossObservations": 0,
-    "profitObservations": 38,
-    "lowestPrice": "24.90",
+    "profitObservations": 39,
+    "lowestPrice": "19.90",
     "highestPrice": "24.90",
     "lowestCost": "14.16",
     "highestCost": "16.64",
-    "averageSpread": "9.37",
+    "averageSpread": "9.21",
     "firstObservedAt": "2026-10-13T19:20:55+00:00",
-    "lastObservedAt": "2026-11-19T17:37:29+00:00"
+    "lastObservedAt": "2026-11-20T17:12:53+00:00"
   },
   "history": [
     {
@@ -1726,6 +1726,50 @@
       "reportedTotalCost": "16.64",
       "unitSpread": "8.26",
       "marginPct": 33.17,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "3.40"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.03"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.61"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.89"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.73"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.98"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1ZqDkF48jDePi9cJuABEwH/9cb8ec463cac6ef99cb10345ee1a2686/Toddler_Girl_Crew.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-20T17:12:53+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "16.64",
+      "unitSpread": "3.26",
+      "marginPct": 16.38,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

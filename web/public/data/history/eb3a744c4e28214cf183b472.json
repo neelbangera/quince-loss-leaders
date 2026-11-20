@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-19T17:28:42+00:00",
+    "capturedAt": "2026-11-20T17:04:03+00:00",
     "sellingPrice": "18.00",
     "reportedTotalCost": "15.97",
     "unitSpread": "2.03",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "18.00",
     "highestPrice": "18.00",
     "lowestCost": "15.97",
     "highestCost": "15.97",
     "averageSpread": "2.03",
     "firstObservedAt": "2026-11-19T17:28:42+00:00",
-    "lastObservedAt": "2026-11-19T17:28:42+00:00"
+    "lastObservedAt": "2026-11-20T17:04:03+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-19T17:28:42+00:00",
+      "sellingPrice": "18.00",
+      "reportedTotalCost": "15.97",
+      "unitSpread": "2.03",
+      "marginPct": 11.28,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.62"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.85"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.04"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1mn5tg7yoqZUIe121SrdHv/ac77e39e3fb12201fe7c7cab63297ece/U-W-SOK-6-OBSID-040_EDITED_1Pack.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/7sgq4nhFEAM1yL2uPU8Brs/7e072aff1080517f90c5020aee7293ad/U-W-SOK-6-OBSID-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6p3vGMNhKbwraFhxpLw2li/244ef8d524b1ef15744b6c1cef2418b6/U-W-SOK-6-OBSID-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-20T17:04:03+00:00",
       "sellingPrice": "18.00",
       "reportedTotalCost": "15.97",
       "unitSpread": "2.03",

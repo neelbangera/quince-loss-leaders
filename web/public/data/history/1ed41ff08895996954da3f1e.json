@@ -23,11 +23,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-19T17:37:08+00:00",
-    "sellingPrice": "14.90",
+    "capturedAt": "2026-11-20T17:12:32+00:00",
+    "sellingPrice": "11.90",
     "reportedTotalCost": "6.90",
-    "unitSpread": "8.00",
-    "marginPct": 53.69,
+    "unitSpread": "5.00",
+    "marginPct": 42.02,
     "parseStatus": "complete",
     "totalCostSource": "normalized_fee_excluded",
     "costLines": [
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 26,
+    "observationCount": 27,
     "lossObservations": 0,
-    "profitObservations": 26,
-    "lowestPrice": "14.90",
+    "profitObservations": 27,
+    "lowestPrice": "11.90",
     "highestPrice": "14.90",
     "lowestCost": "6.90",
     "highestCost": "10.31",
-    "averageSpread": "6.38",
+    "averageSpread": "6.33",
     "firstObservedAt": "2026-10-22T14:06:14+00:00",
-    "lastObservedAt": "2026-11-19T17:37:08+00:00"
+    "lastObservedAt": "2026-11-20T17:12:32+00:00"
   },
   "history": [
     {
@@ -1211,6 +1211,51 @@
       "reportedTotalCost": "6.90",
       "unitSpread": "8.00",
       "marginPct": 53.69,
+      "parseStatus": "complete",
+      "totalCostSource": "normalized_fee_excluded",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.91"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.50"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3rxdm1QuMa25LObCFI6ip1/40e73147e1a9ce13e3f0fd7ba59385a0/U_913_MIDNIGHT_NAVY_RETOUCHED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1GwJB1nw3s44KGnxdbcT1r/b0f29f85fb474836e938224f36d06943/U_913_MIDNIGHT_NAVY_RETOUCHED_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-20T17:12:32+00:00",
+      "sellingPrice": "11.90",
+      "reportedTotalCost": "6.90",
+      "unitSpread": "5.00",
+      "marginPct": 42.02,
       "parseStatus": "complete",
       "totalCostSource": "normalized_fee_excluded",
       "costLines": [

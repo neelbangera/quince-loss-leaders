@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-19T17:35:03+00:00",
+    "capturedAt": "2026-11-20T17:10:26+00:00",
     "sellingPrice": "698.00",
-    "reportedTotalCost": "436.81",
-    "unitSpread": "261.19",
-    "marginPct": 37.42,
+    "reportedTotalCost": "417.52",
+    "unitSpread": "280.48",
+    "marginPct": 40.18,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "0.00"
+        "amount": "16.13"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "63.75"
+        "amount": "28.33"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 38,
+    "observationCount": 39,
     "lossObservations": 0,
-    "profitObservations": 38,
+    "profitObservations": 39,
     "lowestPrice": "698.00",
     "highestPrice": "698.00",
-    "lowestCost": "436.81",
+    "lowestCost": "417.52",
     "highestCost": "462.29",
-    "averageSpread": "253.12",
+    "averageSpread": "253.82",
     "firstObservedAt": "2026-10-13T19:33:00+00:00",
-    "lastObservedAt": "2026-11-19T17:35:03+00:00"
+    "lastObservedAt": "2026-11-20T17:10:26+00:00"
   },
   "history": [
     {
@@ -1840,6 +1840,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "63.75"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/cOFUWzQdSBfHMEF8EDWCp/3cbfdb5cdca91d9853f5044979c770b0/14k_Diamond_Orbit_Ring_0585.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/3kHmYF7N9PSiO5U5RM2kqw/c0a802a4b3c0b198ae1034120ae27701/RNG-98-YGLD_1768_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5iOjNO1KqYMQTjlBTWWzUB/4e6d9321cffe7ba795fa82d40aa57c16/14k_Diamond_Orbit_Ring.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5dFMckRjJPcEG0xiUkb0fL/15e3e00a5aabf0db2adbef3bda268b90/RNG-98-YGLD_1767_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-20T17:10:26+00:00",
+      "sellingPrice": "698.00",
+      "reportedTotalCost": "417.52",
+      "unitSpread": "280.48",
+      "marginPct": 40.18,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "327.81"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "24.06"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "16.13"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "18.89"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "28.33"
         }
       ],
       "imageUrls": [

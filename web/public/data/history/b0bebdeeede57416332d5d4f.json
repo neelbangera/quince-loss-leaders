@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-20T17:11:14+00:00",
-    "sellingPrice": "26.90",
+    "capturedAt": "2026-11-21T16:21:15+00:00",
+    "sellingPrice": "29.90",
     "reportedTotalCost": "21.41",
-    "unitSpread": "5.49",
-    "marginPct": 20.41,
+    "unitSpread": "8.49",
+    "marginPct": 28.39,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 8,
+    "observationCount": 9,
     "lossObservations": 0,
-    "profitObservations": 8,
+    "profitObservations": 9,
     "lowestPrice": "26.90",
     "highestPrice": "29.90",
     "lowestCost": "21.41",
     "highestCost": "21.41",
-    "averageSpread": "8.12",
+    "averageSpread": "8.16",
     "firstObservedAt": "2026-11-13T16:40:00+00:00",
-    "lastObservedAt": "2026-11-20T17:11:14+00:00"
+    "lastObservedAt": "2026-11-21T16:21:15+00:00"
   },
   "history": [
     {
@@ -410,6 +410,52 @@
       "reportedTotalCost": "21.41",
       "unitSpread": "5.49",
       "marginPct": 20.41,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "9.38"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.66"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "4.26"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.85"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.76"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4XHLZlYTRQbrWucftm1Q4F/8cd843343aa9501b6b2b0bc461c067ee/Terracotta_4.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4SgnQsD2RD9q2re7XP5Gw8/cb4c00b0f5b7d031f7bec61749365398/07_23_U_TBLE_101_TERR_0789.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2O5YDsaNMR6wvZUbjfRri6/a522133711dff8540b11b26f1b8e8584/07_23_U_TBLE_101_TERR_0780.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-21T16:21:15+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "21.41",
+      "unitSpread": "8.49",
+      "marginPct": 28.39,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

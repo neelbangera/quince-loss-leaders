@@ -27,7 +27,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-21T16:18:10+00:00",
+    "capturedAt": "2026-11-22T16:23:19+00:00",
     "sellingPrice": "4700.00",
     "reportedTotalCost": "2338.47",
     "unitSpread": "2361.53",
@@ -76,16 +76,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 4,
+    "observationCount": 5,
     "lossObservations": 0,
-    "profitObservations": 4,
+    "profitObservations": 5,
     "lowestPrice": "4700.00",
     "highestPrice": "4700.00",
     "lowestCost": "2338.47",
     "highestCost": "2343.47",
-    "averageSpread": "2360.28",
+    "averageSpread": "2360.53",
     "firstObservedAt": "2026-11-18T17:21:36+00:00",
-    "lastObservedAt": "2026-11-21T16:18:10+00:00"
+    "lastObservedAt": "2026-11-22T16:23:19+00:00"
   },
   "history": [
     {
@@ -237,6 +237,55 @@
     },
     {
       "capturedAt": "2026-11-21T16:18:10+00:00",
+      "sellingPrice": "4700.00",
+      "reportedTotalCost": "2338.47",
+      "unitSpread": "2361.53",
+      "marginPct": 50.25,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "1894.53"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "125.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "25.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "173.28"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "117.65"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1fxiHOF1yCH0zW16jH9LbF/249bba6a53463cefc10f284ec50fef64/W-BRAC-89-080_EDITED-WG.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2RmcyGWGHFLmYDAvGwfHFx/8cc154d0628dd27613e502b64d83550e/W-BRAC-89-01_EDITED-WG.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2INe5Vdy9PK31LxhcNi32W/f4084e46be5d6fc806849cb0fb1c1590/W-BRAC-89-309_EDITED_WG.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7gdF2hPcgRqoaaSGaBYXQu/436c329692e92cc30f771e43fcded7ee/W-BRAC-89-02_EDITED-WG.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5LULB3IHEJr6lKb1vmj7l1/8ab107b06ddab9b2bf2e17e34b003c81/W-BRAC-89-346_EDITED_WG.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2C8NsjarMMEpjF82go2s6s/47326fab444316d2661f17c0d8c584f0/W-BRAC-89-065_EDITED_WG.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-22T16:23:19+00:00",
       "sellingPrice": "4700.00",
       "reportedTotalCost": "2338.47",
       "unitSpread": "2361.53",

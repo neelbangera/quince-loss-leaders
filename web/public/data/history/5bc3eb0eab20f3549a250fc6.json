@@ -23,7 +23,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-22T16:31:24+00:00",
+    "capturedAt": "2026-11-23T20:29:09+00:00",
     "sellingPrice": "14.90",
     "reportedTotalCost": "8.30",
     "unitSpread": "6.60",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "14.90",
     "highestPrice": "14.90",
     "lowestCost": "8.30",
     "highestCost": "8.30",
     "averageSpread": "6.60",
     "firstObservedAt": "2026-11-21T16:23:55+00:00",
-    "lastObservedAt": "2026-11-22T16:31:24+00:00"
+    "lastObservedAt": "2026-11-23T20:29:09+00:00"
   },
   "history": [
     {
@@ -127,6 +127,51 @@
     },
     {
       "capturedAt": "2026-11-22T16:31:24+00:00",
+      "sellingPrice": "14.90",
+      "reportedTotalCost": "8.30",
+      "unitSpread": "6.60",
+      "marginPct": 44.3,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.46"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.04"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.30"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.91"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3s52xilL7oUu3Eiqn6SoCs/b0028567118790e20998244a6dd6b516/U--981-PoppyFLRL-117_CROPPED_Toddler.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/tKR5PBBQvYXqvmjc2c0EQ/39940526128fd180b1f8518a5de9fc69/U--981-PoppyFLRL-118_CROPPED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-23T20:29:09+00:00",
       "sellingPrice": "14.90",
       "reportedTotalCost": "8.30",
       "unitSpread": "6.60",

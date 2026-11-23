@@ -23,11 +23,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-22T16:36:41+00:00",
+    "capturedAt": "2026-11-23T20:33:04+00:00",
     "sellingPrice": "19.90",
-    "reportedTotalCost": "9.50",
-    "unitSpread": "10.40",
-    "marginPct": 52.26,
+    "reportedTotalCost": "9.60",
+    "unitSpread": "10.30",
+    "marginPct": 51.76,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -49,7 +49,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.30"
+        "amount": "3.40"
       },
       {
         "label": "Credit Card Fees",
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "19.90",
     "highestPrice": "19.90",
     "lowestCost": "9.50",
-    "highestCost": "9.50",
-    "averageSpread": "10.40",
+    "highestCost": "9.60",
+    "averageSpread": "10.35",
     "firstObservedAt": "2026-11-22T16:36:41+00:00",
-    "lastObservedAt": "2026-11-22T16:36:41+00:00"
+    "lastObservedAt": "2026-11-23T20:33:04+00:00"
   },
   "history": [
     {
@@ -108,6 +108,51 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "3.30"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.99"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2DZ97tu1gZU3PUcag1Vj3N/58cda05888c59cbe9f6d09e0e62dc54a/U--918_STRAWBERRIES-1188_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4ezHonGcrqIAJ6xNXz97Yh/3e4d5c59d236a657c78090613d510baf/U--918_STRAWBERRIES_DETAIL-1190_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-23T20:33:04+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "9.60",
+      "unitSpread": "10.30",
+      "marginPct": 51.76,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.60"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.40"
         },
         {
           "label": "Credit Card Fees",

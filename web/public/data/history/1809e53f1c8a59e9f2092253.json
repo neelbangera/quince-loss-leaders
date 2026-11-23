@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-22T16:38:39+00:00",
+    "capturedAt": "2026-11-23T20:34:59+00:00",
     "sellingPrice": "79.90",
     "reportedTotalCost": "25.32",
     "unitSpread": "54.58",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "79.90",
     "highestPrice": "79.90",
     "lowestCost": "25.32",
     "highestCost": "25.32",
     "averageSpread": "54.58",
     "firstObservedAt": "2026-11-22T16:38:39+00:00",
-    "lastObservedAt": "2026-11-22T16:38:39+00:00"
+    "lastObservedAt": "2026-11-23T20:34:59+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-22T16:38:39+00:00",
+      "sellingPrice": "79.90",
+      "reportedTotalCost": "25.32",
+      "unitSpread": "54.58",
+      "marginPct": 68.31,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.65"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.26"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.58"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.35"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.98"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.50"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1p8Z9O2xz1aX7dAkOL6qTS/9e1c4428f9fe5df94447198ec293a9e6/U-BEDD-472-WHIDOV-183-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4T6PByog0sjsRwHNKyAAVa/0d04d1be8f225cb0ca5fc0bd3772e6e3/U-BEDD-472-WHIDOV-11688.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6AvkHnBcDEgtIfvo3CW2Ch/f44d46ea86c3c259e168bcec54774b84/Without_Flat_Sheet.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1QdDt9iBqF9vchbTjWVr9L/51f1bfaf79fe11ac349f84720ba59383/U-BEDD-142-WHT-39951_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-23T20:34:59+00:00",
       "sellingPrice": "79.90",
       "reportedTotalCost": "25.32",
       "unitSpread": "54.58",

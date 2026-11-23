@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-10-25T13:24:27+00:00",
+    "capturedAt": "2026-11-23T20:34:01+00:00",
     "sellingPrice": "129.90",
-    "reportedTotalCost": "33.89",
-    "unitSpread": "96.01",
-    "marginPct": 73.91,
+    "reportedTotalCost": "42.22",
+    "unitSpread": "87.68",
+    "marginPct": 67.5,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "3.39"
+        "amount": "11.72"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 13,
+    "observationCount": 14,
     "lossObservations": 0,
-    "profitObservations": 13,
+    "profitObservations": 14,
     "lowestPrice": "129.90",
     "highestPrice": "129.90",
     "lowestCost": "33.89",
-    "highestCost": "33.89",
-    "averageSpread": "96.01",
+    "highestCost": "42.22",
+    "averageSpread": "95.42",
     "firstObservedAt": "2026-10-13T19:33:04+00:00",
-    "lastObservedAt": "2026-10-25T13:24:27+00:00"
+    "lastObservedAt": "2026-11-23T20:34:01+00:00"
   },
   "history": [
     {
@@ -646,6 +646,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "3.39"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.33"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.17"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/xnQKWTLwlHhJS4k50Xh8n/dfb561899f22d53da4befb1dbf9eb432/U-TEXT-68-ESP-36242_EDITED_Set-of-2.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6Rh2lBuWYwaWaf8bXGBHVY/22b3bfcb4364e95349631208fbe0affc/U-TEXT-68-ESP-35467_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3BcbVdSKKj1xrWqk9qHC2h/43ebdc12a40e561c0fede48cb55e9826/U-TEXT-68-ESP-35468_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-23T20:34:01+00:00",
+      "sellingPrice": "129.90",
+      "reportedTotalCost": "42.22",
+      "unitSpread": "87.68",
+      "marginPct": 67.5,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "15.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "8.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "11.72"
         },
         {
           "label": "Credit Card Fees",

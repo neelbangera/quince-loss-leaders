@@ -23,11 +23,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-20T17:18:57+00:00",
-    "sellingPrice": "11.90",
+    "capturedAt": "2026-11-24T19:50:31+00:00",
+    "sellingPrice": "14.90",
     "reportedTotalCost": "8.24",
-    "unitSpread": "3.66",
-    "marginPct": 30.76,
+    "unitSpread": "6.66",
+    "marginPct": 44.7,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -68,16 +68,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 0,
-    "profitObservations": 2,
+    "profitObservations": 3,
     "lowestPrice": "11.90",
     "highestPrice": "14.90",
     "lowestCost": "8.24",
     "highestCost": "8.24",
-    "averageSpread": "5.16",
+    "averageSpread": "5.66",
     "firstObservedAt": "2026-11-19T17:43:31+00:00",
-    "lastObservedAt": "2026-11-20T17:18:57+00:00"
+    "lastObservedAt": "2026-11-24T19:50:31+00:00"
   },
   "history": [
     {
@@ -131,6 +131,51 @@
       "reportedTotalCost": "8.24",
       "unitSpread": "3.66",
       "marginPct": 30.76,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.26"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.95"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.09"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.49"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.82"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4tMPrOCMP8erZfI8fk9sg1/518d7624c01a592beb503a91b26f58cb/U--980-PSTRIPE-124_CROPPED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4M6iRK3JmbbkxIXBgocglp/691c5efeb6569885a1126eefdc03557e/U--982-PURPSTRIPE-111_CROPPED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-24T19:50:31+00:00",
+      "sellingPrice": "14.90",
+      "reportedTotalCost": "8.24",
+      "unitSpread": "6.66",
+      "marginPct": 44.7,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

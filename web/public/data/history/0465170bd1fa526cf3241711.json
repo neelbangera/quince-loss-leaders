@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:50:47+00:00",
+    "capturedAt": "2026-11-25T19:00:15+00:00",
     "sellingPrice": "348.00",
-    "reportedTotalCost": "155.30",
-    "unitSpread": "192.70",
-    "marginPct": 55.37,
+    "reportedTotalCost": "177.23",
+    "unitSpread": "170.77",
+    "marginPct": 49.07,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -51,7 +51,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "0.00"
+        "amount": "13.37"
       },
       {
         "label": "Credit Card Fees",
@@ -61,7 +61,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "0.00"
+        "amount": "8.56"
       }
     ],
     "imageUrls": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 76,
+    "observationCount": 77,
     "lossObservations": 0,
-    "profitObservations": 76,
+    "profitObservations": 77,
     "lowestPrice": "348.00",
     "highestPrice": "348.00",
     "lowestCost": "155.30",
     "highestCost": "226.61",
-    "averageSpread": "140.09",
+    "averageSpread": "140.48",
     "firstObservedAt": "2026-09-11T13:10:30+00:00",
-    "lastObservedAt": "2026-11-24T19:50:47+00:00"
+    "lastObservedAt": "2026-11-25T19:00:15+00:00"
   },
   "history": [
     {
@@ -3425,6 +3425,53 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/Qh7bDkt3Ztwgdvlawwgp1/3d11f4836b22bad2f76fbb8a1fed6814/white_ring.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5PU57AJs1YIUElM2c356iL/27b9ede96a443fdf7c4858d222f1c731/platinum_band_6.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7zhkGSG5AH0Q99BZuITttN/427ec1dafbe2cf1b48c2ec229f3d5dc6/platinum_band_2.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4to4wrrQZyBoXGiODHCpIz/7d4f2d983a0f2521c2c84bc8a98575cf/platinum_band_4.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T19:00:15+00:00",
+      "sellingPrice": "348.00",
+      "reportedTotalCost": "177.23",
+      "unitSpread": "170.77",
+      "marginPct": 49.07,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "131.45"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "12.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "13.37"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "9.55"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "8.56"
         }
       ],
       "imageUrls": [

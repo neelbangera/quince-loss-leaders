@@ -26,7 +26,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:47:34+00:00",
+    "capturedAt": "2026-11-25T18:57:01+00:00",
     "sellingPrice": "80.00",
     "reportedTotalCost": "78.67",
     "unitSpread": "1.33",
@@ -74,20 +74,68 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "80.00",
     "highestPrice": "80.00",
     "lowestCost": "78.67",
     "highestCost": "78.67",
     "averageSpread": "1.33",
     "firstObservedAt": "2026-11-24T19:47:34+00:00",
-    "lastObservedAt": "2026-11-24T19:47:34+00:00"
+    "lastObservedAt": "2026-11-25T18:57:01+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-24T19:47:34+00:00",
+      "sellingPrice": "80.00",
+      "reportedTotalCost": "78.67",
+      "unitSpread": "1.33",
+      "marginPct": 1.66,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "25.04"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.83"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.38"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "21.65"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.90"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "25.87"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5BKDsHQOLQ3wBAo3F6mnDT/44c8d9bd866da4a38861ed393c3ca57a/U-BATH-103-DUSOLI-0044_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5dDQb4j2TjnbXHG56TyiC5/852cb4b920a8d50e2fb69210f7a38049/U-BATH-103-DUSOLI-0140_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2YIBeFdntwq6f7nUhMmshe/10448732261bc36123f1cb67e8338776/U-BATH-100-DUSOLI-0371_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5i3B6smMiS5GECSuKogK2E/94c1ff4ebc823b2181e98724d4d7f339/U-BATH-101-DUSOLI-0225_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/6awp8n7wCOXHG2qxzopWu9/40394c8187cfac5d19e08937b906b20e/U-BATH-104-COLLECTION-0330_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T18:57:01+00:00",
       "sellingPrice": "80.00",
       "reportedTotalCost": "78.67",
       "unitSpread": "1.33",

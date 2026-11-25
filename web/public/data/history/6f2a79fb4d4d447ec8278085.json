@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:36:03+00:00",
+    "capturedAt": "2026-11-25T18:45:28+00:00",
     "sellingPrice": "2100.00",
-    "reportedTotalCost": "639.55",
-    "unitSpread": "1460.45",
-    "marginPct": 69.55,
+    "reportedTotalCost": "679.67",
+    "unitSpread": "1420.33",
+    "marginPct": 67.63,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "0.00"
+        "amount": "5.07"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "0.00"
+        "amount": "35.05"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 76,
+    "observationCount": 77,
     "lossObservations": 0,
-    "profitObservations": 76,
+    "profitObservations": 77,
     "lowestPrice": "2100.00",
     "highestPrice": "2100.00",
     "lowestCost": "639.55",
     "highestCost": "894.44",
-    "averageSpread": "1329.94",
+    "averageSpread": "1331.11",
     "firstObservedAt": "2026-09-11T12:49:52+00:00",
-    "lastObservedAt": "2026-11-24T19:36:03+00:00"
+    "lastObservedAt": "2026-11-25T18:45:28+00:00"
   },
   "history": [
     {
@@ -3393,6 +3393,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4AMWI8QLTddOkxzCWWdpxr/1715c69cbb30b44e803163584f356400/RNG-288-112_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1VmS8IK0hYIo5LZ1lpFnEV/8cf7ee4f2a305b983334665000c86d79/RNG-288-279_EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1WyINqJpkY0OsZbIV2Xrcr/4fc8162b9f7d12df0211fdabd5bef861/RNG-288-351_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T18:45:28+00:00",
+      "sellingPrice": "2100.00",
+      "reportedTotalCost": "679.67",
+      "unitSpread": "1420.33",
+      "marginPct": 67.63,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "555.92"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "28.80"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "2.30"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.07"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "52.53"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "35.05"
         }
       ],
       "imageUrls": [

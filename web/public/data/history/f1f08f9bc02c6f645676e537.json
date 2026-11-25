@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:36:59+00:00",
+    "capturedAt": "2026-11-25T18:46:25+00:00",
     "sellingPrice": "12.00",
     "reportedTotalCost": "6.50",
     "unitSpread": "5.50",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 5,
+    "observationCount": 6,
     "lossObservations": 0,
-    "profitObservations": 5,
+    "profitObservations": 6,
     "lowestPrice": "12.00",
     "highestPrice": "12.00",
     "lowestCost": "6.50",
     "highestCost": "6.50",
     "averageSpread": "5.50",
     "firstObservedAt": "2026-11-20T17:05:25+00:00",
-    "lastObservedAt": "2026-11-24T19:36:59+00:00"
+    "lastObservedAt": "2026-11-25T18:46:25+00:00"
   },
   "history": [
     {
@@ -268,6 +268,52 @@
     },
     {
       "capturedAt": "2026-11-24T19:36:59+00:00",
+      "sellingPrice": "12.00",
+      "reportedTotalCost": "6.50",
+      "unitSpread": "5.50",
+      "marginPct": 45.83,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "0.77"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.63"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.88"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.43"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.69"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/d25aopt2mQePnxtL6t3m0/2e7004e81e1f41e1701a1f8bc3c0201d/U--1582-HEAGRE-0183_individual_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5ePMjWwnYUwXM0vbzFn72d/63ed6c454ca725a4f47566bec9e19500/U--2050-HEAGRE-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/47E6GKt73Qd1s1SQBgz4PO/a710ea70f612bba460f8d0d22c0b9920/U--2050-HEAGRE-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T18:46:25+00:00",
       "sellingPrice": "12.00",
       "reportedTotalCost": "6.50",
       "unitSpread": "5.50",

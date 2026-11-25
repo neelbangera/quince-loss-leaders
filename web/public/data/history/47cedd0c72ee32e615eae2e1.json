@@ -27,11 +27,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:49:04+00:00",
-    "sellingPrice": "22.90",
+    "capturedAt": "2026-11-25T18:58:32+00:00",
+    "sellingPrice": "26.90",
     "reportedTotalCost": "23.33",
-    "unitSpread": "-0.43",
-    "marginPct": -1.88,
+    "unitSpread": "3.57",
+    "marginPct": 13.27,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -76,16 +76,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 7,
+    "observationCount": 8,
     "lossObservations": 7,
-    "profitObservations": 0,
+    "profitObservations": 1,
     "lowestPrice": "22.90",
-    "highestPrice": "22.90",
+    "highestPrice": "26.90",
     "lowestCost": "23.33",
     "highestCost": "23.33",
-    "averageSpread": "-0.43",
+    "averageSpread": "0.07",
     "firstObservedAt": "2026-11-18T17:17:07+00:00",
-    "lastObservedAt": "2026-11-24T19:49:04+00:00"
+    "lastObservedAt": "2026-11-25T18:58:32+00:00"
   },
   "history": [
     {
@@ -388,6 +388,55 @@
       "reportedTotalCost": "23.33",
       "unitSpread": "-0.43",
       "marginPct": -1.88,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.27"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "2.06"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.37"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.66"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.67"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "7.30"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/37F3AIcomux6fCKVIY78yx/3874e2f1ce773558102ec8b4f2fd196d/U--1985-AVIATOR-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/ZFju1caByGjC7rs8QJb0o/efbebc60d1454d535c60a2b0d6030648/Little-Prince-Look-07-0480_019_EDITED.jpg?w=200&q=50&h=300&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3T6aosldwkdwbf0OQzJviA/884b73de52e3a57836cce159ecadf030/U--1985-AVIATOR-8Y-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/211iyt3aqHgfqLxZD52O7j/17cd10a9bf54956f4bf6e13fb921552d/U--1985-AVIATOR-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7cyhXqOG8yCCqmY5hTZPem/b703fcbfaaa0fa4a88b691bacc49cc97/U--1985-AVIATOR-8Y-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5yM9Lf3xsqBEOojF73qkKH/e270593e0931f98749043e8c8b211990/U--1985-AVIATOR-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T18:58:32+00:00",
+      "sellingPrice": "26.90",
+      "reportedTotalCost": "23.33",
+      "unitSpread": "3.57",
+      "marginPct": 13.27,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

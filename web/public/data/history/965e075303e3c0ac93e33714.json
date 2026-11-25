@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-24T19:44:59+00:00",
-    "sellingPrice": "19.90",
+    "capturedAt": "2026-11-25T18:54:25+00:00",
+    "sellingPrice": "22.90",
     "reportedTotalCost": "18.29",
-    "unitSpread": "1.61",
-    "marginPct": 8.09,
+    "unitSpread": "4.61",
+    "marginPct": 20.13,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 9,
+    "observationCount": 10,
     "lossObservations": 0,
-    "profitObservations": 9,
+    "profitObservations": 10,
     "lowestPrice": "19.90",
-    "highestPrice": "19.90",
+    "highestPrice": "22.90",
     "lowestCost": "18.29",
     "highestCost": "18.29",
-    "averageSpread": "1.61",
+    "averageSpread": "1.91",
     "firstObservedAt": "2026-11-16T18:40:40+00:00",
-    "lastObservedAt": "2026-11-24T19:44:59+00:00"
+    "lastObservedAt": "2026-11-25T18:54:25+00:00"
   },
   "history": [
     {
@@ -456,6 +456,52 @@
       "reportedTotalCost": "18.29",
       "unitSpread": "1.61",
       "marginPct": 8.09,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.62"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.98"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.32"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.58"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.08"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4EsU8HFKdK4QVFfhPiIYCh/e365176326b99ee01f41f22570d35acd/U--1982-AVIATOR-01_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5s1fZOgHRiEw1VXc2vcKA4/01d3b07d6f43ecadff8a2c86e0c621d8/U--1982-AVIATOR-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7npxiDGo5vc45TBWhdpI7P/ceb431bb5d9e9902fbcf929d6b9aab97/U--1982-AVIATOR-03_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-25T18:54:25+00:00",
+      "sellingPrice": "22.90",
+      "reportedTotalCost": "18.29",
+      "unitSpread": "4.61",
+      "marginPct": 20.13,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

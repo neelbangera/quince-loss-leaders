@@ -22,11 +22,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-25T18:57:55+00:00",
-    "sellingPrice": "19.90",
+    "capturedAt": "2026-11-26T18:47:23+00:00",
+    "sellingPrice": "15.90",
     "reportedTotalCost": "13.70",
-    "unitSpread": "6.20",
-    "marginPct": 31.16,
+    "unitSpread": "2.20",
+    "marginPct": 13.84,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -66,16 +66,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 13,
+    "observationCount": 14,
     "lossObservations": 0,
-    "profitObservations": 13,
+    "profitObservations": 14,
     "lowestPrice": "15.90",
     "highestPrice": "19.90",
     "lowestCost": "13.68",
     "highestCost": "13.70",
-    "averageSpread": "5.90",
+    "averageSpread": "5.64",
     "firstObservedAt": "2026-11-04T16:39:36+00:00",
-    "lastObservedAt": "2026-11-25T18:57:55+00:00"
+    "lastObservedAt": "2026-11-26T18:47:23+00:00"
   },
   "history": [
     {
@@ -612,6 +612,50 @@
       "reportedTotalCost": "13.70",
       "unitSpread": "6.20",
       "marginPct": 31.16,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "2.78"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.99"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.83"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.92"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.61"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.57"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/6PaliY5TiTzQGy5w1XKd0S/0873d374e09bcecfb98832dd04f12c96/U--149_GW.jpg?fm=webP&q=90&w=1600"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-26T18:47:23+00:00",
+      "sellingPrice": "15.90",
+      "reportedTotalCost": "13.70",
+      "unitSpread": "2.20",
+      "marginPct": 13.84,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

@@ -29,7 +29,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-25T18:58:14+00:00",
+    "capturedAt": "2026-11-26T18:30:59+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "25.20",
     "unitSpread": "16.80",
@@ -80,20 +80,71 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "25.20",
     "highestCost": "25.20",
     "averageSpread": "16.80",
     "firstObservedAt": "2026-11-25T18:58:14+00:00",
-    "lastObservedAt": "2026-11-25T18:58:14+00:00"
+    "lastObservedAt": "2026-11-26T18:30:59+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-25T18:58:14+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "25.20",
+      "unitSpread": "16.80",
+      "marginPct": 40.0,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "7.78"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "7.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.45"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.56"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.31"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "5.10"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1xdlrAGlKLBOjEKv79KNPR/4d694e59316e0e550e19918a919c1d22/M-WVN-57-OLV-2641_EDITED_1.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4GJhNk1Kc54RHKmaLT9aUR/d5b5b2f7a22190ee7ac013e08b7ec8ed/M-WVN-57-OLV-2641_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/53ja7stF7mHIZOIaicfb2t/9a9e96c907890d1f1b6b1193202d6c57/M-WVN-57-OLV-2687_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1zfO72DZFRRH3SBBHxMxl7/7dcc6aadcf75cb631139b71e4c1cff3e/M-WVN-57-OLV-2658_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4cpL7P5O5PT5536Bu9cPzd/78986b679733f91b973176a3a040b4cf/M-WVN-57-OLV-2673_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2DYHn9T9IxFnbwSw4b3UyS/008688b83906d7e37f90069a03b6c0c6/M-WVN-57-OLV-2667_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5Igu94RkmHTaRACSzEUekW/2a0e864b8415cacd2de52404966e50b0/M-WVN-57-OLV-2713_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/35gq7ysbtRnKY4bwCKP9FW/26d0f3877ff4e7f08390da1c5d6c23b8/M-WVN-57-OLV-2698_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-26T18:30:59+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "25.20",
       "unitSpread": "16.80",

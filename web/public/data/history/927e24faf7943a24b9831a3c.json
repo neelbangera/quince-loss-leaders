@@ -24,18 +24,18 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-25T18:53:52+00:00",
+    "capturedAt": "2026-11-26T18:43:52+00:00",
     "sellingPrice": "218.00",
-    "reportedTotalCost": "110.73",
-    "unitSpread": "107.27",
-    "marginPct": 49.21,
+    "reportedTotalCost": "90.04",
+    "unitSpread": "127.96",
+    "marginPct": 58.7,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
       {
         "label": "Materials",
         "type": "materials",
-        "amount": "72.12"
+        "amount": "66.90"
       },
       {
         "label": "Crafting Cost",
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "4.70"
+        "amount": "0.00"
       },
       {
         "label": "Credit Card Fees",
@@ -60,7 +60,7 @@
       {
         "label": "Duties, Taxes, And Fees",
         "type": "duties_taxes_fees",
-        "amount": "10.77"
+        "amount": "0.00"
       }
     ],
     "imageUrls": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 90,
+    "observationCount": 91,
     "lossObservations": 0,
-    "profitObservations": 90,
+    "profitObservations": 91,
     "lowestPrice": "218.00",
     "highestPrice": "218.00",
-    "lowestCost": "95.26",
+    "lowestCost": "90.04",
     "highestCost": "125.96",
-    "averageSpread": "99.03",
+    "averageSpread": "99.35",
     "firstObservedAt": "2026-08-29T21:22:16+00:00",
-    "lastObservedAt": "2026-11-25T18:53:52+00:00"
+    "lastObservedAt": "2026-11-26T18:43:52+00:00"
   },
   "history": [
     {
@@ -3972,6 +3972,52 @@
           "label": "Duties, Taxes, And Fees",
           "type": "duties_taxes_fees",
           "amount": "10.77"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/5kdxDTXDxtYE1fwe32knml/72422471aee0c04f192c178e841c1a13/NECK-142-218_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4mnLr5Q7M41VvXJj6wX7W7/fdf2466569cee211095b3faa372f99fd/NECK-142-02_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2aks1mdHOO6rED6Yvt3zBz/d0637a797b76cc75f5282bbd7b1130fc/NECK-142-01_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-26T18:43:52+00:00",
+      "sellingPrice": "218.00",
+      "reportedTotalCost": "90.04",
+      "unitSpread": "127.96",
+      "marginPct": 58.7,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "66.90"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "17.52"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.15"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "0.00"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "5.47"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
         }
       ],
       "imageUrls": [

@@ -25,7 +25,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-26T18:28:02+00:00",
+    "capturedAt": "2026-11-27T18:13:27+00:00",
     "sellingPrice": "34.90",
     "reportedTotalCost": "23.99",
     "unitSpread": "10.91",
@@ -72,20 +72,67 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "34.90",
     "highestPrice": "34.90",
     "lowestCost": "23.99",
     "highestCost": "23.99",
     "averageSpread": "10.91",
     "firstObservedAt": "2026-11-26T18:28:02+00:00",
-    "lastObservedAt": "2026-11-26T18:28:02+00:00"
+    "lastObservedAt": "2026-11-27T18:13:27+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-26T18:28:02+00:00",
+      "sellingPrice": "34.90",
+      "reportedTotalCost": "23.99",
+      "unitSpread": "10.91",
+      "marginPct": 31.26,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "10.20"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "8.15"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.96"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "4.68"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2o7f8Bt3XIBWn8SQVSqkTZ/03b8a9f3efe14d2f820a849fc9b86161/U--877_2.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4cPY9hTQiFROn03toKODId/bff467ac226dd4ebb23fbb31c27d37c5/image__17_.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/sRzDDHvXwQv8kdPFZcOcH/72b73929902470c772c1caba5f5fd6ba/U--880-DINOS-065_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2lZrSyF1vPNUdTTgRzpXUv/29343ec7852243f781d75ac017ef3fe1/U--869-DPBLU-060_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-27T18:13:27+00:00",
       "sellingPrice": "34.90",
       "reportedTotalCost": "23.99",
       "unitSpread": "10.91",

@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-26T18:26:55+00:00",
+    "capturedAt": "2026-11-27T18:32:08+00:00",
     "sellingPrice": "22.90",
     "reportedTotalCost": "18.33",
     "unitSpread": "4.57",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 11,
+    "observationCount": 12,
     "lossObservations": 0,
-    "profitObservations": 11,
+    "profitObservations": 12,
     "lowestPrice": "19.90",
     "highestPrice": "22.90",
     "lowestCost": "18.33",
     "highestCost": "18.33",
-    "averageSpread": "2.12",
+    "averageSpread": "2.32",
     "firstObservedAt": "2026-11-16T18:39:37+00:00",
-    "lastObservedAt": "2026-11-26T18:26:55+00:00"
+    "lastObservedAt": "2026-11-27T18:32:08+00:00"
   },
   "history": [
     {
@@ -544,6 +544,52 @@
     },
     {
       "capturedAt": "2026-11-26T18:26:55+00:00",
+      "sellingPrice": "22.90",
+      "reportedTotalCost": "18.33",
+      "unitSpread": "4.57",
+      "marginPct": 19.96,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.19"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.72"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.42"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.71"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.62"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.67"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2py9eeBbNgTOyJINPafLX8/60819f599cde77fad6c8262240442c0e/U--1981-AVIATOR-01_EDITED.jpeg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/5Aj7KgajFNNWoheZT9eoWH/3473e5d1933c835a3e7ed977e3a0e76d/U--1981-AVIATOR-02_EDITED.jpeg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/44gCSOpyQxyrLI2bDGiWv0/eeee0ca4c382620d5426919cedf9bebd/U--1981-AVIATOR-03_EDITED.jpeg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-27T18:32:08+00:00",
       "sellingPrice": "22.90",
       "reportedTotalCost": "18.33",
       "unitSpread": "4.57",

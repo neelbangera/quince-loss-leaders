@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-26T18:27:27+00:00",
-    "sellingPrice": "26.90",
+    "capturedAt": "2026-11-27T18:32:49+00:00",
+    "sellingPrice": "29.90",
     "reportedTotalCost": "22.30",
-    "unitSpread": "4.60",
-    "marginPct": 17.1,
+    "unitSpread": "7.60",
+    "marginPct": 25.42,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "26.90",
-    "highestPrice": "26.90",
+    "highestPrice": "29.90",
     "lowestCost": "22.30",
     "highestCost": "22.30",
-    "averageSpread": "4.60",
+    "averageSpread": "6.10",
     "firstObservedAt": "2026-11-26T18:27:27+00:00",
-    "lastObservedAt": "2026-11-26T18:27:27+00:00"
+    "lastObservedAt": "2026-11-27T18:32:49+00:00"
   },
   "history": [
     {
@@ -88,6 +88,52 @@
       "reportedTotalCost": "22.30",
       "unitSpread": "4.60",
       "marginPct": 17.1,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "8.68"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "3.40"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.10"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "5.63"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.84"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "3.65"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1gzJtcAAX3gwXh1CMBCNGz/1b493c9a9fc7c7b57232e53b681cf057/Linen_Light_Grey_4.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/nCZQIlTe0uzJxphNt3OOk/fd6f200d1d5cd35ed96a2ac3881c9391/Napkin_Linen_LightGrey_776.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1KHnD4vwZStnF1M4lJocII/8619942d5d1b7ea4e17e1a869f1c98c9/Napkin_Linen_LightGray_772.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-27T18:32:49+00:00",
+      "sellingPrice": "29.90",
+      "reportedTotalCost": "22.30",
+      "unitSpread": "7.60",
+      "marginPct": 25.42,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

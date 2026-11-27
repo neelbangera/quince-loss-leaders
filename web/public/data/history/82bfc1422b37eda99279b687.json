@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-25T18:59:28+00:00",
+    "capturedAt": "2026-11-27T18:18:18+00:00",
     "sellingPrice": "42.00",
     "reportedTotalCost": "14.33",
     "unitSpread": "27.67",
@@ -70,20 +70,66 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 0,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "42.00",
     "highestPrice": "42.00",
     "lowestCost": "14.33",
     "highestCost": "14.33",
     "averageSpread": "27.67",
     "firstObservedAt": "2026-11-25T18:59:28+00:00",
-    "lastObservedAt": "2026-11-25T18:59:28+00:00"
+    "lastObservedAt": "2026-11-27T18:18:18+00:00"
   },
   "history": [
     {
       "capturedAt": "2026-11-25T18:59:28+00:00",
+      "sellingPrice": "42.00",
+      "reportedTotalCost": "14.33",
+      "unitSpread": "27.67",
+      "marginPct": 65.88,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.92"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.72"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.31"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "6.42"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.11"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.85"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1XFfX9XnlBYKynWEuTJoez/27957cc00ea4e4cf35c66e3f01268cd9/U-BEDD-471-WHINAV-114-EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4j8KkFxTfiiOWtJpTTMTDv/84183f725fd1b35ca459bc086a4713a2/U-BEDD-471-WHINAV-11942-EDITED_copy.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2R1t9mfJ2vcYsC78jQp0sB/5e3ec1970189053e37d76efe60ba0d65/U-BEDD-474-WHINAV-11902-EDITED.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-27T18:18:18+00:00",
       "sellingPrice": "42.00",
       "reportedTotalCost": "14.33",
       "unitSpread": "27.67",

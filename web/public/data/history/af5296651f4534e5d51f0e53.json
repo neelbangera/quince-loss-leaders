@@ -25,11 +25,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-27T18:23:45+00:00",
-    "sellingPrice": "129.90",
+    "capturedAt": "2026-11-28T17:04:10+00:00",
+    "sellingPrice": "110.00",
     "reportedTotalCost": "113.36",
-    "unitSpread": "16.54",
-    "marginPct": 12.73,
+    "unitSpread": "-3.36",
+    "marginPct": -3.05,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -72,16 +72,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 3,
-    "lossObservations": 0,
+    "observationCount": 4,
+    "lossObservations": 1,
     "profitObservations": 3,
-    "lowestPrice": "129.90",
+    "lowestPrice": "110.00",
     "highestPrice": "129.90",
     "lowestCost": "113.36",
     "highestCost": "113.36",
-    "averageSpread": "16.54",
+    "averageSpread": "11.57",
     "firstObservedAt": "2026-11-25T18:48:20+00:00",
-    "lastObservedAt": "2026-11-27T18:23:45+00:00"
+    "lastObservedAt": "2026-11-28T17:04:10+00:00"
   },
   "history": [
     {
@@ -184,6 +184,53 @@
       "reportedTotalCost": "113.36",
       "unitSpread": "16.54",
       "marginPct": 12.73,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "49.98"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "19.99"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "1.43"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "16.30"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "3.31"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "22.35"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/3UrYYhEKjqJyX9CKwwHGxT/755738a01f919619c66b9014956d052e/Curtain_SilkDupioniBlackout_Silver_275.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2SzzDWrUbfIwnAQPjjCqVa/6362b93d3d4e2a3e1a6cb860bed6bb1c/Curtain_SilkDupioniBlackout_Silver_278.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/611vurdb4PBPvsRc16Y04F/1fb4f7ffb4c3e4c0153aef9fd9ae35a9/Curtain_SilkDupioniBlackout_Silver_285.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/4eYe9MIZwEbjiKj69Xy24u/48f3ff8db70f57dd700239f273a66693/Curtains_Silk_Group_4773.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T17:04:10+00:00",
+      "sellingPrice": "110.00",
+      "reportedTotalCost": "113.36",
+      "unitSpread": "-3.36",
+      "marginPct": -3.05,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

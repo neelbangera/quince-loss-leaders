@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-20T17:20:21+00:00",
-    "sellingPrice": "14.00",
-    "reportedTotalCost": "13.03",
-    "unitSpread": "0.97",
-    "marginPct": 6.93,
+    "capturedAt": "2026-11-28T17:09:36+00:00",
+    "sellingPrice": "17.90",
+    "reportedTotalCost": "13.15",
+    "unitSpread": "4.75",
+    "marginPct": 26.54,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -50,7 +50,7 @@
       {
         "label": "Freight & Handling",
         "type": "freight_handling",
-        "amount": "7.01"
+        "amount": "7.13"
       },
       {
         "label": "Credit Card Fees",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
+    "observationCount": 7,
     "lossObservations": 0,
-    "profitObservations": 6,
+    "profitObservations": 7,
     "lowestPrice": "14.00",
     "highestPrice": "17.90",
     "lowestCost": "13.03",
     "highestCost": "13.15",
-    "averageSpread": "4.20",
+    "averageSpread": "4.28",
     "firstObservedAt": "2026-10-15T13:33:34+00:00",
-    "lastObservedAt": "2026-11-20T17:20:21+00:00"
+    "lastObservedAt": "2026-11-28T17:09:36+00:00"
   },
   "history": [
     {
@@ -340,6 +340,52 @@
           "label": "Freight & Handling",
           "type": "freight_handling",
           "amount": "7.01"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.56"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "1.11"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2sOulX85ZW7BfYVAuiOOB7/190e960ce99e5ed69554bc074a0b2c98/U--1302-BLUSTA-010_EDITED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/1mJIzk4yrOlIT5VmLXJ3h0/a22cb5dd41c2005cb9c195cca67a212b/U--1302-BLUSTA-013_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/3qvx1iWtOzkDp4GhzjODeD/7a8e8a26d88997b39415ff397636cc74/U--1302-BLUSTA-011_EDITED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T17:09:36+00:00",
+      "sellingPrice": "17.90",
+      "reportedTotalCost": "13.15",
+      "unitSpread": "4.75",
+      "marginPct": 26.54,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "4.35"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "7.13"
         },
         {
           "label": "Credit Card Fees",

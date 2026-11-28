@@ -28,11 +28,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-27T18:11:43+00:00",
-    "sellingPrice": "875.00",
+    "capturedAt": "2026-11-28T17:04:46+00:00",
+    "sellingPrice": "775.00",
     "reportedTotalCost": "780.13",
-    "unitSpread": "94.87",
-    "marginPct": 10.84,
+    "unitSpread": "-5.13",
+    "marginPct": -0.66,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -78,16 +78,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 6,
-    "lossObservations": 0,
+    "observationCount": 7,
+    "lossObservations": 1,
     "profitObservations": 6,
-    "lowestPrice": "875.00",
+    "lowestPrice": "775.00",
     "highestPrice": "875.00",
     "lowestCost": "769.92",
     "highestCost": "780.13",
-    "averageSpread": "99.98",
+    "averageSpread": "84.96",
     "firstObservedAt": "2026-10-26T15:16:52+00:00",
-    "lastObservedAt": "2026-11-27T18:11:43+00:00"
+    "lastObservedAt": "2026-11-28T17:04:46+00:00"
   },
   "history": [
     {
@@ -349,6 +349,56 @@
       "reportedTotalCost": "780.13",
       "unitSpread": "94.87",
       "marginPct": 10.84,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "216.00"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "240.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "24.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "280.86"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "19.27"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/1ZQw3ofsmnMUO5200gFV6s/908897c8a65aef3dee921e0a2be5dcd2/Swivel_Armchair_Performance_Velvet_Java.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4NfxDzj93X4ODh79HfFd0u/a3deb6fa18c1cfaa12dc3d261e507c52/Narrow_Track_Arm_Swivel_Armchair_Performance_velvet_Taupe__Front_Angle.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7dy8eV12xVeuT1nt3BCNJF/e23fe239bef8871bdbde56f41dff9aeb/Narrow_Track_Arm_Swivel_Armchair_Performance_velvet_Taupe_Side.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1jHyDCPllwJ54IjXe6tOH9/a7e98ac53b1ff454dc5bf96d6935d9e7/Narrow_Track_Arm_Swivel_Armchair_Performance_velvet_Taupe_Back_Angle.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/20Z7Jci38LR6nZBLRAWrtZ/cd26c347e6ff064199512a287a1e9b46/6.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/1KvKLyJuoRXhAT6Kj56V3O/6f399276bb5c155f3311e214ff9f54e3/Performance_Velvet_Java.jpg?w=200&q=50&h=251&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/UgjZK1pE3XwKgzWz7DQM7/06f2d8f1eb7f1d3e7c80afa1693d5003/Swivel_chair.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T17:04:46+00:00",
+      "sellingPrice": "775.00",
+      "reportedTotalCost": "780.13",
+      "unitSpread": "-5.13",
+      "marginPct": -0.66,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

@@ -29,11 +29,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-27T18:19:14+00:00",
-    "sellingPrice": "1200.00",
+    "capturedAt": "2026-11-28T17:07:41+00:00",
+    "sellingPrice": "1350.00",
     "reportedTotalCost": "1209.78",
-    "unitSpread": "-9.78",
-    "marginPct": -0.82,
+    "unitSpread": "140.22",
+    "marginPct": 10.39,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -80,16 +80,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 1,
+    "observationCount": 2,
     "lossObservations": 1,
-    "profitObservations": 0,
+    "profitObservations": 1,
     "lowestPrice": "1200.00",
-    "highestPrice": "1200.00",
+    "highestPrice": "1350.00",
     "lowestCost": "1209.78",
     "highestCost": "1209.78",
-    "averageSpread": "-9.78",
+    "averageSpread": "65.22",
     "firstObservedAt": "2026-11-27T18:19:14+00:00",
-    "lastObservedAt": "2026-11-27T18:19:14+00:00"
+    "lastObservedAt": "2026-11-28T17:07:41+00:00"
   },
   "history": [
     {
@@ -98,6 +98,57 @@
       "reportedTotalCost": "1209.78",
       "unitSpread": "-9.78",
       "marginPct": -0.82,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "418.50"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "465.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "46.50"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "250.13"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "29.65"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/2eStJx85EOA5vN4WdH6ggD/adfa40feba0b324ad53e0624f548b4c6/7024BEDTTNCPR_6_48.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/6pnatCYGnL9JJkIJbkO6Q1/912286b5ca08c784d5d28152104819f7/Frame_13.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2oBrZomLx3ifOdkj2YvUZM/97325cff92b9ecc7284d806f44656c07/square_full.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5ptypgUV4dY86GCsGiPBnb/df4d12921eaec6bb88724dded7193818/7021BEDTTNCPR_2.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/2ciYE0WxhcdYIiF9yArI6b/3cc41e3227655a884c3f7b94f0ff81b8/7021BEDTTNCPR_1.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7bvMZp9tNAq24e0rntih0i/414d5aeb33c303ae625e69326e25bc87/7021BEDTTNCPR_3.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7yTt0yFAyAOX8miC6744CR/519e4e404b771c41d4f6de8a91b75605/7021BEDTTNCPR_4.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/AyaSPURaKC77mZJS24bGS/3f0bc87e5e2805b48c8d4d9cc7b63a05/Performance_Velvet_Copper.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T17:07:41+00:00",
+      "sellingPrice": "1350.00",
+      "reportedTotalCost": "1209.78",
+      "unitSpread": "140.22",
+      "marginPct": 10.39,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [

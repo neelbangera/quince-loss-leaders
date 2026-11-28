@@ -24,7 +24,7 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-27T18:20:33+00:00",
+    "capturedAt": "2026-11-28T16:59:23+00:00",
     "sellingPrice": "39.90",
     "reportedTotalCost": "33.86",
     "unitSpread": "6.04",
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 2,
+    "observationCount": 3,
     "lossObservations": 1,
-    "profitObservations": 1,
+    "profitObservations": 2,
     "lowestPrice": "27.90",
     "highestPrice": "39.90",
     "lowestCost": "33.86",
     "highestCost": "33.86",
-    "averageSpread": "0.04",
+    "averageSpread": "2.04",
     "firstObservedAt": "2026-11-26T18:31:49+00:00",
-    "lastObservedAt": "2026-11-27T18:20:33+00:00"
+    "lastObservedAt": "2026-11-28T16:59:23+00:00"
   },
   "history": [
     {
@@ -130,6 +130,52 @@
     },
     {
       "capturedAt": "2026-11-27T18:20:33+00:00",
+      "sellingPrice": "39.90",
+      "reportedTotalCost": "33.86",
+      "unitSpread": "6.04",
+      "marginPct": 15.14,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "11.17"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "1.70"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.29"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "17.58"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "1.04"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "2.08"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4hGLvKTFVU0PSOKs0omrER/a9206ab6ee6658166371dd92343453cb/U-TBLE-38-FLX.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/4TTplwOGVsoeTCeyFdmZJO/c0f5eebe6a9e85b7480d3a323a54cb90/Napkins_Cotton_Flax_4707.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/7FjED0pGTYUQPap1gM3omw/8c93f77e509d1b95434e7bcba5d48c57/Napkins_Cotton_Flax_4702.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T16:59:23+00:00",
       "sellingPrice": "39.90",
       "reportedTotalCost": "33.86",
       "unitSpread": "6.04",

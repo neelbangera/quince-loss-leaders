@@ -24,11 +24,11 @@
     ]
   },
   "current": {
-    "capturedAt": "2026-11-27T18:12:41+00:00",
-    "sellingPrice": "24.90",
+    "capturedAt": "2026-11-28T17:10:55+00:00",
+    "sellingPrice": "19.90",
     "reportedTotalCost": "10.39",
-    "unitSpread": "14.51",
-    "marginPct": 58.27,
+    "unitSpread": "9.51",
+    "marginPct": 47.79,
     "parseStatus": "complete",
     "totalCostSource": "embedded_inferred",
     "costLines": [
@@ -70,16 +70,16 @@
     ]
   },
   "analytics": {
-    "observationCount": 26,
+    "observationCount": 27,
     "lossObservations": 0,
-    "profitObservations": 26,
+    "profitObservations": 27,
     "lowestPrice": "19.90",
     "highestPrice": "24.90",
     "lowestCost": "10.39",
     "highestCost": "11.85",
-    "averageSpread": "14.04",
+    "averageSpread": "13.87",
     "firstObservedAt": "2026-10-17T12:24:51+00:00",
-    "lastObservedAt": "2026-11-27T18:12:41+00:00"
+    "lastObservedAt": "2026-11-28T17:10:55+00:00"
   },
   "history": [
     {
@@ -1232,6 +1232,52 @@
       "reportedTotalCost": "10.39",
       "unitSpread": "14.51",
       "marginPct": 58.27,
+      "parseStatus": "complete",
+      "totalCostSource": "embedded_inferred",
+      "costLines": [
+        {
+          "label": "Materials",
+          "type": "materials",
+          "amount": "5.85"
+        },
+        {
+          "label": "Crafting Cost",
+          "type": "crafting_cost",
+          "amount": "0.00"
+        },
+        {
+          "label": "Packaging",
+          "type": "packaging",
+          "amount": "0.00"
+        },
+        {
+          "label": "Freight & Handling",
+          "type": "freight_handling",
+          "amount": "3.82"
+        },
+        {
+          "label": "Credit Card Fees",
+          "type": "credit_card_fees",
+          "amount": "0.72"
+        },
+        {
+          "label": "Duties, Taxes, And Fees",
+          "type": "duties_taxes_fees",
+          "amount": "0.00"
+        }
+      ],
+      "imageUrls": [
+        "https://images.quince.com/4GG7xOkpY8gy2kRnPVE3EI/7e1d7ba545966cf17d54716627d30bc9/U--943-AGAVE-085_CROPPED.jpg?fm=webP&q=90&w=1600",
+        "https://images.quince.com/2ibenD61MegBdciD3ClqiV/912c7f088b9e0a9e6934cbd5ec877c31/U--943-AGAVE-086_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr",
+        "https://images.quince.com/5HkPlBKCM7EiG3dVa79YPu/41a3ddedf2cc03ea16fd1f58c65c7939/U--943-AGAVE-087_CROPPED.jpg?w=200&q=50&h=250&fm=webp&reqOrigin=website-ssr"
+      ]
+    },
+    {
+      "capturedAt": "2026-11-28T17:10:55+00:00",
+      "sellingPrice": "19.90",
+      "reportedTotalCost": "10.39",
+      "unitSpread": "9.51",
+      "marginPct": 47.79,
       "parseStatus": "complete",
       "totalCostSource": "embedded_inferred",
       "costLines": [
